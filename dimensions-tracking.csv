@@ -1,0 +1,58 @@
+date,tier,source,section,dimension,score,scale,score_type,note
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Behavioural Type,Overall Type,,categorical,explicit,ESTJ-A (Extravert/Sensing/Thinking/Judging/Achieving)
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Team Profile,Ranked roles (best to worst fit),,categorical,explicit,"Analyst > Completer > Teambuilder > Implementer > Coordinator > Networker > Creator > Commander"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Planning and Preparation,10,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Fact Finding,10,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Building Rapport,7,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Identifying Needs,5,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Presenting Solutions,8,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Handling Objections,5,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Getting the Sale,5,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Sales Profile,Post-meeting Service,10,1-10,explicit,
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Elements (cognitive),Verbal reasoning,20,percentile,explicit,better than 20% of norm group
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Elements (cognitive),Numerical reasoning,25,percentile,explicit,better than 25% of norm group
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Elements (cognitive),Logical reasoning,20,percentile,explicit,better than 20% of norm group
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Sociability/Networking,,1-10,narrative_only,"narrative: prefers working WITH others, communicates with many people"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Ambition,,1-10,narrative_only,"narrative: very ambitious and competitive"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Risk Aversion,,1-10,narrative_only,"narrative: seems very risk-averse"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Creativity,,1-10,narrative_only,"narrative: traditional, not very innovative"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Flexibility,,1-10,narrative_only,"narrative: likes a predictable life, can be inflexible"
+2014-10-10,1_real_retake,Dimensions Report 2014.pdf,Trait Profile,Analytical/Structured/Conscientious,,1-10,narrative_only,"narrative: logical, structured planner, conscientious"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Behavioural Type,Overall Type,,categorical,explicit,ISFJ-B (Introvert/Sensing/Feeling/Judging/Balanced)
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Team Profile,Ranked roles (best to worst fit),,categorical,explicit,"Teambuilder > Completer > Implementor > Evaluator > Creator > Networker > Organiser > Driver"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Planning and Preparation,9,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Fact Finding,10,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Building Rapport,4,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Identifying Needs,8,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Presenting Solutions,4,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Handling Objections,3,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Getting the Sale,4,1-10,estimated,estimated from duplicated score-marker digit
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Sales Profile,Post-meeting Service,10,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Over-sensitivity,7,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Isolation,7,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Eccentricity,1,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Non-conformism,1,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Exhibitionism,2,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Over-confidence,5,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Over-dependence,10,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Leadership Derailer,Micro-management,10,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Resilience,4,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Ambition,7,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Analytical Capacity,4,1-10,explicit,blended with real Elements cognitive-test result per report's own methodology note
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Learning and Improving,3,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Developing Strategies,5,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Networking,3,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Demonstrating Integrity,9,1-10,explicit,
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Courage,,1-10,narrative_only,"narrative: rather cautious, prefers considering all options"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Seeking and Embracing Change,,1-10,narrative_only,"narrative: may find it challenging to adapt, tends to question need for change"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Collaborating with Others,,1-10,narrative_only,"narrative: enjoys high contact with colleagues, easy to collaborate with existing circle"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Potential Report,Positive Impact,,1-10,narrative_only,"narrative: prefers discretion over center-of-attention/lead roles, tends to avoid selling/convincing"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Elements (cognitive),Verbal reasoning,10,percentile,explicit,bottom 10% of norm group
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Elements (cognitive),Numerical reasoning,25,percentile,explicit,better than 25% of norm group
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Elements (cognitive),Logical reasoning,25,percentile,explicit,better than 25% of norm group
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Sociability/Networking,,1-10,narrative_only,"narrative: happy working on his own, network may be limited"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Ambition,,1-10,narrative_only,"narrative: moderately competitive and reasonably ambitious"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Risk Aversion,,1-10,narrative_only,"narrative: avoids risk at all costs"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Creativity,,1-10,narrative_only,"narrative: traditional, ideas not likely to be radical"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Flexibility,,1-10,narrative_only,"narrative: difficulty adapting, rather rigid views"
+2018-09-24,1_real_retake,Dimensions Report 2018.pdf,Trait Profile,Analytical/Structured/Conscientious,,1-10,narrative_only,"narrative: highly analytical, extremely structured, highly conscientious"
