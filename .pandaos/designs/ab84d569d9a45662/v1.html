@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Opportunities 2027 - Layout and Colour Reference</title>
+<meta name="od:tweaks" content='[{"id":"accent","label":"Accent teal","type":"color","cssVar":"--secondary","default":"#0c8b82"},{"id":"radius","label":"Card radius","type":"slider","cssVar":"--radius","default":5,"min":0,"max":16,"step":1,"unit":"px"},{"id":"h2size","label":"Section heading","type":"slider","cssVar":"--h2-size","default":26,"min":18,"max":40,"step":1,"unit":"px"},{"id":"density","label":"Density","type":"select","cssVar":"--pad","default":"11px","options":[{"value":"8px","label":"Compact"},{"value":"11px","label":"Standard"},{"value":"16px","label":"Airy"}]}]'>
+<style>
+:root{
+  --background:#f5f8fa;
+  --primary:#10253f;
+  --secondary:#0c8b82;
+  --accent:#48c5b2;
+  --font-display:Arial,Helvetica,sans-serif;
+  --font-body:Arial,Helvetica,sans-serif;
+  --ink:#17243a;
+  --heading:#142a48;
+  --slate:#40536b;
+  --muted:#52647a;
+  --border:#dae3e9;
+  --tint:#eef5f7;
+  --callout:#f0f7f7;
+  --pill:#dff3f0;
+  --pill-ink:#075d68;
+  --gold-tint:#f8edca;
+  --gold-ink:#76520a;
+  --radius:5px;
+  --h2-size:26px;
+  --pad:11px;
+  --line:9.5pt;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#e9eef2;font-family:var(--font-body);color:var(--ink);font-size:var(--line);line-height:1.42;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin-top:0}
+.sheet{max-width:820px;margin:0 auto;background:#fff}
+.wrap{padding:34px 40px}
+.cover{background:var(--primary);color:#fff;padding:52px 46px;position:relative}
+.eyebrow{color:var(--accent);text-transform:uppercase;font-size:9px;letter-spacing:2px;font-weight:bold;margin-bottom:24px}
+.cover h1{font-family:var(--font-display);font-size:40px;line-height:1.06;letter-spacing:-.9px;margin:0 0 14px;color:#fff;font-weight:bold}
+.cover .sub{font-size:14px;line-height:1.4;color:#d8e4f0;max-width:420px;margin:0}
+.rule{height:4px;width:56px;background:var(--accent);margin:20px 0}
+.tag{display:inline-block;color:#133450;background:#cff4ee;padding:5px 10px;border-radius:12px;font-size:8px;font-weight:bold;letter-spacing:.5px;margin-top:6px}
+.meta{color:#c4d1df;font-size:9px;line-height:1.7;margin-top:22px}
+.meta strong{color:#fff}
+.kicker{font-size:8px;text-transform:uppercase;color:var(--secondary);font-weight:bold;letter-spacing:1.4px;margin-bottom:5px}
+h2{font-family:var(--font-display);font-size:var(--h2-size);line-height:1.15;margin:0 0 10px;color:var(--heading);font-weight:bold;letter-spacing:-.3px}
+.lead{font-size:11.5px;line-height:1.55;color:var(--slate);margin-bottom:16px;max-width:66ch}
+h3{font-size:11px;margin:0 0 5px;color:var(--secondary);font-weight:bold}
+p{margin:0 0 9px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0 22px}
+.stat{background:var(--tint);padding:var(--pad);border-top:3px solid var(--secondary);border-radius:var(--radius)}
+.stat b{display:block;font-size:21px;color:var(--heading);line-height:1.2;font-family:var(--font-display)}
+.stat span{font-size:8.5px;color:var(--muted);display:block;margin-top:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 20px}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:var(--pad)}
+.card h3{font-size:10px;color:var(--secondary);margin-bottom:4px}
+.card p{font-size:9px;color:var(--muted);margin:0}
+.callout{background:var(--callout);border-left:3px solid var(--secondary);padding:12px 14px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0}
+.callout b{color:var(--heading)}
+.pill{display:inline-block;border-radius:9px;padding:2px 6px;font-size:7.5px;font-weight:bold;color:var(--pill-ink);background:var(--pill);white-space:nowrap;letter-spacing:.3px}
+.pill.gold{color:var(--gold-ink);background:var(--gold-tint)}
+table{width:100%;border-collapse:collapse;font-size:8.5px;margin:10px 0 14px}
+th{background:var(--primary);color:#fff;text-align:left;padding:7px 8px;font-size:8px;font-weight:bold;letter-spacing:.3px}
+td{padding:7px 8px;border-bottom:1px solid #dbe4ea;vertical-align:top}
+tbody tr:nth-child(even){background:#f9fbfc}
+td b{color:var(--heading)}
+.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0 6px}
+.sw{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.sw i{display:block;height:44px}
+.sw p{font-size:7.5px;margin:0;padding:6px 7px;color:var(--muted);line-height:1.35}
+.sw p b{display:block;color:var(--ink);font-size:8px}
+.type{border-top:1px solid var(--border);padding-top:14px;margin-top:6px}
+.type .row{display:flex;align-items:baseline;gap:12px;padding:6px 0;border-bottom:1px dashed #e3eaee}
+.type .row:last-child{border-bottom:0}
+.type .lbl{font-size:7.5px;text-transform:uppercase;letter-spacing:.7px;color:#61758a;font-weight:bold;width:74px;flex:none}
+.footer{margin-top:24px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:8px;color:#61758a}
+</style>
+</head>
+<body>
+<div class="sheet" data-eid="sheet">
+  <div class="cover" data-eid="cover">
+    <div class="eyebrow" data-eid="cover-eyebrow">CBa Consult &nbsp; / &nbsp; Design reference</div>
+    <h1 data-eid="cover-title">Opportunities<br>2027</h1>
+    <p class="sub" data-eid="cover-sub">Layout and colour system<br>Reusable across portfolio briefs, priority reports and review packs</p>
+    <div class="rule" data-eid="cover-rule"></div>
+    <span class="tag" data-eid="cover-tag">DESIGN SYSTEM</span>
+    <div class="meta" data-eid="cover-meta">
+      <strong>Palette:</strong> deep navy, teal, mint, slate<br>
+      <strong>Typeface:</strong> Arial, one family, four weights<br>
+      <strong>Grid:</strong> A4 page, 15mm margins, 8pt spacing
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="kicker" data-eid="k1">01 / Colour scheme</div>
+    <h2 data-eid="h2-1">Navy authority, teal signal, mint surface</h2>
+    <p class="lead" data-eid="lead-1">Two working values carry the whole system: the deep navy anchors covers and table headers, and the teal marks structure, emphasis and state. Everything else is a tint of one of the two, or a slate used for supporting text.</p>
+    <div class="swatches" data-eid="swatches">
+      <div class="sw" data-eid="sw-navy"><i style="background:#10253f"></i><p><b>Primary navy</b>#10253f</p></div>
+      <div class="sw" data-eid="sw-heading"><i style="background:#142a48"></i><p><b>Heading navy</b>#142a48</p></div>
+      <div class="sw" data-eid="sw-teal"><i style="background:#0c8b82"></i><p><b>Signal teal</b>#0c8b82</p></div>
+      <div class="sw" data-eid="sw-mint"><i style="background:#48c5b2"></i><p><b>Accent mint</b>#48c5b2</p></div>
+      <div class="sw" data-eid="sw-tint"><i style="background:#eef5f7"></i><p><b>Surface tint</b>#eef5f7</p></div>
+      <div class="sw" data-eid="sw-paper"><i style="background:#f5f8fa"></i><p><b>Page paper</b>#f5f8fa</p></div>
+      <div class="sw" data-eid="sw-slate"><i style="background:#40536b"></i><p><b>Lead slate</b>#40536b</p></div>
+      <div class="sw" data-eid="sw-muted"><i style="background:#52647a"></i><p><b>Muted text</b>#52647a</p></div>
+      <div class="sw" data-eid="sw-border"><i style="background:#dae3e9"></i><p><b>Hairline</b>#dae3e9</p></div>
+      <div class="sw" data-eid="sw-gold"><i style="background:#f8edca"></i><p><b>Caution tint</b>#f8edca</p></div>
+      <div class="sw" data-eid="sw-goldink"><i style="background:#76520a"></i><p><b>Caution ink</b>#76520a</p></div>
+      <div class="sw" data-eid="sw-white"><i style="background:#ffffff;box-shadow:inset 0 0 0 1px #e3eaee"></i><p><b>Paper white</b>#ffffff</p></div>
+    </div>
+    <p style="font-size:9px;color:#52647a;margin-bottom:20px">Teal on white holds 4.9:1 for text. Navy on mint holds 12.1:1. Caution gold is reserved for parked or open-timing labels and is never used alone to carry meaning.</p>
+    <div class="kicker" data-eid="k2">02 / Type scale</div>
+    <h2 data-eid="h2-2">One grotesque, four jobs</h2>
+    <div class="type" data-eid="typespec">
+      <div class="row"><span class="lbl">Cover title</span><span style="font-size:30px;font-weight:bold;letter-spacing:-.8px;color:#142a48">Opportunities 2027</span></div>
+      <div class="row"><span class="lbl">Section</span><span style="font-size:22px;font-weight:bold;color:#142a48">Concentrate effort, preserve options</span></div>
+      <div class="row"><span class="lbl">Sub-head</span><span style="font-size:12px;font-weight:bold;color:#0c8b82">Strategic asset</span></div>
+      <div class="row"><span class="lbl">Lead</span><span style="font-size:12px;color:#40536b">The 2027 to 2030 portfolio contains 115 candidate projects.</span></div>
+      <div class="row"><span class="lbl">Body</span><span style="font-size:10px;color:#17243a">Nine and a half point body copy at 1.42 line height for dense tables and notes.</span></div>
+      <div class="row"><span class="lbl">Kicker</span><span style="font-size:8px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase;color:#0c8b82">01 / Executive readout</span></div>
+    </div>
+    <div class="kicker" data-eid="k3">03 / Page furniture</div>
+    <h2 data-eid="h2-3">Content page, stat row, cards, callout</h2>
+    <div class="stats" data-eid="stats">
+      <div class="stat" data-eid="stat-1"><b>115</b><span>candidate projects</span></div>
+      <div class="stat" data-eid="stat-2"><b>11</b><span>Tier A flagships</span></div>
+      <div class="stat" data-eid="stat-3"><b>5</b><span>strategic assets</span></div>
+      <div class="stat" data-eid="stat-4"><b>10-15</b><span>hours per week</span></div>
+    </div>
+    <div class="grid" data-eid="cards">
+      <div class="card" data-eid="card-1">
+        <h3 data-eid="card-1-h">Strategic-value index</h3>
+        <p data-eid="card-1-p">Ranks long-term portfolio value: agent governance first, then knowledge and context governance.</p>
+      </div>
+      <div class="card" data-eid="card-2">
+        <h3 data-eid="card-2-h">Delivery sequence</h3>
+        <p data-eid="card-2-p">Stages work against available time: Q1 packaging wedges, Q2 enterprise pilots, Q3 and Q4 scale.</p>
+      </div>
+    </div>
+    <div class="callout" data-eid="callout">
+      <b>Decision point:</b> the index ranks OP-ITG-013 first for strategic value, while the delivery sequence places it fifth after faster proof opportunities. Both labels are preserved.
+    </div>
+    <table data-eid="table">
+      <thead><tr><th>Tier</th><th>Opportunity</th><th>Role</th><th>Wave</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill">A - 1</span></td><td><b>OP-ITG-013</b> Enterprise AI Agent Governance</td><td>Govern agent inventory, identity and cost</td><td>Q2 pilots</td></tr>
+        <tr><td><span class="pill">A - 2</span></td><td><b>OP-ITG-014</b> Knowledge and Context Governance</td><td>Differentiate through information quality</td><td>Q2 pilots</td></tr>
+        <tr><td><span class="pill">A - 5</span></td><td><b>OP-ITG-015</b> Cryptographic Sovereignty</td><td>Specialist sovereign-information offer</td><td><span class="pill gold">Q3 - Q4</span></td></tr>
+        <tr><td><span class="pill">B</span></td><td><b>OP-HR-009</b> Human and Agent Workforce Model</td><td>Extend digital labour</td><td>Q3</td></tr>
+      </tbody>
+    </table>
+    <div class="footer" data-eid="footer">
+      <span>Layout reference for Opportunities 2027 portfolio documents</span>
+      <span>v1.0</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

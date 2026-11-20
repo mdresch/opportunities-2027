@@ -1,0 +1,40 @@
+{
+  "systems": [
+    {
+      "id": "19a5d2938c59",
+      "name": "Opportunities 2027 (CBa Consult)",
+      "system": {
+        "source": "direction",
+        "confidence": 0.85,
+        "label": "Opportunities 2027",
+        "colors": {
+          "neutral": [
+            "#ffffff",
+            "#eef5f7",
+            "#dae3e9",
+            "#607186",
+            "#52647a"
+          ],
+          "primary": "#10253f",
+          "accent": "#0c8b82",
+          "background": "#f5f8fa",
+          "foreground": "#17243a"
+        },
+        "typography": {
+          "display": "Arial",
+          "body": "Arial"
+        },
+        "vibe": [
+          "editorial",
+          "professional",
+          "measured",
+          "clean"
+        ],
+        "spaciousness": "airy",
+        "corners": "soft",
+        "textSize": "small",
+        "shadows": "none"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "agents": [],
+  "rules": [],
+  "onDemand": [
+    "ux-architect.md",
+    "planner.md",
+    "builder.md",
+    "reviewer.md",
+    "designer.md"
+  ],
+  "pandaosAgents": []
+}
