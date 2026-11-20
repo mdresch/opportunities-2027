@@ -22,8 +22,8 @@ last_updated: "2026-11-20"
 | --- | --- |
 | **Current Portfolio Phase** | Pre-Pilot Packaging & Q1 2027 Readiness (Tailored SIDPA Stages 1–2) |
 | **Active Capacity Cap** | 10–15 hrs/week · \$0 initial working capital |
-| **Portfolio Coverage** | **117 / 117** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): 13 Tier A, 7 Tier B, 41 Tier C, 3 Tier D, 48 Active Backlog, 5 Parked |
-| **Active Pilots (`Status = Pilot`)** | **0** (all 117 items remain `Idea` or `Parked`; no delivery work started yet) |
+| **Portfolio Coverage** | **120 / 120** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): 13 Tier A, 7 Tier B, 41 Tier C, 3 Tier D, 51 Active Backlog, 5 Parked |
+| **Active Pilots (`Status = Pilot`)** | **0** (all 120 items remain `Idea` or `Parked`; no delivery work started yet) |
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: #1 `OP-OPS-001 → OP-CX-001`, #2 `OP-FIN-009`, #3 `OP-ITG-014`, #4 `OP-RSK-004`, #5 `OP-ITG-013` |
 | **Last Milestone Completed** | Root directory cleanup (21 → 5 core root files, 0 broken links) + Tailored Hybrid SIDPA governance integration |
 | **Next Priority Unit of Work** | Complete Tier 2 deeper research & Tier 3 Pre-Pilot Gate for Q1 lead wedges (`OP-OPS-001 → OP-CX-001` and `OP-FIN-009`) and validate hypotheses in [Hypothesis-Register.md](Hypothesis-Register.md) |
@@ -33,8 +33,8 @@ last_updated: "2026-11-20"
 
 | Wave | Target Window | Lead Opportunity ID(s) | Current SIDPA Stage | Next Gate | Engagement Track |
 | --- | --- | --- | --- | --- | --- |
-| **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 1a (Spark + One-Pager) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Lightweight Advisory |
-| **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 1a (Spark + One-Pager) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Lightweight Advisory |
+| **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 2 (Hypotheses `HYP-2027-001`, `005`, `006` formulated) | Execute Q1 outreach (`HYP-2027-001` → `Testing`) → Stage 3–4 Pre-Pilot Gate | Lightweight Advisory (Track A) |
+| **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 2 (Hypotheses `HYP-2027-002`, `007`, `008`, `009` formulated) | Run internal RGP IP sprint (`HYP-2027-007`) + Q1 CFO outreach (`HYP-2027-002`) → Stage 3–4 Gate | Lightweight Advisory (Track A) |
 | **Wave 2 (AI & Compliance)** | Q2 2027 | `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013` | Stage 1a (Sparks + One-Pagers) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Hybrid / Platform-Backed |
 | **Wave 3 (Scale & Retainer)** | Q2–Q4 2027 | `OP-ITG-017`, `OP-ITG-018` (MIP), `OP-FIN-010`, `OP-ITG-015`, `OP-STR-004`/`005`, `OP-ITG-016` | Stage 1a (Sparks; One-Pagers ready for `017`/`018`) | Deferred until Wave 1–2 pilot signal | Platform-Backed / Retainer |
 

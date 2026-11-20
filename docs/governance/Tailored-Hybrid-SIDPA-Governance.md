@@ -82,13 +82,42 @@ All 117 opportunities begin in **Stage 1a**. Advancement is selective — only s
   - [ ] Differentiation vs. generic AI templates and Big Four / MSP / MSSP boundaries are explicit.
 
 ### Stage 2 — Hypothesis (`Tier 2: Falsifiable Assumptions`)
-- **PMBOK 8 Alignment:** Initiating — Design & Commercial Assumption Formulation.
-- **Primary Artifact:** Entry (`HYP-2027-NNN`) in [Hypothesis-Register.md](../registers/Hypothesis-Register.md).
-- **Inputs:** Stage 1b Ideation findings, buyer pain, pricing anchor.
-- **Completion Gate (`G2` — Hypotheses Formulated):**
-  - [ ] At least one falsifiable **Value / Packaging / IP Hypothesis** is logged with explicit **Falsification Criteria**.
-  - [ ] Status starts honestly as `Formulated` (never marked `Validated` without real buyer/pilot evidence).
-  - [ ] *SIDPA Rule #5:* Untested hypotheses are never treated as settled requirements or delivery commitments.
+- **PMBOK 8 Alignment:** Initiating — Pre-Project: Design & Commercial Assumption Formulation.
+- **Lifecycle IPO:** *Inputs:* Stage 1b Ideation assumptions & market comps → *Process:* Formulate falsifiable hypotheses, execute minimal $0 tests, and classify objectively against empirical evidence → *Outputs:* Classified `HYP-2027-NNN` rows in [Hypothesis-Register.md](../registers/Hypothesis-Register.md) + linked evidence logs feeding Stage 3.
+
+#### Hypothesis-Writing Best Practices (The 5-Part Falsifiable Contract)
+Every hypothesis must isolate **one** testable riskiest assumption and follow the structured formula:
+> *"We believe **[Target Buyer / Segment]** will **[Observable Commitment / Behavior]** because **[Specific Pain / Trigger]**. We will know this is true when **[Quantitative Success Threshold & Sample Size]** within **[Time Box]**, and false if **[Explicit Falsification Criteria]**."*
+
+- **Four Hypothesis Types:**
+  1. **Desirability (Value / Wedge):** Does the buyer experience the pain urgently enough to act?
+  2. **Viability (Pricing / Economics):** Will they pay the target anchor under \$0-capital terms?
+  3. **Feasibility (IP / Delivery):** Does existing CBa Consult IP cover ≥70% within the 10–15 hrs/wk cap?
+  4. **Scalability (Retainer / Reuse):** Does Pilot #1 convert into repeat sales, productized IP, or an MIP retainer?
+- **Anti-Patterns Rejected at `G2`:** Unfalsifiable wishes (*"clients will value this"*), bundled multi-variable statements (testing buyer + price + delivery in one row), vanity metrics (likes/impressions instead of qualified calls, LOIs, or paid pilots), and rewriting historical statements instead of appending dated updates.
+
+#### Objective 4-Step Process *(aligned with `sidpa-template` `Stage-02-Hypothesis-Methodology`)*
+1. **Formulate & Register:** Add permanent `HYP-2027-NNN` row(s) in [Hypothesis-Register.md](../registers/Hypothesis-Register.md). Keep all hypotheses in this single register (no per-ID `HYP-*.md` files); IDs are never reused or renumbered.
+2. **Define Minimal Test Plan (`advance_to_testing`):** Specify the \$0-capital test method (e.g., 15 targeted outreach conversations, one-pager walkthroughs, internal IP-gap audit), sample size, time box, and evidence artifact before moving status from `Formulated` → `Testing`.
+3. **Collect Empirical Evidence (No Plausibility Arguments):** Record dated, observable evidence only. If testing cannot run because a named prerequisite or external data is missing, state the blocker and hold at `Formulated/Blocked` (`remain_formulated_blocked`).
+4. **Classify Status Objectively (6-Action SIDPA Lifecycle):**
+   - `advance_to_testing` → **`Testing`** (real, actionable test plan is active)
+   - `mark_validated` → **`Validated`** (empirical evidence meets the pre-stated Success Threshold)
+   - `mark_invalidated` → **`Invalidated`** (empirical evidence triggers Falsification Criteria)
+   - `mark_inconclusive` → **`Inconclusive`** (real evidence exists but does not clearly decide either way)
+   - `remain_formulated_blocked` → **`Formulated/Blocked`** (no test run yet, or blocked by a named prerequisite)
+   - `flag_for_human_review` → **`Human Review`** (evidence is ambiguous; escalate to Director rather than forcing a confident-looking status)
+
+#### Stage 2 Deliverables
+1. **Registered Hypothesis Row(s):** `HYP-2027-NNN` in [Hypothesis-Register.md](../registers/Hypothesis-Register.md) with Type, Statement, Test Plan & Sample, Success Threshold, Falsification Criteria, Evidence Log, and Status.
+2. **Evidence Artifact(s):** Concrete, dated test log inside `opportunities/<ID>/` (e.g., outreach/discovery tally, pricing-objection notes, or IP-readiness audit) cited by the register row.
+3. **Stage 3 Handoff Signal:** Clear classification showing which assumptions are `Validated` vs. still open risk for the Stage 3 Business Case.
+
+#### Completion Gate (`G2` — Hypotheses Ready for Stage 3)
+- [ ] Every riskiest assumption (at minimum 1 Value/Wedge and 1 Pricing or Feasibility hypothesis for Tier A candidates) is logged in [Hypothesis-Register.md](../registers/Hypothesis-Register.md) using the 5-part falsifiable contract.
+- [ ] Each row defines a concrete **Test Plan & Sample**, **Success Threshold**, and **Falsification Criteria** (no vanity metrics or bundled variables).
+- [ ] Status is honestly assigned (`Formulated` until an active test plan exists; never `Validated` without linked empirical evidence).
+- [ ] *SIDPA Rule #5:* Untested or `Invalidated` hypotheses are never carried into Stage 3–4 as settled requirements or delivery commitments.
 
 ### Stage 3 — Benefit & Economics (`Tier 3: Commercial Viability`)
 - **PMBOK 8 Alignment:** Initiating — Benefits Realization Planning (Charter Input — SIDPA Rule #1).

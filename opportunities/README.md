@@ -1,8 +1,8 @@
 # Opportunities — Per-Opportunity Workspaces
 
-One folder per opportunity across the full 2027 portfolio — **Tier A Flagship** (13), **Tier B Growth** (7), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (48), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
+One folder per opportunity across the full 2027 portfolio — **Tier A Flagship** (13), **Tier B Growth** (7), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (51), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
 
-The authoritative status, effort, and capital figures for every idea — including all 117 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
+The authoritative status, effort, and capital figures for every idea — including all 120 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
 ## Tier A — Flagship (13)
 
@@ -88,7 +88,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-RSK-005_Evidence_Assurance_Decision_Traceability](OP-RSK-005_Evidence_Assurance_Decision_Traceability/Ideation-Spark.md) | `OP-RSK-005` | 4. Evidence & Governance | Evidence Assurance & Decision Traceability Assessment *(ECS)* |
 | [OP-ITG-009_Global_Data_Centers_in_Space](OP-ITG-009_Global_Data_Centers_in_Space/Ideation-Spark.md) | `OP-ITG-009` | 5. Sovereign Information | Global Data Centers in Space *(Parked Foresight)* |
 
-## Remaining Active Opportunities — Core & Specialty Backlog (48)
+## Remaining Active Opportunities — Core & Specialty Backlog (51)
 
 | Folder | ID | Functional Area | Offering |
 | --- | --- | --- | --- |
@@ -97,6 +97,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-FIN-005_Automated_Bookkeeping_for_Freelancers](OP-FIN-005_Automated_Bookkeeping_for_Freelancers/Ideation-Spark.md) | `OP-FIN-005` | 1. Finance | Automated Bookkeeping for Freelancers |
 | [OP-FIN-007_Dividend_Yield_REIT_Investing](OP-FIN-007_Dividend_Yield_REIT_Investing/Ideation-Spark.md) | `OP-FIN-007` | 1. Finance | Dividend Yield & REIT Investing |
 | [OP-FIN-008_Employee_Payments_Client_Funds](OP-FIN-008_Employee_Payments_Client_Funds/Ideation-Spark.md) | `OP-FIN-008` | 1. Finance | Employee Payments & Client Funds |
+| [OP-FIN-012_Accountants_Review_Findings_Side_Letters](OP-FIN-012_Accountants_Review_Findings_Side_Letters/Ideation-Spark.md) | `OP-FIN-012` | 1. Finance | Annual Accountant's Review Findings Reporting & Side Letters |
 | [OP-HR-003_HR_specific_AI_governance_module](OP-HR-003_HR_specific_AI_governance_module/Ideation-Spark.md) | `OP-HR-003` | 2. Human Resources | HR-specific AI governance module |
 | [OP-HR-004_Fractional_HR_people_ops_clinic](OP-HR-004_Fractional_HR_people_ops_clinic/Ideation-Spark.md) | `OP-HR-004` | 2. Human Resources | Fractional HR & people-ops clinic |
 | [OP-HR-005_Online_Tutoring_or_Coaching](OP-HR-005_Online_Tutoring_or_Coaching/Ideation-Spark.md) | `OP-HR-005` | 2. Human Resources | Online Tutoring or Coaching |
@@ -130,6 +131,8 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-RSK-001_Operational_AI_risk_register_starter](OP-RSK-001_Operational_AI_risk_register_starter/Ideation-Spark.md) | `OP-RSK-001` | 12. Risk Management | Operational & AI risk register starter kit |
 | [OP-RSK-002_AI_Ethics_Auditor_Bias_Review](OP-RSK-002_AI_Ethics_Auditor_Bias_Review/Ideation-Spark.md) | `OP-RSK-002` | 12. Risk Management | AI Ethics Auditor / Bias Review Service |
 | [OP-RSK-003_AI_Explainability_Audit_Specialist](OP-RSK-003_AI_Explainability_Audit_Specialist/Ideation-Spark.md) | `OP-RSK-003` | 12. Risk Management | AI Explainability & Audit Specialist |
+| [OP-RSK-006_DORA_NIS2_ICT_Third_Party_RoI](OP-RSK-006_DORA_NIS2_ICT_Third_Party_RoI/Ideation-Spark.md) | `OP-RSK-006` | 12. Risk Management | DORA / NIS2 Third-Party ICT Risk, Register of Information (RoI) & Cloud Exit Governance |
+| [OP-RSK-007_Multi_Regime_Incident_Triage_Reporting](OP-RSK-007_Multi_Regime_Incident_Triage_Reporting/Ideation-Spark.md) | `OP-RSK-007` | 12. Risk Management | Harmonized Multi-Regime Incident Triage & Regulatory Reporting Playbook |
 | [OP-CX-001_Client_onboarding_retention_friction_audit](OP-CX-001_Client_onboarding_retention_friction_audit/Ideation-Spark.md) | `OP-CX-001` | 13. Customer Experience | Client onboarding & retention friction audit |
 | [OP-CX-003_Voice_App_Skill_Developer](OP-CX-003_Voice_App_Skill_Developer/Ideation-Spark.md) | `OP-CX-003` | 13. Customer Experience | Voice App & Skill Developer |
 | [OP-CHG-001_Framework_tool_adoption_playbook](OP-CHG-001_Framework_tool_adoption_playbook/Ideation-Spark.md) | `OP-CHG-001` | 14. Change Management | Framework & tool adoption playbook |
