@@ -29,7 +29,7 @@ Assess whether sensitive artifacts can be reconstructed through any single provi
 
 | Time Horizon | Effort | Expected Capital | Target Qtr |
 | --- | --- | --- | --- |
-| 6–10 wks (8–12 hrs/wk) | High | €4,000–€15,000+ | Q2 2027 |
+| 6–10 wks (8–12 hrs/wk) | High | €4,000–€15,000+ | Q3–Q4 2027 |
 
 ## Market Validation
 

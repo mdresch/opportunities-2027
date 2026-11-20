@@ -38,6 +38,7 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 ## Existing Assets to Draw On
 
 - [`github.com/CBA-Consult/ICT-Governance-Framework-Application`](https://github.com/CBA-Consult/ICT-Governance-Framework-Application) — the most technically mature asset in the whole oppurtunities-2027 exploration; backs this assessment directly.
+- **`sidpa-template` (`mdresch/sidpa-template`)** — live, pytest-verified reference implementation of Bayesian `DecisionFrame` governance gates (`DecisionAuthority.FULL` vs `LOW`, `minimum_margin = 0.05` tie-break halting, Permanent Lineage Freeze, `requires_human_approval: true`, and `validate-intent-foundation`).
 - [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) — client-facing one-pager already drafted.
 
 ## Related Opportunities

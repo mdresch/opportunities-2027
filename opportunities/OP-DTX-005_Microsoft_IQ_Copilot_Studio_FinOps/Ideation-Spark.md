@@ -39,7 +39,7 @@ Connect proprietary enterprise context safely via **Microsoft IQ** (`Work IQ`, `
 
 - `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\Power Apps Center of Excellence.docx` (`OP-ITG-007`).
 - `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\Opportunities Business\Power Platform Solutions.docx` (`OP-DTX-003`).
-- [One_Pager_OP-ITG-014_Knowledge_Context_Governance.md](../../One_Pager_OP-ITG-014_Knowledge_Context_Governance.md) (parent Tier A context offer).
+- [One_Pager_OP-ITG-014_Knowledge_Context_Governance.md](../OP-ITG-014_Knowledge_Context_Governance/One_Pager_OP-ITG-014_Knowledge_Context_Governance.md) (parent Tier A context offer).
 
 ## Related Opportunities
 

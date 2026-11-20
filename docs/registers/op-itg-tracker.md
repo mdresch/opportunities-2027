@@ -1,6 +1,6 @@
 # OP-ITG Tracker — Pillar 6: IT and Technology
 
-**Owner:** Director (all 16 items) | **Created:** 2026-11-19 | **Source of truth for item details:** [inventory-of-ideas.md](inventory-of-ideas.md) §6
+**Owner:** Director (all 18 items) | **Created:** 2026-11-19 | **Updated:** 2026-11-20 | **Source of truth for item details:** [inventory-of-ideas.md](../../inventory-of-ideas.md) §6 | **Portfolio orientation & `BFI-NNN` items:** [Portfolio-Status-Register.md](Portfolio-Status-Register.md)
 
 Scope of this file: tracking and next steps only. No delivery work has been started on any item. Statuses are copied from the inventory; nothing has been piloted yet.
 
@@ -17,15 +17,17 @@ Priority scale: **P1** = pursue first (Q1–Q2 2027 execution sequence), **P2** 
 | `OP-ITG-005` | AI Infrastructure Consultancy | Idea (Q2–Q3 2027) | Validate demand and check overlap with `OP-STR-002` before any scoping. | Pairs with `OP-ITG-002` | P3 | None |
 | `OP-ITG-006` | Data Annotation Microservices | Idea (Q2 2027) | Check fit with the Tier A portfolio and the 10–15 hrs/wk cap. Likely a candidate to park. | None stated | P3 | None |
 | `OP-ITG-007` | Power Apps Center of Excellence | Idea (Q2–Q3 2027) | Confirm the link with `OP-DTX-003`, and with `OP-ITG-011` (Copilot Studio CoE). | `OP-DTX-003`, `OP-ITG-004`, `OP-ITG-011` | P3 | None |
-| `OP-ITG-008` | Spatial / AR Content Design | Idea (Q3 2027) | Owner decision: move to the Digital Transformation or CX pillar, or park. See §3. | None | **Hold** (scope flag) | None |
-| `OP-ITG-009` | Global Data Centers in Space | Parked | Owner decision: keep parked as a Tier D foresight brief, or move to Strategy. See §3. | None | **Hold** (scope flag) | None |
-| `OP-ITG-010` | Information Retention and Recovery Specialist | Idea (Q2 2027) | Confirm the Tier B scope. It is also a named input to `OP-STR-004`/`005` and `OP-ITG-014`, so decide its place relative to those. | Pairs with `OP-FIN-009`/`010`, `OP-ITG-004`, `OP-LEG-002`; anchors `OP-ITG-015` | P2 | None (referenced in [flagship one-pager](One_Pager_Flagship_Opportunities_2027.md)) |
+| `OP-ITG-008` | Spatial / AR Content Design | Idea (Q3 2027) | Kept in place per Director decision (`BFI-003`, 2026-11-20). | None | P3 | None |
+| `OP-ITG-009` | Global Data Centers in Space | Parked | Kept parked as Tier D foresight brief per Director decision (`BFI-003`, 2026-11-20). | None | Parked | None |
+| `OP-ITG-010` | Information Retention and Recovery Specialist | Idea (Q2 2027) | Confirm the Tier B scope. It is also a named input to `OP-STR-004`/`005` and `OP-ITG-014`, so decide its place relative to those. | Pairs with `OP-FIN-009`/`010`, `OP-ITG-004`, `OP-LEG-002`; anchors `OP-ITG-015` | P2 | None (referenced in [flagship one-pager](../reports/One_Pager_Flagship_Opportunities_2027.md)) |
 | `OP-ITG-011` | Agent 365 & Entra AI-Agent Governance Quick-Start | Idea (Q1–Q2 2027) | Decide whether this is the Phase 0 wedge into `OP-ITG-013`. The one-pager already names it that way (€2,500–€7,500). | Wedge for `OP-ITG-002`, `OP-ITG-007`, `OP-ITG-013` | P2 (wedge for P1) | None (mentioned in the `OP-ITG-013` one-pager) |
 | `OP-ITG-012` | Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness | Idea (Q2 2027) | Check preview-feature stability (Sovereign Control Panel, Fabric licensing) before committing. | Pairs with `OP-ITG-010`, `OP-ITG-004` | P3 | None |
-| `OP-ITG-013` | Enterprise AI Agent Governance Assessment | Idea (Q1–Q2 2027) | Confirm the sequencing decision in §2, then list the reusable platform assets and the Phase 0 wedge. | `OP-ITG-011` wedge, platform repo; leads into `OP-ITG-016`, `OP-HR-009` | **P1** | [One-pager](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md); [Tier A summary](Tier_A_Executive_Summary_2027.md) |
-| `OP-ITG-014` | Knowledge Intelligence & Context Governance Assessment | Idea (Q1–Q2 2027) | Confirm the sequencing decision in §2, then list the ADPA/ECS assets to reuse. | ADPA/ECS IP; `OP-DTX-005`; enables `OP-ITG-013`; links to `OP-ITG-010` | **P1** | [One-pager](One_Pager_OP-ITG-014_Knowledge_Context_Governance.md); [Tier A summary](Tier_A_Executive_Summary_2027.md) |
-| `OP-ITG-015` | Cryptographic Sovereignty & Trust Architecture Assessment | Idea (Q2 2027 in the inventory; Q3–Q4 in the exec summary) | Resolve the quarter mismatch (see §2). Write the explicit threat model into a brief. | Anchors `OP-ITG-010`, `OP-ITG-014`; SIDPA document | P2 | [Flagship one-pager](One_Pager_Flagship_Opportunities_2027.md) (no dedicated file); [Tier A summary](Tier_A_Executive_Summary_2027.md) |
-| `OP-ITG-016` | Enterprise Agent Operating Architecture ("COBIT for Agents") | Idea (Q3 2027) | Keep as the follow-on to `OP-ITG-013`. No action until `OP-ITG-013` has a pilot. | `OP-ITG-013`, `OP-HR-009` | P2 (later wave) | [Flagship one-pager](One_Pager_Flagship_Opportunities_2027.md) (no dedicated file); [Tier A summary](Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-013` | Enterprise AI Agent Governance Assessment | Idea (Q1–Q2 2027) | Confirm the sequencing decision in §2, then list the reusable platform assets and the Phase 0 wedge. | `OP-ITG-011` wedge, platform repo; leads into `OP-ITG-016`, `OP-HR-009` | **P1** | [One-pager](../../opportunities/OP-ITG-013_Enterprise_AI_Agent_Governance/One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-014` | Knowledge Intelligence & Context Governance Assessment | Idea (Q1–Q2 2027) | Confirm the sequencing decision in §2, then list the ADPA/ECS assets to reuse. | ADPA/ECS IP; `OP-DTX-005`; enables `OP-ITG-013`; links to `OP-ITG-010` | **P1** | [One-pager](../../opportunities/OP-ITG-014_Knowledge_Context_Governance/One_Pager_OP-ITG-014_Knowledge_Context_Governance.md); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-015` | Cryptographic Sovereignty & Trust Architecture Assessment | Idea (Q3–Q4 2027) | Write the explicit threat model into a brief (aligned to Q3–Q4 2027 per `BFI-002`, 2026-11-20). | Anchors `OP-ITG-010`, `OP-ITG-014`; SIDPA document | P2 | [Flagship one-pager](../reports/One_Pager_Flagship_Opportunities_2027.md) (no dedicated file); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-016` | Enterprise Agent Operating Architecture ("COBIT for Agents") | Idea (Q3 2027) | Keep as the follow-on to `OP-ITG-013`. No action until `OP-ITG-013` has a pilot. | `OP-ITG-013`, `OP-HR-009` | P2 (later wave) | [Flagship one-pager](../reports/One_Pager_Flagship_Opportunities_2027.md) (no dedicated file); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-017` | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes | Idea (Q2 2027) | Package `<300ms` wake benchmark demo & finalize `ADR-008` before enterprise pilot handoff. | `repos/mxc` (`feat/hyperv-v2-rebased`); underpins `OP-ITG-013`, `OP-ITG-015`, `OP-ITG-016` | P2 | [One-pager](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) ([.docx](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-018` | Managed Intelligence Provider / Professional (MIP) *(Umbrella Retainer)* | Idea (Q2–Q3 2027) | Attach "Graduate to MIP Retainer" option to every Q1–Q2 Tier A pilot proposal; finalize MSP/MSSP RACI boundary. | Converts `OP-ITG-013`/`014`/`015`/`017`, `OP-RSK-004`, `OP-FIN-009` into recurring MRR | **P1** *(Retainer engine)* | [One-pager](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md) ([.docx](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
 
 ## 2. Ranking conflict: `OP-ITG-013`
 
@@ -44,26 +46,24 @@ Priority scale: **P1** = pursue first (Q1–Q2 2027 execution sequence), **P2** 
 
 **What I did.** I did not renumber the inventory index, because it is a valid strategic-value ranking. I added a note below the OP-ITG table in the inventory stating that the executive summary is the authoritative delivery order. The index numbers are unchanged.
 
-**Open point for the Director.** If you would rather make `OP-ITG-013` the first ITG delivery, the executive summary should be changed instead. That is a commercial decision. I have not made it.
-
-**Related mismatch.** `OP-ITG-015` is #5 in the inventory index and tagged Q2 2027 in its row. The executive summary schedules it for Q3–Q4 2027. The same reasoning applies, so I treat Q3–Q4 as current. `OP-ITG-016` is consistent across the files (Q3 2027 and later).
+**Director decision (2026-11-20, `BFI-001` & `BFI-002` closed):** Confirmed Executive Summary **#5** as the authoritative delivery order for `OP-ITG-013`, and aligned `OP-ITG-015` to **Q3–Q4 2027** across `inventory-of-ideas.md` and this tracker. `OP-ITG-016` remains Q3 2027 and later.
 
 ## 3. Scope flags
 
 Both items remain in the inventory and in the tracker.
 
-- **`OP-ITG-008` Spatial / AR Content Design.** The offering is spatial UX, AR authoring and 3D content, and its toolkit tag is Customer Experience Strategy & Design Thinking. That is content or design work, not IT consulting. It resembles `OP-HR-006` (AR/VR Training Scene Builder), which sits under Human Resources. Suggested home: Digital Transformation or CX.
-- **`OP-ITG-009` Global Data Centers in Space.** The inventory already describes it as speculative research with no capital path. It is Parked and listed as Tier D thought leadership. Its toolkit tag is Corporate/Business Strategy, and it is not an IT consulting service. Suggested home: Strategy, or a foresight brief.
+- **`OP-ITG-008` Spatial / AR Content Design.** The offering is spatial UX, AR authoring and 3D content, and its toolkit tag is Customer Experience Strategy & Design Thinking.
+- **`OP-ITG-009` Global Data Centers in Space.** Exploratory foresight brief, Parked and listed as Tier D thought leadership.
 
-Neither has been moved or re-tagged. That is the Director's decision.
+**Director decision (2026-11-20, `BFI-003` closed):** Keep both items in place as-is (`OP-ITG-009` remains Parked / Tier D).
 
 ## 4. Existing projects and assets
 
 | Item | What exists in this repo | External / not verified |
 | --- | --- | --- |
-| `OP-ITG-013` | [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) | Platform repo (see below) |
-| `OP-ITG-014` | [One_Pager_OP-ITG-014_Knowledge_Context_Governance.md](One_Pager_OP-ITG-014_Knowledge_Context_Governance.md) | ADPA / ECS assets |
-| `OP-ITG-015` | No dedicated file. Covered in [One_Pager_Flagship_Opportunities_2027.md](One_Pager_Flagship_Opportunities_2027.md) and the [Tier A summary](Tier_A_Executive_Summary_2027.md) | `SIDPA ... .docx` on `F:\OneDrive - CBA\` |
+| `OP-ITG-013` | [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](../../opportunities/OP-ITG-013_Enterprise_AI_Agent_Governance/One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) | Platform repo (see below) |
+| `OP-ITG-014` | [One_Pager_OP-ITG-014_Knowledge_Context_Governance.md](../../opportunities/OP-ITG-014_Knowledge_Context_Governance/One_Pager_OP-ITG-014_Knowledge_Context_Governance.md) | ADPA / ECS assets |
+| `OP-ITG-015` | No dedicated file. Covered in [One_Pager_Flagship_Opportunities_2027.md](../reports/One_Pager_Flagship_Opportunities_2027.md) and the [Tier A summary](../../Tier_A_Executive_Summary_2027.md) | `SIDPA ... .docx` on `F:\OneDrive - CBA\` |
 | `OP-ITG-016` | No dedicated file. Covered in the same two documents | None |
 | `OP-ITG-001`, `OP-ITG-002` | None in this repo | [ICT-Governance-Framework-Application](https://github.com/CBA-Consult/ICT-Governance-Framework-Application) and `ADPA ICT Governance Framework\` (14 docs). I could not open either from here. |
 

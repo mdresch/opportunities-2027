@@ -37,7 +37,7 @@
 
 ## Existing Assets to Draw On
 
-- **ECS** evidence-governance foundation & **ADPA** traceability specs.
+- **ECS** evidence-governance foundation, **ADPA** traceability specs, and **`sidpa-template` (`mdresch/sidpa-template`)** (deferred audit logging, `evidence_basis: design_time | execution` separation, and `Audit-Register.md` provenance chains).
 - `OP-RSK-004` (*"SOC 2 for AI"*), `OP-ITG-015` (Bayesian active evidence-seeking), and `OP-FIN-009` (Sign-Off Registers & WORM hashes).
 
 ## Related Opportunities

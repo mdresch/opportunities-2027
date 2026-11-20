@@ -38,6 +38,7 @@
 ## Existing Assets to Draw On
 
 - `AI Purpose Clause.docx` — working governance & negative-exclusions draft (also backs `OP-LEG-001`/`OP-LEG-002`).
+- **`sidpa-template` (`mdresch/sidpa-template`)** — demonstrable pre-assurance architecture featuring immutable SemVer baselines (`PMP-BL-vX.Y.Z`), `Audit-Register.md`, deferred audit logging, human-in-the-loop gates, and deterministic rollback (`compare_decision_results()`) mapped to ISO 42001 / EU AI Act traceability.
 - [One_Pager_OP-RSK-004_AI_Governance_Certification.md](One_Pager_OP-RSK-004_AI_Governance_Certification.md) — client-facing one-pager already drafted.
 
 ## Related Opportunities

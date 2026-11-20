@@ -99,11 +99,28 @@ Before promoting any idea to `Pilot`, answer these 7 questions using the 1-sente
 6. **Boundaries & Risk:** What is explicitly *out of scope* (e.g., non-legal advice boundary, no over-promised autonomous AI), and what is the #1 failure mode?
 7. **Compounding / Scale Path:** After Pilot #1, does this scale into a Medium/Large audit, productized toolkit, recurring retainer, or white-label partner offer?
 
+## 6c. Tailored SIDPA Governance & Hybrid Graduation Map
+
+To preserve the **10–15 hrs/week** sweat-equity cap while keeping a clean path into full enterprise delivery rigor, this portfolio uses a **tailored hybrid integration** of `sidpa-template` (Synthetic Intent-Driven Process Architecture — PMBOK 8 / BABOK 18-stage closed loop). For full stage-by-stage definitions, completion gates (`G1a`–`G4-B`), and Track A/B exit criteria, see [Tailored-Hybrid-SIDPA-Governance.md](docs/governance/Tailored-Hybrid-SIDPA-Governance.md).
+
+| Portfolio Stage (`oppurtunities-2027`) | SIDPA Stage | Home & Artifacts | Gate / Authority |
+| --- | --- | --- | --- |
+| **Tier 1 — Spark** (all 117 ideas) | **Stage 1a: Spark Capture** | `opportunities/<ID>/Ideation-Spark.md` (7 Pivotal Questions + scope boundary) | Lightweight; no SIDPA scaffold copied |
+| **Tier 2 — Deeper Research** (shortlist) | **Stages 1b–2: Ideation & Hypothesis** | Same folder + [Hypothesis-Register.md](docs/registers/Hypothesis-Register.md) (`HYP-2027-NNN`) | Falsifiable buyer/pricing/IP criteria defined |
+| **Tier 3 — Pre-Pilot Gate** (`Idea → Pilot`) | **Stages 3–4: Benefit & Charter** | Concise 1–2 page Opportunity Brief / Pilot Charter in `opportunities/<ID>/` | Explicit Director approval (`requires_human_approval: true`) |
+| **Pilot Delivery — Advisory / Assessment** *(e.g., `OP-OPS-001`, `OP-FIN-009`, `OP-HR-002`)* | **Tailored Stages 9–15** | Stays lightweight in `opportunities/<ID>/` (Charter → Delivery → Actual Outcome → [Lessons-Learned-Register.md](docs/registers/Lessons-Learned-Register.md)) | Skip heavy software ADRs/FDDs & 9 subsidiary plans (SIDPA Rules #30 & #32) |
+| **Pilot / Build — Platform-Backed Flagship** *(e.g., `OP-ITG-013`–`018`)* | **Full Stages 5–18** | **Graduates to a standalone repo** initialized from `sidpa-template` (`python scripts/init_project.py --name <op-id>`) | Full Pillars → ADRs → BRD/FDD/Stories → tailored PMP → Audit → Adaptation → Intent Refinement |
+
+**Governance hygiene rules (see [.github/instructions/sidpa-portfolio-qa.instructions.md](.github/instructions/sidpa-portfolio-qa.instructions.md)):**
+- **Live Orientation:** Track active portfolio state and `BFI-NNN` design-time baseline defects in [Portfolio-Status-Register.md](docs/registers/Portfolio-Status-Register.md).
+- **Two-Loop Separation:** Document/ranking inconsistencies (`evidence_basis: design_time`) go to `BFI-NNN`; only real pilot/client outcomes (`evidence_basis: execution`) go to [Lessons-Learned-Register.md](docs/registers/Lessons-Learned-Register.md) and quarterly reviews.
+- **No Premature Policy Stores:** Keep Bayesian `agent-learning` TaskPolicies inside graduated `sidpa-template` repos — do not add a policy store to `oppurtunities-2027` until a repeating portfolio gate decision justifies it (SIDPA Rule #18).
+
 ## 7. 2027 Milestones (Tier A Flagship Execution)
 
 | Milestone | Target | Notes |
 | --- | --- | --- |
-| Portfolio architecture complete across 17 pillars, 18 Signature Toolkits & 5 Strategic Assets | Complete (Nov 2026) | 115 projects in [inventory-of-ideas.md](inventory-of-ideas.md) + Tier A suite in [Tier_A_Executive_Summary_2027.md](Tier_A_Executive_Summary_2027.md) |
+| Portfolio architecture complete across 17 pillars, 18 Signature Toolkits & 5 Strategic Assets | Complete (Nov 2026) | 117 projects in [inventory-of-ideas.md](inventory-of-ideas.md) + Tier A suite in [Tier_A_Executive_Summary_2027.md](Tier_A_Executive_Summary_2027.md) |
 | Phase 0 & Tier A One-Pagers packaged + Pilot #1 launched (`OP-OPS-001 → OP-CX-001` or `OP-FIN-009`) | Q1 2027 | 5 client-facing one-pagers ready; prioritize speed-to-signal within 10–15 hrs/wk cap |
 | First 3 Tier A/Phase 0 pilots executed (`OP-OPS-001`, `OP-FIN-009`, `OP-ITG-013`/`014` or `OP-RSK-004`) | Q1–Q2 2027 | Pre-Dec 2027 EU AI Act Annex III window for `OP-RSK-004` |
 | First capital generated ($1,000+ initial bar → €5,000+ cumulative) | Q2–Q3 2027 | From any combination of piloted Tier A / Phase 0 engagements |

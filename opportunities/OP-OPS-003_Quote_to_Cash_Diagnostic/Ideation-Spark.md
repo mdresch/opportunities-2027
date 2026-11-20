@@ -5,7 +5,7 @@
 **Strategic Asset:** 4. Evidence & Governance
 **Functional Area:** Operations (Sales-to-Operations / Quote-to-Cash & Lean 6 Sigma) · **Signature Toolkit:** Operating Model & Organization Design
 **Size:** All
-**Source:** [inventory-of-ideas.md §7 Operations](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) · related one-pager at root: [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md)
+**Source:** [inventory-of-ideas.md §7 Operations](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) · related one-pager at root: [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../docs/reports/One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md)
 
 ## Positioning
 
@@ -39,7 +39,7 @@ Single repeatable methodology, scoped down to a handoff map (`OP-OPS-001`) for s
 
 - `OP-OPS-001` pilot output (once run) — the small-company handoff map.
 - `OP-OPS-002` pilot output (once run) — the enterprise cross-functional audit.
-- [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md) — the related, already-drafted GTM Priority #1 one-pager (stays at the repo root since it covers `OP-OPS-001 → OP-CX-001` specifically, not this productized diagnostic).
+- [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../docs/reports/One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md) — the related, already-drafted GTM Priority #1 one-pager (stays at the repo root since it covers `OP-OPS-001 → OP-CX-001` specifically, not this productized diagnostic).
 
 ## Related Opportunities
 

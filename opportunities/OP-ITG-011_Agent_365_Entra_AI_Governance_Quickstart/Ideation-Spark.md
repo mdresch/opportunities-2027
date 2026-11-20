@@ -38,7 +38,7 @@ Configure **Agent 365** observability/FinOps limits, **Entra for AI Agents** jus
 ## Existing Assets to Draw On
 
 - `github.com/CBA-Consult/ICT-Governance-Framework-Application` (Zero Trust & policy templates).
-- [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](../../One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) (parent Tier A offer).
+- [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](../OP-ITG-013_Enterprise_AI_Agent_Governance/One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) (parent Tier A offer).
 
 ## Related Opportunities
 

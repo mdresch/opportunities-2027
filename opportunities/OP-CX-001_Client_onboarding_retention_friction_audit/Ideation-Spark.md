@@ -4,7 +4,7 @@
 **Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
 **Functional Area:** 13. Customer Experience · **Signature Toolkit:** Customer Experience Strategy & Design Thinking
 **Category:** Audit / Diagnostic · **Size:** Small & Mid
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · related one-pager: [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md)
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · related one-pager: [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../docs/reports/One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md)
 
 ## Positioning
 

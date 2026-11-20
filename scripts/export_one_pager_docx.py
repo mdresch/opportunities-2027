@@ -569,8 +569,18 @@ OP_ITG_018_SPEC = {
 
 if __name__ == "__main__":
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    out17 = os.path.join(root, "One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.docx")
-    out18 = os.path.join(root, "One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.docx")
+    out17 = os.path.join(
+        root,
+        "opportunities",
+        "OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero",
+        "One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.docx",
+    )
+    out18 = os.path.join(
+        root,
+        "opportunities",
+        "OP-ITG-018_Managed_Intelligence_Provider_MIP",
+        "One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.docx",
+    )
     build_executive_datasheet(OP_ITG_017_SPEC, out17)
     build_executive_datasheet(OP_ITG_018_SPEC, out18)
     print(f"GENERATED: {out17}")

@@ -38,6 +38,7 @@ Design how 500+ enterprise AI agents interact at scale: agent orchestration, age
 ## Existing Assets to Draw On
 
 - `ICT-Governance-Framework-Application` (via `OP-ITG-013`) — the identity/lifecycle governance primitives this architecture extends from single-agent to multi-agent scale.
+- **`sidpa-template` (`mdresch/sidpa-template`)** — working 18-stage closed-loop governance scaffold demonstrating multi-agent pickup ordering, human escalation/tie-break halting (`DecisionAuthority.FULL`), and two-loop design-time vs. execution governance change pipelines (`Stage 16`).
 
 ## Related Opportunities
 

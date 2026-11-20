@@ -4,7 +4,7 @@
 **Tier:** A — Flagship *(Strategic Asset 3: Digital Labor & Strategic Asset 5: Sovereign Information)*
 **Functional Area:** 6. IT and Technology *(includes IT/ICT Governance)* · **Signature Toolkit:** Digital Transformation
 **Category:** Platform-Backed Architecture / Advisory · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](../../One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [mxc/docs/hyperv/README.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/hyperv/README.md) · [mxc/docs/project-docs/Spark-Capture.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/project-docs/Spark-Capture.md)
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [mxc/docs/hyperv/README.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/hyperv/README.md) · [mxc/docs/project-docs/Spark-Capture.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/project-docs/Spark-Capture.md)
 
 ## Positioning
 

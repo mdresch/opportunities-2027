@@ -39,7 +39,7 @@ Structured client onboarding assessment system with full PMBOK/BABOK governance,
 
 - `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\Opportunities Business\ADPA - Client Onboarding Assessments Systems\` (33-doc PMBOK/BABOK suite).
 - `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\ADPA Client Onboarding Assessment System - Project - UniCorn COAS.docx`.
-- [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md) (precursor Phase 0 wedge).
+- [One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md](../../docs/reports/One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md) (precursor Phase 0 wedge).
 
 ## Related Opportunities
 

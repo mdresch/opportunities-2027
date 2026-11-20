@@ -4,7 +4,7 @@
 **Tier:** A — Flagship *(All 5 Strategic Assets — Primary Recurring Revenue Engine)*
 **Functional Area:** 6. IT and Technology *(includes IT/ICT Governance)* & 17. Intelligence & Autonomous Systems Governance · **Signature Toolkit:** Management Consulting
 **Category:** Managed Service / Retainer · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md](../../One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md)
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md](One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md)
 
 ## Positioning
 
@@ -26,7 +26,7 @@ An MIP takes ongoing operational and governance accountability for the five pill
 
 1. **Buyer & 2027 Trigger** — CEOs, CIOs, CFOs, CISOs, and PE Operating Partners at mid-market and regulated enterprises (50–2,500 seats). Triggered by three converging 2027 forces: (a) **Agent Sprawl & FinOps Shock** (hundreds of Copilot/custom agents with no owner or cost ceiling), (b) **Regulatory Enforcement** (IFRS 18 Jan 2027, EC ESG Assurance Jul 2027, EU AI Act Annex III Dec 2027, DORA/NIS2), and (c) **Inability to hire a €250k+ full-time Chief AI Officer + Governance team**.
 2. **The Wedge (Pain)** — Clients buy one-off AI pilots or compliance assessments, and 90 days later prompts drift, knowledge bases decay, agent costs spike, and audit evidence goes stale. Neither their MSP (IT tickets) nor their MSSP (SOC alerts) nor their Big Four auditor (independence conflict) can own ongoing **Intelligence Operations**.
-3. **Deliverable & Existing IP** — Unifies **every proprietary CBa Consult asset** into a single monthly/quarterly operating cadence: `ICT-Governance-Framework-Application`, `ADPA`, `ECS`, `SIDPA`, `repos/mxc` Hyper-V JIT subsystem, `AI Purpose Clause.docx`, `HR Transformation Toolkit (2027)`, and the 2005–2008 Continuous Close / Rate Engine methodology.
+3. **Deliverable & Existing IP** — Unifies **every proprietary CBa Consult asset** into a single monthly/quarterly operating cadence: `ICT-Governance-Framework-Application`, `ADPA`, `ECS`, `SIDPA` (both the economic framework and the live `sidpa-template` 18-stage closed-loop governance scaffold driving Stages 11–18 continuous audit, lessons, governance change, and adaptation), `repos/mxc` Hyper-V JIT subsystem, `AI Purpose Clause.docx`, `HR Transformation Toolkit (2027)`, and the 2005–2008 Continuous Close / Rate Engine methodology.
 4. **Sweat-Equity Feasibility** — Ongoing retainer (`4–12 hrs/wk` per client across Bronze/Silver/Gold MIP tiers), \$0 initial working capital. Expected monthly recurring revenue: **€2,500–€12,000+ / month per client** (€30k–€144k+ ARR per account).
 5. **Outcome & Proof** — Monthly **Intelligence Health & Governance Scorecard** (Agent FinOps spend vs. budget, Context/RAG quality index, EU AI Act / ISO 42001 control drift = 0, Sovereign/Hyper-V pool compliance, and Quarterly Board Intelligence Capital Brief).
 6. **Boundaries & Risk** — **Strict Non-MSP / Non-MSSP Boundary:** The MIP does *not* run L1 helpdesk tickets, patch laptops, or operate a 24/7 SIEM/SOC — it governs and orchestrates the Intelligence Stack *above* the client's existing MSP and MSSP, and remains 100% conflict-free from statutory external auditors.
