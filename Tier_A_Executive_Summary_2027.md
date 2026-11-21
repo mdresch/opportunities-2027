@@ -1,6 +1,6 @@
 # CBa Consult — Flagship Tier A Executive Summary (2027–2030)
 
-**Owner:** Menno Drescher, CBa Consult   |   **Date:** 2026-11-18   |   **Portfolio Tier:** Tier A (Flagships driving 80–90% of enterprise value)
+**Owner:** Menno Drescher, CBa Consult   |   **Date:** 2026-11-21   |   **Portfolio Tier:** Tier A (Flagships driving 80–90% of enterprise value)
 
 ---
 
@@ -54,4 +54,4 @@ To stay within the **10–15 hrs/week** capacity cap, Tier A flagships are enter
 
 ---
 
-*Full 117-project inventory: [inventory-of-ideas.md](inventory-of-ideas.md) · Market validation & regulatory calendar: [market-analysis-2027.md](market-analysis-2027.md) · Methodology & 7 Pivotal Questions: [ideation-template.md](ideation-template.md)*
+*Full 120-project inventory: [inventory-of-ideas.md](inventory-of-ideas.md) · Market validation & regulatory calendar: [market-analysis-2027.md](market-analysis-2027.md) · Methodology & 7 Pivotal Questions: [ideation-template.md](ideation-template.md) · Live governance snapshot: [Portfolio-Status-Register.md](docs/registers/Portfolio-Status-Register.md)*

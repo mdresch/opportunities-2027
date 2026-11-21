@@ -7,7 +7,7 @@ governance_policy: "none (orientation snapshot, not a governed approval artifact
 artifact_id: "portfolio-status-register"
 version: "1.0 (live — overwritten in place whenever orientation changes)"
 owner: "Menno Drescher (Director, CBa Consult)"
-last_updated: "2026-11-20"
+last_updated: "2026-11-21"
 ---
 
 # Portfolio Status Register — Opportunities 2027
@@ -27,7 +27,7 @@ last_updated: "2026-11-20"
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: #1 `OP-OPS-001 → OP-CX-001`, #2 `OP-FIN-009`, #3 `OP-ITG-014`, #4 `OP-RSK-004`, #5 `OP-ITG-013` |
 | **Last Milestone Completed** | Root directory cleanup (21 → 5 core root files, 0 broken links) + Tailored Hybrid SIDPA governance integration |
 | **Next Priority Unit of Work** | Complete Tier 2 deeper research & Tier 3 Pre-Pilot Gate for Q1 lead wedges (`OP-OPS-001 → OP-CX-001` and `OP-FIN-009`) and validate hypotheses in [Hypothesis-Register.md](Hypothesis-Register.md) |
-| **Graduated Standalone SIDPA Repos** | None yet from this funnel *(existing external proprietary build assets: `repos/mxc` for `OP-ITG-017`, `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
+| **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `4/6 Epics · 10/17 stories` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
 
 ## 2. Q1–Q4 2027 Priority Wave Status
 
@@ -36,7 +36,15 @@ last_updated: "2026-11-20"
 | **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 2 (Hypotheses `HYP-2027-001`, `005`, `006` formulated) | Execute Q1 outreach (`HYP-2027-001` → `Testing`) → Stage 3–4 Pre-Pilot Gate | Lightweight Advisory (Track A) |
 | **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 2 (Hypotheses `HYP-2027-002`, `007`, `008`, `009` formulated) | Run internal RGP IP sprint (`HYP-2027-007`) + Q1 CFO outreach (`HYP-2027-002`) → Stage 3–4 Gate | Lightweight Advisory (Track A) |
 | **Wave 2 (AI & Compliance)** | Q2 2027 | `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013` | Stage 1a (Sparks + One-Pagers) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Hybrid / Platform-Backed |
-| **Wave 3 (Scale & Retainer)** | Q2–Q4 2027 | `OP-ITG-017`, `OP-ITG-018` (MIP), `OP-FIN-010`, `OP-ITG-015`, `OP-STR-004`/`005`, `OP-ITG-016` | Stage 1a (Sparks; One-Pagers ready for `017`/`018`) | Deferred until Wave 1–2 pilot signal | Platform-Backed / Retainer |
+| **Wave 3 (Scale & Retainer)** | Q2–Q4 2027 | `OP-ITG-017`, `OP-ITG-018` (MIP), `OP-FIN-010`, `OP-ITG-015`, `OP-STR-004`/`005`, `OP-ITG-016` | `OP-ITG-017` Track B Stage 10 (see §2b); others Stage 1a | Deferred until Wave 1–2 pilot signal (`OP-ITG-017` awaiting Phase 1 completion / commercial pilot) | Platform-Backed / Retainer |
+
+### 2b. Graduated Track B Repositories *(Non-Duplicating Rollup)*
+
+*Generated via `python scripts/export_portfolio_rollup.py` in each graduated `sidpa-template` repo. All ADRs, stories, subsidiary plans, gate JSONs, and execution queues stay exclusively in the graduated repository; refresh only at macro gate crossings (Stage 8, Phase/Epic completion / Stage 11 Audit, Stage 12/18 close).*
+
+| Opportunity ID | Graduated Track B Repo (SSOT) | Macro Stage & Baseline | Coarse Delivery Progress | Commercial / Pilot Status | As Of |
+| --- | --- | --- | --- | --- | --- |
+| `OP-ITG-017` | [`https://github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (`origin/feat/hyperv-v2-rebased` @ `fcc7aa56`) → `docs/registers/Project-Status-Register.md` | Stage 10 (Execution & Verification) (`PMP-BL-v1.0.0`) | 4/6 Epics · 10/17 stories | Track B technical build active; commercial pilot status governed in upstream portfolio (`Idea`) | 2026-11-21 |
 
 ## 3. Pending Design-Time Baseline Feedback (`BFI-NNN`)
 

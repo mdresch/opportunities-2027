@@ -1,10 +1,10 @@
 # Ideation Spark — `OP-ITG-017`: MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes
 
-**Status:** 🔥 Spark — workspace opened, Stage 1 `Spark-Capture.md` + ARB-approved ADD/ADR/FDD/BDR already exist in `repos/mxc`, Tier 2 commercial packaging pending
+**Status:** 🔥 Track B Engineering Active (`mdresch/mxc` @ Stage 10, `4/6 Epics · 10/17 stories`, `PMP-BL-v1.0.0`) · Commercial packaging & Client Pilot #1 pending (`Idea`)
 **Tier:** A — Flagship *(Strategic Asset 3: Digital Labor & Strategic Asset 5: Sovereign Information)*
 **Functional Area:** 6. IT and Technology *(includes IT/ICT Governance)* · **Signature Toolkit:** Digital Transformation
 **Category:** Platform-Backed Architecture / Advisory · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [mxc/docs/hyperv/README.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/hyperv/README.md) · [mxc/docs/project-docs/Spark-Capture.md](file:///c:/Users/MennoDrescher/source/repos/mxc/docs/project-docs/Spark-Capture.md)
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [Portfolio-Status-Register.md §2b](../../docs/registers/Portfolio-Status-Register.md#2b-graduated-track-b-repositories-non-duplicating-rollup) · **Graduated Track B SSOT:** [`mdresch/mxc` (`docs/registers/Project-Status-Register.md`)](https://github.com/mdresch/mxc)
 
 ## Positioning
 
