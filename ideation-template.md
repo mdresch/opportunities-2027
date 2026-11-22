@@ -114,7 +114,7 @@ To preserve the **10–15 hrs/week** sweat-equity cap while keeping a clean path
 **Governance hygiene rules (see [.github/instructions/sidpa-portfolio-qa.instructions.md](.github/instructions/sidpa-portfolio-qa.instructions.md)):**
 - **Live Orientation:** Track active portfolio state and `BFI-NNN` design-time baseline defects in [Portfolio-Status-Register.md](docs/registers/Portfolio-Status-Register.md).
 - **Two-Loop Separation:** Document/ranking inconsistencies (`evidence_basis: design_time`) go to `BFI-NNN`; only real pilot/client outcomes (`evidence_basis: execution`) go to [Lessons-Learned-Register.md](docs/registers/Lessons-Learned-Register.md) and quarterly reviews.
-- **No Premature Policy Stores:** Keep Bayesian `agent-learning` TaskPolicies inside graduated `sidpa-template` repos — do not add a policy store to `oppurtunities-2027` until a repeating portfolio gate decision justifies it (SIDPA Rule #18).
+- **No Premature Policy Stores:** Keep Bayesian `agent-learning` TaskPolicies inside graduated Track B repos (`sidpa-template` or client platforms — see **`OP-ITG-020`**) — do not add a policy store to `oppurtunities-2027` until a repeating portfolio gate decision justifies it (SIDPA Rule #18).
 
 ## 7. 2027 Milestones (Tier A Flagship Execution)
 

@@ -4,19 +4,19 @@ Continuation of the 2026 "Opportunities with No Working Capital" initiative (Men
 
 **2027–2030 portfolio architecture:**
 - **17 Functional & Cross-Functional Pillars:** All **16 Management Consulting Functional Areas** (*Finance, Human Resources, Legal & Regulatory, Marketing, Sales, IT & Technology, Operations, Strategy, Digital Transformation, Innovation & Growth, Supply Chain, Risk Management, Customer Experience, Change Management, Organizational Design, Sustainability*), **Cross-Pillar 2026 Ecosystem Categories**, and Pillar **17. Intelligence & Autonomous Systems Governance**.
-- **18 of 18 Signature Toolkits & 2026 Database Schema:** Every opportunity in [inventory-of-ideas.md](inventory-of-ideas.md) (**120 projects**) is mapped to a Signature Toolkit, 2026 Category, Skills, Time Horizon, Effort, Expected Capital, Scalability Path, Risks, and 2027 Market Validation.
-- **5 Strategic Assets & Tier A–D Prioritization:** Organized around *Financial Truth* (`OP-FIN-009`–`011`), *Organizational Intelligence* (`OP-ITG-014`, `OP-HR-010`), *Digital Labor* (`OP-HR-009`, `OP-ITG-013`, `OP-ITG-016`, `OP-ITG-017`), *Evidence & Governance* (`OP-RSK-004`–`005`, `OP-ITG-002`, `OP-ITG-010`, `OP-STR-004`/`005`), and *Sovereign Information* (`OP-ITG-015`, `OP-ITG-017`), unified under the `OP-ITG-018` Managed Intelligence Provider (MIP) umbrella retainer, with **Tier A Flagships** prioritized for Q1–Q3 2027 pilots. See [ideation-template.md](ideation-template.md) Section 2 for the full thesis.
+- **18 of 18 Signature Toolkits & 2026 Database Schema:** Every opportunity in [inventory-of-ideas.md](inventory-of-ideas.md) (**122 projects**) is mapped to a Signature Toolkit, 2026 Category, Skills, Time Horizon, Effort, Expected Capital, Scalability Path, Risks, and 2027 Market Validation.
+- **5 Strategic Assets & Tier A–D Prioritization:** Organized around *Financial Truth* (`OP-FIN-009`–`011`), *Organizational Intelligence* (`OP-ITG-014`, `OP-HR-010`), *Digital Labor* (`OP-HR-009`, `OP-ITG-013`, `OP-ITG-016`, `OP-ITG-017`, `OP-ITG-020`), *Evidence & Governance* (`OP-RSK-004`–`005`, `OP-ITG-002`, `OP-ITG-010`, `OP-STR-004`/`005`), and *Sovereign Information* (`OP-ITG-015`, `OP-ITG-017`), unified under the `OP-ITG-018` Managed Intelligence Provider (MIP) umbrella retainer, with **Tier A Flagships** prioritized for Q1–Q3 2027 pilots. See [ideation-template.md](ideation-template.md) Section 2 for the full thesis.
 
 ## Contents
 
 ### Core Portfolio Files (Root)
 - [ideation-template.md](ideation-template.md) — the methodology, goals, and success criteria for 2027, adapted from the 2026 foundation.
-- [inventory-of-ideas.md](inventory-of-ideas.md) — the working list of all 120 opportunity ideas for 2027. This is the active tracker: research, evaluate, and update it throughout the year as ideas move from "idea" to "piloted" to "scaling" or "parked."
+- [inventory-of-ideas.md](inventory-of-ideas.md) — the working list of all 122 opportunity ideas for 2027. This is the active tracker: research, evaluate, and update it throughout the year as ideas move from "idea" to "piloted" to "scaling" or "parked."
 - [market-analysis-2027.md](market-analysis-2027.md) — real market research checking each idea against actual 2027 market signals (fractional-exec adoption, RevOps/quote-to-cash trends, martech consolidation, HR/finance compliance shifts, small-business sentiment, Big Four/Mid-Tier/SI benchmarks), with sourcing and confidence levels per claim.
 - [Tier_A_Executive_Summary_2027.md](Tier_A_Executive_Summary_2027.md) — board- and C-suite-ready executive summary of the 13 Tier A Flagships across the 5 Strategic Assets and 2027 execution sequence.
 
 ### Folders
-- [opportunities/](opportunities/) — one folder per opportunity across all 120 items, each holding its `Ideation-Spark.md` opening brief plus per-opportunity one-pagers, research notes, or pilot artifacts. See [opportunities/README.md](opportunities/README.md).
+- [opportunities/](opportunities/) — one folder per opportunity across all 122 items, each holding its `Ideation-Spark.md` opening brief plus per-opportunity one-pagers, research notes, or pilot artifacts. See [opportunities/README.md](opportunities/README.md).
   - Tier A client-facing one-pagers:
     - [OP-FIN-009 — Continuous Close](opportunities/OP-FIN-009_Continuous_Close/One_Pager_OP-FIN-009_Continuous_Close.md)
     - [OP-ITG-013 — Enterprise AI Agent Governance](opportunities/OP-ITG-013_Enterprise_AI_Agent_Governance/One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md)

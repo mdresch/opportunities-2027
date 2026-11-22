@@ -1,6 +1,6 @@
 # OP-ITG Tracker — Pillar 6: IT and Technology
 
-**Owner:** Director (all 19 items) | **Created:** 2026-11-19 | **Updated:** 2026-11-22 | **Source of truth for item details:** [inventory-of-ideas.md](../../inventory-of-ideas.md) §6 | **Portfolio orientation & `BFI-NNN` items:** [Portfolio-Status-Register.md](Portfolio-Status-Register.md)
+**Owner:** Director (all 20 items) | **Created:** 2026-11-19 | **Updated:** 2026-11-22 | **Source of truth for item details:** [inventory-of-ideas.md](../../inventory-of-ideas.md) §6 | **Portfolio orientation & `BFI-NNN` items:** [Portfolio-Status-Register.md](Portfolio-Status-Register.md)
 
 Scope of this file: tracking and next steps only. No delivery work has been started on any item. Statuses are copied from the inventory; nothing has been piloted yet.
 
@@ -29,6 +29,7 @@ Priority scale: **P1** = pursue first (Q1–Q2 2027 execution sequence), **P2** 
 | `OP-ITG-017` | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes | Idea (Q2 2027) | Package `<300ms` wake benchmark demo & finalize `ADR-008` before enterprise pilot handoff. | `repos/mxc` (`feat/hyperv-v2-rebased`); underpins `OP-ITG-013`, `OP-ITG-015`, `OP-ITG-016` | P2 | [One-pager](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) ([.docx](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
 | `OP-ITG-018` | Managed Intelligence Provider / Professional (MIP) *(Umbrella Retainer)* | Idea (Q2–Q3 2027) | Attach "Graduate to MIP Retainer" option to every Q1–Q2 Tier A pilot proposal; finalize MSP/MSSP RACI boundary. | Converts `OP-ITG-013`/`014`/`015`/`017`, `OP-RSK-004`, `OP-FIN-009` into recurring MRR | **P1** *(Retainer engine)* | [One-pager](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md) ([.docx](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
 | `OP-ITG-019` | ADPA 2027 Platform Evolution *(Database Layer & Project Reimplementation)* | Idea (Q3–Q4 2027 · Future Dev) | Define commercial role (internal engine vs. client offer), specify DB schema/persistence layer, and pick first 1–2 projects to reimplement into ADPA. | Existing PoC [`mdresch/adpa`](https://github.com/mdresch/adpa); future backbone for `OP-ITG-014`/`018` | P3 *(Future 2027 Dev)* | [Spark](../../opportunities/OP-ITG-019_ADPA_Platform_Database_Reimplementation/Ideation-Spark.md); [Repo `mdresch/adpa`](https://github.com/mdresch/adpa) |
+| `OP-ITG-020` | Agent Learning TaskPolicy Integration & Governance | Idea (Q2–Q4 2027) | Run 3–5 internal TaskPolicy pilots on CBa Consult recurring agent decisions; map `low`/`full` authority to `sidpa-template` gates before client Pilot #1. | [`mdresch/agent-learning`](https://github.com/mdresch/agent-learning); follows `OP-ITG-013`; feeds `OP-ITG-016`/`018` | P2 *(after `OP-ITG-013` wedge)* | [Spark](../../opportunities/OP-ITG-020_Agent_Learning_TaskPolicy_Integration/Ideation-Spark.md); [Repo `mdresch/agent-learning`](https://github.com/mdresch/agent-learning) |
 
 ## 2. Ranking conflict: `OP-ITG-013`
 
@@ -67,6 +68,7 @@ Both items remain in the inventory and in the tracker.
 | `OP-ITG-015` | No dedicated file. Covered in [One_Pager_Flagship_Opportunities_2027.md](../reports/One_Pager_Flagship_Opportunities_2027.md) and the [Tier A summary](../../Tier_A_Executive_Summary_2027.md) | `SIDPA ... .docx` on `F:\OneDrive - CBA\` |
 | `OP-ITG-016` | No dedicated file. Covered in the same two documents | None |
 | `OP-ITG-001`, `OP-ITG-002` | None in this repo | [ICT-Governance-Framework-Application](https://github.com/CBA-Consult/ICT-Governance-Framework-Application) and `ADPA ICT Governance Framework\` (14 docs). I could not open either from here. |
+| `OP-ITG-020` | [Ideation-Spark.md](../../opportunities/OP-ITG-020_Agent_Learning_TaskPolicy_Integration/Ideation-Spark.md) | [Repo `mdresch/agent-learning`](https://github.com/mdresch/agent-learning); pairs with `sidpa-template` |
 
 So of the four items you named, only `OP-ITG-013` and `OP-ITG-014` have their own one-pager. `OP-ITG-015` and `OP-ITG-016` appear only in the combined flagship material. Items `OP-ITG-003` to `012` have no project or asset beyond their inventory row.
 
