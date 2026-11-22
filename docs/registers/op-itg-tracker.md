@@ -1,6 +1,6 @@
 # OP-ITG Tracker — Pillar 6: IT and Technology
 
-**Owner:** Director (all 18 items) | **Created:** 2026-11-19 | **Updated:** 2026-11-20 | **Source of truth for item details:** [inventory-of-ideas.md](../../inventory-of-ideas.md) §6 | **Portfolio orientation & `BFI-NNN` items:** [Portfolio-Status-Register.md](Portfolio-Status-Register.md)
+**Owner:** Director (all 19 items) | **Created:** 2026-11-19 | **Updated:** 2026-11-22 | **Source of truth for item details:** [inventory-of-ideas.md](../../inventory-of-ideas.md) §6 | **Portfolio orientation & `BFI-NNN` items:** [Portfolio-Status-Register.md](Portfolio-Status-Register.md)
 
 Scope of this file: tracking and next steps only. No delivery work has been started on any item. Statuses are copied from the inventory; nothing has been piloted yet.
 
@@ -28,6 +28,7 @@ Priority scale: **P1** = pursue first (Q1–Q2 2027 execution sequence), **P2** 
 | `OP-ITG-016` | Enterprise Agent Operating Architecture ("COBIT for Agents") | Idea (Q3 2027) | Keep as the follow-on to `OP-ITG-013`. No action until `OP-ITG-013` has a pilot. | `OP-ITG-013`, `OP-HR-009` | P2 (later wave) | [Flagship one-pager](../reports/One_Pager_Flagship_Opportunities_2027.md) (no dedicated file); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
 | `OP-ITG-017` | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes | Idea (Q2 2027) | Package `<300ms` wake benchmark demo & finalize `ADR-008` before enterprise pilot handoff. | `repos/mxc` (`feat/hyperv-v2-rebased`); underpins `OP-ITG-013`, `OP-ITG-015`, `OP-ITG-016` | P2 | [One-pager](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) ([.docx](../../opportunities/OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
 | `OP-ITG-018` | Managed Intelligence Provider / Professional (MIP) *(Umbrella Retainer)* | Idea (Q2–Q3 2027) | Attach "Graduate to MIP Retainer" option to every Q1–Q2 Tier A pilot proposal; finalize MSP/MSSP RACI boundary. | Converts `OP-ITG-013`/`014`/`015`/`017`, `OP-RSK-004`, `OP-FIN-009` into recurring MRR | **P1** *(Retainer engine)* | [One-pager](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.md) ([.docx](../../opportunities/OP-ITG-018_Managed_Intelligence_Provider_MIP/One_Pager_OP-ITG-018_Managed_Intelligence_Provider_MIP.docx)); [Tier A summary](../../Tier_A_Executive_Summary_2027.md) |
+| `OP-ITG-019` | ADPA 2027 Platform Evolution *(Database Layer & Project Reimplementation)* | Idea (Q3–Q4 2027 · Future Dev) | Define commercial role (internal engine vs. client offer), specify DB schema/persistence layer, and pick first 1–2 projects to reimplement into ADPA. | Existing PoC [`mdresch/adpa`](https://github.com/mdresch/adpa); future backbone for `OP-ITG-014`/`018` | P3 *(Future 2027 Dev)* | [Spark](../../opportunities/OP-ITG-019_ADPA_Platform_Database_Reimplementation/Ideation-Spark.md); [Repo `mdresch/adpa`](https://github.com/mdresch/adpa) |
 
 ## 2. Ranking conflict: `OP-ITG-013`
 

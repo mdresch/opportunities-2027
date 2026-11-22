@@ -1,8 +1,8 @@
 # Opportunities — Per-Opportunity Workspaces
 
-One folder per opportunity across the full 2027 portfolio — **Tier A Flagship** (13), **Tier B Growth** (7), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (51), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
+One folder per opportunity across the full 2027 portfolio — **Tier A Flagship** (13), **Tier B Growth** (7), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (52), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
 
-The authoritative status, effort, and capital figures for every idea — including all 120 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
+The authoritative status, effort, and capital figures for every idea — including all 121 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
 ## Tier A — Flagship (13)
 
@@ -88,7 +88,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-RSK-005_Evidence_Assurance_Decision_Traceability](OP-RSK-005_Evidence_Assurance_Decision_Traceability/Ideation-Spark.md) | `OP-RSK-005` | 4. Evidence & Governance | Evidence Assurance & Decision Traceability Assessment *(ECS)* |
 | [OP-ITG-009_Global_Data_Centers_in_Space](OP-ITG-009_Global_Data_Centers_in_Space/Ideation-Spark.md) | `OP-ITG-009` | 5. Sovereign Information | Global Data Centers in Space *(Parked Foresight)* |
 
-## Remaining Active Opportunities — Core & Specialty Backlog (51)
+## Remaining Active Opportunities — Core & Specialty Backlog (52)
 
 | Folder | ID | Functional Area | Offering |
 | --- | --- | --- | --- |
@@ -113,6 +113,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-ITG-006_Data_Annotation_Microservices](OP-ITG-006_Data_Annotation_Microservices/Ideation-Spark.md) | `OP-ITG-006` | 6. IT and Technology | Data Annotation Microservices |
 | [OP-ITG-007_Power_Apps_Center_of_Excellence](OP-ITG-007_Power_Apps_Center_of_Excellence/Ideation-Spark.md) | `OP-ITG-007` | 6. IT and Technology | Power Apps Center of Excellence |
 | [OP-ITG-008_Spatial_AR_Content_Design](OP-ITG-008_Spatial_AR_Content_Design/Ideation-Spark.md) | `OP-ITG-008` | 6. IT and Technology | Spatial / AR Content Design |
+| [OP-ITG-019_ADPA_Platform_Database_Reimplementation](OP-ITG-019_ADPA_Platform_Database_Reimplementation/Ideation-Spark.md) | `OP-ITG-019` | 6. IT and Technology | ADPA 2027 Platform Evolution *(Database Layer & Project Reimplementation — Future Dev)* |
 | [OP-OPS-002_Quote_to_cash_integration_audit](OP-OPS-002_Quote_to_cash_integration_audit/Ideation-Spark.md) | `OP-OPS-002` | 7. Operations | Quote-to-cash integration audit |
 | [OP-OPS-004_Process_Optimization_Automation](OP-OPS-004_Process_Optimization_Automation/Ideation-Spark.md) | `OP-OPS-004` | 7. Operations | Process Optimization & Automation |
 | [OP-OPS-005_Insurance_Claims_Processing_at_Scale](OP-OPS-005_Insurance_Claims_Processing_at_Scale/Ideation-Spark.md) | `OP-OPS-005` | 7. Operations | Insurance Claims Processing at Scale |

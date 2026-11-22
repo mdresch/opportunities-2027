@@ -7,7 +7,7 @@ governance_policy: "none (orientation snapshot, not a governed approval artifact
 artifact_id: "portfolio-status-register"
 version: "1.0 (live — overwritten in place whenever orientation changes)"
 owner: "Menno Drescher (Director, CBa Consult)"
-last_updated: "2026-11-21"
+last_updated: "2026-11-22"
 ---
 
 # Portfolio Status Register — Opportunities 2027
@@ -22,8 +22,8 @@ last_updated: "2026-11-21"
 | --- | --- |
 | **Current Portfolio Phase** | Pre-Pilot Packaging & Q1 2027 Readiness (Tailored SIDPA Stages 1–2) |
 | **Active Capacity Cap** | 10–15 hrs/week · \$0 initial working capital |
-| **Portfolio Coverage** | **120 / 120** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): 13 Tier A, 7 Tier B, 41 Tier C, 3 Tier D, 51 Active Backlog, 5 Parked |
-| **Active Pilots (`Status = Pilot`)** | **0** (all 120 items remain `Idea` or `Parked`; no delivery work started yet) |
+| **Portfolio Coverage** | **121 / 121** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): 13 Tier A, 7 Tier B, 41 Tier C, 3 Tier D, 52 Active Backlog *(incl. `OP-ITG-019` ADPA Future 2027 Dev)*, 5 Parked |
+| **Active Pilots (`Status = Pilot`)** | **0** (all 121 items remain `Idea` or `Parked`; no commercial delivery work started yet) |
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: #1 `OP-OPS-001 → OP-CX-001`, #2 `OP-FIN-009`, #3 `OP-ITG-014`, #4 `OP-RSK-004`, #5 `OP-ITG-013` |
 | **Last Milestone Completed** | Root directory cleanup (21 → 5 core root files, 0 broken links) + Tailored Hybrid SIDPA governance integration |
 | **Next Priority Unit of Work** | Complete Tier 2 deeper research & Tier 3 Pre-Pilot Gate for Q1 lead wedges (`OP-OPS-001 → OP-CX-001` and `OP-FIN-009`) and validate hypotheses in [Hypothesis-Register.md](Hypothesis-Register.md) |
