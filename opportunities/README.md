@@ -1,31 +1,31 @@
 # Opportunities — Per-Opportunity Workspaces
 
-One folder per opportunity across the full 2027 portfolio — **Tier A Flagship** (13), **Tier B Growth** (7), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (52), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
+One folder per opportunity across the full 2027 portfolio — **Tier A Core Active Flagships** (5), **Tier B Growth & Deferred Flagships** (15), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (52), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
 
 The authoritative status, effort, and capital figures for every idea — including all 121 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
-## Tier A — Flagship (13)
+## Tier A — Core Active Flagships (5)
 
 | Folder | ID | Strategic Asset | Flagship Offering |
 | --- | --- | --- | --- |
 | [OP-FIN-009_Continuous_Close](OP-FIN-009_Continuous_Close/Ideation-Spark.md) | `OP-FIN-009` | 1. Financial Truth | Continuous Close & Real-Time Reconciliation Bridge |
-| [OP-FIN-010_Rate_Engine_Reconciliation](OP-FIN-010_Rate_Engine_Reconciliation/Ideation-Spark.md) | `OP-FIN-010` | 1. Financial Truth | Statutory-to-Contract Rate Engine & Revenue/CoS Reconciliation |
-| [OP-HR-002_HR_Operating_Model_Maturity](OP-HR-002_HR_Operating_Model_Maturity/Ideation-Spark.md) | `OP-HR-002` | 4. Evidence & Governance | HR Operating Model Maturity Assessment |
 | [OP-ITG-013_Enterprise_AI_Agent_Governance](OP-ITG-013_Enterprise_AI_Agent_Governance/Ideation-Spark.md) | `OP-ITG-013` | 3. Digital Labor | Enterprise AI Agent Governance Assessment |
 | [OP-ITG-014_Knowledge_Context_Governance](OP-ITG-014_Knowledge_Context_Governance/Ideation-Spark.md) | `OP-ITG-014` | 2. Organizational Intelligence | Knowledge Intelligence & Context Governance Assessment |
-| [OP-ITG-015_Cryptographic_Sovereignty](OP-ITG-015_Cryptographic_Sovereignty/Ideation-Spark.md) | `OP-ITG-015` | 5. Sovereign Information | Cryptographic Sovereignty & Trust Architecture Assessment |
-| [OP-ITG-016_Enterprise_Agent_Operating_Architecture](OP-ITG-016_Enterprise_Agent_Operating_Architecture/Ideation-Spark.md) | `OP-ITG-016` | 3. Digital Labor | Enterprise Agent Operating Architecture ("COBIT for Agents") |
-| [OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero](OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/Ideation-Spark.md) | `OP-ITG-017` | 3. Digital Labor & 5. Sovereign Information | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes |
 | [OP-ITG-018_Managed_Intelligence_Provider_MIP](OP-ITG-018_Managed_Intelligence_Provider_MIP/Ideation-Spark.md) | `OP-ITG-018` | All 5 Strategic Assets *(Umbrella Retainer)* | Managed Intelligence Provider / Professional (MIP) |
-| [OP-OPS-003_Quote_to_Cash_Diagnostic](OP-OPS-003_Quote_to_Cash_Diagnostic/Ideation-Spark.md) | `OP-OPS-003` | 4. Evidence & Governance | Quote-to-Cash Diagnostic (Productized) |
 | [OP-RSK-004_AI_Governance_Certification](OP-RSK-004_AI_Governance_Certification/Ideation-Spark.md) | `OP-RSK-004` | 4. Evidence & Governance | AI Governance Certification Readiness Assessment |
-| [OP-STR-004_MA_Readiness_Assessment](OP-STR-004_MA_Readiness_Assessment/Ideation-Spark.md) | `OP-STR-004` | 4. Evidence & Governance | M&A Readiness Assessment |
-| [OP-STR-005_PMI_Governance_Office](OP-STR-005_PMI_Governance_Office/Ideation-Spark.md) | `OP-STR-005` | 4. Evidence & Governance | Post-Merger Integration (PMI) Governance Office |
 
-## Tier B — Growth (7)
+## Tier B — Growth & Deferred Flagships (15)
 
-| Folder | ID | Strategic Asset | Growth Offering |
+| Folder | ID | Strategic Asset / Disposition | Growth / Deferred Offering |
 | --- | --- | --- | --- |
+| [OP-FIN-010_Rate_Engine_Reconciliation](OP-FIN-010_Rate_Engine_Reconciliation/Ideation-Spark.md) | `OP-FIN-010` | 1. Financial Truth *(Deferred Q4 2027/28)* | Statutory-to-Contract Rate Engine & Revenue/CoS Reconciliation |
+| [OP-HR-002_HR_Operating_Model_Maturity](OP-HR-002_HR_Operating_Model_Maturity/Ideation-Spark.md) | `OP-HR-002` | 4. Evidence & Governance *(CHRO Inbound)* | HR Operating Model Maturity Assessment |
+| [OP-ITG-015_Cryptographic_Sovereignty](OP-ITG-015_Cryptographic_Sovereignty/Ideation-Spark.md) | `OP-ITG-015` | 5. Sovereign Information *(Deferred Q4 2027/28)* | Cryptographic Sovereignty & Trust Architecture Assessment |
+| [OP-ITG-016_Enterprise_Agent_Operating_Architecture](OP-ITG-016_Enterprise_Agent_Operating_Architecture/Ideation-Spark.md) | `OP-ITG-016` | 3. Digital Labor *(Deferred 2028–30)* | Enterprise Agent Operating Architecture ("COBIT for Agents") |
+| [OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero](OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/Ideation-Spark.md) | `OP-ITG-017` | 3. Digital Labor & 5. Sovereign *(Track B Build · Sales Q3–Q4)* | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes |
+| [OP-OPS-003_Quote_to_Cash_Diagnostic](OP-OPS-003_Quote_to_Cash_Diagnostic/Ideation-Spark.md) | `OP-OPS-003` | 4. Evidence & Governance *(Pull-through from `OP-OPS-001`)* | Quote-to-Cash Diagnostic (Productized) |
+| [OP-STR-004_MA_Readiness_Assessment](OP-STR-004_MA_Readiness_Assessment/Ideation-Spark.md) | `OP-STR-004` | 4. Evidence & Governance *(Opportunistic Pull)* | M&A Readiness Assessment |
+| [OP-STR-005_PMI_Governance_Office](OP-STR-005_PMI_Governance_Office/Ideation-Spark.md) | `OP-STR-005` | 4. Evidence & Governance *(Opportunistic Pull)* | Post-Merger Integration (PMI) Governance Office |
 | [OP-HR-009_Human_Agent_Workforce_Operating_Model](OP-HR-009_Human_Agent_Workforce_Operating_Model/Ideation-Spark.md) | `OP-HR-009` | 3. Digital Labor | Human + Agent Workforce Operating Model |
 | [OP-HR-010_Skills_Intelligence_Assessment](OP-HR-010_Skills_Intelligence_Assessment/Ideation-Spark.md) | `OP-HR-010` | 2. Organizational Intelligence | Skills Intelligence & Workforce Capability Assessment |
 | [OP-CX-002_ADPA_Client_Onboarding_Assessment_COAS](OP-CX-002_ADPA_Client_Onboarding_Assessment_COAS/Ideation-Spark.md) | `OP-CX-002` | 4. Evidence & Governance | ADPA Client Onboarding Assessment System (UniCorn COAS) |

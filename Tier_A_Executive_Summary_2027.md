@@ -1,6 +1,6 @@
 # CBa Consult — Flagship Tier A Executive Summary (2027–2030)
 
-**Owner:** Menno Drescher, CBa Consult   |   **Date:** 2026-11-21   |   **Portfolio Tier:** Tier A (Flagships driving 80–90% of enterprise value)
+**Owner:** Menno Drescher, CBa Consult   |   **Date:** 2026-11-23   |   **Portfolio Tier:** Tier A — Core 5 Active Flagships (narrowed from 13 to protect the 10–15 hrs/wk cap)
 
 ---
 
@@ -16,22 +16,22 @@ Instead of competing on \$50M+ systems-integration headcount (Accenture, Capgemi
 
 ---
 
-## 2. The 5 Strategic Assets & 13 Tier A Flagships
+## 2. The Core 5 Active Tier A Flagships (2027 Focus — 2 Buyer Groups: CFO & CIO/CISO)
 
-| Strategic Asset | Tier A ID(s) | Flagship Offering | Economic Buyer(s) | 2027 Trigger / Proprietary IP | Scope & Anchor |
+To prevent outreach dilution under the **10–15 hrs/week** capacity cap, active 2027 Tier A focus was concentrated on **5 Core Flagships** (4 sellable assessments + 1 recurring MIP conversion retainer), while 8 deferred/pull-only offers were moved to Tier B (Director decision, 2026-11-23):
+
+| Strategic Asset | Core Tier A ID | Active Flagship Offering | Economic Buyer(s) | 2027 Trigger / Proprietary IP | Scope & Anchor |
 | --- | --- | --- | --- | --- | --- |
-| **All 5 Assets *(Umbrella Retainer)*** | `OP-ITG-018` | **Managed Intelligence Provider / Professional (MIP)** *(Beyond MSP/MSSP — recurring Intelligence Stack operations)* | CEO, CIO, CFO, CISO, PE Operating Partners | Unifies **ADPA, ECS, SIDPA, MXC Hyper-V, ICT-Gov, ISO 42001/EU AI Act** into a recurring monthly retainer | Ongoing · €2,500–€12,000+ / mo |
-| **1. Financial Truth** | `OP-FIN-009` | **Continuous Close & Real-Time Reconciliation Bridge** *(23rd payroll → 3rd+ close)* | CFO, Corporate Controller | **2007–2008 RGP Continuous Close IP**, IFRS 18 (Jan 2027), Gartner FCCS / BlackLine Agentic Close | 6–8 wks · €1,500–€5,000 |
-| **1. Financial Truth** | `OP-FIN-010` | **Statutory-to-Contract Rate Engine & Revenue/CoS Reconciliation** *(7-layer waterfall + schema exceptions)* | CFO, Controller, Practice Leads | **2005–2006 Unified Payroll Baseline** (initiated by Menno Drescher), Dutch Wtp (Jan 2028) | 8–10 wks · €2,500–€8,000 |
+| **All 5 Assets *(Umbrella Retainer)*** | `OP-ITG-018` | **Managed Intelligence Provider / Professional (MIP)** *(Conversion retainer — beyond MSP/MSSP)* | CEO, CIO, CFO, CISO, PE Operating Partners | Unifies **ADPA, ECS, SIDPA, MXC Hyper-V, ICT-Gov, ISO 42001/EU AI Act** into recurring MRR | Ongoing · €2,500–€12,000+ / mo |
+| **1. Financial Truth** | `OP-FIN-009` | **Continuous Close & Real-Time Reconciliation Bridge** *(23rd payroll → 3rd+ close)* | CFO, Corporate Controller | **2007–2008 RGP Continuous Close IP**, IFRS 18 (Jan 2027), \$0 new software buy *(companion CFO wedge: `OP-FIN-012`, 8.8/10 Tier-2)* | 6–8 wks · €1,500–€5,000 |
 | **2. Organizational Intelligence** | `OP-ITG-014` | **Knowledge Intelligence & Context Governance Assessment** *(RAG, taxonomy, ontologies, knowledge graphs)* | CIO, CDO, Chief AI Officer | **ADPA, ECS, Ontologies, Knowledge Graphs**, MS Ignite 2026 *Work IQ / IQ Platform* | 6–10 wks · €3,500–€10,000 |
 | **3. Digital Labor** | `OP-ITG-013` | **Enterprise AI Agent Governance Assessment** *(agent inventory, Entra Agent ID, Agent 365, FinOps)* | CIO, CISO, Chief AI Officer | `ICT-Governance-Framework-Application`, MS Ignite 2026 *Agent 365 / Entra*, Gartner 2027 | 6–10 wks · €4,000–€12,000+ |
-| **3. Digital Labor** | `OP-ITG-016` | **Enterprise Agent Operating Architecture** *("COBIT for Agents" — 500+ agent orchestration)* | CIO, CTO, Enterprise Architects | Multi-agent identity domains, escalation paths & lifecycle governance (2028–2030 scale) | 8–12 wks · €5,000–€15,000+ |
-| **3. Digital Labor & 5. Sovereign Information** | `OP-ITG-017` | **MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes** *(Type-1 Hyper-V, `<300ms` wake, `0.0%` idle CPU)* | CIO, CTO, CISO, Platform Directors | **Built `repos/mxc` Hyper-V subsystem** (ARB-approved ADD, `.avhdx` sterile reset, `ADR-008`), DORA/NIS2/AI Agent containment | 6–10 wks · €4,000–€15,000+ |
 | **4. Evidence & Governance** | `OP-RSK-004` | **AI Governance Certification Readiness** *("SOC 2 for AI" — ISO 42001 / NIST AI RMF / EU AI Act)* | CISO, Chief Risk Officer, Legal | **EU AI Act Annex III deadline (Dec 2, 2027)**, `AI Purpose Clause.docx` | 6–10 wks · €4,000–€12,000+ |
-| **4. Evidence & Governance** | `OP-HR-002` | **HR Operating Model Maturity Assessment** *(6 dimensions, 5 levels, 28-KPI scorecard)* | CHRO, COO | `HR Transformation Toolkit version 2027.docx` (§10.8–10.10), ADP 2027 compliance | 8–12 wks · €3,000–€15,000 |
-| **4. Evidence & Governance** | `OP-OPS-003` | **Quote-to-Cash Diagnostic (Productized)** *(handoff map → enterprise audit)* | COO, CRO, CFO | ISG 2027 (>50% RevOps in strategic planning), SyncGTM (78% RevOps adoption) | 8–12 wks · €1,500–€6,000+ |
-| **4. Evidence & Governance** | `OP-STR-004` / `005` | **M&A Readiness Assessment & PMI Governance Office** | Private Equity, Corp Dev | Converges `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010` (Retention/Recovery), `OP-OPS-007` (SOP) | 6–12 wks · €5,000–€18,000+ |
-| **5. Sovereign Information** | `OP-ITG-015` | **Cryptographic Sovereignty & Trust Architecture Assessment** *(Threshold Crypto + Bayesian Topology)* | CIO, CISO, Gov/Defense/Health Boards | Shamir/MPC + **8-Domain Bayesian Active Evidence-Seeking**, DORA, NIS2, CLOUD Act | 6–10 wks · €4,000–€15,000+ |
+
+### Deferred / Pull-Only Former Tier A Offers *(Moved to Tier B — Zero Lost IP)*
+- **Track B Build Active (Commercial Sales Q3–Q4 2027):** `OP-ITG-017` (*MXC Hyper-V `<500ms` JIT VM Sandboxes* — engineering active at Stage 10, `10/17` stories in `mdresch/mxc`; demo layer under `OP-ITG-013`/`018` once Phase 1 completes).
+- **Deferred to Q4 2027 / 2028:** `OP-FIN-010` (*7-Layer Rate Engine*, upsell after `OP-FIN-009`), `OP-ITG-015` (*Cryptographic Sovereignty*, specialist pull-only), `OP-ITG-016` (*"COBIT for Agents"*, 2028–2030 follow-on to `OP-ITG-013`).
+- **Opportunistic / Inbound Pull-Only:** `OP-STR-004` / `005` (*M&A Readiness & PMI Governance*), `OP-HR-002` (*HR Maturity*, CHRO inbound), `OP-OPS-003` (*Q2C Diagnostic*, pull-through from `OP-OPS-001`).
 
 *(Supporting Tier D Thought Leadership anchors: `OP-FIN-011` Intelligence Capital Measurement via **SIDPA**, and `OP-RSK-005` Evidence Assurance & Decision Traceability via **ECS**.)*
 
@@ -54,4 +54,4 @@ To stay within the **10–15 hrs/week** capacity cap, Tier A flagships are enter
 
 ---
 
-*Full 120-project inventory: [inventory-of-ideas.md](inventory-of-ideas.md) · Market validation & regulatory calendar: [market-analysis-2027.md](market-analysis-2027.md) · Methodology & 7 Pivotal Questions: [ideation-template.md](ideation-template.md) · Live governance snapshot: [Portfolio-Status-Register.md](docs/registers/Portfolio-Status-Register.md)*
+*Full 121-project inventory: [inventory-of-ideas.md](inventory-of-ideas.md) · Market validation & regulatory calendar: [market-analysis-2027.md](market-analysis-2027.md) · Methodology & 7 Pivotal Questions: [ideation-template.md](ideation-template.md) · Live governance snapshot: [Portfolio-Status-Register.md](docs/registers/Portfolio-Status-Register.md)*

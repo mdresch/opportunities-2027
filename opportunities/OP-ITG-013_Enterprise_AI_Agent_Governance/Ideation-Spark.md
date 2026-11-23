@@ -1,7 +1,7 @@
 # Ideation Spark — `OP-ITG-013`: Enterprise AI Agent Governance Assessment
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** A — Flagship (GTM Priority #5, Q1–Q2 2027; Pillar 17 Priority #1)
+**Status:** 🔥 Stage 1b Complete — [Tier-2-Market-Research.md](Tier-2-Market-Research.md), [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md), updated [One-Pager](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) ([.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx)), and Stage 2 Hypotheses (`HYP-2027-013`–`015`) complete · Onboarding Portal graduated to standalone SIDPA repo [`mdresch/agent-governance-onboarding`](https://github.com/mdresch/agent-governance-onboarding) (Stage 1 Init)
+**Tier:** A — Core 5 Active Flagship (GTM Priority #5, Q2 2027; Pillar 17 Priority #1)
 **Strategic Asset:** 3. Digital Labor
 **Functional Area:** IT and Technology (Pillar 17 — Intelligence & Autonomous Systems Governance) · **Signature Toolkit:** Management Consulting
 **Size:** Medium & Large
@@ -47,7 +47,7 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Pull the current open-issue/PR state of `ICT-Governance-Framework-Application` to confirm what agent-governance capability is already shippable vs. still roadmap.
-- [ ] Identify one CIO/CISO-sponsor-reachable pilot candidate — this flagship cannot run without executive sponsorship.
-- [ ] Draft the agent-inventory assessment questionnaire/checklist as a standalone deliverable template.
-- [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+- [x] Pull the current open-issue/PR state of `ICT-Governance-Framework-Application` to confirm what agent-governance capability is already shippable vs. still roadmap *(completed 2026-11-23; documented in [Tier-2-Market-Research.md](Tier-2-Market-Research.md) §4)*.
+- [x] Draft the standalone **8-Pillar Agent Inventory & Governance Assessment Questionnaire / Maturity Scorecard** (`HYP-2027-015`) *(completed 2026-11-23: [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md))*.
+- [ ] Identify and interview 10 CIO/CISO prospects (`HYP-2027-013`, `HYP-2027-014`) — this flagship cannot run without executive sponsorship.
+- [ ] Complete the pre-pilot gate (Stage 2 Business Case quantification → `Pilot-Charter.md` → Director sign-off) before promoting to `Pilot`.

@@ -1,41 +1,41 @@
 # Client Service One-Pager: Enterprise AI Agent Governance Assessment (`OP-ITG-013`)
 
-**For:** CIOs, CISOs & Chief AI Officers (Medium & Large Enterprises)   |   **Provider:** Menno Drescher, CBa Consult
+**For:** CIOs, CISOs & Chief AI Officers (Medium & Large Enterprises, 250–2,500+ seats)   |   **Provider:** Menno Drescher, CBa Consult
 
 ---
 
-## Move From Unmanaged Copilots to Governed, Cost-Controlled AI Agents
+## Move From Unmanaged Copilots to Governed, Auditable, Cost-Controlled AI Agents
 
-By 2027–2028, Gartner warns that **25% of enterprise breaches will trace back to AI agent abuse**, **80% of new apps will be "disposable,"** and **>40% of overhyped agentic AI projects risk cancellation** due to runaway costs or weak risk controls. Static AI-use policies are no longer enough—enterprises must govern **autonomous digital labor** at the identity, permission, lifecycle, and FinOps layers.
+On June 25, 2025, **Gartner** warned that **over 40% of agentic AI projects will be canceled by the end of 2027** due to escalating costs, unclear business value, or inadequate risk controls. Static acceptable-use policies cannot govern autonomous digital labor that holds credentials, invokes APIs, and mutates ERP, CRM, and HRIS records.
 
-**`OP-ITG-013`** delivers a complete **Enterprise AI Agent Governance Assessment**, backed by CBa Consult's **`ICT-Governance-Framework-Application`** platform and aligned with **Microsoft Ignite 2026** (*Agent 365*, *Entra Agent Identity*, *Baseline Security Mode 2026*) and **COBIT 2019 / NIST CSF 2.0**.
+While software vendors sell control planes (**Microsoft Agent 365 / Entra Agent ID**, ServiceNow AI Control Tower, Okta, SailPoint) and statutory auditors flag ITGC/SoD deficiencies they are legally barred from remediating, **`OP-ITG-013`** delivers the **conflict-free, fixed-scope operating model, inventory, identity/SoD blueprint, and FinOps guardrails** that turn unmanaged agents into auditable digital labor — aligned with **EU AI Act Annex III (Dec 2, 2027)**, **DORA/NIS2**, **ISO/IEC 42001**, and **SOX 404 / ISA 265**.
 
 ---
 
-## The 8 Governance Pillars We Assess
+## The 8 Governance Pillars We Assess (40-Point Scored Maturity Audit)
 
 | Pillar | Key Governance Question Answered |
 | --- | --- |
-| **1. Agent Inventory** | Which Copilot Studio, Power Platform, custom, and third-party agents exist across the tenant? |
-| **2. Agent Owners & Accountability** | Which named human executive/manager owns each agent's actions and errors? |
-| **3. Agent Identity & Access** | Are agents isolated via **Entra Agent Identity** & just-in-time tokens rather than shared human credentials? |
-| **4. Tool & API Permissions** | Which ERP, CRM, HRIS, or external APIs can each agent read vs. write—and where is **Segregation of Duties (SoD)** enforced? |
-| **5. Lifecycle & "Disposable App" Control** | How are pilot/ephemeral agents promoted, reviewed, or decommissioned cleanly? |
-| **6. Agent Observability & Audit** | Are agent prompts, tool calls, and exceptions logged in **Agent 365 / Sentinel** for auditability? |
-| **7. Agent FinOps & Throttling** | Are consumption-based token/compute budgets, spending caps, and ROI thresholds enforced? |
-| **8. Sovereign & Regulatory Guardrails** | Do agent data flows comply with GDPR, EU AI Act, DORA/NIS2, and regional residency rules? |
+| **1. Agent Inventory & Discovery** | Which Copilot Studio, Power Platform, SaaS, custom, and third-party/MCP agents exist across the estate? |
+| **2. Agent Owners & Accountability** | Which named Human Sponsor owns each agent's actions, Mover/Leaver handoff, and escalation boundaries? |
+| **3. Agent Identity (Entra Agent ID / NHI)** | Are agents isolated via dedicated Non-Human Identities, Conditional Access, short-lived tokens, and a tested <5-min kill switch? |
+| **4. Tool/API Permissions & SoD** | Where are Read vs. Write boundaries, financial/payroll Segregation of Duties, and sandbox isolation enforced? |
+| **5. Lifecycle & "Disposable App" Control** | How are pilot/ephemeral agents promoted, version-controlled, expired (TTL), or decommissioned cleanly? |
+| **6. Observability & Immutable Audit Trail** | Are prompts, tool calls, model versions, and human overrides logged in **Agent 365 / SIEM / WORM** for EU AI Act Art. 12 & SOX? |
+| **7. Agent FinOps & Throttling** | Are cost-center attribution, loop breakers, model-routing rules, and hard monthly spending ceilings enforced? |
+| **8. Sovereign & Regulatory Guardrails** | Are Purview DLP, zero-data-retention DPAs, GDPR Art. 22, EU AI Act Annex III, and split-clock retention enforced? |
 
 ---
 
-## Engagement Scope, Deliverables & Investment
-- **Duration:** **6–10 weeks** (fixed-scope assessment; works across Microsoft, multi-cloud, and custom agent stacks).
-- **Deliverables:**
-  1. **Enterprise Agent Inventory & Risk-Tier Register**
-  2. **Entra Agent Identity, SoD & Least-Privilege Access Blueprint**
-  3. **Agent 365 Observability & FinOps Cost-Control Framework**
-  4. **Prioritized 90-Day Remediation Roadmap** *(natural bridge to `OP-ITG-016` "COBIT for Agents" Architecture & `OP-HR-009` Human+Agent Workforce Model)*.
-- **Investment Anchor:** **€4,000–€12,000+** fixed-scope assessment *(or start with `OP-ITG-011` Agent 365 & Entra Quick-Start at €2,500–€7,500)*.
+## Two-Tier Commercial Packaging & Recurring Stewardshi
+| Package | Duration & Scope | Deliverables | Investment Anchor |
+| --- | --- | --- | --- |
+| **Tier 1 — Phase 0 Agent Sprawl & Identity Triage** | **2–3 weeks** *(15–30 hrs · rapid wedge)* | Shadow-agent discovery snapshot, shared-credential & SoD red-flag scan, Top-10 P0 Risk Register, Phase 1 business case | **€2,500–€5,000** |
+| **Tier 2 — Full 8-Pillar Governance Assessment** | **6–10 weeks** *(45–100+ hrs · fixed scope)* | 12-field Enterprise Agent Inventory Register, 40-point Maturity Scorecard, Entra Agent ID & SoD Blueprint, Agent 365 & FinOps Ceiling Framework, 90-Day Remediation Roadmap | **€6,000–€18,000+** |
+| **Ongoing — Managed Intelligence Provider (`OP-ITG-018`)** | **Monthly retainer** *(above MSP & MSSP)* | Quarterly agent-fleet access & drift reviews, FinOps ceiling tuning, new-agent onboarding gates, continuous EU AI Act / ISO 42001 evidence stewardship | **€2,500–€12,000+ / mo** |
+
+*Conflict-Free Scope Boundary:* CBa Consult delivers independent assessment, governance architecture, and remediation blueprints (100% conflict-free from statutory auditors); client IT/MSP owns production tenant administration, client MSSP owns 24/7 SOC containment, and accredited bodies retain formal ISO 42001 certification.
 
 ---
 
-**Next Step:** Book a 30-minute **Agent Governance & FinOps Briefing** with **Menno Drescher (CBa Consult)** to audit your current agent sprawl and identity exposure.
+**Next Step:** Book a 30-minute **Agent Sprawl, Identity & FinOps Briefing** with **Menno Drescher (CBa Consult)** to benchmark your current tenant exposure ahead of Q2–Q4 2027 audit and EU AI Act deadlines.

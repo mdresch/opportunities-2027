@@ -288,25 +288,25 @@ The emerging 2027–2030 market is shifting from traditional functional consulti
 | **5. Sovereign Information** | `OP-ITG-015`, `OP-ITG-017`, `OP-ITG-018` *(MIP)* |
 
 ### Portfolio Priority Classification (`Tier A–D`)
-Because ~10–15% of ideas drive 80–90% of enterprise value, every opportunity sits in one of four strategic tiers:
-- **Tier A — Flagship:** `OP-ITG-013`, `OP-ITG-014`, `OP-ITG-015`, `OP-ITG-016`, `OP-ITG-017`, `OP-ITG-018`, `OP-FIN-009`, `OP-FIN-010`, `OP-HR-002`, `OP-OPS-003`, `OP-RSK-004`, `OP-STR-004`, `OP-STR-005`
-- **Tier B — Growth:** `OP-HR-009`, `OP-HR-010`, `OP-CX-002`, `OP-ITG-010`, `OP-ITG-011`, `OP-ITG-012`, `OP-DTX-005`
-- **Tier C — Supporting:** `OP-MKT-001`–`012`, `OP-SLS-001`–`005`, `OP-X-001`–`010`, `Small`-tier starter kits
-- **Tier D — Thought Leadership:** `OP-ITG-009`, `OP-FIN-011`, `OP-RSK-005`
+Because ~10–15% of ideas drive 80–90% of enterprise value — and to protect the **10–15 hrs/week** capacity cap across two focused buyer groups (**CFO** and **CIO/CISO**) — active Tier A focus was narrowed from 13 → **5 Core Active Flagships** (Director decision, 2026-11-23), with the remaining 8 preserved in Tier B (Deferred 2028 / Pull-Only / Track B Build):
+- **Tier A — Core Active Flagships (5):** `OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013`, `OP-ITG-018` *(Umbrella MIP Retainer)*
+- **Tier B — Growth, Deferred 2028 & Pull-Only (15):** `OP-HR-009`, `OP-HR-010`, `OP-CX-002`, `OP-ITG-010`, `OP-ITG-011`, `OP-ITG-012`, `OP-DTX-005`, plus deferred former Tier A items: `OP-ITG-017` *(Track B build active in `mdresch/mxc`, commercial sales Q3–Q4 2027)*, `OP-FIN-010` *(Q4 2027/2028)*, `OP-ITG-015` *(Q4 2027/2028 pull-only)*, `OP-ITG-016` *(2028–2030)*, `OP-STR-004`, `OP-STR-005` *(opportunistic pull-only)*, `OP-HR-002` *(CHRO inbound)*, `OP-OPS-003` *(pull-through from `OP-OPS-001`)*
+- **Tier C — Supporting (41):** `OP-MKT-001`–`012`, `OP-SLS-001`–`005`, `OP-X-001`–`010`, `Small`-tier starter kits
+- **Tier D — Thought Leadership (3):** `OP-ITG-009`, `OP-FIN-011`, `OP-RSK-005`
 
 ### 2027–2030 Flagship & Emerging Priority Index
 
 | Priority | Tier | Idea ID | Offering | Target Buyer(s) | Core Assets Leveraged | 2027 Validation |
 | --- | --- | --- | --- | --- | --- | --- |
-| **#1** | Tier A | `OP-ITG-013` | Enterprise AI Agent Governance Assessment | CIO, CISO, Chief AI Officer | `ICT-Governance-Framework-Application`, Agent 365, Entra Agent Identity | 🟢🟢🟢 |
-| **#2** | Tier A | `OP-ITG-014` | Knowledge Intelligence & Context Governance Assessment | CIO, CDO, Chief AI Officer | **ADPA, ECS, Ontologies, Knowledge Graphs**, Work IQ / M365 | 🟢🟢🟢 |
-| **#3** | Tier A | `OP-RSK-004` | AI Governance Certification Readiness (*"SOC 2 for AI"*) | CISO, Chief Risk/Compliance Officer, Legal | `AI Purpose Clause.docx`, ISO 42001 / NIST AI RMF / EU AI Act | 🟢🟢🟢 |
-| **#4** | Tier A | `OP-ITG-016` | Enterprise Agent Operating Architecture (*"COBIT for Agents"*) | CIO, CTO, Enterprise Architects | Multi-agent orchestration, identity domains, observability, human escalation | 🟢🟢🟢 *(2028–30)* |
-| **#5** | Tier A | `OP-ITG-015` | Cryptographic Sovereignty & Trust Architecture Assessment | CIO, CISO, Gov/Defense/Finance/Health Boards | Threshold Crypto (Shamir/MPC), Bayesian Trust Topology Scoring (8 domains) | 🟢🟢 |
-| **#6** | Tier A | `OP-STR-004` / `005` | M&A Readiness & Post-Merger Integration Governance Office | Private Equity, Corp Dev, Mid-Market M&A | Converges `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010`, `OP-OPS-007` | 🟢🟢 |
-| **#7** | Tier A | `OP-FIN-009` / `010` | Agentic Finance (Agentic Close & Financial Truth Mgmt) | CFO, Corporate Controller | **2005–2008 RGP/Unified-Payroll IP**, 23rd→3rd+ Continuous Close | 🟢🟢 |
-| **#8** | Tier A | `OP-ITG-017` | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes | CIO, CTO, CISO, Platform Directors | **Built `repos/mxc` Hyper-V subsystem** (`<300ms` wake, `0.0%` idle CPU, `.avhdx` reset, `ADR-008`) | 🟢🟢 |
-| **#9** | Tier A | `OP-ITG-018` | Managed Intelligence Provider / Professional (MIP) *(Umbrella Retainer)* | CEO, CIO, CFO, CISO, PE Operating Partners | Unifies **All 5 Strategic Assets** (ADPA, ECS, SIDPA, MXC Hyper-V, ICT-Gov, ISO 42001/EU AI Act) | 🟢🟢🟢 *(Recurring Engine)* |
+| **#1** | **Tier A (Core)** | `OP-ITG-013` | Enterprise AI Agent Governance Assessment | CIO, CISO, Chief AI Officer | `ICT-Governance-Framework-Application`, Agent 365, Entra Agent Identity | 🟢🟢🟢 |
+| **#2** | **Tier A (Core)** | `OP-ITG-014` | Knowledge Intelligence & Context Governance Assessment | CIO, CDO, Chief AI Officer | **ADPA, ECS, Ontologies, Knowledge Graphs**, Work IQ / M365 | 🟢🟢🟢 |
+| **#3** | **Tier A (Core)** | `OP-RSK-004` | AI Governance Certification Readiness (*"SOC 2 for AI"*) | CISO, Chief Risk/Compliance Officer, Legal | `AI Purpose Clause.docx`, ISO 42001 / NIST AI RMF / EU AI Act | 🟢🟢🟢 |
+| **#4** | Tier B *(2028)* | `OP-ITG-016` | Enterprise Agent Operating Architecture (*"COBIT for Agents"*) | CIO, CTO, Enterprise Architects | Multi-agent orchestration, identity domains, observability, human escalation | 🟢🟢🟢 *(2028–30)* |
+| **#5** | Tier B *(Pull)* | `OP-ITG-015` | Cryptographic Sovereignty & Trust Architecture Assessment | CIO, CISO, Gov/Defense/Finance/Health Boards | Threshold Crypto (Shamir/MPC), Bayesian Trust Topology Scoring (8 domains) | 🟢🟢 *(Q4 2027/28)* |
+| **#6** | Tier B *(Pull)* | `OP-STR-004` / `005` | M&A Readiness & Post-Merger Integration Governance Office | Private Equity, Corp Dev, Mid-Market M&A | Converges `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010`, `OP-OPS-007` | 🟢🟢 *(Opportunistic)* |
+| **#7** | **Tier A (Core)** / B | `OP-FIN-009` *(A)* / `010` *(B)* | Agentic Finance (`OP-FIN-009` Continuous Close = Core A; `OP-FIN-010` Rate Engine = Tier B 2028) | CFO, Corporate Controller | **2005–2008 RGP/Unified-Payroll IP**, 23rd→3rd+ Continuous Close | 🟢🟢 |
+| **#8** | Tier B *(Track B)* | `OP-ITG-017` | MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes | CIO, CTO, CISO, Platform Directors | **Built `mdresch/mxc` Hyper-V subsystem** (Stage 10, `10/17` stories; commercial sales Q3–Q4) | 🟢🟢 |
+| **#9** | **Tier A (Core)** | `OP-ITG-018` | Managed Intelligence Provider / Professional (MIP) *(Umbrella Retainer)* | CEO, CIO, CFO, CISO, PE Operating Partners | Unifies **All 5 Strategic Assets** (ADPA, ECS, SIDPA, MXC Hyper-V, ICT-Gov, ISO 42001/EU AI Act) | 🟢🟢🟢 *(Recurring Engine)* |
 | **#10** | Tier B | `OP-HR-009` | Human + Agent Workforce Operating Model | CHRO, COO, Chief AI Officer | `HR Transformation Toolkit` (§8.2, §10.8–10.10) | 🟢🟢 |
 | **#11** | Tier B | `OP-HR-010` | Skills Intelligence & Workforce Capability Assessment | CHRO, Talent / L&D Leaders | ADPA skill extraction, competency frameworks, ontology governance | 🟢🟢 |
 | **#12** | Tier D | `OP-FIN-011` / `OP-RSK-005` | Intelligence Capital & Evidence Assurance Frameworks | CFO, CISO, Chief AI Officer, Boards | ADPA, ECS, Bayesian evidence-seeking, audit chains | 🟡 *(Thought Leadership)* |
