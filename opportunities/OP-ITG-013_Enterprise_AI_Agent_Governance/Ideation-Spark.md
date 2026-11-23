@@ -49,5 +49,5 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 
 - [x] Pull the current open-issue/PR state of `ICT-Governance-Framework-Application` to confirm what agent-governance capability is already shippable vs. still roadmap *(completed 2026-11-23; documented in [Tier-2-Market-Research.md](Tier-2-Market-Research.md) §4)*.
 - [x] Draft the standalone **8-Pillar Agent Inventory & Governance Assessment Questionnaire / Maturity Scorecard** (`HYP-2027-015`) *(completed 2026-11-23: [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md))*.
-- [ ] Identify and interview 10 CIO/CISO prospects (`HYP-2027-013`, `HYP-2027-014`) — this flagship cannot run without executive sponsorship.
-- [ ] Complete the pre-pilot gate (Stage 2 Business Case quantification → `Pilot-Charter.md` → Director sign-off) before promoting to `Pilot`.
+- [x] Complete the **Pre-Pilot Gate (`G4`) Charter** *(completed 2026-11-23 in draft pending portal intake & Director sign-off: [Pilot-Charter.md](Pilot-Charter.md))*.
+- [ ] Capture and interview **10 CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) via the standalone **`mdresch/agent-governance-onboarding`** web portal (self-assessment submissions → 30-min briefing → Pilot #1 sponsor sign-off).
