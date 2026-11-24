@@ -56,9 +56,9 @@ Prioritize finance leaders where close friction, payroll cutoffs, and audit scru
 ### Part 1 — Context & Baseline Close Timing *(Minutes 0–10 · Tests `HYP-2027-002` Pain)*
 *Rule: Ask open, factual questions first — do not pitch the bridge before hearing their actual calendar.*
 
-1. **Payroll Cutoff & Dual-Calendar Check:** *"Walk me through your calendar — when does payroll lock (23rd, 25th, last day), when does HRIS tie out to GL clearing, and does your company budget/bonus year match your `01-01–31-12` statutory fiscal year or run split (e.g., `01-07–30-06`)?"*
-2. **Post-3rd Close Lag:** *"How many business days after the 3rd does it take today before you have attested, locked company-wide numbers — and what are the top two bottlenecks holding up Days 1–5?"*
-3. **Provisional Flash & IFRS 18 (¶117 MPMs):** *"Between the 25th and close sign-off, do executives or investors see 'flash' EBITDA/operating numbers — and have you mapped how IFRS 18's new Operating Profit subtotal and audited MPM rules affect those packs for 2027?"*
+1. **Payroll, Dual-Calendar & `4-4-5` Check:** *"Walk me through your calendar — when does payroll lock (23rd, 25th, last day), does your company budget run `01-01–31-12` or split (e.g., `01-07–30-06`), and do you close operational periods on calendar months or `4-4-5` weeks?"*
+2. **Post-3rd Lag & Revenue-vs.-CoS Sawtooth:** *"How many business days after period-end does it take today to lock attested numbers — and where do Revenue and Cost of Sales drift out of sync (e.g., `4-4-5` weekly billable hours vs. `1/12` monthly salaried payroll, late subcontractor invoices, or PTO/bench swings)?"*
+3. **Provisional Flash & IFRS 18 (¶78–83 CoS & ¶117 MPMs):** *"Between the 25th and close sign-off, do executives or investors see 'flash' Gross Margin / EBITDA — and have you mapped IFRS 18's mandatory 2027 Cost-of-Sales-by-nature tie-out and audited MPM rules yet?"*
 
 ### Part 2 — Testing the `$0-Software` Value Proposition *(Minutes 10–16 · Tests `HYP-2027-002` Viability)*
 4. **Software Appetite Check (Non-Leading):** *"Have you looked at close-automation tools like BlackLine, Workiva, or FCCS — or are you trying to fix this inside your current ERP?"*
