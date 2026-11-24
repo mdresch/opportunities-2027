@@ -46,7 +46,7 @@ Bridge the 23rd-payroll close (when real-time payroll data becomes available) to
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Write up the 2007–2008 RGP methodology as a standalone internal reference doc (currently only exists as institutional knowledge).
-- [ ] Confirm IFRS 18 (Jan 2027) implications with a current source, not assumption.
-- [ ] Identify 1 pilot-candidate client with a clean-enough payroll-to-GL cutoff to start Pilot #1.
-- [ ] Complete the pre-pilot gate: exact pilot scope, $0-capital delivery steps, pricing anchor, success KPI.
+- [ ] Write up the 2007–2008 RGP methodology — active sprint: [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) (`HYP-2027-007`, ≤15 hrs).
+- [ ] Confirm IFRS 18 against primary standard — [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (full read-through pending).
+- [ ] Identify 1 pilot-candidate client — log in [Wave-1-Discovery-Evidence-Log.md](Wave-1-Discovery-Evidence-Log.md) (`HYP-2027-002`).
+- [x] Pre-pilot gate draft — [Pilot-Charter.md](Pilot-Charter.md); Director sign-off pending.

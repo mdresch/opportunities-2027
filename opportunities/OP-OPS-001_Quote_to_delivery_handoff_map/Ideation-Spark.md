@@ -37,5 +37,8 @@ Make explicit how a signed deal becomes delivered work, so nothing falls through
 ## Next Steps (Tier 2 → Pilot Gate)
 
 - [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+- [x] Lock pilot scope, pricing anchor, and success KPI — [Pilot-Charter.md](Pilot-Charter.md) (bundled with `OP-CX-001`).
+- [ ] Run `HYP-2027-001` outreach — [Wave-1-Outreach-Evidence-Log.md](Wave-1-Outreach-Evidence-Log.md).
+- [ ] Director `G4` sign-off in Pilot-Charter §5 → promote status from `Idea` → `Pilot`.
+
+> **Wave 1 Priority #1 Sequencing Override (\BFI-004\):** \OP-OPS-001\ intentionally retains \Tier: C — Supporting\ for long-term strategic-value classification while being sequenced as **Wave 1 Priority #1 (Q1 2027)** as CBa Consult's fastest, lowest-friction entry-and-proof wedge per \Tier_A_Executive_Summary_2027.md\ §3.
