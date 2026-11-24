@@ -36,7 +36,7 @@ target_effort_cap: "≤15 hours codification (log below)"
 
 ---
 
-## [CLIENT] 2. Six Automated Accrual Guardrails & SoD Control Matrix
+## [CLIENT] 2. Seven Automated Accrual Guardrails & SoD Control Matrix
 
 Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (EU-endorsed Feb 13, 2026; mandatory Jan 1, 2027) and PCAOB/ISA 265 ITGC/MRC audit standards:
 
@@ -48,6 +48,7 @@ Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Not
 | **`FIN-CC-04`** | **24th–25th HRIS-to-GL Sync Window** | Fixed 48-hour reconciliation window reconciling HRIS gross-to-net register against GL payroll clearing accounts (`€0.00` target variance) before month-end. | Payroll Specialist | GL Controller *(independent of HRIS edit rights)* | Signed HRIS-to-GL tie-out + zero-balance clearing proof |
 | **`FIN-CC-05`** | **Sequenced Dependency Gates** | Hard close-checklist sequence: (1) Sub-ledgers closed → (2) Payroll & IC clearing = €0.00 → (3) Accruals posted → (4) Tax/NCI & IFRS 18 subtotal check → (5) Hard GL lock. | Close Coordinator | Controller | Timestamped close checklist + ERP period-lock audit screenshot |
 | **`FIN-CC-06`** | **Tiered Human Sign-Off & MPM SoD** | Material JEs require tiered approval (Preparer ≠ Approver); any external Management-Defined Performance Measure (MPM, IFRS 18 ¶117) requires separate **MPM Owner + CFO/Disclosure sign-off** with tax & NCI reconciliation (¶121–123). | GL Preparer / FP&A | Controller (GL) & CFO / Disclosure Comm. (MPM) | Signed SoD matrix + single-note MPM reconciliation bridge |
+| **`FIN-CC-07`** | **Dual-Calendar YTD & Accrual Bridge (`01-01–31-12` Fiscal vs. `01-07–30-06` Budget)** | Tag every recurring accrual, bonus/commission pool, and rate table with **both** `Statutory_Period (Jan–Dec)` and `Budget_Period (Jul–Jun)`; isolate `30-06` budget-close bonus/rebate true-ups with Day-1 reversals and reconcile **`H2 Prior Budget (Jan–Jun) + H1 Current Budget (Jul–Dec) = Statutory FY (Jan–Dec)`** to `€0.00` variance. | GL / FP&A Analyst | Corporate Controller | Dual-YTD reconciliation bridge (`€0.00` delta) + IFRS 18 mid-budget (`01-01-2027`) CoA mapping table |
 
 ---
 
@@ -56,7 +57,7 @@ Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Not
 | Close Domain | Standard Specification Rule (`$0` New Software) | IFRS 18 / Audit Control Check | Status |
 | --- | --- | --- | --- |
 | **Revenue Recognition Cutoffs** | Cut off billing/shipment/milestone feeds on Last Business Day (LBD); run automated deferred-revenue & unbilled-AR rollforward; flag any period-end contract amendments or side letters (`OP-FIN-012` cross-check). | Mapped to IFRS 18 `Operating`; ASC 606 / IFRS 15 cutoff evidence + zero unapproved manual top-side JEs. | ☑ Drafted *(tailor per client)* |
-| **Payroll & Benefits Accrual Lines** | Lock core payroll on 23rd; tie HRIS gross-to-net to GL on 24th–25th (`FIN-CC-04`); book formulaic 23rd–LBD stub accrual (`FIN-CC-01`) with mandatory Day-1 auto-reversal (`FIN-CC-02`). | Payroll clearing = €0.00; employer taxes, pension, and holiday accruals separated cleanly. | ☑ Drafted *(tailor per client)* |
+| **Payroll & Benefits Accrual Lines** | Lock core payroll on 23rd; tie HRIS gross-to-net to GL on 24th–25th (`FIN-CC-04`); book formulaic 23rd–LBD stub accrual (`FIN-CC-01`) with mandatory Day-1 auto-reversal (`FIN-CC-02`); align the **3 overlapping clocks** (`01-01` statutory tax/WKR/CLA reset, `Jun–May` Dutch *vakantiegeld*, and `01-07` company budget cost-rate/bonus reset — `FIN-CC-07`, feeding `OP-FIN-010`). | Payroll clearing = €0.00; employer taxes, pension, holiday, and split-year bonus accruals separated cleanly without `Jan–Jun` margin drift. | ☑ Drafted *(tailor per client)* |
 | **Intercompany & Clearing Accounts** | Cut off intercompany (IC) billings on LBD-2; force bilateral IC matching and zero-out clearing accounts (bank, payroll, GR/IR, suspense) prior to consolidation. | Zero uneliminated IC variance; manual IC journals logged with preparer/approver SoD. | ☑ Drafted *(tailor per client)* |
 | **Flash vs. Attested KPI Definitions** | Strict separation between **Provisional Internal Flash** (Days 23–3, watermarked) and **Attested Close Numbers** (Post-Day 3+, GL-locked and IFRS 18 subtotal-compliant). | Prevents unverified flash metrics from leaking into external investor decks as unaudited ¶117 MPMs. | ☑ Drafted *(IFRS 18 verified)* |
 

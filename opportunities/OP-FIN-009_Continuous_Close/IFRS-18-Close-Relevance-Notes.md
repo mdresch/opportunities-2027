@@ -28,6 +28,9 @@ review_status: "Primary-source confirmed (EU endorsement Feb 13, 2026; mandatory
    - Per **¶121–123**, all MPMs must be disclosed in a **single audited note** with a full reconciliation to the most directly comparable IFRS 18 subtotal — including the **income tax effect** and **non-controlling interest (NCI) effect** for every reconciling item, plus explicit justification for any definition change.
 3. **Enhanced Aggregation & Disaggregation (Labeling Discipline):**
    - Eliminates opaque "Other expenses" buckets in close packages; requires clean underlying sub-ledger reason codes during Days 1–22 transaction matching.
+4. **Mid-Budget IFRS 18 Cutover Trap (`01-01–31-12` Fiscal Year vs. `01-07–30-06` Company Budget Year):**
+   - Multi-entity groups (e.g., US-parented or PE-backed groups with NL/EU statutory subsidiaries) running a **`01-07 – 30-06` Company Budget Year** alongside a **`01-01 – 31-12` Statutory Fiscal Year** hit mandatory IFRS 18 adoption on **`01-01-2027` right at Month 7 (`H2`) of their active `BY26/27` budget year**.
+   - Without a dual-calendar CoA & YTD reconciliation bridge (`H2 Prior Budget [Jan–Jun] + H1 Current Budget [Jul–Dec] = Statutory FY [Jan–Dec]`), `Jan–Jun 2027` Budget-vs-Actuals breaks across legacy IAS 1 vs. IFRS 18 Operating Profit subtotals, and external `Jul–Jun` budget-year performance disclosures risk triggering audited ¶117 MPM reconciliation rules.
 
 ---
 
@@ -38,6 +41,7 @@ review_status: "Primary-source confirmed (EU endorsement Feb 13, 2026; mandatory
 | **Provisional Dashboard Watermarking (Days 23–3)** | Every flash KPI published before Day-3+ sign-off MUST carry an explicit watermark (`PROVISIONAL — INTERNAL MANAGEMENT VIEW ONLY · NOT AN IFRS 18 SUBTOTAL OR PUBLIC MPM`) to prevent accidental ¶117 public MPM scope. | [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) §4 |
 | **CoA Category Tagging on 23rd–Month-End Accruals** | Every automated accrual & Day-1 auto-reversal template (`FIN-CC-01`/`02`) must carry an explicit IFRS 18 P&L category tag (`Operating` / `Investing` / `Financing`) so continuous-close postings never require late year-end reclass AJEs. | [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) §2–§3 |
 | **Segregation of Duties (MPM vs. GL Close)** | The **SoD Matrix** must separate the **GL Close Preparer/Approver** from the **MPM Definition & Tax/NCI Reconciliation Owner** (Controller/FP&A lead vs. CFO/Disclosure Committee sign-off), preventing audit Material Weaknesses. | Links directly to `OP-FIN-012` |
+| **Dual-Calendar YTD & Mid-Budget Cutover (`FIN-CC-07`)** | Where Company Budget Year (`01-07–30-06`) diverges from Statutory Fiscal Year (`01-01–31-12`), enforce dual period tags, isolate `30-06` bonus/rebate true-ups, and maintain a reconciled `H2+H1 = Statutory FY` IFRS 18 subtotal bridge (`€0.00` variance). | [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) §2 (`FIN-CC-07`) |
 
 ---
 

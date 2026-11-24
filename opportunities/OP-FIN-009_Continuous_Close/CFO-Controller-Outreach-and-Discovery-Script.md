@@ -19,7 +19,7 @@ date: "2026-11-24"
 Prioritize finance leaders where close friction, payroll cutoffs, and audit scrutiny intersect:
 - **Role:** CFO, Finance Director, Group/Corporate Controller, or PE Portfolio Finance Lead.
 - **Size & Complexity:** 100–1,500 FTEs (or €15M–€250M revenue), multi-entity or high payroll share of Cost of Sales, running an existing ERP (NetSuite, Exact, AFAS, Dynamics 365, SAP B1/S4, Odoo) **without** a dedicated BlackLine/Workiva/FCCS team.
-- **2027 Triggers:** Reporting under IFRS (**IFRS 18** EU-endorsed Feb 13, 2026; mandatory Jan 1, 2027), PE monthly reporting packs due by Day 4–5, or recurring annual Management Letter (*Accountantsverslag*) close/MRC findings.
+- **2027 Triggers & Split-Calendar Sweet Spot:** Reporting under IFRS (**IFRS 18** EU-endorsed Feb 13, 2026; mandatory Jan 1, 2027), PE monthly reporting packs due by Day 4–5, recurring annual Management Letter (*Accountantsverslag*) findings, **or groups with a Split Calendar (`01-01–31-12` Statutory Fiscal Year vs. `01-07–30-06` Company Budget Year)** — where IFRS 18 hits mid-budget (`H2`), `Jan–Mar` taps active H2 OPEX, `Mar–May` locks `BY27/28` budgets, and `May–Jun` captures pre-`30-06` discretionary spend.
 
 ---
 
@@ -56,7 +56,7 @@ Prioritize finance leaders where close friction, payroll cutoffs, and audit scru
 ### Part 1 — Context & Baseline Close Timing *(Minutes 0–10 · Tests `HYP-2027-002` Pain)*
 *Rule: Ask open, factual questions first — do not pitch the bridge before hearing their actual calendar.*
 
-1. **Payroll vs. GL Cutoff:** *"Walk me through your monthly calendar — when does payroll lock (23rd, 25th, last day), and when does HRIS actually tie out to your GL payroll clearing accounts?"*
+1. **Payroll Cutoff & Dual-Calendar Check:** *"Walk me through your calendar — when does payroll lock (23rd, 25th, last day), when does HRIS tie out to GL clearing, and does your company budget/bonus year match your `01-01–31-12` statutory fiscal year or run split (e.g., `01-07–30-06`)?"*
 2. **Post-3rd Close Lag:** *"How many business days after the 3rd does it take today before you have attested, locked company-wide numbers — and what are the top two bottlenecks holding up Days 1–5?"*
 3. **Provisional Flash & IFRS 18 (¶117 MPMs):** *"Between the 25th and close sign-off, do executives or investors see 'flash' EBITDA/operating numbers — and have you mapped how IFRS 18's new Operating Profit subtotal and audited MPM rules affect those packs for 2027?"*
 
