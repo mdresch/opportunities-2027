@@ -34,6 +34,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | 3 | - | *(awaiting discovery)* | - | - | - | - |
 | 4 | - | *(awaiting discovery)* | - | - | - | - |
 | 5 | - | *(awaiting discovery)* | - | - | - | - |
+| 6 | - | *(awaiting discovery)* | - | - | - | - |
+| 7 | - | *(awaiting discovery)* | - | - | - | - |
+| 8 | - | *(awaiting discovery)* | - | - | - | - |
+| 9 | - | *(awaiting discovery)* | - | - | - | - |
+| 10 | - | *(awaiting discovery)* | - | - | - | - |
 
 ## 3. Locked Scope, Deliverables & Explicit Out-of-Scope Boundaries
 
@@ -47,7 +52,9 @@ owner: "Menno Drescher (Director, CBa Consult)"
   - Rendering formal legal representation or binding statutory legal opinions (performed by client's General Counsel / external law firm)
 
 ## 4. Exit / Kill Criteria
-- **Pivot Trigger:** If mid-market prospects prioritize technical agent control over formal ISO 42001 certification, lead with `OP-ITG-013` (Agent Governance) and bundle `OP-RSK-004` as the Phase 2 compliance upgrade.
+- **Falsification (`HYP-2027-004A`):** If **<6 of 10** CISO/CRO/Legal discovery calls confirm missing Annex III high-risk AI inventory or ISO 42001 gap work ahead of the **Dec 2, 2027** Annex III window (per [Tier-2-Market-Research.md](Tier-2-Market-Research.md)), pause standalone `OP-RSK-004` outbound and re-sequence via `OP-ITG-013` (Agent Governance) entry wedge.
+- **Conversion gate (`HYP-2027-004B`):** Authorize Pilot #1 when **≥1 of 10** discovery calls commits to a paid 6–10 week readiness assessment (`€4,000–€12,000+`) within 60 days.
+- **Packaging pivot:** If qualified prospects prioritize technical agent control over formal ISO 42001 certification, lead with `OP-ITG-013` and bundle `OP-RSK-004` as the Phase 2 compliance upgrade (does not replace `HYP-2027-004A/B` classification).
 
 ## 5. Director Gate Sign-Off (`G4`)
 - **Approval Status:** `PENDING_DIRECTOR_SIGNOFF`

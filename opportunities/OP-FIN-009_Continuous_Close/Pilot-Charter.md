@@ -34,6 +34,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | 3 | - | *(awaiting discovery)* | - | - | - | - |
 | 4 | - | *(awaiting discovery)* | - | - | - | - |
 | 5 | - | *(awaiting discovery)* | - | - | - | - |
+| 6 | - | *(awaiting discovery)* | - | - | - | - |
+| 7 | - | *(awaiting discovery)* | - | - | - | - |
+| 8 | - | *(awaiting discovery)* | - | - | - | - |
+| 9 | - | *(awaiting discovery)* | - | - | - | - |
+| 10 | - | *(awaiting discovery)* | - | - | - | - |
 
 ## 3. Locked Scope, Deliverables & Explicit Out-of-Scope Boundaries
 
@@ -47,7 +52,8 @@ owner: "Menno Drescher (Director, CBa Consult)"
   - Signing statutory financial statements or providing external audit assurance
 
 ## 4. Exit / Kill Criteria
-- **Pivot Trigger:** If <3 of 10 CFOs/Controllers recognize the 23rd→3rd+ close pain (`HYP-2027-009A` falsified), lead CFO outreach with `OP-FIN-012` (ICFR / Finance Controls Wedge) instead.
+- **Falsification (`HYP-2027-009A`):** If **<6 of 10** CFOs/Controllers report **>5 business days post-3rd** to publish attested monthly financials **and** cite payroll/accrual reconciliation as a top-3 bottleneck (per [Tier-2-Market-Research.md](Tier-2-Market-Research.md)), pivot CFO outreach to `OP-FIN-012` (ICFR / Finance Controls Wedge) instead of `OP-FIN-009`.
+- **Conversion gate (`HYP-2027-009B`):** Authorize Pilot #1 delivery when **≥1 of 10** discovery calls commits to a paid `OP-FIN-009` or companion `OP-FIN-012` pilot within 60 days.
 
 ## 5. Director Gate Sign-Off (`G4`)
 - **Approval Status:** `PENDING_DIRECTOR_SIGNOFF`

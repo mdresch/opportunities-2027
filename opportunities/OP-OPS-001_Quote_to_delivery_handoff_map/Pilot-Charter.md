@@ -32,6 +32,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | 3 | - | *(awaiting Q1 outreach)* | - | - | - | - |
 | 4 | - | *(awaiting Q1 outreach)* | - | - | - | - |
 | 5 | - | *(awaiting Q1 outreach)* | - | - | - | - |
+| 6 | - | *(awaiting Q1 outreach)* | - | - | - | - |
+| 7 | - | *(awaiting Q1 outreach)* | - | - | - | - |
+| 8 | - | *(awaiting Q1 outreach)* | - | - | - | - |
+| 9 | - | *(awaiting Q1 outreach)* | - | - | - | - |
+| 10 | - | *(awaiting Q1 outreach)* | - | - | - | - |
 
 ## 3. Core Deliverables & Explicit Out-of-Scope
 - **Deliverables:** (1) **D3 Deal-Trace Leakage Register** (≥5 real deals traced quote→SOW→kickoff→invoice), (2) **Mandatory Sales-to-Delivery Handoff Gate & SOW Checklist**, (3) **30-Day Onboarding Friction Fix Plan** (`OP-CX-001`).

@@ -26,7 +26,7 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | **Primary Client Outcome KPI** | Zero P0 governance drift across 90-day cycles, continuous EU AI Act / ISO 42001 audit readiness, and measurable quarterly Board ROI |
 | **Compounding Path** | Converts one-off Tier A assessments (`OP-ITG-013`/`014`/`RSK-004`/`FIN-009`) into predictable MRR and flagship Case Study (`OP-X-004`) |
 
-## 2. Prospect Acquisition & Conversion Tracker *(Empty Until Real Conversations Occur)*
+## 2. 10-Prospect Executive Discovery & MIP Conversion Tracker *(Empty Until Real Conversations Occur)*
 
 | # | Date | Organization & Seat Band | Executive Buyer | Entry Wedge / Assessment | MIP Tier Pitched | Outcome |
 | :-: | --- | --- | --- | --- | --- | --- |
@@ -35,6 +35,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | 3 | - | *(awaiting discovery / conversion)* | - | - | - | - |
 | 4 | - | *(awaiting discovery / conversion)* | - | - | - | - |
 | 5 | - | *(awaiting discovery / conversion)* | - | - | - | - |
+| 6 | - | *(awaiting discovery / conversion)* | - | - | - | - |
+| 7 | - | *(awaiting discovery / conversion)* | - | - | - | - |
+| 8 | - | *(awaiting discovery / conversion)* | - | - | - | - |
+| 9 | - | *(awaiting discovery / conversion)* | - | - | - | - |
+| 10 | - | *(awaiting discovery / conversion)* | - | - | - | - |
 
 ## 3. Locked Scope, Deliverables & Explicit Out-of-Scope Boundaries
 

@@ -34,6 +34,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | 3 | - | *(awaiting discovery)* | - | - | - | - |
 | 4 | - | *(awaiting discovery)* | - | - | - | - |
 | 5 | - | *(awaiting discovery)* | - | - | - | - |
+| 6 | - | *(awaiting discovery)* | - | - | - | - |
+| 7 | - | *(awaiting discovery)* | - | - | - | - |
+| 8 | - | *(awaiting discovery)* | - | - | - | - |
+| 9 | - | *(awaiting discovery)* | - | - | - | - |
+| 10 | - | *(awaiting discovery)* | - | - | - | - |
 
 ## 3. Locked Scope, Deliverables & Explicit Out-of-Scope Boundaries
 
