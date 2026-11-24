@@ -118,7 +118,8 @@ CREATE TABLE document_lineages (
     sensitivity     TEXT,                       -- 'Public', 'Internal', 'Confidential', 'Restricted'
     status          TEXT NOT NULL DEFAULT 'active', -- active | quarantined | retired
     owner_name      TEXT,
-    last_verified   TIMESTAMPTZ NOT NULL DEFAULT now()
+    last_verified   TIMESTAMPTZ NOT NULL DEFAULT now(),
+    UNIQUE (tenant_id, canonical_uri)
 );
 
 -- 4. MXC Hyper-V Sterile Sandbox Execution Audit Log (OP-ITG-017 Integration)
@@ -144,8 +145,21 @@ CREATE TABLE governance_records (
     title           TEXT NOT NULL,
     status          TEXT NOT NULL,
     payload_json    JSONB NOT NULL DEFAULT '{}',
-    updated_at      TIMESTAMPTZ NOT NULL DEFAULT now()
+    updated_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
+    UNIQUE (engagement_id, code)
 );
+
+-- 6. Multi-Tenant Row-Level Security (RLS) Activation Stubs (Enforced in Milestone 1)
+ALTER TABLE engagements        ENABLE ROW LEVEL SECURITY;
+ALTER TABLE document_lineages  ENABLE ROW LEVEL SECURITY;
+ALTER TABLE sandbox_executions ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY tenant_isolation_engagements ON engagements
+    USING (tenant_id = current_setting('app.current_tenant_id', true)::uuid);
+CREATE POLICY tenant_isolation_documents ON document_lineages
+    USING (tenant_id = current_setting('app.current_tenant_id', true)::uuid);
+CREATE POLICY tenant_isolation_sandboxes ON sandbox_executions
+    USING (tenant_id = current_setting('app.current_tenant_id', true)::uuid);
 ```
 
 ---
@@ -154,7 +168,7 @@ CREATE TABLE governance_records (
 
 To prevent premature platform engineering from eating Wave 1 client-pilot bandwidth, Track B execution in `mdresch/adpa` is strictly time-boxed into **3 bounded milestones**:
 
-1. **Milestone 1 — Persistent Schema & Migrations (2 Sprints):** Instantiate `sidpa-template` Track B governance in `mdresch/adpa`; deploy the 5 core PostgreSQL tables above with automated migrations and `pytest` contract tests.
+1. **Milestone 1 — Persistent Schema & Migrations (2 Sprints):** Instantiate `sidpa-template` Track B governance in `mdresch/adpa`; deploy the 8 core PostgreSQL tables above with automated migrations and `pytest` contract tests.
 2. **Milestone 2 — Reimplement 2 Live Projects into ADPA (2 Sprints):**
    - **Project #1:** Load all **6 Diagnostic Questionnaires** (`OP-ITG-013`, `OP-ITG-018`, `OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-CX-002`) into `assessment_templates` with automated weighted scoring + CBa Consult PDF export.
    - **Project #2:** Wire **MXC Hyper-V (`wxc-exec` + `win11-agent-lean.vhdx`)** as ADPA's sterile document/agent execution backend logging every run to `sandbox_executions`.
