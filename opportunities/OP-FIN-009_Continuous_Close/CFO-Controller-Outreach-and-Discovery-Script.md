@@ -72,8 +72,8 @@ Prioritize finance leaders where close friction, payroll cutoffs, and audit scru
 8. **Conflict-Free Wedge Check:** *(If #6 or #7 hits a nerve)* *"Since your external auditor isn't allowed to design your remediation controls or side-letter registry under independence rules, would a fixed **€1,500–€5,000 Findings-to-Root-Cause & Side-Letter Readiness Diagnostic** be a higher priority for you right now than close speed?"*
 
 ### Part 4 — Clean Wrap-Up *(Minutes 22–25)*
-- **If qualified pull exists:** Commit to sending [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md) + a 1-page scoped pilot note within 48 hours, and book a 20-minute scope review.
-- **If no pull:** Thank them, send the promised 1-page IFRS 18 KPI Watermarking & SoD takeaway, and ask for 1 peer Controller referral.
+- **If qualified pull exists:** Commit to sending [One_Pager_OP-FIN-009_Continuous_Close.docx](One_Pager_OP-FIN-009_Continuous_Close.docx) + [Client_Proposal_and_SOW_Continuous_Close_Bridge.docx](Client_Proposal_and_SOW_Continuous_Close_Bridge.docx) within 48 hours, and book a 20-minute scope review.
+- **If no pull:** Thank them, send the promised CFO leave-behind ([Executive_Brief_IFRS_18_Close_and_KPI_Controls_2027.docx](Executive_Brief_IFRS_18_Close_and_KPI_Controls_2027.docx)), and ask for 1 peer Controller referral.
 
 ---
 

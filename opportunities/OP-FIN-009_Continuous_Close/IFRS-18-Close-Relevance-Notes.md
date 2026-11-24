@@ -7,7 +7,8 @@ review_status: "Primary-source confirmed (EU endorsement Feb 13, 2026; mandatory
 
 # IFRS 18 — Close & KPI Relevance Notes (Verified Primary-Source Check)
 
-> **Scope:** Supports the **`OP-FIN-009`** Continuous Close control matrix, Chart-of-Accounts close mapping, and provisional vs. attested KPI governance — **not** statutory accounting advice (client's external auditor retains statutory opinion).
+> **Scope:** Supports the **`OP-FIN-009`** Continuous Close control matrix, Chart-of-Accounts close mapping, and provisional vs. attested KPI governance — **not** statutory accounting advice (client's external auditor retains statutory opinion).  
+> **Client-Facing Executive Brief (`.docx`):** [Executive_Brief_IFRS_18_Close_and_KPI_Controls_2027.docx](Executive_Brief_IFRS_18_Close_and_KPI_Controls_2027.docx) *(CBa Consult CFO & Controller A4 Datasheet — zero internal portfolio codes)*.
 
 ---
 

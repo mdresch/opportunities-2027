@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Continuous Close Monthly Gantt Chart — Critical Path &amp; Hard Deadlines</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 7mm 8mm;
+    }
+
+    :root {
+      --navy-dark: #0D1B2A;
+      --navy-primary: #1F4E79;
+      --cyan-accent: #00A8E8;
+      --teal: #0C8B82;
+      --amber: #D97706;
+      --amber-bg: #FEF3C7;
+      --slate-bg: #F2F5F9;
+      --slate-border: #CBD5E1;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      background: #FFFFFF;
+      font-size: 8.2pt;
+      line-height: 1.25;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page-frame {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Header Banner */
+    .header-bar {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
+      color: #FFFFFF;
+      border-radius: 5px;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--cyan-accent);
+      margin-bottom: 6px;
+    }
+
+    .header-title {
+      font-size: 13pt;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .header-subtitle {
+      font-size: 7.8pt;
+      color: #CBD5E1;
+      margin-top: 2px;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(0, 168, 232, 0.5);
+      border-radius: 3px;
+      padding: 3px 7px;
+      font-size: 7pt;
+      font-weight: 600;
+      color: #E2E8F0;
+      white-space: nowrap;
+    }
+
+    .badge-brand {
+      background: var(--cyan-accent);
+      color: var(--navy-dark);
+      border-color: var(--cyan-accent);
+      font-weight: 700;
+    }
+
+    /* KPI / Legend Strip */
+    .meta-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--slate-bg);
+      border: 1px solid var(--slate-border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      margin-bottom: 6px;
+      font-size: 7.2pt;
+    }
+
+    .legend-group {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .swatch {
+      width: 14px;
+      height: 8px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .swatch-p1 { background: var(--cyan-accent); }
+    .swatch-p2 { background: var(--navy-primary); }
+    .swatch-p3 { background: var(--teal); }
+
+    .diamond-legend {
+      width: 9px;
+      height: 9px;
+      background: var(--amber);
+      transform: rotate(45deg);
+      display: inline-block;
+      border: 1px solid #92400E;
+    }
+
+    .kpi-pills {
+      display: flex;
+      gap: 10px;
+      color: var(--navy-primary);
+      font-weight: 700;
+    }
+
+    /* Main Gantt Table */
+    .gantt-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      border: 1px solid var(--navy-primary);
+    }
+
+    .gantt-table th,
+    .gantt-table td {
+      border: 1px solid var(--slate-border);
+      padding: 2.5px 4px;
+      vertical-align: middle;
+    }
+
+    .gantt-table thead th {
+      background: var(--navy-dark);
+      color: #FFFFFF;
+      font-size: 6.9pt;
+      font-weight: 700;
+      text-align: center;
+      padding: 3.5px 2px;
+    }
+
+    .gantt-table thead th.col-left {
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    .phase-group-hdr {
+      font-size: 6.8pt !important;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      padding: 2.5px 4px !important;
+    }
+
+    .grp-p1 { background: #0C4A6E !important; border-bottom: 2px solid var(--cyan-accent) !important; }
+    .grp-p2 { background: var(--navy-primary) !important; border-bottom: 2px solid #93C5FD !important; }
+    .grp-p3 { background: #115E59 !important; border-bottom: 2px solid var(--teal) !important; }
+
+    /* Column Widths */
+    .w-id { width: 28px; text-align: center; font-weight: 700; }
+    .w-act { width: 245px; }
+    .w-ctrl { width: 78px; text-align: center; font-family: Consolas, monospace; font-size: 6.8pt; }
+    .w-own { width: 108px; font-size: 6.9pt; }
+    .w-dl { width: 82px; text-align: center; font-weight: 600; font-size: 6.9pt; }
+    .w-slot { width: 32px; text-align: center; padding: 0 !important; position: relative; }
+
+    /* Phase Sub-banners inside table */
+    .phase-row td {
+      background: #E2E8F0;
+      color: var(--navy-dark);
+      font-weight: 700;
+      font-size: 7.2pt;
+      padding: 2.5px 6px;
+      border-top: 1.5px solid var(--navy-primary);
+      border-bottom: 1px solid #94A3B8;
+    }
+
+    .row-gate {
+      background: #FFFBEB;
+    }
+
+    .row-gate td.w-act {
+      font-weight: 700;
+      color: #92400E;
+    }
+
+    .row-gate td.w-dl {
+      color: #B45309;
+      font-weight: 700;
+    }
+
+    .ctrl-tag {
+      background: #EEF2F6;
+      border: 1px solid #CBD5E1;
+      border-radius: 2px;
+      padding: 1px 3px;
+      color: var(--navy-primary);
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .row-gate .ctrl-tag {
+      background: var(--amber-bg);
+      border-color: #F59E0B;
+      color: #92400E;
+    }
+
+    /* Gantt Bars & Diamonds */
+    .slot-cell {
+      height: 18px;
+      padding: 0 !important;
+      background-clip: padding-box;
+    }
+
+    .slot-gate-col {
+      background: rgba(245, 158, 11, 0.07);
+    }
+
+    .bar {
+      height: 10px;
+      margin: 0 1px;
+      border-radius: 2px;
+    }
+
+    .bar-cont-left { border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0; }
+    .bar-cont-mid { border-radius: 0; margin: 0; }
+    .bar-cont-right { border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: 0; }
+
+    .bar-p1 { background: var(--cyan-accent); }
+    .bar-p2 { background: var(--navy-primary); }
+    .bar-p3 { background: var(--teal); }
+
+    .milestone {
+      width: 10px;
+      height: 10px;
+      background: var(--amber);
+      border: 1.5px solid #78350F;
+      transform: rotate(45deg);
+      margin: 0 auto;
+    }
+
+    /* Dual-Calendar Footer Panel */
+    .overlay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .overlay-card {
+      background: var(--slate-bg);
+      border: 1px solid var(--slate-border);
+      border-left: 4px solid var(--navy-primary);
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 7pt;
+    }
+
+    .overlay-card.ye-dec {
+      border-left-color: var(--amber);
+    }
+
+    .overlay-title {
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 2px;
+      font-size: 7.4pt;
+    }
+
+    .footer-note {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.7pt;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-frame">
+    <!-- Top Header -->
+    <header class="header-bar">
+      <div>
+        <div class="header-title">Continuous Close Monthly Gantt Chart &amp; Critical-Path Schedule</div>
+        <div class="header-subtitle">Days 1–22 Continuous Matching &rarr; Day 23 Payroll Lock &rarr; 4-4-5 / Month-End Cutoff &rarr; Day 1–3 Attested IFRS 18 GL Lock</div>
+      </div>
+      <div class="header-badges">
+        <span class="badge">Controls: FIN-CC-01 to FIN-CC-10</span>
+        <span class="badge">IFRS 18 Ready (Jan 2027)</span>
+        <span class="badge badge-brand">CBa Consult</span>
+      </div>
+    </header>
+
+    <!-- Legend & KPI Strip -->
+    <div class="meta-strip">
+      <div class="legend-group">
+        <span class="legend-item"><span class="swatch swatch-p1"></span> Phase 1: Continuous Matching</span>
+        <span class="legend-item"><span class="swatch swatch-p2"></span> Phase 2: Payroll &amp; Cutoff</span>
+        <span class="legend-item"><span class="swatch swatch-p3"></span> Phase 3: Reversal &amp; IFRS 18 Lock</span>
+        <span class="legend-item"><span class="diamond-legend"></span> Hard Gate / System Lock</span>
+      </div>
+      <div class="kpi-pills">
+        <span>Close Target: &le;3 Business Days</span>
+        <span>&bull;</span>
+        <span>CoS Baseline: 1,500 Hrs/Yr (20/20/25)</span>
+        <span>&bull;</span>
+        <span>Auto-Reversal: Day+1 08:00</span>
+      </div>
+    </div>
+
+    <!-- Main Gantt Grid -->
+    <section role="region" aria-label="Continuous Close Monthly Gantt Schedule">
+      <table class="gantt-table">
+        <thead>
+          <tr>
+            <th rowspan="2" class="w-id">ID</th>
+            <th rowspan="2" class="w-act col-left">Close Activity &amp; Control Deliverable</th>
+            <th rowspan="2" class="w-ctrl">Control</th>
+            <th rowspan="2" class="w-own col-left">SoD Owner / Reviewer</th>
+            <th rowspan="2" class="w-dl">Hard Deadline</th>
+            <th colspan="3" class="phase-group-hdr grp-p1">Phase 1 (D1–22)</th>
+            <th colspan="6" class="phase-group-hdr grp-p2">Phase 2 (D23–LBD)</th>
+            <th colspan="3" class="phase-group-hdr grp-p3">Phase 3 (D+1–3+)</th>
+          </tr>
+          <tr>
+            <th class="w-slot">D1–7</th>
+            <th class="w-slot">D8–14</th>
+            <th class="w-slot">D15–22</th>
+            <th class="w-slot">D23</th>
+            <th class="w-slot">D24–25</th>
+            <th class="w-slot">D26–28</th>
+            <th class="w-slot">LBD-2</th>
+            <th class="w-slot">LBD-1</th>
+            <th class="w-slot">LBD</th>
+            <th class="w-slot">D+1</th>
+            <th class="w-slot">D+2</th>
+            <th class="w-slot">D+3+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Phase 1 -->
+          <tr class="phase-row">
+            <td colspan="17">PHASE 1 — CONTINUOUS TRANSACTION MATCHING (DAYS 1–22)</td>
+          </tr>
+          <tr>
+            <td class="w-id">A1</td>
+            <td class="w-act">Daily bank, AP, AR &amp; corporate-card auto-matching</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-01</span></td>
+            <td class="w-own">GL Accountant</td>
+            <td class="w-dl">Daily 10:00</td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-left"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-mid"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-right"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A2</td>
+            <td class="w-act">Weekly exception clearing &amp; reason codes (&lt;5d aging)</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-01</span></td>
+            <td class="w-own">GL Acct. / Reviewer</td>
+            <td class="w-dl">Fri 16:00</td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-left"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-mid"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-right"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A3</td>
+            <td class="w-act">Weekly PSA timesheet &amp; subcontractor hours check</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-09</span></td>
+            <td class="w-own">Project Accounting</td>
+            <td class="w-dl">Fri 17:00</td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-left"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-mid"></div></td>
+            <td class="slot-cell"><div class="bar bar-p1 bar-cont-right"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+
+          <!-- Phase 2 -->
+          <tr class="phase-row">
+            <td colspan="17">PHASE 2 — PAYROLL LOCK, 4-4-5 PRORATION &amp; PRE-VALIDATED CUTOFF (DAY 23 – MONTH-END / LBD)</td>
+          </tr>
+          <tr class="row-gate">
+            <td class="w-id">A4</td>
+            <td class="w-act">&#9670; Core Payroll Lock (base pay, overtime &amp; deductions)</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-04</span></td>
+            <td class="w-own">Payroll Operations</td>
+            <td class="w-dl">Day 23 &middot; 17:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td>
+            <td class="slot-cell slot-gate-col"><div class="milestone"></div></td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A5</td>
+            <td class="w-act">48-Hr HRIS-to-GL sync &amp; &euro;0.00 payroll clearing tie-out</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-04</span></td>
+            <td class="w-own">Payroll &rarr; Controller</td>
+            <td class="w-dl">Day 25 &middot; 17:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+            <td class="slot-cell"><div class="bar bar-p2"></div></td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A6</td>
+            <td class="w-act">23rd–LBD stub, mobility, lease &amp; Concur accruals (¶83)</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-01</span></td>
+            <td class="w-own">Senior Accountant</td>
+            <td class="w-dl">Day 28 &middot; 15:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td>
+            <td class="slot-cell"><div class="bar bar-p2"></div></td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A7</td>
+            <td class="w-act">Intercompany billing cutoff &amp; bilateral match (&euro;0.00 delta)</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-05</span></td>
+            <td class="w-own">IC Accountant</td>
+            <td class="w-dl">LBD-2 &middot; 17:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td>
+            <td class="slot-cell"><div class="bar bar-p2"></div></td>
+            <td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A8</td>
+            <td class="w-act">4-4-5 CoS proration (20/20/25), PTO &amp; 1,500-hr staging</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-08/10</span></td>
+            <td class="w-own">Cost / FP&amp;A Acct.</td>
+            <td class="w-dl">LBD &middot; 15:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td>
+            <td class="slot-cell"><div class="bar bar-p2 bar-cont-left"></div></td>
+            <td class="slot-cell slot-gate-col"><div class="bar bar-p2 bar-cont-right"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr class="row-gate">
+            <td class="w-id">A9</td>
+            <td class="w-act">&#9670; Simultaneous WIP Rev &amp; SubCoS Cutoff + Sub-Ledger Lock</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-09/05</span></td>
+            <td class="w-own">Rev / Project Acct.</td>
+            <td class="w-dl">LBD &middot; 18:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td>
+            <td class="slot-cell slot-gate-col"><div class="milestone"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A10</td>
+            <td class="w-act">Pre-validated JE sign-off &amp; Provisional Flash watermark</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-06</span></td>
+            <td class="w-own">Corporate Controller</td>
+            <td class="w-dl">LBD &middot; 18:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td>
+            <td class="slot-cell slot-gate-col"><div class="bar bar-p2"></div></td>
+            <td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+
+          <!-- Phase 3 -->
+          <tr class="phase-row">
+            <td colspan="17">PHASE 3 — AUTO-REVERSALS, EXCEPTION-ONLY VARIANCE &amp; ATTESTED IFRS 18 LOCK (DAYS 1–3+)</td>
+          </tr>
+          <tr class="row-gate">
+            <td class="w-id">A11</td>
+            <td class="w-act">&#9670; Mandatory Day-1 Auto-Reversals Fire (ERP Batch)</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-02</span></td>
+            <td class="w-own">ERP Batch / Acct. Mgr.</td>
+            <td class="w-dl">Day+1 &middot; 08:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+            <td class="slot-cell slot-gate-col"><div class="milestone"></div></td>
+            <td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A12</td>
+            <td class="w-act">Fixed-Price EAC % completion &amp; 1,500-hr GL tie-out</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-09/10</span></td>
+            <td class="w-own">Cost/Rev &rarr; Controller</td>
+            <td class="w-dl">Day+2 &middot; 12:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td>
+            <td class="slot-cell slot-gate-col"><div class="bar bar-p3 bar-cont-left"></div></td>
+            <td class="slot-cell"><div class="bar bar-p3 bar-cont-right"></div></td>
+            <td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr>
+            <td class="w-id">A13</td>
+            <td class="w-act">Working-day normalized &gt;5% MRC variance &amp; auto-cert.</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-03</span></td>
+            <td class="w-own">GL &rarr; Controller / FP&amp;A</td>
+            <td class="w-dl">Day+2 &middot; 17:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td>
+            <td class="slot-cell"><div class="bar bar-p3"></div></td>
+            <td class="slot-cell slot-gate-col"></td>
+          </tr>
+          <tr class="row-gate">
+            <td class="w-id">A14</td>
+            <td class="w-act">&#9670; IFRS 18 Subtotal / ¶117 MPM Sign-Off &amp; Hard GL Lock</td>
+            <td class="w-ctrl"><span class="ctrl-tag">FIN-CC-05/06</span></td>
+            <td class="w-own">Controller &amp; CFO</td>
+            <td class="w-dl">Day+3 &middot; 16:00</td>
+            <td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell slot-gate-col"></td><td class="slot-cell"></td>
+            <td class="slot-cell slot-gate-col"><div class="milestone"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Dual Calendar Overlay -->
+    <div class="overlay-grid">
+      <div class="overlay-card">
+        <div class="overlay-title">30 June &mdash; Operating Budget Year-End Overlay (01 Jul &ndash; 30 Jun | FIN-CC-07)</div>
+        <div>Isolate annual bonus, commission &amp; vendor rebate true-ups with mandatory Day-1 auto-reversals (<strong>FIN-CC-02</strong>) so Period 1 (July) gross margin and 1,500-hr CoS absorption baselines stay undistorted.</div>
+      </div>
+      <div class="overlay-card ye-dec">
+        <div class="overlay-title">31 December &mdash; Statutory Fiscal Year-End Overlay (01 Jan &ndash; 31 Dec | FIN-CC-07)</div>
+        <div>Bridge <strong>1&ndash;5 stub days</strong> from final Friday 4-4-5 close to 31-12 cutoff and reconcile <strong>H2 Prior Budget (Jan&ndash;Jun) + H1 Current Budget (Jul&ndash;Dec) = Statutory FY</strong> to <strong>&euro;0.00</strong> under IFRS 18 ¶78&ndash;83 / ¶117.</div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>LBD = Last Business Day of Month / 4-4-5 Period &bull; SoD = Segregation of Duties (Preparer &ne; Reviewer)</span>
+      <span>CBa Consult &mdash; Finance Transformation &amp; Close Governance</span>
+    </div>
+  </div>
+</body>
+</html>
