@@ -13,7 +13,7 @@
 
 ## What it is
 
-Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security → Sector → CLA/CAO → Entity → Division/Dept → Employment Contract) plus CoS benefit/asset items (laptop, study, company car, flex-benefits schema & individual cost exceptions) into real-time hourly & all-in cost rates vs. annual billable hours, sales rates, Revenue, and Cost of Sales (CoS), with Autonomous Accounting Readiness controls.
+Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security → Sector → CLA/CAO → Entity → Division/Dept → Employment Contract) plus CoS benefit/asset items (laptop, study, company car, flex-benefits schema & individual cost exceptions) into a **real-time Standard All-In Hourly CoS Rate anchored to `1,500` annual billable hours/year** (`~72.1%` net billable utilization on a `2,080`-hr `52 × 40h` FTE year — i.e., `125.0` hrs/calendar month, or `115.38` hrs per 4-week / `144.23` hrs per 5-week `4-4-5` period) vs. sales rates, Revenue, and Cost of Sales (CoS), with Autonomous Accounting Readiness controls and `€0.00` monthly absorption-variance tie-out (`FIN-CC-10` in [RGP-23rd-to-3rd-Playbook-Internal.md](../OP-FIN-009_Continuous_Close/RGP-23rd-to-3rd-Playbook-Internal.md)).
 
 ## 7 Pivotal Questions
 

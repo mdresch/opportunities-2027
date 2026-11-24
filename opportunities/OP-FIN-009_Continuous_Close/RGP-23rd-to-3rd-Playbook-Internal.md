@@ -36,7 +36,7 @@ target_effort_cap: "≤15 hours codification (log below)"
 
 ---
 
-## [CLIENT] 2. Nine Automated Accrual & Matching Guardrails (SoD Control Matrix)
+## [CLIENT] 2. Ten Automated Accrual & Matching Guardrails (SoD Control Matrix)
 
 Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (EU-endorsed Feb 13, 2026; mandatory Jan 1, 2027) and PCAOB/ISA 265 ITGC/MRC audit standards:
 
@@ -51,6 +51,7 @@ Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Not
 | **`FIN-CC-07`** | **Dual-Calendar & `31-12` / `30-06` Stub-Day Bridge** | Tag recurring accruals, bonuses, and rates with `Statutory_Period (01-01–31-12)`, `Budget_Period (01-07–30-06)`, and `4-4-5_Period`; bridge the **1–5 stub days** between Friday `4-4-5` period-end and hard `31-12` statutory / `30-06` budget cutoffs (`H2+H1 = Statutory FY`, `€0.00` delta). | GL / FP&A Analyst | Corporate Controller | Dual-YTD & stub-day reconciliation bridge (`€0.00` delta) + IFRS 18 mid-budget CoA map |
 | **`FIN-CC-08`** | **`4-4-5` Working-Day CoS Proration & PTO Drawdown** | Eliminate the Gross Margin sawtooth (`28/28/35`-day weekly revenue vs. `1/12` monthly payroll): prorate salaried Direct Labor CoS & fixed delivery OPEX by exact working days (`20/20/25`), draw down PTO/vacation taken against the **Vacation Liability Provision** (not CoS), and enforce consistent Billable CoS vs. Bench SG&A rules. | Cost / Payroll Accountant | Corporate Controller | Monthly Gross Margin bridge + Vacation Liability rollforward + IFRS 18 CoS policy check |
 | **`FIN-CC-09`** | **Simultaneous WIP Revenue & Subcontractor CoS Cutoff** | Lock `Approved Timesheets → Unbilled WIP (Contract Assets)` and `Approved Subcontractor/ZZP Hours × PO Rate → Unvouchered CoS Accrual (GR/IR)` in the **same period** *before* running Fixed-Price `% of Completion` (`Actual CoS ÷ EAC`) so timing lags never misstate IFRS 15 revenue or Gross Profit. | Revenue / Project Accountant | Controller *(independent of Project Managers)* | WIP-to-PSA tie-out + Unvouchered Subcontractor AP accrual schedule + EAC review sign-off |
+| **`FIN-CC-10`** | **`1,500`-Hour Standard CoS Rate & Absorption Tie-Out** | Compute project CoS at `Actual Billable Hours × (7-Layer Loaded Annual Cost ÷ 1,500 billable hrs/yr)` (`115.38h` per 4-wk / `144.23h` per 5-wk `4-4-5` period, or `125.0h`/calendar mo); at Day-3 close, reconcile **`Absorbed Project CoS + Unabsorbed Bench/Capacity Variance − Over-Absorption Credit + Rate/Payroll Spending Variance = Actual Prorated HRIS Payroll`** to `€0.00` delta so peak billing never creates phantom profit or inflates IFRS 15 EAC revenue. | Cost / FP&A Accountant | Corporate Controller | Monthly 3-line absorption bridge (`€0.00` clearing delta) + IFRS 18 ¶83 Employee Benefits tie-out (`OP-FIN-010` link) |
 
 ---
 
