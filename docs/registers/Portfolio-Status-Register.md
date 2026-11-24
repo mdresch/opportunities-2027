@@ -27,7 +27,7 @@ last_updated: "2026-11-24"
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: Core 5 Tier A (`OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013`, `OP-ITG-018` MIP) + Q1 wedge `OP-OPS-001 → OP-CX-001` |
 | **Last Milestone Completed** | Added **9 built-asset opportunities** (`OP-MKT-013`/`014`, `OP-DTX-006`–`008`, `OP-ORG-002`, `OP-FIN-013`, `OP-ITG-021`/`022`) mapping `mdresch/*` repos (2026-11-24) |
 | **Next Priority Unit of Work** | **Execute Wave 1 tests:** 15 founder outreach (`HYP-2027-001`) + 10 CFO discovery (`HYP-2027-002`) + ≤15 hr RGP playbook sprint (`HYP-2027-007`); record **first `G4` Director sign-off** when sponsor or hypothesis threshold met — [Wave-1-Execution-Playbook.md](Wave-1-Execution-Playbook.md) |
-| **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `4/6 Epics · 10/17 stories` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
+| **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `Phase 1 Complete (6/6 Epics · 17/17 stories) + Phase 2 Epics 007-009 Complete (271/271 tests + Win11 Lean Agent VM verified)` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
 
 ## 2. Q1–Q4 2027 Priority Wave Status
 
@@ -35,7 +35,7 @@ last_updated: "2026-11-24"
 | --- | --- | --- | --- | --- | --- |
 | **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 2–3 (`HYP-2027-001` **Testing**; [Pilot-Charter](../../opportunities/OP-OPS-001_Quote_to_delivery_handoff_map/Pilot-Charter.md) draft) | **15 outreach conversations** → paid pilot or sponsor → **`G4` sign-off** | Lightweight Advisory (Track A) |
 | **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 2–3 (`HYP-2027-002`, `007` **Testing**; [Pilot-Charter](../../opportunities/OP-FIN-009_Continuous_Close/Pilot-Charter.md) draft) | **RGP playbook ≤15 hrs** + **10 CFO interviews** → named client → **`G4` sign-off** | Lightweight Advisory (Track A) |
-| **Wave 2 (AI & Compliance)** | Q2 2027 | `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013` | Stage 1a (Sparks + One-Pagers) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Hybrid / Platform-Backed |
+| **Wave 2 (AI & Compliance)** | Q2 2027 | `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013` | Stage 3-4 Pre-Pilot Packaged (Market Research + Questionnaires + Pilot Charters + Delivery Playbooks) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Hybrid / Platform-Backed |
 | **Wave 3 (Scale & Retainer)** | Q2–Q4 2027 | `OP-ITG-017`, `OP-ITG-018` (MIP), `OP-FIN-010`, `OP-ITG-015`, `OP-STR-004`/`005`, `OP-ITG-016` | `OP-ITG-017` Track B Stage 10 (see §2b); others Stage 1a | Deferred until Wave 1–2 pilot signal (`OP-ITG-017` awaiting Phase 1 completion / commercial pilot) | Platform-Backed / Retainer |
 
 ### 2b. Graduated Track B Repositories *(Non-Duplicating Rollup)*
@@ -44,7 +44,7 @@ last_updated: "2026-11-24"
 
 | Opportunity ID | Graduated Track B Repo (SSOT) | Macro Stage & Baseline | Coarse Delivery Progress | Commercial / Pilot Status | As Of |
 | --- | --- | --- | --- | --- | --- |
-| `OP-ITG-017` | [`https://github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (`origin/feat/hyperv-v2-rebased` @ `fcc7aa56`) → `docs/registers/Project-Status-Register.md` | Stage 10 (Execution & Verification) (`PMP-BL-v1.0.0`) | 4/6 Epics · 10/17 stories | Track B technical build active; commercial pilot status governed in upstream portfolio (`Idea`) | 2026-11-21 |
+| `OP-ITG-017` | [`https://github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (`origin/feat/hyperv-v2-rebased` @ `fcc7aa56`) → `docs/registers/Project-Status-Register.md` | Stage 10 (Execution & Verification) (`PMP-BL-v1.0.0`) | Phase 1 Complete (6/6 Epics · 17/17 stories) + Phase 2 Epics 007-009 Complete (271/271 tests + Win11 Lean Agent VM verified) | Track B technical build active; commercial pilot status governed in upstream portfolio (`Idea`) | 2026-11-21 |
 | `OP-ITG-013` *(Portal)* | [`https://github.com/mdresch/agent-governance-onboarding`](https://github.com/mdresch/agent-governance-onboarding) (`main` @ `c8ba282`) → `docs/registers/Project-Status-Register.md` | Stage 1 (Initiating — `sidpa-template` initialized; pre-Stage-8 prototype in `prototype/index.html`) | 0 epics (Initiating) | Standalone onboarding portal repo initialized; advisory outreach & Stage 2 hypotheses (`HYP-2027-013`–`015`) governed in `oppurtunities-2027` (`Idea`) | 2026-11-23 |
 
 ## 3. Pending Design-Time Baseline Feedback (`BFI-NNN`)
