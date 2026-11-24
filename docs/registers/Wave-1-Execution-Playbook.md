@@ -24,7 +24,7 @@ Parallel tracks within the capacity cap. **First `G4` authorization** can be eit
 
 | Step | Action | Artifact | Hypothesis |
 | --- | --- | --- | --- |
-| 1 | **Internal IP sprint (can start now)** | [RGP-23rd-to-3rd-Playbook-Internal.md](../../opportunities/OP-FIN-009_Continuous_Close/RGP-23rd-to-3rd-Playbook-Internal.md) + time log | `HYP-2027-007` **Testing** |
+| 1 | **Internal IP sprint (in progress — 3/15 hrs)** | [RGP-23rd-to-3rd-Playbook-Internal.md](../../opportunities/OP-FIN-009_Continuous_Close/RGP-23rd-to-3rd-Playbook-Internal.md), [Close-Calendar-Dependency-Gate-Blueprint-Internal.md](../../opportunities/OP-FIN-009_Continuous_Close/Close-Calendar-Dependency-Gate-Blueprint-Internal.md), [SoD-Official-KPI-Control-Matrix-Internal.md](../../opportunities/OP-FIN-009_Continuous_Close/SoD-Official-KPI-Control-Matrix-Internal.md) | `HYP-2027-007` **Testing** |
 | 2 | Confirm IFRS 18 pointers vs standard | [IFRS-18-Close-Relevance-Notes.md](../../opportunities/OP-FIN-009_Continuous_Close/IFRS-18-Close-Relevance-Notes.md) | Spark task |
 | 3 | **10 CFO/Controller** discovery calls | [Wave-1-Discovery-Evidence-Log.md](../../opportunities/OP-FIN-009_Continuous_Close/Wave-1-Discovery-Evidence-Log.md) | `HYP-2027-002` **Testing** |
 | 4 | Named client + charter sign-off | [Pilot-Charter.md](../../opportunities/OP-FIN-009_Continuous_Close/Pilot-Charter.md) | → `Pilot` |

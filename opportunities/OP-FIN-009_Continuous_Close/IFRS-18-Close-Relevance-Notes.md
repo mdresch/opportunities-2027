@@ -24,7 +24,8 @@ last_reviewed: "2026-11-24"
 
 1. **Provisional dashboards** during the 23rd–3rd window should be **watermarked** and must not be labeled as compliant subtotals until close controls sign off.
 2. **MPM governance:** any client “management KPI” promoted externally needs a documented bridge to IFRS 18 subtotals where material.
-3. **SoD matrix** should name who approves MPM definitions vs who posts GL close entries (overlap with inventory SoD language in one-pager).
+3. **SoD matrix** should name who approves MPM definitions vs who posts GL close entries — implemented in [SoD-Official-KPI-Control-Matrix-Internal.md](SoD-Official-KPI-Control-Matrix-Internal.md) (SoD-06, SoD-07).
+4. **Reporting tiers T0/T1/T2** in the SoD matrix align IFRS 18 subtotals with **T2 only**; operational KPIs in T0/T1 are explicitly non-statutory.
 
 ## Review log
 
