@@ -7,7 +7,7 @@ governance_policy: "none (orientation snapshot, not a governed approval artifact
 artifact_id: "portfolio-status-register"
 version: "1.0 (live — overwritten in place whenever orientation changes)"
 owner: "Menno Drescher (Director, CBa Consult)"
-last_updated: "2026-11-23"
+last_updated: "2026-11-24"
 ---
 
 # Portfolio Status Register — Opportunities 2027
@@ -27,7 +27,7 @@ last_updated: "2026-11-23"
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: Core 5 Tier A (`OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013`, `OP-ITG-018` MIP) + Q1 wedge `OP-OPS-001 → OP-CX-001` |
 | **Last Milestone Completed** | Narrowed Tier A from 13 → **5 Core Active Flagships** (2026-11-23 Director decision) + added `OP-ITG-019` (ADPA) & `OP-ITG-017` Track B rollup |
 | **Next Priority Unit of Work** | Complete Tier 2 deeper research & Tier 3 Pre-Pilot Gate for Q1 lead wedges (`OP-OPS-001 → OP-CX-001` and `OP-FIN-009`) and validate hypotheses in [Hypothesis-Register.md](Hypothesis-Register.md) |
-| **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `4/6 Epics · 10/17 stories` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
+| **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `Phase 1 Complete (6/6 Epics · 17/17 stories) + Phase 2 Epics 007-009 Complete (271/271 tests + Win11 Lean Agent VM verified)` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
 
 ## 2. Q1–Q4 2027 Priority Wave Status
 
@@ -44,7 +44,7 @@ last_updated: "2026-11-23"
 
 | Opportunity ID | Graduated Track B Repo (SSOT) | Macro Stage & Baseline | Coarse Delivery Progress | Commercial / Pilot Status | As Of |
 | --- | --- | --- | --- | --- | --- |
-| `OP-ITG-017` | [`https://github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (`origin/feat/hyperv-v2-rebased` @ `fcc7aa56`) → `docs/registers/Project-Status-Register.md` | Stage 10 (Execution & Verification) (`PMP-BL-v1.0.0`) | 4/6 Epics · 10/17 stories | Track B technical build active; commercial pilot status governed in upstream portfolio (`Idea`) | 2026-11-21 |
+| `OP-ITG-017` | [`https://github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (`origin/feat/hyperv-v2-rebased` @ `fcc7aa56`) → `docs/registers/Project-Status-Register.md` | Stage 10 (Execution & Verification) (`PMP-BL-v1.0.0`) | Phase 1 Complete (6/6 Epics · 17/17 stories) + Phase 2 Epics 007-009 Complete (271/271 tests + Win11 Lean Agent VM verified) | Track B technical build active; commercial pilot status governed in upstream portfolio (`Idea`) | 2026-11-21 |
 | `OP-ITG-013` *(Portal)* | [`https://github.com/mdresch/agent-governance-onboarding`](https://github.com/mdresch/agent-governance-onboarding) (`main` @ `c8ba282`) → `docs/registers/Project-Status-Register.md` | Stage 1 (Initiating — `sidpa-template` initialized; pre-Stage-8 prototype in `prototype/index.html`) | 0 epics (Initiating) | Standalone onboarding portal repo initialized; advisory outreach & Stage 2 hypotheses (`HYP-2027-013`–`015`) governed in `oppurtunities-2027` (`Idea`) | 2026-11-23 |
 
 ## 3. Pending Design-Time Baseline Feedback (`BFI-NNN`)
