@@ -40,11 +40,12 @@ An enterprise extension of Microsoft eXecution Container (MXC) (`feat/hyperv-v2-
 ## Market Validation & Source Notes
 
 - **Proprietary Built Asset:** `c:\Users\MennoDrescher\source\repos\mxc` (`feat/hyperv-v2-rebased`, first committed 15 Oct 2026; `Spark-Capture.md` 29 Oct 2026).
-- **Direct Synergy:** Bridges **ICT Governance (`OP-ITG-002`)**, **Enterprise AI Agent Governance (`OP-ITG-013`)**, **Cryptographic Sovereignty (`OP-ITG-015`)**, and **ADPA / SIDPA** execution into a tangible, demonstrable runtime moat that traditional Big Four advisory firms cannot match.
+- **Direct Synergy:** Bridges **ICT Governance (`OP-ITG-002`)**, **Enterprise AI Agent Governance (`OP-ITG-013`)**, **Cryptographic Sovereignty (`OP-ITG-015`)**, **Personal Branding (`OP-MKT-007`)**, and **ADPA / SIDPA** execution into a tangible, demonstrable runtime moat that traditional Big Four advisory firms cannot match.
+- **Commercial & Personal Branding Kit (`mdresch/mxc`):** [`docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md`](https://github.com/mdresch/mxc/blob/feat/hyperv-v2-rebased/docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md), `MXC-Product-One-Pager.pdf`, `MXC-Sales-Battlecard.md`, `MXC-Executive-Pitch-Narrative.md`, and `MXC-LinkedIn-and-Outreach-Kit.md` — cross-linked with [`OP-MKT-007`](../OP-MKT-007_Personal_Branding_Consultancy/Ideation-Spark.md) and [`mdresch/my-portfolio-menno`](https://github.com/mdresch/my-portfolio-menno) (`https://my-portfolio-menno.vercel.app/projects/mxc`).
 - **Note on ADR Hygiene:** Resolve `ADR-007` heading gap (currently embedded in `ADR-006 §5/§7`) and finalize `ADR-008` (identity-bound VM leasing) before enterprise client pilot handoff.
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Package a 1-page client-facing executive brief + live `<300ms` wake benchmark demo script from `EXECUTIVE_SUMMARY_AND_LINKEDIN.md` and `benchmark_jit_wake.py`.
+- [x] Package a 1-page client-facing executive brief (`MXC-Product-One-Pager.pdf`), sales battlecard, pitch narrative, LinkedIn kit, and live 5-Act demo script (`scripts/hyperv/demo_win11_agent_sandbox.ps1`), plus cross-link to `OP-MKT-007` and `my-portfolio-menno`.
 - [ ] Draft the commercial `Ideation-Document.md` mapping the 4-step monetization ladder (Assessment → Architecture Blueprint → Reference Implementation → Pool Governance Retainer).
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) and identify the first regulated-enterprise or sovereign-AI pilot sponsor.
