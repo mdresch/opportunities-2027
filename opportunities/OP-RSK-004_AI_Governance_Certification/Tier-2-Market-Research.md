@@ -9,7 +9,7 @@ owner: "Menno Drescher (Director, CBa Consult)"
 
 ## 1. Hard Regulatory Trigger: December 2, 2027 EU AI Act Annex III Deadline
 
-While **69% of professionals** already use AI at work, **91% of firms still lack a formal AI-use policy** — creating massive compliance exposure ahead of **December 2, 2027**, the hard **EU AI Act Annex III** enforcement deadline for standalone high-risk AI systems (HR/employment, creditworthiness, essential services, biometric/safety-critical workflows), carrying penalties up to **€35M or 7% of global turnover**.
+While **69% of professionals** already use AI at work, **91% of firms still lack a formal AI-use policy** — creating massive compliance exposure ahead of **December 2, 2027**, the hard **EU AI Act Annex III** enforcement deadline per **Regulation (EU) 2026/1744 (Digital Omnibus on AI, entered into force July 27, 2026, amending EU AI Act Art. 113)** for standalone high-risk AI systems (HR/employment, creditworthiness, essential services, biometric/safety-critical workflows), carrying penalties up to **€35M or 7% of global turnover**.
 
 ## 2. The "SOC 2 for AI" Unified Cross-Walk Advantage
 

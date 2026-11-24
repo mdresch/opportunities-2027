@@ -22,7 +22,7 @@ owner: "Menno Drescher (Director, CBa Consult)"
 | **Initial Cash Outlay** | **\$0** (existing CBa Consult `AI Purpose Clause.docx`, HR Responsible AI §8.2, and unified cross-walk templates) |
 | **Capacity Allocation** | **6–10 hrs/week** for **6–10 weeks** (within the 10–15 hrs/wk portfolio cap) |
 | **Fixed-Scope Pricing Anchor** | **€4,000–€12,000+** fixed-scope readiness assessment |
-| **Primary Client Outcome KPI** | Unified AI System Register + EU AI Act Annex III risk map + single "SOC 2 for AI" cross-walk matrix + registrar-ready evidence playbook ahead of **Dec 2, 2027** |
+| **Primary Client Outcome KPI** | Unified AI System Register + EU AI Act Annex III risk map + single "SOC 2 for AI" cross-walk matrix + registrar-ready evidence playbook ahead of **Dec 2, 2027** *(per Regulation (EU) 2026/1744, Digital Omnibus on AI amending EU AI Act Art. 113)* |
 | **Compounding Path** | Pairs seamlessly with **`OP-ITG-013`** (Agent Governance), **`OP-RSK-005`** (Evidence Assurance), and recurring **`OP-ITG-018`** (MIP Retainer) |
 
 ## 2. 10-Prospect CISO / CRO / Legal Discovery Tracker *(Empty Until Real Outreach)*
