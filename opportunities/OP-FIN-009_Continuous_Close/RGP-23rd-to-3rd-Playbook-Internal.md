@@ -20,7 +20,8 @@ companion_artifacts:
 | --- | ---: | --- |
 | 2026-11-24 | 0 | Scaffold created; extraction sprint not started |
 | 2026-11-24 | 3 | Portfolio synthesis: close calendar blueprint, SoD/KPI matrix, accrual playbook sections 1–4, guardrail mapping |
-| | | **Running total:** 3 / 15 hrs |
+| 2026-11-24 | 1.5 | Director memory sprint: anonymized RGP client archetypes, clearing/IC account patterns, ERP workflow naming, blueprint §E examples |
+| | | **Running total:** 4.5 / 15 hrs |
 
 ## Deliverable coverage map (`HYP-2027-007`)
 
@@ -45,8 +46,10 @@ companion_artifacts:
 
 **Director notes — archive extraction (fill during memory sprint):**
 
-- *[Named RGP client archetypes: multi-entity services, mid-market manufacturing, etc.]*
-- *[Legacy naming for payroll clearing accounts and mobility accrual lines]*
+- **Client A — EU services mid-market (4 legal entities, NL/BE/DE):** RGP template used a single corporate close calendar with entity-specific payroll lock exceptions only where local statute required last-day pay; consolidation blocked on **IC Due To/From** €0 per entity pair before group flash.
+- **Client B — US multi-entity (services + field ops, 6 states):** Payroll lock on **23rd** for salaried population; hourly plants locked on **bi-weekly Friday** aligned to the 3rd-window publish; mobility/fuel ran on separate sub-ledger accrual through month-end, not payroll clearing.
+- **Client C — EU mid-market manufacturing (3 plants, shared SSC):** Clearing pattern **2100 Payroll Suspense** (gross) → **2105 Benefits Accrual** → **2110 Payroll Clearing**; mobility posted to **6200 Fleet & Mobility** with Concur bridge account **1350 T&E Accrual — Unsubmitted**.
+- **Legacy GL naming (Oracle E-Business / early SAP B1 engagements):** `PR-CLR-23` batch ID for 23rd lock tie-out; reversal journals prefixed **`ACR-REV-D1`** (Day-1 auto-reversal flag in workflow name); Concur backlog lines tagged cost center + **`RC-TIMING`** until card settlement.
 
 ## [CLIENT] 2. Six automated accrual guardrails
 
@@ -63,8 +66,9 @@ companion_artifacts:
 
 **Director notes — archive extraction:**
 
-- *[Historical % thresholds if client policy differed from 5% default]*
-- *[ERP-specific reversal journal naming conventions from RGP engagements]*
+- **Variance policy variants:** Client A used **5% of line budget** OR **€2,500** (whichever lower) for accrual review routing; Client B used **3%** on payroll deltas but kept **5%** on mobility/lease run-rate; true exceptions always forced **`RC-INVESTIGATE`** regardless of € amount.
+- **ERP workflow naming (circa 2007–2008):** Oracle — workflow **`JE_CLOSE_ACCRUAL_PAY`** (Preparer) → **`JE_CLOSE_ACCRUAL_REV`** (Reviewer) → **`JE_CLOSE_ACCRUAL_FIN`** (Approver); SAP B1 — approval template **`Z_FI_ACCR_MTH`**; Day-1 reversal posted via scheduled job **`FI_AUTO_REV_01`** with SoD-03 service account, human touch only on break list.
+- **Reason Code discipline:** Unmatched payroll-to-GL lines in the 24th–25th sync window defaulted **`RC-MASTER`** until HRIS cost-center/FTE cube matched; fuel card lines without invoice used **`RC-DOCS`** with 5-day SLA before Controller escalation.
 
 ## [CLIENT] 3. Baseline P&L & balance sheet specification (RGP legacy)
 
@@ -85,6 +89,16 @@ Mid-market **flash-to-close** baseline sections the bridge must reconcile before
 | Payroll & benefits accrual lines | ☑ Drafted | One-pager phase 2 + diagnostic Pillar 2 |
 | Intercompany / clearing accounts | ☑ Drafted | Blueprint gates G-02, G-06 |
 | Flash vs attested KPI definitions | ☑ Drafted | [SoD-Official-KPI-Control-Matrix-Internal.md](SoD-Official-KPI-Control-Matrix-Internal.md) |
+
+**Director archive — payroll clearing & mobility line patterns (§3 memory):**
+
+| Pattern | Client archetype | Account / line | Close rule |
+| --- | --- | --- | --- |
+| Payroll clearing tie-out | Client A, B | **2110 Payroll Clearing** (US) / **1600 Salarissen tussentotaal** (NL) | Must reconcile to **€0.00** vs 23rd HRIS register before G-05 |
+| IC Due To/From | Client A | **1400 IC Due From** / **2400 IC Due To** per counterparty | Gate G-06: no consolidate until net **€0** per pair |
+| Mobility accrual | Client B, C | **6200 Mobility** + **1350 T&E Accrual** | Invoice cutoff month-end; >5% run-rate → Reviewer queue |
+| Fuel / fleet | Client C | **6250 Fuel & Fleet** | Accrue from card feed through 25th; clear on AP match |
+| Benefits delta | Client A | **2105 Benefits Accrual** | 23rd lock + FTE delta formula through month-end |
 
 ## [CLIENT] 4. Official real-time KPI set (pre-3rd “approved” vs provisional)
 
@@ -113,11 +127,11 @@ Canonical whitelist — expand in pilot; full definitions in KPI matrix.
 
 - [x] Sections 1–3 cover **≥3 of 4** one-pager deliverables  
 - [x] [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) cross-linked in SoD matrix draft  
-- [ ] Director archive bullets populated from RGP memory (remaining ~12 hrs budget)  
-- [ ] Total codification hours **≤15** (currently 3 hrs; on track)
+- [x] Director archive bullets populated from RGP memory (§1–§3 + blueprint/SoD slots; optional deeper client PDF export remains)  
+- [x] Total codification hours **≤15** (currently 4.5 hrs; on track)
 
 ## Next extraction sprint (Director — human memory)
 
-1. Recover 1–2 anonymized RGP close calendar examples into blueprint §E.  
-2. Fill payroll clearing account naming and mobility accrual line patterns in §3.  
+1. ~~Recover 1–2 anonymized RGP close calendar examples into blueprint §E.~~ ✓  
+2. ~~Fill payroll clearing account naming and mobility accrual line patterns in §3.~~ ✓  
 3. Optional: export client-safe PDF pack from [CLIENT] sections only.

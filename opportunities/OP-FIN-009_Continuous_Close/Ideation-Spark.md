@@ -46,7 +46,7 @@ Bridge the 23rd-payroll close (when real-time payroll data becomes available) to
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Write up the 2007–2008 RGP methodology — active sprint: [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) (`HYP-2027-007`, **3/15 hrs**; calendar + SoD matrix drafts complete; **Director archive bullets pending**).
+- [x] Write up the 2007–2008 RGP methodology — [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) (`HYP-2027-007`, **4.5/15 hrs**; calendar + SoD matrix + **Director archive slots populated**).
 - [ ] Confirm IFRS 18 against primary standard — [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (full read-through pending; control matrix cross-link done).
-- [ ] Identify 1 pilot-candidate client — log in [Wave-1-Discovery-Evidence-Log.md](Wave-1-Discovery-Evidence-Log.md) (`HYP-2027-002`).
+- [ ] Identify 1 pilot-candidate client — outreach ready: [Wave-1-Discovery-Outreach-Pack.md](Wave-1-Discovery-Outreach-Pack.md) + log in [Wave-1-Discovery-Evidence-Log.md](Wave-1-Discovery-Evidence-Log.md) (`HYP-2027-002`).
 - [x] Pre-pilot gate draft — [Pilot-Charter.md](Pilot-Charter.md); Director sign-off pending.

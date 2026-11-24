@@ -80,4 +80,28 @@ flowchart LR
 | ERP / HRIS / BI stack | |
 | Named gate owners G-01–G-07 | |
 
-**Director archive slot:** *[RGP 2007–2008 close calendar templates, client anonymized examples]*
+**Director archive — RGP close calendar templates (anonymized, 2007–2008)**
+
+**Example 1 — Client A (EU services mid-market, 4 entities)**
+
+| M window | Milestone | Gate | Notes |
+| --- | --- | --- | --- |
+| Days 1–22 | Daily AP/AR/bank match + Reason Codes | G-01, G-02 | Flash T0 allowed; no board metrics |
+| 23rd | Payroll lock (salaried NL/BE/DE) | G-03 | HRIS sign-off on register; mobility cutoff for payroll cycle |
+| 24th–25th | HRIS-to-GL cost-center / FTE sync | G-04 | Unmatched lines default `RC-MASTER` |
+| Last day M | Month-end accrual batch (mobility, Concur backlog) | G-05 | Workflow `JE_CLOSE_ACCRUAL_*` Preparer→Reviewer→Approver |
+| Days 1–3 M+1 | Exception queue + IC/FX pre-check | G-06 | **IC Due To/From** €0 per pair before consolidate |
+| After 3rd M+1 | Attested publish | G-07 | T2 KPIs only; target **5 business days → 2–3** in pilot |
+
+**Example 2 — Client B (US multi-entity services, 6 states)**
+
+| M window | Milestone | Gate | Notes |
+| --- | --- | --- | --- |
+| Days 1–22 | Transaction matching (incl. Concur card feed) | G-02 | `RC-TIMING` on expected settlements |
+| 23rd | Salaried payroll lock | G-03 | **2110 Payroll Clearing** must tie to register |
+| Bi-weekly Fri | Hourly / field payroll (if in 3rd window) | G-03 alt | Separate clearing sub-account, same €0 rule |
+| 24th–25th | Payroll-to-GL + benefits delta | G-04, G-05 | **3%** payroll variance review (client policy); **5%** elsewhere |
+| Last day M | Fleet/fuel accrual through **6250** | G-05 | Not mixed into payroll clearing |
+| BD 1–3 M+1 | Exception-only close | G-07 | Controller queue for `RC-INVESTIGATE` only |
+
+**Workshop defaults carried from RGP templates:** payroll lock **23rd** unless statutory exception documented; publication anchor **business days 1–3 after the 3rd**; hard block consolidate until G-01–G-06 green.

@@ -71,4 +71,14 @@ cross_reference: "IFRS-18-Close-Relevance-Notes.md, Continuous-Close-Diagnostic-
 - [ ] IFRS 18 MPM / subtotal mapping row added or N/A documented (US GAAP-only client)
 - [ ] BI watermarks T0/T1 applied on all intra-month dashboards
 
-**Director archive slot:** *[RGP-era SoD examples or role naming conventions from 2007–2008 engagement templates]*
+**Director archive slot — RGP-era SoD & role naming (2007–2008, anonymized)**
+
+| Engagement pattern | ERP | Role label (client-facing) | Mapped control | RGP convention |
+| --- | --- | --- | --- | --- |
+| Client A — EU services | Oracle E-Business | **GL Accountant** / **Regional Controller** / **Group FC** | SoD-01 / SoD-02 / SoD-07 | Rule author = **Finance Systems Analyst**; never approver on SoD-04 |
+| Client B — US multi-entity | SAP Business One + HRIS bridge | **Staff Accountant** / **Accounting Manager** / **CFO** | SoD-01 / SoD-02 / SoD-05 | Period unlock ticket required CFO; logged outside ERP |
+| Client C — manufacturing SSC | Oracle + shared service center | **SSC Preparer** / **Entity Reviewer** / **Plant Controller** | SoD-02 / SoD-03 | Day-1 reversal = **`FI_AUTO_REV_01`** service account (SoD-03) |
+| All templates | Any | **Payroll Specialist** | SoD-02 Preparer | Cannot approve own 23rd accrual batch |
+| All templates | Any | **Reporting Analyst** | SoD-07 Preparer | BI publish blocked until T2 snapshot token issued by Controller |
+
+**KPI attestation habits (archive):** Client A treated **KPI-03** (23rd locked payroll) as the only T1 metric safe for leadership email before the 3rd; Client B whitelisted **KPI-01** cleared cash at T1 after treasury sign-off; never promoted **KPI-04** committed POs past T0 in board materials.
