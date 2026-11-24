@@ -7,7 +7,7 @@ governance_policy: "none (orientation snapshot, not a governed approval artifact
 artifact_id: "portfolio-status-register"
 version: "1.0 (live — overwritten in place whenever orientation changes)"
 owner: "Menno Drescher (Director, CBa Consult)"
-last_updated: "2026-11-23"
+last_updated: "2026-11-24"
 ---
 
 # Portfolio Status Register — Opportunities 2027
@@ -22,19 +22,19 @@ last_updated: "2026-11-23"
 | --- | --- |
 | **Current Portfolio Phase** | Pre-Pilot Packaging & Q1 2027 Readiness (Tailored SIDPA Stages 1–2) |
 | **Active Capacity Cap** | 10–15 hrs/week · \$0 initial working capital |
-| **Portfolio Coverage** | **122 / 122** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): **5 Core Active Tier A**, 15 Tier B *(7 Growth + 8 Deferred/Pull-Only former Tier A)*, 41 Tier C, 3 Tier D, 53 Active Backlog *(incl. `OP-FIN-012`, `OP-ITG-019` ADPA, & `OP-ITG-020` agent-learning TaskPolicy)*, 5 Parked |
-| **Active Pilots (`Status = Pilot`)** | **0** (all 122 items remain `Idea` or `Parked`; no commercial delivery work started yet) |
+| **Portfolio Coverage** | **131 / 131** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): **5 Core Active Tier A**, 15 Tier B *(7 Growth + 8 Deferred/Pull-Only former Tier A)*, 41 Tier C, 3 Tier D, 62 Active Backlog *(incl. built-asset Sparks: SocialEngage, RPAS, n8n, iq-series, Obsidian vaults, ai-bot, portfolio site, liquidity simulator, enterprise-work-hierarchy)*, 5 Parked |
+| **Active Pilots (`Status = Pilot`)** | **0** (all 131 items remain `Idea` or `Parked`; no commercial delivery work started yet) |
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: Core 5 Tier A (`OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013`, `OP-ITG-018` MIP) + Q1 wedge `OP-OPS-001 → OP-CX-001` |
-| **Last Milestone Completed** | Narrowed Tier A from 13 → **5 Core Active Flagships** (2026-11-23 Director decision) + added `OP-ITG-019` (ADPA), `OP-ITG-020` (agent-learning), & `OP-ITG-017` Track B rollup |
-| **Next Priority Unit of Work** | Complete Tier 2 deeper research & Tier 3 Pre-Pilot Gate for Q1 lead wedges (`OP-OPS-001 → OP-CX-001` and `OP-FIN-009`) and validate hypotheses in [Hypothesis-Register.md](Hypothesis-Register.md) |
+| **Last Milestone Completed** | Added **9 built-asset opportunities** (`OP-MKT-013`/`014`, `OP-DTX-006`–`008`, `OP-ORG-002`, `OP-FIN-013`, `OP-ITG-021`/`022`) mapping `mdresch/*` repos (2026-11-24) |
+| **Next Priority Unit of Work** | **Execute Wave 1 tests:** 15 founder outreach (`HYP-2027-001`) + 10 CFO discovery (`HYP-2027-002`) + ≤15 hr RGP playbook sprint (`HYP-2027-007`); record **first `G4` Director sign-off** when sponsor or hypothesis threshold met — [Wave-1-Execution-Playbook.md](Wave-1-Execution-Playbook.md) |
 | **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `4/6 Epics · 10/17 stories` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
 
 ## 2. Q1–Q4 2027 Priority Wave Status
 
 | Wave | Target Window | Lead Opportunity ID(s) | Current SIDPA Stage | Next Gate | Engagement Track |
 | --- | --- | --- | --- | --- | --- |
-| **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 2 (Hypotheses `HYP-2027-001`, `005`, `006` formulated) | Execute Q1 outreach (`HYP-2027-001` → `Testing`) → Stage 3–4 Pre-Pilot Gate | Lightweight Advisory (Track A) |
-| **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 2 (Hypotheses `HYP-2027-002`, `007`, `008`, `009` formulated) | Run internal RGP IP sprint (`HYP-2027-007`) + Q1 CFO outreach (`HYP-2027-002`) → Stage 3–4 Gate | Lightweight Advisory (Track A) |
+| **Wave 1 (Fastest Proof)** | Q1 2027 | `OP-OPS-001 → OP-CX-001` | Stage 2–3 (`HYP-2027-001` **Testing**; [Pilot-Charter](../../opportunities/OP-OPS-001_Quote_to_delivery_handoff_map/Pilot-Charter.md) draft) | **15 outreach conversations** → paid pilot or sponsor → **`G4` sign-off** | Lightweight Advisory (Track A) |
+| **Wave 1 (Financial Truth)** | Q1 2027 | `OP-FIN-009` | Stage 2–3 (`HYP-2027-002`, `007` **Testing**; [Pilot-Charter](../../opportunities/OP-FIN-009_Continuous_Close/Pilot-Charter.md) draft) | **RGP playbook ≤15 hrs** + **10 CFO interviews** → named client → **`G4` sign-off** | Lightweight Advisory (Track A) |
 | **Wave 2 (AI & Compliance)** | Q2 2027 | `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013` | Stage 1a (Sparks + One-Pagers) | Tier 2 Research → Stage 3–4 Pre-Pilot Gate | Hybrid / Platform-Backed |
 | **Wave 3 (Scale & Retainer)** | Q2–Q4 2027 | `OP-ITG-017`, `OP-ITG-018` (MIP), `OP-FIN-010`, `OP-ITG-015`, `OP-STR-004`/`005`, `OP-ITG-016` | `OP-ITG-017` Track B Stage 10 (see §2b); others Stage 1a | Deferred until Wave 1–2 pilot signal (`OP-ITG-017` awaiting Phase 1 completion / commercial pilot) | Platform-Backed / Retainer |
 
