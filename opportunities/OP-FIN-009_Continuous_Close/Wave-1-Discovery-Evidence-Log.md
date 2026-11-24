@@ -12,7 +12,7 @@ owner: "Menno Drescher"
 > **Success:** ≥2 request a scoped pilot proposal citing the **$0-software** bridge.  
 > **Falsification:** Buyers consistently prefer bundled ERP/FCCS partners across ≥10 conversations.
 
-**One-pager:** [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md)
+**One-pager:** [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md) · **Outreach & 25-Min Call Script (incl. paired `OP-FIN-012` check):** [CFO-Controller-Outreach-and-Discovery-Script.md](CFO-Controller-Outreach-and-Discovery-Script.md)
 
 ## Tally
 
