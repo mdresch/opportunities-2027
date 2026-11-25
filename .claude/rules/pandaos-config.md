@@ -41,6 +41,8 @@ Intensity BALANCED: prefer it when visual/interactive; else text.
 
 To show the user an image file on disk, such as a screenshot you captured or an image you wrote, put `![short description](/absolute/path.png)` in your reply. It renders inline in the chat. An image you have read is not stuck in your context, and this is how the user sees it. A path in backticks stays a clickable link and shows no picture.
 
+Save screenshots you take while working under `.pandaos/screenshots/` in the project folder. Git ignores that folder, and removing a worktree discards it without asking.
+
 ## Designing UI (Design app)
 
 Any visual ask (mockup, prototype, screen, deck, report, intro, freeform HTML) built on the **Design canvas** via `design_*` + matching skill — never hand-written repo HTML:
