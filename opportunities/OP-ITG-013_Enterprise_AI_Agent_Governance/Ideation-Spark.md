@@ -51,3 +51,6 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 - [x] Draft the standalone **8-Pillar Agent Inventory & Governance Assessment Questionnaire / Maturity Scorecard** (`HYP-2027-015`) *(completed 2026-11-23: [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md))*.
 - [x] Complete the **Pre-Pilot Gate (`G4`) Charter** *(completed 2026-11-23 in draft pending portal intake & Director sign-off: [Pilot-Charter.md](Pilot-Charter.md))*.
 - [ ] Capture and interview **10 CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) via the standalone **`mdresch/agent-governance-onboarding`** web portal (self-assessment submissions → 30-min briefing → Pilot #1 sponsor sign-off).
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

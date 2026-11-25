@@ -4,6 +4,8 @@ One folder per opportunity across the full 2027 portfolio — **Tier A Core Acti
 
 The authoritative status, effort, and capital figures for every idea — including all 122 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
+**Local Business Development library:** [BD-Business-Development-Sources.md](../docs/crosswalk/BD-Business-Development-Sources.md) — per-opportunity stubs [`BD-Quick-Reference.md`](OP-FIN-009_Continuous_Close/BD-Quick-Reference.md) where mapped (regenerate: `py -3 scripts/sync-bd-quick-references.py`).
+
 ## Tier A — Core Active Flagships (5)
 
 | Folder | ID | Strategic Asset | Flagship Offering |

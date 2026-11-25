@@ -49,3 +49,6 @@ Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security �
 - [ ] Confirm current Dutch Wtp Jan 2028 deadline details from a primary source before quoting it to a client.
 - [ ] Sequence behind a completed `OP-FIN-009` pilot — do not start this cold.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

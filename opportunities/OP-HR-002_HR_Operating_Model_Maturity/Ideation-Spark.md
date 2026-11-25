@@ -49,3 +49,6 @@ Score HR across 6 dimensions (service delivery, data/analytics, skills/talent, t
 - [ ] Identify which of the 6 dimensions need the most interview time vs. which can run on existing HRIS data.
 - [ ] Confirm the ADP 2027 compliance claim with a current source before citing it to a client.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

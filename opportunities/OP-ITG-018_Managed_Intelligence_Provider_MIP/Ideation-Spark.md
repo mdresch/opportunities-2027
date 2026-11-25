@@ -48,3 +48,6 @@ An MIP takes ongoing operational and governance accountability for the five pill
 - [ ] Finalize the 3-tier MIP Service Catalog (**MIP Essentials** €2,500/mo · **MIP Core** €5,500/mo · **MIP Enterprise / Fractional CAIO** €10,000–€12,000+/mo) with explicit MSP/MSSP RACI boundaries.
 - [ ] Attach a "Graduate to MIP Retainer" option to every Q1–Q2 2027 Tier A pilot proposal (`OP-ITG-013`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-017`).
 - [ ] Publish a flagship LinkedIn / executive whitepaper introducing the **MSP → MSSP → MIP** category shift.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

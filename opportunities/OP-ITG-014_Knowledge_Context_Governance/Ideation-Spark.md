@@ -50,3 +50,6 @@ Assess SharePoint, Teams, M365, and Confluence for RAG readiness, taxonomy matur
 - [ ] Draft a lightweight RAG-readiness/taxonomy-maturity scoring rubric as a standalone deliverable template.
 - [ ] Identify one CIO/CDO-reachable pilot candidate, ideally bundled with `OP-ITG-013` as a combined Phase 0 wedge.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

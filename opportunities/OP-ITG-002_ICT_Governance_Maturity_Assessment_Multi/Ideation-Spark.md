@@ -39,3 +39,6 @@ Assess IT governance against COBIT 2019, ITIL 4, ISO/IEC 38500, and NIST CSF 2.0
 - [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
