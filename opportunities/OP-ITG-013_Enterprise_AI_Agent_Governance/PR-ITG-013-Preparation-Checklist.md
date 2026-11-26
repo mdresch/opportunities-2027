@@ -27,7 +27,7 @@ Repo: [`mdresch/agent-governance-onboarding`](https://github.com/mdresch/agent-g
 | --- | --- | --- | --- |
 | P2.1 | Execute [Wave-0-Outreach-Playbook.md](Wave-0-Outreach-Playbook.md) (invite copy + LinkedIn Post 1) | Director | [ ] |
 | P2.2 | Update rows #1–3 in [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md) (`Invite status` → Sent / Replied) | Director | [ ] |
-| P2.3 | Mirror portal metrics into [Pilot-Charter.md](Pilot-Charter.md) §2 when submissions arrive | Director | [ ] |
+| P2.3 | Mirror **briefing** outcomes into [Pilot-Charter.md](Pilot-Charter.md) §2 (no server-stored answers — [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md)) | Director | [ ] |
 | P2.4 | Set `HYP-2027-013` → **`Testing`** in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) when first invite **sent** (not when validated) | Director | [ ] |
 | P2.5 | Set `HYP-2027-014` → **`Testing`** when first **30-min readout** is booked | Director | [ ] |
 
@@ -67,7 +67,7 @@ Repo: [`mdresch/agent-governance-onboarding`](https://github.com/mdresch/agent-g
 
 Request Director **G4** review when **all** are true:
 
-1. Live portal URL recorded and ≥1 non-test submission logged.  
+1. Live diagnostic URL recorded and ≥1 non-test **briefing** logged (answers stay client-side).  
 2. ≥3 qualified prospects invited (#1–3 minimum); ≥1 completed portal or booked briefing.  
 3. Named **Pilot #1 sponsor** (LOA or Tier 1 PO path documented in CRM).  
 4. [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) §E gates met.

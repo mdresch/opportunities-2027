@@ -49,3 +49,9 @@ Design Split-Clock retention architectures (NL *Belastingdienst* 7/10-yr + *actu
 - [ ] Package the §3–4 retention rules from `inventory-of-ideas.md` into a standalone **Split-Clock Retention & WORM Decommission Checklist** (NL/UK/US).
 - [ ] Create a 1-page **12-Year SaaS/Concur License-Savings ROI Calculator** (reusing `OP-X-002`) to make the CFO business case self-funding.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

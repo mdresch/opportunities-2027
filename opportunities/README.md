@@ -2,7 +2,7 @@
 
 One folder per opportunity across the full 2027 portfolio — **Tier A Core Active Flagships** (5), **Tier B Growth & Deferred Flagships** (15), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (53), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
 
-The authoritative status, effort, and capital figures for every idea — including all 122 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
+The authoritative status, effort, and capital figures for every idea — including all 127 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
 **Local Business Development library:** [BD-Business-Development-Sources.md](../docs/crosswalk/BD-Business-Development-Sources.md) — per-opportunity stubs [`BD-Quick-Reference.md`](OP-FIN-009_Continuous_Close/BD-Quick-Reference.md) where mapped (regenerate: `py -3 scripts/sync-bd-quick-references.py`).
 
@@ -114,6 +114,11 @@ Portfolio-wide assignment index: [Source-Document-Assignment-Register.md](../doc
 | [OP-HR-006_AR_VR_Training_Scene_Builder](OP-HR-006_AR_VR_Training_Scene_Builder/Ideation-Spark.md) | `OP-HR-006` | 2. Human Resources | AR/VR Training Scene Builder |
 | [OP-HR-007_Corporate_Micro_Training_Creator](OP-HR-007_Corporate_Micro_Training_Creator/Ideation-Spark.md) | `OP-HR-007` | 2. Human Resources | Corporate Micro Training Creator |
 | [OP-HR-008_Remote_Onboarding_and_IT_Setup](OP-HR-008_Remote_Onboarding_and_IT_Setup/Ideation-Spark.md) | `OP-HR-008` | 2. Human Resources | Remote Onboarding and IT Setup Service |
+| [OP-HR-011_HR_AI_FinOps_Capacity_Governance](OP-HR-011_HR_AI_FinOps_Capacity_Governance/Ideation-Spark.md) | `OP-HR-011` | 2. Human Resources | HR AI FinOps & capacity governance |
+| [OP-HR-012_Workforce_Listening_Qualitative_Analytics](OP-HR-012_Workforce_Listening_Qualitative_Analytics/Ideation-Spark.md) | `OP-HR-012` | 2. Human Resources | Workforce listening & qualitative theme analytics |
+| [OP-HR-013_HR_ESS_Tier1_Agent_Governance](OP-HR-013_HR_ESS_Tier1_Agent_Governance/Ideation-Spark.md) | `OP-HR-013` | 2. Human Resources | HR ESS / tier-1 agent governance pack |
+| [OP-HR-014_HR_Workflow_Redesign_Sprint](OP-HR-014_HR_Workflow_Redesign_Sprint/Ideation-Spark.md) | `OP-HR-014` | 2. Human Resources | HR workflow redesign sprint (90-day CHRO playbook) |
+| [OP-HR-015_Manager_AI_Enablement](OP-HR-015_Manager_AI_Enablement/Ideation-Spark.md) | `OP-HR-015` | 2. Human Resources | Manager AI enablement for performance & coaching |
 | [OP-LEG-002_Contract_lifecycle_compliance_framework_rollout](OP-LEG-002_Contract_lifecycle_compliance_framework_rollout/Ideation-Spark.md) | `OP-LEG-002` | 3. Legal and Regulatory | Contract lifecycle & compliance framework rollout |
 | [OP-LEG-005_Regulatory_Navigator](OP-LEG-005_Regulatory_Navigator/Ideation-Spark.md) | `OP-LEG-005` | 3. Legal and Regulatory | Regulatory Navigator |
 | [OP-ITG-002_ICT_Governance_Maturity_Assessment_Multi](OP-ITG-002_ICT_Governance_Maturity_Assessment_Multi/Ideation-Spark.md) | `OP-ITG-002` | 6. IT and Technology | ICT Governance Maturity Assessment & Multi-Cloud Compliance Audit |

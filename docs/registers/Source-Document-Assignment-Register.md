@@ -3,8 +3,8 @@
 **Last run:** 2026-11-26
 **ADPA root:** `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists`
 **Total .docx scanned:** 279
-**Assigned:** 275 · **Unassigned:** 4
-**Opportunities with ≥1 assigned doc:** 78 / 122
+**Assigned:** 278 · **Unassigned:** 1
+**Opportunities with ≥1 assigned doc:** 79 / 129
 
 Regenerate: `python scripts/assign_adpa_source_documents.py`
 
@@ -47,6 +47,11 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 | `OP-HR-008` | 1 | Remote Onboarding and IT Setup Service.docx | Remote Onboarding and IT Setup Service.docx |
 | `OP-HR-009` | 0 | — | — |
 | `OP-HR-010` | 0 | — | — |
+| `OP-HR-011` | 0 | — | — |
+| `OP-HR-012` | 0 | — | — |
+| `OP-HR-013` | 0 | — | — |
+| `OP-HR-014` | 0 | — | — |
+| `OP-HR-015` | 0 | — | — |
 | `OP-ING-001` | 2 | Opportunities zero working capital.docx | Opportunities zero working capital.docx |
 | `OP-ING-002` | 1 | Digital Asset Licensing for AI Training.docx | Digital Asset Licensing for AI Training.docx |
 | `OP-ING-003` | 1 | Prompt Marketplace Curator.docx | Prompt Marketplace Curator.docx |
@@ -69,11 +74,12 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 | `OP-ITG-013` | 39 | Ideation_Document_4c04f981.docx | Business_Case_32495a5f.docx |
 | `OP-ITG-014` | 10 | Build a Trusted AI Ready Data Supply.docx | Build a Trusted AI Ready Data Supply.docx |
 | `OP-ITG-015` | 0 | — | — |
-| `OP-ITG-016` | 6 | Ideation Document Defence SOC architecture.docx | EARN - Refernece Architecture.docx |
+| `OP-ITG-016` | 8 | EARN - Refernece Architecture.docx | EARN - Refernece Architecture.docx |
 | `OP-ITG-017` | 0 | — | — |
 | `OP-ITG-018` | 2 | ADPA Playbook.docx | ADPA Playbook.docx |
 | `OP-ITG-019` | 29 | ADPA - Project Charter.docx | ADPA Business Case.docx |
 | `OP-ITG-020` | 1 | Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx | Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx |
+| `OP-ITG-023` | 1 | Drone Spectrum Analysis IoT Devices.docx | Drone Spectrum Analysis IoT Devices.docx |
 | `OP-LEG-001` | 1 | AI Purpose Clause.docx | AI Purpose Clause.docx |
 | `OP-LEG-002` | 1 | Document_Content_Management_Plan_Template_Lifecycle_Spec.docx | Document_Content_Management_Plan_Template_Lifecycle_Spec.docx |
 | `OP-LEG-003` | 0 | — | — |
@@ -109,6 +115,7 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 | `OP-RSK-007` | 0 | — | — |
 | `OP-SCM-001` | 0 | — | — |
 | `OP-SCM-002` | 1 | Green Supply Chain Consulting.docx | Green Supply Chain Consulting.docx |
+| `OP-SCM-003` | 0 | — | — |
 | `OP-SLS-001` | 0 | — | — |
 | `OP-SLS-002` | 0 | — | — |
 | `OP-SLS-003` | 0 | — | — |
@@ -137,9 +144,6 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 
 ## Unassigned documents
 
-- `Drone Spectrum Analysis IoT devices/Drone Spectrum Analysis IoT Devices.docx`
-- `European Aviation Resilience Network/EARN DIANA Capabiltiy Brief.docx`
-- `European Aviation Resilience Network/European Aviation Resilience Network EARN.docx`
 - `opportunities no working capital 2026.docx`
 
 ## Assignment JSON (machine-readable)
@@ -414,12 +418,14 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
     "Metadata_Management_Plan_Template_Lifecycle_Spec.docx"
   ],
   "OP-ITG-016": [
+    "European Aviation Resilience Network/EARN - Refernece Architecture.docx",
+    "European Aviation Resilience Network/EARN DIANA Capabiltiy Brief.docx",
+    "European Aviation Resilience Network/European Aviation Resilience Network EARN.docx",
     "Defense 24-7 SOCs Architecture/Ideation Document Defence SOC architecture.docx",
     "Defense 24-7 SOCs Architecture/The Defence Enterprise Reference Architecture (DERA).docx",
     "Defense 24-7 SOCs Architecture/The Spark Capture - ADPA - Defence 24-7 SOC architecture.docx",
     "Defense 24-7 SOCs Architecture/The Spark Capture - Defense 24-7 SOCs Architecture OpenAI.docx",
-    "Defense 24-7 SOCs Architecture/The Spark Capture - Defense 24-7 SOCs Architecture.docx",
-    "European Aviation Resilience Network/EARN - Refernece Architecture.docx"
+    "Defense 24-7 SOCs Architecture/The Spark Capture - Defense 24-7 SOCs Architecture.docx"
   ],
   "OP-ITG-018": [
     "ADPA Playbook.docx",
@@ -458,6 +464,9 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
   ],
   "OP-ITG-020": [
     "Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx"
+  ],
+  "OP-ITG-023": [
+    "Drone Spectrum Analysis IoT devices/Drone Spectrum Analysis IoT Devices.docx"
   ],
   "OP-LEG-001": [
     "AI Purpose Clause.docx"

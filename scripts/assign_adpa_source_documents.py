@@ -40,6 +40,8 @@ FOLDER_PRIMARY: dict[str, str] = {
     "Priorities Explored 2026/Security": "OP-RSK-006",
     "ADPA AI Driven Risk Management": "OP-RSK-001",
     "ADPA ICT Governance Framework": "OP-ITG-002",
+    "European Aviation Resilience Network": "OP-ITG-016",
+    "Drone Spectrum Analysis IoT devices": "OP-ITG-023",
 }
 
 # Additional OPs that receive a full folder manifest without changing primary ownership above.
@@ -75,6 +77,9 @@ FILENAME_PRIMARY: list[tuple[str, str]] = [
     ("Growth and possible opportunities 2026", "OP-X-001"),
     ("opportunities 2026", "OP-X-001"),
 ]
+
+# Portfolio/meta sources — leave unassigned (governance narrative, not an OP workspace)
+IGNORE_ADPA_BASENAMES = frozenset({"opportunities no working capital 2026.docx"})
 
 # Generic ADPA platform docs → platform evolution opportunity
 ADPA_PLATFORM_PREFIXES = (
@@ -312,7 +317,7 @@ def main() -> None:
 
     # Pass 2: folder rules
     for p in all_docx:
-        if p in primary:
+        if p in primary or p.name in IGNORE_ADPA_BASENAMES:
             continue
         rel = normalize_rel(p)
         op = folder_primary_assignment(rel)
@@ -321,7 +326,7 @@ def main() -> None:
 
     # Pass 3: filename rules
     for p in all_docx:
-        if p in primary:
+        if p in primary or p.name in IGNORE_ADPA_BASENAMES:
             continue
         op = filename_primary_assignment(p.name)
         if op:
@@ -338,6 +343,9 @@ def main() -> None:
     unassigned: list[Path] = []
     for p in all_docx:
         if p in primary:
+            continue
+        if p.name in IGNORE_ADPA_BASENAMES:
+            unassigned.append(p)
             continue
         rel = normalize_rel(p).lower()
         parent = rel.rsplit("/", 1)[0] if "/" in rel else ""

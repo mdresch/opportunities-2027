@@ -20,14 +20,13 @@ Implement in the **portal repo**; keep this file as the cross-reference for `OP-
 
 ---
 
-## Wave 1 — delegation MVP *(after first 3 submissions or sponsor demand)*
+## Wave 1 — delegation MVP *(withdrawn from public host — 2026-11-26)*
 
-| ID | Story | Acceptance |
+**Director decision:** Personalization and CxO “forward to delegate” require **retaining company information** on CBa systems and **CxO approval** for processing. Not in scope for [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md) public diagnostic.
+
+| ID | Story | Disposition |
 | --- | --- | --- |
-| PO-010 | Load ownership JSON by question id | Contributor queue filter |
-| PO-011 | Sponsor invites by email (manual list OK) | ≥6 default roles from delegation matrix |
-| PO-012 | Dashboard: % complete by function/pillar | Spec KPIs |
-| PO-013 | Release export at ≥80% or sponsor override | Audit event in export |
+| PO-010–PO-013 | Delegation dashboard & invites | **Deferred** → client tenant or `OP-SCM-003` PRMAP only, with DPA |
 
 ---
 

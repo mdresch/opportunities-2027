@@ -1,9 +1,11 @@
 # Assessment delegation & ownership — `OP-ITG-013`
 
+> **Public intake:** Delegation is **not** implemented on the Portfolio Explorer diagnostic — CBa does not store forwarded questions or org data on public intake ([Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md)). This matrix applies to **paid Tier 1/2 workshops** and future **client-tenant** portals (`OP-SCM-003`).
+
 **Audience:** CEO, CFO, CIO, CISO, CAIO — and the specialists they delegate to.  
 **Instrument:** [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md) (40 questions + P0 triage).  
-**Machine-readable roster:** [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json) (import into client portal).  
-**Portal behavior:** [Portal-Delegation-Dashboard-Spec.md](Portal-Delegation-Dashboard-Spec.md).
+**Machine-readable roster:** [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json) (workshop / client-tenant import).  
+**Future portal behavior (client-hosted):** [Portal-Delegation-Dashboard-Spec.md](Portal-Delegation-Dashboard-Spec.md).
 
 ---
 

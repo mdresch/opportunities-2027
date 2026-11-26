@@ -48,13 +48,7 @@ Follows ADP's "reactive → proactive, AI-assisted compliance" 2027 trend.
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [x] Assigned ADPA sources extracted to `Ideation-Document.md` / `Business-Case.md` (Tier 2 draft — Director review still required).
+- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
 

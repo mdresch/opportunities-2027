@@ -52,9 +52,3 @@ Positioning workshop + lean CRM/email setup so marketing activity is trackable f
 - [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
 
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-

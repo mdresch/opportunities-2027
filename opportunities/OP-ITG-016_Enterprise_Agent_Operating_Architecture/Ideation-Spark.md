@@ -50,3 +50,9 @@ Design how 500+ enterprise AI agents interact at scale: agent orchestration, age
 - [ ] Track MCP/A2A standard developments through 2027 so the architecture design doesn't lock in to a standard that gets superseded.
 - [ ] Sketch the COBIT-for-Agents control-domain mapping as a first internal working draft, independent of any specific client.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

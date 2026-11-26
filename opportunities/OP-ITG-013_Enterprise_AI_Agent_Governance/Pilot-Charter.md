@@ -33,11 +33,11 @@ owner: "Menno Drescher (Director, CBa Consult)"
 
 ## 2. Inbound Prospect Acquisition Mechanism (Web Portal Funnel)
 
-Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery prospects** (`HYP-2027-013`, `HYP-2027-014`) will be identified, qualified, and captured through the dedicated **`mdresch/agent-governance-onboarding`** web portal:
+Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery prospects** (`HYP-2027-013`, `HYP-2027-014`) will be identified and qualified through the **Portfolio Explorer** public diagnostic ([Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md)) — **browser-local, no CBa server retention** of company answers:
 
-1. **Distribution Channel:** LinkedIn thought-leadership posts (paired with [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx) and the Accounting/AI Pricing Executive Brief) + direct CIO/CISO invites to run the self-assessment portal.
-2. **Self-Assessment Capture:** Prospects complete the 8-pillar / 40-control self-assessment + Top-10 P0 Red-Flag Triage in `agent-governance-onboarding`. **Executives delegate** by function (CFO → Controller, CISO → IAM/SOC, etc.) per [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md); the portal dashboard tracks completion before export (`.md`/`.json`/PDF) to book a 30-minute Executive Briefing.
-3. **Qualification Target (`HYP-2027-013` / `HYP-2027-014`):** Capture **10 qualified mid-market CIO/CISO prospects** (250–2,500+ seats) via portal intake → validate ≥5 with unmanaged agent/credential sprawl → convert ≥1 paid Tier 1 Triage (`€2,500–€5,000`) or Tier 2 Assessment (`€6,000–€18,000+`).
+1. **Distribution Channel:** LinkedIn thought-leadership posts (paired with [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx) and the Accounting/AI Pricing Executive Brief) + direct CIO/CISO invites to [https://oppurtunities-2027.ai.studio/](https://oppurtunities-2027.ai.studio/) (`OP-ITG-013` interactive diagnostic).
+2. **Self-Assessment (non-retentive):** Prospects complete P0 triage and 8-pillar / 40-control questions **in the browser**; export PDF/JSON **to their own device** if they wish. **Brief requests** may write **contact + scoping fields only** to **Firestore** — **not** the full assessment ([data/brief-request-firestore-schema.json](data/brief-request-firestore-schema.json)). **No** personalization, delegate forwarding, or per-control storage without a signed engagement. Paid Tier 1/2 uses [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md) as a **facilitated workshop** pattern, not a public portal feature.
+3. **Qualification Target (`HYP-2027-013` / `HYP-2027-014`):** **10 qualified** mid-market CIO/CISO prospects (250–2,500+ seats) via **briefing bookings** (and CRM notes from exports they choose to share) → validate ≥5 with unmanaged agent/credential sprawl → convert ≥1 paid Tier 1 Triage (`€2,500–€5,000`) or Tier 2 Assessment (`€6,000–€18,000+`).
 
 ### 10-Prospect Portal Intake & Discovery Tracker
 
@@ -60,8 +60,9 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
 
 | Field | Value |
 | --- | --- |
-| **Hosting** | *TBD — see [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) §B* |
-| **Public URL** | *Record in [data/portal-deploy-status.json](data/portal-deploy-status.json) when deployed* |
+| **Hosting** | Google AI Studio / Portfolio Explorer publish — see [data/portal-deploy-status.json](data/portal-deploy-status.json) |
+| **Public URL** | `https://oppurtunities-2027.ai.studio/` |
+| **Intake model** | [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md) — **no server-side answer retention** |
 | **Booking URL** | *Completion-screen CTA — same JSON file* |
 | **Prep checklist** | [PR-ITG-013-Preparation-Checklist.md](PR-ITG-013-Preparation-Checklist.md) |
 
@@ -79,6 +80,7 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
   2. **No L1 IT / MSP tenant administration** (client IT/MSP owns production configuration changes).
   3. **No 24/7 SOC / MSSP incident containment** (client MSSP owns live security operations).
   4. **No accredited ISO/IEC 42001 certification or statutory audit opinion** (CBa Consult delivers 100% conflict-free pre-assurance and remediation blueprints; accredited bodies & statutory auditors retain formal certification/attestation).
+  5. **No storage of client assessment answers or delegated evidence on CBa public intake** without contract and DPA — public diagnostic is browser-local + user export only ([Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md)).
 
 ---
 
@@ -88,7 +90,7 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
 - [x] **Explicit out-of-scope boundaries** defined above (non-MSP, non-MSSP, non-accredited certifier, no custom connector engineering).
 - [x] **Execution tracks assigned:** **Track A** (Lightweight Advisory delivery in `oppurtunities-2027`) + **Track B** (Standalone portal repo `mdresch/agent-governance-onboarding`).
 - [x] **Core assessment artifacts built** (`HYP-2027-015` Phase 1 internal deliverable verified at \$0 cash outlay).
-- [ ] **Web portal live & capturing prospects:** Deploy/share `mdresch/agent-governance-onboarding` to capture the 10 CIO/CISO prospects (`HYP-2027-013`, `HYP-2027-014`).
+- [ ] **Public diagnostic live & briefing funnel active:** Portfolio Explorer URL shared; qualify prospects via **booked briefings** + CRM (not server-stored answers) (`HYP-2027-013`, `HYP-2027-014`).
 - [ ] **Named Pilot #1 sponsor signed** (Tier 1 Triage or Tier 2 Assessment).
 - [ ] **Director Sign-Off recorded below** before flipping `inventory-of-ideas.md` status from `Idea` → `Pilot`.
 

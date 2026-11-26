@@ -12,7 +12,9 @@ Regulated enterprises running mission-critical automation, financial/PII process
 2. **Cold-Start Shutdowns (Broken UX):** Turning VMs off saves money, but a 14–45 second Windows Server boot breaks webhooks, fails automated pipelines, and leaves users watching a spinner.
 3. **Shared-Kernel Containers (Compliance Risk):** Containers start fast, but sharing the host OS kernel fails strict zero-trust, DORA, NIS2, and multi-tenant isolation standards for sensitive data or untrusted AI-agent tool execution.
 
-**`OP-ITG-017` eliminates that tradeoff.** Backed by our production-engineered **MXC Hyper-V Subsystem & JIT Scale-to-Zero Engine** on Windows Server 2025 / Windows 11 Enterprise, dormant VMs sleep at **0.0% idle CPU**, wake on demand in **<500ms (<300ms achieved unpause-to-available; <800ms TTFB)**, and self-cleanse after every session.
+**`OP-ITG-017` eliminates that tradeoff.** Backed by our production-engineered **MXC Hyper-V Subsystem & JIT Scale-to-Zero Engine** on Windows Server 2025 / Windows 11 Enterprise, dormant VMs sleep at **0.0% idle CPU**, wake on demand in **<500ms** (**<300ms** unpause-to-available; **<800ms** TTFB per **AC-01.1**), and self-cleanse after every session.
+
+**Engineering reference:** Implementation and automated acceptance tests live in [`github.com/mdresch/mxc`](https://github.com/mdresch/mxc) (portfolio index: [MXC-Repo-Artifact-Crosswalk.md](MXC-Repo-Artifact-Crosswalk.md) — internal / technical due diligence).
 
 ---
 
@@ -21,7 +23,7 @@ Regulated enterprises running mission-critical automation, financial/PII process
 - **Preserved Sleep (`0.0%` Idle CPU):** Production Windows Server 2025 Golden Images stay pre-trimmed (~1.1 GB working set) and suspended in host RAM — virtual CPU scheduling drops strictly to zero when idle.
 - **Sub-Second Wake-on-Demand (`<300ms` Unpause):** A connection-buffering **JIT Ingress Gateway** holds the incoming HTTPS/API request, calls our Rust control plane (`wxc-exec --features hyperv`) to resume a standby VM, verifies guest health, and forwards the payload with zero dropped sockets. Username/password and MFA sign-ins ride the same wake so users never wait on a boot.
 - **Sterile Session Reset (`.avhdx` Differencing Disks):** Every workload or AI agent runs on an ephemeral differencing disk. On idle timeout or session release, the delta disk is discarded and the VM snaps back to an immutable, approved baseline checkpoint — eliminating state drift and malware persistence.
-- **Elastic Warm-Pool Replenishment & Identity-Bound Leasing:** Adaptive watermark autoscaling proactively replenishes paused standby pools during traffic surges, while identity-bound leasing (`ADR-008`) pairs each isolated guest cleanly to a verified user or Entra AI Agent identity.
+- **Elastic Warm-Pool Replenishment & Identity-Bound Leasing:** Adaptive watermark autoscaling proactively replenishes paused standby pools during traffic surges, while identity-bound leasing (**ADR-008**) pairs each isolated guest cleanly to a verified user or Entra AI Agent identity.
 
 ---
 
@@ -51,17 +53,31 @@ For enterprises scaling beyond single-host clusters, MXC pairs as a **Two-Tier C
 
 | Phase | Timeline | What We Deliver |
 | --- | --- | --- |
-| **1. Observe & Benchmark** | Weeks 1–2 | Workload profile & TCO audit (idle burn, cold-start pain, compliance boundaries) + live `<300ms` wake benchmark on representative Windows Server 2025 hardware. |
+| **1. Observe & Benchmark** | Weeks 1–2 | Workload profile & TCO audit (idle burn, cold-start pain, compliance boundaries) + live wake benchmark on **your** Windows Server 2025 / Win11 Hyper-V host (`benchmark_jit_wake.py`, **AC-01.1**). |
 | **2. Architect & Govern** | Weeks 3–4 | Target **Golden Image Registry**, NVMe/RAM standby-pool sizing, **ADR-008** identity-bound leasing design, and DORA/NIS2/EU AI Act isolation mapping. |
-| **3. Reference Implementation** | Weeks 5–8 | Deploy `wxc-exec --features hyperv`, JIT Ingress Gateway, automated Golden VHDX baker, sterile `.avhdx` reaper, and watermark pool autoscaling for 1–2 priority workloads. |
-| **4. Certify & Handover** | Weeks 9–10 | Automated acceptance verification (`benchmark_jit_wake.py`, `AC-01`–`AC-05`), operator runbooks, and CFO FinOps ROI scorecard. |
+| **3. Reference Implementation** | Weeks 5–8 | Deploy JIT Ingress Gateway, golden VHDX workflow, sterile `.avhdx` reaper, and watermark pool autoscaling for 1–2 priority workloads. |
+| **4. Certify & Handover** | Weeks 9–10 | Acceptance verification, operator runbooks, and CFO FinOps ROI scorecard. |
+
+*Optional **2–3 week Phase 0** covers Phase 1 only — see pricing below.*
 
 ---
 
 ## Investment & Entry Options
-- **Phase 0 Entry Wedge — Live Benchmark & Feasibility Sprint (2–3 weeks):** **€2,000–€4,500** *(workload TCO baseline + live `<500ms` Hyper-V JIT wake demo on your target workload)*.
-- **Full Tier A Reference Implementation (6–10 weeks):** **€4,000–€15,000+** *(fixed scope; scales seamlessly into `OP-ITG-013` Enterprise AI Agent Governance, `OP-ITG-015` Cryptographic Sovereignty, and `OP-ITG-016` "COBIT for Agents")*.
+
+| Tier | Duration | Investment | Outcome |
+| --- | --- | --- | --- |
+| **Phase 0 — Live Benchmark & Feasibility** | 2–3 weeks | **€2,000–€4,500** | TCO baseline + live wake demo on target workload |
+| **Full Reference Implementation** | 6–10 weeks | **€6,000–€15,000+** | Golden image, gateway, pool, handover |
+| **Combined agent + runtime wedge** | 4–5 weeks (parallel) | **€4,500–€8,500** bundle | `OP-ITG-013` (governance) + `OP-ITG-017` Phase 0 — see [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md) |
+
+**Natural follow-ons:** `OP-ITG-013` (Agent Governance) · `OP-ITG-015` (Cryptographic Sovereignty) · `OP-ITG-016` (Agent Operating Architecture) · `OP-ITG-018` (Managed Intelligence Provider retainer).
+
+**Scope boundary:** CBa delivers assessment, architecture, guided reference deployment, and runbooks; your IT/MSP owns production host operations and licensing. Not a 24/7 managed SOC.
 
 ---
 
-**Next Step:** Book a 30-minute **Live `<300ms` Hyper-V Wake Demo & Infrastructure TCO Review** with **Menno Drescher (CBa Consult)**.
+## Next Step
+
+Book a **30-minute Live Hyper-V Wake Demo & Infrastructure TCO Review** with **Menno Drescher (CBa Consult)**.
+
+**Internal CBa pack (not for client attachment):** [Pilot-Charter.md](Pilot-Charter.md) · [Benchmark-Demo-Checklist.md](Benchmark-Demo-Checklist.md) · [Runtime-Containment-Assessment-Questionnaire.md](Runtime-Containment-Assessment-Questionnaire.md)

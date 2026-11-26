@@ -10,30 +10,45 @@
 
 ### From Ideation-Spark.md
 
-# Ideation Spark — `OP-ITG-017`: MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes
+# Ideation Spark — `OP-ITG-017`: MXC Hyper-V JIT Scale-to-Zero VM Sandboxes
 
-**Status:** 🔥 Track B Engineering Active (`mdresch/mxc` @ Stage 10, `4/6 Epics · 10/17 stories`, `PMP-BL-v1.0.0`) · Commercial packaging & Client Pilot #1 pending (`Idea`)
-**Tier:** A — Flagship *(Strategic Asset 3: Digital Labor & Strategic Asset 5: Sovereign Information)*
-**Functional Area:** 6. IT and Technology *(includes IT/ICT Governance)* · **Signature Toolkit:** Digital Transformation
-**Category:** Platform-Backed Architecture / Advisory · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [Portfolio-Status-Register.md §2b](../../docs/registers/Portfolio-Status-Register.md#2b-graduated-track-b-repositories-non-duplicating-rollup) · **Graduated Track B SSOT:** [`mdresch/mxc` (`docs/registers/Project-Status-Register.md`)](https://github.com/mdresch/mxc)
+**Status:** 🔥 **Track B program complete** in [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage **18**, `PMP-BL-v4.0.0`, Phases 1–4) · **Commercial `Idea`** — Tier 2 research & delivery pack complete 2026-11-26 · Client Pilot #1 pending  
+**Tier:** B — Track B flagship *(commercial Q2–Q4 2027)* · Strategic assets **Digital Labor** + **Sovereign Information**  
+**Functional Area:** Digital Transformation  
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [Tier-2-Market-Research.md](Tier-2-Market-Research.md) · [MXC-Repo-Artifact-Crosswalk.md](MXC-Repo-Artifact-Crosswalk.md) · [Portfolio-Status-Register.md §2b](../../docs/registers/Portfolio-Status-Register.md)
 
 ## Positioning
 
-> For **CIOs, CTOs, CISOs, and Enterprise Platform Architects** running regulated automation (ADPA / SIDPA), financial/PII processing, or autonomous AI agents on Windows Server 2025 / Windows 11 Enterprise, **MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes** is a **hardware-enforced Type-1 Hyper-V execution architecture** that resolves the **idle-cost vs. cold-boot (14–45s) vs. shared-kernel security trilemma** — waking dormant VMs in **<500ms (<300ms achieved unpause-to-available; <800ms TTFB)** at **0.0% idle CPU** with sterile `.avhdx` session reset and \$0 initial working capital.
+> For **CIOs, CTOs, and CISOs** on **Windows Server 2025 / Win11 Enterprise Hyper-V** who face the **idle-cost vs cold-boot vs shared-kernel** trilemma for **agents, ADPA automation, and regulated PII workloads**, **MXC Hyper-V JIT Scale-to-Zero** delivers **hardware isolation** with **≤300ms unpause / ≤800ms TTFB** and **sterile `.avhdx` sessions** — backed by a **production-tested** repo, not slideware.
 
-## What it is
+## 7 Pivotal Questions (locked)
 
-An enterprise extension of Microsoft eXecution Container (MXC) (`feat/hyperv-v2-rebased`) that replaces shared-kernel container assumptions with hardware-isolated Type-1 Hyper-V micro-instances managed by a Rust control plane (`wxc-exec --features hyperv`) and a connection-buffering JIT Ingress Gateway:
+1. **Buyer & trigger** — Regulated Windows estates + agent containment + FinOps (EU AI Act, DORA/NIS2).  
+2. **Wedge** — Trilemma pain on every automation webhook path.  
+3. **IP** — Built in `mdresch/mxc`; commercial docs in this folder; **crosswalk, not duplicate**.  
+4. **Feasibility** — Engineering done; commercial 2–10 weeks advisory/PoC on client hosts.  
+5. **Proof** — `benchmark_jit_wake.py` + AC-01.1 + optional 5-Act demo.  
+6. **Boundaries** — Client owns Hyper-V licensing, hosts, SOC; CBa assessment + reference + runbooks.  
+7. **Compounding** — Runtime under `OP-ITG-013`, sovereign layer `OP-ITG-015`, architecture `OP-ITG-016`, MIP `OP-ITG-018`.
 
-- **<500ms VM Image Start (<300ms achieved unpause-to-available; <800ms TTFB):** Paused Windows Server 2025 Golden Images stay in host RAM at **0.0% idle CPU** (working set pre-trimmed to ~1.1 GB) and resume before an incoming HTTPS/webhook request times out or a user finishes MFA sign-in.
-- **Sterile Session Isolation (`.avhdx` Differencing Disks):** Every session executes on a transient differencing disk; upon idle reaping (`300s` timeout) or `pool-release`, the delta disk is discarded and the VM snaps back to an immutable, approved baseline checkpoint (`pool-clean-baseline`) to eliminate state drift and persistence attacks.
-- **Dynamic Watermark Autoscaling & Multi-Pool Management:** Proactive warm standby pools (`pool_state.json` + `TransitionLock`) handle burst concurrency without sacrificing bank-grade hardware isolation.
-- **Identity-Bound VM Leasing (`ADR-008`):** Authentication-gated, identity-bound leasing so username/password + MFA or agent identity (Entra Agent Identity) binds cleanly to an isolated guest instance.
+## Existing assets
 
-## 7 Pivotal Questions
+| Portfolio | Repo (`mdresch/mxc`) |
+| --- | --- |
+| [One_Pager_OP-ITG-017_…](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) | `docs/marketing/MXC-Product-One-Pager.pdf` |
+| [Runtime-Containment-Assessment-Questionnaire.md](Runtime-Containment-Assessment-Questionnaire.md) | USER_GUIDE, ADRs, benchmarks |
+| [Pilot-Charter.md](Pilot-Charter.md) | Project-Status-Register (Stage 18) |
+| [Benchmark-Demo-Checklist.md](Benchmark-Demo-Checklist.md) | `demo_win11_agent_sandbox.ps1` |
 
-1. **Buyer & 2027 Trigger** — CIOs, CTOs, CISOs, and Platform Engineering leads in regulated industries (finance, healthcare, government, legal, enterprise AI). Triggered by 2027's twin mandates: (a) **autonomous AI agents executing untrusted code/tools** require harder boundaries than shared-kernel containers (DORA, NIS2, EU AI Act), and (b) **FinOps pressure** to eliminate 24/7 idle Windows Server VM & licensing burn without suffering 14–45s cold boots.
-2. **The Wedge (Pain)** — Organizations face a broken trilemma: keep Windows VMs running 24/7 (high CPU/RAM/license burn), shut them down (14–45s cold boot breaks webhooks and UX), or use shared-kernel containers (unacceptable blast radius for financial, PII, or untrusted agent workloads).
-3. **Deliverable & Existing IP** — **Already built & formally documented** in `c:\Users\MennoDrescher\source\repos\mxc`:
-   - Rust control plane (`src/mxc-sdk/
+## Related opportunities
+
+`OP-ITG-013` · `OP-ITG-015` · `OP-ITG-016` · `OP-ITG-018` · `OP-MKT-007` (portfolio pack in repo marketing folder)
+
+## Next steps
+
+- [x] Tier 2 market research + IP audit + repo crosswalk.  
+- [x] Questionnaire, tier cut sheet, charter, GTM tracker, demo checklist.  
+- [x] Link marketing kit in repo (already present).  
+- [ ] Record **client/lab** benchmark + update Portfolio §2b date.  
+- [ ] Wave 1 discovery (#1–3) → `HYP-2027-020` `Testing`.  
+- [ ] Paid Tier 1/2 → `G4` Director sign-off.

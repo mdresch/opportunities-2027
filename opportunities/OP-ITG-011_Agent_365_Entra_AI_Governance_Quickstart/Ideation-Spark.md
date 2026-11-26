@@ -52,3 +52,9 @@ Configure **Agent 365** observability/FinOps limits, **Entra for AI Agents** jus
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

@@ -167,3 +167,75 @@ opportunities:
     id: OP-LEG-003
     folders:
       - Build a Security and Compliance Practice
+
+  OP-HR-011_HR_AI_FinOps_Capacity_Governance:
+    id: OP-HR-011
+    folders:
+      - HR Maturity Model
+      - Build a CoPilot Demo
+    notes:
+      - "Microsoft Frontier HR Leader — FinOps for AI (SRGCM17235)."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-012_Workforce_Listening_Qualitative_Analytics:
+    id: OP-HR-012
+    folders:
+      - HR Maturity Model
+      - Build a Analytics and AI
+    notes:
+      - "Engagement/exit theme analytics; privacy and cohort rules."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-013_HR_ESS_Tier1_Agent_Governance:
+    id: OP-HR-013
+    folders:
+      - HR Maturity Model
+      - Build a CoPilot Demo
+      - Microsoft 365 Digital Workforce Workshop
+    notes:
+      - "ESS agent grounding and escalation; pair with Knowledge Context practice."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-014_HR_Workflow_Redesign_Sprint:
+    id: OP-HR-014
+    folders:
+      - HR Maturity Model
+      - CBA - Change Management
+    notes:
+      - "90-day CHRO playbook — one workflow, baseline, scale/stop gate."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-015_Manager_AI_Enablement:
+    id: OP-HR-015
+    folders:
+      - HR Maturity Model
+      - CBA - Change Management
+      - Building an adoption and change management practice
+    notes:
+      - "Manager performance synthesis and coaching prep boundaries."
+    source_documents:
+      - SRGCM17235
+
+reference_documents:
+  - id: SRGCM17235
+    title: "The Frontier HR Leader"
+    subtitle: "Reinvent how HR works with AI. Build the AI-ready workforce to scale it."
+    file: "F:\\Downloads\\EN-CNTNT-eBook-SRGCM17235pdf.pdf"
+    publisher: Microsoft
+    format: pdf
+    pages: 30
+    registered: "2026-11-26"
+    crosswalk: "docs/crosswalk/Microsoft-Frontier-HR-Leader-eBook-HR-Map.md"
+    informs_opportunities:
+      - OP-HR-002
+      - OP-HR-003
+      - OP-HR-009
+      - OP-HR-011
+      - OP-HR-012
+      - OP-HR-013
+      - OP-HR-014
+      - OP-HR-015

@@ -46,3 +46,9 @@ Source: `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\Global Data Centers 
 ## Next Steps (Foresight Only)
 
 - [ ] Keep `Parked` for 2027 execution; optionally repurpose key excerpts from `Global Data Centers in Space.docx` as a single LinkedIn foresight post if aligned with a Sovereign Tech / Defense campaign.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

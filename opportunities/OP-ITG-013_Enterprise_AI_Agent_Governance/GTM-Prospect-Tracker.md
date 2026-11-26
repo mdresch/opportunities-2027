@@ -37,5 +37,5 @@
 ## Maintenance
 
 1. Replace **Working name** with CRM account name when invite sends.  
-2. Copy portal index + P0 count from submission into [Pilot-Charter.md](Pilot-Charter.md) §2.  
+2. After briefing: note index band + P0 count in [Pilot-Charter.md](Pilot-Charter.md) §2 (from client’s self-export or call — **not** server-captured). See [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md).  
 3. Log empirical updates in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) — do not mark `Validated` without paid or LOA evidence.

@@ -1,6 +1,6 @@
 # Portal deploy checklist — `OP-ITG-013` (`mdresch/agent-governance-onboarding`)
 
-**Goal:** Put the self-assessment portal in front of **10 qualified CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) and log submissions in [Pilot-Charter.md](Pilot-Charter.md) §2 / [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md).
+**Goal:** Put the **non-retentive** self-assessment in front of **10 qualified CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) and log **briefings + CRM notes** in [Pilot-Charter.md](Pilot-Charter.md) §2 / [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md). See [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md).
 
 **Repo:** [github.com/mdresch/agent-governance-onboarding](https://github.com/mdresch/agent-governance-onboarding)  
 **Related assets:** [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md) · [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx)
@@ -36,7 +36,7 @@
 ## C. Instrumentation & intake
 
 - [ ] **Booking link:** Calendly / Microsoft Bookings URL in portal completion screen.
-- [ ] **Tracker:** each submission gets a row in [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md) (date, org, role, portal index, P0 count).
+- [ ] **Tracker:** each **Firestore brief request** or booked briefing gets a row in [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md) (date, org, role; optional aggregate index/P0 from brief doc only — **not** full assessment).
 - [ ] Optional: form webhook → spreadsheet (no PII in git — local/secure store only).
 - [ ] UTM or `?src=` tags for LinkedIn vs. direct invite (`linkedin`, `invite`, `partner`).
 

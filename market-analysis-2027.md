@@ -233,7 +233,7 @@ Real web research (initial pass 2026-11-17; expanded 2026-11-18 to cover all **1
 | --- | --- | --- |
 | **CFO / Corporate Controller** | `OP-FIN-001`, `OP-FIN-002`, `OP-FIN-009`, `OP-FIN-010`, `OP-FIN-011` | Finance Ops / Audit Readiness *(pitch: "no new software spend")* |
 | **CIO / CISO / Chief AI Officer** | `OP-ITG-002`, `OP-ITG-011`–`016`, `OP-RSK-004`, `OP-RSK-005` | Security, AI Governance & Cloud Modernization |
-| **CHRO / VP People** | `OP-HR-001`–`003`, `OP-HR-009`, `OP-HR-010` | HR Transformation & Compliance Automation |
+| **CHRO / VP People** | `OP-HR-001`–`003`, `OP-HR-009`, `OP-HR-010`, `OP-HR-011`–`015` | HR Transformation, agentic HR & compliance automation |
 | **General Counsel / DPO** | `OP-LEG-001`–`005`, `OP-ITG-010`, `OP-RSK-004` | Legal/Compliance Risk & Retention Governance |
 | **COO / CRO / PE Operating Partner** | `OP-OPS-001`–`003`, `OP-CX-001`–`002`, `OP-STR-004`–`005` | RevOps/CX Retention & M&A Deal/Carve-Out Fees |
 
