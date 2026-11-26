@@ -1,6 +1,6 @@
 # Business Case — `OP-ITG-002`
 
-**Generated:** 2026-11-25 (from ADPA Projects Lists source assignment script)
+**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
 **Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
 **Primary source:** `ADPA ICT Governance Framework/ICT Governance Docs version Draft/Business_Case_32495a5f.docx`
 

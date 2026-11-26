@@ -1,6 +1,6 @@
 # Ideation Document — `OP-FIN-010`
 
-**Generated:** 2026-11-25 (from ADPA Projects Lists source assignment script)
+**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
 **Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
 
 > Canonical paths remain on OneDrive; this markdown is an extracted working copy.
@@ -25,7 +25,7 @@
 
 ## What it is
 
-Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security → Sector → CLA/CAO → Entity → Division/Dept → Employment Contract) plus CoS benefit/asset items (laptop, study, company car, flex-benefits schema & individual cost exceptions) into real-time hourly & all-in cost rates vs. annual billable hours, sales rates, Revenue, and Cost of Sales (CoS), with Autonomous Accounting Readiness controls.
+Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security → Sector → CLA/CAO → Entity → Division/Dept → Employment Contract) plus CoS benefit/asset items (laptop, study, company car, flex-benefits schema & individual cost exceptions) into a **real-time Standard All-In Hourly CoS Rate anchored to `1,500` annual billable hours/year** (`~72.1%` net billable utilization on a `2,080`-hr `52 × 40h` FTE year — i.e., `125.0` hrs/calendar month, or `115.38` hrs per 4-week / `144.23` hrs per 5-week `4-4-5` period) vs. sales rates, Revenue, and Cost of Sales (CoS), with Autonomous Accounting Readiness controls and `€0.00` monthly absorption-variance tie-out (`FIN-CC-10` in [RGP-23rd-to-3rd-Playbook-Internal.md](../OP-FIN-009_Continuous_Close/RGP-23rd-to-3rd-Playbook-Internal.md)).
 
 ## 7 Pivotal Questions
 
@@ -41,12 +41,4 @@ Reconcile the 7-layer policy waterfall (Global → Country Tax/Social Security �
 
 | Time Horizon | Effort | Expected Capital | Target Qtr |
 | --- | --- | --- | --- |
-| 8–10 wks (8–12 hrs/wk) | High | €2,500–€8,000 | Q2 2027 |
-
-## Market Validation
-
-🟢🟢 Proprietary provenance (2005 → 1 Jan 2006, initiated by Menno Drescher). See the [Real-Time Finance Companion](../../inventory-of-ideas.md#real-time-finance-approach--official-kpi-candidates-op-fin-009-companion).
-
-## Existing Assets to Draw On
-
-- 2005–2006 unified-payroll baseline methodology (personal IP — needs the same write-up treatment as
+| 8–10 wks (8–12 hrs/wk) | High | €2,500–€8,000 

@@ -50,6 +50,12 @@ Source: `Opportunities to Publish\Personal Branding Consultancy.docx`.
 ## Next Steps (Tier 2 → Pilot Gate)
 
 - [x] Publish the flagship **MXC Personal Branding & Portfolio Pack** (`mdresch/mxc :: docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md`) and cross-link `OP-ITG-017` ↔ `OP-MKT-007` ↔ `my-portfolio-menno`.
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

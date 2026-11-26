@@ -6,6 +6,13 @@ The authoritative status, effort, and capital figures for every idea — includi
 
 **Local Business Development library:** [BD-Business-Development-Sources.md](../docs/crosswalk/BD-Business-Development-Sources.md) — per-opportunity stubs [`BD-Quick-Reference.md`](OP-FIN-009_Continuous_Close/BD-Quick-Reference.md) where mapped (regenerate: `py -3 scripts/sync-bd-quick-references.py`).
 
+Each workspace may also include Tier 2 artifacts linked from OneDrive **`ADPA - Projects Lists`**:
+
+- `Source-Documents.md` — manifest of assigned `.docx` sources (path on `F:\OneDrive - CBA\…`)
+- `Ideation-Document.md` — extracted ideation content (from ideation / charter / primary source)
+- `Business-Case.md` — extracted business case (or inventory-derived outline when no BC doc exists)
+
+Portfolio-wide assignment index: [Source-Document-Assignment-Register.md](../docs/registers/Source-Document-Assignment-Register.md). Refresh after OneDrive changes: `python scripts/assign_adpa_source_documents.py` (see `FOLDER_CLUSTER_SECONDARY` in that script for non-primary attaches, e.g. ICT + AI risk → `OP-ITG-013`).
 ## Tier A — Core Active Flagships (5)
 
 | Folder | ID | Strategic Asset | Flagship Offering |

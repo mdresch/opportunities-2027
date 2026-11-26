@@ -1,10 +1,10 @@
 # Source Document Assignment Register
 
-**Last run:** 2026-11-25
+**Last run:** 2026-11-26
 **ADPA root:** `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists`
 **Total .docx scanned:** 279
 **Assigned:** 275 · **Unassigned:** 4
-**Opportunities with ≥1 assigned doc:** 77 / 122
+**Opportunities with ≥1 assigned doc:** 78 / 122
 
 Regenerate: `python scripts/assign_adpa_source_documents.py`
 
@@ -66,7 +66,7 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 | `OP-ITG-010` | 0 | — | — |
 | `OP-ITG-011` | 0 | — | — |
 | `OP-ITG-012` | 0 | — | — |
-| `OP-ITG-013` | 0 | — | — |
+| `OP-ITG-013` | 39 | Ideation_Document_4c04f981.docx | Business_Case_32495a5f.docx |
 | `OP-ITG-014` | 10 | Build a Trusted AI Ready Data Supply.docx | Build a Trusted AI Ready Data Supply.docx |
 | `OP-ITG-015` | 0 | — | — |
 | `OP-ITG-016` | 6 | Ideation Document Defence SOC architecture.docx | EARN - Refernece Architecture.docx |
@@ -359,6 +359,47 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
   ],
   "OP-ITG-009": [
     "Global Data Centers in Space.docx"
+  ],
+  "OP-ITG-013": [
+    "ADPA ICT Governance Framework/ADPA_-_ICT_Governance_Framework (2).docx",
+    "ADPA ICT Governance Framework/ADPA_-_ICT_Governance_Framework.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Business_Case_32495a5f.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Communications_Management_Plan_0058a479.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Cost_Management_Plan_a8692e18.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Ideation_Document_4c04f981.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Ideation_Enhancement_7a437bae.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Integration_Management_Plan_43391f4c.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Project_Charter_f9bb1cbc.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Risk_Management_Plan_b5fb1993.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Scope_Management_Plan_e77ab335.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/Stakeholder_Register_12d8092a.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/The_Concept_Validation_3b37dff4.docx",
+    "ADPA ICT Governance Framework/ICT Governance Docs version Draft/The_Spark_f5838b38.docx",
+    "ADPA AI Driven Risk Management/Business_Analysis_Planning_and_Monitoring_Plan_38bbc8e9.docx",
+    "ADPA AI Driven Risk Management/Business_Benefits_Realization_e86eb6cb.docx",
+    "ADPA AI Driven Risk Management/Business_Case_Template_3b733b80.docx",
+    "ADPA AI Driven Risk Management/Business_Requirements_Document_4191324d.docx",
+    "ADPA AI Driven Risk Management/Business_Value_Proposition_BVP__5a6f8f34.docx",
+    "ADPA AI Driven Risk Management/Communications_Management_Plan_e3179b80.docx",
+    "ADPA AI Driven Risk Management/Cost_Management_Plan_12f9a650.docx",
+    "ADPA AI Driven Risk Management/Ideation_Template_5f398442.docx",
+    "ADPA AI Driven Risk Management/Integration_Management_Plan_2dfd650f.docx",
+    "ADPA AI Driven Risk Management/Market_Competitive_Analysis_56802bad.docx",
+    "ADPA AI Driven Risk Management/Procurement_Management_Plan_257767e8.docx",
+    "ADPA AI Driven Risk Management/Project_Charter_658960ae.docx",
+    "ADPA AI Driven Risk Management/Quality_Management_Plan_c8df9c39.docx",
+    "ADPA AI Driven Risk Management/Requirements_Analysis_and_Design_Definition_Plan_74301b65.docx",
+    "ADPA AI Driven Risk Management/Requirements_Life_Cycle_Management_Plan_bb0d5db1.docx",
+    "ADPA AI Driven Risk Management/Resource_Management_Plan_9c82d98f.docx",
+    "ADPA AI Driven Risk Management/Risk_Management_Plan_7cef3858.docx",
+    "ADPA AI Driven Risk Management/Risk_Register_105c12f4.docx",
+    "ADPA AI Driven Risk Management/Schedule_Management_Plan_6ea6f187.docx",
+    "ADPA AI Driven Risk Management/Scope_Management_Plan_564f0ae8.docx",
+    "ADPA AI Driven Risk Management/Solution_Evaluation_Plan_f753d3e0.docx",
+    "ADPA AI Driven Risk Management/Stakeholder_Management_Plan_-_Generated_2026-01-29T21-41-16_2b715a68.docx",
+    "ADPA AI Driven Risk Management/Stakeholder_Management_Plan_c32fcd53.docx",
+    "ADPA AI Driven Risk Management/Stakeholder_Register_96b61f21.docx",
+    "ADPA AI Driven Risk Management/Strategy_Analysis_Plan_70d8c023.docx"
   ],
   "OP-ITG-014": [
     "Priorities Explored 2026/Data/Build a Trusted AI Ready Data Supply.docx",

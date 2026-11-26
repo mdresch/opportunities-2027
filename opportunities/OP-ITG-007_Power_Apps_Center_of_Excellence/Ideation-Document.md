@@ -1,6 +1,6 @@
 # Ideation Document — `OP-ITG-007`
 
-**Generated:** 2026-11-25 (from ADPA Projects Lists source assignment script)
+**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
 **Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
 **Primary source:** `Power Apps Center of Excellence.docx`
 

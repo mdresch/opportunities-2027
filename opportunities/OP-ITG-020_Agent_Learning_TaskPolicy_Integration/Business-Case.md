@@ -1,6 +1,6 @@
 # Business Case — `OP-ITG-020`
 
-**Generated:** 2026-11-25 (from ADPA Projects Lists source assignment script)
+**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
 **Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
 **Primary source:** `Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx`
 

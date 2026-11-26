@@ -51,6 +51,16 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 - [x] Draft the standalone **8-Pillar Agent Inventory & Governance Assessment Questionnaire / Maturity Scorecard** (`HYP-2027-015`) *(completed 2026-11-23: [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md))*.
 - [x] Complete the **Pre-Pilot Gate (`G4`) Charter** *(completed 2026-11-23 in draft pending portal intake & Director sign-off: [Pilot-Charter.md](Pilot-Charter.md))*.
 - [ ] Capture and interview **10 CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) via the standalone **`mdresch/agent-governance-onboarding`** web portal (self-assessment submissions → 30-min briefing → Pilot #1 sponsor sign-off).
+  - GTM pack: [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) · [LinkedIn-GTM-Copy.md](LinkedIn-GTM-Copy.md) · [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md) (synced to [Pilot-Charter.md](Pilot-Charter.md) §2)
+  - Delivery pack: [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md) · [Workshop-Agenda.md](Workshop-Agenda.md) · [Executive-Readout-Template.md](Executive-Readout-Template.md)
+- [ ] Re-run [BD-Reuse-Inventory.md](BD-Reuse-Inventory.md) on Director machine (`py -3 scripts/inventory-bd-folder.py --opp OP-ITG-013`) once `BD_DOCUMENTS_ROOT` is set.
+
 ## Business Development sources (local)
 
-See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) · [BD-Reuse-Inventory.md](BD-Reuse-Inventory.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

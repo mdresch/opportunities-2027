@@ -38,20 +38,22 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
 2. **Self-Assessment Capture:** Prospects complete the 8-pillar / 40-control self-assessment + Top-10 P0 Red-Flag Triage in `agent-governance-onboarding` and share their exported findings (`.md`/`.json`/PDF) to book a 30-minute Executive Briefing.
 3. **Qualification Target (`HYP-2027-013` / `HYP-2027-014`):** Capture **10 qualified mid-market CIO/CISO prospects** (250–2,500+ seats) via portal intake → validate ≥5 with unmanaged agent/credential sprawl → convert ≥1 paid Tier 1 Triage (`€2,500–€5,000`) or Tier 2 Assessment (`€6,000–€18,000+`).
 
-### 10-Prospect Portal Intake & Discovery Tracker *(Empty Until Real Submissions Arrive)*
+### 10-Prospect Portal Intake & Discovery Tracker
+
+*Planning names #1–10 match [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md). Replace with CRM legal names when invites send; portal columns fill on first submission.*
 
 | # | Date | Organization & Seat Band | Role (CIO/CISO/CAIO) | Portal Index (1–5) | P0 Red Flags | Tier Pitched & Outcome |
 | :-: | --- | --- | --- | :-: | :-: | --- |
-| 1 | — | *(awaiting portal intake)* | — | — | — | — |
-| 2 | — | *(awaiting portal intake)* | — | — | — | — |
-| 3 | — | *(awaiting portal intake)* | — | — | — | — |
-| 4 | — | *(awaiting portal intake)* | — | — | — | — |
-| 5 | — | *(awaiting portal intake)* | — | — | — | — |
-| 6 | — | *(awaiting portal intake)* | — | — | — | — |
-| 7 | — | *(awaiting portal intake)* | — | — | — | — |
-| 8 | — | *(awaiting portal intake)* | — | — | — | — |
-| 9 | — | *(awaiting portal intake)* | — | — | — | — |
-| 10 | — | *(awaiting portal intake)* | — | — | — | — |
+| 1 | — | Benelux Insurer MidCo (800–1,400 seats) | CISO | — | — | Invite planned |
+| 2 | — | Rhine Manufacturing HoldCo (1,200–2,000) | CIO | — | — | Invite planned |
+| 3 | — | North Sea Logistics NV (400–900) | CIO / CISO | — | — | Invite planned |
+| 4 | — | Clinical Network Services (600–1,100) | CISO | — | — | Invite planned |
+| 5 | — | Wealth Platform BV (250–600) | CISO | — | — | Invite planned |
+| 6 | — | Retail Franchise Group (1,500–2,500) | CIO | — | — | Invite planned |
+| 7 | — | Professional Services Alliance (300–700) | CAIO / CIO | — | — | Invite planned |
+| 8 | — | Energy Transition OpCo (900–1,800) | CISO | — | — | Invite planned |
+| 9 | — | Public Sector Shared Service (1,000–2,000) | CISO | — | — | Invite planned |
+| 10 | — | PE-Backed SaaS Scale-Up (200–450) | CIO | — | — | Invite planned |
 
 ---
 

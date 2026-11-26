@@ -42,6 +42,12 @@ FOLDER_PRIMARY: dict[str, str] = {
     "ADPA ICT Governance Framework": "OP-ITG-002",
 }
 
+# Additional OPs that receive a full folder manifest without changing primary ownership above.
+FOLDER_CLUSTER_SECONDARY: dict[str, list[str]] = {
+    "ADPA ICT Governance Framework": ["OP-ITG-013"],
+    "ADPA AI Driven Risk Management": ["OP-ITG-013"],
+}
+
 # Filename / pattern → primary OP (basename or substring match, case-insensitive)
 FILENAME_PRIMARY: list[tuple[str, str]] = [
     ("AI Purpose Clause", "OP-LEG-001"),
@@ -367,6 +373,21 @@ def main() -> None:
     for p, op in primary.items():
         by_op_docs[op].append(p)
 
+    for folder, extra_ops in FOLDER_CLUSTER_SECONDARY.items():
+        fp = folder.lower()
+        cluster_files = [
+            p
+            for p in all_docx
+            if (rel := normalize_rel(p).lower()) == fp or rel.startswith(fp + "/")
+        ]
+        for op_id in extra_ops:
+            have = {id(x) for x in by_op_docs[op_id]}
+            for p in cluster_files:
+                if id(p) not in have:
+                    by_op_docs[op_id].append(p)
+                    have.add(id(p))
+            suite_prefer[op_id].update(cluster_files)
+
     stats = {"ops_with_docs": 0, "ideation_written": 0, "business_written": 0, "total_docx": len(all_docx)}
 
     for op_id, opp_dir in sorted(opp_dirs.items()):
@@ -394,6 +415,9 @@ def main() -> None:
                 role.append("**Ideation**")
             if bc_pick and p.samefile(bc_pick):
                 role.append("**Business case**")
+            primary_op = primary.get(p)
+            if primary_op and primary_op != op_id:
+                role.append(f"Cluster ref. (primary `{primary_op}`)")
             if not role:
                 role.append("Supporting")
             manifest_lines.append(f"| {' / '.join(role)} | `{rel}` | {p.name} |")

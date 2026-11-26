@@ -1,6 +1,6 @@
 # Ideation Document — `OP-FIN-002`
 
-**Generated:** 2026-11-25 (from ADPA Projects Lists source assignment script)
+**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
 **Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
 
 > Canonical paths remain on OneDrive; this markdown is an extracted working copy.
@@ -51,6 +51,9 @@ Compare how different business units close the books and forecast; harvest the b
 - [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
 
 ## Assigned Source Documents (ADPA)
 
