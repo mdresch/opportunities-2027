@@ -38,3 +38,9 @@ Source: `2 Local Experience Curator.docx`.
 
 - [ ] Keep **Parked** for 2027 unless a client explicitly requests it or strategic focus shifts.
 - [ ] Re-evaluate only during annual portfolio hygiene review if synergy with Core Advisory / 5 Strategic Assets changes.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

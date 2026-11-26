@@ -49,3 +49,9 @@ Design the operating model for a blended workforce (humans, copilots, autonomous
 - [ ] Extract the AI/Digital Labor dimension from `HR Transformation Toolkit version 2027.docx` into a standalone 1-page blended-workforce diagnostic rubric.
 - [ ] Define the European Works Council / CLA guardrails checklist for human-plus-agent role redesign.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief (locking pilot scope, € exposure cap, and success KPI) before promoting to `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

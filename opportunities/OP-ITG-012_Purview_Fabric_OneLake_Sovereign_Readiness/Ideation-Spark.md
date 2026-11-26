@@ -49,3 +49,9 @@ Align M365 **Purview Data Security & Compliance** labeling/retention with Micros
 - [ ] Map Microsoft's official Ignite 2026 Purview-to-OneLake feature transition matrix into a 1-page client decision tree.
 - [ ] Document the exact gap between Microsoft's *Sovereign Control Panel* (residency) and `OP-ITG-015` (cryptographic non-reconstructability) to create a clean upsell path.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

@@ -36,7 +36,7 @@ Make explicit how a signed deal becomes delivered work, so nothing falls through
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [x] Lock pilot scope, pricing anchor, and success KPI — [Pilot-Charter.md](Pilot-Charter.md) (bundled with `OP-CX-001`).
 - [ ] Run `HYP-2027-001` outreach — [Wave-1-Outreach-Evidence-Log.md](Wave-1-Outreach-Evidence-Log.md).
 - [ ] Director `G4` sign-off in Pilot-Charter §5 → promote status from `Idea` → `Pilot`.
@@ -45,3 +45,9 @@ Make explicit how a signed deal becomes delivered work, so nothing falls through
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

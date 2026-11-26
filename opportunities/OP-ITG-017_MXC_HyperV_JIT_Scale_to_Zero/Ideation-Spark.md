@@ -49,3 +49,9 @@ An enterprise extension of Microsoft eXecution Container (MXC) (`feat/hyperv-v2-
 - [x] Package a 1-page client-facing executive brief (`MXC-Product-One-Pager.pdf`), sales battlecard, pitch narrative, LinkedIn kit, and live 5-Act demo script (`scripts/hyperv/demo_win11_agent_sandbox.ps1`), plus cross-link to `OP-MKT-007` and `my-portfolio-menno`.
 - [ ] Draft the commercial `Ideation-Document.md` mapping the 4-step monetization ladder (Assessment → Architecture Blueprint → Reference Implementation → Pool Governance Retainer).
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) and identify the first regulated-enterprise or sovereign-AI pilot sponsor.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

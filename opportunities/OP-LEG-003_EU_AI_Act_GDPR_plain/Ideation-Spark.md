@@ -36,9 +36,15 @@ Directly adapted from 2026 `OP-IE-009`.
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content
