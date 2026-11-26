@@ -49,9 +49,3 @@ Assess whether sensitive artifacts can be reconstructed through any single provi
 - [ ] Write the explicit threat-model boundary statement as a standalone disclosure artifact — this needs to exist before any client conversation, not be improvised in the room.
 - [ ] Identify whether a government/defense/health-sector pilot is realistically reachable, or whether Pilot #1 should target a less sensitive regulated buyer first.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

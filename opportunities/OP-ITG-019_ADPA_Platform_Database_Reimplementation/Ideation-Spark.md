@@ -45,9 +45,3 @@ The standalone commercial offer for ADPA is **intentionally left undefined** at 
 - [ ] Draft the target database requirements (data model, persistence engine, migration strategy, \$0/low-cost hosting constraints).
 - [ ] Select the first 1–2 existing projects to reimplement into ADPA as a bounded validation slice.
 - [ ] If greenlit for build, instantiate Track B SIDPA governance in `mdresch/adpa` and wire up `scripts/export_portfolio_rollup.py`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

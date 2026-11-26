@@ -50,9 +50,3 @@ Enterprise agents repeat the same structural decisions (retrieval strategy, tool
 - [ ] Map `full` vs `low` authority per decision class and document parity with `sidpa-template` `DecisionAuthority` semantics.
 - [ ] Pin SDK/CLI version and define upgrade policy vs. upstream Microsoft `agent-learning` releases.
 - [ ] Complete pre-pilot gate (1-page Opportunity Brief → pilot scope/pricing/KPI) before `Pilot` status.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

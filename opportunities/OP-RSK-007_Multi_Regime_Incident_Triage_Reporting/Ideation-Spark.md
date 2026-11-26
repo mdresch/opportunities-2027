@@ -59,9 +59,3 @@ A lightweight, **3–4 week fixed-scope sprint** that unifies incident triage an
 - [ ] Build a reusable 1-page **Multi-Regime Reporting Clock & Intake Field Crosswalk** (DORA / NIS2 / GDPR / EU AI Act / SEC Reg S-P).
 - [ ] Draft 1–2 falsifiable Stage 2 hypotheses (`HYP-2027-NNN`) in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) when promoted into Wave 2.
 - [ ] Complete Tier 3 Pre-Pilot Gate (`G4`) before changing inventory status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

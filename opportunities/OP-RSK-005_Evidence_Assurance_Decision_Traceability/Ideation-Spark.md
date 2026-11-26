@@ -49,9 +49,3 @@
 - [ ] Draft a concise **Governance of Evidence & Decision Traceability** executive brief linking ECS to SOX 404 and EU AI Act Annex III audit chains.
 - [ ] Define a 5-point **Evidence Reliability & Provenance Rubric** (Source Authority, Human vs. AI Origin, Immutability/WORM Hash, Freshness, Chain-of-Custody).
 - [ ] Test as an add-on module inside Q2–Q3 `OP-RSK-004` or `OP-ITG-014` client conversations.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

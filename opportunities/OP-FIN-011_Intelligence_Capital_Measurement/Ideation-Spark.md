@@ -49,9 +49,3 @@ Measure an organization's **Intelligence Capital** using SIDPA's **IPC** (Intell
 - [ ] Extract Parts I–II of `SIDPA` into a crisp 10–15 page executive whitepaper (*"Measuring Enterprise Intelligence Capital: IPC & the SCIP/SII/SSI Triad"*).
 - [ ] Build a 1-page CFO/CAIO **Intelligence Asset Inventory & Replacement-Cost Scorecard**.
 - [ ] Publish executive excerpts via LinkedIn (`OP-MKT-006`) to generate inbound Tier A conversations (`OP-ITG-014`, `OP-FIN-009`/`010`).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

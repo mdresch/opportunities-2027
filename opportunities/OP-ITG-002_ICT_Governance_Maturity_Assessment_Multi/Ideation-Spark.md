@@ -36,15 +36,9 @@ Assess IT governance against COBIT 2019, ITIL 4, ISO/IEC 38500, and NIST CSF 2.0
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [x] Assigned ADPA sources extracted to `Ideation-Document.md` / `Business-Case.md` (Tier 2 draft — Director review still required).
+- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

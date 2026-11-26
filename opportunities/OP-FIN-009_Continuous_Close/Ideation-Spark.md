@@ -45,6 +45,7 @@ Bridge the 23rd-payroll close (when real-time payroll data becomes available) to
 `OP-FIN-001`, `OP-FIN-002`, `OP-FIN-008` (absorbed into the bridge) · `OP-FIN-010` (next layer: rate engine) · `OP-STR-004`/`OP-STR-005` (M&A/PMI financial harmonization)
 
 ## Next Steps (Tier 2 → Pilot Gate)
+
 - [ ] Write up the 2007–2008 RGP methodology — active sprint: [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) (`HYP-2027-007`, ≤15 hrs).
 - [ ] Confirm IFRS 18 against primary standard — [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (full read-through pending).
 - [ ] Identify 1 pilot-candidate client — log in [Wave-1-Discovery-Evidence-Log.md](Wave-1-Discovery-Evidence-Log.md) (`HYP-2027-002`).
@@ -52,9 +53,3 @@ Bridge the 23rd-payroll close (when real-time payroll data becomes available) to
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

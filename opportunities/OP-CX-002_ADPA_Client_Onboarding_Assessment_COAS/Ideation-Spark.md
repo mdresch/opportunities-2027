@@ -50,9 +50,3 @@ Structured client onboarding assessment system with full PMBOK/BABOK governance,
 - [ ] Distill the 33-doc UniCorn COAS suite into a lean, client-facing **COAS Onboarding Maturity Scorecard** (strip heavy PMBOK ceremony for mid-market sales).
 - [ ] Align COAS handoff inputs directly with `OP-OPS-001 → OP-CX-001` so small pilots graduate naturally into COAS.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content

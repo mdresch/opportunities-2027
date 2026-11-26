@@ -49,9 +49,3 @@ Assess critical skills, skill gaps, skills decay, AI readiness, and internal mob
 - [ ] Define a minimal 1-division **Skills Taxonomy & Decay Scoring Rubric** (compatible with ADPA extraction).
 - [ ] Benchmark 2–3 skills-intelligence platforms/consultancies to sharpen CBa Consult's "no-new-HRIS-spend" diagnostic positioning.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
