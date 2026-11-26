@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "opportunity_id": "OP-ITG-013",
+  "instrument": "Agent-Governance-Assessment-Questionnaire.md",
+  "functions": [
+    {
+      "code": "ITG",
+      "label": "IT & Digital / Cloud / M365",
+      "typical_titles": ["Head of IT", "M365 Admin", "Cloud Architect", "Platform Engineering Lead"]
+    },
+    {
+      "code": "SEC",
+      "label": "Cybersecurity",
+      "typical_titles": ["CISO", "Security Architect", "GRC Analyst", "AppSec Lead"]
+    },
+    {
+      "code": "IAM",
+      "label": "Identity & Access",
+      "typical_titles": ["IAM Manager", "Entra ID Admin", "PAM Owner", "Directory Services Lead"]
+    },
+    {
+      "code": "ENG",
+      "label": "AI, Automation & Engineering",
+      "typical_titles": ["CAIO", "Copilot Studio Owner", "Power Platform Admin", "ML Engineering Lead"]
+    },
+    {
+      "code": "FIN",
+      "label": "Finance & Control",
+      "typical_titles": ["Controller", "FP&A Manager", "FinOps Analyst", "Shared Services Finance Lead"]
+    },
+    {
+      "code": "AUD",
+      "label": "Internal Audit & SOX ITGC",
+      "typical_titles": ["Head of Internal Audit", "SOX ITGC Lead", "IT Audit Manager"]
+    },
+    {
+      "code": "LEG",
+      "label": "Legal, Privacy & DPO",
+      "typical_titles": ["DPO", "Privacy Counsel", "Data Protection Officer", "Corporate Legal"]
+    },
+    {
+      "code": "RSK",
+      "label": "Enterprise Risk & Compliance",
+      "typical_titles": ["Chief Risk Officer", "Compliance Manager", "EU AI Act Program Lead"]
+    },
+    {
+      "code": "HR",
+      "label": "HR & Workforce",
+      "typical_titles": ["HRIS Manager", "HR Operations", "People Systems Owner"]
+    },
+    {
+      "code": "OPS",
+      "label": "Business Operations & Process Owners",
+      "typical_titles": ["Process Owner", "Business Sponsor", "COO Delegate", "Department Head"]
+    },
+    {
+      "code": "SOC",
+      "label": "Security Operations / SIEM",
+      "typical_titles": ["SOC Manager", "Sentinel Admin", "Detection Engineering"]
+    }
+  ],
+  "executive_accountable_roles": [
+    { "code": "CEO", "label": "Chief Executive Officer", "when_to_use": "Enterprise policy, board exposure, cross-functional blockers" },
+    { "code": "CFO", "label": "Chief Financial Officer", "when_to_use": "SoD, FinOps, GL reconciliation, SOX financial ITGC" },
+    { "code": "CIO", "label": "Chief Information Officer", "when_to_use": "Inventory, platforms, lifecycle, business-IT alignment" },
+    { "code": "CISO", "label": "Chief Information Security Officer", "when_to_use": "Identity, logging, DLP, incident response, kill switch" },
+    { "code": "CAIO", "label": "Chief AI Officer (or CIO delegate)", "when_to_use": "Agent portfolio, HITL matrix, model lifecycle" }
+  ],
+  "workstream_statuses": [
+    "not_assigned",
+    "invited",
+    "in_progress",
+    "evidence_submitted",
+    "exec_review",
+    "accepted",
+    "blocked",
+    "not_applicable"
+  ],
+  "questions": [
+    { "id": "1.1", "pillar": 1, "tier1_full": true, "accountable_exec": "CIO", "owner_function": "ITG", "delegate_titles": ["M365 Admin", "Power Platform Admin", "Enterprise Architect"], "consulted": ["SEC", "ENG"], "informed": ["CISO"] },
+    { "id": "1.2", "pillar": 1, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "SEC", "delegate_titles": ["CASB/Defender Owner", "Cloud Security Engineer"], "consulted": ["ITG", "SOC"], "informed": ["CIO"] },
+    { "id": "1.3", "pillar": 1, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "RSK", "delegate_titles": ["GRC Analyst", "AI Risk Manager"], "consulted": ["ITG", "LEG"], "informed": ["CIO"] },
+    { "id": "1.4", "pillar": 1, "tier1_full": true, "accountable_exec": "CIO", "owner_function": "ITG", "delegate_titles": ["Vendor Manager", "SaaS Application Owner"], "consulted": ["LEG", "SEC"], "informed": ["CFO"] },
+    { "id": "1.5", "pillar": 1, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Entra ID Admin", "IAM Analyst"], "consulted": ["ITG", "SOC"], "informed": ["CIO"] },
+    { "id": "2.1", "pillar": 2, "tier1_full": true, "accountable_exec": "CAIO", "owner_function": "OPS", "delegate_titles": ["Business Sponsor per agent", "Product Owner"], "consulted": ["ITG", "HR"], "informed": ["CIO"] },
+    { "id": "2.2", "pillar": 2, "tier1_full": true, "accountable_exec": "CIO", "owner_function": "HR", "delegate_titles": ["HRIS Manager", "Joiners-Movers-Leavers Process Owner"], "consulted": ["IAM", "ITG"], "informed": ["CISO"] },
+    { "id": "2.3", "pillar": 2, "tier1_full": true, "accountable_exec": "CAIO", "owner_function": "RSK", "delegate_titles": ["AI Governance Lead", "Process Owner"], "consulted": ["OPS", "LEG"], "informed": ["CEO"] },
+    { "id": "2.4", "pillar": 2, "tier1_full": true, "accountable_exec": "CEO", "owner_function": "RSK", "delegate_titles": ["Risk Committee Secretary", "ARB Chair"], "consulted": ["CIO", "CISO"], "informed": ["CFO"] },
+    { "id": "2.5", "pillar": 2, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["SOC Manager", "On-call Runbook Owner"], "consulted": ["ITG", "OPS"], "informed": ["CIO"] },
+    { "id": "3.1", "pillar": 3, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Entra ID Admin", "PAM Owner"], "consulted": ["ITG", "ENG"], "informed": ["CIO"] },
+    { "id": "3.2", "pillar": 3, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Identity Architect", "Cloud IAM Engineer"], "consulted": ["ENG"], "informed": ["CIO"] },
+    { "id": "3.3", "pillar": 3, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Conditional Access Admin"], "consulted": ["SEC"], "informed": ["CIO"] },
+    { "id": "3.4", "pillar": 3, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Secrets Management Owner", "DevSecOps Lead"], "consulted": ["ENG"], "informed": ["CIO"] },
+    { "id": "3.5", "pillar": 3, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["Incident Response Lead", "IAM On-call"], "consulted": ["IAM", "ITG"], "informed": ["CEO"] },
+    { "id": "4.1", "pillar": 4, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["API Security Owner", "Integration Architect"], "consulted": ["ITG", "ENG"], "informed": ["CIO"] },
+    { "id": "4.2", "pillar": 4, "tier1_full": true, "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["Controller", "ERP SoD Administrator"], "consulted": ["IAM", "AUD"], "informed": ["CISO"] },
+    { "id": "4.3", "pillar": 4, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "ENG", "delegate_titles": ["MCP Gateway Owner", "Platform Security"], "consulted": ["ITG"], "informed": ["CIO"] },
+    { "id": "4.4", "pillar": 4, "tier1_full": true, "accountable_exec": "CISO", "owner_function": "ENG", "delegate_titles": ["Sandbox/Isolation Architect", "Container Security"], "consulted": ["ITG"], "informed": ["CIO"] },
+    { "id": "4.5", "pillar": 4, "tier1_full": true, "accountable_exec": "CFO", "owner_function": "AUD", "delegate_titles": ["SOX ITGC Lead", "Access Review Coordinator"], "consulted": ["IAM", "CISO"], "informed": ["CEO"] },
+    { "id": "5.1", "pillar": 5, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CIO", "owner_function": "ENG", "delegate_titles": ["Release Manager", "Copilot Studio Champion"], "consulted": ["SEC", "OPS"], "informed": ["CAIO"] },
+    { "id": "5.2", "pillar": 5, "tier1_full": false, "accountable_exec": "CIO", "owner_function": "ENG", "delegate_titles": ["DevOps Lead", "Prompt Engineering Lead"], "consulted": ["SEC"], "informed": ["CAIO"] },
+    { "id": "5.3", "pillar": 5, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CIO", "owner_function": "ITG", "delegate_titles": ["Power Platform Admin", "CoE Lead"], "consulted": ["ENG"], "informed": ["CISO"] },
+    { "id": "5.4", "pillar": 5, "tier1_full": false, "accountable_exec": "CIO", "owner_function": "ITG", "delegate_titles": ["CMDB Owner", "Archival/Records Manager"], "consulted": ["LEG", "SEC"], "informed": ["CISO"] },
+    { "id": "5.5", "pillar": 5, "tier1_full": false, "accountable_exec": "CAIO", "owner_function": "ENG", "delegate_titles": ["ML Ops Lead", "Model Registry Owner"], "consulted": ["OPS"], "informed": ["CIO"] },
+    { "id": "6.1", "pillar": 6, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["SIEM Admin", "Agent 365 Telemetry Owner"], "consulted": ["ITG", "ENG"], "informed": ["CIO"] },
+    { "id": "6.2", "pillar": 6, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["Logging Standards Owner", "Compliance Engineer"], "consulted": ["LEG", "AUD"], "informed": ["CIO"] },
+    { "id": "6.3", "pillar": 6, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["Log Archive/WORM Admin"], "consulted": ["LEG", "FIN"], "informed": ["CFO"] },
+    { "id": "6.4", "pillar": 6, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["Detection Engineering", "SOC Lead"], "consulted": ["ENG"], "informed": ["CIO"] },
+    { "id": "6.5", "pillar": 6, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "AUD", "delegate_titles": ["Internal Audit IT", "GRC Evidence Manager"], "consulted": ["SOC", "LEG"], "informed": ["CEO"] },
+    { "id": "7.1", "pillar": 7, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["FinOps Lead", "Cloud Cost Owner"], "consulted": ["ITG", "ENG"], "informed": ["CIO"] },
+    { "id": "7.2", "pillar": 7, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["FinOps Engineer", "API Gateway Budget Owner"], "consulted": ["ENG", "ITG"], "informed": ["CISO"] },
+    { "id": "7.3", "pillar": 7, "tier1_full": false, "accountable_exec": "CFO", "owner_function": "OPS", "delegate_titles": ["Business Value Owner", "Process Excellence"], "consulted": ["ENG", "FIN"], "informed": ["CEO"] },
+    { "id": "7.4", "pillar": 7, "tier1_full": false, "accountable_exec": "CFO", "owner_function": "ENG", "delegate_titles": ["LLM Routing Owner", "FinOps Analyst"], "consulted": ["ITG"], "informed": ["CAIO"] },
+    { "id": "7.5", "pillar": 7, "tier1_full": false, "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["Controller", "Revenue Recognition Accountant"], "consulted": ["ITG", "AUD"], "informed": ["CEO"] },
+    { "id": "8.1", "pillar": 8, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CISO", "owner_function": "SEC", "delegate_titles": ["Purview/DLP Admin", "Information Protection Lead"], "consulted": ["LEG", "ITG"], "informed": ["CIO"] },
+    { "id": "8.2", "pillar": 8, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "LEG", "delegate_titles": ["Privacy Counsel", "Vendor Legal"], "consulted": ["ITG", "FIN"], "informed": ["CEO"] },
+    { "id": "8.3", "pillar": 8, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "LEG", "delegate_titles": ["DPO", "Data Residency Owner"], "consulted": ["ITG"], "informed": ["CEO"] },
+    { "id": "8.4", "pillar": 8, "tier1_full": false, "tier1_screen": true, "accountable_exec": "CEO", "owner_function": "RSK", "delegate_titles": ["EU AI Act Program Lead", "Compliance Manager"], "consulted": ["LEG", "CISO"], "informed": ["CFO"] },
+    { "id": "8.5", "pillar": 8, "tier1_full": false, "accountable_exec": "CISO", "owner_function": "LEG", "delegate_titles": ["DPO", "Records Management"], "consulted": ["FIN", "AUD"], "informed": ["CEO"] }
+  ],
+  "p0_flags": [
+    { "id": "P0-01", "maps_to_questions": ["3.1", "3.4"], "accountable_exec": "CISO", "owner_function": "IAM", "delegate_titles": ["Entra ID Admin", "Secrets Scanning Owner"] },
+    { "id": "P0-02", "maps_to_questions": ["4.2"], "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["ERP Admin", "SoD Analyst"] },
+    { "id": "P0-03", "maps_to_questions": ["2.1", "2.2"], "accountable_exec": "CAIO", "owner_function": "OPS", "delegate_titles": ["Agent Owner Register Maintainer", "HRIS"] },
+    { "id": "P0-04", "maps_to_questions": ["7.2"], "accountable_exec": "CFO", "owner_function": "FIN", "delegate_titles": ["FinOps / Budget Owner"] },
+    { "id": "P0-05", "maps_to_questions": ["8.1"], "accountable_exec": "CISO", "owner_function": "SEC", "delegate_titles": ["Purview Admin"] },
+    { "id": "P0-06", "maps_to_questions": ["4.3", "8.2"], "accountable_exec": "CISO", "owner_function": "ENG", "delegate_titles": ["MCP Gateway Owner", "Vendor Risk"] },
+    { "id": "P0-07", "maps_to_questions": ["6.1"], "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["SIEM Owner"] },
+    { "id": "P0-08", "maps_to_questions": ["3.5"], "accountable_exec": "CISO", "owner_function": "SOC", "delegate_titles": ["Incident Response"] },
+    { "id": "P0-09", "maps_to_questions": ["8.4"], "accountable_exec": "CEO", "owner_function": "RSK", "delegate_titles": ["DPIA/FRIA Author"] },
+    { "id": "P0-10", "maps_to_questions": ["5.2"], "accountable_exec": "CIO", "owner_function": "ENG", "delegate_titles": ["DevOps / CAB Owner"] }
+  ]
+}

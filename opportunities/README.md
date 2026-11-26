@@ -42,6 +42,7 @@ Portfolio-wide assignment index: [Source-Document-Assignment-Register.md](../doc
 | [OP-ITG-011_Agent_365_Entra_AI_Governance_Quickstart](OP-ITG-011_Agent_365_Entra_AI_Governance_Quickstart/Ideation-Spark.md) | `OP-ITG-011` | 3. Digital Labor | Agent 365 & Entra AI-Agent Governance Quick-Start |
 | [OP-ITG-012_Purview_Fabric_OneLake_Sovereign_Readiness](OP-ITG-012_Purview_Fabric_OneLake_Sovereign_Readiness/Ideation-Spark.md) | `OP-ITG-012` | 4. Evidence & Governance | Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness |
 | [OP-DTX-005_Microsoft_IQ_Copilot_Studio_FinOps](OP-DTX-005_Microsoft_IQ_Copilot_Studio_FinOps/Ideation-Spark.md) | `OP-DTX-005` | 2. Organizational Intelligence | Microsoft IQ & Copilot Studio FinOps Rollout |
+| [OP-SCM-003_Procurement_Readiness_Assessment_Portal](OP-SCM-003_Procurement_Readiness_Assessment_Portal/Ideation-Spark.md) | `OP-SCM-003` | 4. Evidence & Governance *(Commercial platform)* | Procurement Readiness & Pre-Sales Assessment Portal (PRMAP) |
 
 ## Tier C — Supporting (41)
 
@@ -139,6 +140,7 @@ Portfolio-wide assignment index: [Source-Document-Assignment-Register.md](../doc
 | [OP-ING-002_Digital_Asset_Licensing_for_AI](OP-ING-002_Digital_Asset_Licensing_for_AI/Ideation-Spark.md) | `OP-ING-002` | 10. Innovation and Growth | Digital Asset Licensing for AI Training |
 | [OP-SCM-001_Vendor_supply_chain_continuity_quick](OP-SCM-001_Vendor_supply_chain_continuity_quick/Ideation-Spark.md) | `OP-SCM-001` | 11. Supply Chain | Vendor & supply-chain continuity quick-audit |
 | [OP-SCM-002_Green_Supply_Chain_Consulting](OP-SCM-002_Green_Supply_Chain_Consulting/Ideation-Spark.md) | `OP-SCM-002` | 11. Supply Chain | Green Supply Chain Consulting |
+| [OP-SCM-003_Procurement_Readiness_Assessment_Portal](OP-SCM-003_Procurement_Readiness_Assessment_Portal/Ideation-Spark.md) | `OP-SCM-003` | 11. Supply Chain | Procurement Readiness & Pre-Sales Assessment Portal (PRMAP) |
 | [OP-RSK-001_Operational_AI_risk_register_starter](OP-RSK-001_Operational_AI_risk_register_starter/Ideation-Spark.md) | `OP-RSK-001` | 12. Risk Management | Operational & AI risk register starter kit |
 | [OP-RSK-002_AI_Ethics_Auditor_Bias_Review](OP-RSK-002_AI_Ethics_Auditor_Bias_Review/Ideation-Spark.md) | `OP-RSK-002` | 12. Risk Management | AI Ethics Auditor / Bias Review Service |
 | [OP-RSK-003_AI_Explainability_Audit_Specialist](OP-RSK-003_AI_Explainability_Audit_Specialist/Ideation-Spark.md) | `OP-RSK-003` | 12. Risk Management | AI Explainability & Audit Specialist |

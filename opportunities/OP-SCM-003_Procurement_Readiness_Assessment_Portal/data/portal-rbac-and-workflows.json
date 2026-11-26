@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "opportunity_id": "OP-SCM-003",
+  "product_code": "PRMAP",
+  "interim_pilot": {
+    "until_op_pr_approval": true,
+    "target_repo_after_pr": "https://github.com/mdresch/cba-procurement-readiness-portal",
+    "stand_in_repo": "https://github.com/mdresch/agent-governance-onboarding",
+    "stand_in_sku": "CBA-ITG-013-T1",
+    "playbook": "Procurement-Pilot-Example-OP-ITG-013.md",
+    "graduation_gate": "OP-to-PR-Graduation-Gate.md"
+  },
+  "roles": [
+    {
+      "code": "client_sponsor",
+      "label": "Client Sponsor",
+      "side": "client",
+      "can_invite": ["executive_sponsor", "function_lead", "contributor"],
+      "can_release_export": true
+    },
+    {
+      "code": "executive_sponsor",
+      "label": "Executive Sponsor",
+      "side": "client",
+      "can_approve_lanes": true,
+      "can_invite": ["function_lead", "contributor"]
+    },
+    {
+      "code": "function_lead",
+      "label": "Function Lead",
+      "side": "client",
+      "scope": "function_code",
+      "can_invite": ["contributor"]
+    },
+    {
+      "code": "contributor",
+      "label": "Contributor",
+      "side": "client",
+      "scope": "assigned_questions_only"
+    },
+    {
+      "code": "cba_account_manager",
+      "label": "CBa Account Manager",
+      "side": "cba",
+      "can_reassign_questions": true,
+      "can_nudge": true,
+      "can_view_all_workspaces_assigned": true,
+      "can_edit_client_answers": false
+    },
+    {
+      "code": "cba_delivery_lead",
+      "label": "CBa Delivery Lead",
+      "side": "cba",
+      "read_only_after_release": true
+    }
+  ],
+  "workspace_fields": [
+    "organization_name",
+    "sku",
+    "opportunity_id",
+    "client_sponsor_email",
+    "executive_sponsor_emails",
+    "cba_account_manager_id",
+    "rfp_reference",
+    "target_po_date",
+    "template_version"
+  ],
+  "question_statuses": [
+    "not_assigned",
+    "invited",
+    "in_progress",
+    "evidence_submitted",
+    "exec_review",
+    "accepted",
+    "blocked",
+    "not_applicable"
+  ],
+  "am_actions": [
+    "reassign_contributor",
+    "reassign_function_lead",
+    "nudge_contributor",
+    "nudge_executive",
+    "internal_note",
+    "flag_blocked_for_call"
+  ],
+  "catalog_skus": [
+    {
+      "sku": "CBA-ITG-013-T1",
+      "opportunity_id": "OP-ITG-013",
+      "title": "Enterprise AI Agent Governance — Tier 1 Triage",
+      "tier": "triage",
+      "questionnaire_ref": "OP-ITG-013/tier1",
+      "delegation_ref": "OP-ITG-013/agent-governance-question-ownership.json",
+      "executive_lanes": ["CIO", "CISO", "CFO", "CEO", "CAIO"]
+    },
+    {
+      "sku": "CBA-FIN-009-SCREEN",
+      "opportunity_id": "OP-FIN-009",
+      "title": "Continuous Close — readiness screen",
+      "tier": "screen",
+      "questionnaire_ref": "OP-FIN-009/screen",
+      "delegation_ref": "OP-FIN-009/delegation",
+      "executive_lanes": ["CFO", "CIO"]
+    },
+    {
+      "sku": "CBA-RSK-004-SCREEN",
+      "opportunity_id": "OP-RSK-004",
+      "title": "AI Governance Certification — readiness screen",
+      "tier": "screen",
+      "questionnaire_ref": "OP-RSK-004/screen",
+      "delegation_ref": "OP-RSK-004/delegation",
+      "executive_lanes": ["CISO", "CEO", "CFO"]
+    }
+  ],
+  "export_schema": {
+    "required": [
+      "workspace_id",
+      "sku",
+      "organization",
+      "released_at",
+      "completion_rate",
+      "responses",
+      "audit_log_excerpt"
+    ]
+  }
+}

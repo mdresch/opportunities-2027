@@ -1,0 +1,12 @@
+{
+  "opportunity_id": "OP-ITG-013",
+  "preparation_mode": true,
+  "g4_upgrade_blocked": true,
+  "portal_repo": "https://github.com/mdresch/agent-governance-onboarding",
+  "production_url": null,
+  "hosting_target": null,
+  "notes": "Set production_url and hosting_target when Portal-Deploy-Checklist §B is complete. Do not set until smoke test passes.",
+  "booking_url": null,
+  "last_smoke_test_utc": null,
+  "release_tag_target": "v0.1.0-intake"
+}

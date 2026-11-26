@@ -3,7 +3,8 @@
 **Purpose:** Name the first **10 CIO/CISO outreach targets** for portal-led discovery (`HYP-2027-013`, `HYP-2027-014`).  
 **Privacy:** Working names are **planning labels** until you replace them with real organizations in your CRM. Do not commit PII to git.
 
-**Synced to:** [Pilot-Charter.md](Pilot-Charter.md) §2 intake table (same row numbers).
+**Synced to:** [Pilot-Charter.md](Pilot-Charter.md) §2 intake table (same row numbers).  
+**Wave 0 execution:** [Wave-0-Outreach-Playbook.md](Wave-0-Outreach-Playbook.md) (prospects #1–3 first).
 
 | # | Working name | Sector / geo | Seat band | Primary role | Copilot / agent context | Channel | Invite status | Portal done? | P0 flags (count) | Tier pitched | Outcome |
 | :-: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

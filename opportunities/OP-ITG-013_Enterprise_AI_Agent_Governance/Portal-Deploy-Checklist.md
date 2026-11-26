@@ -5,12 +5,18 @@
 **Repo:** [github.com/mdresch/agent-governance-onboarding](https://github.com/mdresch/agent-governance-onboarding)  
 **Related assets:** [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md) · [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx)
 
+**Procurement-led buys (interim PRMAP):** Same repo and checklist until `OP-SCM-003` graduates to PR. Use SKU **`CBA-ITG-013-T1`**, [Procurement-Intake-PRMAP-Example.md](Procurement-Intake-PRMAP-Example.md), and [Procurement-Pilot-Example-OP-ITG-013.md](../OP-SCM-003_Procurement_Readiness_Assessment_Portal/Procurement-Pilot-Example-OP-ITG-013.md). Future multi-SKU host: **`mdresch/cba-procurement-readiness-portal`** — create only after [OP-to-PR-Graduation-Gate.md](../OP-SCM-003_Procurement_Readiness_Assessment_Portal/OP-to-PR-Graduation-Gate.md).
+
+**PR prep (no `Idea` → `Pilot` flip):** [PR-ITG-013-Preparation-Checklist.md](PR-ITG-013-Preparation-Checklist.md) · record live URL in [data/portal-deploy-status.json](data/portal-deploy-status.json) · portal stories in [Portal-Engineering-Backlog.md](Portal-Engineering-Backlog.md).
+
 ---
 
 ## A. Pre-flight (content & compliance)
 
 - [ ] Portal copy matches one-pager **8 pillars** and **two-tier** pricing (no contradictory scope).
 - [ ] Self-assessment maps to **Top-10 P0 red flags** + sample of Tier 1 pillar questions (not all 40 — see [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md)).
+- [ ] **Delegation:** load [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json); sponsor can invite function leads; contributors see **my queue** only ([Portal-Delegation-Dashboard-Spec.md](Portal-Delegation-Dashboard-Spec.md)).
+- [ ] **Dashboard:** completion by executive lane + function + pillar; release export ≥80% accepted or sponsor override.
 - [ ] Export path works: **`.md` / `.json` / PDF** (or printable summary) for booking a 30-min briefing.
 - [ ] Privacy: short notice on **no tenant credentials** stored; submissions are invite-only or email-gated if needed.
 - [ ] **Out-of-scope** footer: no MSP admin, no certification opinion, no custom Agent 365 connectors (matches [Pilot-Charter.md](Pilot-Charter.md) §3).

@@ -73,6 +73,7 @@
 
 | Portal section | Maps to |
 | --- | --- |
-| P0 checklist (10) | Tier 1 mandatory output |
-| Short pillar quiz (≈12 items) | Tier 1 screen + sample full questions |
-| Full export | Sales handoff artifact for Tier 2 proposal |
+| P0 checklist (10) | Tier 1 mandatory output — route via [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md) §5 |
+| Tier 1 portfolio mode | P0 + 26 question areas (per table above) — assign by [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json) |
+| Executive / function dashboard | [Portal-Delegation-Dashboard-Spec.md](Portal-Delegation-Dashboard-Spec.md) |
+| Full export (`assessment-export.json`) | Sales handoff + [Executive-Readout-Template.md](Executive-Readout-Template.md) |

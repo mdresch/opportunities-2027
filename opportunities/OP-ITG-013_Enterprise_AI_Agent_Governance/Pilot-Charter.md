@@ -2,7 +2,8 @@
 pmbok_edition: "PMBOK 8"
 pmbok_process_group: "Initiating"
 pmbok_process: "4.1 Develop Project Charter (Stage 3–4 Pre-Pilot Gate)"
-lifecycle_stage: "Stage 3–4 (Pre-Pilot Charter — Draft Pending Portal Intake & Director Sign-Off)"
+lifecycle_stage: "Stage 3–4 (Pre-Pilot Charter — PR Preparation Mode; G4 Pending)"
+pr_preparation_mode: true
 opportunity_id: "OP-ITG-013"
 execution_track: "Hybrid — Track A (Client Advisory Delivery) + Track B Portal Intake (mdresch/agent-governance-onboarding)"
 requires_human_approval: true
@@ -35,7 +36,7 @@ owner: "Menno Drescher (Director, CBa Consult)"
 Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery prospects** (`HYP-2027-013`, `HYP-2027-014`) will be identified, qualified, and captured through the dedicated **`mdresch/agent-governance-onboarding`** web portal:
 
 1. **Distribution Channel:** LinkedIn thought-leadership posts (paired with [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx](One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.docx) and the Accounting/AI Pricing Executive Brief) + direct CIO/CISO invites to run the self-assessment portal.
-2. **Self-Assessment Capture:** Prospects complete the 8-pillar / 40-control self-assessment + Top-10 P0 Red-Flag Triage in `agent-governance-onboarding` and share their exported findings (`.md`/`.json`/PDF) to book a 30-minute Executive Briefing.
+2. **Self-Assessment Capture:** Prospects complete the 8-pillar / 40-control self-assessment + Top-10 P0 Red-Flag Triage in `agent-governance-onboarding`. **Executives delegate** by function (CFO → Controller, CISO → IAM/SOC, etc.) per [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md); the portal dashboard tracks completion before export (`.md`/`.json`/PDF) to book a 30-minute Executive Briefing.
 3. **Qualification Target (`HYP-2027-013` / `HYP-2027-014`):** Capture **10 qualified mid-market CIO/CISO prospects** (250–2,500+ seats) via portal intake → validate ≥5 with unmanaged agent/credential sprawl → convert ≥1 paid Tier 1 Triage (`€2,500–€5,000`) or Tier 2 Assessment (`€6,000–€18,000+`).
 
 ### 10-Prospect Portal Intake & Discovery Tracker
@@ -54,6 +55,15 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
 | 8 | — | Energy Transition OpCo (900–1,800) | CISO | — | — | Invite planned |
 | 9 | — | Public Sector Shared Service (1,000–2,000) | CISO | — | — | Invite planned |
 | 10 | — | PE-Backed SaaS Scale-Up (200–450) | CIO | — | — | Invite planned |
+
+### 2b. Portal production URL *(prep — set when live)*
+
+| Field | Value |
+| --- | --- |
+| **Hosting** | *TBD — see [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) §B* |
+| **Public URL** | *Record in [data/portal-deploy-status.json](data/portal-deploy-status.json) when deployed* |
+| **Booking URL** | *Completion-screen CTA — same JSON file* |
+| **Prep checklist** | [PR-ITG-013-Preparation-Checklist.md](PR-ITG-013-Preparation-Checklist.md) |
 
 ---
 
@@ -91,3 +101,17 @@ Rather than relying solely on cold manual outreach, the **10 CIO/CISO discovery 
 | **Decision Owner** | Menno Drescher (Director, CBa Consult) |
 | **Gate Status** | `PENDING` *(ready to authorize once Pilot #1 sponsor is captured via `agent-governance-onboarding` portal)* |
 | **Approval Date & Notes** | *—* |
+
+---
+
+## 6. PR preparation mode (`PR-ITG-013` — **not** authorized yet)
+
+> Inventory **`Status` remains `Idea`**. This section tracks **pre-`G4` work** only.
+
+| Workstream | Entry point | Status |
+| --- | --- | --- |
+| Portal deploy | [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) · [Portal-Engineering-Backlog.md](Portal-Engineering-Backlog.md) | Open |
+| Wave 0 outreach (#1–3) | [Wave-0-Outreach-Playbook.md](Wave-0-Outreach-Playbook.md) | Open |
+| Graduation criteria | [OP-to-PR-Graduation-Gate.md](OP-to-PR-Graduation-Gate.md) | G4.1 met; G4.2–G4.6 open |
+| Pilot #1 delivery (post-sponsor) | [Pilot-1-Delivery-Log-Template.md](Pilot-1-Delivery-Log-Template.md) | Dormant until CRM sponsor |
+| Master prep tasks | [PR-ITG-013-Preparation-Checklist.md](PR-ITG-013-Preparation-Checklist.md) | In progress |
