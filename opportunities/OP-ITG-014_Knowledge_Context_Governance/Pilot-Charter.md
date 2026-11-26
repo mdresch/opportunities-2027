@@ -1,59 +1,90 @@
 ---
 pmbok_edition: "PMBOK 8"
 pmbok_process_group: "Initiating"
-pmbok_process: "4.1 Develop Project Charter (Stage 3-4 Pre-Pilot Gate)"
-lifecycle_stage: "Stage 3-4 (Pre-Pilot Charter — Draft Pending Discovery & Director Sign-Off)"
+pmbok_process: "4.1 Develop Project Charter (Stage 3–4 Pre-Pilot Gate)"
+lifecycle_stage: "Stage 3–4 (Pre-Pilot Charter — Draft; Tier 2 research complete 2026-11-26)"
 opportunity_id: "OP-ITG-014"
 execution_track: "Track A (Client Advisory Delivery — CIO / CDO / CAIO Flagship)"
 requires_human_approval: true
 approval_status: "PENDING_DIRECTOR_SIGNOFF"
-date: "2026-11-24"
+date: "2026-11-26"
 owner: "Menno Drescher (Director, CBa Consult)"
 ---
 
-# Pre-Pilot Charter & Stage 3-4 Gate (`G4`) — `OP-ITG-014`: Knowledge & Context Governance
+# Pre-Pilot Charter & Stage 3–4 Gate (`G4`) — `OP-ITG-014`: Knowledge Intelligence & Context Governance
 
-> **Governance Notice (SIDPA `G4` Gate):** Locks scope, pricing tiers, and discovery qualification criteria for `OP-ITG-014`. Status remains **`Idea`** until CIO/CDO discovery validates `HYP-2027-014A/B` and Director sign-off is recorded in Section 5.
+> **Governance Notice:** Inventory **`Status` remains `Idea`** until CIO/CDO discovery validates `HYP-2027-017`–`019` and Director sign-off is recorded in §5.
+
+---
 
 ## 1. Stage 3 — Benefits, Economics & Capital Constraints (`G3`)
 
 | Commercial Variable | Locked Pre-Pilot Parameter |
 | :--- | :--- |
-| **Initial Cash Outlay** | **\$0** (existing CBa Consult ADPA/ECS/Ontology templates & diagnostic questionnaire) |
-| **Capacity Allocation** | **6–10 hrs/week** (3 wks for Phase 0 Baseline / 6–10 wks for Full Assessment) |
-| **Two-Tier Pricing Anchor** | **Tier 1 (Phase 0 Info Quality Baseline):** `€2,000–€5,000` (3 wks) · **Tier 2 (Full Context Governance Assessment):** `€3,500–€10,000` (6–10 wks) |
-| **Primary Client Outcome KPI** | 100% of P0 oversharing sites identified, authoritative source-of-truth & taxonomy blueprint delivered, and 30/60/90-day Copilot/RAG readiness roadmap approved |
-| **Compounding Path** | Directly enables **`OP-ITG-013`** (Agent Governance), **`OP-DTX-005`** (*Microsoft IQ*), and recurring **`OP-ITG-018`** (MIP Retainer) |
+| **Initial Cash Outlay** | **\$0** (ADPA/ECS/ontology templates + diagnostic questionnaire in portfolio) |
+| **Capacity Allocation** | **6–10 hrs/week** (3 wks Tier 1 / 6–10 wks Tier 2) |
+| **Two-Tier Pricing Anchor** | **Tier 1 (Information Quality Baseline):** `€2,000–€5,000` · **Tier 2 (Full Context Governance):** `€3,500–€10,000` |
+| **Bundle (with `OP-ITG-013`)** | Phase 0 combined `€4,500–€8,500` — [Combined-ITG-013-014-Phase-0-Wedge.md](Combined-ITG-013-014-Phase-0-Wedge.md) |
+| **Primary Client Outcome KPI** | P0 oversharing sites identified; SoT + taxonomy blueprint approved; 30/60/90-day context roadmap accepted |
+| **Compounding Path** | `OP-ITG-013`, `OP-DTX-005`, `OP-ITG-018` (MIP), `OP-FIN-011` (Tier D) |
 
-## 2. 10-Prospect CIO / CDO / CAIO Discovery Tracker *(Empty Until Real Outreach)*
+---
 
-| # | Date | Organization & Seat Band | Role (CIO/CDO/CAIO) | Primary Stack (M365/Confluence) | Top Context Blocker | Outcome |
+## 2. Discovery tracker (10 prospects)
+
+*Planning names #1–10 match [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md).*
+
+| # | Date | Organization (planning) | Role | Stack | P0 flags | Tier / outcome |
 | :-: | --- | --- | --- | --- | --- | --- |
-| 1 | - | *(awaiting discovery)* | - | - | - | - |
-| 2 | - | *(awaiting discovery)* | - | - | - | - |
-| 3 | - | *(awaiting discovery)* | - | - | - | - |
-| 4 | - | *(awaiting discovery)* | - | - | - | - |
-| 5 | - | *(awaiting discovery)* | - | - | - | - |
-| 6 | - | *(awaiting discovery)* | - | - | - | - |
-| 7 | - | *(awaiting discovery)* | - | - | - | - |
-| 8 | - | *(awaiting discovery)* | - | - | - | - |
-| 9 | - | *(awaiting discovery)* | - | - | - | - |
-| 10 | - | *(awaiting discovery)* | - | - | - | - |
+| 1 | — | Benelux Legal Services Group | CDO | M365 + legal DMS | — | Invite planned |
+| 2 | — | Rhine Manufacturing HoldCo | CIO | Teams + ERP SOPs | — | Invite planned |
+| 3 | — | Nordic Health Network | CAIO | Clinical M365 | — | Invite planned |
+| 4 | — | Wealth Platform BV | CDO | FS KYC policies | — | Invite planned |
+| 5 | — | EU Engineering Alliance | CIO | Confluence + SP | — | Invite planned |
+| 6 | — | Retail Franchise Group | CIO | Store ops KB | — | Invite planned |
+| 7 | — | Insurance Transformation Co | CDO | Purview + Copilot | — | Invite planned |
+| 8 | — | PE Portfolio Shared Services | CAIO | Multi-tenant M&A | — | Invite planned |
+| 9 | — | Public Sector Shared Service | CIO | Sovereign M365 | — | Invite planned |
+| 10 | — | B2B SaaS Scale-Up | CIO | Customer KB | — | Invite planned |
 
-## 3. Locked Scope, Deliverables & Explicit Out-of-Scope Boundaries
+**GTM:** [LinkedIn-GTM-Copy.md](LinkedIn-GTM-Copy.md) · **Market basis:** [Tier-2-Market-Research.md](Tier-2-Market-Research.md)
 
-- **Core Deliverables:**
-  1. **Knowledge Intelligence & Context Maturity Scorecard** (25 controls, 5 pillars)
-  2. **Taxonomy, Ontology & Knowledge Graph Architecture Blueprint** (ADPA/ECS-aligned)
-  3. **Authoritative Source-of-Truth & Lifecycle Governance Playbook**
-  4. **30/60/90-Day Zero-Oversharing & Context-Readiness Roadmap**
-- **Explicit Out-of-Scope:**
-  - Manual file-by-file migration/cleanup of terabytes of legacy SharePoint data
-  - Custom LLM fine-tuning or building bespoke vector database software from scratch
+---
 
-## 4. Exit / Kill Criteria
-- **Pivot Trigger:** If CIO/CDO buyers bundle context governance strictly inside Copilot security rollouts, package `OP-ITG-014` as an integrated module inside `OP-ITG-013` (Agent Governance) and `OP-ITG-018` (MIP).
+## 3. Locked scope, deliverables & out-of-scope
 
-## 5. Director Gate Sign-Off (`G4`)
-- **Approval Status:** `PENDING_DIRECTOR_SIGNOFF`
-- **Approved By:** ___________________________ **Date:** _______________
+**Deliverables:** See [Delivery-Playbook-and-SOW.md](Delivery-Playbook-and-SOW.md)
+
+- Knowledge & Context Maturity Scorecard (25 controls)  
+- Taxonomy / ontology / knowledge graph blueprint (ADPA/ECS-aligned)  
+- Authoritative SoT & lifecycle playbook  
+- Zero-oversharing & 30/60/90 roadmap  
+
+**Out-of-scope:**
+
+- Terabyte manual migration  
+- Custom LLM / vector platform build  
+- Statutory legal opinions on GDPR interpretation  
+
+---
+
+## 4. Stage 4 Pre-Pilot Gate (`G4`) checklist
+
+- [x] **7 Pivotal Questions** in [Ideation-Spark.md](Ideation-Spark.md)  
+- [x] **Tier 2 market research** — [Tier-2-Market-Research.md](Tier-2-Market-Research.md) (2026-11-26)  
+- [x] **Diagnostic questionnaire** + Tier cut sheet + delivery playbook  
+- [x] **GTM wave 1 planning** (tracker + LinkedIn copy)  
+- [x] **IP honesty audit** — [IP-Readiness-and-ADPA-ECS-Audit.md](IP-Readiness-and-ADPA-ECS-Audit.md)  
+- [ ] **≥3 discovery invites sent** (`HYP-2027-017` → `Testing`)  
+- [ ] **Named Pilot #1 sponsor** (`HYP-2027-018`)  
+- [ ] **Director sign-off** §5 · inventory `Idea` → `Pilot`
+
+---
+
+## 5. Director adjudication (`requires_human_approval: true`)
+
+| Field | Entry |
+| --- | --- |
+| **Decision Owner** | Menno Drescher (Director, CBa Consult) |
+| **Gate Status** | `PENDING` |
+| **Approval Date & Notes** | *—* |

@@ -43,7 +43,7 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 
 ## Related Opportunities
 
-`OP-ITG-002`, `OP-ITG-011` (precursors) · `OP-ITG-016` (follow-on architecture) · `OP-HR-009`, `OP-RSK-004` (pairs with) · `OP-SCM-003` (procurement catalog portal — SKU `CBA-ITG-013-T1/T2`)
+`OP-ITG-002`, `OP-ITG-011` (precursors) · `OP-ITG-014` (context layer — [Combined Phase 0 wedge](../OP-ITG-014_Knowledge_Context_Governance/Combined-ITG-013-014-Phase-0-Wedge.md)) · `OP-ITG-016` (follow-on architecture) · `OP-HR-009`, `OP-RSK-004` (pairs with) · `OP-SCM-003` (procurement catalog — SKU `CBA-ITG-013-T1/T2`)
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
