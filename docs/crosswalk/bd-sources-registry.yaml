@@ -220,6 +220,13 @@ opportunities:
     source_documents:
       - SRGCM17235
 
+  OP-ITG-024_Global_247_SOC_Continuous_Monitoring:
+    id: OP-ITG-024
+    folders:
+      - Build a Security and Compliance Practice
+    notes:
+      - "Primary sources on ADPA Projects Lists: Defense 24-7 SOCs Architecture\\ (DERA, Alliance Resilience, SOC mesh ideation). Non-MSSP architecture only."
+
 reference_documents:
   - id: SRGCM17235
     title: "The Frontier HR Leader"

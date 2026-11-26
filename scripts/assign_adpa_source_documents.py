@@ -42,6 +42,7 @@ FOLDER_PRIMARY: dict[str, str] = {
     "ADPA ICT Governance Framework": "OP-ITG-002",
     "European Aviation Resilience Network": "OP-ITG-016",
     "Drone Spectrum Analysis IoT devices": "OP-ITG-023",
+    "Defense 24-7 SOCs Architecture": "OP-ITG-024",
 }
 
 # Additional OPs that receive a full folder manifest without changing primary ownership above.

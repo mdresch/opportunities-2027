@@ -42,7 +42,7 @@ Design how 500+ enterprise AI agents interact at scale: agent orchestration, age
 
 ## Related Opportunities
 
-`OP-ITG-013` (precursor — must be piloted first) · `OP-HR-009` (Human + Agent Workforce Operating Model)
+`OP-ITG-013` (precursor — must be piloted first) · `OP-HR-009` (Human + Agent Workforce Operating Model) · `OP-ITG-024` (Global 24/7 SOC mesh & continuous monitoring — **Defence 24-7 SOCs** ADPA cluster; EARN SOC mesh patterns stay cross-linked here)
 
 ## Next Steps (Tier 2 → Pilot Gate)
 

@@ -14,8 +14,9 @@
 
 **Status:** 🔥 **Track B program complete** in [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage **18**, `PMP-BL-v4.0.0`, Phases 1–4) · **Commercial `Idea`** — Tier 2 research & delivery pack complete 2026-11-26 · Client Pilot #1 pending  
 **Tier:** B — Track B flagship *(commercial Q2–Q4 2027)* · Strategic assets **Digital Labor** + **Sovereign Information**  
-**Functional Area:** Digital Transformation  
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [Tier-2-Market-Research.md](Tier-2-Market-Research.md) · [MXC-Repo-Artifact-Crosswalk.md](MXC-Repo-Artifact-Crosswalk.md) · [Portfolio-Status-Register.md §2b](../../docs/registers/Portfolio-Status-Register.md)
+**Functional Area:** 6. IT and Technology *(includes IT/ICT Governance)* · **Signature Toolkit:** Digital Transformation  
+**Category:** Platform-Backed Architecture / Advisory · **Size:** Medium & Large  
+**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md) · [One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md](One_Pager_OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero.md) · [Tier-2-Market-Research.md](Tier-2-Market-Research.md) · [MXC-Repo-Artifact-Crosswalk.md](MXC-Repo-Artifact-Crosswalk.md) · [Azure-Scale-Out-and-Boundary-Matrix.md](Azure-Scale-Out-and-Boundary-Matrix.md) · [Portfolio-Status-Register.md §2b](../../docs/registers/Portfolio-Status-Register.md#2b-graduated-track-b-repositories-non-duplicating-rollup) · **Graduated Track B SSOT:** [`mdresch/mxc`](https://github.com/mdresch/mxc)
 
 ## Positioning
 
@@ -52,3 +53,10 @@
 - [ ] Record **client/lab** benchmark + update Portfolio §2b date.  
 - [ ] Wave 1 discovery (#1–3) → `HYP-2027-020` `Testing`.  
 - [ ] Paid Tier 1/2 → `G4` Director sign-off.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content
+
