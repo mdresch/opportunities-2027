@@ -5,12 +5,16 @@ import { MarkdownView } from './MarkdownView';
 
 interface OpportunityDrawerProps {
   opportunity: Opportunity | null;
+  authToken: string;
+  onUnauthorized?: () => void;
   onClose: () => void;
   onOpenReportSlug: (slug: string) => void;
 }
 
 export const OpportunityDrawer: React.FC<OpportunityDrawerProps> = ({
   opportunity,
+  authToken,
+  onUnauthorized,
   onClose,
   onOpenReportSlug,
 }) => {
@@ -35,14 +39,20 @@ export const OpportunityDrawer: React.FC<OpportunityDrawerProps> = ({
       setDocContent('');
       setDocPath('');
     }
-  }, [opportunity]);
+  }, [opportunity, authToken]);
 
   const loadDocument = async (path: string) => {
     setLoadingDoc(true);
     setDocError(null);
     setDocPath(path);
     try {
-      const res = await fetch(`/api/document?path=${encodeURIComponent(path)}`);
+      const res = await fetch(`/api/document?path=${encodeURIComponent(path)}`, {
+        headers: { Authorization: `Bearer ${authToken}` },
+      });
+      if (res.status === 401) {
+        onUnauthorized?.();
+        return;
+      }
       if (!res.ok) throw new Error('Could not load document');
       const data = await res.json();
       setDocContent(data.content);

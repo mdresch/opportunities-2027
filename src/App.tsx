@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   FileText,
   FlaskConical,
+  Inbox,
   LayoutDashboard,
+  LogOut,
   Menu,
+  Presentation,
   RefreshCw,
   Table2,
   X,
@@ -14,8 +17,15 @@ import { InventoryView } from './components/InventoryView';
 import { HypothesesView } from './components/HypothesesView';
 import { ReportsView } from './components/ReportsView';
 import { OpportunityDrawer } from './components/OpportunityDrawer';
+import { ClientShowcase } from './components/ClientShowcase';
+import { ClientReportsPage } from './components/ClientReportsPage';
+import { AgentGovernancePortal } from './components/AgentGovernancePortal';
+import { InternalAuthGate } from './components/InternalAuthGate';
+import { ScopingRequestsView } from './components/ScopingRequestsView';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
-type NavTab = 'overview' | 'inventory' | 'hypotheses' | 'reports';
+type NavTab = 'overview' | 'inventory' | 'hypotheses' | 'reports' | 'inquiries';
+type AppMode = 'internal' | 'client' | 'client-reports' | 'assessment';
 
 const NAV_ITEMS: Array<{
   id: NavTab;
@@ -26,36 +36,160 @@ const NAV_ITEMS: Array<{
   { id: 'inventory', label: 'Opportunity Inventory', icon: Table2 },
   { id: 'hypotheses', label: 'Hypotheses & Wave 1', icon: FlaskConical },
   { id: 'reports', label: 'Reports & Briefs', icon: FileText },
+  { id: 'inquiries', label: 'Scoping Requests', icon: Inbox },
 ];
 
+function getInitialMode(): AppMode {
+  if (typeof window === 'undefined') return 'client';
+  const params = new URLSearchParams(window.location.search);
+  const view = params.get('view');
+  if (view === 'internal') return 'internal';
+  if (view === 'reports' || view === 'briefs') return 'client-reports';
+  if (
+    params.get('assessment') === 'agent-governance' ||
+    view === 'agent-governance'
+  ) {
+    return 'assessment';
+  }
+  return 'client';
+}
+
 export default function App() {
+  const [mode, setMode] = useState<AppMode>(getInitialMode);
+  const [authToken, setAuthToken] = useState<string | null>(null);
+  const [authUser, setAuthUser] = useState<string | null>(null);
   const [data, setData] = useState<PortfolioData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<NavTab>('overview');
   const [selectedOpportunity, setSelectedOpportunity] = useState<Opportunity | null>(null);
   const [pendingReportSlug, setPendingReportSlug] = useState<string | null>(null);
   const [pendingDocPath, setPendingDocPath] = useState<string | null>(null);
+  const [pendingClientSection, setPendingClientSection] = useState<string | null>(null);
+  const [pendingShortlistItem, setPendingShortlistItem] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const loadPortfolio = async () => {
-    setLoading(true);
+  const switchMode = useCallback((nextMode: AppMode) => {
+    setMode(nextMode);
+    setMobileMenuOpen(false);
+    const url = new URL(window.location.href);
+    url.searchParams.delete('view');
+    url.searchParams.delete('assessment');
+    if (nextMode === 'internal') {
+      url.searchParams.set('view', 'internal');
+    } else if (nextMode === 'client-reports') {
+      url.searchParams.set('view', 'reports');
+    } else if (nextMode === 'assessment') {
+      url.searchParams.set('assessment', 'agent-governance');
+    }
+    window.history.replaceState({}, '', url.toString());
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
+  const handleUnauthorized = useCallback(() => {
+    setAuthToken(null);
+    setAuthUser(null);
+    setData(null);
+    setSelectedOpportunity(null);
     setError(null);
-    try {
-      const res = await fetch('/api/portfolio');
-      if (!res.ok) throw new Error('Failed to fetch portfolio data');
-      const json: PortfolioData = await res.json();
-      setData(json);
-    } catch {
-      setError('Could not load portfolio data from the repository server.');
-    } finally {
-      setLoading(false);
+  }, []);
+
+  const handleSignOut = async () => {
+    const tokenToRevoke = authToken;
+    handleUnauthorized();
+    switchMode('client');
+    if (tokenToRevoke) {
+      try {
+        await fetch('/api/auth/logout', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${tokenToRevoke}` },
+        });
+      } catch {
+        // Ignore network errors on sign-out after clearing local session state
+      }
     }
   };
 
+  const loadPortfolio = useCallback(
+    async (token: string) => {
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch('/api/portfolio', {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (res.status === 401) {
+          handleUnauthorized();
+          return;
+        }
+        if (!res.ok) throw new Error('Failed to fetch portfolio data');
+        const json: PortfolioData = await res.json();
+        setData(json);
+      } catch {
+        setError('Could not load portfolio data from the repository server.');
+      } finally {
+        setLoading(false);
+      }
+    },
+    [handleUnauthorized]
+  );
+
   useEffect(() => {
-    loadPortfolio();
-  }, []);
+    if (mode === 'internal' && authToken && !data) {
+      loadPortfolio(authToken);
+    }
+  }, [mode, authToken, data, loadPortfolio]);
+
+  if (mode === 'assessment') {
+    return (
+      <AgentGovernancePortal
+        onBackToShowcase={() => switchMode('client')}
+        onSwitchToInternal={() => switchMode('internal')}
+      />
+    );
+  }
+
+  if (mode === 'client-reports') {
+    return (
+      <ClientReportsPage
+        onBackToShowcase={(targetSection, shortlistItem) => {
+          setPendingClientSection(targetSection ?? null);
+          setPendingShortlistItem(shortlistItem ?? null);
+          switchMode('client');
+        }}
+        onOpenAgentAssessment={() => switchMode('assessment')}
+        onSwitchToInternal={() => switchMode('internal')}
+      />
+    );
+  }
+
+  if (mode === 'client') {
+    return (
+      <ClientShowcase
+        onSwitchToInternal={() => switchMode('internal')}
+        onOpenAgentAssessment={() => switchMode('assessment')}
+        onOpenReportsLibrary={() => switchMode('client-reports')}
+        initialSection={pendingClientSection}
+        initialShortlistItem={pendingShortlistItem}
+        onClearInitialNavigation={() => {
+          setPendingClientSection(null);
+          setPendingShortlistItem(null);
+        }}
+      />
+    );
+  }
+
+  if (!authToken) {
+    return (
+      <InternalAuthGate
+        onAuthenticated={(token, username) => {
+          setAuthToken(token);
+          setAuthUser(username);
+        }}
+        onBackToClient={() => switchMode('client')}
+      />
+    );
+  }
 
   const handleOpenReportSlug = (slug: string) => {
     setSelectedOpportunity(null);
@@ -86,7 +220,7 @@ export default function App() {
             <div className="font-display text-lg font-bold tracking-tight text-white whitespace-nowrap">
               Opportunities 2027
             </div>
-            <div className="text-xs text-[#9cb4cc] mt-1">CBa Consult · Portfolio Explorer</div>
+            <div className="text-xs text-[#9cb4cc] mt-1">CBa Consult · Internal Explorer</div>
           </button>
         </div>
 
@@ -110,10 +244,29 @@ export default function App() {
               </button>
             );
           })}
+
+          <div className="pt-4 mt-4 border-t border-[#1e3b5c] space-y-1">
+            <button
+              type="button"
+              onClick={() => switchMode('client')}
+              className="w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-medium rounded-md text-[#48c5b2] hover:bg-[#1e3b5c] hover:text-white transition-colors whitespace-nowrap cursor-pointer"
+            >
+              <Presentation className="w-4 h-4 shrink-0" />
+              <span>Client Showcase</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleSignOut}
+              className="w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-medium rounded-md text-[#c4d1df] hover:bg-[#1e3b5c] hover:text-white transition-colors whitespace-nowrap cursor-pointer"
+            >
+              <LogOut className="w-4 h-4 shrink-0" />
+              <span>Sign Out</span>
+            </button>
+          </div>
         </nav>
 
         <div className="px-6 py-4 border-t border-[#1e3b5c] text-xs text-[#9cb4cc] space-y-1">
-          <div className="text-white font-medium">Menno Drescher</div>
+          <div className="text-white font-medium">{authUser || 'Menno Drescher'}</div>
           <div>Tailored Hybrid SIDPA</div>
           {data && (
             <div className="font-mono text-[11px] text-[#48c5b2] pt-1">
@@ -159,6 +312,24 @@ export default function App() {
                   </button>
                 );
               })}
+              <div className="pt-3 mt-3 border-t border-[#1e3b5c] space-y-1">
+                <button
+                  type="button"
+                  onClick={() => switchMode('client')}
+                  className="w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-medium rounded-md text-[#48c5b2] hover:bg-[#1e3b5c] hover:text-white whitespace-nowrap cursor-pointer"
+                >
+                  <Presentation className="w-4 h-4 shrink-0" />
+                  <span>Client Showcase</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-medium rounded-md text-[#c4d1df] hover:bg-[#1e3b5c] hover:text-white whitespace-nowrap cursor-pointer"
+                >
+                  <LogOut className="w-4 h-4 shrink-0" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
             </nav>
           </div>
           <div className="flex-1" onClick={() => setMobileMenuOpen(false)} />
@@ -167,7 +338,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Top Bar — Clean Breadcrumb + Primary Action */}
+        {/* Top Bar — Clean Breadcrumb + Primary Actions */}
         <header className="h-14 bg-white border-b border-[#dae3e9] px-4 sm:px-8 flex items-center justify-between gap-4 shrink-0">
           <div className="flex items-center gap-3 min-w-0">
             <button
@@ -189,14 +360,30 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
             <button
               type="button"
-              onClick={loadPortfolio}
+              onClick={() => loadPortfolio(authToken)}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#40536b] hover:text-[#10253f] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-              Refresh Data
+              Refresh
+            </button>
+            <button
+              type="button"
+              onClick={() => switchMode('client')}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-white bg-[#0c8b82] hover:bg-[#075d68] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              <Presentation className="w-3.5 h-3.5" />
+              Client Showcase
+            </button>
+            <button
+              type="button"
+              onClick={handleSignOut}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#40536b] hover:text-[#10253f] bg-white hover:bg-[#f5f8fa] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Sign Out</span>
             </button>
           </div>
         </header>
@@ -222,7 +409,7 @@ export default function App() {
               <p className="text-sm text-[#52647a] mt-2">{error}</p>
               <button
                 type="button"
-                onClick={loadPortfolio}
+                onClick={() => loadPortfolio(authToken)}
                 className="mt-4 px-4 py-2 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md cursor-pointer"
               >
                 Retry
@@ -255,6 +442,8 @@ export default function App() {
                 <ReportsView
                   htmlReports={data.htmlReports}
                   coreDocuments={data.coreDocuments}
+                  authToken={authToken}
+                  onUnauthorized={handleUnauthorized}
                   initialReportSlug={pendingReportSlug}
                   initialDocPath={pendingDocPath}
                   onClearInitial={() => {
@@ -262,6 +451,14 @@ export default function App() {
                     setPendingDocPath(null);
                   }}
                 />
+              )}
+              {activeTab === 'inquiries' && (
+                <ErrorBoundary>
+                  <ScopingRequestsView
+                    authToken={authToken}
+                    onUnauthorized={handleUnauthorized}
+                  />
+                </ErrorBoundary>
               )}
             </>
           ) : null}
@@ -271,9 +468,12 @@ export default function App() {
       {/* Opportunity Detail Slide-Over */}
       <OpportunityDrawer
         opportunity={selectedOpportunity}
+        authToken={authToken}
+        onUnauthorized={handleUnauthorized}
         onClose={() => setSelectedOpportunity(null)}
         onOpenReportSlug={handleOpenReportSlug}
       />
     </div>
   );
 }
+

@@ -92,6 +92,35 @@ export interface HtmlReportEntry {
   subtitle: string;
   sourcePath: string;
   url: string;
+  pdfSourcePath?: string;
+  pdfUrl?: string;
+  audience?: 'internal' | 'client';
+  referencePdfUrl?: string;
+  referencePdfLabel?: string;
+}
+
+export type ClientReportCategory =
+  | 'Executive Reports'
+  | 'Flagship One-Pagers'
+  | 'Executive Briefs'
+  | 'Market Development';
+
+export interface ClientReportEntry {
+  slug: string;
+  title: string;
+  subtitle: string;
+  editionLabel: string;
+  pagesLabel: string;
+  url: string;
+  category?: ClientReportCategory;
+  featuredOnHome?: boolean;
+  opportunityId?: string;
+  audience?: string;
+  duration?: string;
+  investmentAnchor?: string;
+  keyHighlights?: string[];
+  referencePdfUrl?: string;
+  referencePdfLabel?: string;
 }
 
 export interface CoreDocumentEntry {
@@ -99,6 +128,8 @@ export interface CoreDocumentEntry {
   category: string;
   path: string;
   description: string;
+  referencePdfUrl?: string;
+  referencePdfLabel?: string;
 }
 
 export interface PortfolioData {
@@ -128,3 +159,89 @@ export interface PortfolioData {
   htmlReports: HtmlReportEntry[];
   coreDocuments: CoreDocumentEntry[];
 }
+
+export type ExecutiveAudience =
+  | 'CFO & Finance'
+  | 'CIO & CISO'
+  | 'COO & Commercial'
+  | 'Board & PE';
+
+export interface ClientFlagshipService {
+  id: string;
+  title: string;
+  strategicAsset: string;
+  audiences: ExecutiveAudience[];
+  buyerLine: string;
+  headline: string;
+  summary: string;
+  outcomes: string[];
+  duration: string;
+  investmentRange: string;
+  entryWedge?: string;
+  onePagerPath: string;
+  featuredWide?: boolean;
+}
+
+export interface ClientCatalogItem {
+  id: string;
+  practice: string;
+  title: string;
+  description: string;
+  category: string;
+  organizationSize: string;
+  duration: string;
+  investmentRange: string;
+  toolkit: string;
+  onePagerPath?: string;
+  isFlagship: boolean;
+}
+
+export interface ClientPortfolioData {
+  principal: string;
+  firm: string;
+  flagships: ClientFlagshipService[];
+  catalog: ClientCatalogItem[];
+  practices: string[];
+  mipOnePagerPath: string;
+  flagshipOverviewPath: string;
+  clientReports: ClientReportEntry[];
+}
+
+export type InquiryStatus = 'new' | 'contacted' | 'scheduled' | 'archived';
+
+export type EmailDeliveryStatus = 'sent' | 'not_configured' | 'failed';
+
+export interface ScopingInquiryPayload {
+  fullName: string;
+  email: string;
+  organization: string;
+  role: string;
+  targetWindow: string;
+  selectedServices: string[];
+  notes: string;
+}
+
+export interface ScopingInquiryResponse {
+  referenceId: string;
+  submittedAt: string;
+  emailDeliveryStatus: EmailDeliveryStatus;
+  inquiry: ScopingInquiryPayload;
+}
+
+export interface PersistedScopingInquiry extends ScopingInquiryPayload {
+  id: string;
+  referenceId: string;
+  status: InquiryStatus;
+  adminNotes: string;
+  emailDeliveryStatus: EmailDeliveryStatus;
+  createdAt: string | null;
+  updatedAt: string | null;
+}
+
+export interface DeliveryChannelStatus {
+  emailConfigured: boolean;
+  webhookConfigured: boolean;
+  notifyEmail: string | null;
+}
+
+

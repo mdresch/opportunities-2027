@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-FIN-009 | Continuous Close &amp; Real-Time Reconciliation Bridge — Client One-Pager</title>
+<style>
+@page { size: A4; margin: 10mm 12mm 10mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.3pt;
+  line-height: 1.36;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 270mm;
+  padding-bottom: 10mm;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 14px 17px 13px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  font-size: 7.2pt;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.hero h1 {
+  font-size: 17.5pt;
+  line-height: 1.13;
+  letter-spacing: -0.35px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.4pt;
+  line-height: 1.4;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 8px 0 9px;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 7px 9px;
+}
+.stat b {
+  display: block;
+  font-size: 12pt;
+  color: #10253f;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.9pt;
+  color: #52647a;
+  line-height: 1.25;
+}
+.kicker {
+  font-size: 7.1pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 9px 0 3px;
+}
+h2 {
+  font-size: 11.4pt;
+  color: #10253f;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-bottom: 8px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 7.5px 9px;
+}
+.card h3 {
+  font-size: 8.4pt;
+  color: #075d68;
+  margin: 0 0 3px;
+}
+.card p {
+  font-size: 7.5pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.35;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 8px;
+  font-size: 7.6pt;
+}
+th {
+  background: #10253f;
+  color: #ffffff;
+  text-align: left;
+  padding: 5.5px 7px;
+  font-size: 7.3pt;
+  letter-spacing: 0.3px;
+}
+td {
+  padding: 5.5px 7px;
+  border-bottom: 1px solid #dae3e9;
+  vertical-align: top;
+  color: #2c3e54;
+}
+tr:nth-child(even) td { background: #f8fbfc; }
+.mono { font-family: "Courier New", monospace; font-weight: bold; color: #075d68; }
+ul.clean {
+  margin: 3px 0 0;
+  padding-left: 14px;
+}
+ul.clean li {
+  margin-bottom: 3.5px;
+  font-size: 7.6pt;
+  color: #2c3e54;
+  line-height: 1.35;
+}
+.cta {
+  background: #10253f;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 9px 13px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.cta-title {
+  font-size: 8.5pt;
+  font-weight: bold;
+  color: #64d4c4;
+  margin-bottom: 2px;
+}
+.cta-text {
+  font-size: 7.6pt;
+  color: #e2ecf5;
+  margin: 0;
+}
+.cta-anchor {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 7.5pt;
+  color: #c4d1df;
+}
+.cta-anchor b {
+  display: block;
+  font-size: 10.5pt;
+  color: #ffffff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.9pt;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <span>CBa Consult · Flagship Service One-Pager · OP-FIN-009</span>
+      <span class="hero-meta">For CFOs, Corporate Controllers &amp; Finance Leaders</span>
+    </div>
+    <h1>Continuous Close &amp; Real-Time Reconciliation Bridge</h1>
+    <p class="hero-sub">
+      <strong>Close faster after the 3rd — without buying €50k–€150k+ enterprise close software.</strong>
+      Bridges your <strong>23rd payroll close</strong> to post-3rd attested reporting using a battle-tested, exception-based methodology originated at RGP (2007–2008) and updated for <strong>2027 US GAAP, IFRS &amp; IFRS 18</strong> inside your existing ERP &amp; BI stack.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <b>23rd → 3rd+</b>
+      <span>End-to-end monthly close &amp; payroll reconciliation bridge</span>
+    </div>
+    <div class="stat">
+      <b>≤2–3 Days</b>
+      <span>Target post-3rd attested close with €0.00 payroll/clearing delta</span>
+    </div>
+    <div class="stat">
+      <b>10 Controls</b>
+      <span>Automated accrual, 4-4-5, dual-calendar &amp; CoS guardrails</span>
+    </div>
+    <div class="stat">
+      <b>€0 Software</b>
+      <span>Delivered in your existing ERP, HRIS &amp; BI environment</span>
+    </div>
+  </div>
+
+  <div class="kicker">01. The Operational Problem Eliminated</div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>The 23rd → 3rd+ Blind Spot</h3>
+      <p>Payroll locks on the 23rd, yet accruals, mobility/lease/fuel invoices, Concur expenses, and sub-ledger clearings pile up until after the 3rd.</p>
+    </div>
+    <div class="card">
+      <h3>Month-End Fire Drills</h3>
+      <p>Accountants spend ~80% of close week re-checking clean, zero-variance accounts rather than resolving true out-of-tolerance exceptions.</p>
+    </div>
+    <div class="card">
+      <h3>Provisional vs. Official Conflict</h3>
+      <p>Unwatermarked flash dashboards leak unadjusted intra-month numbers that conflict with post-3rd attested GAAP/IFRS &amp; IFRS 18 MPMs.</p>
+    </div>
+  </div>
+
+  <div class="kicker">02. The 3-Phase Exception-Based Close Loop</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 18%;">Monthly Window</th>
+        <th style="width: 24%;">Phase</th>
+        <th>Automated Close Mechanics &amp; Exception Handling</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mono">Days 1–22</td>
+        <td><strong>1. Transaction Matching</strong></td>
+        <td>Daily bank, AP, AR, and corporate-card feeds auto-match continuously; clean lines clear while unmatched items receive standardized Reason Codes.</td>
+      </tr>
+      <tr>
+        <td class="mono">23rd – Month-End</td>
+        <td><strong>2. Payroll Close &amp; Pre-Validated JEs</strong></td>
+        <td>23rd payroll lock triggers automated payroll-to-GL matching, <strong>24th–25th HRIS master-data sync</strong>, and pre-validated delta accruals (Preparer → Reviewer → Approver).</td>
+      </tr>
+      <tr>
+        <td class="mono">Days 1–3+</td>
+        <td><strong>3. Exception-Only Variance &amp; Close</strong></td>
+        <td>Accounts within approved risk thresholds auto-certify; the Controller reviews <strong>only out-of-tolerance breaks</strong>, publishing attested reports cleanly after the 3rd.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kicker">03. Built-In Financial Truth, IFRS 18 &amp; SoD Controls</div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>10 Automated Close Guardrails (FIN-CC-01 – 10)</h3>
+      <ul class="clean">
+        <li><strong>Core Loop (01–06):</strong> Explicit 23rd-cutoff deltas, mandatory <strong>Day-1 auto-reversals</strong> (zero double-counting), working-day normalized &gt;5% MRC variance alerts, 24th–25th HRIS sync, sequenced dependency gates, and tiered sign-off.</li>
+        <li><strong>Calendars &amp; Margin Truth (07–10):</strong> Reconciles <span class="mono">01-01–31-12</span> Statutory vs. <span class="mono">01-07–30-06</span> Budget calendars &amp; 31-12 stubs; prorates salaried CoS across <strong>4-4-5 (20/20/25 workdays)</strong>; locks Unbilled WIP &amp; Subcontractor CoS before Fixed-Price % of Completion; ties <strong>1,500-hr standard CoS absorption</strong> to HRIS payroll at €0.00 variance.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>IFRS 18 (Jan 1, 2027), SoD &amp; GDPR</h3>
+      <ul class="clean">
+        <li><strong>IFRS 18 MPM Shield (¶117):</strong> Intra-month views stay watermarked <em>Provisional — Internal Management View Only</em> so flash dashboards never drift into audited MPM scope.</li>
+        <li><strong>CoS-by-Nature Tie-Out (¶78–83):</strong> Cost of Sales by function reconciles monthly to Employee Benefits by nature with zero bench-shifting.</li>
+        <li><strong>Official Real-Time KPIs:</strong> Only deterministic metrics (Cleared Cash, 23rd Locked Payroll/FTE, Close Readiness) publish before Day 3.</li>
+        <li><strong>SoD &amp; GDPR:</strong> Rule authors cannot approve rules or bypass GL locks; GL Approver separated from MPM Owner; zero individual salary PII in BI.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kicker">04. Fixed-Scope Pilot Deliverables (6–8 Weeks)</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 28%;">Deliverable</th>
+        <th>Concrete Client Artifact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Close Calendar &amp; Gate Blueprint</strong></td>
+        <td>End-to-end 23rd → 3rd+ Continuous Close Gantt, dependency gates, and role RACI across Payroll, AP/AR, Treasury, and Controlling.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Accrual &amp; Exception Playbook</strong></td>
+        <td>Automated accrual rules, mandatory Day-1 reversal logic, working-day variance thresholds, and standardized Reason Codes.</td>
+      </tr>
+      <tr>
+        <td><strong>3. IFRS 18 &amp; SoD Control Matrix</strong></td>
+        <td>GAAP / IFRS / IFRS 18 CoA mapping, Provisional vs. Attested KPI rules, and audit-ready Segregation of Duties matrix (100% conflict-free).</td>
+      </tr>
+      <tr>
+        <td><strong>4. Live Monthly Close Dry-Run</strong></td>
+        <td>Supervised validation across one live monthly close cycle targeting ≤2–3 business days post-3rd and €0.00 payroll/clearing variance.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cta">
+    <div>
+      <div class="cta-title">NEXT STEP · 30-MINUTE CLOSE-BOTTLENECK REVIEW</div>
+      <p class="cta-text">Map your 23rd → 3rd+ close calendar and identify immediate exception-automation &amp; IFRS 18 wins — naturally extends into <strong>OP-FIN-010</strong> (7-Layer Rate Engine) or <strong>OP-FIN-002</strong> (Multi-Unit Close).</p>
+    </div>
+    <div class="cta-anchor">
+      <b>€1,500 – €5,000</b>
+      <span>6–8 Weeks · Fixed-Scope Pilot</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · Independent Management &amp; Governance Advisory</span>
+    <span>OP-FIN-009 · Conflict-Free Pre-Assurance · Client Edition</span>
+  </div>
+</div>
+</body>
+</html>

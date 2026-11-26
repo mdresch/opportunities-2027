@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-ITG-013 | Enterprise AI Agent Governance Benchmark — Call-to-Action One-Pager</title>
+<style>
+@page { size: A4; margin: 10mm 12mm 10mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.6pt;
+  line-height: 1.38;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p, ul { margin-top: 0; }
+.sheet {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 15px 18px 14px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 7px;
+  font-size: 7.4pt;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  letter-spacing: 0.4px;
+  font-weight: normal;
+  text-transform: none;
+}
+.hero h1 {
+  font-size: 19.5pt;
+  line-height: 1.12;
+  letter-spacing: -0.4px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 9pt;
+  line-height: 1.42;
+  color: #d8e4f0;
+  margin: 0;
+  max-width: 168mm;
+}
+.hero-sub strong { color: #ffffff; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 9px 0;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 7px 9px;
+}
+.stat b {
+  display: block;
+  font-size: 13pt;
+  color: #142a48;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 7.1pt;
+  color: #52647a;
+  line-height: 1.3;
+}
+
+.section-kicker {
+  font-size: 7.2pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin-bottom: 3px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  gap: 10px;
+  margin: 8px 0 9px;
+}
+.panel {
+  border: 1px solid #dae3e9;
+  border-radius: 5px;
+  padding: 9px 11px;
+  background: #ffffff;
+}
+.panel h2 {
+  font-size: 10.6pt;
+  color: #10253f;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.pillar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.4pt;
+}
+.pillar-table td {
+  padding: 3.8px 4px;
+  border-bottom: 1px solid #e6edf2;
+  vertical-align: top;
+}
+.pillar-table tr:last-child td { border-bottom: none; }
+.p-num {
+  width: 18px;
+  font-weight: bold;
+  color: #0c8b82;
+  font-family: "Courier New", monospace;
+}
+.p-name {
+  font-weight: bold;
+  color: #10253f;
+  white-space: nowrap;
+  padding-right: 6px;
+}
+.p-crit {
+  color: #075d68;
+  font-weight: bold;
+}
+.p-desc { color: #40536b; }
+
+.rf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rf-list li {
+  padding: 3.8px 0;
+  border-bottom: 1px solid #e6edf2;
+  font-size: 7.4pt;
+  color: #40536b;
+  line-height: 1.33;
+}
+.rf-list li:last-child { border-bottom: none; }
+.rf-list strong { color: #10253f; }
+.rf-code {
+  display: inline-block;
+  width: 30px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  color: #0c8b82;
+}
+
+.legend-note {
+  font-size: 6.9pt;
+  color: #52647a;
+  margin: 5px 0 0;
+}
+
+.steps-wrap {
+  margin: 8px 0 9px;
+}
+.steps-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+.steps-head h2 {
+  font-size: 10.6pt;
+  color: #10253f;
+  margin: 0;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+.step {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #0c8b82;
+  border-radius: 4px;
+  padding: 7.5px 9px;
+}
+.step b {
+  display: block;
+  font-size: 8.2pt;
+  color: #10253f;
+  margin-bottom: 3px;
+}
+.step p {
+  font-size: 7.3pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.tiers-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 0 0 9px;
+}
+.tier {
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 6.5px 9px;
+  background: #ffffff;
+}
+.tier-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.tier-name {
+  font-size: 7.8pt;
+  font-weight: bold;
+  color: #10253f;
+}
+.tier-price {
+  font-size: 7.6pt;
+  font-weight: bold;
+  color: #0c8b82;
+  font-family: "Courier New", monospace;
+}
+.tier p {
+  font-size: 7.1pt;
+  color: #52647a;
+  margin: 0;
+  line-height: 1.32;
+}
+
+.cta-box {
+  background: #10253f;
+  color: #e5edf5;
+  border-radius: 5px;
+  padding: 11px 14px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 12px;
+  align-items: center;
+}
+.cta-box h3 {
+  font-size: 11pt;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+.cta-box p {
+  font-size: 7.7pt;
+  color: #d8e4f0;
+  margin: 0 0 6px;
+  line-height: 1.38;
+}
+.cta-url {
+  display: inline-block;
+  background: #173454;
+  border: 1px solid #48c5b2;
+  color: #64d4c4;
+  font-family: "Courier New", monospace;
+  font-size: 7.1pt;
+  padding: 4px 7px;
+  border-radius: 3px;
+  text-decoration: none;
+  word-break: break-all;
+}
+.cta-contact {
+  border-left: 1px solid rgba(100, 212, 196, 0.3);
+  padding-left: 11px;
+  font-size: 7.5pt;
+  line-height: 1.48;
+  color: #d8e4f0;
+}
+.cta-contact strong { color: #ffffff; }
+.cta-contact .accent { color: #64d4c4; font-weight: bold; }
+
+.independence {
+  margin-top: 7px;
+  font-size: 6.9pt;
+  color: #52647a;
+  line-height: 1.35;
+}
+.footer {
+  margin-top: 7px;
+  padding-top: 5px;
+  border-top: 1px solid #dae3e9;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.8pt;
+  color: #62758a;
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="hero">
+    <div class="hero-top">
+      <span>CBa Consult &nbsp; / &nbsp; OP-ITG-013 Executive Benchmark</span>
+      <span class="hero-meta">CIO · CISO · Chief AI Officer · Audit Committee</span>
+    </div>
+    <h1>How Governed Is Your Enterprise AI Agent Fleet?</h1>
+    <p class="hero-sub">
+      Gartner warns that <strong>over 40% of agentic AI projects will be canceled by end-2027</strong> due to escalating costs, unclear ROI, or inadequate risk controls—right as <strong>EU AI Act Annex III (Dec 2, 2027)</strong>, <strong>DORA/NIS2</strong>, and <strong>SOX 404 / ISA 265</strong> close in. Run our complimentary self-assessment to benchmark shadow copilots, Non-Human Identity boundaries, FinOps caps, and audit readiness in minutes—100% independent of software vendors and statutory auditors.
+    </p>
+  </header>
+
+  <section class="stats" aria-label="Benchmark overview metrics">
+    <div class="stat">
+      <b>5 Min</b>
+      <span>Quick Top-10 P0 Red-Flag Triage for immediate risk visibility</span>
+    </div>
+    <div class="stat">
+      <b>15 Min</b>
+      <span>Full 40-Control Maturity Audit across 8 governance pillars</span>
+    </div>
+    <div class="stat">
+      <b>1.00–5.00</b>
+      <span>Weighted Agent Governance Index (1.25× on audit-critical pillars)</span>
+    </div>
+    <div class="stat">
+      <b>Instant PDF</b>
+      <span>Complimentary executive scorecard — zero tenant access needed</span>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <div class="section-kicker">40 Controls · Weighted Maturity Model</div>
+      <h2>The 8 Governance Pillars Benchmarked</h2>
+      <table class="pillar-table">
+        <tbody>
+          <tr>
+            <td class="p-num">01</td>
+            <td class="p-name">Agent Inventory <span class="p-crit">*</span></td>
+            <td class="p-desc">Unified registry across Copilot Studio, Power Platform, SaaS, custom &amp; MCP agents.</td>
+          </tr>
+          <tr>
+            <td class="p-num">02</td>
+            <td class="p-name">Owners &amp; HITL</td>
+            <td class="p-desc">Named Human Sponsors, HRIS Mover/Leaver suspension &amp; escalation authority.</td>
+          </tr>
+          <tr>
+            <td class="p-num">03</td>
+            <td class="p-name">Agent Identity <span class="p-crit">*</span></td>
+            <td class="p-desc">Dedicated Entra Agent ID / NHIs, short-lived tokens &amp; tested &lt;5-min kill switch.</td>
+          </tr>
+          <tr>
+            <td class="p-num">04</td>
+            <td class="p-name">Permissions &amp; SoD <span class="p-crit">*</span></td>
+            <td class="p-desc">Read vs. Write separation, ERP/payroll SoD boundaries &amp; MCP allowlists.</td>
+          </tr>
+          <tr>
+            <td class="p-num">05</td>
+            <td class="p-name">Lifecycle &amp; TTL</td>
+            <td class="p-desc">Dev→Prod promotion gates, Git prompt versioning &amp; automatic pilot expiry.</td>
+          </tr>
+          <tr>
+            <td class="p-num">06</td>
+            <td class="p-name">Audit &amp; Telemetry <span class="p-crit">*</span></td>
+            <td class="p-desc">Immutable SIEM / Agent 365 / WORM logging of prompts, tool calls &amp; overrides.</td>
+          </tr>
+          <tr>
+            <td class="p-num">07</td>
+            <td class="p-name">Agent FinOps</td>
+            <td class="p-desc">Cost-center chargeback, runaway loop breakers &amp; hard monthly spend ceilings.</td>
+          </tr>
+          <tr>
+            <td class="p-num">08</td>
+            <td class="p-name">Regulatory &amp; DLP</td>
+            <td class="p-desc">Purview DLP, zero-data-retention DPAs, GDPR Art. 22 &amp; EU AI Act Annex III.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="legend-note"><span class="p-crit">* 1.25× weight</span> applied to audit-critical pillars (Inventory, Identity, SoD Permissions &amp; Immutable Audit Trail).</p>
+    </div>
+
+    <div class="panel">
+      <div class="section-kicker">5-Minute Executive Triage</div>
+      <h2>Top P0 Exposures Caught Immediately</h2>
+      <ul class="rf-list">
+        <li><span class="rf-code">RF-01</span><strong>Shared human accounts or static API keys</strong> powering production agents instead of dedicated NHIs.</li>
+        <li><span class="rf-code">RF-02</span><strong>Unchecked ERP, banking, or payroll write access</strong> without Segregation of Duties or approval gates.</li>
+        <li><span class="rf-code">RF-03</span><strong>Orphaned "zombie" copilots</strong> still running after their creator changed roles or left.</li>
+        <li><span class="rf-code">RF-04</span><strong>Uncapped consumption spend</strong> with no automated token throttle or runaway loop breaker.</li>
+        <li><span class="rf-code">RF-05</span><strong>Unlabeled SharePoint / Confluence RAG grounding</strong> exposing HR, M&amp;A, or executive PII.</li>
+        <li><span class="rf-code">RF-06</span><strong>Unvetted external MCP servers &amp; SaaS AI APIs</strong> lacking allowlists or zero-retention DPAs.</li>
+        <li><span class="rf-code">RF-07</span><strong>No centralized SIEM / WORM audit trail</strong> reconstructing agent prompts, tool calls &amp; outputs.</li>
+        <li><span class="rf-code">RF-08</span><strong>No tested sub-5-minute kill switch</strong> to revoke a compromised agent identity cleanly.</li>
+      </ul>
+      <p class="legend-note">Plus RF-09 (EU AI Act Annex III / GDPR Art. 22 gaps) &amp; RF-10 (uncontrolled live prompt/model edits).</p>
+    </div>
+  </section>
+
+  <section class="steps-wrap">
+    <div class="steps-head">
+      <h2>Three Steps From Benchmark to Audit-Ready Digital Labor</h2>
+      <span class="section-kicker" style="margin:0">Built for 250–10,000+ Seat Enterprises</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <b>01 · Complete the Online Benchmark</b>
+        <p>Choose the 5-minute Top-10 P0 Red-Flag Triage or the full 40-control maturity audit. Runs privately in your browser across M365 Copilot, Power Platform, Azure AI, Salesforce, AWS/GCP &amp; custom agents.</p>
+      </div>
+      <div class="step">
+        <b>02 · Download Your Executive Scorecard</b>
+        <p>Instantly export a board-ready PDF scorecard and Markdown findings brief with your weighted Governance Index, exposure posture, per-pillar readiness bars, and confirmed P0 risk priorities.</p>
+      </div>
+      <div class="step">
+        <b>03 · Book a 30-Min Executive Briefing</b>
+        <p>Review your benchmark with CBa Consult to select a bounded, fixed-scope remediation path—using the Microsoft 365, Entra, SIEM, and cloud stack you already own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tiers-strip" aria-label="Fixed-scope follow-on options">
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Tier 1 · Phase 0 Triage</span>
+        <span class="tier-price">€2,500–€5,000</span>
+      </div>
+      <p>2–3 wks · Shadow-agent discovery snapshot, credential/SoD scan, Top-10 P0 Risk Register &amp; Phase 1 business case.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Tier 2 · Full 8-Pillar Audit</span>
+        <span class="tier-price">€6,000–€18,000+</span>
+      </div>
+      <p>6–10 wks · 12-field Agent Register, 40-point scorecard, Entra Agent ID &amp; SoD blueprint, FinOps caps &amp; 90-day roadmap.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Managed Intelligence (MIP)</span>
+        <span class="tier-price">€2.5k–€12k+/mo</span>
+      </div>
+      <p>Ongoing retainer above MSP &amp; MSSP · Quarterly fleet drift reviews, onboarding gates &amp; EU AI Act / ISO 42001 evidence.</p>
+    </div>
+  </section>
+
+  <section class="cta-box">
+    <div>
+      <h3>Start Your Complimentary OP-ITG-013 Self-Assessment Now</h3>
+      <p>Benchmark your organization’s AI agent readiness in 5 or 15 minutes and generate an immediate executive PDF scorecard—or request a confidential 30-minute Agent Sprawl, Identity &amp; FinOps Briefing.</p>
+      <a class="cta-url" href="https://ais-pre-o7lbgxm3islp2n4c7xxsnc-615072139437.europe-west1.run.app/?assessment=agent-governance">
+        https://ais-pre-o7lbgxm3islp2n4c7xxsnc-615072139437.europe-west1.run.app/?assessment=agent-governance
+      </a>
+    </div>
+    <div class="cta-contact">
+      <div class="accent">Executive Contact</div>
+      <strong>Menno Drescher</strong><br>
+      Director, CBa Consult<br>
+      menno.drescher@gmail.com<br>
+      Fixed-scope proposals in 5 business days
+    </div>
+  </section>
+
+  <p class="independence">
+    <strong>100% Conflict-Free Independence Guarantee:</strong> Statutory auditors and PE-backed Alternative Practice Structures (APS) are legally barred from designing or remediating the internal controls they audit. CBa Consult operates completely independent of external audit firms and software vendors, delivering the pre-assurance and operating architecture your auditor cannot—while working cleanly alongside your existing MSP, MSSP, and accredited ISO 42001 registrar.
+  </p>
+
+  <footer class="footer">
+    <span>OP-ITG-013 · ENTERPRISE AI AGENT GOVERNANCE BENCHMARK · CALL-TO-ACTION ONE-PAGER · 26 NOV 2026</span>
+    <span>CBa Consult &nbsp; | &nbsp; Page 1 of 1</span>
+  </footer>
+
+</main>
+</body>
+</html>

@@ -37,6 +37,16 @@ Regulated enterprises running mission-critical automation, financial/PII process
 
 ---
 
+## Elastic Cloud Scale-Out on Microsoft Azure (6-Level Ladder)
+
+For enterprises scaling beyond single-host clusters, MXC pairs as a **Two-Tier Cascading Pool** with **Microsoft Azure VMSS (Flexible) + Azure Standby Pools** (full technical specification: [Azure-Scale-Out-and-Boundary-Matrix.md](Azure-Scale-Out-and-Boundary-Matrix.md)):
+
+- **L1–L3 (Single Node → Elastic Cell → M-Series Density):** Run nested Type-1 Hyper-V hosts on `Dv5`/`Ev5`/`v6` or `M-series` (up to 128 vCPUs / ~4 TiB RAM). Linking MXC's watermark autoscaler to an Azure Standby Pool (`Hibernated`/`Deallocated`, up to **1,000 host VMs** per scale set) delivers **~30,000+ concurrent `<500ms` sandboxes per cell** while draining idle hosts back to zero compute billing.
+- **L4–L6 (Dedicated Hosts → Multi-Region Global → Sovereign Bare-Metal):** Scale up to **Azure Dedicated Hosts** (single-tenant DORA/NIS2 isolation), sharded multi-region cells up to your **maximum Azure EA vCPU quota**, or **Azure Local (Azure Stack HCI)** for zero-egress bare-metal sovereignty.
+- **Transparent Cloud Boundaries:** Azure Confidential VMs (`DC`/`EC`) and GPU VMs (`NC`/`NV`/`ND`) do not support nested Hyper-V; GPU-heavy AI workloads pair `<500ms` MXC CPU agent sandboxes with private-VNet Azure AI Foundry / GPU inference endpoints.
+
+---
+
 ## Engagement Roadmap (6–10 Weeks, Fixed Scope)
 
 | Phase | Timeline | What We Deliver |

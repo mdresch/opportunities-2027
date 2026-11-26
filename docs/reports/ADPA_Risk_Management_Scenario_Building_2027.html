@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Opportunities 2027 | ADPA Risk Management &amp; Scenario Building — Market Development Brief</title>
+<style>
+@page { size: A4; margin: 11mm 13mm 11mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.6pt;
+  line-height: 1.38;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 266mm;
+  padding-bottom: 11mm;
+}
+.page-break {
+  page-break-before: always;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 15px 18px 14px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 7.3pt;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+.hero h1 {
+  font-size: 19pt;
+  line-height: 1.12;
+  letter-spacing: -0.4px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.8pt;
+  line-height: 1.42;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+
+.kicker {
+  font-size: 7.3pt;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 10px 0 3px;
+}
+h2 {
+  font-size: 12.2pt;
+  color: #10253f;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 9pt;
+  color: #075d68;
+  margin: 0 0 4px;
+}
+.lead {
+  font-size: 8.7pt;
+  color: #40536b;
+  margin: 0 0 8px;
+  line-height: 1.42;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 9px 0;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 7px 9px;
+}
+.stat b {
+  display: block;
+  font-size: 13pt;
+  color: #142a48;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 7pt;
+  color: #52647a;
+  line-height: 1.28;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin: 7px 0 10px;
+}
+.p-card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #0c8b82;
+  border-radius: 4px;
+  padding: 7px 7.5px;
+}
+.p-num {
+  font-family: "Courier New", monospace;
+  font-size: 7pt;
+  font-weight: bold;
+  color: #0c8b82;
+  margin-bottom: 2px;
+}
+.p-card b {
+  display: block;
+  font-size: 7.7pt;
+  color: #10253f;
+  margin-bottom: 3px;
+  line-height: 1.22;
+}
+.p-card p {
+  font-size: 6.9pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.32;
+}
+
+.matrix-wrap {
+  border: 1px solid #dae3e9;
+  border-radius: 5px;
+  padding: 9px 10px;
+  background: #ffffff;
+  margin-top: 6px;
+}
+.axis-label {
+  text-align: center;
+  font-size: 7.2pt;
+  font-weight: bold;
+  color: #075d68;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 5px;
+}
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+.quad {
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 7.5px 9px;
+  background: #fbfdfe;
+}
+.quad-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+.quad-code {
+  font-family: "Courier New", monospace;
+  font-size: 7pt;
+  font-weight: bold;
+  color: #0c8b82;
+}
+.quad-axis {
+  font-size: 6.7pt;
+  color: #52647a;
+}
+.quad h3 {
+  font-size: 8.6pt;
+  color: #10253f;
+  margin: 0 0 3px;
+}
+.quad p {
+  font-size: 7.2pt;
+  color: #40536b;
+  margin: 0 0 4px;
+  line-height: 1.34;
+}
+.quad-pull {
+  font-size: 6.9pt;
+  color: #075d68;
+  font-weight: bold;
+  border-top: 1px solid #e6edf2;
+  padding-top: 3px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.2pt;
+  margin: 6px 0 9px;
+}
+th {
+  background: #142a48;
+  color: #ffffff;
+  text-align: left;
+  padding: 5px 6px;
+  font-size: 7pt;
+}
+td {
+  border-bottom: 1px solid #dbe4ea;
+  padding: 4.5px 6px;
+  vertical-align: top;
+  color: #17243a;
+}
+tr:nth-child(even) td { background: #f5f8fa; }
+.driver-col { font-weight: bold; color: #10253f; width: 22%; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 7px 0 9px;
+}
+.box {
+  border: 1px solid #dae3e9;
+  border-radius: 5px;
+  padding: 8px 10px;
+  background: #ffffff;
+}
+.box ul {
+  margin: 4px 0 0;
+  padding-left: 14px;
+  font-size: 7.3pt;
+  color: #40536b;
+  line-height: 1.38;
+}
+.box li { margin-bottom: 3px; }
+.box strong { color: #10253f; }
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 7px 0 9px;
+}
+.tier {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #0c8b82;
+  border-radius: 4px;
+  padding: 7.5px 9px;
+}
+.tier-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3px;
+}
+.tier-name { font-size: 7.9pt; font-weight: bold; color: #10253f; }
+.tier-price { font-family: "Courier New", monospace; font-size: 7.6pt; font-weight: bold; color: #0c8b82; }
+.tier p { font-size: 7.1pt; color: #40536b; margin: 0; line-height: 1.34; }
+
+.cta-box {
+  background: #10253f;
+  color: #e5edf5;
+  border-radius: 5px;
+  padding: 10px 13px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 12px;
+  align-items: center;
+}
+.cta-box h3 { color: #ffffff; font-size: 10.2pt; margin: 0 0 3px; }
+.cta-box p { font-size: 7.5pt; color: #d8e4f0; margin: 0; line-height: 1.38; }
+.cta-right {
+  border-left: 1px solid rgba(100, 212, 196, 0.3);
+  padding-left: 11px;
+  font-size: 7.4pt;
+  line-height: 1.46;
+}
+.cta-right strong { color: #ffffff; }
+.cta-accent { color: #64d4c4; font-weight: bold; }
+
+.source-note {
+  font-size: 6.9pt;
+  color: #52647a;
+  margin-top: 7px;
+  line-height: 1.35;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.8pt;
+  color: #62758a;
+}
+</style>
+</head>
+<body>
+
+<section class="page">
+  <header class="hero">
+    <div class="hero-top">
+      <span>CBa Consult &nbsp; / &nbsp; Opportunities 2027 Market Development Brief</span>
+      <span class="hero-meta">ADPA Risk Management Approach · OP-ITG-019 &amp; OP-RSK-001–007</span>
+    </div>
+    <h1>ADPA Risk Management &amp; Scenario Building</h1>
+    <p class="hero-sub">
+      Moving mid-market and regulated boards beyond static annual risk spreadsheets by embedding <strong>Futures Platform's 5-Step Scenario Planning methodology</strong>—PESTLE driver scanning, stakeholder rating, Axes of Uncertainty, Futures Tables, and backcast early-warning indicators—directly into CBa Consult's conflict-free <strong>ADPA Risk Governance</strong> operating model.
+    </p>
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <b>+33%</b>
+      <span>Higher profitability among foresight-mature firms (Rohrbeck &amp; Kum, 2018)</span>
+    </div>
+    <div class="stat">
+      <b>+200%</b>
+      <span>Higher market capitalisation growth across industries</span>
+    </div>
+    <div class="stat">
+      <b>5 Steps</b>
+      <span>Structured foresight-to-decision workflow embedded in ADPA</span>
+    </div>
+    <div class="stat">
+      <b>2–3 Wks</b>
+      <span>Fixed-scope Executive Risk &amp; Scenario Stress-Test wedge</span>
+    </div>
+  </section>
+
+  <div class="kicker">01 / Methodological Architecture</div>
+  <h2>Five-step scenario building integrated into ADPA Risk Management</h2>
+  <p class="lead">Traditional enterprise risk registers assume a single linear future and miss converging disruptions. ADPA pairs continuous operational risk controls (<code>Observe → Measure → Govern → Trace → Certify → Improve</code>) with multi-future foresight across the <strong>Futures Cone</strong> (Probable → Plausible → Possible).</p>
+
+  <div class="process-grid">
+    <div class="p-card">
+      <div class="p-num">STEP 01</div>
+      <b>Scope &amp; Horizon</b>
+      <p>Frame a focused strategic risk question, explicit horizon year (2027–2030), and executive alignment.</p>
+    </div>
+    <div class="p-card">
+      <div class="p-num">STEP 02</div>
+      <b>PESTLE &amp; Signals</b>
+      <p>Scan internal &amp; external directional drivers across Megatrends, Trends, Weak Signals &amp; Wild Cards.</p>
+    </div>
+    <div class="p-card">
+      <div class="p-num">STEP 03</div>
+      <b>Vote &amp; Rate</b>
+      <p>Score drivers with CFO, CIO, CISO &amp; Legal by uncertainty and threat to isolate the top 2–10 drivers.</p>
+    </div>
+    <div class="p-card">
+      <div class="p-num">STEP 04</div>
+      <b>Build Narratives</b>
+      <p>Construct 4 distinct worlds via Axes of Uncertainty (2×2) or multi-driver Futures Table paths.</p>
+    </div>
+    <div class="p-card">
+      <div class="p-num">STEP 05</div>
+      <b>Stress-Test &amp; Backcast</b>
+      <p>Stress-test controls, map 1–9 yr actions, and monitor backcast early-warning triggers quarterly.</p>
+    </div>
+  </div>
+
+  <div class="kicker">02 / Applied Opportunities 2027 Scenario Set (Method 1: Axes of Uncertainty)</div>
+  <h2>2027–2030 Enterprise AI Autonomy vs. Regulatory Enforcement Matrix</h2>
+
+  <div class="matrix-wrap">
+    <div class="axis-label">Axis Y: Enterprise AI Agent Autonomy (Low ↔ High) &nbsp; × &nbsp; Axis X: Regulatory &amp; Audit Enforcement (Fragmented ↔ Strict)</div>
+    <div class="matrix-grid">
+      <div class="quad">
+        <div class="quad-head"><span class="quad-code">SCENARIO 01</span><span class="quad-axis">High Autonomy · Strict Enforcement</span></div>
+        <h3>Governed Digital Labor Renaissance</h3>
+        <p>Enterprises treat autonomous agents as audited digital employees—enforcing Entra Agent IDs, immutable WORM logs, and ISO 42001 / EU AI Act Annex III readiness as a procurement advantage.</p>
+        <div class="quad-pull">Pull-through: OP-ITG-013 · OP-RSK-004 · OP-RSK-005 · OP-ITG-018 (MIP)</div>
+      </div>
+      <div class="quad">
+        <div class="quad-head"><span class="quad-code">SCENARIO 02</span><span class="quad-axis">High Autonomy · Fragmented Oversight</span></div>
+        <h3>Runaway Agent Sprawl &amp; FinOps Shock</h3>
+        <p>Rapid Copilot and custom agent deployment outruns IAM and FinOps limits. Shared accounts, unchecked ERP write access, and uncapped token loops spark audit management letters and breach containment drills.</p>
+        <div class="quad-pull">Pull-through: OP-ITG-013 Triage · OP-ITG-014 · OP-ITG-017 (MXC) · OP-FIN-012</div>
+      </div>
+      <div class="quad">
+        <div class="quad-head"><span class="quad-code">SCENARIO 03</span><span class="quad-axis">Low Autonomy · Strict Enforcement</span></div>
+        <h3>Compliance Freeze &amp; Fortress Operations</h3>
+        <p>Aggressive EU AI Act, DORA Art. 28, and EDPB enforcement triggers executive AI moratoria. Compliance holds on paper, but manual bottlenecks erode operating margins and slow reporting cycles.</p>
+        <div class="quad-pull">Pull-through: OP-RSK-006 (DORA RoI/Exit) · OP-RSK-007 · OP-FIN-009</div>
+      </div>
+      <div class="quad">
+        <div class="quad-head"><span class="quad-code">SCENARIO 04</span><span class="quad-axis">Low Formal Autonomy · Lax Controls</span></div>
+        <h3>Shadow Drift &amp; Quiet Audit Attrition</h3>
+        <p>Leadership believes AI exposure is minimal while staff quietly paste confidential finance, HR, and client data into unmanaged tools—surfacing abruptly during M&amp;A diligence or client security audits.</p>
+        <div class="quad-pull">Pull-through: OP-RSK-001 (Risk Starter) · OP-STR-004 (M&amp;A) · OP-ITG-010</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>OPPORTUNITIES 2027 · ADPA RISK MANAGEMENT &amp; SCENARIO BUILDING · MARKET DEVELOPMENT BRIEF</span>
+    <span>CBa Consult &nbsp; | &nbsp; Page 1 of 2</span>
+  </footer>
+</section>
+
+<section class="page page-break">
+  <div class="kicker">03 / Multi-Dimensional Stress-Testing (Method 2: Futures Table)</div>
+  <h2>ADPA 2027–2030 Six-Driver Risk Futures Table</h2>
+  <p class="lead">For regulated boards facing more than two simultaneous uncertainties, ADPA constructs a 6-driver morphological <strong>Futures Table</strong> and traces logically compatible <em>future images</em> directly into control registers and exit plans.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Directional Change Driver</th>
+        <th>State 1 · Minimum</th>
+        <th>State 2 · Modest</th>
+        <th>State 3 · Large</th>
+        <th>State 4 · Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="driver-col">A. Agent Write Autonomy</td>
+        <td>Read-only assistive copilots</td>
+        <td>Approval-gated drafts</td>
+        <td>Departmental autonomous tasks</td>
+        <td>Multi-agent ERP/CRM orchestration</td>
+      </tr>
+      <tr>
+        <td class="driver-col">B. EU AI Act &amp; DORA Rigor</td>
+        <td>Guidance-only soft phase</td>
+        <td>Sectoral thematic reviews</td>
+        <td>Active Annex III &amp; RoI audits</td>
+        <td>Multi-regime fines &amp; board liability</td>
+      </tr>
+      <tr>
+        <td class="driver-col">C. Adversarial AI / Cybercrime</td>
+        <td>Opportunistic phishing</td>
+        <td>Targeted API &amp; key abuse</td>
+        <td>Automated agent hijacking</td>
+        <td>Hybrid supply-chain &amp; data poisoning</td>
+      </tr>
+      <tr>
+        <td class="driver-col">D. Cloud &amp; SaaS Concentration</td>
+        <td>Multi-vendor estate</td>
+        <td>M365 + single cloud stack</td>
+        <td>Deep single-cloud AI lock-in</td>
+        <td>Sovereignty disruption or price shock</td>
+      </tr>
+      <tr>
+        <td class="driver-col">E. Knowledge &amp; Context Hygiene</td>
+        <td>Unlabeled SharePoint sprawl</td>
+        <td>Partial Purview labels</td>
+        <td>Zero-oversharing RAG ontology</td>
+        <td>Cryptographically verified provenance</td>
+      </tr>
+      <tr>
+        <td class="driver-col">F. Auditor Independence Friction</td>
+        <td>Informal auditor coaching</td>
+        <td>Strict PCAOB / PIE memos</td>
+        <td>Zero statutory-firm remediation</td>
+        <td>Mandatory independent pre-assurance</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div class="box">
+      <h3>Decision Integration &amp; Backcasting Discipline</h3>
+      <ul>
+        <li><strong>Strategy Stress-Testing:</strong> Score current ITGC, AI, and finance controls against all 4 scenarios to reveal single-point failure blind spots.</li>
+        <li><strong>Time-Horizon Action Mapping:</strong> Separate immediate 2027 hardening (1–3 yrs) from architecture evolution (4–6 yrs) and sovereignty options (7–9+ yrs).</li>
+        <li><strong>Backcasting Early-Warning Milestones:</strong> Work backward from each scenario to define observable triggers (e.g., statutory audit letters, token-spend spikes, DORA RoI findings) tracked inside ADPA.</li>
+        <li><strong>Continuous Living Practice:</strong> Re-evaluate scenario drift every quarter inside Managed Intelligence (<code>OP-ITG-018</code>) rather than shelving a one-off report.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>ADPA Persistent Data Model (OP-ITG-019)</h3>
+      <ul>
+        <li><strong><code>scenario_sets</code>:</strong> Focal risk question, target horizon year, regulatory scope, and executive sponsors per tenant.</li>
+        <li><strong><code>change_drivers</code>:</strong> PESTLE domain, signal class (Megatrend / Trend / Weak Signal / Wild Card), stakeholder uncertainty × threat ratings, and Future States JSON.</li>
+        <li><strong><code>scenarios</code>:</strong> Mutually exclusive narratives, quadrant/path links, quantified threats/opportunities, and 1–9 yr action plans.</li>
+        <li><strong><code>scenario_indicators</code>:</strong> Observable backcast triggers linked directly to <code>OP-RSK-001/004/006/007</code> risk controls and <code>OP-ITG-013</code> P0 red flags.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kicker">04 / Market Development Packaging &amp; Commercial Path</div>
+  <h2>Fixed-scope entry wedge feeding multi-pillar governance</h2>
+
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Wedge · Stress-Test Sprint</span>
+        <span class="tier-price">€2,500–€5,500</span>
+      </div>
+      <p><strong>2–3 weeks</strong> · PESTLE &amp; weak-signal scan, executive voting session, 2×2 or Futures Table scenario book, and backcast trigger register.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Flagship · Embedded Module</span>
+        <span class="tier-price">Bundled (6–10 wks)</span>
+      </div>
+      <p>Integrates scenario testing directly into <strong>OP-RSK-004</strong> (“SOC 2 for AI”), <strong>OP-RSK-006/007</strong> (DORA exit &amp; incident triage), or <strong>OP-ITG-013</strong> (Agent Governance).</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">MIP · Quarterly Backcasting</span>
+        <span class="tier-price">€2.5k–€12k+/mo</span>
+      </div>
+      <p>Ongoing <strong>OP-ITG-018</strong> stewardship above MSP &amp; MSSP—refreshing early-warning signals and board risk posture every quarter.</p>
+    </div>
+  </div>
+
+  <section class="cta-box">
+    <div>
+      <h3>Stress-Test Your 2027–2030 Risk Posture Before Audit &amp; Regulatory Deadlines</h3>
+      <p>Schedule a confidential 30-minute Executive Scoping Call to design a focused 2–3 week ADPA Risk &amp; Scenario Stress-Test Sprint tailored to your sector, EU AI Act Annex III exposure, and DORA/NIS2 priorities—100% independent of software vendors and statutory auditors.</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-accent">Market Development Contact</div>
+      <strong>Menno Drescher</strong><br>
+      Director, CBa Consult<br>
+      menno.drescher@gmail.com<br>
+      Fixed-scope SOW within 5 business days
+    </div>
+  </section>
+
+  <p class="source-note">
+    <strong>Methodological Attribution:</strong> Scenario planning process, Futures Cone (adapted from Voros, 2003), PESTLE scanning taxonomy, Axes of Uncertainty, Futures Table, backcasting discipline, and corporate foresight ROI citation (Rohrbeck &amp; Kum, 2018) adapted from <em>Scenario Planning: A Step-by-Step Guide</em> by Dr. Tuomo Kuosa &amp; Max Stucki (Editor: Gökçe Sandal, Futures Platform Publications, ISSN 2814-5089, ISBN 978-952-69987-1-8).
+  </p>
+
+  <footer class="footer">
+    <span>ADPA RISK MANAGEMENT &amp; SCENARIO BUILDING · MARKET DEVELOPMENT ARTIFACT · 26 NOV 2026</span>
+    <span>CBa Consult &nbsp; | &nbsp; Page 2 of 2</span>
+  </footer>
+</section>
+
+</body>
+</html>

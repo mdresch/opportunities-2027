@@ -1,0 +1,157 @@
+{
+  "entities": {
+    "ScopingInquiry": {
+      "title": "Scoping Inquiry",
+      "description": "A client-submitted scoping call request from the public Opportunities 2027 showcase.",
+      "type": "object",
+      "properties": {
+        "referenceId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 32,
+          "pattern": "^CBA-[0-9]{4}-[A-Z0-9]{4,12}$",
+          "description": "Unique human-readable reference code for the scoping request."
+        },
+        "fullName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120,
+          "description": "Full name of the executive sponsor submitting the request."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "minLength": 5,
+          "maxLength": 160,
+          "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+          "description": "Work email address of the client contact (PII — admin read only)."
+        },
+        "organization": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 160,
+          "description": "Client organization name."
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "description": "Role or title of the requesting sponsor."
+        },
+        "targetWindow": {
+          "type": "string",
+          "enum": [
+            "Q1 2027",
+            "Q2 2027",
+            "H2 2027",
+            "Immediate / Exploratory"
+          ],
+          "description": "Preferred engagement start window."
+        },
+        "selectedServices": {
+          "type": "array",
+          "description": "Bounded list (max 12) of shortlisted flagship or catalog service titles."
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "Client context, deadlines, and engagement objectives."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "new",
+            "contacted",
+            "scheduled",
+            "archived"
+          ],
+          "description": "Internal triage status managed by CBa Consult."
+        },
+        "adminNotes": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "Internal follow-up notes maintained by CBa Consult."
+        },
+        "emailDeliveryStatus": {
+          "type": "string",
+          "enum": [
+            "sent",
+            "not_configured",
+            "failed"
+          ],
+          "description": "Outcome of optional server-side email or webhook notification."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the inquiry was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the inquiry was last updated."
+        }
+      },
+      "required": [
+        "referenceId",
+        "fullName",
+        "email",
+        "organization",
+        "role",
+        "targetWindow",
+        "selectedServices",
+        "notes",
+        "status",
+        "adminNotes",
+        "emailDeliveryStatus",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminUser": {
+      "title": "Admin User",
+      "description": "Authorized internal administrator allowed to read and manage scoping inquiries.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "minLength": 5,
+          "maxLength": 160,
+          "description": "Verified administrator email."
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "admin"
+          ],
+          "description": "Fixed administrator role."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the admin record was created."
+        }
+      },
+      "required": [
+        "email",
+        "role",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/scoping_inquiries/{inquiryId}": {
+      "schema": {
+        "$ref": "#/entities/ScopingInquiry"
+      },
+      "description": "Persistent client scoping call inquiries. Public create-only with strict validation; read, list, update, and delete restricted exclusively to verified admins."
+    },
+    "/admins/{uid}": {
+      "schema": {
+        "$ref": "#/entities/AdminUser"
+      },
+      "description": "Explicit administrator membership documents (read-own or admin-only; client writes blocked)."
+    }
+  }
+}
