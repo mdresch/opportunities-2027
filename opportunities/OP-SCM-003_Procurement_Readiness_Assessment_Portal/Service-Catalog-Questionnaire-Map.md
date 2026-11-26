@@ -33,6 +33,16 @@
 
 ---
 
+## Universal block — `PRMAP-APPROVAL-PATH`
+
+Prepended to **every SKU** workspace (not scored maturity). Field definitions: [Approval-Path-and-Cycle-Fields.md](Approval-Path-and-Cycle-Fields.md). Cycle bands: [Enterprise-IT-Budget-Governance-Multinational.md §12](../../docs/research/Enterprise-IT-Budget-Governance-Multinational.md).
+
+| Block ID | Questions | Output fields |
+| --- | --- | --- |
+| `PRMAP-APPROVAL-PATH` | `PR-AP-001` … `PR-AP-006` | `contracting_entity`, `budget_line_status`, `vendor_status`, `approval_layers_touched`, `next_governance_forum_date`, `formal_procurement_path` |
+
+---
+
 ## Template file layout (target repo)
 
 ```text

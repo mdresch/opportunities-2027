@@ -25,6 +25,7 @@
 ```text
 Catalog → Select SKU (e.g. OP-ITG-013 Tier 1)
      → Create workspace (Client Sponsor)
+     → Approval path fields (required): layers touched, vendor status, budget status, contracting entity — [Approval-Path-and-Cycle-Fields.md](Approval-Path-and-Cycle-Fields.md)
      → Link RFP / category / estimated PO value (optional)
      → Invite Executive Sponsor(s)
      → Portal loads questionnaire_template_id
@@ -59,7 +60,7 @@ AM receives workspace assignment (email / CRM)
 | Screen | Primary user | Content |
 | --- | --- | --- |
 | **Catalog** | Client Sponsor | SKU cards: name, duration, price band, question count |
-| **Workspace home** | Sponsor / Exec | KPIs, progress bar, tabs (exec / function / pillar / P0) |
+| **Workspace home** | Sponsor / Exec | KPIs, progress bar, tabs (exec / function / pillar / P0); **cycle band** + target PO vs [§12](../../docs/research/Enterprise-IT-Budget-Governance-Multinational.md) |
 | **My queue** | Contributor | Cards; score 1–5; evidence; "I don't know" |
 | **Approvals** | Executive | Batch accept; see delegate evidence |
 | **AM console** | CBa AM | All workspaces; reassignment drawer; activity log |
@@ -100,9 +101,12 @@ All redistribution events append to **audit_log** (exportable).
 | Event | CBa action |
 | --- | --- |
 | Workspace created | AM assigned round-robin or named in CRM |
+| `formal_procurement_path` = `card_declined_redirect` | AM sends [invoice + PO policy](../../docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md) §5; no billable start |
 | ≥80% accepted | AM notified → schedule readout |
 | Export released | Auto-attach to opportunity record; proposal draft |
 | Stalled >14d | AM escalation playbook |
+
+**Settlement:** Card / P-card is **not** accepted for catalog SKUs or consulting — `commercial_engagement` in [portal-rbac-and-workflows.json](data/portal-rbac-and-workflows.json). Line manager sign-off alone does not replace finance PO and invoicing requirements.
 
 ---
 

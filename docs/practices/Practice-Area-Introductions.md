@@ -7,6 +7,8 @@
 **How to read “segments”**  
 Each practice is explained for **Small** vs **Medium & Large** buyers and typical **offer posture** (starter kit, diagnostic, assessment, retainer wedge)—not industry verticals. Cross-pillar GTM segments (`OP-X-*`) are listed at the end.
 
+**Competitive portfolio extensions (2027):** [docs/research/Portfolio-Extension-Areas-2027.md](../research/Portfolio-Extension-Areas-2027.md) — seven areas mapped from Big Four / SI offerings. **Six new specs:** `OP-RSK-008`, `OP-FIN-013`, `OP-CHG-003`, `OP-ITG-025`, `OP-SUS-006`, `OP-X-011` (see each `opportunities/OP-*/Ideation-Spark.md`).
+
 ---
 
 ## 1. Finance
@@ -288,4 +290,8 @@ From inventory **Cross-Pillar 2026 Ecosystem Categories**—these attach to any 
 | [ideation-template.md](../../ideation-template.md) | 17 pillars, 5 strategic assets, Tier A–D thesis |
 | [inventory-of-ideas.md](../../inventory-of-ideas.md) | OP-ID rows per pillar |
 | [market-analysis-2027.md](../../market-analysis-2027.md) | 2027 validation signals |
+| [docs/research/Analyst-Signals-2027.md](../research/Analyst-Signals-2027.md) | Independent analyst → `OP-*` crosswalk |
+| [docs/research/Enterprise-IT-Budget-Governance-Multinational.md](../research/Enterprise-IT-Budget-Governance-Multinational.md) | Multinational IT spend, cycles, Benelux annex |
+| [docs/governance/Rules-of-Engagement.md](../governance/Rules-of-Engagement.md) | **Binding:** multiparty approved engagement; no shadow delivery |
+| [docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md](../research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md) | PO + invoice basis under RoE |
 | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) | Core 5 flagships & execution order |

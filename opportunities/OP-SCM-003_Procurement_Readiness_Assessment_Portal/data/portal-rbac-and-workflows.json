@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "opportunity_id": "OP-SCM-003",
   "product_code": "PRMAP",
   "interim_pilot": {
@@ -65,6 +65,69 @@
     "target_po_date",
     "template_version"
   ],
+  "approval_path_fields": {
+    "spec_ref": "Approval-Path-and-Cycle-Fields.md",
+    "cycle_time_ref": "docs/research/Enterprise-IT-Budget-Governance-Multinational.md#12-approval-cycle-times-indicative",
+    "required_on_create": [
+      "approval_layers_touched",
+      "vendor_status",
+      "budget_line_status",
+      "contracting_entity",
+      "formal_procurement_path"
+    ],
+    "required_before_export": [
+      "next_governance_forum_date",
+      "forum_name",
+      "target_po_date",
+      "estimated_cycle_band"
+    ],
+    "approval_layers_touched": {
+      "type": "multi_enum",
+      "values": ["local_branch", "country_entity", "regional", "global_hq"]
+    },
+    "vendor_status": {
+      "type": "enum",
+      "values": [
+        "on_group_msa",
+        "on_entity_msa",
+        "new_vendor_group",
+        "new_vendor_entity",
+        "pilot_pre_vendor"
+      ]
+    },
+    "budget_line_status": {
+      "type": "enum",
+      "values": [
+        "in_annual_plan",
+        "in_entity_budget_not_central",
+        "unbudgeted_change_request",
+        "regulatory_mandate",
+        "unknown"
+      ]
+    },
+    "estimated_cycle_band": {
+      "type": "enum",
+      "values": ["band_a", "band_b", "band_c", "band_d", "band_e", "band_f", "band_g"]
+    },
+    "formal_procurement_path": {
+      "type": "enum",
+      "values": ["po_issued", "po_pending", "written_order_pending", "card_declined_redirect"]
+    }
+  },
+  "rules_of_engagement": {
+    "policy_ref": "docs/governance/Rules-of-Engagement.md",
+    "multiparty_approval_required": true,
+    "no_render_without_approved_engagement": true,
+    "minimum_parties": ["client_sponsor", "executive_sponsor_or_budget_owner", "finance_or_procurement", "cba_acceptance"]
+  },
+  "commercial_engagement": {
+    "policy_ref": "docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md",
+    "rules_of_engagement_ref": "docs/governance/Rules-of-Engagement.md",
+    "accept_credit_card_checkout": false,
+    "accept_line_manager_p_card_as_procurement": false,
+    "required_settlement": ["purchase_order_or_written_order", "tax_compliant_invoice"],
+    "line_manager_signoff_insufficient_alone": true
+  },
   "question_statuses": [
     "not_assigned",
     "invited",
@@ -120,7 +183,15 @@
       "released_at",
       "completion_rate",
       "responses",
-      "audit_log_excerpt"
+      "audit_log_excerpt",
+      "approval_layers_touched",
+      "vendor_status",
+      "budget_line_status",
+      "contracting_entity",
+      "next_governance_forum_date",
+      "forum_name",
+      "target_po_date",
+      "estimated_cycle_band"
     ]
   }
 }

@@ -18,7 +18,7 @@ outputs:
 
 > **Owner:** Menno Drescher (Director, CBa Consult)  
 > **Adapted From:** `sidpa-template` (`mdresch/sidpa-template` — Synthetic Intent-Driven Process Architecture, PMBOK 8 / BABOK)  
-> **Companion Rules & Registers:** [.github/instructions/sidpa-portfolio-qa.instructions.md](../../.github/instructions/sidpa-portfolio-qa.instructions.md) · [Portfolio-Status-Register.md](../registers/Portfolio-Status-Register.md) · [Hypothesis-Register.md](../registers/Hypothesis-Register.md) · [Lessons-Learned-Register.md](../registers/Lessons-Learned-Register.md)
+> **Companion Rules & Registers:** [Rules-of-Engagement.md](Rules-of-Engagement.md) · [.github/instructions/sidpa-portfolio-qa.instructions.md](../../.github/instructions/sidpa-portfolio-qa.instructions.md) · [Portfolio-Status-Register.md](../registers/Portfolio-Status-Register.md) · [Hypothesis-Register.md](../registers/Hypothesis-Register.md) · [Lessons-Learned-Register.md](../registers/Lessons-Learned-Register.md)
 
 ---
 

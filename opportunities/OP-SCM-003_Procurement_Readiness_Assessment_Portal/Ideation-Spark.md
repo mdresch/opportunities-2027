@@ -5,7 +5,7 @@
 **Strategic Asset:** 4. Evidence & Governance · 2. Organizational Intelligence *(assessment reuse)*  
 **Functional Area:** 11. Supply Chain · **Signature Toolkit:** Supply Chain Strategy *(procurement / vendor governance)*  
 **Category:** Platform-Backed Assessment · **Size:** Medium & Large  
-**Source:** [inventory-of-ideas.md §11 Supply Chain](../../inventory-of-ideas.md) · pattern from [`OP-ITG-013`](../OP-ITG-013_Enterprise_AI_Agent_Governance/Ideation-Spark.md) delegation portal
+**Source:** [inventory-of-ideas.md §11 Supply Chain](../../inventory-of-ideas.md) · pattern from [`OP-ITG-013`](../OP-ITG-013_Enterprise_AI_Agent_Governance/Ideation-Spark.md) delegation portal · buyer mechanics [Enterprise-IT-Budget-Governance-Multinational.md](../../docs/research/Enterprise-IT-Budget-Governance-Multinational.md)
 
 ## Positioning
 
@@ -22,7 +22,7 @@ A multi-tenant **buyer readiness portal**: procurement initiates an assessment f
 3. **Deliverable & Existing IP** — Portal platform + **catalog-driven questionnaires** mapped to `OP-*` offerings; reuse delegation model from [`OP-ITG-013`](../OP-ITG-013_Enterprise_AI_Agent_Governance/Assessment-Delegation-and-Ownership-Matrix.md) and [`data/agent-governance-question-ownership.json`](../OP-ITG-013_Enterprise_AI_Agent_Governance/data/agent-governance-question-ownership.json) as reference pattern (not duplicate content).
 4. **Sweat-Equity Feasibility** — MVP: 1 catalog, 3 SKUs (e.g. `OP-ITG-013`, `OP-FIN-009`, `OP-RSK-004`), RBAC for 5 roles, hosted static/web app + lightweight API; **12–16 wks** build at **$0** infra tier (Azure Static Web Apps / Cloudflare) before enterprise SSO.
 5. **Outcome & Proof** — Time from RFP / intake to **≥80% assessment complete** drops; ≥1 paid engagement per portal workspace with export attached to PO pack.
-6. **Boundaries & Risk** — Not a full CLM or e-procurement system; no legal advice; client data stays in tenant-isolated store; CBa AM actions are **reassignment and nudges**, not answering on behalf of client.
+6. **Boundaries & Risk** — Not a full CLM or e-procurement system; no legal advice; client data stays in tenant-isolated store; CBa AM actions are **reassignment and nudges**, not answering on behalf of client. **Rules of engagement:** no billable work **inside** a client without [multiparty approved engagement](../../docs/governance/Rules-of-Engagement.md) (PO + invoice basis: [Commercial-Engagement-Invoicing-and-Procurement-Policy.md](../../docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md)).
 7. **Compounding / Scale Path** — Every new `OP-*` with a scored diagnostic adds a **SKU row** + JSON template; feeds `OP-OPS-003`, `OP-CX-002`, Tier A assessments.
 
 ## Effort, Capital & Timeline
@@ -44,6 +44,8 @@ A multi-tenant **buyer readiness portal**: procurement initiates an assessment f
 
 | Doc | Purpose |
 | --- | --- |
+| [Approval-Path-and-Cycle-Fields.md](Approval-Path-and-Cycle-Fields.md) | Layers touched, vendor status, forum date; §12 cycle bands |
+| [Commercial-Engagement-Invoicing-and-Procurement-Policy.md](../../docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md) | PO + invoice; no card checkout |
 | [Procurement-Portal-Build-Requirements.md](Procurement-Portal-Build-Requirements.md) | Requirements assessment to build the portal |
 | [Portal-Product-Requirements.md](Portal-Product-Requirements.md) | Roles, journeys, CBa AM console |
 | [Service-Catalog-Questionnaire-Map.md](Service-Catalog-Questionnaire-Map.md) | SKU → questionnaire source |

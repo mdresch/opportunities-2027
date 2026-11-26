@@ -114,6 +114,12 @@ Regenerate: `python scripts/assign_adpa_source_documents.py`
 | `OP-RSK-005` | 0 | — | — |
 | `OP-RSK-006` | 0 | — | — |
 | `OP-RSK-007` | 0 | — | — |
+| `OP-RSK-008` | 0 | — | Portfolio-derived ([Consulting-Offerings-2027.md](../research/Consulting-Offerings-2027.md)) |
+| `OP-FIN-013` | 0 | — | Portfolio-derived |
+| `OP-CHG-003` | 0 | — | Portfolio-derived |
+| `OP-ITG-025` | 0 | — | Portfolio-derived |
+| `OP-SUS-006` | 0 | — | Portfolio-derived |
+| `OP-X-011` | 0 | — | Portfolio-derived |
 | `OP-SCM-001` | 0 | — | — |
 | `OP-SCM-002` | 1 | Green Supply Chain Consulting.docx | Green Supply Chain Consulting.docx |
 | `OP-SCM-003` | 0 | — | — |

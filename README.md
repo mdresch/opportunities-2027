@@ -40,6 +40,8 @@ Continuation of the 2026 "Opportunities with No Working Capital" initiative (Men
 
 ## Governance (Tailored Hybrid SIDPA)
 
+**Rules of engagement (binding):** [Rules-of-Engagement.md](docs/governance/Rules-of-Engagement.md) — no billable delivery inside a client organisation without **multiparty approved engagement** (sponsor, executive/budget owner, finance/procurement, CBa acceptance); commercial basis [Commercial-Engagement-Invoicing-and-Procurement-Policy.md](docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md).
+
 This repository operates as the lightweight **Stages 1–4 portfolio funnel** (full stage-by-stage specification & completion gates in [Tailored-Hybrid-SIDPA-Governance.md](docs/governance/Tailored-Hybrid-SIDPA-Governance.md); quick reference in [ideation-template.md §6c](ideation-template.md#6c-tailored-sidpa-governance--hybrid-graduation-map) and [.github/instructions/sidpa-portfolio-qa.instructions.md](.github/instructions/sidpa-portfolio-qa.instructions.md)):
 - **Advisory / Assessment pilots (Track A)** stay lightweight inside `opportunities/<ID>/` (Charter → Delivery → Actual Outcome → Lessons Learned).
 - **Platform-backed / build-heavy flagships (Track B)** graduate into standalone repositories initialized from `sidpa-template` (`Stages 5–18`).
