@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-ITG-017 | MXC Hyper-V &lt;500ms JIT Scale-to-Zero — Executive One-Pager</title>
+<style>
+@page { size: A4; margin: 9.5mm 12mm 9.5mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.4pt;
+  line-height: 1.36;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p, ul { margin-top: 0; }
+.sheet {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 14px 17px 13px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 7.2pt;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  letter-spacing: 0.3px;
+  font-weight: normal;
+  text-transform: none;
+}
+.hero h1 {
+  font-size: 18.2pt;
+  line-height: 1.12;
+  letter-spacing: -0.4px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.6pt;
+  line-height: 1.4;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 8px 0;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 6.5px 8.5px;
+}
+.stat b {
+  display: block;
+  font-size: 12.6pt;
+  color: #142a48;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.9pt;
+  color: #52647a;
+  line-height: 1.28;
+}
+
+.section-kicker {
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin-bottom: 2.5px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 9px;
+  margin: 7px 0 8px;
+}
+.panel {
+  border: 1px solid #dae3e9;
+  border-radius: 5px;
+  padding: 8.5px 10px;
+  background: #ffffff;
+}
+.panel h2 {
+  font-size: 10.2pt;
+  color: #10253f;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+.arch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.arch-list li {
+  padding: 3.6px 0;
+  border-bottom: 1px solid #e6edf2;
+  font-size: 7.3pt;
+  color: #40536b;
+  line-height: 1.33;
+}
+.arch-list li:last-child { border-bottom: none; }
+.arch-list strong { color: #10253f; }
+.code-tag {
+  font-family: "Courier New", monospace;
+  font-size: 6.9pt;
+  color: #075d68;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.1pt;
+}
+th {
+  background: #142a48;
+  color: #ffffff;
+  text-align: left;
+  padding: 4px 5.5px;
+  font-size: 6.8pt;
+}
+td {
+  border-bottom: 1px solid #e6edf2;
+  padding: 3.8px 5.5px;
+  vertical-align: top;
+  color: #40536b;
+}
+tr:last-child td { border-bottom: none; }
+.mxc-col {
+  background: #eef5f7;
+  color: #10253f;
+  font-weight: bold;
+}
+.dim-col {
+  font-weight: bold;
+  color: #10253f;
+  white-space: nowrap;
+}
+
+.azure-panel {
+  border: 1px solid #dae3e9;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin: 0 0 8px;
+  background: #fbfdfe;
+}
+.azure-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.azure-head h2 {
+  font-size: 10.2pt;
+  color: #10253f;
+  margin: 0;
+}
+.azure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.az-card {
+  background: #ffffff;
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #0c8b82;
+  border-radius: 4px;
+  padding: 5.5px 7.5px;
+}
+.az-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+.az-lvl {
+  font-family: "Courier New", monospace;
+  font-size: 7pt;
+  font-weight: bold;
+  color: #0c8b82;
+}
+.az-name {
+  font-size: 7.5pt;
+  font-weight: bold;
+  color: #10253f;
+}
+.az-card p {
+  font-size: 6.8pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.3;
+}
+.boundary-bar {
+  margin-top: 6px;
+  padding: 5px 8px;
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  font-size: 6.9pt;
+  color: #40536b;
+  line-height: 1.33;
+}
+.boundary-bar strong { color: #10253f; }
+
+.tiers-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 0 0 8px;
+}
+.tier {
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #10253f;
+  border-radius: 4px;
+  padding: 6.5px 8.5px;
+  background: #ffffff;
+}
+.tier-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.tier-name {
+  font-size: 7.7pt;
+  font-weight: bold;
+  color: #10253f;
+}
+.tier-price {
+  font-size: 7.5pt;
+  font-weight: bold;
+  color: #0c8b82;
+  font-family: "Courier New", monospace;
+}
+.tier p {
+  font-size: 7pt;
+  color: #52647a;
+  margin: 0;
+  line-height: 1.32;
+}
+
+.cta-box {
+  background: #10253f;
+  color: #e5edf5;
+  border-radius: 5px;
+  padding: 10px 13px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 12px;
+  align-items: center;
+}
+.cta-box h3 {
+  font-size: 10.4pt;
+  color: #ffffff;
+  margin: 0 0 3px;
+}
+.cta-box p {
+  font-size: 7.4pt;
+  color: #d8e4f0;
+  margin: 0 0 5px;
+  line-height: 1.36;
+}
+.cta-url {
+  display: inline-block;
+  background: #173454;
+  border: 1px solid #48c5b2;
+  color: #64d4c4;
+  font-family: "Courier New", monospace;
+  font-size: 7pt;
+  padding: 3.5px 7px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.cta-contact {
+  border-left: 1px solid rgba(100, 212, 196, 0.3);
+  padding-left: 11px;
+  font-size: 7.3pt;
+  line-height: 1.46;
+  color: #d8e4f0;
+}
+.cta-contact strong { color: #ffffff; }
+.cta-contact .accent { color: #64d4c4; font-weight: bold; }
+
+.footer {
+  margin-top: 7px;
+  padding-top: 4.5px;
+  border-top: 1px solid #dae3e9;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.7pt;
+  color: #62758a;
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="hero">
+    <div class="hero-top">
+      <span>CBa Consult &nbsp; / &nbsp; OP-ITG-017 Executive Product One-Pager</span>
+      <span class="hero-meta">CIO · CTO · CISO · CFO · Platform Engineering</span>
+    </div>
+    <h1>MXC Hyper-V &lt;500ms JIT Scale-to-Zero VM Sandboxes</h1>
+    <p class="hero-sub">
+      Eliminate the <strong>Infrastructure Trilemma</strong>—24/7 always-on VM spend, 14–45s cold-boot failures, and shared-kernel container compliance risk. Powered by our Rust-controlled <strong>MXC Type-1 Hyper-V Engine</strong> on Windows Server 2025 / Windows 11 Enterprise, dormant sandboxes sleep at <strong>0.0% idle CPU</strong>, wake on demand in <strong>&lt;300ms</strong>, and self-cleanse after every session—scaling seamlessly across <strong>Microsoft Azure VMSS Standby Pools</strong>.
+    </p>
+  </header>
+
+  <section class="stats" aria-label="Core benchmark figures">
+    <div class="stat">
+      <b>&lt;300ms</b>
+      <span>Achieved unpause-to-available (&lt;500ms SLA · &lt;800ms TTFB)</span>
+    </div>
+    <div class="stat">
+      <b>0.0% CPU</b>
+      <span>Idle compute burn; ~1.1 GB trimmed host RAM working set</span>
+    </div>
+    <div class="stat">
+      <b>30+ / Host</b>
+      <span>3×–5× isolated density with sterile .avhdx checkpoint reset</span>
+    </div>
+    <div class="stat">
+      <b>~30,000+</b>
+      <span>Concurrent &lt;500ms sandboxes per Azure VMSS Standby cell</span>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <div class="section-kicker">Type-1 Hardware Isolation · Rust Control Plane</div>
+      <h2>How the MXC Hyper-V Engine Works</h2>
+      <ul class="arch-list">
+        <li><strong>Preserved Sleep (0.0% Idle vCPU):</strong> Pre-trimmed Windows Server 2025 Golden Images stay suspended in host RAM with virtual CPU scheduling dropped strictly to zero between requests.</li>
+        <li><strong>JIT Ingress Gateway (&lt;300ms Resume):</strong> Connection-buffering ingress holds incoming HTTPS/API sockets, invokes <span class="code-tag">wxc-exec --features hyperv</span> to unpause a standby guest, verifies health, and forwards payloads with zero dropped connections.</li>
+        <li><strong>Sterile Session Reset (<span class="code-tag">.avhdx</span> Diff Disks):</strong> Every workload or AI agent runs on a transient differencing disk; on release or idle timeout, the delta disk is incinerated and reset to <span class="code-tag">pool-clean-baseline</span>.</li>
+        <li><strong>Identity-Bound Leasing (<span class="code-tag">ADR-008</span>) &amp; Autoscaling:</strong> Binds each isolated sandbox to a verified MFA user or Entra AI Agent ID while watermark autoscaling replenishes warm pools ahead of bursts.</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <div class="section-kicker">Architecture Comparison</div>
+      <h2>MXC vs. Always-On VMs &amp; Containers</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Always-On VMs</th>
+            <th>Containers</th>
+            <th>MXC Hyper-V JIT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="dim-col">Idle Cost</td>
+            <td>100% bill 24/7</td>
+            <td>Medium overhead</td>
+            <td class="mxc-col">0.0% Idle CPU</td>
+          </tr>
+          <tr>
+            <td class="dim-col">Wake Latency</td>
+            <td>14–45s boot</td>
+            <td>1–3s start</td>
+            <td class="mxc-col">&lt;300ms (&lt;500ms SLA)</td>
+          </tr>
+          <tr>
+            <td class="dim-col">Host Density</td>
+            <td>5–8 apps/host</td>
+            <td>20+ (shared OS)</td>
+            <td class="mxc-col">30+ isolated/host</td>
+          </tr>
+          <tr>
+            <td class="dim-col">Isolation</td>
+            <td>Hardware VM</td>
+            <td>Shared kernel</td>
+            <td class="mxc-col">Type-1 Hypervisor</td>
+          </tr>
+          <tr>
+            <td class="dim-col">State Drift</td>
+            <td>Persists</td>
+            <td>Restart risk</td>
+            <td class="mxc-col">.avhdx Incinerated</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="azure-panel">
+    <div class="azure-head">
+      <div>
+        <div class="section-kicker" style="margin-bottom:1px">Two-Tier Cascading Pool · MXC Tier 1 (&lt;500ms) + Azure Standby Tier 2 (Elastic Hosts)</div>
+        <h2>Microsoft Azure Elastic Scale-Out &amp; Architectural Ladder (L1–L6)</h2>
+      </div>
+    </div>
+    <div class="azure-grid">
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">Single-Node Pilot</span><span class="az-lvl">L1</span></div>
+        <p>Gen-2 Nested Hyper-V on <strong>Dv5/Ev5/v6/Fsv2/FX</strong> (15–60 sandboxes/host). Ideal for Phase 0 live wake benchmarks.</p>
+      </div>
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">VMSS + Standby Pool Cell</span><span class="az-lvl">L2</span></div>
+        <p><strong>VMSS Flexible + Hibernated/Deallocated Standby</strong> (up to 1,000 host VMs · <strong>~30,000+ &lt;500ms sandboxes</strong>/cell).</p>
+      </div>
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">Ultra-Dense M-Series</span><span class="az-lvl">L3</span></div>
+        <p>Nested Hyper-V on <strong>M-Series</strong> (up to 128 vCPUs / ~4 TiB RAM) holding <strong>hundreds–1,500+ RAM-paused sandboxes</strong>/node.</p>
+      </div>
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">Azure Dedicated Hosts</span><span class="az-lvl">L4</span></div>
+        <p>Physical single-tenant servers (D/E/F/M host SKUs) for bank-grade <strong>DORA / NIS2</strong> hardware isolation.</p>
+      </div>
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">Multi-Cell Global Fabric</span><span class="az-lvl">L5</span></div>
+        <p>Sharded VMSS + Standby cells across EEA regions &amp; subscriptions up to <strong>max Azure EA vCPU quota</strong> (100k+ sandboxes).</p>
+      </div>
+      <div class="az-card">
+        <div class="az-top"><span class="az-name">Sovereign Bare-Metal</span><span class="az-lvl">L6</span></div>
+        <p><strong>Azure Local (Stack HCI) + Azure Arc</strong> — native bare-metal Hyper-V with zero nesting overhead (<code>OP-ITG-015</code>).</p>
+      </div>
+    </div>
+    <div class="boundary-bar">
+      <strong>Transparent Azure Platform Boundaries:</strong> Azure Confidential VMs (<code>DC</code>/<code>EC</code> — SEV-SNP/TDX) and GPU VMs (<code>NC</code>/<code>NV</code>/<code>ND</code>) do not support nested Hyper-V. For GPU AI inference, run untrusted agent tool execution inside <strong>&lt;500ms MXC CPU sandboxes</strong> calling private-VNet <strong>Azure AI Foundry / GPU</strong> endpoints; for hardware memory enclaves, use native Confidential VMs or L6 Azure Local.
+    </div>
+  </section>
+
+  <section class="tiers-strip" aria-label="Fixed-scope engagement tiers">
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Phase 0 · Live Benchmark Sprint</span>
+        <span class="tier-price">€2,000–€4,500</span>
+      </div>
+      <p><strong>2–3 weeks</strong> · Idle-burn TCO audit + live &lt;300ms Hyper-V JIT wake demo on your representative Windows Server 2025 or Azure Dv5/Ev5 workload.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Full Reference Implementation</span>
+        <span class="tier-price">€4,000–€15,000+</span>
+      </div>
+      <p><strong>6–10 weeks</strong> · Golden Image Registry, <code>wxc-exec</code>, JIT Ingress Gateway, sterile <code>.avhdx</code> reaper, Azure Standby Pool hooks &amp; AC-01–AC-05 verification.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-top">
+        <span class="tier-name">Enterprise AI &amp; Sovereign Stack</span>
+        <span class="tier-price">OP-ITG-013 / 018</span>
+      </div>
+      <p>Pairs directly with <strong>AI Agent Governance</strong> (<code>OP-ITG-013</code>), <strong>Cryptographic Sovereignty</strong> (<code>OP-ITG-015</code>), and <strong>Managed Intelligence</strong> (<code>OP-ITG-018</code>).</p>
+    </div>
+  </section>
+
+  <section class="cta-box">
+    <div>
+      <h3>Book a 30-Minute Live &lt;300ms Hyper-V Wake Demo &amp; TCO Review</h3>
+      <p>See dormant Windows Server 2025 sandboxes wake under 300ms, reset cleanly via differencing disks, and map your Azure VMSS Standby Pool savings—100% independent of software vendors and statutory auditors.</p>
+      <a class="cta-url" href="https://ais-pre-o7lbgxm3islp2n4c7xxsnc-615072139437.europe-west1.run.app">
+        https://ais-pre-o7lbgxm3islp2n4c7xxsnc-615072139437.europe-west1.run.app
+      </a>
+    </div>
+    <div class="cta-contact">
+      <div class="accent">Executive Contact</div>
+      <strong>Menno Drescher</strong><br>
+      Director, CBa Consult<br>
+      menno.drescher@gmail.com<br>
+      Fixed-scope proposals in 5 business days
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>OP-ITG-017 · MXC HYPER-V &lt;500MS JIT SCALE-TO-ZERO · EXECUTIVE ONE-PAGER · 26 NOV 2026</span>
+    <span>CBa Consult &nbsp; | &nbsp; Page 1 of 1</span>
+  </footer>
+
+</main>
+</body>
+</html>

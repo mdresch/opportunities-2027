@@ -77,3 +77,37 @@ Score each of the **25 diagnostic controls** (`1` to `5`) using verifiable M365/
 8. **Unquarantined draft folders** polluting executive AI summaries.
 9. **GDPR personal data embedded** inside immutable RAG indexes with no erasure workflow.
 10. **No golden evaluation set** to detect silent RAG accuracy regressions.
+
+---
+
+## Weighted Context Maturity Index (Tier 2 scoring)
+
+1. Score each control **1–5** (table at top).  
+2. Average scores **per pillar**.  
+3. Apply weights: Pillar **1** and **5** = **1.25×**; pillars 2–4 = **1.0×**.  
+4. Normalize to a **1–5** index (see [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md)).
+
+| Band | Index | Interpretation |
+| --- | --- | --- |
+| Ad hoc | &lt; 2.5 | Ungoverned sprawl; Copilot/RAG high risk |
+| Emerging | 2.5 – 3.2 | Folder hygiene; partial labels |
+| Defined | 3.3 – 4.0 | Curated sources; taxonomy in progress |
+| Optimized | &gt; 4.0 | Ontology-driven; golden-set regression |
+
+---
+
+## Context source inventory
+
+Use [Context-Source-Inventory-Register.md](Context-Source-Inventory-Register.md) alongside question **1.1** and P0 items **4**, **7**, **8**.
+
+---
+
+## Evidence workshop checklist (client)
+
+- [ ] Priority SharePoint/Teams site list with URLs  
+- [ ] Sharing / oversharing report (sample)  
+- [ ] Purview sensitivity label policies  
+- [ ] Confluence space export (if applicable)  
+- [ ] Copilot / Graph indexing scope (admin screenshot)  
+- [ ] Named stewards for HR, Finance, Legal, Operations domains  
+- [ ] Optional: 20 candidate golden RAG questions from business users

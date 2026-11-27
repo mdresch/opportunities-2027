@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-RSK-004 | AI Governance Certification Readiness ("SOC 2 for AI") — Client One-Pager</title>
+<style>
+@page { size: A4; margin: 10mm 12mm 10mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.4pt;
+  line-height: 1.38;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 270mm;
+  padding-bottom: 10mm;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 15px 18px 14px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  font-size: 7.2pt;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.hero h1 {
+  font-size: 18pt;
+  line-height: 1.13;
+  letter-spacing: -0.35px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.5pt;
+  line-height: 1.42;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 9px 0 10px;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 8px 9px;
+}
+.stat b {
+  display: block;
+  font-size: 12pt;
+  color: #10253f;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.9pt;
+  color: #52647a;
+  line-height: 1.25;
+}
+.kicker {
+  font-size: 7.2pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 10px 0 4px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 8.5px 10px;
+}
+.card h3 {
+  font-size: 8.6pt;
+  color: #075d68;
+  margin: 0 0 3px;
+}
+.card p {
+  font-size: 7.6pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.38;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 9px;
+  font-size: 7.8pt;
+}
+th {
+  background: #10253f;
+  color: #ffffff;
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 7.4pt;
+  letter-spacing: 0.3px;
+}
+td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #dae3e9;
+  vertical-align: top;
+  color: #2c3e54;
+}
+tr:nth-child(even) td { background: #f8fbfc; }
+.mono { font-family: "Courier New", monospace; font-weight: bold; color: #075d68; }
+.framework-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 6px 0 9px;
+}
+.fw {
+  background: #ffffff;
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #10253f;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.fw b {
+  display: block;
+  font-size: 8.3pt;
+  color: #10253f;
+  margin-bottom: 2px;
+}
+.fw p {
+  font-size: 7.4pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.35;
+}
+.boundary {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 7.5pt;
+  color: #40536b;
+  line-height: 1.38;
+}
+.boundary strong { color: #10253f; }
+.cta {
+  background: #10253f;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.cta-title {
+  font-size: 8.5pt;
+  font-weight: bold;
+  color: #64d4c4;
+  margin-bottom: 2px;
+}
+.cta-text {
+  font-size: 7.7pt;
+  color: #e2ecf5;
+  margin: 0;
+}
+.cta-anchor {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 7.5pt;
+  color: #c4d1df;
+}
+.cta-anchor b {
+  display: block;
+  font-size: 10.5pt;
+  color: #ffffff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.9pt;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <span>CBa Consult · Flagship Service One-Pager · OP-RSK-004</span>
+      <span class="hero-meta">For CISOs, Chief Risk/Compliance Officers, General Counsel &amp; DPOs</span>
+    </div>
+    <h1>AI Governance Certification Readiness ("SOC 2 for AI")</h1>
+    <p class="hero-sub">
+      <strong>Turn fragmented AI rules into one audit-ready control framework ahead of December 2027.</strong>
+      A single, unified AI Governance &amp; Evidence Readiness Assessment mapping your AI inventory, policies, and controls once across <strong>ISO/IEC 42001</strong>, <strong>NIST AI RMF</strong>, and the <strong>EU AI Act</strong> — 100% conflict-free and ready for accredited certification.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <b>91% Gap</b>
+      <span>Firms lacking a formal AI-use policy despite 69% workforce adoption</span>
+    </div>
+    <div class="stat">
+      <b>Dec 2, 2027</b>
+      <span>EU AI Act Annex III standalone high-risk compliance deadline</span>
+    </div>
+    <div class="stat">
+      <b>€35M / 7%</b>
+      <span>Maximum statutory EU AI Act global turnover penalty exposure</span>
+    </div>
+    <div class="stat">
+      <b>Map Once</b>
+      <span>Unified crosswalk across ISO 42001, NIST AI RMF &amp; EU AI Act</span>
+    </div>
+  </div>
+
+  <div class="kicker">01. The Compliance &amp; Risk Problems Eliminated</div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Ungoverned Shadow AI</h3>
+      <p>Business teams deploying third-party LLMs and agentic tools without risk classification, human-oversight gates, or binding negative exclusions.</p>
+    </div>
+    <div class="card">
+      <h3>Compliance Duplication</h3>
+      <p>Rebuilding separate control spreadsheets for GDPR, NIS2/DORA, EU AI Act, NIST AI RMF, and ISO/IEC 42001 registrar audits.</p>
+    </div>
+    <div class="card">
+      <h3>Broken Evidence Chains</h3>
+      <p>Inability to prove <em>which</em> dataset, model version, RAG source, and human reviewer stood behind a high-risk AI decision.</p>
+    </div>
+  </div>
+
+  <div class="kicker">02. Unified Control Crosswalk ("Map Once, Comply Across Three")</div>
+  <div class="framework-strip">
+    <div class="fw">
+      <b>ISO/IEC 42001 (AIMS)</b>
+      <p>AI Management System clauses, Annex A controls, risk treatment plans, and continuous improvement readiness for accredited registrars.</p>
+    </div>
+    <div class="fw">
+      <b>EU AI Act (Annex III &amp; Art. 12/50)</b>
+      <p>Prohibited vs. transparency vs. high-risk classification (HR, credit, essential services), technical files, and post-market monitoring.</p>
+    </div>
+    <div class="fw">
+      <b>NIST AI RMF (Govern–Manage)</b>
+      <p>Practical lifecycle risk scoring, bias/explainability verification, and executive accountability mapping for transatlantic enterprise buyers.</p>
+    </div>
+  </div>
+
+  <div class="kicker">03. Four-Workstream Delivery Architecture (6–10 Weeks)</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">Workstream</th>
+        <th style="width: 44%;">Core Activities</th>
+        <th>Concrete Deliverable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. AI Inventory &amp; Risk Classification</strong></td>
+        <td>Catalog all internal, vendor, and agentic AI use cases; classify prohibited, transparency (Art. 50), and <strong>Annex III High-Risk</strong> systems.</td>
+        <td><strong>Unified AI System Register &amp; EU AI Act Risk Map</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2. Crosswalk Control Mapping</strong></td>
+        <td>Map existing governance, security, and ITGC controls once against <strong>ISO/IEC 42001</strong>, <strong>NIST AI RMF</strong>, and <strong>EU AI Act</strong> mandates.</td>
+        <td><strong>Gap-to-Certification Matrix ("SOC 2 for AI")</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3. Policy &amp; Negative-Exclusion Guardrails</strong></td>
+        <td>Adapt CBa Consult's <em>AI Purpose Clause</em> and HR Responsible AI (§8.2) into binding corporate AI policies and human-override gates.</td>
+        <td><strong>Board-Ready AI Governance Policy &amp; Purpose Clause Pack</strong></td>
+      </tr>
+      <tr>
+        <td><strong>4. Evidence &amp; Conformity Readiness</strong></td>
+        <td>Define technical documentation, bias/explainability logs, and post-market monitoring ahead of accredited registrar assessment.</td>
+        <td><strong>Audit-Evidence Playbook &amp; Pre-Dec 2027 Remediation Plan</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="boundary">
+    <strong>Accreditation &amp; Conflict-Free Boundary:</strong> CBa Consult delivers independent pre-certification readiness, control engineering, and evidence architecture (100% conflict-free from statutory auditors). Formal ISO/IEC 42001 certification is issued by an accredited third-party registrar. Pairs seamlessly with <span class="mono">OP-ITG-013</span> (AI Agent Governance) and <span class="mono">OP-RSK-005</span> (Evidence Assurance).
+  </div>
+
+  <div class="cta">
+    <div>
+      <div class="cta-title">NEXT STEP · 30-MINUTE EU AI ACT &amp; ISO 42001 READINESS CHECK</div>
+      <p class="cta-text">Baseline your high-risk AI exposure and lock in a conflict-free pre-certification roadmap before Q3–Q4 2027 registrar and regulatory bottlenecks hit.</p>
+    </div>
+    <div class="cta-anchor">
+      <b>€4,000 – €12,000+</b>
+      <span>6–10 Weeks · Fixed-Scope Readiness</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · Independent Management &amp; Governance Advisory</span>
+    <span>OP-RSK-004 · "SOC 2 for AI" Pre-Certification Readiness · Client Edition</span>
+  </div>
+</div>
+</body>
+</html>

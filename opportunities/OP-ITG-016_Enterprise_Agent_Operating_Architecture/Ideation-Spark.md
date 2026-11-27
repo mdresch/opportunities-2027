@@ -42,7 +42,7 @@ Design how 500+ enterprise AI agents interact at scale: agent orchestration, age
 
 ## Related Opportunities
 
-`OP-ITG-013` (precursor — must be piloted first) · `OP-HR-009` (Human + Agent Workforce Operating Model)
+`OP-ITG-013` (precursor — must be piloted first) · `OP-HR-009` (Human + Agent Workforce Operating Model) · `OP-ITG-024` (Global 24/7 SOC mesh & continuous monitoring — **Defence 24-7 SOCs** ADPA cluster; EARN SOC mesh patterns stay cross-linked here)
 
 ## Next Steps (Tier 2 → Pilot Gate)
 
@@ -50,3 +50,9 @@ Design how 500+ enterprise AI agents interact at scale: agent orchestration, age
 - [ ] Track MCP/A2A standard developments through 2027 so the architecture design doesn't lock in to a standard that gets superseded.
 - [ ] Sketch the COBIT-for-Agents control-domain mapping as a first internal working draft, independent of any specific client.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

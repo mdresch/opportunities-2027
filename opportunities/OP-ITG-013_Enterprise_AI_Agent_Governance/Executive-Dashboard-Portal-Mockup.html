@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent governance assessment — executive view (mockup)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: light-dark(#f4f4f5, #18181b);
+      --surface: light-dark(#fff, #27272a);
+      --text: light-dark(#18181b, #fafafa);
+      --muted: light-dark(#71717a, #a1a1aa);
+      --border: light-dark(#e4e4e7, #3f3f46);
+      --danger: light-dark(#b91c1c, #f87171);
+      --warn: light-dark(#b45309, #fbbf24);
+      --ok: light-dark(#15803d, #4ade80);
+      --accent: light-dark(#2563eb, #60a5fa);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, Segoe UI, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      padding: 24px;
+      max-width: 960px;
+      margin-inline: auto;
+    }
+    h1 { font-size: 1.35rem; font-weight: 600; margin: 0 0 6px; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .kpi strong { display: block; font-size: 1.5rem; font-weight: 600; }
+    .kpi span { font-size: 0.75rem; color: var(--muted); }
+    .kpi.danger strong { color: var(--danger); }
+    .kpi.warn strong { color: var(--warn); }
+    .bar-wrap { margin-bottom: 20px; }
+    .bar-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
+    .bar {
+      display: flex; height: 10px; border-radius: 6px; overflow: hidden;
+      background: var(--border);
+    }
+    .bar > span:nth-child(1) { width: 62%; background: var(--ok); }
+    .bar > span:nth-child(2) { width: 18%; background: var(--accent); }
+    .bar > span:nth-child(3) { width: 12%; background: var(--warn); }
+    .bar > span:nth-child(4) { width: 8%; background: var(--danger); }
+  </style>
+</head>
+<body>
+  <p class="visually-hidden">Executive dashboard mockup for OP-ITG-013 agent governance portal: completion, P0s, and sign-off queue.</p>
+  <h1>Agent governance assessment</h1>
+  <p class="sub">Rhine Manufacturing HoldCo · Tier 1 · Jordan Lee, CISO (sponsor)</p>
+
+  <div style="display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:0.85rem;margin-bottom:20px;">
+    Sample data for portal design. Open this file in a browser if Cursor Canvas is unavailable.
+  </div>
+
+  <div class="kpis" aria-label="Key metrics">
+    <div class="kpi warn"><strong>62%</strong><span>Overall completion</span></div>
+    <div class="kpi danger"><strong>4</strong><span>P0 flags</span></div>
+    <div class="kpi"><strong>2.8</strong><span>Draft maturity index</span></div>
+    <div class="kpi danger"><strong>3</strong><span>Blocked</span></div>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar-labels"><span>Accepted</span><span>37 questions, Tier 1</span></div>
+    <div class="bar" role="img" aria-label="62% accepted, 18% in review, 12% in progress, 8% blocked">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <section aria-labelledby="approvals-h">
+    <h2 id="approvals-h" style="font-size:1.05rem;margin:0 0 10px;">Awaiting your sign-off (CISO lane)</h2>
+    <table style="width:100%;border-collapse:collapse;font-size:0.85rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+      <thead>
+        <tr style="background:var(--bg);text-align:left;">
+          <th style="padding:10px;border-bottom:1px solid var(--border);">Q</th>
+          <th style="padding:10px;border-bottom:1px solid var(--border);">Topic</th>
+          <th style="padding:10px;border-bottom:1px solid var(--border);">Delegate</th>
+          <th style="padding:10px;border-bottom:1px solid var(--border);">Score</th>
+          <th style="padding:10px;border-bottom:1px solid var(--border);">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);">3.1</td><td style="padding:10px;border-bottom:1px solid var(--border);">NHI vs shared accounts</td><td style="padding:10px;border-bottom:1px solid var(--border);">S. Okonkwo (IAM)</td><td style="padding:10px;border-bottom:1px solid var(--border);">2</td><td style="padding:10px;border-bottom:1px solid var(--border);">Evidence submitted</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);">3.5</td><td style="padding:10px;border-bottom:1px solid var(--border);">Kill switch drill</td><td style="padding:10px;border-bottom:1px solid var(--border);">M. Chen (SOC)</td><td style="padding:10px;border-bottom:1px solid var(--border);color:var(--danger);">1</td><td style="padding:10px;border-bottom:1px solid var(--border);">Executive review</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);">6.1</td><td style="padding:10px;border-bottom:1px solid var(--border);">Central agent logging</td><td style="padding:10px;border-bottom:1px solid var(--border);">M. Chen (SOC)</td><td style="padding:10px;border-bottom:1px solid var(--border);">3</td><td style="padding:10px;border-bottom:1px solid var(--border);">Executive review</td></tr>
+        <tr><td style="padding:10px;">8.1</td><td style="padding:10px;">Purview DLP on agents</td><td style="padding:10px;">R. Patel (SEC)</td><td style="padding:10px;">2</td><td style="padding:10px;">Evidence submitted</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:12px;">Release to CBa requires 80% accepted (currently 62%). Full interactive tabs: Portal-Delegation-Dashboard-Spec.md</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "OP-ITG-013-briefing-submission-payload",
+  "title": "BriefingSubmissionPayload (Firestore / intake relay)",
+  "description": "Mirrors mdresch/agent-governance-onboarding src/domain/export/types.ts BriefingSubmissionPayload. Posted only after consentGranted === true. Max serialized size 51,200 bytes (50 KB). Does NOT include per-control responses.",
+  "engineering_ssot": {
+    "repo": "https://github.com/mdresch/oppurtunities-2027",
+    "doc": "docs/engineering/Firestore-Brief-Intake.md",
+    "payload_reference": "https://github.com/mdresch/agent-governance-onboarding/blob/main/src/domain/export/types.ts"
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "consentVersion",
+    "consentGranted",
+    "submittedUtc",
+    "classification",
+    "contact",
+    "summary"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "consentVersion": { "const": "1.0.0" },
+    "consentGranted": { "const": true },
+    "submittedUtc": { "type": "string", "format": "date-time" },
+    "classification": { "const": "Business Confidential" },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "email", "company", "roleTitle"],
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "company": { "type": "string" },
+        "roleTitle": { "type": "string" },
+        "preferredTimeframe": { "type": "string" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weightedGovernanceIndex",
+        "maturityBand",
+        "completionPct",
+        "pillarScores",
+        "triggeredRedFlagIds"
+      ],
+      "properties": {
+        "weightedGovernanceIndex": { "type": ["number", "null"] },
+        "maturityBand": { "type": ["string", "null"] },
+        "completionPct": { "type": "number" },
+        "pillarScores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["pillarId", "short", "normalizedPct"],
+            "properties": {
+              "pillarId": { "type": "integer" },
+              "short": { "type": "string" },
+              "normalizedPct": { "type": ["number", "null"] }
+            }
+          }
+        },
+        "triggeredRedFlagIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "P0 red-flag control ids only — not free-text evidence"
+        },
+        "primaryRecommendationId": { "type": "string" }
+      }
+    }
+  },
+  "not": {
+    "anyOf": [
+      { "required": ["responses"] },
+      { "required": ["organizationContext"] },
+      { "required": ["computedSummary"] },
+      { "required": ["answers"] },
+      { "required": ["assessment_json"] },
+      { "required": ["delegates"] }
+    ]
+  }
+}

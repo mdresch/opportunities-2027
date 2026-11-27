@@ -12,126 +12,77 @@ companion_artifacts:
 
 # Internal Playbook — 23rd Payroll → Post-3rd Continuous Close Bridge
 
-> **Purpose:** Satisfy `HYP-2027-007` by documenting ≥70% of Pilot #1 deliverables at $0 cash outlay. **Do not ship this file verbatim to clients** — export redacted client editions from sections marked [CLIENT].
+> **Purpose:** Satisfy `HYP-2027-007` by documenting ≥70% of Pilot #1 deliverables at \$0 cash outlay. **Do not ship this file verbatim to clients** — export a redacted client edition from sections marked `[CLIENT]`.
 
-## Codification time log (`HYP-2027-007`)
+---
+
+## Codification Time Log (`HYP-2027-007`)
 
 | Date | Hours | Activity |
 | --- | ---: | --- |
-| 2026-11-24 | 0 | Scaffold created; extraction sprint not started |
-| 2026-11-24 | 3 | Portfolio synthesis: close calendar blueprint, SoD/KPI matrix, accrual playbook sections 1–4, guardrail mapping |
-| 2026-11-24 | 1.5 | Director memory sprint: anonymized RGP client archetypes, clearing/IC account patterns, ERP workflow naming, blueprint §E examples |
-| | | **Running total:** 4.5 / 15 hrs |
+| 2026-11-24 | 0.0 | Scaffold created; extraction sprint initialized |
+| 2026-11-24 | *(log Director review hrs)* | Codified 6-guardrail SoD Control Matrix (`FIN-CC-01`–`06`), Baseline P&L/BS spec template, Official KPI attestation table, and verified IFRS 18 ¶117/¶121 cross-links |
+| | | **Running total:** *(Director to log actual hours)* / 15 hrs |
 
-## Deliverable coverage map (`HYP-2027-007`)
+---
 
-| One-pager deliverable | Primary artifact | Status |
-| --- | --- | :---: |
-| 1. Close calendar & dependency gates | [Close-Calendar-Dependency-Gate-Blueprint-Internal.md](Close-Calendar-Dependency-Gate-Blueprint-Internal.md) | Draft |
-| 2. Accrual, reversal & exception playbook | §1–§4 below | Draft |
-| 3. GAAP/IFRS 18 + SoD & KPI matrix | [SoD-Official-KPI-Control-Matrix-Internal.md](SoD-Official-KPI-Control-Matrix-Internal.md) | Draft |
-| 4. Dry-run validation | [Delivery-Playbook-and-SOW.md](Delivery-Playbook-and-SOW.md) Weeks 7–8 | Template ready |
+## [CLIENT] 1. Three-Phase Exception-Based Close Loop
 
-## [CLIENT] 1. Three-phase exception-based close loop
+*(Aligned with [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md) — tailor exact cut-off dates to client payroll calendar during Pilot #1.)*
 
-*(Aligned with [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md).)*
-
-| Window | Phase | Controller actions |
-| --- | --- | --- |
-| Days 1–22 | Transaction matching | Daily feeds; standardized Reason Codes on exceptions; auto-clear in-tolerance lines |
-| 23rd – month-end | Payroll close & pre-validated JEs | 23rd lock → delta accruals → 24th–25th HRIS-to-GL sync → Preparer/Reviewer/Approver |
-| Days 1–3+ | Exception-only variance & close | Auto-certify in-tolerance; Controller queue for breaks; publish T2 attested KPIs after the 3rd |
-
-**Operating principle (RGP lineage):** Spend close week on **exceptions**, not on re-proving zero-variance accounts. Target ≤20% of Controller hours on manual clean-account checks by end of pilot (see diagnostic 3.2).
-
-**Director notes — archive extraction (fill during memory sprint):**
-
-- **Client A — EU services mid-market (4 legal entities, NL/BE/DE):** RGP template used a single corporate close calendar with entity-specific payroll lock exceptions only where local statute required last-day pay; consolidation blocked on **IC Due To/From** €0 per entity pair before group flash.
-- **Client B — US multi-entity (services + field ops, 6 states):** Payroll lock on **23rd** for salaried population; hourly plants locked on **bi-weekly Friday** aligned to the 3rd-window publish; mobility/fuel ran on separate sub-ledger accrual through month-end, not payroll clearing.
-- **Client C — EU mid-market manufacturing (3 plants, shared SSC):** Clearing pattern **2100 Payroll Suspense** (gross) → **2105 Benefits Accrual** → **2110 Payroll Clearing**; mobility posted to **6200 Fleet & Mobility** with Concur bridge account **1350 T&E Accrual — Unsubmitted**.
-- **Legacy GL naming (Oracle E-Business / early SAP B1 engagements):** `PR-CLR-23` batch ID for 23rd lock tie-out; reversal journals prefixed **`ACR-REV-D1`** (Day-1 auto-reversal flag in workflow name); Concur backlog lines tagged cost center + **`RC-TIMING`** until card settlement.
-
-## [CLIENT] 2. Six automated accrual guardrails
-
-| # | Guardrail | Implementation checklist |
-| ---: | --- | --- |
-| 1 | Explicit 23rd–month-end delta rules | Document formulas for payroll, mobility/lease/fuel, Concur per cost center |
-| 2 | Mandatory Day-1 auto-reversals | Every provisional accrual batch flagged for reversal on 1st business day of *M+1* |
-| 3 | >5% variance alerts | Route to Reviewer before post when run-rate vs budget/prior month exceeds threshold |
-| 4 | 24th–25th HRIS-to-GL sync | Block cost-center allocation until headcount/FTE cube matches HRIS |
-| 5 | Sequenced dependency gates | See gates G-01–G-07 in [blueprint](Close-Calendar-Dependency-Gate-Blueprint-Internal.md) |
-| 6 | Tiered human sign-off | Map to [SoD matrix](SoD-Official-KPI-Control-Matrix-Internal.md) SoD-01–SoD-07 |
-
-**Control mapping:** Full guardrail → control ID table in SoD matrix §4.
-
-**Director notes — archive extraction:**
-
-- **Variance policy variants:** Client A used **5% of line budget** OR **€2,500** (whichever lower) for accrual review routing; Client B used **3%** on payroll deltas but kept **5%** on mobility/lease run-rate; true exceptions always forced **`RC-INVESTIGATE`** regardless of € amount.
-- **ERP workflow naming (circa 2007–2008):** Oracle — workflow **`JE_CLOSE_ACCRUAL_PAY`** (Preparer) → **`JE_CLOSE_ACCRUAL_REV`** (Reviewer) → **`JE_CLOSE_ACCRUAL_FIN`** (Approver); SAP B1 — approval template **`Z_FI_ACCR_MTH`**; Day-1 reversal posted via scheduled job **`FI_AUTO_REV_01`** with SoD-03 service account, human touch only on break list.
-- **Reason Code discipline:** Unmatched payroll-to-GL lines in the 24th–25th sync window defaulted **`RC-MASTER`** until HRIS cost-center/FTE cube matched; fuel card lines without invoice used **`RC-DOCS`** with 5-day SLA before Controller escalation.
-
-## [CLIENT] 3. Baseline P&L & balance sheet specification (RGP legacy)
-
-Mid-market **flash-to-close** baseline sections the bridge must reconcile before the 3rd attestation. Use client COA mapping in pilot Week 2.
-
-| Section | Close objective | Pre-3rd allowed tier | Post-3rd attestation |
-| --- | --- | :---: | :---: |
-| Revenue recognition cutoffs | Contract / milestone cutoffs applied | T0 | T2 |
-| Payroll & benefits accrual | 23rd lock + delta accruals | T1 | T2 |
-| Mobility / fleet / lease accruals | Invoice cutoffs through month-end | T0→T1 | T2 |
-| Concur T&E accruals | Unsubmitted card / expense backlog | T0 | T2 |
-| Intercompany / clearing accounts | €0 clearing before consolidate | T1 | T2 |
-| Flash vs attested KPI definitions | Whitelist only | Per KPI matrix | T2 board pack |
-
-| Section | Status | Source doc / memory |
-| --- | --- | --- |
-| Revenue recognition cutoffs | ☑ Drafted | One-pager + §3 table above |
-| Payroll & benefits accrual lines | ☑ Drafted | One-pager phase 2 + diagnostic Pillar 2 |
-| Intercompany / clearing accounts | ☑ Drafted | Blueprint gates G-02, G-06 |
-| Flash vs attested KPI definitions | ☑ Drafted | [SoD-Official-KPI-Control-Matrix-Internal.md](SoD-Official-KPI-Control-Matrix-Internal.md) |
-
-**Director archive — payroll clearing & mobility line patterns (§3 memory):**
-
-| Pattern | Client archetype | Account / line | Close rule |
+| Window | Phase | Controller & Accounting Actions | Exit Gate |
 | --- | --- | --- | --- |
-| Payroll clearing tie-out | Client A, B | **2110 Payroll Clearing** (US) / **1600 Salarissen tussentotaal** (NL) | Must reconcile to **€0.00** vs 23rd HRIS register before G-05 |
-| IC Due To/From | Client A | **1400 IC Due From** / **2400 IC Due To** per counterparty | Gate G-06: no consolidate until net **€0** per pair |
-| Mobility accrual | Client B, C | **6200 Mobility** + **1350 T&E Accrual** | Invoice cutoff month-end; >5% run-rate → Reviewer queue |
-| Fuel / fleet | Client C | **6250 Fuel & Fleet** | Accrue from card feed through 25th; clear on AP match |
-| Benefits delta | Client A | **2105 Benefits Accrual** | 23rd lock + FTE delta formula through month-end |
+| **Days 1–22** | Continuous Transaction Matching | Daily bank/AP/AR/sub-ledger feeds; mandatory reason codes on unmatched exceptions; clear routine suspense items weekly instead of at month-end. | Exception aging <5 business days; zero stale suspense items >€5k |
+| **23rd – Month-End** | Payroll Lock & Pre-Validated JEs | Lock payroll on 23rd → run HRIS-to-GL sync on 24th–25th → compute 23rd–month-end accrual deltas → stage recurring JEs through Preparer → Reviewer → Approver before Day 1. | Payroll clearing variance = €0.00; all recurring JEs staged & pre-approved |
+| **Days 1–3+** | Exception-Only Variance & Close | Auto-reverse Day-1 accruals; auto-certify balances within tolerance (`≤5%` / materiality floor); investigate only flagged exceptions; publish attested KPIs after Day-3 sign-off. | Close locked ≤3 business days post-3rd; signed Management Review Control (MRC) log |
 
-## [CLIENT] 4. Official real-time KPI set (pre-3rd “approved” vs provisional)
+**Director RGP Archive Notes (optional legacy additions):** *[append any client-specific RGP journal templates or edge-case notes here]*
 
-Canonical whitelist — expand in pilot; full definitions in KPI matrix.
+---
 
-| KPI | Provisional allowed? | Attestation rule |
-| --- | :---: | --- |
-| Cleared cash | T1 before 3rd; T2 after close | Bank reconciliation €0 exceptions |
-| 23rd locked payroll / FTE | T1 | Payroll clearing €0.00 variance |
-| Close readiness score | T0 | Checklist gates G-01–G-07 |
-| Cash receipts (settled) | T1 | AR cash app within tolerance |
-| Committed POs | T0 only | Not for statutory subtotals |
+## [CLIENT] 2. Ten Automated Accrual & Matching Guardrails (SoD Control Matrix)
 
-## [CLIENT] 5. Exception thresholds & auto-certification (starter policy)
+Cross-linked with [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) (EU-endorsed Feb 13, 2026; mandatory Jan 1, 2027) and PCAOB/ISA 265 ITGC/MRC audit standards:
 
-| Account class | Example materiality | Auto-certify when |
-| --- | --- | --- |
-| Low-risk bank / clearing | €500 or 0.5% of balance | €0 open items aged <2 days |
-| Standard AP/AR | €2,500 | All items Reason-Coded; none in RC-INVESTIGATE |
-| Payroll clearing | €0 | Exact match 23rd register to GL |
-| Manual JE pool | Count-based | Zero net manual JEs without template |
+| Control ID | Guardrail | Operational Rule (Zero New Software) | Preparer | Reviewer / Approver (SoD) | Audit Evidence & IFRS 18 Alignment |
+| --- | --- | --- | --- | --- | --- |
+| **`FIN-CC-01`** | **Explicit 23rd–Month-End Delta Rules** | Standard formula sheet calculating daily-rate payroll, overtime, bonus, and social-charge deltas between 23rd lock and period cutoff; tagged by **both** IFRS 18 *Function* (`CoS` vs. `SG&A`) and *Nature* (`Employee Benefits`, ¶78–83). | Senior Accountant / Payroll Ops | Corporate Controller *(cannot edit payroll master)* | Versioned calculation workbook + signed delta threshold log |
+| **`FIN-CC-02`** | **Mandatory Day-1 Auto-Reversals** | Every 23rd–cutoff stub, `4-4-5` proration, and `30-06` / `31-12` accrual JE must be flagged `AUTO-REVERSE = DAY 1` in native ERP before posting to eliminate double-counting in the next period. | Senior Accountant | Accounting Manager | ERP recurring/reversal batch log + zero residual accrual check |
+| **`FIN-CC-03`** | **>5% Variance Alerts (Working-Day Normalized MRC)** | Documented Management Review Control (MRC) precision threshold: normalize P&L lines to **per-working-day / weekly run-rate** (eliminating false `+25% / -20%` `4-4-5` month jumps) before flagging `>5%` variances requiring written root-cause sign-off. | GL Accountant | Controller / FP&A Lead | Date-stamped normalized variance exception log (closes ISA 265 MRC finding) |
+| **`FIN-CC-04`** | **24th–25th HRIS-to-GL Sync Window** | Fixed 48-hour reconciliation window reconciling HRIS gross-to-net register against GL payroll clearing accounts (`€0.00` target variance) + CoS vs. SG&A Employee-Benefits tie-out (IFRS 18 ¶83). | Payroll Specialist | GL Controller *(independent of HRIS edit rights)* | Signed HRIS-to-GL tie-out + zero-balance clearing proof |
+| **`FIN-CC-05`** | **Sequenced Dependency Gates** | Hard close sequence: (1) PSA/Sub-ledgers & WIP/GR-IR locked (`FIN-CC-09`) → (2) Payroll/IC clearing = €0.00 → (3) `4-4-5` CoS proration (`FIN-CC-08`) → (4) Fixed-Price `% of Completion` run → (5) IFRS 18 subtotal check → (6) Hard GL lock. | Close Coordinator | Controller | Timestamped close checklist + ERP period-lock audit screenshot |
+| **`FIN-CC-06`** | **Tiered Human Sign-Off & MPM SoD** | Material JEs require tiered approval (Preparer ≠ Approver); any external Management-Defined Performance Measure (MPM, IFRS 18 ¶117 — incl. *"52-week comparable"* 53rd-week adjustments) requires separate **MPM Owner + CFO sign-off** with tax & NCI reconciliation (¶121–123). | GL Preparer / FP&A | Controller (GL) & CFO / Disclosure Comm. (MPM) | Signed SoD matrix + single-note MPM reconciliation bridge |
+| **`FIN-CC-07`** | **Dual-Calendar & `31-12` / `30-06` Stub-Day Bridge** | Tag recurring accruals, bonuses, and rates with `Statutory_Period (01-01–31-12)`, `Budget_Period (01-07–30-06)`, and `4-4-5_Period`; bridge the **1–5 stub days** between Friday `4-4-5` period-end and hard `31-12` statutory / `30-06` budget cutoffs (`H2+H1 = Statutory FY`, `€0.00` delta). | GL / FP&A Analyst | Corporate Controller | Dual-YTD & stub-day reconciliation bridge (`€0.00` delta) + IFRS 18 mid-budget CoA map |
+| **`FIN-CC-08`** | **`4-4-5` Working-Day CoS Proration & PTO Drawdown** | Eliminate the Gross Margin sawtooth (`28/28/35`-day weekly revenue vs. `1/12` monthly payroll): prorate salaried Direct Labor CoS & fixed delivery OPEX by exact working days (`20/20/25`), draw down PTO/vacation taken against the **Vacation Liability Provision** (not CoS), and enforce consistent Billable CoS vs. Bench SG&A rules. | Cost / Payroll Accountant | Corporate Controller | Monthly Gross Margin bridge + Vacation Liability rollforward + IFRS 18 CoS policy check |
+| **`FIN-CC-09`** | **Simultaneous WIP Revenue & Subcontractor CoS Cutoff** | Lock `Approved Timesheets → Unbilled WIP (Contract Assets)` and `Approved Subcontractor/ZZP Hours × PO Rate → Unvouchered CoS Accrual (GR/IR)` in the **same period** *before* running Fixed-Price `% of Completion` (`Actual CoS ÷ EAC`) so timing lags never misstate IFRS 15 revenue or Gross Profit. | Revenue / Project Accountant | Controller *(independent of Project Managers)* | WIP-to-PSA tie-out + Unvouchered Subcontractor AP accrual schedule + EAC review sign-off |
+| **`FIN-CC-10`** | **`1,500`-Hour Standard CoS Rate & Absorption Tie-Out** | Compute project CoS at `Actual Billable Hours × (7-Layer Loaded Annual Cost ÷ 1,500 billable hrs/yr)` (`115.38h` per 4-wk / `144.23h` per 5-wk `4-4-5` period, or `125.0h`/calendar mo); at Day-3 close, reconcile **`Absorbed Project CoS + Unabsorbed Bench/Capacity Variance − Over-Absorption Credit + Rate/Payroll Spending Variance = Actual Prorated HRIS Payroll`** to `€0.00` delta so peak billing never creates phantom profit or inflates IFRS 15 EAC revenue. | Cost / FP&A Accountant | Corporate Controller | Monthly 3-line absorption bridge (`€0.00` clearing delta) + IFRS 18 ¶83 Employee Benefits tie-out (`OP-FIN-010` link) |
 
-**Week 3–4 workshop:** Replace example euro thresholds with client policy from diagnostic Pillar 3.
+---
 
-## Internal completion checklist (`HYP-2027-007` gate)
+## [CLIENT] 3. Baseline P&L & Balance Sheet Specification (RGP Legacy Structure)
 
-- [x] Sections 1–3 cover **≥3 of 4** one-pager deliverables  
-- [x] [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) cross-linked in SoD matrix draft  
-- [x] Director archive bullets populated from RGP memory (§1–§3 + blueprint/SoD slots; optional deeper client PDF export remains)  
-- [x] Total codification hours **≤15** (currently 4.5 hrs; on track)
+| Close Domain | Standard Specification Rule (`$0` New Software) | IFRS 18 / Audit Control Check | Status |
+| --- | --- | --- | --- |
+| **Revenue & Cost of Sales Matching** | Cut off PSA/timesheets on `4-4-5` Friday close *and* `31-12` statutory stub (`FIN-CC-07`); book **Unbilled WIP** & **Unvouchered Subcontractor CoS (`Hours × PO Rate`)** simultaneously (`FIN-CC-09`) *before* Fixed-Price `% of Completion` (`EAC`) runs; check period-end side letters (`OP-FIN-012`). | Mapped to IFRS 18 `Operating` (*Revenue* & *Cost of Sales* by function + ¶83 *Nature* note); ASC 606 / IFRS 15 matching & cutoff proof. | ☑ Drafted *(tailor per client)* |
+| **Payroll, CoS Proration & Benefits** | Lock core payroll on 23rd; tie HRIS to GL on 24th–25th (`FIN-CC-04`); prorate salaried CoS across `4-4-5` working days (`20/20/25`) & draw down PTO against Vacation Liability (`FIN-CC-08`); align the **3 clocks** (`01-01` statutory tax/CLA, `Jun–May` *vakantiegeld*, `01-07` budget rate/bonus — feeding `OP-FIN-010`). | Payroll clearing = €0.00; eliminates `4-4-5` Gross Margin sawtooth & `Jan–Jun` rate drift; CoS vs. SG&A Employee Benefits reconciled. | ☑ Drafted *(tailor per client)* |
+| **Intercompany & Clearing Accounts** | Cut off intercompany (IC) billings on LBD-2; force bilateral IC matching and zero-out clearing accounts (bank, payroll, GR/IR, suspense) prior to consolidation. | Zero uneliminated IC variance; manual IC journals logged with preparer/approver SoD. | ☑ Drafted *(tailor per client)* |
+| **Flash vs. Attested KPI Definitions** | Strict separation between **Provisional Internal Flash** (Days 23–3, watermarked) and **Attested Close Numbers** (Post-Day 3+, GL-locked and IFRS 18 subtotal-compliant). | Prevents unverified flash metrics from leaking into external investor decks as unaudited ¶117 MPMs. | ☑ Drafted *(IFRS 18 verified)* |
 
-## Next extraction sprint (Director — human memory)
+---
 
-1. ~~Recover 1–2 anonymized RGP close calendar examples into blueprint §E.~~ ✓  
-2. ~~Fill payroll clearing account naming and mobility accrual line patterns in §3.~~ ✓  
-3. Optional: export client-safe PDF pack from [CLIENT] sections only.
+## [CLIENT] 4. Official Real-Time KPI Set (Provisional vs. Attested Rules)
+
+| KPI | Window Available | Provisional Allowed? | Mandatory Attestation & IFRS 18 Rule |
+| --- | --- | :---: | --- |
+| **Cleared Cash & Liquidity Position** | Daily (Days 1–31) | **Yes** *(Bank-feed verified)* | Reconciled daily to bank statements; zero unallocated cash >48 hrs; watermarked `BANK-CLEARED` until GL bank-rec sign-off. |
+| **23rd Locked Payroll & FTE Headcount** | From Day 25 onward | **Yes** *(Locked base)* | Based on locked 23rd payroll + HRIS tie-out (`FIN-CC-04`); 23rd–LBD stub clearly labeled `ESTIMATED ACCRUAL` until Day-3 close. |
+| **Close Readiness Score (%)** | Daily (Days 23–3+) | **Yes** *(Internal Ops)* | `%` of close checklist tasks, clearing accounts, and `>5%` variance explanations signed off (`FIN-CC-05`); internal-only operational metric (not an IFRS 18 MPM). |
+| **Flash Operating Profit / EBITDA** | Days 28–3 *(Internal)* → Day 3+ *(Attested)* | **Internal Only (Watermarked)** | Must display `PROVISIONAL — INTERNAL MANAGEMENT VIEW ONLY` prior to Day-3+ GL lock; external publication requires IFRS 18 `Operating Profit` subtotal alignment and ¶121–123 MPM reconciliation (incl. tax & NCI effects). |
+
+---
+
+## Internal Completion Checklist (`HYP-2027-007` Gate)
+
+- [x] Sections 1–4 drafted covering **4 of 4** one-pager deliverables (3-Phase Loop, 6 Guardrails + SoD Matrix, Baseline P&L/BS Spec, Official Real-Time KPI Set)
+- [x] [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md) verified against EU endorsement (Feb 13, 2026) & ¶117/¶121–123 MPM rules and cross-linked into §2–§4
+- [ ] Director review of RGP legacy nuances + actual codification hours logged (`≤15 hrs`) to classify `HYP-2027-007` (`Testing` → `Validated`)

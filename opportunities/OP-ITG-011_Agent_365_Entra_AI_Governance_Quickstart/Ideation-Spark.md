@@ -49,3 +49,12 @@ Configure **Agent 365** observability/FinOps limits, **Entra for AI Agents** jus
 - [ ] Build a 1-page **Ignite 2026 Quick-Start Checklist** mapping *Agent 365*, *Entra Agent Identity*, and *BSM 2026* settings to COBIT/NIST controls.
 - [ ] Confirm which Ignite 2026 capabilities are GA vs. Public Preview for Q1 2027 client tenants.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

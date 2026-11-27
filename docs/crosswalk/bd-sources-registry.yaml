@@ -1,0 +1,248 @@
+# Maps opportunity folder name → BD subfolders (under Business Development - Documents)
+# Optional: track_a_repo for graduated delivery SSOT outside this repo
+
+bd_root: "C:\\Users\\menno\\CBA\\Business Development - Documents"
+
+opportunities:
+  OP-FIN-009_Continuous_Close:
+    id: OP-FIN-009
+    folders:
+      - Build Shared Servcies Operations
+      - Build on Compensation and Benefits Practice
+      - Build a Payroll Providers Integration SaaS
+      - Build Market Integration ADP Marketplace
+      - Build a Portfolio Program Project Management Practice
+      - Financial Models
+      - General/Meetings
+    notes:
+      - "Kickoff segment pattern mirrors General/Meetings and PMI Kickoff kits."
+      - "Graduated pilot pack is authoritative in Track A repo (see track_a_repo)."
+    track_a_repo: "D:\\Source\\repos\\pr-fin-009-continuous-close-playbook"
+    track_a_artifacts:
+      - docs/delivery/Pilot-1-Kickoff-Agenda-Client.docx
+      - docs/delivery/Pilot-1-Kickoff-Client.pptx
+      - docs/delivery/templates/pilot-workbook-shell.xlsx
+      - docs/delivery/kickoff-meetings/OP-FIN-009-Pilot-1/
+
+  OP-ITG-013_Enterprise_AI_Agent_Governance:
+    id: OP-ITG-013
+    folders:
+      - Build a CoPilot Demo
+      - ICT Governance Framework
+      - Build a Security and Compliance Practice
+      - Azure AI Data
+
+  OP-ITG-014_Knowledge_Context_Governance:
+    id: OP-ITG-014
+    folders:
+      - Build a CoPilot Demo
+      - Product Development
+      - Build a Analytics and AI
+
+  OP-ITG-018_Managed_Intelligence_Provider_MIP:
+    id: OP-ITG-018
+    folders:
+      - Build Shared Servcies Operations
+      - Microsoft 365 Digital Workforce Workshop
+      - ICT Governance Framework
+
+  OP-RSK-004_AI_Governance_Certification:
+    id: OP-RSK-004
+    folders:
+      - Build a Security and Compliance Practice
+
+  OP-FIN-010_Rate_Engine_Reconciliation:
+    id: OP-FIN-010
+    folders:
+      - Build on Compensation and Benefits Practice
+      - Financial Models
+
+  OP-HR-002_HR_Operating_Model_Maturity:
+    id: OP-HR-002
+    folders:
+      - HR Maturity Model
+      - Build on Compensation and Benefits Practice
+
+  OP-OPS-001_Quote_to_delivery_handoff_map:
+    id: OP-OPS-001
+    folders:
+      - Service Hub for Enterprise Clients
+      - Build a Customer Success Managers - Operations practice
+
+  OP-OPS-003_Quote_to_Cash_Diagnostic:
+    id: OP-OPS-003
+    folders:
+      - Service Hub for Enterprise Clients
+      - Build a Customer Success Managers - Operations practice
+
+  OP-CX-001_Client_onboarding_retention_friction_audit:
+    id: OP-CX-001
+    folders:
+      - Service Hub for Enterprise Clients
+      - Build a Customer Success Managers - Operations practice
+
+  OP-CHG-001_Framework_tool_adoption_playbook:
+    id: OP-CHG-001
+    folders:
+      - CBA - Change Management
+      - Building an adoption and change management practice
+
+  OP-CHG-002_Town_Hall_Meetings_Orchestration:
+    id: OP-CHG-002
+    folders:
+      - CBA - Change Management
+      - General/Meetings
+
+  OP-STR-001_Annual_strategic_planning_OKR_alignment:
+    id: OP-STR-001
+    folders:
+      - Cascade Executive Strategy
+
+  OP-STR-004_MA_Readiness_Assessment:
+    id: OP-STR-004
+    folders:
+      - Cascade Executive Strategy
+      - CBA - Change Management
+
+  OP-STR-005_PMI_Governance_Office:
+    id: OP-STR-005
+    folders:
+      - Build a Portfolio Program Project Management Practice
+      - Cascade Executive Strategy
+      - CBA - Change Management
+
+  OP-DTX-005_Microsoft_IQ_Copilot_Studio_FinOps:
+    id: OP-DTX-005
+    folders:
+      - Build a CoPilot Demo
+
+  OP-ITG-002_ICT_Governance_Maturity_Assessment_Multi:
+    id: OP-ITG-002
+    folders:
+      - ICT Governance Framework
+
+  OP-ITG-004_Managed_Microsoft_365_Migration_Services:
+    id: OP-ITG-004
+    folders:
+      - Microsoft 365 Digital Workforce Workshop
+      - Build a Modern Workspace Practice
+      - Build Secure Remote Work Practice
+
+  OP-FIN-008_Employee_Payments_Client_Funds:
+    id: OP-FIN-008
+    folders:
+      - Build a Payroll Providers Integration SaaS
+      - Build Market Integration ADP Marketplace
+
+  OP-FIN-012_Accountants_Review_Findings_Side_Letters:
+    id: OP-FIN-012
+    folders:
+      - Build a Security and Compliance Practice
+
+  OP-FIN-001_Fractional_finance_ops_starter_kit:
+    id: OP-FIN-001
+    folders:
+      - Financial Models
+      - Build Shared Servcies Operations
+
+  OP-FIN-002_Month_end_close_FP_A:
+    id: OP-FIN-002
+    folders:
+      - Financial Models
+      - Build Shared Servcies Operations
+
+  OP-HR-008_Remote_Onboarding_and_IT_Setup:
+    id: OP-HR-008
+    folders:
+      - Build Secure Remote Work Practice
+      - Microsoft 365 Digital Workforce Workshop
+
+  OP-ITG-011_Agent_365_Entra_AI_Governance_Quickstart:
+    id: OP-ITG-011
+    folders:
+      - Build a CoPilot Demo
+      - ICT Governance Framework
+
+  OP-LEG-003_EU_AI_Act_GDPR_plain:
+    id: OP-LEG-003
+    folders:
+      - Build a Security and Compliance Practice
+
+  OP-HR-011_HR_AI_FinOps_Capacity_Governance:
+    id: OP-HR-011
+    folders:
+      - HR Maturity Model
+      - Build a CoPilot Demo
+    notes:
+      - "Microsoft Frontier HR Leader — FinOps for AI (SRGCM17235)."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-012_Workforce_Listening_Qualitative_Analytics:
+    id: OP-HR-012
+    folders:
+      - HR Maturity Model
+      - Build a Analytics and AI
+    notes:
+      - "Engagement/exit theme analytics; privacy and cohort rules."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-013_HR_ESS_Tier1_Agent_Governance:
+    id: OP-HR-013
+    folders:
+      - HR Maturity Model
+      - Build a CoPilot Demo
+      - Microsoft 365 Digital Workforce Workshop
+    notes:
+      - "ESS agent grounding and escalation; pair with Knowledge Context practice."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-014_HR_Workflow_Redesign_Sprint:
+    id: OP-HR-014
+    folders:
+      - HR Maturity Model
+      - CBA - Change Management
+    notes:
+      - "90-day CHRO playbook — one workflow, baseline, scale/stop gate."
+    source_documents:
+      - SRGCM17235
+
+  OP-HR-015_Manager_AI_Enablement:
+    id: OP-HR-015
+    folders:
+      - HR Maturity Model
+      - CBA - Change Management
+      - Building an adoption and change management practice
+    notes:
+      - "Manager performance synthesis and coaching prep boundaries."
+    source_documents:
+      - SRGCM17235
+
+  OP-ITG-024_Global_247_SOC_Continuous_Monitoring:
+    id: OP-ITG-024
+    folders:
+      - Build a Security and Compliance Practice
+    notes:
+      - "Primary sources on ADPA Projects Lists: Defense 24-7 SOCs Architecture\\ (DERA, Alliance Resilience, SOC mesh ideation). Non-MSSP architecture only."
+
+reference_documents:
+  - id: SRGCM17235
+    title: "The Frontier HR Leader"
+    subtitle: "Reinvent how HR works with AI. Build the AI-ready workforce to scale it."
+    file: "F:\\Downloads\\EN-CNTNT-eBook-SRGCM17235pdf.pdf"
+    publisher: Microsoft
+    format: pdf
+    pages: 30
+    registered: "2026-11-26"
+    crosswalk: "docs/crosswalk/Microsoft-Frontier-HR-Leader-eBook-HR-Map.md"
+    informs_opportunities:
+      - OP-HR-002
+      - OP-HR-003
+      - OP-HR-009
+      - OP-HR-011
+      - OP-HR-012
+      - OP-HR-013
+      - OP-HR-014
+      - OP-HR-015

@@ -51,3 +51,12 @@ Single repeatable methodology, scoped down to a handoff map (`OP-OPS-001`) for s
 - [ ] Track `OP-OPS-002`'s enterprise pilot in parallel — it supplies the "scale up" half of the productized methodology.
 - [ ] Once both precursors have run, extract the shared diagnostic skeleton (what's common to both scales vs. what differs) as the first productization draft.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

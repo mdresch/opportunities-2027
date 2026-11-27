@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executive Brief | Accounting, Audit, Retention &amp; Future AI Pricing Strategies (2027–2030)</title>
+<style>
+@page { size: A4; margin: 10mm 12mm 10mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.1pt;
+  line-height: 1.35;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 268mm;
+  padding-bottom: 10mm;
+}
+.page-break { page-break-before: always; }
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 13px 16px 12px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  font-size: 7.1pt;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.hero h1 {
+  font-size: 15.8pt;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  margin: 0 0 5px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.1pt;
+  line-height: 1.38;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 8px 0;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 6.5px 8px;
+}
+.stat b {
+  display: block;
+  font-size: 11.4pt;
+  color: #10253f;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.8pt;
+  color: #52647a;
+  line-height: 1.24;
+}
+.thesis {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-top: 2.5px solid #10253f;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+.thesis-title {
+  font-size: 8.6pt;
+  font-weight: bold;
+  color: #10253f;
+  margin-bottom: 3px;
+}
+.thesis ul { margin: 0 0 4px; padding-left: 14px; }
+.thesis li { font-size: 7.5pt; color: #2c3e54; margin-bottom: 2.5px; line-height: 1.34; }
+.thesis-rule { font-size: 7.5pt; font-weight: bold; color: #075d68; margin: 0; }
+.kicker {
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 8px 0 2.5px;
+}
+h2 {
+  font-size: 10.8pt;
+  color: #10253f;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+.lead { font-size: 7.7pt; color: #40536b; margin: 0 0 5px; line-height: 1.36; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3px 0 7px;
+  font-size: 7.3pt;
+}
+th {
+  background: #10253f;
+  color: #ffffff;
+  text-align: left;
+  padding: 5px 6.5px;
+  font-size: 7pt;
+  letter-spacing: 0.25px;
+}
+th.hi { background: #075d68; }
+td {
+  padding: 4.8px 6.5px;
+  border-bottom: 1px solid #dae3e9;
+  vertical-align: top;
+  color: #2c3e54;
+}
+tr:nth-child(even) td { background: #f8fbfc; }
+td.hi { background: #eef7f6 !important; color: #10253f; font-weight: 600; }
+.card-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 5px 0 8px;
+}
+.card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 7px 8.5px;
+}
+.card b { display: block; font-size: 7.7pt; color: #075d68; margin-bottom: 2px; }
+.card p { font-size: 7.2pt; color: #40536b; margin: 0; line-height: 1.34; }
+.log-box {
+  background: #eef5f7;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 7.4pt;
+  color: #17243a;
+  line-height: 1.36;
+  margin-bottom: 7px;
+}
+.cta {
+  background: #10253f;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 9px 13px;
+  margin-top: 8px;
+}
+.cta-title { font-size: 8.2pt; font-weight: bold; color: #64d4c4; margin-bottom: 2px; }
+.cta-text { font-size: 7.5pt; color: #e2ecf5; margin: 0; }
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.8pt;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+<!-- PAGE 1 -->
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <span>CBa Consult · CFO, CIO &amp; Audit Committee Executive Brief · 2027–2030</span>
+      <span class="hero-meta">Author: Menno Drescher, CBa Consult · Nov 2026</span>
+    </div>
+    <h1>Accounting, Audit &amp; Retention Comparison: Build, Lease, Subscription, Tokens &amp; Services — and Future AI Pricing Strategies</h1>
+    <p class="hero-sub">
+      Comparing <strong>US GAAP / IFRS treatment</strong>, external audit overhead, <strong>Subscription Retention Traps</strong>, immutable AI audit-trail mandates, and the <strong>four winning 2027–2030 AI monetization models</strong>.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <b>7–15 Yrs</b>
+      <span>Statutory retention vs. 30–90 day SaaS cancellation purge</span>
+    </div>
+    <div class="stat">
+      <b>6 Mo / 10 Yr</b>
+      <span>EU AI Act logs vs. tech docs (5–7+ yr FinServ)</span>
+    </div>
+    <div class="stat">
+      <b>3–6 / 7 Yrs</b>
+      <span>SEC 17a-4 WORM/audit trail &amp; SOX 404 ICFR</span>
+    </div>
+    <div class="stat">
+      <b>4 Archetypes</b>
+      <span>Durable 2027–2030 AI pricing architectures</span>
+    </div>
+  </div>
+
+  <div class="thesis">
+    <div class="thesis-title">Executive Thesis: Pricing Architecture Is Now an Accounting, Audit &amp; Retention Decision</div>
+    <ul>
+      <li><strong>No Model Is "Free" of Hidden Charges:</strong> Shifting from Product Build (CapEx) to Lease, Subscription, or Per-Usage AI Tokens alters P&amp;L/EBITDA optics, ITGC/SOC 1 audit scope, unbilled-usage accruals, and multi-year retention liabilities.</li>
+      <li><strong>The Subscription Retention Trap:</strong> A SaaS/AI subscription can be cancelled in Year 2, but tax (7–15 yrs), SOX (7 yrs), SEC 17a-4 (3–6 yrs), and EU AI Act / MiFID II (5–10 yrs) clocks keep running — creating "zombie archive license" OpEx and IAS 37 / ASC 420 onerous-contract risk unless decoupled into WORM storage.</li>
+      <li><strong>Telecom/Cable/Satellite Precedent for AI:</strong> Just as telcos, cable, and satellite operators moved from $/GB and flat "unlimited" into speed tiers, CIR SLAs, and converged bundles, enterprise AI is rapidly moving past raw tokens and flat seats into four durable 2027–2030 pricing archetypes.</li>
+    </ul>
+    <p class="thesis-rule">Design Rule: Pair a predictable governance/SLA floor with capped variable capacity or verified outcomes — with client-owned WORM audit trails decoupled from Day 1.</p>
+  </div>
+
+  <div class="kicker">Section 01</div>
+  <h2>Accounting &amp; External Audit Comparison Across Five Commercial Models</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 17%;">Commercial Model</th>
+        <th style="width: 16%;">GAAP / IFRS</th>
+        <th style="width: 19%;">Buyer P&amp;L &amp; BS</th>
+        <th style="width: 16%;">Seller RevRec</th>
+        <th>External Audit Focus &amp; Hidden Charges</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Product Build (CapEx)</strong></td>
+        <td>IAS 38, ASC 350-40, ASC 985-20</td>
+        <td>CapEx on BS; amortized 3–5 yrs (boosts EBITDA)</td>
+        <td>Point-in-time or PoC for custom builds</td>
+        <td>Med–High: research (OpEx) vs. dev (CapEx) timesheets, labor-rate testing, impairment, U.S. IRC §174 conformity.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Lease (Infra / Embedded)</strong></td>
+        <td>IFRS 16 / ASC 842</td>
+        <td>ROU Asset + Liability (IFRS 16 lifts EBITDA; ASC 842 Op = straight-line)</td>
+        <td>Operating vs. Finance / Sales-Type lessor</td>
+        <td>High: lease software, IBR curves, embedded-lease reviews (dedicated GPUs/servers), IFRS 16 vs. ASC 842 dual-GAAP.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Subscription (SaaS)</strong></td>
+        <td>IFRS 15 / ASC 606, ASC 340-40</td>
+        <td>OpEx ratable over term (upfront = Prepaid)</td>
+        <td>Straight-line (upfront = Deferred Rev)</td>
+        <td>Medium (spikes on Excel): ARM subledger, commission capitalization (ASC 340-40), SSP studies, side-letter checks (AS 2805).</td>
+      </tr>
+      <tr>
+        <td><strong>4. Per-Usage / AI Tokens</strong></td>
+        <td>IFRS 15 / ASC 606 (variable/breakage), IFRS 18</td>
+        <td>Variable OpEx; unbilled usage = month-end accrual</td>
+        <td>As consumed; prepaid pools = Deferred + breakage</td>
+        <td><strong>HIGHEST per euro:</strong> edge metering pipeline, SOC 1 / ITGC expansion, monthly unbilled accruals, breakage modeling, AI FinOps matching.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Purchase of a Service</strong></td>
+        <td>IFRS 15 / ASC 606</td>
+        <td>OpEx as delivered or milestones accepted; WIP</td>
+        <td>Over time (hours/milestones) or acceptance</td>
+        <td>Low–Med: SOW/milestone acceptance sign-offs, period-end cutoff, confirming no undisclosed refund/clawback side letters.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · Accounting, Audit, Retention &amp; Future AI Pricing Strategies (2027–2030)</span>
+    <span>Page 1 of 2 · Linked: OP-FIN-012 / OP-ITG-010 / OP-ITG-018</span>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page page-break">
+  <div class="kicker" style="margin-top: 0;">Section 02</div>
+  <h2>The Subscription Retention Trap &amp; Immutable AI Audit-Trail Mandates</h2>
+  <p class="lead">
+    SaaS and AI vendors typically purge tenant data 30–90 days post-cancellation unless buyers fund 7–12 years of zero-utility "archive" seats. Meanwhile, regulators classify AI prompts, RAG context, tool calls, and outputs as immutable statutory records:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 21%;">Regulatory Regime</th>
+        <th style="width: 26%;">Mandated Records</th>
+        <th style="width: 20%;">Minimum Retention</th>
+        <th>Immutability &amp; Architectural Mandate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>EU AI Act Art. 12, 19 &amp; 26(6)</strong></td>
+        <td>High-Risk AI operational event logs (inputs, DBs, outputs, oversight)</td>
+        <td>≥6 mo floor (Art. 19(2): 5–7+ yrs FinServ via MiFID II / DORA)</td>
+        <td>Automatic lifetime logging; financial entities integrate into DORA tamper-evident ICT governance.</td>
+      </tr>
+      <tr>
+        <td><strong>EU AI Act Art. 18</strong></td>
+        <td>Technical docs, risk management, data governance, conformity files</td>
+        <td>10 years after market placement / deployment</td>
+        <td>Maintained at disposal of National Competent Authorities.</td>
+      </tr>
+      <tr>
+        <td><strong>SEC 17a-4 / 204-2 / FINRA 4511</strong></td>
+        <td>AI-assisted client comms, research, advisory prompts, outputs &amp; tool calls</td>
+        <td>3–6 years (most recent 2 yrs readily accessible)</td>
+        <td>Dual-path: WORM (S3 Object Lock / Azure Immutable Blob) OR time-stamped, hash-chained Audit-Trail Alternative.</td>
+      </tr>
+      <tr>
+        <td><strong>SOX 404 / PCAOB &amp; Tax (AWR/GoBD/IRS)</strong></td>
+        <td>AI financial summaries, reconciliations, metering logs &amp; side letters</td>
+        <td>7 years (10–15 yrs NL 30%-ruling / real estate / arbitration)</td>
+        <td>100% GL tie-out (€0.00 variance + SHA-256 hash), queryable; GDPR Art. 18 quarantine for statutory PII.</td>
+      </tr>
+      <tr>
+        <td><strong>HIPAA &amp; GDPR Art. 22</strong></td>
+        <td>AI logs touching PHI (HIPAA) or automated HR/profiling (2027 EDPB sweep)</td>
+        <td>6 yrs (HIPAA); justified statutory basis (GDPR)</td>
+        <td>Pseudonymize/separate PII from immutable logs + strict RBAC to avoid GDPR over-retention fines.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="log-box">
+    <strong>5-Field Minimum Immutable AI Audit Log (OP-ITG-010 / OP-RSK-005):</strong> (1) Authenticated User or Entra AI Agent ID + UTC timestamp; (2) System/user prompt + pinned model version &amp; parameters; (3) Exact RAG document IDs / vector hashes / DB snapshots; (4) Full output, ERP/API tool calls &amp; human approval/override; (5) Hash-chained append-only or WORM lock decoupled from vendor subscription.
+  </div>
+
+  <div class="kicker">Section 03</div>
+  <h2>Lessons from 30 Years of Telecom, Cable &amp; Satellite Pricing (Applied to AI)</h2>
+  <div class="card-3">
+    <div class="card">
+      <b>Raw Units Always Commoditize</b>
+      <p>As $/GB collapsed into flat ARPU (pushing Nokia to 5G SA slicing and SES to CIR SLAs), raw $/million tokens is deflating 80–90%/yr. Margin shifts to determinism, latency SLAs, and verified outcomes.</p>
+    </div>
+    <div class="card">
+      <b>Flat Unlimited Breaks on GPU Cost</b>
+      <p>Heavy users saturated radio/orbital cells; continuous autonomous AI agents break $20–$30/seat subscriptions because inference carries real, non-zero marginal compute cost.</p>
+    </div>
+    <div class="card">
+      <b>Pure Pay-Per-Use = CFO Bill Shock</b>
+      <p>Cable "bill roulette" drove churn until 5-Year All-In Price Locks emerged; pure token billing triggers runaway-agent FinOps shocks, forcing hybrid ceilings and caps.</p>
+    </div>
+  </div>
+
+  <div class="kicker">Section 04</div>
+  <h2>Projected Best-in-Class AI Pricing Strategies (2027–2030)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">Winning AI Pricing Archetype</th>
+        <th style="width: 17%;">Horizon &amp; Segment</th>
+        <th style="width: 30%;">Commercial &amp; Margin Mechanics</th>
+        <th class="hi">Accounting, Audit &amp; Retention Advantage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Hybrid Base + Pooled Credits + Hard FinOps Ceiling</strong></td>
+        <td>2027–2028 · Mid-Market &amp; Enterprise SaaS Default</td>
+        <td>Predictable monthly platform floor + shared org token pool + hard automated budget cap &amp; opt-in boost packs.</td>
+        <td class="hi">Base fee recognizes ratably; pooled credits bound accruals; hard caps prevent CFO bill shock &amp; late AJEs.</td>
+      </tr>
+      <tr>
+        <td><strong>2. SLA / Quality-Tiered "CIR for AI" (Deterministic)</strong></td>
+        <td>2027–2029 · Regulated Finance, Health, Gov &amp; Defense</td>
+        <td>Prices reasoning depth, latency SLA, Type-1 Hyper-V / sovereign isolation &amp; WORM auditability instead of raw tokens.</td>
+        <td class="hi">Insulates margin from token deflation; crisp performance obligations simplify ASC 606 / IFRS 15 SSP allocation.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Verified-Outcome Pricing (with Floor &amp; Cap)</strong></td>
+        <td>2028–2030 · Vertical Workflows (Finance, Claims, CS)</td>
+        <td>Charges per verified outcome (reconciled account, closed audit finding, resolved ticket) bounded by floor &amp; cap.</td>
+        <td class="hi">Direct CFO P&amp;L alignment; 5-field immutable logs serve simultaneously as regulatory and billing proof.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Pass-Through Compute + MIP Retainer (OP-ITG-018)</strong></td>
+        <td>2027–2030 · Conflict-Free Advisory &amp; Mid-Market</td>
+        <td>Client owns cloud/LLM compute &amp; WORM archive at pass-through cost; pays predictable monthly MIP governance retainer.</td>
+        <td class="hi">Eliminates Subscription Retention Trap (zero zombie licenses, zero IAS 37 onerous-contract risk) with clean OpEx.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cta">
+    <div class="cta-title">CBA CONSULT 2027–2030 PORTFOLIO ALIGNMENT</div>
+    <p class="cta-text">Operationalize audit-ready AI pricing, WORM retention decoupling, and Continuous Close via <strong>OP-FIN-009</strong>, <strong>OP-FIN-012</strong>, <strong>OP-ITG-010</strong>, <strong>OP-ITG-013</strong>, <strong>OP-RSK-004/005</strong>, and <strong>OP-ITG-018 (MIP)</strong>.</p>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · Accounting, Audit, Retention &amp; Future AI Pricing Strategies (2027–2030)</span>
+    <span>Page 2 of 2 · Conflict-Free Pre-Assurance</span>
+  </div>
+</div>
+</body>
+</html>

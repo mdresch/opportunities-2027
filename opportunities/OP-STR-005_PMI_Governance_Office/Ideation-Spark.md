@@ -49,3 +49,12 @@ Stand up the post-close integration governance office harmonizing payroll/pensio
 - [ ] Draft the governance-office operating model (roles, cadence, escalation) as a standalone template independent of a specific deal.
 - [ ] Confirm which of the five converging capabilities would need to be pilot-mature before this office could credibly run all five at once.
 - [ ] Complete the pre-pilot gate (7 Pivotal Questions → 1-page Opportunity Brief → pilot scope/pricing/KPI) before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

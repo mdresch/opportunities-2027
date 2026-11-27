@@ -1,0 +1,32 @@
+{
+  "opportunity_id": "OP-ITG-013",
+  "preparation_mode": true,
+  "g4_upgrade_blocked": true,
+  "portal_repo": "https://github.com/mdresch/agent-governance-onboarding",
+  "portfolio_explorer_url": "https://oppurtunities-2027.ai.studio/",
+  "production_url": "https://oppurtunities-2027.ai.studio/",
+  "hosting_target": "Google AI Studio — Portfolio Explorer",
+  "intake_model": "browser_local_assessment_plus_firestore_brief_request",
+  "intake_model_doc": "Assessment-Intake-Privacy-Model.md",
+  "brief_request_backend": {
+    "provider": "Google Cloud Firestore",
+    "schema": "data/brief-request-firestore-schema.json",
+    "engineering_ssot_repo": "https://github.com/mdresch/oppurtunities-2027",
+    "engineering_doc": "docs/engineering/Firestore-Brief-Intake.md",
+    "code_paths_verified_on_master": false,
+    "payload_type": "BriefingSubmissionPayload",
+    "max_payload_bytes": 51200,
+    "stores_full_assessment": false,
+    "stores_summary_aggregates": true
+  },
+  "features_not_on_public_host": [
+    "personalized_org_workspace",
+    "cxo_delegate_question_forwarding",
+    "server_side_full_assessment_storage"
+  ],
+  "qualification_signal": "firestore_brief_request_or_booked_readout",
+  "notes": "Full assessment remains client-side/export. Brief request forwards minimal contact+scoping to Firestore only.",
+  "booking_url": null,
+  "last_smoke_test_utc": null,
+  "release_tag_target": "v0.1.0-intake"
+}

@@ -1,6 +1,6 @@
 ---
 name: pandaos-machine-setup
-description: "Set up a new PandaOS remote machine on a cloud or server PandaOS cannot set up in one click (DigitalOcean, AWS, OVH, Scaleway, Vultr, Linode, Oracle, a home or office server, anything that runs a Linux VM): get a VM running, install PandaOS on it with the run command from machine_act, and connect it with the setup code. NEVER for Hetzner, Azure or Hostinger, which have their own 1-click button in Settings, Cloud, Add machine. Google Cloud only when its button is missing there."
+description: "Set up a new PandaOS remote machine on a cloud or server PandaOS cannot set up in one click (DigitalOcean, AWS, OVH, Scaleway, Vultr, Linode, Oracle, a home or office server, anything that runs a Linux VM): get a VM running, install PandaOS on it with the run command from machine_act, and connect it with the setup code. NEVER for Google Cloud, Hetzner, Azure or Hostinger, which have their own 1-click button in Settings, Cloud, Add machine."
 allowed-tools: Read, Bash, mcp__pandactions__machine_read, mcp__pandactions__machine_act, mcp__pandactions__machine_open, mcp__pandactions__generative_ui, mcp__pandactions__creds_create_var, mcp__pandactions__creds_list_env_files, mcp__pandactions__pandaos_get_navigation_links, mcp__pandaos_browser__browser_navigate, mcp__pandaos_browser__browser_snapshot, mcp__pandaos_browser__browser_screenshot, mcp__pandaos_browser__browser_click, mcp__pandaos_browser__browser_type, mcp__pandaos_browser__browser_select_option, mcp__pandaos_browser__browser_scroll
 argument-hint: "[provider, and a name for the machine]"
 user-invocable: true
@@ -9,9 +9,7 @@ source: pandaos
 
 You are setting up a **PandaOS remote machine**: a server the user rents or owns, running the PandaOS server image, that their desktop connects to so chats can run there. Your job ends when the machine shows **Online** in Remote Machines and the user knows what still bills.
 
-**Scope.** This skill is for providers PandaOS has no 1-click setup for. If the user names Hetzner, Azure or Hostinger, stop and tell them in one line to use that provider's button in Settings, Cloud, Add machine, because it creates, installs and connects the VM by itself.
-
-**Google Cloud.** Its 1-click button is not shown to every account yet. If the user names Google Cloud, ask once whether they see a Google Cloud button in Settings, Cloud, Add machine. If they do, send them there. If they do not, set it up here like any other provider: a Compute Engine VM, with the port opened by a firewall rule.
+**Scope.** This skill is for providers PandaOS has no 1-click setup for. If the user names Google Cloud, Hetzner, Azure or Hostinger, stop and tell them in one line to use that provider's button in Settings, Cloud, Add machine, because it creates, installs and connects the VM by itself.
 
 ## The three PandaOS tools
 

@@ -4,6 +4,12 @@ Real web research (initial pass 2026-11-17; expanded 2026-11-18 to cover all **1
 
 **Read this with its limits in mind.** Primary analyst reports (Gartner, Forrester, McKinsey, Deloitte) are cited via public press releases, summaries, and industry coverage alongside vendor surveys and EU regulatory texts. Treat this as *directional* validation — confirming where budgets, regulations, and buyer pain are moving in 2027 — not as a substitute for client-level discovery.
 
+**Competitive detail (2026-11-26):** See [docs/research/Consulting-Offerings-2027.md](docs/research/Consulting-Offerings-2027.md) for Big Four, McKinsey/BCG, Accenture/Capgemini, mid-tier ESG, and MSSP vs `OP-ITG-024` positioning.
+
+**Analyst crosswalk (2026-11-26):** [docs/research/Analyst-Signals-2027.md](docs/research/Analyst-Signals-2027.md) — Gartner, Forrester, IDC, Arion, and adjacent independents mapped to `OP-*`.
+
+**Enterprise buyer mechanics (2026-11-26):** [docs/research/Enterprise-IT-Budget-Governance-Multinational.md](docs/research/Enterprise-IT-Budget-Governance-Multinational.md) — global / regional / country IT spend, budget cycles, DoA, mandates; Benelux FS & mid-corp annex; links to `OP-ITG-002`, `OP-SCM-003`, and §3 procurement anchors below.
+
 **Confidence key:** 🟢 multiple independent sources agree, or a named, dated analyst/regulatory source · 🟡 single vendor source, secondhand citation, or sources conflict · 🔴 no usable 2027-specific quantitative data found.
 
 ---
@@ -233,12 +239,12 @@ Real web research (initial pass 2026-11-17; expanded 2026-11-18 to cover all **1
 | --- | --- | --- |
 | **CFO / Corporate Controller** | `OP-FIN-001`, `OP-FIN-002`, `OP-FIN-009`, `OP-FIN-010`, `OP-FIN-011` | Finance Ops / Audit Readiness *(pitch: "no new software spend")* |
 | **CIO / CISO / Chief AI Officer** | `OP-ITG-002`, `OP-ITG-011`–`016`, `OP-RSK-004`, `OP-RSK-005` | Security, AI Governance & Cloud Modernization |
-| **CHRO / VP People** | `OP-HR-001`–`003`, `OP-HR-009`, `OP-HR-010` | HR Transformation & Compliance Automation |
+| **CHRO / VP People** | `OP-HR-001`–`003`, `OP-HR-009`, `OP-HR-010`, `OP-HR-011`–`015` | HR Transformation, agentic HR & compliance automation |
 | **General Counsel / DPO** | `OP-LEG-001`–`005`, `OP-ITG-010`, `OP-RSK-004` | Legal/Compliance Risk & Retention Governance |
 | **COO / CRO / PE Operating Partner** | `OP-OPS-001`–`003`, `OP-CX-001`–`002`, `OP-STR-004`–`005` | RevOps/CX Retention & M&A Deal/Carve-Out Fees |
 
 ### 3. Benelux / EU Mid-Market Pricing & Packaging Anchors
-- **Phase 0 Entry Wedges (€500–€5,000 fixed fee; 2–4 weeks):** High-velocity diagnostic wedges (`OP-OPS-001`, `OP-LEG-001`, `OP-FIN-001`, *IT Technical & Info Quality Baseline*) priced below typical mid-market procurement-committee thresholds.
+- **Phase 0 Entry Wedges (€500–€5,000 fixed fee; 2–4 weeks):** High-velocity diagnostic wedges (`OP-OPS-001`, `OP-LEG-001`, `OP-FIN-001`, *IT Technical & Info Quality Baseline*) priced below typical mid-market procurement-committee thresholds — still **PO + invoice** to a legal entity, not line-manager card ([Commercial-Engagement-Invoicing-and-Procurement-Policy.md](docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md)).
 - **Phase 1 Tier A Flagships (€3,000–€15,000+ fixed scope; 6–10 weeks):** Priced at ~30–50% below Big Four / Tier-1 SI day rates while delivering independent, conflict-free pre-assurance readiness.
 
 ---

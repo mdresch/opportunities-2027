@@ -2,8 +2,17 @@
 
 One folder per opportunity across the full 2027 portfolio — **Tier A Core Active Flagships** (5), **Tier B Growth & Deferred Flagships** (15), **Tier C Supporting** (41), **Tier D Thought Leadership** (3), **Remaining Active Backlog** (53), and **Parked** (5) (see [inventory-of-ideas.md](../inventory-of-ideas.md#portfolio-priority-classification-tier-ad) and [Tier_A_Executive_Summary_2027.md](../Tier_A_Executive_Summary_2027.md)), each holding that opportunity's own project docs: its `Ideation-Spark.md` (the opening brief, built on the [7 Pivotal Questions](../ideation-template.md#6b-standard-opportunity-brief-7-pivotal-questions) framework) plus any ideation documents, client-facing one-pagers, research notes, or pilot artifacts produced as the opportunity moves from `Spark` → `Idea` → `Pilot`.
 
-The authoritative status, effort, and capital figures for every idea — including all 122 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
+The authoritative status, effort, and capital figures for every idea — including all 127 — still live in [inventory-of-ideas.md](../inventory-of-ideas.md); these folders are the working space *around* that row, not a replacement for it.
 
+**Local Business Development library:** [BD-Business-Development-Sources.md](../docs/crosswalk/BD-Business-Development-Sources.md) — per-opportunity stubs [`BD-Quick-Reference.md`](OP-FIN-009_Continuous_Close/BD-Quick-Reference.md) where mapped (regenerate: `py -3 scripts/sync-bd-quick-references.py`).
+
+Each workspace may also include Tier 2 artifacts linked from OneDrive **`ADPA - Projects Lists`**:
+
+- `Source-Documents.md` — manifest of assigned `.docx` sources (path on `F:\OneDrive - CBA\…`)
+- `Ideation-Document.md` — extracted ideation content (from ideation / charter / primary source)
+- `Business-Case.md` — extracted business case (or inventory-derived outline when no BC doc exists)
+
+Portfolio-wide assignment index: [Source-Document-Assignment-Register.md](../docs/registers/Source-Document-Assignment-Register.md). Refresh after OneDrive changes: `python scripts/assign_adpa_source_documents.py` (see `FOLDER_CLUSTER_SECONDARY` in that script for non-primary attaches, e.g. ICT + AI risk → `OP-ITG-013`).
 ## Tier A — Core Active Flagships (5)
 
 | Folder | ID | Strategic Asset | Flagship Offering |
@@ -33,6 +42,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-ITG-011_Agent_365_Entra_AI_Governance_Quickstart](OP-ITG-011_Agent_365_Entra_AI_Governance_Quickstart/Ideation-Spark.md) | `OP-ITG-011` | 3. Digital Labor | Agent 365 & Entra AI-Agent Governance Quick-Start |
 | [OP-ITG-012_Purview_Fabric_OneLake_Sovereign_Readiness](OP-ITG-012_Purview_Fabric_OneLake_Sovereign_Readiness/Ideation-Spark.md) | `OP-ITG-012` | 4. Evidence & Governance | Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness |
 | [OP-DTX-005_Microsoft_IQ_Copilot_Studio_FinOps](OP-DTX-005_Microsoft_IQ_Copilot_Studio_FinOps/Ideation-Spark.md) | `OP-DTX-005` | 2. Organizational Intelligence | Microsoft IQ & Copilot Studio FinOps Rollout |
+| [OP-SCM-003_Procurement_Readiness_Assessment_Portal](OP-SCM-003_Procurement_Readiness_Assessment_Portal/Ideation-Spark.md) | `OP-SCM-003` | 4. Evidence & Governance *(Commercial platform)* | Procurement Readiness & Pre-Sales Assessment Portal (PRMAP) |
 
 ## Tier C — Supporting (41)
 
@@ -104,6 +114,11 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-HR-006_AR_VR_Training_Scene_Builder](OP-HR-006_AR_VR_Training_Scene_Builder/Ideation-Spark.md) | `OP-HR-006` | 2. Human Resources | AR/VR Training Scene Builder |
 | [OP-HR-007_Corporate_Micro_Training_Creator](OP-HR-007_Corporate_Micro_Training_Creator/Ideation-Spark.md) | `OP-HR-007` | 2. Human Resources | Corporate Micro Training Creator |
 | [OP-HR-008_Remote_Onboarding_and_IT_Setup](OP-HR-008_Remote_Onboarding_and_IT_Setup/Ideation-Spark.md) | `OP-HR-008` | 2. Human Resources | Remote Onboarding and IT Setup Service |
+| [OP-HR-011_HR_AI_FinOps_Capacity_Governance](OP-HR-011_HR_AI_FinOps_Capacity_Governance/Ideation-Spark.md) | `OP-HR-011` | 2. Human Resources | HR AI FinOps & capacity governance |
+| [OP-HR-012_Workforce_Listening_Qualitative_Analytics](OP-HR-012_Workforce_Listening_Qualitative_Analytics/Ideation-Spark.md) | `OP-HR-012` | 2. Human Resources | Workforce listening & qualitative theme analytics |
+| [OP-HR-013_HR_ESS_Tier1_Agent_Governance](OP-HR-013_HR_ESS_Tier1_Agent_Governance/Ideation-Spark.md) | `OP-HR-013` | 2. Human Resources | HR ESS / tier-1 agent governance pack |
+| [OP-HR-014_HR_Workflow_Redesign_Sprint](OP-HR-014_HR_Workflow_Redesign_Sprint/Ideation-Spark.md) | `OP-HR-014` | 2. Human Resources | HR workflow redesign sprint (90-day CHRO playbook) |
+| [OP-HR-015_Manager_AI_Enablement](OP-HR-015_Manager_AI_Enablement/Ideation-Spark.md) | `OP-HR-015` | 2. Human Resources | Manager AI enablement for performance & coaching |
 | [OP-LEG-002_Contract_lifecycle_compliance_framework_rollout](OP-LEG-002_Contract_lifecycle_compliance_framework_rollout/Ideation-Spark.md) | `OP-LEG-002` | 3. Legal and Regulatory | Contract lifecycle & compliance framework rollout |
 | [OP-LEG-005_Regulatory_Navigator](OP-LEG-005_Regulatory_Navigator/Ideation-Spark.md) | `OP-LEG-005` | 3. Legal and Regulatory | Regulatory Navigator |
 | [OP-ITG-002_ICT_Governance_Maturity_Assessment_Multi](OP-ITG-002_ICT_Governance_Maturity_Assessment_Multi/Ideation-Spark.md) | `OP-ITG-002` | 6. IT and Technology | ICT Governance Maturity Assessment & Multi-Cloud Compliance Audit |
@@ -130,6 +145,7 @@ The authoritative status, effort, and capital figures for every idea — includi
 | [OP-ING-002_Digital_Asset_Licensing_for_AI](OP-ING-002_Digital_Asset_Licensing_for_AI/Ideation-Spark.md) | `OP-ING-002` | 10. Innovation and Growth | Digital Asset Licensing for AI Training |
 | [OP-SCM-001_Vendor_supply_chain_continuity_quick](OP-SCM-001_Vendor_supply_chain_continuity_quick/Ideation-Spark.md) | `OP-SCM-001` | 11. Supply Chain | Vendor & supply-chain continuity quick-audit |
 | [OP-SCM-002_Green_Supply_Chain_Consulting](OP-SCM-002_Green_Supply_Chain_Consulting/Ideation-Spark.md) | `OP-SCM-002` | 11. Supply Chain | Green Supply Chain Consulting |
+| [OP-SCM-003_Procurement_Readiness_Assessment_Portal](OP-SCM-003_Procurement_Readiness_Assessment_Portal/Ideation-Spark.md) | `OP-SCM-003` | 11. Supply Chain | Procurement Readiness & Pre-Sales Assessment Portal (PRMAP) |
 | [OP-RSK-001_Operational_AI_risk_register_starter](OP-RSK-001_Operational_AI_risk_register_starter/Ideation-Spark.md) | `OP-RSK-001` | 12. Risk Management | Operational & AI risk register starter kit |
 | [OP-RSK-002_AI_Ethics_Auditor_Bias_Review](OP-RSK-002_AI_Ethics_Auditor_Bias_Review/Ideation-Spark.md) | `OP-RSK-002` | 12. Risk Management | AI Ethics Auditor / Bias Review Service |
 | [OP-RSK-003_AI_Explainability_Audit_Specialist](OP-RSK-003_AI_Explainability_Audit_Specialist/Ideation-Spark.md) | `OP-RSK-003` | 12. Risk Management | AI Explainability & Audit Specialist |

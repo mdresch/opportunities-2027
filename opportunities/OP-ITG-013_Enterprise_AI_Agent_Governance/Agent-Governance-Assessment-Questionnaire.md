@@ -30,7 +30,23 @@ Score each of the **40 diagnostic questions** (`0` to `5`) based on **verifiable
 
 ---
 
+## 1b. Executive delegation (client portal)
+
+**No executive answers all 40 alone.** Each question has a default **accountable executive** (CEO, CFO, CIO, CISO, or CAIO) and an **owner function** (IT, IAM, SOC, Finance, etc.). Sponsors invite specialists; the portal routes only relevant questions to each contributor and rolls up maturity on an executive dashboard.
+
+| Client asset | Purpose |
+| --- | --- |
+| [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md) | Who delegates what — pillar map, 40-question routing, P0 owners, email template |
+| [Portal-Delegation-Dashboard-Spec.md](Portal-Delegation-Dashboard-Spec.md) | Sponsor dashboard, contributor queue, statuses, export to briefing |
+| [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json) | Machine-readable assignees for portal import |
+
+**Tier 1 minimum invites (6):** IAM · M365/Power · SOC · Finance/FinOps · Privacy/DPO · one business agent sponsor.
+
+---
+
 ## 2. The 40-Question Diagnostic (8 Governance Pillars)
+
+> **Portal columns:** In delegated mode, each row below is keyed by question ID (`1.1` … `8.5`). Default **Accountable (A)** and **Function (F)** come from [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json) — not repeated in every table to keep this document readable for workshops and PDF export.
 
 ### Pillar 1 — Agent Inventory & Discovery *(Audit-Critical: 1.25×)*
 | # | Diagnostic Question | Required Evidence | Score (1–5) |

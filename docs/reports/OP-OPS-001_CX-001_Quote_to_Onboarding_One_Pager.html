@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-OPS-001 → OP-CX-001 | Quote-to-Delivery &amp; 90-Day Onboarding Sprint — Client One-Pager</title>
+<style>
+@page { size: A4; margin: 10mm 12mm 10mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.4pt;
+  line-height: 1.38;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  max-width: 190mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 270mm;
+  padding-bottom: 10mm;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 15px 18px 14px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  font-size: 7.2pt;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.hero h1 {
+  font-size: 18pt;
+  line-height: 1.13;
+  letter-spacing: -0.35px;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.5pt;
+  line-height: 1.42;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 9px 0 10px;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 8px 9px;
+}
+.stat b {
+  display: block;
+  font-size: 12pt;
+  color: #10253f;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.9pt;
+  color: #52647a;
+  line-height: 1.25;
+}
+.kicker {
+  font-size: 7.2pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 10px 0 4px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 8.5px 10px;
+}
+.card h3 {
+  font-size: 8.6pt;
+  color: #075d68;
+  margin: 0 0 3px;
+}
+.card p {
+  font-size: 7.6pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.38;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 9px;
+  font-size: 7.8pt;
+}
+th {
+  background: #10253f;
+  color: #ffffff;
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 7.4pt;
+  letter-spacing: 0.3px;
+}
+td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #dae3e9;
+  vertical-align: top;
+  color: #2c3e54;
+}
+tr:nth-child(even) td { background: #f8fbfc; }
+.mono { font-family: "Courier New", monospace; font-weight: bold; color: #075d68; }
+.deliv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 5px 0 9px;
+}
+.deliv {
+  border: 1px solid #dae3e9;
+  border-top: 2px solid #0c8b82;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background: #ffffff;
+}
+.deliv b {
+  display: block;
+  font-size: 8.2pt;
+  color: #10253f;
+  margin-bottom: 2px;
+}
+.deliv p {
+  font-size: 7.5pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.36;
+}
+.callout {
+  background: #eef5f7;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 8px 11px;
+  font-size: 7.7pt;
+  color: #2c3e54;
+}
+.callout strong { color: #10253f; }
+.cta {
+  background: #10253f;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.cta-title {
+  font-size: 8.5pt;
+  font-weight: bold;
+  color: #64d4c4;
+  margin-bottom: 2px;
+}
+.cta-text {
+  font-size: 7.7pt;
+  color: #e2ecf5;
+  margin: 0;
+}
+.cta-anchor {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 7.5pt;
+  color: #c4d1df;
+}
+.cta-anchor b {
+  display: block;
+  font-size: 10.5pt;
+  color: #ffffff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.9pt;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <span>CBa Consult · Flagship Service One-Pager · OP-OPS-001 → OP-CX-001</span>
+      <span class="hero-meta">For Founders, COOs, CROs &amp; Customer Success Leaders (B2B)</span>
+    </div>
+    <h1>Quote-to-Delivery &amp; 90-Day Onboarding Sprint</h1>
+    <p class="hero-sub">
+      <strong>Stop losing margin and retention between "Signed Deal" and "Day 90".</strong>
+      Fixes the entire <strong>Quote → Contract → Handover → Delivery → Onboarding → Adoption</strong> chain in one focused, fixed-scope sprint — cutting early churn and protecting Net Revenue Retention (NRR) without buying new CRM or CS software.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <b>3–5 Weeks</b>
+      <span>Fixed-scope diagnostic &amp; live pilot on incoming deals</span>
+    </div>
+    <div class="stat">
+      <b>Day 1–90 NRR</b>
+      <span>Compresses Time-to-Value &amp; eliminates buyer's remorse</span>
+    </div>
+    <div class="stat">
+      <b>Zero Software Buy</b>
+      <span>Implemented inside your existing CRM, PM &amp; billing stack</span>
+    </div>
+    <div class="stat">
+      <b>Human + AI Balance</b>
+      <span>Protects high-trust human checkpoints at pivotal moments</span>
+    </div>
+  </div>
+
+  <div class="kicker">01. Commercial &amp; Delivery Leakage Eliminated</div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Broken Sales-to-Delivery Handoffs</h3>
+      <p>Unclear scope, missing assumptions, ad-hoc discounting, and missed billing triggers between Sales, Legal, Finance, and Delivery.</p>
+    </div>
+    <div class="card">
+      <h3>Slow First-90-Day Time-to-Value</h3>
+      <p>New clients wait weeks for kickoff, provisioning, and concrete milestones — creating early friction, rework loops, and churn risk.</p>
+    </div>
+    <div class="card">
+      <h3>Over-Automated, Low-Trust Onboarding</h3>
+      <p>Replacing human checkpoints with generic automated email checklists erodes client confidence during high-stakes implementation moments.</p>
+    </div>
+  </div>
+
+  <div class="kicker">02. The 4-Week Quote-to-Onboarding Fix</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 14%;">Timeline</th>
+        <th style="width: 22%;">Sprint Stage</th>
+        <th>Execution Activities &amp; Governance Focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mono">Week 1</td>
+        <td><strong>Observe &amp; Map</strong></td>
+        <td>Trace 3–5 recent closed-won deals end-to-end (<span class="mono">Quote → Contract → Handover → Kickoff → First Value → Invoice</span>).</td>
+      </tr>
+      <tr>
+        <td class="mono">Week 2</td>
+        <td><strong>Pinpoint Friction</strong></td>
+        <td>Isolate rework loops, missing intake gates, undocumented scope assumptions, side-letter risks, and Day 1–90 onboarding drop-offs.</td>
+      </tr>
+      <tr>
+        <td class="mono">Week 3</td>
+        <td><strong>Design &amp; Govern</strong></td>
+        <td>Build a 1-page <strong>Quote-to-Delivery Handoff Playbook</strong>, clear RACI ownership, and a <strong>Human-AI Balanced 90-Day Onboarding Checklist</strong> (UniCorn COAS aligned).</td>
+      </tr>
+      <tr>
+        <td class="mono">Week 4</td>
+        <td><strong>Pilot &amp; Certify</strong></td>
+        <td>Test live on the next 1–2 incoming client deals, measure <strong>Time-to-Value</strong> and <strong>Billing Readiness</strong>, and lock into daily operations.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kicker">03. Concrete Deliverables (3–5 Weeks Fixed Scope)</div>
+  <div class="deliv-grid">
+    <div class="deliv">
+      <b>1. End-to-End Quote-to-Delivery Handoff Map</b>
+      <p>Visual and operational handoff blueprint synchronizing Sales, Legal, Delivery, and Finance with zero dropped assumptions.</p>
+    </div>
+    <div class="deliv">
+      <b>2. 90-Day Onboarding &amp; Time-to-Value Playbook</b>
+      <p>Structured Day 1 / Day 30 / Day 60 / Day 90 milestones pairing automated intake gates with high-trust human executive checkpoints.</p>
+    </div>
+    <div class="deliv">
+      <b>3. Handoff Exception &amp; Rework Checklist</b>
+      <p>Mandatory pre-kickoff and billing verification gates stopping unbilled scope creep, delayed invoicing, and surprise discounts.</p>
+    </div>
+    <div class="deliv">
+      <b>4. Live Pilot Scorecard &amp; Scale Path</b>
+      <p>Baseline metrics ready to scale cleanly into <span class="mono">OP-OPS-003</span> (Productized Quote-to-Cash Diagnostic) or <span class="mono">OP-CX-002</span> (UniCorn COAS Assessment).</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Founder-Led Entry Option:</strong> Small B2B and founder-led teams focusing strictly on Sales-to-Delivery handoff discipline (<span class="mono">OP-OPS-001</span> standalone) can start with a rapid €500–€1,500 diagnostic wedge before expanding into full 90-day onboarding orchestration.
+  </div>
+
+  <div class="cta">
+    <div>
+      <div class="cta-title">NEXT STEP · 30-MINUTE HANDOFF &amp; ONBOARDING DIAGNOSTIC CALL</div>
+      <p class="cta-text">Trace your last 3 closed-won deals with Menno Drescher to pinpoint immediate billing, rework, and Time-to-Value leaks.</p>
+    </div>
+    <div class="cta-anchor">
+      <b>€1,000 – €3,500</b>
+      <span>3–5 Weeks · Fixed-Scope Sprint</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · Independent Management &amp; Governance Advisory</span>
+    <span>OP-OPS-001 → OP-CX-001 · Quote-to-Onboarding · Client Edition</span>
+  </div>
+</div>
+</body>
+</html>

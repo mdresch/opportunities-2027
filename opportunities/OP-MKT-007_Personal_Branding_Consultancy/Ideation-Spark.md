@@ -34,8 +34,28 @@ Phased, projectized methodology to position executives/consultants for inbound a
 
 Source: `Opportunities to Publish\Personal Branding Consultancy.docx`.
 
+## Flagship Proof-by-Building Anchor (`OP-ITG-017` × `my-portfolio-menno`)
+
+`OP-MKT-007` now has a live, flagship **"Proof-by-Building"** reference asset anchored in **MXC (`OP-ITG-017`)** and published to Menno Drescher's portfolio (`mdresch/my-portfolio-menno`):
+
+- **Personal Branding & Portfolio Pack (SSOT in `mdresch/mxc`):** [`docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md`](https://github.com/mdresch/mxc/blob/feat/hyperv-v2-rebased/docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md) — bridges `OP-ITG-017`, `OP-MKT-007`, and `OP-MKT-006` with a 4-week distribution cadence, ready-to-import portfolio showcase data, and RAG knowledge chunk.
+- **Full MXC Marketing & Sales Kit (`mdresch/mxc/docs/marketing/`):**
+  - 1-Page CBa Consult Executive Brochure (`MXC-Product-One-Pager.pdf` / `.md`)
+  - Sales Battlecard (`MXC-Sales-Battlecard.md`)
+  - 10-Slide Executive Pitch Narrative (`MXC-Executive-Pitch-Narrative.md`)
+  - LinkedIn & Executive Outreach Kit (`MXC-LinkedIn-and-Outreach-Kit.md`)
+- **Live Portfolio Target:** [`mdresch/my-portfolio-menno`](https://github.com/mdresch/my-portfolio-menno) (`https://my-portfolio-menno.vercel.app/projects/mxc`)
+- **Cross-Linked Opportunity:** [`OP-ITG-017` — MXC Hyper-V Extension & <500ms JIT Scale-to-Zero VM Sandboxes](../OP-ITG-017_MXC_HyperV_JIT_Scale_to_Zero/Ideation-Spark.md)
+
 ## Next Steps (Tier 2 → Pilot Gate)
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
+- [x] Publish the flagship **MXC Personal Branding & Portfolio Pack** (`mdresch/mxc :: docs/marketing/Opportunity-2027-Personal-Branding-and-Portfolio-Pack.md`) and cross-link `OP-ITG-017` ↔ `OP-MKT-007` ↔ `my-portfolio-menno`.
+- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
 - [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
 - [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

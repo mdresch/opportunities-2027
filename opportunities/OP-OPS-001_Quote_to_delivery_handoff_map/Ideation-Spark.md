@@ -42,3 +42,12 @@ Make explicit how a signed deal becomes delivered work, so nothing falls through
 - [ ] Director `G4` sign-off in Pilot-Charter §5 → promote status from `Idea` → `Pilot`.
 
 > **Wave 1 Priority #1 Sequencing Override (\BFI-004\):** \OP-OPS-001\ intentionally retains \Tier: C — Supporting\ for long-term strategic-value classification while being sequenced as **Wave 1 Priority #1 (Q1 2027)** as CBa Consult's fastest, lowest-friction entry-and-proof wedge per \Tier_A_Executive_Summary_2027.md\ §3.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

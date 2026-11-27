@@ -60,3 +60,12 @@ A fixed-scope, **100% conflict-free** finance & pre-assurance engagement structu
 - [ ] Decide whether `OP-FIN-012` runs as a **standalone Q1–Q2 audit-season wedge** or as a **bundled add-on to `OP-FIN-009`**.
 - [ ] Draft 1–2 falsifiable Stage 2 hypotheses (`HYP-2027-NNN`) in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) (e.g., CFO willingness to pay €1,500–€5,000 for conflict-free Management Letter & side-letter preparation).
 - [ ] Package a standardized **Management Letter Findings & Side-Letter Response Template** (with explicit non-auditor / non-legal disclaimers) before Tier 3 Pre-Pilot Gate (`G4`).
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

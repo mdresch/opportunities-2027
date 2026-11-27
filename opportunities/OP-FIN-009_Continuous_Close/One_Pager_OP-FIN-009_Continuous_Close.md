@@ -30,9 +30,11 @@ Most finance teams wait until month-end to reconcile bank feeds, sub-ledgers, an
 ---
 
 ## Built-In Financial Truth & Governance Controls
-- **6 Automated Accrual Guardrails:** Explicit 23rd–month-end delta rules, mandatory **Day-1 auto-reversals** (zero double-counting), >5% variance alerts, 24th–25th HRIS-to-GL sync, sequenced dependency gates, and tiered human sign-off.
-- **Provisional vs. Attested + IFRS 18 (Jan 2027):** Intra-month views stay watermarked `Provisional / Pre-Close`; only deterministic, bank-settled, or 23rd-locked metrics (Cleared Cash, Cash Receipts, 23rd Locked Payroll/FTE, Committed POs, Utilization, Close Readiness) publish as **Approved Real-Time Official KPIs** before the 3rd.
-- **Segregation of Duties (SoD) & GDPR:** Rule authors cannot approve rules or bypass GL locks; non-interactive service accounts post routine batches; zero individual salary/household PII leaks into company-wide BI.
+- **10 Automated Accrual & Matching Guardrails (`FIN-CC-01`–`10`):**
+  - *Core Close Loop (`01`–`06`):* Explicit 23rd–cutoff delta rules, mandatory **Day-1 auto-reversals** (zero double-counting), working-day normalized `>5%` MRC variance alerts, 24th–25th HRIS-to-GL sync, sequenced dependency gates, and tiered Preparer→Reviewer→Approver sign-off.
+  - *Dual-Calendar, `4-4-5` & Revenue-vs.-CoS Matching (`07`–`10`):* Reconciles **`01-01–31-12` Statutory Fiscal vs. `01-07–30-06` Company Budget** calendars & `31-12` stub days (`FIN-CC-07`), prorates monthly salaried CoS across **`4-4-5` (`20/20/25` working days)** with PTO liability drawdown (`FIN-CC-08`), locks **Unbilled WIP Revenue & Unvouchered Subcontractor CoS** simultaneously before Fixed-Price `% of Completion` (`FIN-CC-09`), and ties **`1,500`-hour standard CoS absorption** back to actual prorated HRIS payroll at **`€0.00` variance** (`FIN-CC-10`).
+- **Provisional vs. Attested + IFRS 18 (EU-Endorsed Feb 13, 2026 · Mandatory Jan 1, 2027):** Intra-month flash views stay watermarked `Provisional — Internal Management View Only` to prevent accidental **IFRS 18 ¶117** audited MPM scope; CoS-by-function ties cleanly to **¶78–83 Employee Benefits by nature**; only deterministic metrics (Cleared Cash, 23rd Locked Payroll/FTE, Close Readiness) publish as **Approved Real-Time Official KPIs** before the 3rd.
+- **Segregation of Duties (SoD) & GDPR:** Rule authors cannot approve rules or bypass GL locks; GL Close Approver is separated from MPM Definition Owner; zero individual salary/household PII leaks into company-wide BI.
 
 ---
 

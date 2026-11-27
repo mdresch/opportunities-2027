@@ -50,3 +50,12 @@ Connect proprietary enterprise context safely via **Microsoft IQ** (`Work IQ`, `
 - [ ] Build a 1-page **Copilot Studio FinOps & Throttling Guardrail Template** (budget alerts, tier caps, ROI per agent).
 - [ ] Map how *Work IQ / Fabric IQ* connects to ADPA/ECS taxonomy readiness (`OP-ITG-014`) as a 2-step sequence.
 - [ ] Draft the full Ideation Document & Tier 3 Pilot Brief before promoting to `Pilot`.
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

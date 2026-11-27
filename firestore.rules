@@ -1,0 +1,161 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Reusable hardened primitives
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        request.auth.token.email == 'menno.drescher@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isValidTargetWindow(val) {
+      return val in ['Q1 2027', 'Q2 2027', 'H2 2027', 'Immediate / Exploratory'];
+    }
+
+    function isValidInquiryStatus(val) {
+      return val in ['new', 'contacted', 'scheduled', 'archived'];
+    }
+
+    function isValidDeliveryStatus(val) {
+      return val in ['sent', 'not_configured', 'failed'];
+    }
+
+    function isValidSelectedServices(listVal) {
+      return listVal is list
+        && listVal.size() <= 12
+        && (listVal.size() == 0 || (listVal[0] is string && listVal[0].size() >= 1 && listVal[0].size() <= 160));
+    }
+
+    function isValidScopingInquiry(data) {
+      return data.keys().hasAll([
+          'referenceId',
+          'fullName',
+          'email',
+          'organization',
+          'role',
+          'targetWindow',
+          'selectedServices',
+          'notes',
+          'status',
+          'adminNotes',
+          'emailDeliveryStatus',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'referenceId',
+          'fullName',
+          'email',
+          'organization',
+          'role',
+          'targetWindow',
+          'selectedServices',
+          'notes',
+          'status',
+          'adminNotes',
+          'emailDeliveryStatus',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.referenceId is string
+        && data.referenceId.size() >= 6
+        && data.referenceId.size() <= 32
+        && data.referenceId.matches('^CBA-[0-9]{4}-[A-Z0-9]{4,12}$')
+        && data.fullName is string
+        && data.fullName.size() >= 2
+        && data.fullName.size() <= 120
+        && data.email is string
+        && data.email.size() >= 5
+        && data.email.size() <= 160
+        && data.email.matches('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$')
+        && data.organization is string
+        && data.organization.size() >= 2
+        && data.organization.size() <= 160
+        && data.role is string
+        && data.role.size() >= 1
+        && data.role.size() <= 120
+        && data.targetWindow is string
+        && data.targetWindow.size() <= 40
+        && isValidTargetWindow(data.targetWindow)
+        && isValidSelectedServices(data.selectedServices)
+        && data.notes is string
+        && data.notes.size() <= 2000
+        && data.status is string
+        && data.status.size() <= 20
+        && isValidInquiryStatus(data.status)
+        && data.adminNotes is string
+        && data.adminNotes.size() <= 2000
+        && data.emailDeliveryStatus is string
+        && data.emailDeliveryStatus.size() <= 20
+        && isValidDeliveryStatus(data.emailDeliveryStatus)
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    // Collection: scoping_inquiries
+    // Prospective clients may submit new inquiries (create-only, strict validation).
+    // All reads, lists, updates, and deletes are strictly restricted to verified admins.
+    match /scoping_inquiries/{inquiryId} {
+      allow get: if isAdmin() && isValidId(inquiryId);
+      allow list: if isAdmin();
+
+      allow create: if isValidId(inquiryId)
+        && isValidScopingInquiry(incoming())
+        && incoming().referenceId == inquiryId
+        && incoming().status == 'new'
+        && incoming().adminNotes == ''
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+
+      allow update: if isSignedIn()
+        && isValidId(inquiryId)
+        && isValidScopingInquiry(incoming())
+        && isAdmin()
+        && incoming().createdAt == existing().createdAt
+        && incoming().referenceId == existing().referenceId
+        && incoming().updatedAt == request.time
+        && (
+          // Action: Admin Triage (update status and/or internal notes)
+          incoming().diff(existing()).affectedKeys().hasOnly(['status', 'adminNotes', 'updatedAt'])
+        );
+
+      allow delete: if isAdmin() && isValidId(inquiryId);
+    }
+
+    // Collection: admins
+    // Client-side privilege escalation strictly blocked.
+    match /admins/{uid} {
+      allow get: if isValidId(uid) && isVerifiedUser() && (
+        request.auth.uid == uid ||
+        request.auth.token.email == 'menno.drescher@gmail.com'
+      );
+      allow list, create, update, delete: if false;
+    }
+  }
+}

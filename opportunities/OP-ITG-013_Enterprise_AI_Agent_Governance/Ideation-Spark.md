@@ -43,11 +43,28 @@ Assess enterprise agent inventory, agent owners, human accountability, agent ide
 
 ## Related Opportunities
 
-`OP-ITG-002`, `OP-ITG-011` (precursors) · `OP-ITG-016` (follow-on architecture) · `OP-HR-009`, `OP-RSK-004` (pairs with)
+`OP-ITG-002`, `OP-ITG-011` (precursors) · `OP-ITG-014` (context layer — [Combined Phase 0 wedge](../OP-ITG-014_Knowledge_Context_Governance/Combined-ITG-013-014-Phase-0-Wedge.md)) · `OP-ITG-016` (follow-on architecture) · `OP-HR-009`, `OP-RSK-004` (pairs with) · `OP-SCM-003` (procurement catalog — SKU `CBA-ITG-013-T1/T2`)
 
 ## Next Steps (Tier 2 → Pilot Gate)
+
+**Active (prep mode, status stays `Idea`):** [PR-ITG-013-Preparation-Checklist.md](PR-ITG-013-Preparation-Checklist.md) — portal deploy → Wave 0 (#1–3) → `G4` review.
 
 - [x] Pull the current open-issue/PR state of `ICT-Governance-Framework-Application` to confirm what agent-governance capability is already shippable vs. still roadmap *(completed 2026-11-23; documented in [Tier-2-Market-Research.md](Tier-2-Market-Research.md) §4)*.
 - [x] Draft the standalone **8-Pillar Agent Inventory & Governance Assessment Questionnaire / Maturity Scorecard** (`HYP-2027-015`) *(completed 2026-11-23: [Agent-Governance-Assessment-Questionnaire.md](Agent-Governance-Assessment-Questionnaire.md))*.
 - [x] Complete the **Pre-Pilot Gate (`G4`) Charter** *(completed 2026-11-23 in draft pending portal intake & Director sign-off: [Pilot-Charter.md](Pilot-Charter.md))*.
-- [ ] Capture and interview **10 CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) via the standalone **`mdresch/agent-governance-onboarding`** web portal (self-assessment submissions → 30-min briefing → Pilot #1 sponsor sign-off).
+- [ ] Reach **10 CIO/CISO prospects** (`HYP-2027-013`, `HYP-2027-014`) via [Portfolio Explorer](https://oppurtunities-2027.ai.studio/) **browser-local diagnostic** (no CBa answer storage) → 30-min briefing → Pilot #1 sponsor sign-off. Privacy model: [Assessment-Intake-Privacy-Model.md](Assessment-Intake-Privacy-Model.md).
+  - GTM pack: [Portal-Deploy-Checklist.md](Portal-Deploy-Checklist.md) · [LinkedIn-GTM-Copy.md](LinkedIn-GTM-Copy.md) · [GTM-Prospect-Tracker.md](GTM-Prospect-Tracker.md) (synced to [Pilot-Charter.md](Pilot-Charter.md) §2)
+  - Delivery pack: [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md) · [Workshop-Agenda.md](Workshop-Agenda.md) · [Executive-Readout-Template.md](Executive-Readout-Template.md)
+  - **Paid-workshop delegation only** (not public portal): [Assessment-Delegation-and-Ownership-Matrix.md](Assessment-Delegation-and-Ownership-Matrix.md) · [data/agent-governance-question-ownership.json](data/agent-governance-question-ownership.json)
+  - Procurement-led buy (interim PRMAP): [Procurement-Intake-PRMAP-Example.md](Procurement-Intake-PRMAP-Example.md) · SKU `CBA-ITG-013-T1` → future [cba-procurement-readiness-portal](https://github.com/mdresch/cba-procurement-readiness-portal) after `OP-SCM-003` OP→PR
+- [ ] Re-run [BD-Reuse-Inventory.md](BD-Reuse-Inventory.md) on Director machine (`py -3 scripts/inventory-bd-folder.py --opp OP-ITG-013`) once `BD_DOCUMENTS_ROOT` is set.
+
+## Business Development sources (local)
+
+See [BD-Quick-Reference.md](BD-Quick-Reference.md) · [BD-Reuse-Inventory.md](BD-Reuse-Inventory.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+
+## Assigned Source Documents (ADPA)
+
+- [Source-Documents.md](Source-Documents.md) — full manifest
+- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
+- [Business-Case.md](Business-Case.md) — extracted business case content

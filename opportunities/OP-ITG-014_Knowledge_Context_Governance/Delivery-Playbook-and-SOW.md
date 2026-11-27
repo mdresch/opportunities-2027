@@ -7,6 +7,8 @@ owner: "Menno Drescher (Director, CBa Consult)"
 
 # Day-1 Delivery Playbook & Fixed-Scope SOW — `OP-ITG-014`: Knowledge & Context Governance
 
+**Related artifacts:** [Tier-1-vs-Tier-2-Cut-Sheet.md](Tier-1-vs-Tier-2-Cut-Sheet.md) · [Workshop-Agenda.md](Workshop-Agenda.md) · [Executive-Readout-Template.md](Executive-Readout-Template.md) · [Context-Source-Inventory-Register.md](Context-Source-Inventory-Register.md) · [Combined-ITG-013-014-Phase-0-Wedge.md](Combined-ITG-013-014-Phase-0-Wedge.md)
+
 ## 1. Two-Tier Engagement Structure
 
 - **Tier 1 — Phase 0 Information Quality & Oversharing Baseline (`3 weeks · €2,000–€5,000`):** Rapid diagnostic across top 5–10 SharePoint/Teams/Confluence spaces, P0 oversharing red-flag report, and executive readiness readout.
