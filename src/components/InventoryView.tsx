@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { FileText, Search, X } from 'lucide-react';
 import type { Opportunity, PortfolioTier, ValidationLevel } from '../types';
+import { sortOpportunities, type InventorySortMode } from '../utils/opportunitySort';
 
 interface InventoryViewProps {
   opportunities: Opportunity[];
@@ -25,10 +26,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
   const [tierFilter, setTierFilter] = useState<'ALL' | PortfolioTier>('ALL');
   const [pillarFilter, setPillarFilter] = useState<string>('ALL');
   const [validationFilter, setValidationFilter] = useState<'ALL' | ValidationLevel>('ALL');
+  const [sortMode, setSortMode] = useState<InventorySortMode>('priority');
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return opportunities.filter((opp) => {
+    const matches = opportunities.filter((opp) => {
       if (tierFilter !== 'ALL' && opp.tier !== tierFilter) return false;
       if (pillarFilter !== 'ALL' && opp.pillar !== pillarFilter) return false;
       if (validationFilter !== 'ALL' && opp.validationLevel !== validationFilter) return false;
@@ -43,19 +45,22 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
         opp.targetQuarter.toLowerCase().includes(q)
       );
     });
-  }, [opportunities, search, tierFilter, pillarFilter, validationFilter]);
+    return sortOpportunities(matches, sortMode);
+  }, [opportunities, search, tierFilter, pillarFilter, validationFilter, sortMode]);
 
   const hasActiveFilters =
     search.trim() !== '' ||
     tierFilter !== 'ALL' ||
     pillarFilter !== 'ALL' ||
-    validationFilter !== 'ALL';
+    validationFilter !== 'ALL' ||
+    sortMode !== 'priority';
 
   const resetFilters = () => {
     setSearch('');
     setTierFilter('ALL');
     setPillarFilter('ALL');
     setValidationFilter('ALL');
+    setSortMode('priority');
   };
 
   const formatValidationText = (level: ValidationLevel) => {
@@ -163,6 +168,20 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               <option value="validated">Validated</option>
               <option value="emerging">Emerging</option>
               <option value="unvalidated">Pending</option>
+            </select>
+          </label>
+
+          <label className="flex items-center gap-2 text-xs text-[#52647a]">
+            <span>Sort:</span>
+            <select
+              value={sortMode}
+              onChange={(e) => setSortMode(e.target.value as InventorySortMode)}
+              className="py-1.5 px-2.5 text-xs bg-[#f5f8fa] border border-[#dae3e9] rounded-md text-[#10253f] focus:outline-none focus:border-[#0c8b82]"
+            >
+              <option value="priority">Priority (Tier → Urgency)</option>
+              <option value="urgency">Urgency (Earliest Qtr)</option>
+              <option value="validation">Validation Signal</option>
+              <option value="id">Opportunity ID</option>
             </select>
           </label>
 
