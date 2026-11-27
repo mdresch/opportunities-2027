@@ -4,6 +4,10 @@ classification: "CBa Consult — internal; tailor for client under NDA"
 linked_hypothesis: "HYP-2027-007"
 ip_provenance: "2007–2008 Resources Global Professionals (RGP) in-house methodology — Director institutional knowledge"
 target_effort_cap: "≤15 hours codification (log below)"
+companion_artifacts:
+  - Close-Calendar-Dependency-Gate-Blueprint-Internal.md
+  - SoD-Official-KPI-Control-Matrix-Internal.md
+  - IFRS-18-Close-Relevance-Notes.md
 ---
 
 # Internal Playbook — 23rd Payroll → Post-3rd Continuous Close Bridge
