@@ -235,7 +235,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
 
       {mode === 'html' ? (
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
-          <div className="xl:col-span-4 space-y-2">
+          <div className="xl:col-span-4 max-h-[820px] overflow-y-auto pr-1.5 space-y-2">
             {htmlReports.map((rep) => {
               const active = activeReport?.slug === rep.slug;
               return (
@@ -353,7 +353,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
         </div>
       ) : (
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
-          <div className="xl:col-span-4 bg-white border border-[#dae3e9] rounded-md divide-y divide-[#dae3e9]">
+          <div className="xl:col-span-4 max-h-[820px] overflow-y-auto bg-white border border-[#dae3e9] rounded-md divide-y divide-[#dae3e9]">
             {coreDocuments.map((doc) => {
               const active = selectedDocPath === doc.path;
               return (
