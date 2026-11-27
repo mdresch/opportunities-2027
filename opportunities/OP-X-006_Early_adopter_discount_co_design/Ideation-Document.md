@@ -1,60 +1,70 @@
-# Ideation Document — `OP-X-006`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-X-006"
+execution_track: "Track A — Lightweight Advisory / Toolkit"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Portfolio Inventory & Market Analysis 2027"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Stage 1b Ideation Document — `OP-X-006`: Early-Adopter Discount / Co-Design Pilot Program
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
+> **Sibling Context:** [Ideation-Spark.md](Ideation-Spark.md) · [Source-Documents.md](Source-Documents.md)
 
-**Inventory description:** Offer discounted early-access pricing to pilot clients who agree to structured feedback, metrics tracking, and testimonials.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Launching new advisory assessments, toolkits, or platform-backed wedges directly at full commercial price creates dual friction: risk-averse 2027 buyers hesitate to be "client zero" without local proof, while CBa Consult lacks real-world usage telemetry, objection logs, and referenceable case studies (`OP-X-004`). Giving away free unconditioned consulting, however, attracts low-commitment prospects who neither implement recommendations nor deliver usable testimonials.
 
-# Ideation Spark — `OP-X-006`: Early-adopter discount / co-design pilot program
+Directly adapted from 2026 `OP-CL-001`, `OP-X-006` solves this cold-start bottleneck by structuring **early-adopter discounted co-design pilots** in Q1 2027—exchanging preferred pricing solely for contractual buyer commitments to structured feedback, before/after KPI tracking, and referenceable proof.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** Cross-Pillar 2026 Ecosystem Categories (Validation, Mentorship, Partners, Customers) · **Signature Toolkit:** Customer Experience Strategy & Design Thinking
-**Category:** Customer Program *(Customer / Client)* · **Size:** All
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+- **Target Buyer Segment:** Founders, Partners, and Mid-Market Leaders across All segments piloting new CBa Consult offers.
+- **Core Wedge Pain:** Need for low-risk early-access pricing coupled with CBa's need for hardened template feedback and referenceable metrics.
+- **Positioning Anchor:** Structured 6-week Track A customer program backed by the **Customer Experience Strategy & Design Thinking** toolkit with `$0` initial CBa working capital.
 
-## Positioning
+## 2. Solution Architecture & Delivery Workflow
 
-> For **Founders, Partners & Mid-Market Leaders** (All tier) who need a lightweight, low-risk way to address **early-adopter discount / co-design pilot program**, **Early-adopter discount / co-design pilot program** is a **Customer Program *(Customer / Client)*** backed by the **Customer Experience Strategy & Design Thinking** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+`OP-X-006` is a reusable **6-week** Track A **Customer Program** paired with any newly launched CBa assessment or toolkit:
 
-## What it is
+| Phase | Timing | Core Activities | Concrete Program Deliverables |
+| :--- | :--- | :--- | :--- |
+| **1. Co-Design Charter & Offer Pairing** | Week 1 | Select target CBa offer (assessment/template), lock early-adopter discount tier, and execute Pilot Co-Design Agreement (defining feedback/KPI obligations). | Signed Early-Adopter Pilot Agreement & Baseline KPI Sheet |
+| **2. Guided Delivery & Live Friction Log** | Weeks 2–4 | Deliver the underlying CBa template or assessment while capturing live usability notes, edge cases, and time-to-value bottlenecks. | Structured Co-Design Friction Log & Template Redlines |
+| **3. Structured Feedback & Metric Capture** | Week 5 | Conduct 30-minute structured UX/value interview and verify before/after operational metrics with the pilot client. | Verified Before/After Scorecard & Feedback Survey |
+| **4. Testimonial & Case-Study Graduation** | Week 6 | Draft approved testimonial / anonymized or named `OP-X-004` proof asset and lock template v1.1 for standard commercial release. | Client-Approved Proof Asset & Hardened Offer Kit v1.1 |
 
-Offer discounted early-access pricing to pilot clients who agree to structured feedback, metrics tracking, and testimonials.
+### Program Mechanics
 
-## 7 Pivotal Questions
+- **Reciprocal Value Exchange:** Preferred pricing is strictly contingent on completing Week 1 KPI baselining, Week 5 structured feedback, and Week 6 proof sign-off.
+- **Standardized Launch Wrapper:** Operates as an ecosystem wrapper around any Pillar 1–15 offer moving from `Idea` to `Pilot`.
 
-1. **Buyer & 2027 Trigger** — Founders, Partners & Mid-Market Leaders (All segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Offer discounted early-access pricing to pilot clients who agree to structured feedback, metrics tracking, and testimonials.
-3. **Deliverable & Existing IP** — Built on the **Customer Experience Strategy & Design Thinking** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Customer success, survey design, follow-up*.
-4. **Sweat-Equity Feasibility** — 6 wks, Low effort, \$0 initial working capital. Expected capital range: €300–€1,500 / launch.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Managing expectations; getting enough structured feedback.
-7. **Compounding / Scale Path** — Make early-adopter cycles the standard launch path for every new template or assessment.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## Effort, Capital & Timeline
+| Alternative | Typical Model & Pricing | Key Limitations | CBa Consult `$0`-Capital Differentiation |
+| :--- | :--- | :--- | :--- |
+| **Unstructured "Beta" Freebies** | Free consulting or unpriced trials | Low client skin-in-the-game; high ghosting rate on final feedback and testimonials. | Paid discounted entry (€300–€1,500/launch) paired with explicit contractual feedback & KPI obligations. |
+| **Paid Market-Research Panels** | Third-party B2B survey panels (€2k–€10k+) | Synthetic survey opinions rather than real willingness-to-pay and operational delivery proof. | Validates real buyer spend and real implementation telemetry simultaneously at `$0` external panel cost. |
+| **Full-Price Cold GTM Launch** | Standard commercial pricing from Day 1 | Slow sales cycles when no client Case Study (`OP-X-004`) exists yet. | Accelerates first 1–3 referenceable wins in 6 weeks while hardening delivery templates. |
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 6 wks | Low | €300–€1,500 / launch | Q1 2027 |
+## 4. Internal IP & Source Provenance Crosswalk
 
-## Market Validation & Source Notes
+| Source Asset | Origin & Location | Extracted Capabilities Reused in `OP-X-006` | Reuse Classification |
+| :--- | :--- | :--- | :--- |
+| **Portfolio Inventory (`OP-X-006` / 2026 `OP-CL-001`)** | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Direct adaptation of 2026 `OP-CL-001` co-design pilot mechanics and standard-launch-path vision. | Direct Framing SSOT |
+| **Customer Experience Strategy & Design Thinking Toolkit** | CBa Consult Signature Toolkit ([inventory-of-ideas.md](../../inventory-of-ideas.md)) | Co-design interview protocols, journey friction logging, and structured feedback loops. | Core Methodology |
+| **ADPA Document Repository** | [Source-Documents.md](Source-Documents.md) | No standalone `.docx` assigned (`0` files); native ecosystem customer-validation program. | Not Applicable (Track A Native) |
 
-Directly adapted from 2026 `OP-CL-001`.
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **In Scope:** Co-design pilot charter template, structured feedback survey/interview kit, before/after KPI tracker, and testimonial/case-study release workflow.
+- **Explicitly Out of Scope:** Uncapped lifetime discounts, free pro-bono delivery without written feedback/metric obligations, or permanent custom software forks per pilot client.
+- **Required Delivery Skills:** Customer success, survey design, and structured follow-up (Director-led, zero external panel cost).
+- **Client Prerequisites:** Signed Week 1 Co-Design Agreement committing to baseline KPI sharing and a 30-minute Week 5 feedback interview.
+- **Target Outcome & Proof (`OP-X-004`):** Hardened v1.1 offer template + verified before/after operational improvement and client testimonial.
+- **Compounding / Scale Path:** Establish early-adopter co-design cycles as CBa Consult's standard launch path for every new template or assessment.
+- **Primary Boundary Risk:** Managing pilot-client expectations and ensuring full follow-through on structured feedback milestones.
+- **Lifecycle & Gate Status:** `Status = Idea` | `Active Pilots = 0`. Promotion to Stage 2 (`Hypothesis-Register.md`) and Stage 4 (`G4`) requires finalizing the standard Co-Design Pilot Agreement and pairing `OP-X-006` with the first Q1 2027 Tier A or Tier C offer launch.

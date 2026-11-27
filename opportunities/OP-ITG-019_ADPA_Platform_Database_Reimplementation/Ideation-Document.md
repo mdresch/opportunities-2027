@@ -1,132 +1,70 @@
-# Ideation Document — `OP-ITG-019`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-019"
+execution_track: "Track B Candidate — Future 2027 Platform Engineering (graduates to mdresch/adpa under sidpa-template)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "ADPA - Project Charter.docx, ADPA Business Case.docx & mdresch/adpa PoC (29 assigned files)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `ADPA - Project Charter.docx`
+# Ideation Document — `OP-ITG-019`: ADPA 2027 Platform Evolution (Database Layer & Project Reimplementation)
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-Project Charter – ADPA – Advanced Documents Processing and Analytics Version: 0.1 (Draft for Review) Date: 2025-12-29 Owner: [Project Manager Name] Repository/Link: [Location] Agreements: None at this time
+> **Governance & SSOT Notice:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (Stage 1b Ideation / Gate `G1b`). Authoritative inventory fields (`Active Backlog — Future 2027 Platform Development` · `High` effort · `Capital TBD; $0 cash cap` · `Q3–Q4 2027` · `Status = Idea`) live in [inventory-of-ideas.md](../../inventory-of-ideas.md); portfolio sequencing lives in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). See [Ideation-Spark.md](Ideation-Spark.md), [Source-Documents.md](Source-Documents.md), [ADPA-2027-Architecture-and-DB-Blueprint.md](ADPA-2027-Architecture-and-DB-Blueprint.md), and [ADPA-Risk-Management-Scenario-Module.md](ADPA-Risk-Management-Scenario-Module.md).
 
-Project Overview
+---
 
-Project Name: ADPA – Advanced Documents Processing and Analytics
+## 1. Problem Context & 2027 Market Trigger
 
-Executive Summary: ADPA will deliver a platform to automatically ingest, process, and analyze diverse documents (PDFs, scans, emails) using OCR, NLP, classification, and analytics. The solution aims to reduce manual effort, improve data quality, accelerate insight generation, and enhance auditability through secure, standards-aligned capabilities and integrations (e.g., SharePoint, Confluence, Adobe services).
+CBa Consult's **ADPA (Advanced Data Processing Automation — `mdresch/adpa`)** Proof of Concept automates PMBOK/BABOK/DMBOK document pipelines across multi-provider LLMs, but file-based PoC storage creates an internal scalability ceiling:
 
-Problem/Opportunity: Manual document handling is slow, error-prone, and costly; insights are delayed; compliance and auditability need improvement. Current processes consume significant effort and rework and do not consistently meet evolving standards.
+1. **Lack of Persistent Relational & Lineage State:** Without a durable database layer, project artifacts, ontologies, novelty/drift metrics, and audit logs cannot be queried or versioned reliably across client engagements.
+2. **Fragmented Project Pipelines:** Existing CBa Consult projects and recurring advisory workflows live in separate scripts and repositories rather than sharing one structured ADPA data model.
+3. **Engine Behind Tier A Margin:** Scaling `OP-ITG-014` (Knowledge & Context Governance), `OP-ITG-018` (MIP), and `OP-RSK-005` (Evidence Assurance) later in 2027 benefits from a unified internal backbone—**once commercial pilots justify the engineering hours**.
 
-Strategic Alignment: Supports digital transformation, operational efficiency, compliance and risk mitigation, and data-driven decision making.
+---
 
-Measurable Objectives (SMART)
+## 2. Solution Architecture & Delivery Workflow
 
-Reduce average document processing cycle time by [X% e.g., 50%] within [timeframe].
+Per [ADPA-2027-Architecture-and-DB-Blueprint.md](ADPA-2027-Architecture-and-DB-Blueprint.md) and [Ideation-Spark.md](Ideation-Spark.md), `OP-ITG-019` follows a strict **future-dated, time-boxed Track B** evolution sequence (`Q3–Q4 2027`):
 
-Achieve ≥[Y% e.g., 95%] field-level extraction accuracy for top [N e.g., 10] document types.
+| Phase | Engineering Focus | Core Activities | Technical Proof Gate |
+| --- | --- | --- | --- |
+| **Phase 1** | **Commercial & DB Framing** | Lock internal-accelerator vs. external-product role; finalize target DB schema (projects, document lineages, ontologies, audit trails) under `$0` hosting constraints | Approved DB Schema & Track B `sidpa-template` Init |
+| **Phase 2** | **Persistent DB Implementation** | Replace PoC file-only state in `mdresch/adpa` with durable DB persistence, automated migrations, and contract tests | Clean DB test suite passing end-to-end |
+| **Phase 3** | **Project Reimplementation Slice** | Migrate `1–2` existing CBa projects/pipelines into ADPA's unified model and template engine (including risk/scenario capabilities) | `≥1–2` projects operating end-to-end inside ADPA |
+| **Phase 4** | **Commercial Graduation Review** | Decide whether ADPA stays an internal margin multiplier (`OP-ITG-014`/`018`) or graduates into a standalone client SaaS/licensed SKU | Director Stage 2–3 Commercial Charter (if externalized) |
 
-Increase straight-through processing rate to ≥[Z% e.g., 70%] for eligible documents.
+---
 
-Provide near-real-time analytics dashboards with ≤[T e.g., 5] minutes data latency. Note: For each objective, define owner, baseline, measurement method/frequency, and acceptance threshold.
+## 3. Market Comparables & CBa Consult Differentiation
 
-High-Level Scope
+| Market Comparable | Typical Market Model | Primary Strength | Gap / Why ADPA Evolves Internally First |
+| --- | --- | --- | --- |
+| **Enterprise IDP / Document AI Platforms (UiPath, ABBYY, Hyperscience)** | `€50,000–€250,000+/yr` | High-volume OCR and invoice/form extraction | Optimized for clerical forms, not PMBOK/BABOK/DMBOK governance lineage or consulting ontologies. |
+| **Generic AI Doc Generators / Workspace Copilots** | `€20–€50/user/mo` | Fast ad-hoc drafting inside docs | Zero persistent multi-stage governance lineage, drift detection, or SIDPA auditability. |
+| **Custom Internal Agency Scripts** | Ad-hoc developer hours | Tailored to one workflow | Brittle across engagements; `OP-ITG-019` unifies them into one auditable platform **only after client demand validates it**. |
 
-In-Scope: Ingestion connectors; OCR; language processing; classification; entity extraction; validation workflow; human-in-the-loop review; data storage; audit logging; analytics dashboards; security and access controls; monitoring & MLOps; documentation & training.
+---
 
-Out-of-Scope (initially): Enterprise-wide data lake replacement; custom mobile apps; legacy system decommissioning; advanced generative AI beyond the defined MVP.
+## 4. Internal IP & Source Provenance Crosswalk
 
-Key Deliverables: MVP document pipeline; trained model artifacts; APIs; reviewer UI; analytics dashboards; deployment automation (CI/CD/IaC); support runbooks and training materials.
+`OP-ITG-019` consolidates **29 assigned ADPA files** in [Source-Documents.md](Source-Documents.md) plus live PoC code (`mdresch/adpa`):
 
-High-Level Requirements (sample/placeholders)
+| Asset Domain | Canonical Source Reference | Readiness | Role in `OP-ITG-019` |
+| --- | --- | --- | --- |
+| **PoC Codebase & Pipelines** | `mdresch/adpa` (Oct 2026 PoC) & `ADPA_Document_Generation_Pipeline_Review.docx` | **PoC Live (75%)** | Baseline ingestion, multi-provider LLM, and template engine |
+| **Architecture & DB Design** | [ADPA-2027-Architecture-and-DB-Blueprint.md](ADPA-2027-Architecture-and-DB-Blueprint.md) & `ADPA - Design Spec IP Novelty Detection & Drift Scoring.docx` | **Drafted (65%)** | Guides persistent DB schema and lineage/drift tracking |
+| **Risk & Enterprise Specs** | [ADPA-Risk-Management-Scenario-Module.md](ADPA-Risk-Management-Scenario-Module.md), `ADPA - Project Charter.docx`, `ADPA Business Case.docx` | **Reference (60%)** | Supplies enterprise charter/risk patterns; commercial scope remains **TBD** |
 
-Throughput & Coverage: Handle [volume] docs/day; support [languages]; retention per [policy] and legal hold requirements.
+---
 
-Integrations: Connect to [DMS], [CRM/ERP], enterprise SSO (e.g., SAML/OIDC), logging/monitoring (e.g., CloudWatch/Datadog), and ticketing (e.g., Jira Service Management).
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-Quality & Compliance: Meet [regulatory set e.g., GDPR/SOX/PCI DSS] and security standards (e.g., SOC 2, ISO 27001). Define precision/recall targets per doc type; implement PII redaction and audit trails.
-
-Non-Functional: Availability ≥[99.X%]; RTO/RPO of [values]; performance SLA: [e.g., 95th percentile processing ≤ N seconds per page].
-
-Milestones & Timeline (indicative)
-
-Charter approval: [Date]
-
-Requirements & design: [4–6 weeks]
-
-MVP build & test: [8–12 weeks]
-
-Pilot: [4 weeks]
-
-Production rollout: [Date]
-
-Hypercare: [2–4 weeks] Dependencies and holidays to be factored into a detailed schedule baseline.
-
-Budget & Sizing (ROM placeholders)
-
-One-time (Build): Infra, licenses, external services: [$X–$Y].
-
-Run costs (Annual): Cloud/infra, support, model retraining: [$A–$B]/year.
-
-Sizing assumptions: Team of [6–10] (PM, Product Owner, Architect, Data Engineer, ML Engineer, QA/BA); environments: Dev/Stage/Prod; expected volumes: [value]; storage growth: [value]/year; retraining cadence: [quarterly/biannual].
-
-Preliminary resource plan summary (from draft inputs): 3 AWS environments (S3, EC2, Redshift); Tableau Creator x2; PyCharm Pro x2; Atlassian Jira/Confluence x6 seats (enterprise license); 2 high-performance laptops (leased); QA training course access. Acquisition via IT procurement/service portal with approvals per budget holder.
-
-Risks, Assumptions, Constraints, Dependencies
-
-Top Risks: Variable data quality; model drift; PII handling and privacy compliance; stakeholder adoption and change fatigue; integration complexity across legacy systems; vendor roadmap changes for OCR/NLP components.
-
-Assumptions: Data access granted; representative sample corpora available; SMEs allocated ≥[X%] during design/UAT; environments ready per schedule; change board capacity available; cloud landing zone and IAM patterns in place.
-
-Constraints: Privacy and export-control rules; budget caps and spend approval limits; legacy interface limitations; enterprise security standards; procurement lead times.
-
-Dependencies: Upstream DMS and content sources; identity/SSO; network/firewall changes; procurement of OCR/NLP components; availability of platform teams (cloud, security, data).
-
-Stakeholders & Governance (placeholders)
-
-Sponsor: [Name, Title]
-
-Product Owner/Business Lead: [Name]
-
-Project Manager: [Name]
-
-Tech Lead/Architect: [Name]
-
-Core Team: Data Engineer, ML Engineer, QA/Tester, BA/Analyst, DevOps/Platform Engineer.
-
-Supporting Functions: InfoSec, Compliance, Legal, Operations/Support, Data Platform/Architecture, Procurement, PMO.
-
-Governance: Steering committee cadence [biweekly]; Working group cadence [weekly]; Change control via CAB; Decision log maintained in [tool]; Stage gates: Initiate/Plan/Build/Deploy/Benefits.
-
-Success Criteria & Acceptance
-
-Each objective has at least one KPI with baseline and target achieved by UAT exit or within agreed stabilization window.
-
-UAT Exit: ≥[pass rate]% test cases passed; critical defects = 0; performance and accuracy KPIs met for in-scope doc types.
-
-Operational Readiness: Monitoring, alerting, runbooks, and on-call set; access controls reviewed; backup/DR tested; support model agreed.
-
-Compliance: Security review completed; data retention and audit logging validated; privacy impact assessment signed off.
-
-Communication & Change Summary
-
-Audiences: Executive stakeholders, product/business teams, operations/support, compliance, end users.
-
-Cadence & Channels: Weekly status report; biweekly SteerCo; dashboards in [tool]; project hub in Confluence/SharePoint; release notes per deployment.
-
-Training & Adoption: Role-based training; quick-reference guides and office hours; pilot champions network; feedback loop via surveys and backlog.
-
-Change Impact: New review workflows and dashboards; updated access roles; potential process changes for intake/validation.
-
-Approval
-
-Sponsor: [Name / Title / Signature / Date]
-
-Product Owner: [Name / Title / Signature / Date]
-
-Project Manager: [Name / Title / Signature / Date] Notes: After approval, baseline Version 1.0 and store in repository with document control metadata.
-
-Optional (to finalize during review)
-
-Tolerances & PM Authority: Budget ±[x%] without escalations; schedule variance ±[y%]; scope changes via change board above [threshold].
-
-KPI Ownership Matrix: Map each KPI to an owner and measurement method/frequency.
-
-Editing guide: Replace bracketed placeholders; confirm sourcing (business case, SOW, strategy docs); validate KPIs, milestones, and budget; assign named owners; and resolve any compliance/regulatory specifics before baselining.
+1. **Commercial opportunity intentionally undefined (`TBD`):** Per Honest Evidence Baseline, `OP-ITG-019` does **not** invent a client pricing model or external SaaS business case ahead of engineering stability.
+2. **Strict Q1–Q2 2027 build freeze:** Must **not** consume Q1–Q2 solo pilot bandwidth (`10–15 hrs/wk` cap); remains parked in Future 2027 Developments until Wave 1 client proof is underway.
+3. **No full 18-stage build inside `oppurtunities-2027`:** When greenlit, all ADRs, BRDs, and code engineering execute inside `mdresch/adpa` under `sidpa-template` (Track B).
+4. **Stage 1b (`G1b`) Status:** Technical prerequisites, 29-file provenance, and sibling architecture notes consolidated; remains `Idea` pending Q3–Q4 2027 activation.

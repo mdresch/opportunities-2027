@@ -1,60 +1,65 @@
-# Ideation Document — `OP-SUS-001`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-SUS-001"
+execution_track: "Track A — Digital Product / Advisory Toolkit (Core & Specialty Backlog)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (§16 Sustainability); Ideation-Spark.md"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-SUS-001`: ESG / CSRD Data & Compliance Readiness Starter Kit
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Sibling workspace files: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Lightweight data-collection checklist and supplier-questionnaire pack for SMEs facing enterprise ESG/CSRD supply-chain requests.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Even when Small & Mid enterprises fall below direct statutory EU CSRD reporting thresholds (or experience shifting EU Omnibus implementation timelines), their large enterprise customers must still collect Scope 3 emissions, workforce, and governance supply-chain metrics. Consequently, SMEs are hit with ad-hoc, multi-tab ESG supplier questionnaires from enterprise procurement teams and banks — often lacking structured internal data owners, audit trails, or repeatable answers.
 
-# Ideation Spark — `OP-SUS-001`: ESG / CSRD data & compliance readiness starter kit
+Hiring a specialist sustainability consultancy or subscribing to enterprise ESG SaaS is cost-prohibitive for SMEs (€20k–€60k+). Buyers need a lightweight, modular data-collection checklist and supplier-questionnaire response kit that organizes existing operational data quickly at low fixed cost.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 16. Sustainability · **Signature Toolkit:** Management Consulting
-**Category:** Digital Product (PDF / Toolkit) · **Size:** Small & Mid
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+### Buyer & Tier Snapshot
 
-## Positioning
+- **Target Buyers:** CFOs, Chief Sustainability Officers, and ESG/CSRD Operations Leads (Small & Mid segment).
+- **Portfolio Tier & Toolkit:** Core & Specialty Backlog · `Management Consulting` (€800–€3,000 · 6 wks · Target Q3 2027).
 
-> For **CFOs, Chief Sustainability Officers & ESG/CSRD Leads** (Small & Mid tier) who need a focused, fixed-scope solution for **esg / csrd data & compliance readiness starter kit**, **ESG / CSRD data & compliance readiness starter kit** is a **Digital Product (PDF / Toolkit)** backed by the **Management Consulting** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+Built on CBa Consult's `Management Consulting` toolkit, `OP-SUS-001` packages a modular Digital Product (PDF / Workbook Toolkit) optionally paired with a light 6-week advisory setup:
 
-Lightweight data-collection checklist and supplier-questionnaire pack for SMEs facing enterprise ESG/CSRD supply-chain requests.
+1. **Modular ESG Data-Collection Checklist:** Group core SME data points (energy/utilities, fleet/travel, waste, workforce safety/diversity, basic governance policies) mapped to common enterprise CSRD Scope 3 supplier requests.
+2. **Evidence & Owner Mapping Workbook:** Assign internal data owners (Finance, HR, Facilities, Procurement) and source-system locations (invoices, payroll exports, utility bills) so annual refreshes take hours instead of weeks.
+3. **Standardized Supplier-Questionnaire Response Pack:** Reusable answer library and methodology-assumptions log ready for Tier-1 customer portals (EcoVadis / bespoke procurement forms).
+4. **Versioned Regulatory Modularity:** Isolate threshold-dependent metrics in separate modules so shifting EU CSRD/Omnibus timelines require only minor template swaps.
+5. **Cross-Offer Integration:** Link supply-chain resilience fields directly to `OP-SCM-001` and policy/compliance checklists to `OP-LEG-001`.
 
-## 7 Pivotal Questions
+## 3. Market Comparables & CBa Consult Differentiation
 
-1. **Buyer & 2027 Trigger** — CFOs, Chief Sustainability Officers & ESG/CSRD Leads (Small & Mid segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — Lightweight data-collection checklist and supplier-questionnaire pack for SMEs facing enterprise ESG/CSRD supply-chain requests.
-3. **Deliverable & Existing IP** — Built on the **Management Consulting** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *ESG/CSRD basics, data structuring, compliance ops*.
-4. **Sweat-Equity Feasibility** — 6 wks, Medium effort, \$0 initial working capital. Expected capital range: €800–€3,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Regulatory timelines shift; keep templates modular.
-7. **Compounding / Scale Path** — Bundle with `OP-SCM-001` (Supply Chain) and `OP-LEG-001` (Compliance).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable Archetype | Typical Packaging & Pricing | Target Buyer | CBa Consult Differentiation |
 | --- | --- | --- | --- |
-| 6 wks | Medium | €800–€3,000 | Q3 2027 |
+| **Enterprise ESG SaaS Platforms** | Annual SaaS subscription (€6,000–€30,000+/yr) | Mid/Large CSO | Over-engineered and recurring opex for SMEs; CBa provides a one-time €800–€3,000 toolkit on native spreadsheets/PDFs. |
+| **Boutique Sustainability / Carbon Consultants** | Bespoke materiality & GHG audits (€15k–€50k) | Regulated Mid-Market | Full-scope double-materiality studies exceed SME budgets; CBa solves immediate customer-questionnaire readiness first. |
+| **Generic Free ESG PDF Checklists** | Unstructured blog downloads (€0) | Operations Leads | Lack internal owner mapping, ERP/invoice source pointers, and reusable supplier-questionnaire templates. |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Adapted from 2026 "Sustainability & compliance operations" + `Sustainability` functional area.
+| Asset / Source | Provenance & Availability | Coverage Role | Gaps Requiring Work Before Pilot |
+| --- | --- | --- | --- |
+| **`Management Consulting` Toolkit** | CBa Signature Toolkit | Operational data structuring, RACI/owner mapping, compliance ops (~70% coverage) | Needs standardized SME ESG supplier-questionnaire crosswalk (VSME / common Scope 3 fields). |
+| **`inventory-of-ideas.md` (§16) & `Ideation-Spark.md`** | Portfolio SSOT | Defines €800–€3,000 band, 6-wk horizon, Q3 2027 target, and `OP-SCM-001`/`OP-LEG-001` pairing | Verify current EU CSRD/VSME voluntary SME standard references before template lock. |
+| **`Source-Documents.md`** | Sibling manifest (`0` ADPA `.docx` assigned) | Adapted from 2026 Sustainability & compliance ops archive | Author toolkit fresh from Management Consulting & VSME baseline. |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+- **Not a Statutory CSRD Limited-Assurance Audit or Legal Sign-Off:** CBa Consult structures internal data readiness and supplier-response templates; accredited financial/sustainability auditors provide formal statutory assurance.
+- **Not a Carbon-Accounting SaaS Platform:** Delivered as static, client-owned PDF/spreadsheet toolkits under `` `$0` `` working capital.
+- **Regulatory-Drift Guardrail:** Templates must clearly separate voluntary SME supply-chain readiness (VSME-style) from statutory CSRD filings to remain resilient to EU Omnibus timeline shifts.
 
-## Assigned Source Documents (ADPA)
+### Stage 1b Gate (`G1b`) Checklist
 
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- [ ] Decide standalone toolkit vs. `OP-SCM-001` / `OP-LEG-001` add-on packaging.
+- [ ] Verify current EU VSME / CSRD Omnibus supply-chain data fields before drafting templates.
+- [ ] Confirm ≥70% template reuse from existing `Management Consulting` RACI/data-ops assets.

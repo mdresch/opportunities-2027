@@ -1,104 +1,68 @@
-# Ideation Document — `OP-LEG-001`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-LEG-001"
+execution_track: "Tier C — Supporting (3. Legal and Regulatory)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "AI Purpose Clause.docx"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `AI Purpose Clause.docx`
+# Ideation Document — `OP-LEG-001`: Contract & Compliance Starter Kit + AI-Use Policy
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-AI Purpose Clause
+> [!NOTE]
+> **Governance SSOT:** This Stage 1b framing operates under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
+> Sibling workspace files: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
+> **Execution Role:** Tier C fast-cash starter kit for Small-tier Founders, General Counsel, and Compliance Leads.
 
-ADPA exists to improve the quality, traceability, consistency, and governance of organisational decision-making by transforming enterprise knowledge, requirements, controls, and evidence into authoritative, auditable, and actionable intelligence.
+## 1. Problem Context & 2027 Market Trigger
 
-ADPA is permitted to optimize for:
+Small enterprises, startups, and lean legal/compliance teams in 2027 face a two-sided operational gap: foundational commercial agreements (NDA, MSA, SOW) lack standardized intake and review workflows, while staff rapidly adopt generative AI tools without formal guardrails. Market data cited in [Ideation-Spark.md](Ideation-Spark.md) highlights an immediate vulnerability—**only 9% of firms have an AI-use policy despite 69% of lawyers using AI at work**—exposing organizations to confidentiality leaks, shadow-AI vendor risk, and EU AI Act governance scrutiny.
 
-Accuracy and completeness of governance information.
+In a cost-conscious 2027 environment, founders and General Counsel do not want open-ended law-firm retainers or heavy CLM software implementations:
 
-Requirements quality and traceability.
+- **Urgent Entry Wedge:** Leading with the AI-Use Policy gap gives buyers an immediate, board-defensible compliance win.
+- **Zero-Software Operations:** Pairs clean operational contract templates with a practical governance policy built on CBa Consult's `AI Purpose Clause.docx` IP.
 
-Compliance with approved standards, policies, and frameworks.
+## 2. Solution Architecture & Delivery Workflow
 
-Auditability, transparency, and evidence preservation.
+Delivered as a fixed-scope **4–6 week (3–6 hrs/wk)** Template / Tool Service backed by the *Risk Management* Signature Toolkit:
 
-Reduction of administrative burden through automation.
+1. **Contract Ops & AI Usage Triage (Week 1):** Inventory existing NDA/MSA/SOW drafts, contract approval bottlenecks, and current employee/vendor AI tool usage.
+2. **Operational Template & Workflow Assembly (Weeks 2–3):** Standardize business-side NDA, MSA, and SOW playbooks alongside a lightweight intake/escalation checklist (using existing M365/SharePoint/Drive tools—no new CLM purchase).
+3. **AI-Use Policy & Purpose Clause Adaptation (Weeks 4–5):** Adapt `AI Purpose Clause.docx` into a client-ready AI-Use Policy covering permitted optimization goals, explicit negative exclusions (no autonomous legal obligations, no covert surveillance, no unverified records), Mission Alignment gates, and human accountability ownership.
+4. **Governance Handoff & Counsel Sign-Off Package (Week 6):** Deliver the complete starter pack and maturity check (Level 2 Defined baseline with path to Level 3 Managed evidence logs) for final review by the client's external or in-house legal counsel.
 
-Consistency of decision support across projects and programmes.
+**Core Starter-Kit Artifacts:**
+- **Contract Ops Pack:** Operational NDA, MSA, and SOW templates plus lightweight review/escalation RACI.
+- **AI-Use Policy & Purpose Clause:** Grounded in `AI Purpose Clause.docx` exclusions and High-Risk AI objective rules.
+- **Maturity Baseline Checklist:** Level 2 Defined attestation sheet ready for counsel sign-off.
 
-Early identification of risks, gaps, conflicts, and control weaknesses.
+## 3. Market Comparables & CBa Consult Differentiation
 
-Human decision augmentation through evidence-based recommendations.
+| Comparable Category | Typical Market Offering | Limitations for Small-Tier Buyers | CBa Consult Differentiation (`OP-LEG-001`) |
+| :--- | :--- | :--- | :--- |
+| AI Contract-Drafting SaaS | Automated redlining & drafting tools (Spellbook, Harvey, Legora) | Software license overhead; solves attorney drafting speed, not internal AI governance policy | Explicitly avoids competing on AI drafting; focuses on operational workflows and AI-use guardrails |
+| Boutique Law Firms | Bespoke commercial contract suites and legal opinions | High hourly billing (€350–€600/hr); slow turnaround for operational checklists | Low-cost, fixed-scope operational starter kit ready for rapid counsel sign-off |
+| Generic Policy Generators | Free online NDA / AI policy downloads | Unconnected to actual contract ops, escalation RACI, or EU AI Act evidence expectations | Integrates contract workflow + ADPA `AI Purpose Clause.docx` exclusions and gate rules |
 
-ADPA acts as a decision-support and governance-enablement system. Final accountability for decisions remains with authorized human personnel.
+**Positioning Takeaway:** Bridges the operational gap between static legal templates and expensive AI drafting SaaS without crossing into legal counsel.
 
-Explicit Negative Exclusions
+## 4. Internal IP & Source Provenance Crosswalk
 
-ADPA will not be used to:
+| Source / Asset | Role in `OP-LEG-001` | Provenance & Scope | Reuse & Adaptation Notes |
+| :--- | :--- | :--- | :--- |
+| `AI Purpose Clause.docx` | Core AI governance & exclusion clause IP | Listed in [Source-Documents.md](Source-Documents.md) (`ADPA - Projects Lists`) | Supplies Negative Exclusions, Mission Alignment Rule, High-Risk Objective Function, and Maturity model |
+| Risk Management Signature Toolkit | Delivery & risk-framing spine | CBa Consult core advisory library | Provides lightweight RACI, contract-intake triage, and risk-boundary checklists |
+| `OP-X-004` (Case Study Engine) | Proof capture mechanism | CBa Consult portfolio engine | Captures turnaround-time and policy-adoption before/after proof from early Q1 2027 buyers |
 
-Replace accountable human judgement in governance, compliance, legal, financial, employment, or safety-critical decisions.
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-Make autonomous decisions that create legal obligations or material impacts without human approval.
+- **Not Legal Advice or Law Practice:** CBa Consult provides operational contract-workflow templates, risk framing, and AI-use governance guardrails only. All binding legal templates and policies must receive final sign-off from the client's qualified legal counsel.
+- **No Competing AI Drafting Software:** CBa Consult does not build or resell automated legal redlining tools (Spellbook/Harvey/Legora category).
+- **Zero-Surveillance & Human Accountability Lock:** Aligned with `AI Purpose Clause.docx`, starter-kit policies forbid covert employee surveillance and require named human owners for material decisions.
 
-Conceal, manipulate, fabricate, or misrepresent evidence, audit records, requirements, or governance artifacts.
-
-Optimize for speed, cost reduction, productivity, or commercial outcomes at the expense of compliance, transparency, accuracy, or stakeholder interests.
-
-Perform covert monitoring or surveillance of individuals.
-
-Discriminate against individuals or groups based on protected characteristics.
-
-Circumvent established governance controls, approval authorities, or regulatory obligations.
-
-Generate authoritative records without maintaining traceability to supporting evidence and sources.
-
-Override documented policies, standards, or approved control frameworks.
-
-Mission Alignment Rule
-
-No AI use case may enter development, procurement, deployment, or operational governance gates unless it contains a documented mission-alignment statement.
-
-The alignment statement must demonstrate:
-
-What organisational value is being created.
-
-Which approved optimisation objectives are being pursued.
-
-Which negative exclusions could potentially be affected.
-
-What human oversight exists.
-
-How traceability and auditability are preserved.
-
-Use cases lacking a mission-alignment assessment are not permitted to progress.
-
-High-Risk System Objective Function
-
-Where ADPA is designated as a High-Risk AI System, the objective function shall be:
-
-"Maximise governance quality, traceability, compliance assurance, and evidence integrity while minimising ambiguity, undocumented decisions, control failures, and information loss."
-
-Any optimisation objective that conflicts with compliance, transparency, auditability, stakeholder protection, or regulatory obligations shall be considered invalid.
-
-Governance Ownership
-
-Executive Accountable Owner: Designated Executive Accountable Officer (or equivalent governance executive).
-
-Operational Owner: ADPA Governance Authority / AI Governance Board.
-
-Review Frequency: Annual review and upon any material change to strategy, operating model, regulatory obligations, or AI capability.
-
-Suggested Maturity Assessment
-
-Based on what you've described historically for ADPA:
-
-Level 2 – Defined appears fully supportable today.
-
-Level 3 – Managed may be supportable if you can demonstrate:
-
-Evidence collection,
-
-Governance gate enforcement,
-
-Traceability records,
-
-Formal owner attestations.
-
-Without documented evidence of active enforcement, I would record Level 2 (Defined) rather than overstating maturity.
+**Stage 1b Gate Decision:** **APPROVED FOR STAGE 3 COMMERCIAL PACKAGING.** Proceed to lock exact Q1 2027 starter-pack pricing anchor, self-serve + review tiers, and Stage 2 buyer hypotheses prior to `G4`.

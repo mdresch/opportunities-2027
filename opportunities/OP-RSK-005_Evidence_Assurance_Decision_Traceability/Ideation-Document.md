@@ -1,53 +1,70 @@
-# Ideation Document — `OP-RSK-005`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-RSK-005"
+execution_track: "Track A — Lightweight Advisory"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (§12/§17); ECS & sidpa-template evidence specs"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-RSK-005`: Evidence Assurance & Decision Traceability Assessment
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), tracked in [inventory-of-ideas.md](../../inventory-of-ideas.md), and positioned as **Tier D — Thought Leadership (2028–2029 Tier A Bridge)** alongside [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
 
-**Inventory description:** **Governance of Evidence itself:** evaluate decision provenance, source reliability, AI-generated vs. human-generated evidence, audit chains, and end-to-end traceability across AI governance, financial controls, regulatory compliance, and knowledge governance.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Regulated enterprises can often point to isolated policy controls, yet almost none can prove **why a control exists, what evidence supports a critical decision, whether AI-generated evidence is trustworthy, or whether the end-to-end audit chain remains intact**. As Big Four firms industrialize AI-driven auditing (*Omnia, Clara, EY.ai*) and enterprise workflows blend human judgment with LLM outputs, organizations risk relying on circular, unverified, or mutable evidence trails.
 
-# Ideation Spark — `OP-RSK-005`: Evidence Assurance & Decision Traceability Assessment
+- **Target Buyer:** CISOs, Chief Risk Officers, CFOs, Chief AI Officers, and Audit Committees (Medium & Large regulated enterprises).
+- **The Wedge (Pain):** Point compliance tools collect checkboxes without proving epistemic reliability, origin separation (human vs. AI), or tamper-evident custody across finance, AI, and IT silos.
+- **2027 Trigger:** **EU AI Act Annex III** (Dec 2, 2027 technical documentation), **SOX 404** sign-off defensibility, **DORA/NIS2** incident evidence mandates, and tax/arbitration audit scrutiny make "Governance of Evidence itself" an emerging boardroom imperative.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, **Tier D Thought Leadership (high-potential Tier A bridge by 2028–2029)**
-**Tier:** D — Thought Leadership
-**Strategic Asset:** 4. Evidence & Governance
-**Functional Area:** Risk Management · **Signature Toolkit:** Risk Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §12 Risk Management & §17](../../inventory-of-ideas.md) · [market-analysis-2027.md §17](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+Delivered as a 6–8 week executive diagnostic (`Medium` effort), packaged either as a standalone **Evidence Assurance Assessment** or an add-on module inside `OP-RSK-004` / `OP-ITG-014` engagements:
 
-> For **CISOs, Chief Risk Officers, CFOs, and Chief AI Officers** in regulated enterprises who struggle with **proving decision provenance, source reliability, and auditability across mixed human-and-AI workflows**, **Evidence Assurance & Decision Traceability Assessment** is an **Audit / Diagnostic** backed by **ECS, ADPA, and Bayesian Trust/Evidence Scoring** that delivers **an end-to-end Governance-of-Evidence blueprint across AI, finance, compliance, and knowledge systems** with \$0 working capital.
+1. **Weeks 1–2 — Decision & Evidence Inventory:**
+   - Map high-consequence regulatory, financial, and AI-governance decisions and trace supporting evidence across human vs. AI origins.
+2. **Weeks 3–4 — 5-Point Evidence Provenance Audit:**
+   - Score artifact chains using CBa's **Evidence Reliability & Provenance Rubric** (Source Authority, Human vs. AI Origin, Immutability/WORM Hash, Freshness, Chain-of-Custody).
+   - Enforce strict separation between `design_time` specifications and `execution` actuals.
+3. **Weeks 5–6 — Bayesian Trust & Traceability Blueprint:**
+   - Identify broken custody links, apply Bayesian active evidence-seeking principles (`OP-ITG-015`), and define WORM sign-off register upgrades (`OP-FIN-009` / `OP-ITG-010`).
+4. **Weeks 7–8 — Executive Brief & Audit-Readiness Handover:**
+   - Deliver the Decision Provenance & Evidence Chain Map plus remediation roadmap for Audit Committee and external-auditor readiness.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-**Governance of Evidence itself:** evaluate decision provenance, source reliability, AI-generated vs. human-generated evidence, deterministic audit chains, and end-to-end traceability across AI governance, financial controls, regulatory compliance, and knowledge governance.
+| Comparable / Alternative | Typical Model | Strengths | Differentiation of CBa `OP-RSK-005` |
+| :--- | :--- | :--- | :--- |
+| **GRC SaaS Tools (Vanta, Drata, Archer)** | Automated compliance checklists | Continuous cloud API polling | Collects artifacts without scoring **epistemic reliability** or AI-vs.-human provenance |
+| **Big Four AI-Enabled Audit (*Omnia / Clara*)** | Statutory assurance engagement | Audit opinion authority | Tests compliance post-hoc; conflict-prohibited from designing client evidence architecture |
+| **Point ISO 42001 / SOC 2 Consultants** | Framework gap templates | Fast policy checklist completion | Rarely bridges financial, AI, knowledge, and cryptographic evidence chains together |
+| **CBa `OP-RSK-005` Assessment** | 6–8 wk Governance-of-Evidence sprint | ECS + ADPA + `sidpa-template` + Bayesian scoring | Audits the **integrity of evidence itself** across silos |
 
-## 7 Pivotal Questions
+## 4. Internal IP & Source Provenance Crosswalk
 
-1. **Buyer & 2027 Trigger** — CISO, Chief Risk Officer, CFO, and Audit Committees. As Big Four auditors industrialize AI (*Omnia, Clara, EY.ai*) and **EU AI Act Annex III** (Dec 2, 2027) + **SOX / DORA / NIS2** tighten evidentiary standards, organizations must prove *what evidence* supported a decision and *whether that evidence can be trusted*.
-2. **The Wedge (Pain)** — Most firms can implement point controls, but almost none can prove **why a control exists, what evidence supports it, whether AI-generated evidence is reliable, or whether the audit chain is intact**.
-3. **Deliverable & Existing IP** — Naturally unifies **ECS** (philosophical foundation), **ADPA**, **Bayesian active evidence-seeking (`OP-ITG-015`)**, **Sign-Off Registers & WORM hashes (`OP-FIN-009`, `OP-ITG-010`)**, and **ISO 42001 / EU AI Act control mapping (`OP-RSK-004`)**.
-4. **Sweat-Equity Feasibility** — 6–8 weeks (Medium effort), \$0 initial capital; best launched as a **Thought-Leadership Whitepaper + Executive Advisory Assessment** layered onto `OP-RSK-004` or `OP-ITG-014` engagements.
-5. **Outcome & Proof** — An auditable **Decision Provenance & Evidence Chain Map** separating verified human evidence from AI-generated outputs, reducing audit-prep friction and regulatory enforcement exposure.
-6. **Boundaries & Risk** — Conceptual/emerging category in 2027—avoid pitching abstract philosophy; anchor pitches in concrete **EU AI Act technical documentation, SOX 404 close sign-offs, and arbitration/tax-audit defensibility**.
-7. **Compounding / Scale Path** — Strongest cross-portfolio connective tissue: bridges **AI Governance (`OP-RSK-004`), Knowledge Governance (`OP-ITG-014`), Finance Governance (`OP-FIN-009`), and Sovereignty (`OP-ITG-015`)**—strong candidate to graduate from Tier D to Tier A by 2028–2029.
+| Source Asset | Role in `OP-RSK-005` | Provenance / Location |
+| :--- | :--- | :--- |
+| [Ideation-Spark.md](Ideation-Spark.md) | 2027–2030 Tier D framing, 7 Pivotal Questions & 5-point rubric | Sibling workspace file |
+| [Source-Documents.md](Source-Documents.md) | Confirms portfolio-synthesized origin (no ADPA `.docx` assigned) | Sibling workspace file |
+| ECS, ADPA & `sidpa-template` (`mdresch/sidpa-template`) | Deferred audit logging, `design_time | execution` split & provenance chains | Referenced via [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) |
+| Connected Tier A IP (`OP-RSK-004`, `OP-ITG-014`, `OP-ITG-015`, `OP-FIN-009`) | Control mapping, Bayesian trust, WORM hashes & sign-off registers | [inventory-of-ideas.md](../../inventory-of-ideas.md) (§12/§17) |
 
-## Effort, Capital & Timeline
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 6–8 wks | Medium | Thought Leadership / €3,500–€10,000 | Q3–Q4 2027 |
+- **No Abstract Philosophy Pitches:** Never pitch "epistemology" in isolation; anchor every executive conversation in concrete **EU AI Act Annex III documentation, SOX 404 sign-offs, and arbitration/tax-audit defensibility**.
+- **No Statutory Audit Opinion or Legal Certification:** CBa provides independent pre-assurance architecture and evidence-chain diagnostics; external auditors and counsel retain statutory sign-off.
 
-## Market Validation
+### Stage 1b Readiness & Pre-Pilot Handoff
 
-🟡 Emerging thought-leadership differentiator backed by Big Four AI-audit compression (`Audit_Advisory_Market_Report.pdf`), EU AI Act traceability mandates, and ECS/Bayesian evidence principles (see [market-analysis-2027.md §17](../../market-analysis-2027.md)).
-
-## Existing Assets to Draw On
-
-- **ECS** evidence-governance foundation, **ADPA** traceability specs, and **`sidpa-template` (`mdresch/sidpa-template`)** (deferred audit logging, `evidence_basis: design_time | execution` separation, and `Audit-Register.md` provenance chains).
-- `OP-RSK-004` (*"SOC 2 
+| Criterion | Current State | Next Action Toward Pilot |
+| :--- | :--- | :--- |
+| **Stage 1b Framing** | Complete (Tier D — Thought Leadership) | Position as 2028–2029 Tier A graduation candidate |
+| **Executive Brief** | Pending | Draft Governance-of-Evidence brief linking ECS to SOX 404 & Annex III |
+| **5-Point Provenance Rubric** | Pending | Codify Authority, Origin, WORM Hash, Freshness & Custody scoring |
+| **Pilot Add-On Channel** | Planned (Q2–Q3 2027) | Test inside active `OP-RSK-004` or `OP-ITG-014` engagements |

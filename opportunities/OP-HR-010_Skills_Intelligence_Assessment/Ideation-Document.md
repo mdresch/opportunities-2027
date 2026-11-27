@@ -1,62 +1,75 @@
-# Ideation Document — `OP-HR-010`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-HR-010"
+execution_track: "Track A (Lightweight Advisory / Diagnostic — Stays in oppurtunities-2027)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "HR Transformation Toolkit version 2027.docx (no ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-HR-010`: Skills Intelligence & Workforce Capability Assessment
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Authoritative status, effort, capital, and target quarter live in [inventory-of-ideas.md](../../inventory-of-ideas.md); portfolio sequencing lives in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md); lifecycle gates (`G1b`–`G4`) follow [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Companion workspace artifacts: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Assess critical skills, skill gaps, skills decay, AI readiness, and internal mobility using competency frameworks, ontology-driven governance, and ADPA skill extraction.
+---
 
-### From Ideation-Spark.md
+## 1. Problem Context & 2027 Market Trigger
 
-# Ideation Spark — `OP-HR-010`: Skills Intelligence & Workforce Capability Assessment
+Medium and large enterprises face accelerating capability mismatch: static job descriptions and annual performance reviews cannot track rapid **skills decay**, pinpoint where internal talent can be redeployed, or verify whether staff possess the judgment required to supervise AI workflows. Without a structured skills inventory, organizations default to costly external recruiting while AI initiatives stall due to human-readiness gaps.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** B — Growth
-**Strategic Asset:** 2. Organizational Intelligence
-**Functional Area:** Human Resources · **Signature Toolkit:** Human Resources & Talent Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §2 Human Resources](../../inventory-of-ideas.md) · [market-analysis-2027.md §2 & §17](../../market-analysis-2027.md)
+**2027 Strategic Drivers & Buyer Urgency:**
+- **Buyer Persona:** CHROs, VPs of Talent Management, and Learning & Development Leaders in medium and large enterprises.
+- **Gartner 2027 CHRO Priorities:** Repeatedly emphasize transitioning to **skills-based organizations**, actively managing **differentiated skills and skills decay**, and upskilling narrow specialists into AI-supervising **"versatilists."**
+- **Pre-Platform Urgency:** Buyers want a fast, software-neutral capability baseline *before* committing €50k–€250k+ to enterprise skills-cloud SaaS on top of messy job architectures.
 
-## Positioning
+---
 
-> For **CHROs and Talent / L&D Leaders** in medium and large organizations who struggle with **rapid skills decay, hidden capability gaps, and low AI readiness across legacy job architectures**, **Skills Intelligence & Workforce Capability Assessment** is an **Audit / Diagnostic** backed by **ADPA skill extraction, competency frameworks, and ontology-driven governance** that delivers **a quantified skills-gap, decay, and internal-mobility roadmap** with \$0 working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+`OP-HR-010` is scoped as a **6–8 week (6–10 hrs/week) single-division Pilot Diagnostic** combining competency frameworks, ontology-driven taxonomy governance (`OP-ITG-014` patterns), and ADPA-style document/skill extraction:
 
-Assess critical skills, skill gaps, skills decay, AI readiness, and internal mobility using competency frameworks, ontology-driven governance, and ADPA skill extraction.
+1. **Scope & Taxonomy Calibration (Weeks 1–2):** Select one pilot division (e.g., IT or Finance), extract existing role descriptions and project artifacts, and map them against the skills/talent dimension of `HR Transformation Toolkit version 2027.docx`.
+2. **Skills Coverage & Decay Scoring (Weeks 3–4):** Assess current proficiency, critical-skill concentration, single-point-of-failure risk, and half-life decay exposure across AI-adjacent and core operational roles.
+3. **AI-Supervision & Mobility Mapping (Weeks 5–6):** Identify "versatilist" reskilling paths, internal redeployment matches vs. external hiring needs, and human-in-the-loop oversight gaps (connecting cleanly to `OP-HR-009`).
+4. **Executive Roadmap & Governance Handoff (Weeks 7–8):** Deliver the **Skills Intelligence & Decay Scorecard** plus a build/buy/redeploy action plan and ontology maintenance rules requiring zero new HRIS licensing.
 
-## 7 Pivotal Questions
+**Core Pilot Deliverables:**
+- Single-Division Skills Taxonomy & Ontology Specification
+- Skills Coverage, Concentration & Decay Risk Heat Map
+- Build / Buy / Redeploy & AI-Supervision Mobility Roadmap
 
-1. **Buyer & 2027 Trigger** — CHRO and VP Talent / L&D. Gartner's 2027 HR priorities repeatedly highlight **skills-based organizations, differentiated skills, skills-decay management, and AI-ready workforce transitions** (shifting from narrow specialists to AI-supervising "versatilists").
-2. **The Wedge (Pain)** — Companies cannot tell which critical capabilities are decaying, who can be redeployed internally vs. hired externally, or whether staff can safely supervise AI workflows—driving expensive external hiring and failed AI rollouts.
-3. **Deliverable & Existing IP** — Combines **ADPA document/skill extraction**, **ontology-driven competency frameworks** (shared with `OP-ITG-014`), and the **skills/talent dimension of `HR Transformation Toolkit version 2027.docx`** into a scored **Skills Intelligence & Decay Scorecard**.
-4. **Sweat-Equity Feasibility** — 6–8 weeks at 6–10 hrs/week (Medium effort), \$0 cash outlay; can pilot cleanly on a single division/practice (e.g., IT or Finance) before scaling org-wide.
-5. **Outcome & Proof** — Quantified critical-skill coverage %, skills-decay risk heat map, and actionable build/buy/redeploy plan tied to measurable internal-mobility and hiring-cost savings.
-6. **Boundaries & Risk** — Requires clean HRIS/job-architecture data; avoid over-promising automated HRIS platform replacement (stay focused on diagnostic + ontology/taxonomy governance) and enforce GDPR minimization on employee skill profiles.
-7. **Compounding / Scale Path** — Pairs with `OP-HR-002` (HR Maturity Assessment) and `OP-ITG-014` (Knowledge Intelligence & Context Governance) to turn skills taxonomy into a reusable corporate intelligence asset (`OP-FIN-011`).
+---
 
-## Effort, Capital & Timeline
+## 3. Market Comparables & CBa Consult Differentiation
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 6–8 wks (6–10 hrs/wk) | Medium | €2,500–€8,000 | Q2–Q3 2027 |
+| Comparable / Alternative | Typical Packaging & Price | Core Strength | Gap / Limitation | CBa Consult (`OP-HR-010`) Differentiation |
+| --- | --- | --- | --- | --- |
+| **Enterprise Skills Cloud SaaS** *(Eightfold, Gloat, Workday Skills)* | €50k–€250k+/yr software + 6–12 mo rollout | Automated talent marketplace & HRIS integration | Fails when underlying job architecture & taxonomy are dirty; heavy IT lift | "No-new-HRIS-spend" pre-platform diagnostic; cleans ontology & taxonomy first |
+| **Big Four People Advisory** *(Mercer, Korn Ferry, Deloitte)* | €60k–€200k+ consulting engagement | Large benchmark databases and global survey IP | Generic slideware, high daily rates, disconnected from operational AI workflows | Lean 6–8 week division pilot linking skills taxonomy directly to AI governance (`OP-ITG-014`) |
+| **Internal HR Spreadsheet Audits** | Internal staff time | Zero external fee | Subjective, fragmented across departments, lacks decay & AI-readiness scoring | Repeatable 28-KPI toolkit rigor + ADPA extraction & ontology governance structure |
 
-## Market Validation
+---
 
-🟢🟢 Strong Gartner 2027 CHRO priority (skills-based orgs, skills decay management, AI-ready workforce, "versatilist" roles — see [market-analysis-2027.md §14–15, §17](../../market-analysis-2027.md)).
+## 4. Internal IP & Source Provenance Crosswalk
 
-## Existing Assets to Draw On
+As recorded in [Source-Documents.md](Source-Documents.md), **0 ADPA `.docx` files** are assigned to `OP-HR-010`; internal IP derives from CBa Consult's 2027 HR and Knowledge Governance assets:
 
-- `F:\OneDrive - CBA\HR Transformation Toolkit version 2027.docx` (skills/talent dimension & 28-KPI scorecard).
-- ADPA extraction & ontology governance patterns (`OP-ITG-014`).
+| Internal Asset / Reference | Location / Provenance | Reuse Role in `OP-HR-010` |
+| --- | --- | --- |
+| `HR Transformation Toolkit version 2027.docx` | `F:\OneDrive - CBA\HR Transformation Toolkit version 2027.docx` | Provides the skills/talent maturity criteria and 28-KPI HR scorecard baseline |
+| **Ontology & Context Governance Patterns** | Cross-linked with Tier A `OP-ITG-014` | Supplies taxonomy/ontology structuring rules and ADPA document-extraction patterns |
+| **Tier B HR & Operating Model Siblings** | `OP-HR-002`, `OP-HR-009`, `OP-FIN-011` | Connects diagnostic findings to broader HR maturity (`002`), Human+Agent design (`009`), and Intelligence Capital (`011`) |
+| **Ideation Spark Baseline** | [Ideation-Spark.md](Ideation-Spark.md) | Locks Target Buyer (CHRO/VP Talent), Medium effort, €2,500–€8,000 range, and Q2–Q3 2027 window |
 
-## Related Opportunities
+---
 
-`OP-HR-002` (HR Maturity Assessment — Tier A), `OP-HR-009` (Human + Agent Workforce Operating Model), `OP-ITG-014` (Knowledge Intelligence & Context Governance — Tier A), `OP-FIN-011` (Intelligence Capital Measurement)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Define a minimal 1-division **Skills Taxonomy & Decay Scoring Rubric** (compatible with ADPA extraction).
-- [ ] Benchmark 2–3 skills-intelligence platforms/c
+- **No HRIS Platform Build or Replacement:** CBa Consult delivers a scored diagnostic, taxonomy specification, and mobility roadmap—never custom HR software engineering or multi-module Workday/SAP implementation.
+- **GDPR & EU AI Act Safeguards:** Enforce strict GDPR data minimization on individual employee records and exclude automated individual hiring, promotion, or termination scoring (regulated under EU AI Act High-Risk Annex III employment systems).
+- **No Unbounded Enterprise Rollout in Pilot #1:** Pilot #1 is strictly bounded to one division (IT or Finance) to stay within the 6–10 hrs/week capacity cap.
+- **Stage 1b (`G1b`) Gap to Close:** Because 0 ADPA `.docx` files exist for `OP-HR-010`, the Director must finalize the 1-division **Skills Taxonomy & Decay Scoring Rubric** and register Stage 2 hypotheses in `Hypothesis-Register.md` before `G4` pilot promotion.

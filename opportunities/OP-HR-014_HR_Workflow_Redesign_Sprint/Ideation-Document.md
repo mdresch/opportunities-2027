@@ -1,53 +1,69 @@
-# Ideation Document — `OP-HR-014`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-HR-014"
+execution_track: "Tier C — Supporting Wedge (2. Human Resources)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Microsoft Frontier HR Leader eBook (Part 4, Days 0-90) & CBa BD Local Index"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-HR-014`: HR Workflow Redesign Sprint (90-Day CHRO Playbook)
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> [!NOTE]
+> **Governance SSOT:** This Stage 1b framing operates under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
+> Sibling workspace files: [Ideation-Spark.md](Ideation-Spark.md), [Source-Documents.md](Source-Documents.md), and [BD-Quick-Reference.md](BD-Quick-Reference.md).
+> **Execution Role:** Tier C Supporting Phase 0 wedge feeding `OP-HR-002` and `OP-HR-009`.
 
-**Inventory description:** Productized baseline → redesign → pilot → scale/stop for **one** business-critical HR workflow (TA, onboarding, ESS, performance, policy).
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Mid-market and large enterprises in 2027 are trapped in the AI **"transformation paradox"**: HR organizations roll out Microsoft Copilot licenses and general AI training, yet cycle times, candidate bottlenecks, and HR service desk backlogs barely move because underlying workflows were never redesigned. CHROs face CFO pressure to prove measurable productivity and headcount-avoidance ROI within 90 days—not multi-quarter transformation roadmaps.
 
-# Ideation Spark — `OP-HR-014`: HR workflow redesign sprint (90-day CHRO playbook)
+Sourced from Part 4 (Days 0–90) of Microsoft's *Frontier HR Leader* playbook and mapped against CBa Consult's *Human Resources & Talent Management* toolkit, `OP-HR-014` converts broad AI-in-HR ambition into a fixed-scope, low-risk diagnostic and pilot sprint on **one** high-friction HR workflow:
 
-**Status:** 🔥 Spark — sourced from Microsoft *Frontier HR Leader* Part 4  
-**Tier:** Tier C — Supporting *(wedge into `OP-HR-002`)*  
-**Functional Area:** Human Resources · **Signature Toolkit:** Human Resources & Talent Management  
-**Size:** Medium & Large  
-**Source:** [inventory-of-ideas.md §2](../../inventory-of-ideas.md) · [Microsoft HR eBook map](../../docs/crosswalk/Microsoft-Frontier-HR-Leader-eBook-HR-Map.md)
+- **Pre-Selected Wedge Options:** Talent Acquisition (structured interview scorecards), New-Hire Onboarding, Employee Self-Service (ESS), Performance Management, or HR Policy Ops.
+- **2027 Decision Discipline:** Gives the executive committee hard baseline-to-pilot telemetry to decide **Scale**, **Redesign**, or **Stop** within one quarter.
 
-## Positioning
+## 2. Solution Architecture & Delivery Workflow
 
-> For **CHROs stuck in the “transformation paradox”** (Copilot adoption without work redesign), this sprint runs **one** critical HR workflow through baseline → redesign → pilot → **scale, redesign, or stop**—with evidence the exec committee will fund.
+Delivered over **4–8 weeks (8–12 hrs/wk)** inside a 90-day CHRO execution cadence, the sprint moves one selected workflow through four disciplined gates:
 
-## What it is
+1. **Workflow Selection & Baseline Lock (Weeks 1–2):** Select one wedge workflow (pre-validated defaults: *New-Hire Onboarding* or *Structured Interview Scorecards*), document current cycle time, handoffs, and error rates, and confirm a named client workflow owner.
+2. **5-Mode Work Redesign (Weeks 3–4):** Decompose tasks across the five Frontier HR operating modes—**Assist**, **Delegate**, **Build**, **Automate**, and **Redesign**—explicitly defining human-in-the-loop checkpoints and EU AI Act HR risk boundaries.
+3. **Controlled Live Pilot (Weeks 5–6):** Run the redesigned workflow with a bounded HR cohort using existing client tools (M365/Copilot, ATS/HRIS, Teams/SharePoint) with zero third-party SaaS procurement.
+4. **Executive Scale / Redesign / Stop Gate (Weeks 7–8):** Compare pilot telemetry against the Week 1 baseline and deliver an investment-grade CHRO decision pack (**Scale**, **Redesign**, or **Stop**), establishing the Phase 0 foundation for `OP-HR-002` and `OP-HR-009`.
 
-Fixed-scope 90-day engagement template: pick workflow (TA, onboarding, ESS, performance, policy), measure today, apply Assist/Delegate/Build/Automate/Redesign modes, and lock a decision gate.
+**Primary Sprint Deliverables:**
+- **1-Page Sprint Charter & Baseline Scorecard:** Locks the single target workflow, named client owner, and Week 1 baseline KPIs.
+- **5-Mode Workflow Blueprint & RACI:** Maps human vs. AI agent responsibilities with EU AI Act Annex III guardrails.
+- **CHRO Decision Pack:** Summarizes live pilot deltas to authorize **Scale**, **Redesign**, or **Stop**.
 
-## Effort, Capital & Timeline
+## 3. Market Comparables & CBa Consult Differentiation
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 4–8 wks (8–12 hrs/wk) | Medium | €2,000–€8,000 | Q1–Q2 2027 |
+| Comparable Category | Typical Market Offering | Limitations for 2027 CHRO Buyers | CBa Consult Differentiation (`OP-HR-014`) |
+| :--- | :--- | :--- | :--- |
+| Enterprise HR Consultancies | Multi-month HR operating model transformations | High fees (€100k+); slow time-to-value; slideware without operational pilot proof | Fixed-scope 4–8 week sprint on **one** workflow ending in a live pilot & scale/stop gate |
+| Copilot Adoption Vendors | Prompt libraries and generic employee training workshops | Causes the "transformation paradox"—individual tips without end-to-end process redesign | Re-architects task handoffs across Assist/Delegate/Build/Automate/Redesign modes |
+| HR Tech / ATS Point Tools | New SaaS modules promising automated screening or onboarding | Requires IT procurement, data migration, and EU AI Act high-risk vendor vetting | Tool-agnostic execution on the client's existing HRIS and M365 stack |
 
-## Related Opportunities
+**Positioning Takeaway:** Solves the exact gap between generic AI license rollout and expensive multi-year HR transformations.
 
-`OP-HR-002` · `OP-HR-009` · `OP-HR-011` · `OP-CHG-001`
+## 4. Internal IP & Source Provenance Crosswalk
 
-## Next Steps (Tier 2 → Pilot Gate)
+| Source / Asset | Role in `OP-HR-014` | Provenance & Availability | Integration Notes |
+| :--- | :--- | :--- | :--- |
+| *Frontier HR Leader* eBook (Part 4, Days 0–90) | 90-day sprint structure & HR checklist (01–06) | Referenced in [Ideation-Spark.md](Ideation-Spark.md); crosswalk in `docs/crosswalk/` | Provides the 5-mode redesign taxonomy and executive scale/stop gate pattern |
+| CBa Business Development Local Index | Proposal & discovery collateral | Indexed via [BD-Quick-Reference.md](BD-Quick-Reference.md) (local Director machine) | Supplies discovery scripts and HR operating-model templates (not stored in git) |
+| ADPA `.docx` Repository | Legacy project dump status | Confirmed **0 files assigned** in [Source-Documents.md](Source-Documents.md) | Clean greenfield sprint; relies on Microsoft HR map + CBa HR toolkit rather than ADPA dumps |
+| `OP-HR-002` & `OP-HR-009` | Downstream compounding engagements | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Phase 0 wedge feeds broader HR AI Transformation and Human+Agent RACI design |
 
-- [ ] Extract eBook **HR leader checklist** (01–06) into client-facing sprint charter.
-- [ ] Pre-select 2 wedge workflows (onboarding + interview scorecards) for sales conversations.
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-## Business Development sources (local)
+- **Single-Workflow Discipline:** Each sprint covers **one** named HR workflow only; enterprise-wide HRIS replacement or multi-country payroll overhauls are out of scope.
+- **No Automated High-Risk Hiring Decisions:** Under EU AI Act Annex III rules, CBa Consult designs decision-support workflows with mandatory human accountability—never autonomous candidate rejection or employee scoring.
+- **No Employment Law Counsel:** Policy and compliance templates require sign-off by client HR Legal / Works Council representatives.
 
-See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+**Stage 1b Gate Decision:** **READY FOR STAGE 2/3 REFINEMENT.** Next actions: extract checklist 01–06 into a 1-page Sprint Charter, finalize onboarding/interview scorecard wedge presets, and log Stage 2 buyer hypotheses before `G4`.

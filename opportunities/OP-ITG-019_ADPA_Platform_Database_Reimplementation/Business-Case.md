@@ -1,168 +1,81 @@
-# Business Case — `OP-ITG-019`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Benefits & Commercial Viability (Stage 3 Business Case)"
+lifecycle_stage: "Stage 3 (Commercial Viability & Options Analysis)"
+opportunity_id: "OP-ITG-019"
+execution_track: "Track B Candidate — Future 2027 Platform Engineering (graduates to mdresch/adpa under sidpa-template)"
+requires_human_approval: "true"
+approval_status: "PARKED_IN_INVENTORY"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "ADPA - Project Charter.docx, ADPA Business Case.docx & mdresch/adpa PoC (29 assigned files)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `ADPA Business Case.docx`
+# Business Case — `OP-ITG-019`: ADPA 2027 Platform Evolution (Database Layer & Project Reimplementation)
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-Business Case: ADPA - Advanced Document Processing & Automation Framework
+> **Authoritative SSOT & Governance Notice:** Authoritative inventory fields (`Active Backlog — Future 2027 Platform Development` · `TBD multi-sprint` · `High` effort · `Capital TBD ($0 cash cap)` · `Q3–Q4 2027` · `Status = Idea`) live in [inventory-of-ideas.md](../../inventory-of-ideas.md). Authoritative delivery priorities live in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Companion files: [Ideation-Spark.md](Ideation-Spark.md), [Ideation-Document.md](Ideation-Document.md), [Source-Documents.md](Source-Documents.md), [ADPA-2027-Architecture-and-DB-Blueprint.md](ADPA-2027-Architecture-and-DB-Blueprint.md), [ADPA-Risk-Management-Scenario-Module.md](ADPA-Risk-Management-Scenario-Module.md).
 
-1. Executive Summary
+---
 
-The ADPA (Advanced Document Processing & Automation Framework) project addresses the critical need for enterprise-grade, automated, and standards-compliant documentation in project management, business analysis, and data governance. By deploying ADPA, the organization will streamline the production of complex business documents, ensure regulatory and industry compliance, and significantly reduce manual effort and error rates. The solution leverages AI-powered automation, robust security, and seamless integration with leading enterprise platforms such as SharePoint, Confluence, and Adobe Document Services. Estimated initial implementation costs are modest given the open-source foundation and modular architecture, with recurring costs limited to AI provider subscriptions and minimal maintenance. The projected benefits include productivity gains equivalent to thousands of hours annually, risk mitigation around compliance, and a clear competitive advantage. We strongly recommend immediate investment in ADPA to capitalize on these efficiencies, drive down operational costs, and position the organization as a leader in digital transformation.
+## 1. Executive Summary
 
-─────────────────────────────────────────────────────────
+| Dimension | Business Case Summary |
+| --- | --- |
+| **Initiative** | **ADPA 2027 Platform Evolution (`OP-ITG-019`)** — add persistent database layer to `mdresch/adpa` and reimplement existing CBa projects into one unified knowledge/document backbone |
+| **Target Beneficiary** | **Internal CBa Consult delivery first** (multiplying margin on `OP-ITG-014` & `OP-ITG-018`); external commercial buyer **intentionally TBD** |
+| **Strategic Role** | **Future 2027 Internal-to-Commercial Asset** — powers Strategic Assets 2 & 4 (`OP-ITG-014`, `OP-ITG-018`, `OP-FIN-011`, `OP-RSK-005`) once Wave 1 revenue is flowing |
+| **Working Capital & Effort** | **`$0` cash cap** · `High` multi-sprint engineering effort · strictly deferred to `Q3–Q4 2027` |
+| **Recommended Option** | **Option 3 — Time-Boxed Internal Accelerator First (`Q3–Q4 2027` Track B Graduation)** |
 
-2. Problem Definition & Business Need
+**Recommendation:** Keep `OP-ITG-019` **`PARKED_IN_INVENTORY`** during Q1–Q2 2027. Do **not** authorize multi-sprint database engineering until Wave 1 client pilots (`OP-OPS-001 → OP-CX-001`, `OP-FIN-009`) generate commercial traction and free capacity.
 
-Enterprises face significant inefficiencies and compliance risks in generating, managing, and maintaining project documentation, business analysis artifacts, and data governance records. Current manual processes are time-intensive, error-prone, and result in inconsistent outputs that often fail to meet evolving regulatory and industry standards (e.g., PMBOK, BABOK, DMBOK, GDPR, SOX, PCI DSS). For example, a typical Fortune 500 project team may spend over 1,000 hours annually on documentation tasks, with an estimated 20% of this time lost to rework and compliance remediation. The proliferation of disconnected tools further complicates collaboration and governance. There is an urgent need for a unified, automated, and compliant documentation framework to drive operational efficiency, ensure audit-readiness, and reduce both direct and opportunity costs.
+---
 
-─────────────────────────────────────────────────────────
+## 2. Business Need & Cost of Inaction
 
-3. Proposed Solution
+Without persistent DB storage and project reimplementation, `mdresch/adpa` remains a file-based PoC whose outputs, lineages, and ontologies cannot scale cleanly across recurring MIP (`OP-ITG-018`) or Context Governance (`OP-ITG-014`) engagements. At the same time, premature platform building in Q1–Q2 2027 carries a severe opportunity cost: every engineering hour spent refactoring ADPA before client sales steals from revenue-generating Tier A pilots.
 
-ADPA offers a modular, AI-powered automation framework that delivers end-to-end document generation, management, and integration for enterprise teams. Built with a secure, scalable, and standards-compliant architecture, ADPA provides both CLI and REST API interfaces for generating project charters, business analysis documents, data governance records, and more, all aligned to industry frameworks (BABOK v3, PMBOK 7th Edition, DMBOK 2.0). The platform features multi-provider AI integration (OpenAI, Google AI, GitHub Copilot, Ollama), intelligent context management, automated workflows, and direct publishing to SharePoint, Confluence, and Adobe services. This dramatically reduces manual effort, improves consistency and accuracy, and allows organizations to maintain full compliance with financial, security, and industry regulations. The solution is designed for rapid deployment, high scalability, and seamless integration with existing enterprise IT ecosystems.
+- **Source Modeling Caveat:** *Illustrative Pre-Pilot ADPA Source Modeling — Not Realized Client Actuals:* Legacy `.docx` sources (`ADPA - Project Charter.docx` and `ADPA Business Case.docx`) cite Fortune 500 assumptions (`1,000+` annual documentation hours, `20%` rework, `50%` cycle-time cut, `≥95%` extraction accuracy, `6–10` FTE build teams, and `$X–$Y` ROM enterprise budgets). These figures represent generic enterprise project-charter templates—**not** validated CBa Consult revenue, client actuals, or approved solo engineering budgets.
 
-─────────────────────────────────────────────────────────
+---
 
-4. Strategic Alignment
+## 3. Strategic Options Analysis (BABOK v3 Aligned)
 
-The ADPA initiative directly supports the organization's strategic objectives of operational excellence, regulatory compliance, and digital innovation. By automating documentation and analysis processes, ADPA improves internal efficiency, reduces cycle times, and mitigates the risk of costly compliance failures—aligned with the corporate goals of continuous improvement and risk management. The framework's integration with leading platforms, robust security features, and support for global standards ensures that the organization remains audit-ready and competitive in regulated industries. Furthermore, ADPA's extensibility and open architecture position the enterprise for future advancements in AI, analytics, and collaborative work, reinforcing our commitment to technology leadership and customer-centricity.
+| Criterion | Option 1: Premature Q1 SaaS Build *(Full Enterprise Scope)* | Option 2: Leave ADPA as Disconnected File PoC Permanently | Option 3: Deferred Track B Internal Accelerator (`Q3–Q4 2027`) *(Recommended)* |
+| --- | --- | --- | --- |
+| **Core Mechanism** | Build full multi-tenant enterprise SaaS + SharePoint/Confluence/Adobe connectors immediately | Never add DB persistence; run scripts ad hoc per engagement | Freeze build in Q1–Q2; graduate `mdresch/adpa` to Track B DB + 1–2 project slice in Q3–Q4 |
+| **Capital & Bandwidth Impact** | Violates `$0` cap & destroys `10–15 hrs/wk` pilot capacity | Zero build cost, but caps MIP/Context delivery efficiency later | **Protects Q1–Q2 cash & hours; bounded `$0`-infra Track B build later** |
+| **Commercial Alignment** | High risk of building features with no buyer | Slows repeat `OP-ITG-014` / `OP-ITG-018` margin compounding | **Matches real pilot bottlenecks before writing DB migrations** |
+| **Decision Verdict** | Rejected — premature engineering trap | Rejected — strands proven PoC IP | **Recommended** — disciplined Future 2027 sequence |
 
-─────────────────────────────────────────────────────────
+---
 
-5. Financial Analysis
+## 4. Commercial Packaging, $0 Working-Capital Model & Compounding Path
 
-Estimated Costs:
+Because `OP-ITG-019`'s external commercial SKU is **deliberately undefined (`TBD`)** at Stage 1b/3, value is modeled in two sequential horizons:
 
-One-Time Costs:
+1. **Horizon A — Internal Delivery Multiplier (`Q3–Q4 2027`):** Reimplement `1–2` core CBa workflows inside database-backed ADPA under `$0` or near-zero local/OSS hosting. Target payoff is faster artifact turnaround and auditable lineage for **`OP-ITG-014`**, **`OP-ITG-018` (MIP)**, **`OP-FIN-011`**, and **`OP-RSK-005`**.
+2. **Horizon B — Optional External Productization (`2028+`):** Only after Horizon A proves reliable on live CBa engagements, frame a dedicated Stage 2–3 commercial Business Case (licensed toolkit, managed appliance, or client SaaS).
 
-Internal integration and configuration: $50,000 (including setup, initial customization, and deployment across primary teams)
+---
 
-Training and change management: $15,000
+## 5. Risk Register & Compensating Controls
 
-Optional enterprise support/license fees: $10,000
+| Risk / Constraint | Business Impact | Compensating Control |
+| --- | --- | --- |
+| **Premature platform engineering in Q1–Q2 2027** | Starves Wave 1 revenue pilots under `10–15 hrs/wk` solo cap | Hard governance freeze (`PARKED_IN_INVENTORY`) until Wave 1 pilots close |
+| **Scope bloat from 29 legacy `.docx` enterprise specs** | Multi-year engineering backlog with no paying buyer | Bound Horizon A strictly to DB persistence + `1–2` internal project migrations |
+| **Governance sprawl inside `oppurtunities-2027`** | Clutters lightweight portfolio repo with ADRs and code specs | Enforce Track B graduation into `mdresch/adpa` (`sidpa-template`) when build starts |
 
-Total One-Time Costs: $75,000
+---
 
-Recurring Costs:
+## 6. Stage 4 (G4) Pre-Pilot Gate & Director Adjudication
 
-AI provider and cloud subscriptions: $2,500/month (OpenAI, Google AI, Adobe, Azure)
-
-Annual maintenance/support (internal/external): $10,000
-
-Total Recurring Annual Costs: $40,000
-
-Projected Benefits:
-
-Quantitative:
-
-Productivity gains: Estimated reduction of 60% in documentation workload, equivalent to 600 hours per project per year; annualized savings of $90,000 (assuming blended labor rate of $150/hour across 10 projects)
-
-Reduction in compliance-related rework: Estimated $30,000/year in avoided fines and remediation
-
-Enhanced project throughput: Enables support for 20% more projects with existing staff
-
-Qualitative:
-
-Improved morale and retention through reduced administrative burden
-
-Strengthened brand reputation as a technology leader
-
-Enhanced auditability and risk posture
-
-Return on Investment (ROI) Projection:
-
-Payback period: Less than 9 months based on conservative productivity and compliance savings
-
-ROI (3-year projection): Over 300%, assuming continued expansion of automation and integration across business units
-
-Key assumptions: Calculations based on deployment to multiple project teams, current documentation process baselines, and standard enterprise subscription rates.
-
-─────────────────────────────────────────────────────────
-
-6. Risk Assessment
-
-Risk Description
-
-Impact
-
-Mitigation Strategy
-
-Integration complexity with legacy systems
-
-Medium
-
-Conduct phased rollouts, allocate integration specialists, leverage ADPA’s modular APIs and connectors
-
-AI provider service interruptions or price volatility
-
-Medium
-
-Implement multi-provider failover, monitor usage, negotiate volume discounts
-
-User adoption resistance
-
-High
-
-Deliver targeted training, secure executive sponsorship, provide ongoing support
-
-Data security and regulatory compliance gaps
-
-High
-
-Leverage ADPA’s enterprise-grade security features, conduct regular audits, ensure ongoing alignment with regulations
-
-Scope creep and feature bloat
-
-Medium
-
-Enforce disciplined change management, prioritize roadmap deliverables, engage stakeholders in governance
-
-─────────────────────────────────────────────────────────
-
-7. Implementation Plan & Timeline
-
-Phase 1: Discovery & Planning – 2 Weeks
-
-Stakeholder alignment, requirements gathering, environment assessment
-
-Phase 2: Core Platform Deployment – 6 Weeks
-
-Install and configure ADPA, integrate with SharePoint, Confluence, and Adobe
-
-User training and pilot with 1-2 project teams
-
-Phase 3: Enterprise Rollout & Optimization – 4 Weeks
-
-Full deployment across remaining teams and business units
-
-Enable advanced analytics, finalize integrations, continuous feedback loop
-
-Phase 4: Advanced Automation & Analytics – 4 Weeks (optional, Q2 2025+)
-
-Enable real-time collaboration, workflow automation, and mobile support per roadmap
-
-Total estimated timeline: 12–16 weeks for full production rollout
-
-─────────────────────────────────────────────────────────
-
-8. Success Metrics & KPIs
-
-Reduce average documentation production time by 50% within 3 months post-launch
-
-Achieve a user adoption rate of 80% among target project and business teams within 6 months
-
-Eliminate documentation-related audit findings and compliance rework
-
-Deliver positive ROI within the first 12 months of implementation
-
-Increase project throughput by 20% without additional headcount
-
-Maintain 99.9% system uptime and zero major security incidents post go-live
-
-─────────────────────────────────────────────────────────
-
-9. Recommendation
-
-Based on the compelling operational, financial, and strategic advantages demonstrated by the ADPA project, it is highly recommended that the organization proceed with immediate funding and implementation. ADPA will rapidly transform documentation and compliance processes, deliver substantial cost savings, and position the enterprise as an innovator in AI-driven automation, ensuring long-term competitiveness and regulatory resiliency.
+| Gate Field | Status / Entry |
+| --- | --- |
+| **Decision Owner** | Menno Drescher (Director, CBa Consult) |
+| **Gate Status** | `PARKED` (`PARKED_IN_INVENTORY` — Future 2027 Development Backlog; Pre-Stage 2, commercial opportunity `TBD`, build frozen for Q1–Q2 2027) |
+| **Re-Activation Trigger** | Wave 1–2 pilot proof underway + Director decision to graduate `mdresch/adpa` to Track B (`sidpa-template`) in Q3–Q4 2027 with defined commercial role |
+| **Approval Date & Notes** | *—* |

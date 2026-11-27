@@ -41,10 +41,10 @@ linked_hypotheses:
 
 | Week | Focus | Deliverables |
 | --- | --- | --- |
-| **1** | Observe & map | Trace **3–5** recent closed-won deals (Quote → Contract → Handoff → Kickoff → First value → Invoice) |
+| **1** | Observe & map | Trace **3–5** recent closed-won deals (Quote → Contract → Handoff → Kickoff → First value → Invoice); lock **Week-1 baseline & `OP-X-004` Consent Tier** ([Capture Kit](../OP-X-004_Case_study_series_on_2027/Pilot-Case-Study-Capture-and-Anonymization-Kit.md)) |
 | **2** | Pinpoint friction | Rework loops, missing gates, Day 1–90 drop-offs documented |
 | **3** | Design & govern | 1-page **Quote-to-Delivery Handoff Playbook**, RACI, **90-Day Onboarding Checklist** (human checkpoints) |
-| **4** | Pilot & certify | Test on **1–2** incoming deals; **Pilot Scorecard** (Time-to-Value, billing readiness) |
+| **4** | Pilot & certify | Test on **1–2** incoming deals; **Pilot Scorecard** (Time-to-Value, billing readiness) + sanitized **6-Block Case Study #1 draft** (`5-day` client redaction review) |
 
 ---
 
@@ -63,6 +63,7 @@ linked_hypotheses:
 - [x] **Explicit out-of-scope boundaries** defined above.
 - [x] **Execution track:** **Track A** (Lightweight Advisory).
 - [x] **Hypothesis test plan active** — [Wave-1-Outreach-Evidence-Log.md](Wave-1-Outreach-Evidence-Log.md) for `HYP-2027-001`.
+- [ ] **Day-1 Baseline & Case-Study Consent Tier selected** (`Tier 1 / 2 / 3` paired with `OP-X-006` per [Pilot-Case-Study-Capture-and-Anonymization-Kit.md](../OP-X-004_Case_study_series_on_2027/Pilot-Case-Study-Capture-and-Anonymization-Kit.md)).
 - [ ] **Outreach complete or sponsor shortcut:** ≥15 conversations logged **or** **named Pilot #1** with signed SOW/LOI (bypasses outreach threshold if Director accepts).
 - [ ] **Director Sign-Off recorded below** before `Idea` → `Pilot` in inventory.
 

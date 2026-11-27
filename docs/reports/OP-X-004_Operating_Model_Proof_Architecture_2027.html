@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OP-X-004 | 2027 Operating-Model Proof Architecture &amp; GEO Brief — CBa Consult</title>
+<meta name="description" content="CBa Consult OP-X-004 Proof Architecture: Day-1 pilot baseline capture, 3-Tier audit-safe client anonymization (OP-X-006), 6-Block anti-selection-bias case standard, and live Class B engineering &amp; methodology provenance benchmarks.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CBa Consult">
+<meta property="og:title" content="OP-X-004 | 2027 Operating-Model Proof Architecture &amp; GEO Standard">
+<meta property="og:description" content="Audit-safe 3-Tier anonymization, Day-1 baseline lock, mandatory pitfall disclosure, and live Class B engineering &amp; methodology provenance.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "name": "CBa Consult 2027 Operating-Model Proof Architecture & GEO Standard (OP-X-004)",
+  "headline": "Verifiable Operational Proof Over Marketing Testimonials",
+  "datePublished": "2026-11-27",
+  "author": {
+    "@type": "Person",
+    "name": "Menno Drescher",
+    "jobTitle": "Director, CBa Consult"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CBa Consult"
+  },
+  "about": [
+    "Operating-Model Pilot Case Studies",
+    "Enterprise AI Agent Governance (OP-ITG-013)",
+    "Continuous Financial Close (OP-FIN-009)",
+    "Hyper-V Micro-Isolation JIT Runtime (OP-ITG-017)",
+    "Knowledge Intelligence & Context Governance (OP-ITG-014)"
+  ],
+  "description": "Defines the Two-Class Honest Evidence Separation (Class A Verified Client Pilots vs Class B Engineering & Methodology Provenance), 3-Tier Client Anonymization Protocol paired with OP-X-006 co-design credits, and 6-Block Anti-Selection-Bias Case Brief Schema."
+}
+</script>
+<style>
+@page { size: A4; margin: 9mm 11mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17243a;
+  font-size: 8.1pt;
+  line-height: 1.35;
+  margin: 0;
+  background: #ffffff;
+}
+h1, h2, h3, p { margin-top: 0; }
+.page {
+  width: 100%;
+  max-width: 188mm;
+  margin: 0 auto;
+  position: relative;
+  min-height: 274mm;
+  padding-bottom: 9mm;
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+.hero {
+  background: #10253f;
+  color: #ffffff;
+  padding: 13px 16px 12px;
+  border-radius: 5px;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  font-size: 7pt;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64d4c4;
+}
+.hero-meta {
+  color: #c4d1df;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+.hero h1 {
+  font-size: 16.5pt;
+  line-height: 1.13;
+  letter-spacing: -0.3px;
+  margin: 0 0 5px;
+  color: #ffffff;
+}
+.hero-sub {
+  font-size: 8.2pt;
+  line-height: 1.38;
+  color: #d8e4f0;
+  margin: 0;
+}
+.hero-sub strong { color: #ffffff; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin: 8px 0 9px;
+}
+.stat {
+  background: #eef5f7;
+  border-top: 2.5px solid #0c8b82;
+  padding: 6.5px 8px;
+}
+.stat b {
+  display: block;
+  font-size: 11.2pt;
+  color: #10253f;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+.stat span {
+  display: block;
+  font-size: 6.8pt;
+  color: #52647a;
+  line-height: 1.25;
+}
+.kicker {
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: 1.05px;
+  font-weight: bold;
+  color: #0c8b82;
+  margin: 8px 0 3px;
+}
+h2 {
+  font-size: 10.8pt;
+  color: #10253f;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-bottom: 7px;
+}
+.card {
+  background: #f5f8fa;
+  border: 1px solid #dae3e9;
+  border-radius: 4px;
+  padding: 7px 8.5px;
+}
+.card-teal {
+  background: #eef5f7;
+  border: 1px solid #b8d8d6;
+  border-left: 3px solid #0c8b82;
+}
+.card h3 {
+  font-size: 8.2pt;
+  color: #075d68;
+  margin: 0 0 3px;
+}
+.card p {
+  font-size: 7.4pt;
+  color: #40536b;
+  margin: 0;
+  line-height: 1.34;
+}
+.badge {
+  display: inline-block;
+  font-size: 6.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 1.5px 5px;
+  border-radius: 3px;
+  background: #10253f;
+  color: #64d4c4;
+  margin-bottom: 4px;
+}
+.badge-light {
+  background: #dff0ef;
+  color: #075d68;
+  border: 1px solid #b8d8d6;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 7px;
+  font-size: 7.4pt;
+}
+th {
+  background: #10253f;
+  color: #ffffff;
+  text-align: left;
+  padding: 5px 6.5px;
+  font-size: 7.1pt;
+  letter-spacing: 0.25px;
+}
+td {
+  padding: 4.8px 6.5px;
+  border-bottom: 1px solid #dae3e9;
+  vertical-align: top;
+  color: #2c3e54;
+}
+tr:nth-child(even) td { background: #f8fbfc; }
+.mono { font-family: "Courier New", monospace; font-weight: bold; color: #075d68; }
+ul.clean {
+  margin: 3px 0 0;
+  padding-left: 14px;
+}
+ul.clean li {
+  margin-bottom: 3px;
+  font-size: 7.4pt;
+  color: #2c3e54;
+  line-height: 1.33;
+}
+.cta {
+  background: #10253f;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.cta-title {
+  font-size: 8.3pt;
+  font-weight: bold;
+  color: #64d4c4;
+  margin-bottom: 2px;
+}
+.cta-text {
+  font-size: 7.4pt;
+  color: #e2ecf5;
+  margin: 0;
+}
+.cta-anchor {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 7.2pt;
+  color: #c4d1df;
+}
+.cta-anchor b {
+  display: block;
+  font-size: 10pt;
+  color: #ffffff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dae3e9;
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.8pt;
+  color: #64748b;
+}
+</style>
+</head>
+<body itemscope itemtype="https://schema.org/Report">
+
+<!-- PAGE 1: THESIS, TWO-CLASS HONESTY RULE, 3-TIER ANONYMIZATION & 6-BLOCK STANDARD -->
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <span>CBa Consult · Operating-Model Proof &amp; GEO Standard · OP-X-004</span>
+      <span class="hero-meta">Edition: 27 Nov 2026 · Paired with OP-X-006 Co-Design &amp; OP-X-008 GEO</span>
+    </div>
+    <h1 itemprop="name">Verifiable Operational Proof Over Marketing Testimonials</h1>
+    <p class="hero-sub" itemprop="description">
+      <strong>Built for sceptical CFOs, CIOs, CISOs, COOs &amp; AI discovery engines.</strong> CBa Consult replaces glossy vendor quotes with a <strong>Day-1 baseline lock</strong>, a <strong>3-Tier audit-safe client privacy protocol</strong>, mandatory disclosure of pilot pitfalls, and strict separation between live engineering provenance and client pilot metrics.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <b>2 Classes</b>
+      <span>Strict split: Client Pilot Proofs vs. Live Engineering Provenance</span>
+    </div>
+    <div class="stat">
+      <b>3 Privacy Tiers</b>
+      <span>Blind telemetry, sanitized archetype, or named peer reference</span>
+    </div>
+    <div class="stat">
+      <b>5-Day Veto</b>
+      <span>Guaranteed written client redaction review prior to release</span>
+    </div>
+    <div class="stat">
+      <b>10–15% Credit</b>
+      <span>OP-X-006 Co-Design pilot credit for Tier 2/3 baseline partners</span>
+    </div>
+  </div>
+
+  <div class="kicker">01. Two-Class Honest Evidence Architecture (Zero Synthetic Quotes)</div>
+  <div class="grid-2">
+    <div class="card card-teal">
+      <span class="badge">Class A · Client Pilots (Q1–Q3 2027 Rollout)</span>
+      <h3>Verified 2027 Client Pilot Case Briefs</h3>
+      <p><strong>Current published count: 0.</strong> CBa Consult refuses to invent composite or placeholder client ROI. Class A briefs unlock strictly as Wave 1–2 pilots close, recording Week-1 baseline telemetry, solo hours, and a client-signed 5-day redaction approval.</p>
+    </div>
+    <div class="card">
+      <span class="badge badge-light">Class B · Engineering &amp; Provenance (Live Today)</span>
+      <h3>Verifiable Code, Tests &amp; Heritage Benchmarks</h3>
+      <p><strong>Current live anchors: 3.</strong> Open contract test suites, bare-metal Type-1 hypervisor wake timings, pre-2027 close control heritage, and published 65-point diagnostic rubrics — transparently labeled so buyers inspect capability before committing.</p>
+    </div>
+  </div>
+
+  <div class="kicker">02. Day-1 Client Privacy &amp; 3-Tier Anonymization Guarantee (OP-X-004 × OP-X-006)</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20%;">Consent Tier (Locked in SOW)</th>
+        <th style="width:29%;">Permitted External Artifact</th>
+        <th style="width:28%;">10-Point De-Identification &amp; Audit Firewall</th>
+        <th style="width:23%;">OP-X-006 Co-Design Trade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Tier 1 — Blind Telemetry</strong></td>
+        <td>Industry &amp; headcount band plus anonymized KPI delta inside aggregate benchmark tables only.</td>
+        <td>Zero entity name, zero city/country, zero narrative context, zero executive quotes, zero vendor tenant IDs.</td>
+        <td>Standard fixed-scope pilot fee; minimum baseline measurement hygiene.</td>
+      </tr>
+      <tr>
+        <td><strong>Tier 2 — Sanitized Archetype Brief</strong> <em>(Recommended)</em></td>
+        <td>Full 2-page 6-Block Case Brief under neutral descriptor (e.g., <em>"EU Mid-Market B2B Firm, ~180 FTE"</em>) + role-attributed quote.</td>
+        <td>Revenue/FTE banded; dates converted to Quarter/Week; statutory auditor names removed; <strong>5-business-day written client veto</strong>.</td>
+        <td><strong>10–15% Early-Adopter Pilot Credit</strong> (or added executive readout workshop).</td>
+      </tr>
+      <tr>
+        <td><strong>Tier 3 — Named Peer Reference</strong></td>
+        <td>Named organization attribution, approved executive quote, plus up to <strong>2 × 15-min</strong> private peer calls/quarter.</td>
+        <td>Explicit written sign-off on exact copy and logo; private reference availability revocable with 30 days' notice.</td>
+        <td><strong>15% Co-Design Credit</strong> + priority access to updated 2027 templates.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kicker">03. The 6-Block Anti-Selection-Bias Case Standard (GEO &amp; Executive Ready)</div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>1. Context &amp; Trigger</h3>
+      <p>Exact 2027 operational, close, revenue-handoff, or compliance bottleneck triggering the sprint — never vague strategy framing.</p>
+    </div>
+    <div class="card">
+      <h3>2. Week-1 Verified Baseline</h3>
+      <p>Measured Day-1 reality locked before remediation (close days, clearing variance, rework loops, or unmanaged NHI count).</p>
+    </div>
+    <div class="card">
+      <h3>3. Conflict-Free Intervention</h3>
+      <p>Specific controls, guardrails, and human gates shipped inside existing ERP, CRM, or M365 tools at <strong>€0 software spend</strong>.</p>
+    </div>
+    <div class="card">
+      <h3>4. Verified Delta &amp; Effort</h3>
+      <p>Before vs. after comparison alongside actual hours invested, eliminating hidden multi-consultant implementation bloat.</p>
+    </div>
+    <div class="card card-teal">
+      <h3>5. Pitfalls &amp; Preconditions</h3>
+      <p>Mandatory disclosure of edge cases, what resisted change, and Day-1 client prerequisites required to repeat the outcome.</p>
+    </div>
+    <div class="card">
+      <h3>6. Reusable Playbook Path</h3>
+      <p>Identifies ≥70% transferable checklists/matrices and logical follow-on (e.g., OP-FIN-010 or OP-ITG-018 MIP retainer).</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Independent Pre-Assurance &amp; Operating-Model Proof Standard (OP-X-004)</span>
+    <span>Page 1 of 2 · Strict Zero-PII / Non-Audit Boundary</span>
+  </div>
+</div>
+
+<!-- PAGE 2: LIVE CLASS B ENGINEERING BENCHMARKS & CLASS A SPECIMEN SCHEMA -->
+<div class="page">
+  <div class="hero" style="padding: 10px 15px;">
+    <div class="hero-top">
+      <span>Class B Provenance Benchmarks &amp; Class A Specimen · OP-X-004</span>
+      <span class="hero-meta">Transparent Engineering &amp; Methodology Evidence (Honest Baseline: 27 Nov 2026)</span>
+    </div>
+    <h1 style="font-size: 14.5pt; margin-bottom: 3px;">Inspect Live Capability Today — Unlock Client Proof With Zero Friction</h1>
+    <p class="hero-sub">
+      Every benchmark below is verifiable from shipped CBa Consult engineering repositories, open diagnostic scorecards, or documented pre-2027 methodology heritage — never misrepresented as 2027 client ROI.
+    </p>
+  </div>
+
+  <div class="kicker">04. Live Class B Engineering &amp; Methodology Provenance Anchors</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:16%;">Reference ID</th>
+        <th style="width:24%;">Operating-Model Domain</th>
+        <th style="width:32%;">Verifiable Provenance &amp; Measured Baseline</th>
+        <th style="width:28%;">Precondition &amp; Pilot Unlock Path</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="mono">REF-ITG-017</span><br><small>Track B · Stage 18</small></td>
+        <td><strong>Hyper-V &lt;500ms JIT Micro-Isolation</strong><br><small><code>mdresch/mxc</code></small></td>
+        <td><strong>&lt;300ms warm wake</strong> vs. 14–45s legacy cold boots; <strong>0.0% idle CPU</strong>; sterile <code>.avhdx</code> differential reset; <strong>271/271</strong> contract tests + Win11 Lean Agent VM verified.</td>
+        <td>Requires Windows Hyper-V or Azure Nested/Standby host; Tier 1 client-silicon benchmark sprint (<code>OP-ITG-017</code>, 4–8 wks).</td>
+      </tr>
+      <tr>
+        <td><span class="mono">REF-FIN-009</span><br><small>Heritage · 10 Guardrails</small></td>
+        <td><strong>23rd → Post-3rd Continuous Close Bridge</strong><br><small><code>RGP 2007–08 → IFRS 18</code></small></td>
+        <td>Originates in live 23rd-payroll to post-3rd close practice; updated with <strong>10 deterministic guardrails</strong> (FIN-CC-01–10: Day-1 auto-reversals, 4-4-5 proration, IFRS 18 ¶117/¶78–83 tie-outs) at <strong>€0 license spend</strong>.</td>
+        <td>Requires documented payroll-to-GL cutoff rules &amp; one dry-run monthly close cycle (<code>OP-FIN-009</code>, 6–8 wks).</td>
+      </tr>
+      <tr>
+        <td><span class="mono">REF-ITG-013/14</span><br><small>Diagnostic IP · 65 Controls</small></td>
+        <td><strong>Agent &amp; Context Governance Stack</strong><br><small><code>ADPA · ECS · Entra ID</code></small></td>
+        <td><strong>40-control</strong> 8-pillar AI Agent Governance questionnaire + 12-field NHI register + <strong>25-control</strong> Knowledge &amp; RAG Readiness rubric calibrated to EU AI Act (Dec 2027), ISO 42001, DORA &amp; M365 Work IQ.</td>
+        <td>Client provides Copilot Studio / Entra / SharePoint scope metadata; interactive self-assessment benchmark is live today.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kicker">05. Class A Case Study #1 — Scheduled Capture Matrix (Populated Only After Pilot Execution)</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:19%;">Wave 1 / 2 Candidate</th>
+        <th style="width:24%;">Day-1 Baseline Locked (Week 1)</th>
+        <th style="width:25%;">Target Delta Verified at Readout</th>
+        <th style="width:17%;">Effort / Software</th>
+        <th style="width:15%;">Class A Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>OP-OPS-001 → CX-001</strong><br><small>Quote-to-Onboarding</small></td>
+        <td>Elapsed days Quote → Kickoff &amp; First Value across 3–5 traced deals; billing/handoff rework loop count.</td>
+        <td>≥3 leaks quantified &amp; resolved; measurable Time-to-Value / billing readiness improvement on live next deals.</td>
+        <td>3–5 wks · ≤35 hrs<br><strong>€0 new software</strong></td>
+        <td><span class="mono">Awaiting Pilot #1</span></td>
+      </tr>
+      <tr>
+        <td><strong>OP-FIN-009 / FIN-012</strong><br><small>Close &amp; Audit Readiness</small></td>
+        <td>Post-3rd close duration (business days), clearing/AJE variance (€), &amp; repeat prior-year ML findings count.</td>
+        <td>Dry-run close ≤2–3 business days post-3rd, €0.00 payroll clearing variance, ≥70% repeat findings closed.</td>
+        <td>6–8 wks · ≤80 hrs<br><strong>€0 new software</strong></td>
+        <td><span class="mono">Awaiting Pilot #1</span></td>
+      </tr>
+      <tr>
+        <td><strong>OP-ITG-013 / 014 / RSK-004</strong><br><small>Agents, Context &amp; AI Act</small></td>
+        <td>40-pt Agent Maturity score, unmanaged NHI/sponsor gaps, 25-pt Context score &amp; ISO/EU AI Act crosswalk %.</td>
+        <td>100% Tier-1 agent ownership + kill-switch guardrails, zero P0 M365 oversharing, exportable evidence pack.</td>
+        <td>2–10 wks · Fixed fee<br><strong>Pre-assurance</strong></td>
+        <td><span class="mono">Portal Ready</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kicker">06. Downstream Value Flywheel: How OP-X-004 Compounds Across 2027</div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Q1–Q2 · Co-Design Wedges</h3>
+      <p>Wave 1–2 clients lock Tier 2 anonymized consent at SOW kickoff in exchange for a <strong>10–15% OP-X-006 credit</strong> and zero readout friction.</p>
+    </div>
+    <div class="card">
+      <h3>Q3 · Enterprise &amp; MIP Lift</h3>
+      <p>Sanitized <strong>Case Study #1</strong> de-risks Q3–Q4 Tier A sales (<code>OP-FIN-010</code>, <code>OP-ITG-015/016</code>, <code>OP-STR-004/005</code>) &amp; <code>OP-ITG-018</code> MIP retainers.</p>
+    </div>
+    <div class="card">
+      <h3>Q3–Q4 · Channel &amp; GEO</h3>
+      <p><strong>3 verified proofs</strong> unlock <code>OP-X-011</code> partner kits (fractional CFOs, MSPs) plus <code>€500–€2,000</code> GEO compendium packs (<code>OP-X-008</code>).</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div>
+      <div class="cta-title">Explore an Early-Adopter Co-Design Pilot (OP-X-004 × OP-X-006)</div>
+      <p class="cta-text">Apply a 10–15% co-design pilot credit on Wave 1–2 engagements with guaranteed 5-business-day redaction control, zero PII/audit exposure, and Week-1 baseline telemetry.</p>
+    </div>
+    <div class="cta-anchor">
+      <span>Tier 2 / 3 Co-Design · Compendium</span>
+      <b>10–15% Credit · €500–€2k</b>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CBa Consult · Menno Drescher · OP-X-004 Proof Architecture &amp; GEO Brief</span>
+    <span>Page 2 of 2 · Strictly Grounded Evidence Policy</span>
+  </div>
+</div>
+
+</body>
+</html>

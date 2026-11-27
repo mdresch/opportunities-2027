@@ -496,7 +496,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
           {/* Zone 2: Concise single-line text nav links */}
           <nav
-            className="hidden md:flex items-center gap-6 text-sm font-medium text-[#40536b]"
+            className="hidden md:flex items-center gap-5 lg:gap-6 text-sm font-medium text-[#40536b]"
             aria-label="Client showcase navigation"
           >
             <button
@@ -512,6 +512,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
               className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
               How We Engage
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('proof')}
+              className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              Proof
             </button>
             <button
               type="button"
@@ -578,6 +585,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
               className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
             >
               How We Engage
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('proof')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Proof &amp; Benchmarks
             </button>
             <button
               type="button"
@@ -1177,12 +1191,275 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
               </div>
             </section>
 
-            {/* Section 03: Managed Intelligence Provider (MIP) */}
+            {/* Section 03: Proof Architecture & Engineering Benchmarks (OP-X-004 × OP-X-006) */}
+            <section id="proof" className="max-w-[1280px] mx-auto px-4 sm:px-6 pt-16 pb-4 space-y-8">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+                <div className="max-w-2xl">
+                  <div className="text-xs font-semibold text-[#075d68] mb-1.5">
+                    03. Proof Architecture &amp; Benchmarks
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
+                    Transparent engineering provenance now — audit-safe client proof from Day 1
+                  </h2>
+                  <p className="text-[15px] text-[#40536b] mt-2 leading-relaxed">
+                    We strictly separate inspectable engineering and methodology provenance from
+                    2027 client pilot results — zero fabricated quotes, zero selection-bias fluff,
+                    and mandatory client redaction control.
+                  </p>
+                </div>
+                {(() => {
+                  const proofReport = data.clientReports.find(
+                    (r) => r.slug === 'op-x-004-proof-architecture'
+                  );
+                  return proofReport ? (
+                    <button
+                      type="button"
+                      onClick={() => openReport(proofReport)}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#10253f] bg-white border border-[#dae3e9] hover:bg-[#eef5f7] rounded-md whitespace-nowrap shrink-0 cursor-pointer"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-[#075d68]" />
+                      Read Proof &amp; GEO Brief (A4 / PDF)
+                    </button>
+                  ) : null;
+                })()}
+              </div>
+
+              {/* Honest Evidence Baseline Notice */}
+              <div className="bg-[#eef5f7] border border-[#b8d8d6] border-l-4 border-l-[#0c8b82] rounded-md p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-[#075d68]">
+                    Two-Class Honest Evidence Standard (OP-X-004)
+                  </div>
+                  <p className="text-sm text-[#17243a] leading-relaxed max-w-3xl">
+                    <strong>Class B (Live Today):</strong> Inspectable runtime benchmarks, contract
+                    test suites, and 65-control diagnostic rubrics below.{' '}
+                    <strong>Class A (2027 Client Pilot Briefs · 0 Published):</strong> Populated
+                    strictly as Wave 1–2 engagements complete with Week-1 baseline telemetry,
+                    disclosed pitfalls, and client-approved redaction.
+                  </p>
+                </div>
+                <span className="font-mono text-xs font-semibold text-[#075d68] bg-white border border-[#b8d8d6] px-3 py-1.5 rounded whitespace-nowrap shrink-0">
+                  3 Live Benchmarks · 0 Synthetic Quotes
+                </span>
+              </div>
+
+              {/* 3 Live Engineering & Provenance Benchmark Cards */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <article className="bg-white border border-[#dae3e9] rounded-md p-6 flex flex-col justify-between gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2 text-xs">
+                      <span className="font-mono font-semibold text-[#075d68]">REF-ITG-017</span>
+                      <span className="px-2 py-0.5 rounded bg-[#eef5f7] text-[#075d68] font-medium">
+                        Engineering Provenance
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#10253f]">
+                      MXC Hyper-V &lt;300ms JIT Micro-Isolation
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2 pt-1">
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#10253f] tabular-nums">
+                          &lt;300ms
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">Warm wake vs 14–45s boot</div>
+                      </div>
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#0c8b82] tabular-nums">
+                          271 / 271
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">Contract tests &amp; 0.0% idle</div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-[#40536b] leading-relaxed">
+                      Built and verified in <code className="font-mono">mdresch/mxc</code> (Stage
+                      18) with sterile <code className="font-mono">.avhdx</code> differential
+                      resets and Win11 Lean Agent VM checks. Client silicon benchmark sprint scoped
+                      over 4–8 weeks.
+                    </p>
+                  </div>
+                  {(() => {
+                    const rep = data.clientReports.find(
+                      (r) => r.slug === 'op-itg-017-mxc-one-pager'
+                    );
+                    return rep ? (
+                      <button
+                        type="button"
+                        onClick={() => openReport(rep)}
+                        className="w-full py-2 px-3 text-xs font-medium text-[#075d68] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md text-center cursor-pointer"
+                      >
+                        Inspect MXC Technical Brief
+                      </button>
+                    ) : null;
+                  })()}
+                </article>
+
+                <article className="bg-white border border-[#dae3e9] rounded-md p-6 flex flex-col justify-between gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2 text-xs">
+                      <span className="font-mono font-semibold text-[#075d68]">REF-FIN-009</span>
+                      <span className="px-2 py-0.5 rounded bg-[#eef5f7] text-[#075d68] font-medium">
+                        Methodology Provenance
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#10253f]">
+                      23rd → Post-3rd Continuous Close Bridge
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2 pt-1">
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#10253f] tabular-nums">
+                          10 Controls
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">Accrual, 4-4-5 &amp; IFRS 18</div>
+                      </div>
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#0c8b82] tabular-nums">
+                          €0 Software
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">Existing ERP &amp; BI stack</div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-[#40536b] leading-relaxed">
+                      Originated in RGP (2007–2008) 23rd-payroll close practice and updated for
+                      2027 IFRS 18 ¶117 / ¶78–83 and SoD controls. Targets ≤2–3 business days
+                      post-3rd close on one live dry-run cycle.
+                    </p>
+                  </div>
+                  {(() => {
+                    const rep = data.clientReports.find(
+                      (r) => r.slug === 'op-fin-009-continuous-close-one-pager'
+                    );
+                    return rep ? (
+                      <button
+                        type="button"
+                        onClick={() => openReport(rep)}
+                        className="w-full py-2 px-3 text-xs font-medium text-[#075d68] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md text-center cursor-pointer"
+                      >
+                        Inspect Continuous Close Brief
+                      </button>
+                    ) : null;
+                  })()}
+                </article>
+
+                <article className="bg-white border border-[#dae3e9] rounded-md p-6 flex flex-col justify-between gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2 text-xs">
+                      <span className="font-mono font-semibold text-[#075d68]">
+                        REF-ITG-013/14
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-[#eef5f7] text-[#075d68] font-medium">
+                        Diagnostic IP Live
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#10253f]">
+                      65-Control Agent &amp; Context Governance Stack
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2 pt-1">
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#10253f] tabular-nums">
+                          40 + 25
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">Agent + Context controls</div>
+                      </div>
+                      <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-2.5">
+                        <div className="font-mono text-base font-bold text-[#0c8b82] tabular-nums">
+                          Dec 2027
+                        </div>
+                        <div className="text-[11px] text-[#52647a]">EU AI Act &amp; ISO 42001</div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-[#40536b] leading-relaxed">
+                      Operationalizes ADPA, ECS, and Microsoft Entra Agent ID / Work IQ readiness
+                      into a deterministic maturity baseline — inspectable right now via our live
+                      executive benchmark tool.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={onOpenAgentAssessment}
+                    className="w-full py-2 px-3 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md text-center cursor-pointer"
+                  >
+                    Launch 5-Min AI Benchmark
+                  </button>
+                </article>
+              </div>
+
+              {/* 3-Tier Privacy & Early-Adopter Co-Design Panel */}
+              <div className="bg-white border border-[#dae3e9] rounded-md p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div className="lg:col-span-8 space-y-3">
+                  <div className="text-xs font-semibold text-[#075d68]">
+                    Early-Adopter Co-Design Program (OP-X-004 × OP-X-006)
+                  </div>
+                  <h3 className="text-xl font-bold text-[#10253f]">
+                    Audit-safe Day-1 baseline capture with a 10–15% Co-Design pilot credit
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                    <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-3">
+                      <div className="text-xs font-bold text-[#10253f]">Tier 1 · Blind Telemetry</div>
+                      <p className="text-xs text-[#40536b] mt-1 leading-relaxed">
+                        Industry &amp; FTE band + verified KPI delta only. Zero narrative or brand
+                        exposure.
+                      </p>
+                    </div>
+                    <div className="bg-[#eef5f7] border border-[#b8d8d6] rounded p-3">
+                      <div className="text-xs font-bold text-[#075d68]">
+                        Tier 2 · Sanitized Archetype
+                      </div>
+                      <p className="text-xs text-[#40536b] mt-1 leading-relaxed">
+                        De-identified 6-Block brief + <strong>5-day redaction veto</strong> +{' '}
+                        <strong>10–15% pilot credit</strong>.
+                      </p>
+                    </div>
+                    <div className="bg-[#f5f8fa] border border-[#dae3e9] rounded p-3">
+                      <div className="text-xs font-bold text-[#10253f]">
+                        Tier 3 · Named Peer Call
+                      </div>
+                      <p className="text-xs text-[#40536b] mt-1 leading-relaxed">
+                        Written text sign-off + max 2 × 15-min peer calls/qtr +{' '}
+                        <strong>15% credit</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-4 flex flex-col gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleRequestScoping('Early-Adopter Co-Design Pilot (OP-X-006 / OP-X-004)')
+                    }
+                    className="w-full py-2.5 px-4 text-xs font-semibold text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md cursor-pointer"
+                  >
+                    Request Co-Design Pilot Credit
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      openBrief(
+                        {
+                          title: 'Operating-Model Pilot Case Study Series (OP-X-004)',
+                          subtitle: 'Proof & GEO Architecture · All Segments',
+                          serviceLabel: 'Early-Adopter Co-Design Pilot (OP-X-006 / OP-X-004)',
+                          duration: 'Day-1 Co-Design · Q3 Series',
+                          investmentRange: '10–15% Pilot Credit · €500–€2,000 Pack',
+                          onePagerPath:
+                            'opportunities/OP-X-004_Case_study_series_on_2027/One_Pager_OP-X-004_Case_Study_Series.md',
+                        },
+                        'op-x-004'
+                      )
+                    }
+                    className="w-full py-2 px-4 text-xs font-medium text-[#10253f] bg-white border border-[#dae3e9] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+                  >
+                    Read OP-X-004 Program One-Pager
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 04: Managed Intelligence Provider (MIP) */}
             <section id="mip" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div className="max-w-2xl">
                   <div className="text-xs font-semibold text-[#075d68] mb-1.5">
-                    03. Ongoing Retainer Model
+                    04. Ongoing Retainer Model
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
                     Managed Intelligence Provider (MIP) — Beyond MSP and MSSP
@@ -1300,13 +1577,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
               </div>
             </section>
 
-            {/* Section 04: Full Advisory Service Catalog */}
+            {/* Section 05: Full Advisory Service Catalog */}
             <section id="catalog" className="bg-white border-y border-[#dae3e9]">
               <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                   <div className="max-w-2xl">
                     <div className="text-xs font-semibold text-[#075d68] mb-1.5">
-                      04. Full Advisory Service Catalog
+                      05. Full Advisory Service Catalog
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
                       Capabilities across {data.practices.length} management consulting practices
@@ -1506,13 +1783,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
               </div>
             </section>
 
-            {/* Section 05: Scope an Assignment / Inquiry Form */}
+            {/* Section 06: Scope an Assignment / Inquiry Form */}
             <section id="inquire" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 <div className="lg:col-span-5 space-y-5">
                   <div>
                     <div className="text-xs font-semibold text-[#075d68] mb-1.5">
-                      05. Assignment Scoping
+                      06. Assignment Scoping
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
                       Schedule a 30-minute Executive Scoping Call

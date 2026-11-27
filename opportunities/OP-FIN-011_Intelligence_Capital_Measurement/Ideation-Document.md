@@ -1,474 +1,69 @@
-# Ideation Document — `OP-FIN-011`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-FIN-011"
+execution_track: "Tier D — Thought Leadership (1. Finance / Strategic Asset 1 & 2)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "F:/OneDrive - CBA/SIDPA - Intelligence Economy and AI Auction and Markets.docx & ADPA Patent and IP Opportunities NL.docx"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `ADPA Patent and IP Opportunities NL.docx`
+# Ideation Document — `OP-FIN-011`: Intelligence Capital Measurement Framework
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-🏆 ADPA-octrooien en IP-mogelijkheden
+> [!NOTE]
+> **Governance SSOT:** This Stage 1b framing operates under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
+> Sibling workspace files: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
+> **Track Posture:** Tier D Thought Leadership & executive diagnostic option—not a standalone 2027 volume build.
 
-Samenvatting
+## 1. Problem Context & 2027 Market Trigger
 
-ADPA's driftdetectie- en basislijnbeheersysteem vertegenwoordigt echte innovatie zonder voorafgaande stand van de techniek in de projectmanagementindustrie. Dit document schetst octrooieerbare uitvindingen en hun commerciële waarde.
+As enterprise AI spending shifts from experimental pilots to multi-million-euro infrastructure and agent deployments in 2027, CFOs, Chief AI Officers (CAIOs), and corporate boards face a structural blind spot: financial statements track GPU, cloud, and API token costs as operating expenses, yet organizations have no rigorous way to inventory, cost, or value the productive intelligence assets they accumulate.
 
-📜 Octrooimogelijkheid 1: AI-aangedreven Project Baseline extractiesysteem
+Proprietary knowledge bases, SOPs, domain ontologies, deployed AI agents, training datasets, and reusable consulting IP sit scattered across SharePoint, Git, SaaS tools, and vendor contracts with unclear ownership and unmeasured replacement value. `OP-FIN-011` bridges CBa Consult's Strategic Asset 1 (*Financial Truth*) and Strategic Asset 2 (*Organizational Intelligence*):
 
-Innovatie Beschrijving
+- **Core IP Anchor:** Grounded directly in CBa Consult's existing SIDPA manuscript (`SIDPA - Intelligence Economy and AI Auction and Markets.docx`, Parts I–II, Ch. 3–7; 13 chapters total) paired with ADPA and ECS governance IP.
+- **Board-Level Trigger:** Moves executive conversations past raw compute/token spend toward M&A readiness, FinOps accountability, and Tier A advisory door-opening (`OP-ITG-014`, `OP-ITG-013`, `OP-FIN-009`/`010`, `OP-STR-004`).
 
-Een systeem en methode voor het automatisch extraheren van gestructureerde projectbasiscomponenten uit ongestructureerde projectdocumentatie met behulp van kunstmatige intelligentie, zonder hallucinatiegaranties en volledige traceerbaarheid van de bron.
+## 2. Solution Architecture & Delivery Workflow
 
-Nieuwe claims
+Rather than building software infrastructure, `OP-FIN-011` packages existing SIDPA and ADPA methodology into an executive monograph and lightweight CFO/CAIO diagnostic delivered over 6–8 weeks:
 
-Geautomatiseerde extractie van entiteiten
+1. **Intelligence Asset Inventory (Weeks 1–2):** Catalog core organizational intelligence categories—knowledge repositories, SOPs, deployed AI agents, domain ontologies, training datasets, and reusable IP—identifying storage location, business owner, and lineage.
+2. **IPC & Benchmark Triad Scoring (Weeks 3–4):** Apply SIDPA's **IPC** (Intelligence Production Capacity) unit and the **SCIP / SII / SSI Benchmark Triad**—measuring **SCIP** (input creation/maintenance cost), **SII** (operational output utility and reuse value), and **SSI** (sovereign trust, auditability, and zero-hallucination provenance).
+3. **ADPA Provenance & Drift Calibration (Week 5):** Reference ADPA's 14-entity zero-hallucination baseline extraction and multidimensional confidence model (extraction confidence, completeness, consistency, clarity) to score how reliably existing documentation converts into governed operational baselines.
+4. **Board Monograph & Tier A Roadmap (Weeks 6–8):** Deliver a 10–15 page executive whitepaper (*"Measuring Enterprise Intelligence Capital: IPC & the SCIP/SII/SSI Triad"*) and a 1-page **Intelligence Asset Inventory & Replacement-Cost Scorecard** feeding directly into Tier A retainers.
 
-Extraheer 14 verschillende entiteitstypen uit ongestructureerde documenten
+**Primary Packaged Deliverables:**
+- **Executive Whitepaper (10–15 pages):** Distills SIDPA Parts I–II (`IPC` & `SCIP/SII/SSI`) for CFOs, CAIOs, and boards.
+- **1-Page Replacement-Cost Scorecard:** Structured board worksheet inventorying knowledge, SOP, agent, and ontology assets.
+- **Tier A Conversion Bridge:** Diagnostic findings map directly to `OP-ITG-014` (Knowledge Governance) and `OP-ITG-013` (Agent FinOps).
 
-Belanghebbenden, vereisten, risico's, mijlpalen, deliverables, beperkingen, activiteiten, fasen, middelen, technologieën, succescriteria, kwaliteitsnormen, best practices, scope-items
+## 3. Market Comparables & CBa Consult Differentiation
 
-Ontdubbeling en validatie van meerdere documenten
+| Comparable Approach | Typical Market Offering | Limitations for CFOs & Boards | CBa Consult Differentiation (`OP-FIN-011`) |
+| :--- | :--- | :--- | :--- |
+| Cloud / AI FinOps Tools | Token, GPU, and API spend dashboards | Track raw compute consumption only; zero measure of reusable knowledge or IP value | Measures productive Intelligence Capital (`IPC`) and reuse utility (`SII`), not just token burn |
+| Big Four AI Valuation Decks | High-level strategic narratives at €100k+ fees | Generic maturity models without asset-level provenance or replacement-cost scoring | Built on proprietary 13-chapter SIDPA IP + ADPA/ECS provenance architecture at lean advisory scope |
+| Traditional KM Audits | Intranet file counts and search-relevance reviews | Ignore AI agent readiness, sovereign trust (`SSI`), and balance-sheet/M&A framing | Unifies knowledge, SOPs, agents, and ontologies under one CFO-legible triad |
 
-Betrouwbaarheidsscore per entiteit
+**Positioning Takeaway:** Existing FinOps dashboards count AI cost; `OP-FIN-011` measures durable AI and organizational intelligence value without requiring platform capex.
 
-Zero-Hallucinatie Garantie
+## 4. Internal IP & Source Provenance Crosswalk
 
-Elke geëxtraheerde entiteit die is gekoppeld aan de locatie van het brondocument
+| Source / Asset | Role in `OP-FIN-011` | Provenance & Scope | Integration Notes |
+| :--- | :--- | :--- | :--- |
+| `SIDPA - Intelligence Economy and AI Auction and Markets.docx` | Core theoretical & scoring spine | `F:/OneDrive - CBA/` (13 chapters, 2,930 paragraphs; Parts I–II, Ch. 3–7; Ch. 11) | Supplies `IPC` unit and `SCIP / SII / SSI` Benchmark Triad; Ch. 11 informs sovereign trust |
+| `ADPA Patent and IP Opportunities NL.docx` & `.docx` (EN) | Provenance & baseline extraction IP | Listed in [Source-Documents.md](Source-Documents.md) (`ADPA - Projects Lists`) | Supplies 14-entity zero-hallucination extraction, drift detection, and 4 confidence scores |
+| `OP-ITG-014` & `OP-ITG-013` | Tier A operational execution paths | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Converts diagnostic findings into Knowledge Governance (ECS) and Agent FinOps retainers |
+| `OP-X-008` & `OP-MKT-006` | Distribution & authority channels | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Packages monograph via Digital Knowledge Merchant and LinkedIn executive series |
 
-Database opslag van de herkomst van de extractie
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-Inzoommogelijkheid om exacte brontekst weer te geven
+- **No 2027 Measurement Authority or Auction Platform Build:** Per [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and [Ideation-Spark.md](Ideation-Spark.md), SIDPA is used strictly as a **Tier D** executive scoring/thought-leadership lens in 2027—CBa Consult will not build a standalone SIDPA Measurement Authority or AI auction clearinghouse.
+- **Not Statutory Accounting / IFRS Valuation Advice:** Replacement-cost and reuse-value scorecards support internal capital allocation and M&A diligence, not certified statutory financial audits or tax valuations.
+- **No Patent Filing Commitments:** ADPA patent opportunity notes inform capability framing only; formal patent prosecution requires external IP counsel and separate funding.
 
-Transparantie van de berekeningsmethode voor alle statistieken
-
-Multidimensionale vertrouwensscores
-
-Extractievertrouwen (AI-zekerheid van extractienauwkeurigheid)
-
-Volledigheidsscore (dekking van basislijncomponenten)
-
-Consistentiescore (overeenkomst tussen documenten)
-
-Clarity Score (toegankelijkheid van informatie)
-
-Onmiddellijke basislijn maken
-
-Genereer PMBOK-conforme basislijn in 5-10 seconden
-
-844 verwerkte entiteiten versus uren handmatig werk
-
-Geautomatiseerde kwaliteitsvalidatie vóór goedkeuring
-
-Presentatieformaat klaar voor leidinggevenden
-
-Resultaat van het onderzoek naar de stand van de techniek
-
-❌ GEEN GEVONDEN
-
-Waarom het nieuw is:
-
-Traditionele PO-tools: Handmatig basislijnlijn ontwerpen (uren/dagen)
-
-Microsoft Project: Geen AI, geen entiteitsextractie, handmatige basislijn
-
-Jira/Asana: Geen basisconcept, geen AI-analyse
-
-Smartsheet: alleen sjablonen, geen geautomatiseerde extractie
-
-Monday.com: Handmatige gegevensinvoer, geen AI-verwerking
-
-Commerciële waarde:
-
-Verkort de aanmaaktijd van de basislijn: 8 uur → 5 seconden (besparing van 99,98%)
-
-Elimineert menselijke fouten in basislijndocumentatie
-
-Maakt continue basislijnupdates mogelijk naarmate projecten zich ontwikkelen
-
-Creëert audittrail voor naleving (ISO 9001, PMI-normen)
-
-📜 Octrooimogelijkheid 2: Geautomatiseerd Project Drift Detectiesysteem
-
-Innovatie Beschrijving
-
-Een systeem en methode voor real-time detectie van projectafwijkingen van goedgekeurde basislijnen door middel van vergelijking op entiteitsniveau, met geautomatiseerde ernstbeoordeling, impactanalyse en intelligente actieroutering.
-
-Nieuwe claims
-
-Driftdetectie op entiteitsniveau
-
-Vergelijk de huidige documentstatus met de basislijn in 14 entiteitstypen
-
-Detecteer toevoegingen, verwijderingen en wijzigingen op granulair niveau
-
-Identificeer drift, zelfs in nieuw toegevoegde documenten die niet in de basislijn staan
-
-Genereer specifieke driftbeschrijvingen met impactverklaringen
-
-Geautomatiseerde classificatie van ernst
-
-Kritiek: Blokkeert het succes van het project, onmiddellijke escalatie
-
-Hoog: Aanzienlijke impact, executive review vereist
-
-Gemiddeld: Matige impact, CCB-goedkeuring vereist
-
-Laag: Kleine impact, volgen en informeren
-
-Detectie van drift van meerdere typen
-
-Scope Drift (18 gedetecteerd in testcase)
-
-Afwijking van succescriteria (11 gedetecteerd)
-
-Resource Drift (10 gedetecteerd)
-
-Tijdlijn Drift (9 gedetecteerd)
-
-Kostenafwijking (7 gedetecteerd)
-
-Technische drift (4 gedetecteerd)
-
-Realtime verwerking
-
-Driftdetectie geactiveerd bij het opslaan/uploaden van documenten
-
-Kwaliteitsaudit → Drift check pipeline (geautomatiseerd)
-
-Driftanalyse van minder dan een seconde voor incrementele veranderingen
-
-Validatie van testcases
-
-Invoer: 3 strategische visiedocumenten (totaal ~58KB tekst)Uitvoer: 59 specifieke, bruikbare driftdetectiesTijd: <10 secondenNauwkeurigheid: 100% (alle drifts waren legitieme wijzigingen)
-
-Resultaat van het onderzoek naar de stand van de techniek
-
-❌ GEEN GEVONDEN
-
-Waarom het nieuw is:
-
-Jira/Asana: Verandering bijhouden maar geen vergelijking van de basislijn
-
-Microsoft Project: Vergelijking van de basislijn, maar alleen handmatig, geen AI
-
-Smartsheet: Versiebeheer maar geen driftdetectie
-
-Planview: Portfoliobeheer maar geen geautomatiseerde driftanalyse
-
-Traditionele PM: Handmatige variantieanalyse (werkuren)
-
-Commerciële waarde:
-
-Detecteert drift in real-time versus weken/maanden vertraging in traditionele PM
-
-59 specifieke wijzigingen ten opzichte van 3 documenten (handmatig onmogelijk)
-
-Voorkomt scope creep voordat het een crisis wordt
-
-Geautomatiseerde voorbereiding van wijzigingscontroleborden
-
-📜 Octrooimogelijkheid 3: Documentatiesysteem voor zelfherstellende projecten
-
-Innovatie Beschrijving
-
-Een closed-loop systeem waarbij documentbewerkingen automatisch leiden tot kwaliteitsaudits, herdetectie van drift en automatische markering van driftresolutie, waardoor een zelfherstellend ecosysteem voor projectdocumentatie ontstaat.
-
-Nieuwe claims
-
-Geautomatiseerde pijplijn voor kwaliteitsaudits
-
-Documenten opslaan → trigger voor kwaliteitsaudit
-
-AI valideert de volledigheid, consistentie en naleving van documenten
-
-Versieverhoging op basis van de grootte van de verandering
-
-Cijfer toewijzing (A/B/C/D/F)
-
-Drift herdetectie
-
-Voltooiing van de kwaliteitsaudit → trigger voor driftcontrole
-
-Vergelijk het bijgewerkte document met de basislijn
-
-Vaststellen of de vorige afwijking is opgelost
-
-Driftstatus automatisch bijwerken
-
-Zelfgenezende resolutie
-
-Als drift niet meer bestaat: markeren als "opgelost"
-
-Als er een nieuwe drift verschijnt: maak een nieuw driftrecord
-
-Controlespoor van het oplossingspad bijhouden
-
-Geen handmatige tussenkomst vereist
-
-Closed-Loop Feedback
-
-Documenten ↔ Baseline ↔ Drift Detectie ↔ Kwaliteitsaudit
-
-Cyclus van continue verbetering
-
-Geautomatiseerde opvolging van de naleving
-
-Voorbeeld van een workflow (uit uw test):
-
-De gebruiker uploadt Strategic Doc 1 → Quality Audit (Grade B) → 
-
-Driftdetectie (Drift met gemiddeld bereik) → gebruiker bewerkt het document om → uit te lijnen 
-
-Kwaliteitsaudit v2 (Graad A) → Drift Re-Check (geen drift) → 
-
-Automatische markering opgelost ✅
-
-Resultaat van het onderzoek naar de stand van de techniek
-
-❌ GEEN GEVONDEN
-
-Waarom het nieuw is:
-
-Geen enkele PM-tool heeft geautomatiseerde kwaliteitsaudits
-
-Geen enkele tool koppelt kwaliteitsaudits aan driftdetectie
-
-Geen enkele tool lost drift automatisch op bij documentcorrectie
-
-Er bestaat geen closed-loop feedbacksysteem in PM-software
-
-Commerciële waarde:
-
-Zelfcorrigerende projectdocumentatie
-
-Vermindert de administratieve last van PM met 70%+
-
-Zorgt voor levende documentatie die actueel blijft
-
-Automatisering van compliance voor gereguleerde industrieën
-
-📜 Octrooimogelijkheid 4: Ondersteuning bij uitvoerende besluitvorming met Drill-Down Traceerbaarheid
-
-Innovatie Beschrijving
-
-Een dashboardsysteem voor leidinggevenden dat AI-geëxtraheerde projectstatistieken presenteert met volledige inzoommogelijkheid om documenten te vinden, waardoor besluitvorming zonder hallucinaties wordt gegarandeerd.
-
-Nieuwe claims
-
-Elke statistiek is klikbaar
-
-Budget → Bekijk alle kostenentiteiten en brondocumenten
-
-Tijdlijn → Bekijk alle geëxtraheerde mijlpalen
-
-Teamgrootte → Bekijk alle geïdentificeerde belanghebbenden
-
-Elke drill-down toont: entiteiten, bronnen, betrouwbaarheidsscores
-
-Zero-Hallucinatie Garantie
-
-Geen door AI gegenereerde aannames
-
-Elk nummer herleidbaar naar brondocument
-
-Extractiemetagegevens opgeslagen en toegankelijk
-
-Betrouwbaarheidspercentage per metriek
-
-Presentatie van leidinggevende kwaliteit
-
-Goedkeuringsinterface van één pagina
-
-Visuele vertrouwensindicatoren (kleurgecodeerde gezondheidsscores)
-
-Geautomatiseerde checklist voor voorafgaande goedkeuring
-
-PDF-rapporten downloaden
-
-Intelligente categorisatie
-
-Drifts automatisch gecategoriseerd in actietypen
-
-Wijzigingsverzoeken / Business cases / IE-kansen / Afwijzingen
-
-Bulkbewerkingen (maak 42 CR's in één keer)
-
-Aanbevolen acties per drift
-
-Resultaat van het onderzoek naar de stand van de techniek
-
-❌ GEEN GEVONDEN
-
-Waarom het nieuw is:
-
-Tableau/PowerBI: Dashboards maar geen traceerbaarheid van bronnen
-
-MS Project: Rapporten, maar geen drill-down naar documentbronnen
-
-Jira: Metriek maar geen basislijnvergelijking of AI-extractie
-
-Geen enkele PM-tool biedt "klik op een nummer om brondocumenten te zien"
-
-Commerciële waarde:
-
-Leidinggevenden kunnen basislijnen goedkeuren in minuten versus uren
-
-100% vertrouwen in de nauwkeurigheid van de gegevens
-
-Elimineert het probleem van "vertrouw op de PM"
-
-Audittrail voor naleving en juridische verdediging
-
-💰 Commerciële en strategische waarde
-
-Differentiatie van de markt
-
-ADPA is de ENIGE PM-tool die het volgende biedt:
-
-Geautomatiseerde extractie van entiteiten
-
-Realtime detectie van drift
-
-Documentatie over zelfgenezing
-
-Dashboards voor leidinggevenden zonder hallucinatie
-
-Doelmarkten
-
-Enterprise PM ($ 2,5 miljard markt) - Gereguleerde industrieën hebben audittrails nodig
-
-Overheidscontracten ($ 600 miljard markt) - Naleving is verplicht
-
-Adviesbureaus ($ 250 miljard markt) - Schaal PM over 100+ projecten
-
-PMO Software ($ 1,2 miljard markt) - Driftanalyse op portfolioniveau
-
-Concurrerende slotgracht
-
-Technisch: extractie van AI-entiteiten is moeilijk te repliceren
-
-Gegevens: Eigen training over PM-documenten
-
-Netwerkeffect: Meer projecten = betere AI-modellen
-
-Integratie: Confluence, SharePoint, GitHub-synchronisaties
-
-Omzetpotentieel
-
-SaaS-prijzen: $ 50-200/gebruiker/maand (versus $ 10-30 voor traditionele tools)
-
-Onderneming: $50K-500K/jaar (100-1000 gebruikers)
-
-Motivering: Bespaar 70% op PM administratieve tijd = ROI in weken
-
-🚀 Volgende stappen voor IP-bescherming
-
-Onmiddellijk (maand 1-2)
-
-✅ Documenteer alle innovaties (dit bestand)
-
-⏳ Dien voorlopige octrooiaanvragen in (3 octrooien hierboven)
-
-⏳ Prior art search uitvoeren met octrooigemachtigde
-
-⏳ Gedetailleerde technische specificaties opstellen
-
-Korte termijn (maand 3-6)
-
-Omzetten van voorlopige naar volledige gebruiksoctrooien
-
-Dien internationale octrooien in (PCT-aanvraag)
-
-Overweeg de bescherming van bedrijfsgeheimen voor AI-modellen
-
-Handelsmerk "ADPA" en "Zero-Hallucination Guarantee"
-
-Lange termijn (jaar 1-2)
-
-Bouw een octrooiportefeuille op (10+ octrooien)
-
-Technologie in licentie geven aan concurrenten
-
-Patent defensief publiceren voor variaties
-
-Gebruik patenten als hefboom voor fondsenwerving
-
-🎯 VC Pitch Hoogtepunt
-
-"ADPA heeft 3 innovaties waarvoor patent is aangevraagd, waardoor het de enige PM-tool is die in staat is om:
-
-Detectie van 59 specifieke projectwijzigingen uit 3 documenten in 10 seconden
-
-Zero-hallucinatie garantie - elke metriek herleidbaar tot de bron
-
-Zelfherstellende documentatie die drift automatisch oplost
-
-Traditionele tools vereisen uren handmatig werk om binnen enkele seconden te bereiken wat ADPA doet.Dit is onze technische slotgracht en 10x waardepropositie."
-
-📊 Validatiegegevens (van uw test)
-
-Metriek
-
-Traditionele PM
-
-ADVERTENTIE
-
-Verbetering
-
-Baseline creatie
-
-8 uur
-
-10 seconden
-
-2.880x sneller
-
-Drift detectie
-
-4-6 uur
-
-<10 seconden
-
-2.160x sneller
-
-Extractie van entiteiten
-
-Handleiding (20+ uur)
-
-Geautomatiseerd (2 min)
-
-600x sneller
-
-Traceerbaarheid van bronnen
-
-Geen
-
-100%
-
-∞ verbetering
-
-Nauwkeurigheid
-
-~70% (menselijke fout)
-
-95%+ (AI gevalideerd)
-
-+25% nauwkeurigheid
-
-✅ Conclusie
-
-JA, DIT IS EEN OCTROOIWAARDIGE IP!
-
-De combinatie van:
-
-Geautomatiseerde extractie van entiteiten
-
-Realtime detectie van drift
-
-Zelfherstellende workflows
-
-Dashboards voor leidinggevenden met gedetailleerde traceerbaarheid
-
-... staat voor echte innovatie met meetbare commerciële waarde en nul stand van de techniek.
-
-Aanbeveling: Dien onmiddellijk voorlopige octrooien in om de prioriteitsdatum vast te stellen. Deze innovatie heeft een first-mover-voordeel en een aanzienlijk inkomstenpotentieel.
-
-Gebouwd door: Menno DrescherDatum: 6 november 2025Status: Klaar voor voorlopige octrooiaanvraagGeschatte waarde octrooiportfolio: $ 5-15 miljoen (3-4 patenten met sterke claims)
+**Stage 1b Gate Decision:** **APPROVED FOR STAGE 3 PACKAGING REVIEW (TIER D).** Ready for Director adjudication on Q3–Q4 2027 whitepaper extraction and scorecard release sequencing.

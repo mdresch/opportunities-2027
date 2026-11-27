@@ -1,6 +1,6 @@
 # Ideation Spark — `OP-CX-001`: Client onboarding & retention friction audit
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
+**Status:** 🔥 Stage 1b–3 Ready — Workspace reviewed & amended ([Ideation-Document.md](Ideation-Document.md) & [Business-Case.md](Business-Case.md)); bundled under [OP-OPS-001 Pilot Charter](../OP-OPS-001_Quote_to_delivery_handoff_map/Pilot-Charter.md) (`HYP-2027-001` testing; inventory `Status` remains **`Idea`** until `G4` sign-off)
 **Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
 **Functional Area:** 13. Customer Experience · **Signature Toolkit:** Customer Experience Strategy & Design Thinking
 **Category:** Audit / Diagnostic · **Size:** Small & Mid
@@ -37,8 +37,8 @@ Expands inventory to cover `Customer Experience` functional area.
 ## Next Steps (Tier 2 → Pilot Gate)
 
 - [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [x] Assigned ADPA sources extracted to `Ideation-Document.md` / `Business-Case.md` (Tier 2 draft — Director review still required).
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+- [x] `Business-Case.md` and `Ideation-Document.md` reviewed & rewritten into clean Stage 1b / Stage 3 Track A diagnostics (with UniCorn COAS SaaS build specs cleanly isolated in `OP-CX-002`).
+- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions / bundled [OP-OPS-001 Pilot Charter](../OP-OPS-001_Quote_to_delivery_handoff_map/Pilot-Charter.md)) before promoting status from `Idea` → `Pilot`.
 ## Business Development sources (local)
 
 See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).

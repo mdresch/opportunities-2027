@@ -1,47 +1,69 @@
-# Ideation Document — `OP-RSK-007`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-RSK-007"
+execution_track: "Active Backlog — High-Fit 2026-2027 Wedge (12. Risk Management / Strategic Asset 4)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "docs/research/Regulatory-Findings-and-Service-Gap-Analysis-2026-2027.md (GAP 2)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-RSK-007`: Harmonized Multi-Regime Incident Triage & Regulatory Reporting Playbook
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> [!NOTE]
+> **Governance SSOT:** This Stage 1b framing operates under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
+> Sibling workspace files: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
+> **Execution Role:** High-fit 2026–2027 regulatory gap wedge feeding `OP-RSK-006`, `OP-RSK-004`, and `OP-ITG-018`.
 
-**Inventory description:** Unify fragmented incident-response procedures into a single intake-to-reporting triage workflow and tabletop-tested escalation playbook covering clashing statutory clocks (**DORA 4h**, **NIS2 24h**, **GDPR 72h**, **EU AI Act**, **SEC Reg S-P 30d**).
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Regulated enterprises across Europe and North America face an acute operational failure mode during live cyber, cloud, and AI incidents: **clashing statutory notification clocks** managed by siloed teams. A single vendor compromise or AI data leak can simultaneously trigger **DORA** (4-hour initial major incident notification), **NIS2** (24-hour early warning), **GDPR** (72-hour DPA breach notification), **EU AI Act** (serious AI incident reporting), and **SEC amended Reg S-P** (30-day customer notification).
 
-# Ideation Spark — `OP-RSK-007`: Harmonized Multi-Regime Incident Triage & Regulatory Reporting Playbook
+As documented in `docs/research/Regulatory-Findings-and-Service-Gap-Analysis-2026-2027.md` (GAP 2), 2026–2027 supervisory inspections repeatedly penalize organizations whose Security, Privacy, Risk, and Legal teams maintain separate intake forms and unrehearsed paper binders:
 
-**Status:** 🔥 Spark — workspace opened (Stage 1a `G1a` complete), Tier 2 deeper research & Stage 2 hypotheses pending  
-**Tier:** Active Backlog *(high-fit 2026–2027 regulatory gap — fast fixed-scope wedge feeding `OP-RSK-004` & `OP-ITG-018`)*  
-**Strategic Asset:** 4. Evidence & Governance  
-**Functional Area:** 12. Risk Management · **Signature Toolkit:** Risk Management *(bridges Operations)*  
-**Category:** Advisory / Governance Playbook · **Size:** Small, Mid & Large  
-**Source:** [inventory-of-ideas.md §12 Risk Management](../../inventory-of-ideas.md) · [Regulatory-Findings-and-Service-Gap-Analysis-2026-2027.md](../../docs/research/Regulatory-Findings-and-Service-Gap-Analysis-2026-2027.md)
+- **Wasted Statutory Hours:** Teams spend critical triage hours re-gathering basic facts across conflicting forms instead of meeting 4h/24h/72h deadlines.
+- **Audit Evidence Demand:** Regulators increasingly inspect tabletop-tested operational readiness rather than static compliance binders, making `OP-RSK-007` a fast, software-free sprint anchored in Strategic Asset 4 (*Evidence & Governance*).
 
-## Positioning
+## 2. Solution Architecture & Delivery Workflow
 
-> For **CISOs, DPOs, Chief Risk Officers, and Legal/Compliance Leads** at regulated enterprises who struggle with **clashing statutory incident-reporting clocks across DORA (4h), NIS2 (24h), GDPR (72h), EU AI Act, and SEC Reg S-P (30d)**, **Harmonized Multi-Regime Incident Triage & Reporting Playbook** is a **fixed-scope Governance & Operational Readiness Sprint** backed by **CBa Consult's Evidence & Governance architecture** that delivers **a single unified incident-intake triage workflow, harmonized evidence schema, and tabletop-tested escalation playbook** with \$0 initial working capital.
+Delivered over **3–4 weeks (5–8 hrs/wk)** inside the client's existing ITSM, SharePoint, or Microsoft Teams environment without buying new SOAR or GRC tools:
 
-## The Problem (Before Solution)
+1. **Multi-Regime Applicability & Intake Audit (Week 1):** Map which statutory regimes apply to the client (DORA, NIS2, GDPR, EU AI Act, SEC Reg S-P) and consolidate disparate Security/Privacy/Legal intake fields into one **Unified Incident Intake & Severity Triage Matrix**.
+2. **Harmonized Clock & RACI Playbook (Week 2):** Build an hour-by-hour escalation map (`T+0` -> `T+4h` -> `T+24h` -> `T+72h` -> `T+30d`) with named RACI owners, materiality thresholds, board-notification triggers, and pre-drafted initial regulator notice templates.
+3. **1-Hour Tabletop Walkthrough (Week 3):** Facilitate a live cross-functional dry-run on one high-relevance scenario (e.g., compromised critical ICT vendor or rogue AI agent exposing PII) to stress-test intake speed and handoffs.
+4. **Dated Audit Evidence Pack & Wedge Handoff (Week 4):** Issue a timestamped **Tabletop Evidence Report** proving operational readiness for auditors/regulators, plus prioritized next-step gaps feeding `OP-RSK-006`, `OP-RSK-004`, and `OP-ITG-018`.
 
-Regulatory inspections across the EU and US repeatedly flag **siloed incident-response playbooks** that fail under live pressure:
-- **Clashing Statutory Clocks:** During a single cyber, cloud, or AI incident, IT, Legal, and Privacy teams face conflicting notification windows — **DORA** (4-hour initial major incident notification), **NIS2** (24-hour early warning), **GDPR** (72-hour DPA breach notice), **EU AI Act** (serious AI incident reporting), and **SEC amended Reg S-P** (30-day customer notification).
-- **Fragmented Evidence Capture:** Because Security, Privacy, and Compliance use separate intake forms, teams waste critical hours re-gathering facts instead of meeting statutory deadlines — creating direct regulatory enforcement exposure and board liability.
-- **Unrehearsed Escalation:** Paper policies sit untouched until a real incident occurs; regulators now demand proof of operational execution, not static binders.
+**Core Fixed-Scope Deliverables:**
+- **Unified Multi-Regime Triage Matrix:** Single intake schema satisfying DORA, NIS2, GDPR, EU AI Act, and SEC Reg S-P fields.
+- **Clock-Synchronized Escalation Playbook + Notice Templates:** Hour-by-hour RACI from `T+0` to `T+30d`.
+- **Dated Tabletop Evidence Report:** Audit-ready record of live cross-functional dry-run execution.
 
-## What It Is
+## 3. Market Comparables & CBa Consult Differentiation
 
-A lightweight, **3–4 week fixed-scope sprint** that unifies incident triage and regulatory reporting across all applicable regimes without buying new SOAR/GRC software:
-1. **Unified Incident Intake & Severity Triage Matrix:** Single inception form that captures the exact data fields required to classify an incident simultaneously under DORA, NIS2, GDPR, EU AI Act, and SEC Reg S-P.
-2. **Harmonized Clock & RACI Playbook:** Clear hour-by-hour escalation map (`T+0` → `T+4h` → `T+24h` → `T+72h` → `T+30d`) with named owners, board-notification triggers, and pre-drafted regulator notice templates.
-3. **1-Hour Tabletop Walkthrough & Evidence Record:** Live dry-run on one realistic scenario (e.g., compromised SaaS vendor or rogue AI agent leaking PII), generating dated audit evidence of operational readiness.
+| Comparable Category | Typical Market Offering | Limitations for 2027 Regulated Buyers | CBa Consult Differentiation (`OP-RSK-007`) |
+| :--- | :--- | :--- | :--- |
+| MSSP / Incident Response Retainers | 24/7 SOC monitoring, forensic containment, malware eradication | Focuses on technical containment; rarely harmonizes DORA/NIS2/GDPR/AI Act/SEC legal clocks | Complements the client's SOC/MSSP by unifying cross-regime triage, RACI, and evidence schema |
+| Breach Counsel Law Firms | Legal advice and regulatory filing sign-off during/after an incident | High hourly rates; reactive post-breach engagement without operational intake workflows | Prepares clean, clock-synchronized facts in advance so counsel signs off within 4h/24h windows |
+| Enterprise GRC / SOAR Platforms | Heavy workflow software suites requiring 6-month integrations | Slow procurement; software fails when underlying RACI and severity thresholds remain siloed | Software-free 3–4 week sprint running on existing ITSM/Teams/SharePoint tools |
 
-## What This Is Not Yet *(Negative Scope Boundary — Stage 1a)*
+**Positioning Takeaway:** Bridges the exact governance gap between technical SOC containment and legal breach filing without competing with either.
 
-- **Not 24/7 SOC monitoring, forensic incident response, or legal breach-notification counsel:** CBa Consult designs the governance triage, evidence schema, and reporting playbook; the client's MSSP/SOC handles live technical containment and client legal counsel signs off on final regulatory filings.
-- **Not yet a Stage 2–4 Charter:** Buyer hypotheses (`HYP-2027-NNN`) and pilot scope remain pending Stage 2 and Director sign-off at `G4`.
+## 4. Internal IP & Source Provenance Crosswalk
 
-## 7 Pivotal Questions
+| Source / Asset | Role in `OP-RSK-007` | Provenance & Availability | Integration Notes |
+| :--- | :--- | :--- | :--- |
+| `Regulatory-Findings-and-Service-Gap-Analysis-2026-2027.md` | Regulatory inspection evidence (GAP 2) | Workspace research doc (`docs/research/`) | Grounds exact DORA/NIS2/GDPR/EU AI Act/SEC Reg S-P clock conflicts |
+| Risk Management Signature Toolkit | Triage, RACI & tabletop methodology | CBa Consult core advisory library | Supplies risk-scoring matrices and audit-evidence structure |
+| ADPA `.docx` Repository | Legacy dump status | Confirmed **0 files assigned** in [Source-Documents.md](Source-Documents.md) | Clean greenfield regulatory product built directly from 2026–2027 supervisory findings |
+| `OP-RSK-006`, `OP-RSK-004`, `OP-ITG-018` | Downstream compounding portfolio | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Converts 3–4 week sprint buyers into DORA/NIS2 RoI, SOC 2 for AI, and MIP retainers |
 
-1. **Buyer & 2027 Trigger** — CISO, Data Protection Officer (DPO), Chief Risk Officer, and General Counsel. Triggered by overlapping **2026–2027 DORA, NIS2, GDPR, EU AI Act, and SEC Reg S-P** enforcement sweeps testing actual incident-reportin
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
+
+- **Strict Non-MSSP / Non-Legal Boundary:** CBa Consult designs governance triage workflows, harmonized evidence schemas, RACI escalation maps, and tabletop readiness records only. Live technical containment remains with the client's SOC/MSSP, and final statutory filings require client legal counsel sign-off.
+- **No GRC/SOAR Software Reselling:** Playbooks operate in existing client productivity/ITSM tools with \$0 software procurement.
+- **Pre-Stage 2 Hypothesis Lock:** Stage 2 buyer hypotheses (`HYP-2027-NNN`) are not yet registered in `Hypothesis-Register.md`.
+
+**Stage 1b Gate Decision:** **HIGH-FIT WAVE 2 CANDIDATE.** Ready for Stage 3 commercial review; build 1-page Multi-Regime Clock Crosswalk and log 1–2 Stage 2 hypotheses when promoted toward `G4`.

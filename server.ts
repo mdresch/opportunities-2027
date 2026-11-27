@@ -203,6 +203,17 @@ const HTML_REPORTS: HtmlReportEntry[] = [
     audience: 'client',
   },
   {
+    slug: 'op-x-004-proof-architecture',
+    title: 'OP-X-004 — Operating-Model Proof Architecture & GEO Standard (2027)',
+    subtitle:
+      'Day-1 baseline capture, 3-Tier audit-safe client anonymization (OP-X-006), 6-Block anti-selection-bias schema & live Class B engineering provenance',
+    sourcePath: 'docs/reports/OP-X-004_Operating_Model_Proof_Architecture_2027.html',
+    url: '/reports/op-x-004-proof-architecture',
+    pdfSourcePath: 'docs/reports/OP-X-004_Operating_Model_Proof_Architecture_2027.pdf',
+    pdfUrl: '/reports/op-x-004-proof-architecture/pdf',
+    audience: 'client',
+  },
+  {
     slug: 'executive-summary',
     title: 'Opportunities 2027 — Executive Summary',
     subtitle: 'Board-ready portfolio brief, Core 5 flagships, and Tailored Hybrid SIDPA funnel',
@@ -210,6 +221,17 @@ const HTML_REPORTS: HtmlReportEntry[] = [
     url: '/reports/executive-summary',
     pdfSourcePath: 'docs/reports/Opportunities_2027_Executive_Summary.pdf',
     pdfUrl: '/reports/executive-summary/pdf',
+    audience: 'internal',
+  },
+  {
+    slug: 'tier-a-executive-summary-2027',
+    title: 'Flagship Tier A Executive Summary (2027–2030)',
+    subtitle:
+      'Core 5 active flagships, Stage 18 MXC milestone, Tier B extensions & authoritative 2027 execution sequence',
+    sourcePath: 'docs/reports/Tier_A_Executive_Summary_2027.html',
+    url: '/reports/tier-a-executive-summary-2027',
+    pdfSourcePath: 'docs/reports/Tier_A_Executive_Summary_2027.pdf',
+    pdfUrl: '/reports/tier-a-executive-summary-2027/pdf',
     audience: 'internal',
   },
   {
@@ -528,6 +550,26 @@ const CLIENT_REPORTS: ClientReportEntry[] = [
       'Phase 0 Entry Wedge → Phase 1 Tier A Flagship → Phase 2 Compounding IP / MIP funnel',
     ],
   },
+  {
+    slug: 'op-x-004-proof-architecture',
+    title: '2027 Operating-Model Proof Architecture & GEO Standard (OP-X-004)',
+    subtitle:
+      'Audit-safe 3-Tier client anonymization (paired with OP-X-006), Day-1 baseline lock, mandatory pitfall disclosure, and transparent Class B engineering provenance benchmarks.',
+    editionLabel: 'Proof & GEO Standard · 27 Nov 2026',
+    pagesLabel: '2 A4 Pages',
+    url: '/api/client-reports/op-x-004-proof-architecture',
+    category: 'Executive Briefs',
+    featuredOnHome: true,
+    opportunityId: 'OP-X-004',
+    audience: 'CFOs, CIOs, CISOs, COOs, Boards & Channel Partners',
+    duration: 'Day-1 Co-Design · Q1–Q3 Series',
+    investmentAnchor: '10–15% Pilot Credit · €500–€2k Pack',
+    keyHighlights: [
+      'Two-Class Honest Evidence split: 0 fabricated client quotes; 3 live Class B engineering anchors',
+      '3-Tier Privacy & OP-X-006 Early-Adopter Co-Design credit with 5-business-day client redaction veto',
+      '6-Block Anti-Selection-Bias Case Standard structured for executives and GEO citation engines',
+    ],
+  },
 ];
 
 const CORE_DOCUMENTS: CoreDocumentEntry[] = [
@@ -578,6 +620,12 @@ const CORE_DOCUMENTS: CoreDocumentEntry[] = [
     category: 'Client Brief',
     path: 'docs/reports/One_Pager_OP-OPS-001_CX-001_Quote_to_Onboarding.md',
     description: 'Priority #1 fast-proof cross-opportunity wedge combining OP-OPS-001 and OP-CX-001.',
+  },
+  {
+    title: 'Pilot Case-Study Capture & 3-Tier Anonymization Kit (OP-X-004)',
+    category: 'Proof & Delivery Kit',
+    path: 'opportunities/OP-X-004_Case_study_series_on_2027/Pilot-Case-Study-Capture-and-Anonymization-Kit.md',
+    description: 'SOW consent clause (OP-X-006), 10-point de-identification checklist, Week-1 delta tracker & 6-Block schema.',
   },
   {
     title: 'OP-ITG-013 Benchmark — LinkedIn Post & Outreach Kit',

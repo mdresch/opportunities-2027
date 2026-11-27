@@ -1,53 +1,70 @@
-# Ideation Document — `OP-RSK-004`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-RSK-004"
+execution_track: "Track A (Client Advisory Delivery — CISO / CRO / Legal Flagship)"
+linked_hypotheses: "HYP-2027-003 (Formulated)"
+primary_source: "AI Purpose Clause.docx / One_Pager_OP-RSK-004_AI_Governance_Certification.md (No ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-RSK-004`: AI Governance Certification Readiness Assessment
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Local research and delivery artifacts are tracked in [Ideation-Spark.md](Ideation-Spark.md), [Tier-2-Market-Research.md](Tier-2-Market-Research.md), [Pilot-Charter.md](Pilot-Charter.md), and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** **"SOC 2 for AI"** — map client AI inventories, controls, and evidence directly to **ISO/IEC 42001, NIST AI RMF, and EU AI Act** (ahead of Dec 2027 Annex III enforcement).
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Medium and large enterprises enter 2027 facing fragmented AI deployments across HR, risk, customer operations, and vendor SaaS without a unified, audit-ready evidence trail. As noted in [Tier-2-Market-Research.md](Tier-2-Market-Research.md), **Regulation (EU) 2026/1744** sets **December 2, 2027** as the hard enforcement deadline for **EU AI Act Annex III** standalone high-risk AI systems (carrying penalties up to €35M or 7% of global turnover), while CISOs, CROs, and Legal teams simultaneously face overlapping demands around **ISO/IEC 42001**, **NIST AI RMF**, GDPR, and DORA/NIS2.
 
-# Ideation Spark — `OP-RSK-004`: AI Governance Certification Readiness Assessment
+`OP-RSK-004` is a Tier A Flagship (GTM Priority #4, Pillar 17 Priority #3) positioning CBa Consult as **"SOC 2 for AI"**: a conflict-free 6–10 week pre-certification readiness assessment that maps a client's live AI inventory, policies, and technical controls once across ISO/IEC 42001, NIST AI RMF, and EU AI Act obligations.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** A — Flagship (GTM Priority #4, Q1–Q2 2027; Pillar 17 Priority #3)
-**Strategic Asset:** 4. Evidence & Governance
-**Functional Area:** Risk Management (Pillar 17 — Intelligence & Autonomous Systems Governance) · **Signature Toolkit:** Risk Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §12 Risk Management](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) · existing client-facing deliverable already drafted: [One_Pager_OP-RSK-004_AI_Governance_Certification.md](One_Pager_OP-RSK-004_AI_Governance_Certification.md)
+Key market catalysts verified during Stage 2 research include:
 
-## Positioning
+- **Policy-to-Practice Chasm:** 69% of professionals use AI at work while 91% of firms still lack formal AI-use policies and mapped Annex III registers.
+- **Enterprise Procurement Gate:** B2B buyers and enterprise risk committees increasingly request ISO 42001 or NIST AI RMF alignment in vendor questionnaires.
+- **Multi-Framework Fatigue:** Organizations need one unified control cross-walk ("map once, evidence many") rather than separate compliance silos.
 
-> For **CISOs, Chief Risk Officers, and Legal** at medium-and-large enterprises who struggle with **the December 2, 2027 EU AI Act Annex III enforcement deadline approaching with no mapped evidence trail**, **AI Governance Certification Readiness Assessment** ("SOC 2 for AI") is an **Audit / Diagnostic** backed by **the `AI Purpose Clause.docx` governance draft** that delivers **an AI inventory mapped directly to ISO/IEC 42001, NIST AI RMF, and EU AI Act controls** with $0 working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+Detailed in [Delivery-Playbook-and-SOW.md](Delivery-Playbook-and-SOW.md) and powered by CBa's `sidpa-template` pre-assurance architecture:
 
-"SOC 2 for AI" — map client AI inventories, controls, and evidence directly to ISO/IEC 42001, NIST AI RMF, and EU AI Act (ahead of Dec 2027 Annex III enforcement).
+1. **Weeks 1–2 — AI Inventory & EU AI Act Risk Map:** Execute the 25-control [AI-Certification-Readiness-Questionnaire.md](AI-Certification-Readiness-Questionnaire.md) across internal, vendor-embedded, and agentic AI; screen Art. 5 prohibited uses, Art. 50 transparency, and Annex III high-risk systems; and assign Provider/Deployer roles.
+2. **Weeks 3–5 — Single Control Cross-Walk ("SOC 2 for AI"):** Map existing ISO 27001 ISMS, GDPR, and DORA/NIS2 controls once against ISO/IEC 42001, NIST AI RMF, and EU AI Act requirements, drafting the AIMS Scope and Statement of Applicability (SoA).
+3. **Weeks 6–10 — Policy Hardening, Traceability & Mock Audit Pack:** Tailor `AI Purpose Clause.docx` negative exclusions and human-in-the-loop governance gates, demonstrate immutable baseline/audit-log patterns, and assemble a registrar-ready gap remediation roadmap and evidence binder.
 
-## 7 Pivotal Questions
+Core tangible deliverables produced across the sprint:
 
-1. **Buyer & 2027 Trigger** — CISO / Chief Risk Officer / Legal. The EU AI Act Annex III deadline (December 2, 2027) is a hard regulatory date, and OneTrust's 2027 Report shows the market rapidly converging around ISO 42001, NIST AI RMF, and the EU AI Act as the de facto reference frameworks — this is a top-3 2027 priority in the inventory (🟢🟢🟢).
-2. **The Wedge (Pain)** — Enterprises know an AI-governance deadline is coming but have no mapped evidence trail connecting what AI they actually run to what any of the three major frameworks requires.
-3. **Deliverable & Existing IP** — A readiness assessment that pairs directly with `OP-ITG-013` (Agent Governance) and `OP-RSK-001`–`003`; draws on the already-drafted `AI Purpose Clause.docx` governance and negative-exclusions document as a starting policy artifact rather than writing governance language from zero.
-4. **Sweat-Equity Feasibility** — 6–10 weeks at 8–12 hrs/wk, High effort — same band as the two ITG flagships, and a natural bundled sale alongside `OP-ITG-013`.
-5. **Outcome & Proof** — A delivered AI-control-to-framework evidence map per client, identifying exactly which Annex III-relevant gaps exist before the Dec 2027 deadline.
-6. **Boundaries & Risk** — **This is explicitly a non-accredited readiness assessment** — it must partner with an accredited registrar for the formal ISO 42001 certification itself, and must never imply CBa Consult can certify a client directly. Overstating this is the #1 failure mode.
-7. **Compounding / Scale Path** — High-margin compliance anchor that needs re-running as regulations evolve — naturally recurring, not one-and-done; pairs with `OP-ITG-013` for a combined agent-governance-plus-compliance offer.
+- **Unified AI System Register & EU AI Act Risk Map:** Complete catalog classifying Art. 5, Art. 50, and Annex III obligations.
+- **Gap-to-Certification Cross-Walk & AIMS SoA:** Single control mapping spanning ISO/IEC 42001, NIST AI RMF, and EU AI Act.
+- **Tailored Governance Policy & Mock Audit Binder:** Adapted `AI Purpose Clause.docx` exclusions plus prioritized pre-registrar remediation backlog.
 
-## Effort, Capital & Timeline
+## 3. Market Comparables & CBa Consult Differentiation
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 6–10 wks (8–12 hrs/wk) | High | €4,000–€12,000+ | Q1–Q2 2027 (GTM Priority #4 / Pillar 17 Priority #3) |
+| Market Comparable | Typical Positioning & Pricing | Structural Gap in 2027 | CBa Consult Differentiation (`OP-RSK-004`) |
+| :--- | :--- | :--- | :--- |
+| Big Four Audit / Risk Practices | €80k–€250k+ multi-month compliance programs | Heavy overhead, junior-staffed checklists, potential auditor independence conflicts | Conflict-free senior advisory in 6–10 weeks (€4,000–€12,000+ studio band) |
+| GRC SaaS Platforms (OneTrust / Vanta) | €20k–€60k/yr software subscriptions | Empty control shells requiring internal expertise to classify Annex III & write SoA | Delivers completed AI System Register, unified cross-walk, and policy IP |
+| Accredited ISO 42001 Registrars | €15k–€40k formal Stage 1/2 certification audits | Legally barred from consulting or remediating client gaps prior to audit | Prepares the client cleanly for registrar audit via an explicit referral handoff |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢🟢🟢 Top-3 2027 priority — market converging rapidly around ISO 42001, NIST AI RMF & EU AI Act (OneTrust 2027 Report).
+| Source Artifact | Provenance Status | Core Contribution to `OP-RSK-004` | Disposition for 2027 Offer |
+| :--- | :--- | :--- | :--- |
+| `AI Purpose Clause.docx` | Existing CBa Governance Draft ([Ideation-Spark.md](Ideation-Spark.md)) | Working AI governance policy, human-oversight language, and negative exclusions | Core policy baseline tailored in Weeks 6–7 |
+| [AI-Certification-Readiness-Questionnaire.md](AI-Certification-Readiness-Questionnaire.md) & [Delivery-Playbook-and-SOW.md](Delivery-Playbook-and-SOW.md) | Existing Workspace Deliverables | 25-control intake diagnostic, 6–10 wk sprint plan, and fixed-scope SOW structure | Ready-to-deploy delivery engine for Day 1 pilot execution |
+| [One_Pager_OP-RSK-004_AI_Governance_Certification.md](One_Pager_OP-RSK-004_AI_Governance_Certification.md) & [BD-Quick-Reference.md](BD-Quick-Reference.md) | Existing GTM Assets | Client-facing commercial framing, `sidpa-template` traceability narrative, BD source pointers | Direct outbound collateral for CISO / CRO / Legal discovery |
 
-## Existing Assets to Draw On
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- `AI Purpose Clause.docx` — working governance & negative-exclusions draft (also backs `OP-LEG-001`/`OP-LEG-002`).
-- **`sidpa-template` (`mdresch/sidpa-template`)** — demonstrable pre-assurance architecture featuring immutable SemVer baselines (`PMP-BL-vX.Y.Z`), `Audit-Register.md`, deferred audit logging, human-in-the-loop gates, and deterministic rollback (`compare_d
+- **Explicitly non-accredited readiness assessment:** CBa Consult is **not** an accredited ISO/IEC 42001 certification body or EU Notified Body; formal certification audits must be performed by an independent accredited registrar.
+- **No formal legal counsel or statutory binding opinions:** Regulatory mapping complements, rather than replaces, external EU AI Act / GDPR legal sign-off.
+- **No custom AI model retraining or full enterprise GRC software implementation:** Technical remediation blueprints hand off to client engineering or `OP-ITG-013` / `OP-RSK-001`–`003`.
+
+| Stage 1b Criterion | Status | Readiness Note |
+| :--- | :--- | :--- |
+| Problem, Regulatory Trigger & IP Defined | Complete | Dec 2, 2027 Annex III deadline + 25-control diagnostic + `AI Purpose Clause.docx` ready |
+| Non-Accredited Registrar Boundary Locked | Complete | Explicit disclaimer + partner referral model prevents over-claiming |
+| Stage 2 Hypothesis & Pre-Pilot Charter | Formulated | `HYP-2027-003` formulated; [Tier-2-Market-Research.md](Tier-2-Market-Research.md) and [Pilot-Charter.md](Pilot-Charter.md) active |

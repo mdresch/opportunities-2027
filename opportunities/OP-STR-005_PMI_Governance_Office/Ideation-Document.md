@@ -1,60 +1,70 @@
-# Ideation Document — `OP-STR-005`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-STR-005"
+execution_track: "Track B — Enterprise / Governance Advisory"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (§8); Post Merger Integration Signature Toolkit"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-STR-005`: Post-Merger Integration (PMI) Governance Office
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), tracked in [inventory-of-ideas.md](../../inventory-of-ideas.md), and prioritized in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) as **Tier A Flagship (Q3–Q4 2027 Scale-Out)**.
 
-**Inventory description:** Stand up the post-close integration governance office harmonizing **payroll/pension/escrow (`OP-FIN-010`), HR maturity (`OP-HR-002`), retention/recovery (`OP-ITG-010`), ICT governance (`OP-ITG-002`), and SOP handover (`OP-OPS-007`)**.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Post-merger integrations routinely miss synergy timelines not because deal teams lacked a pre-close plan, but because **no standing integration governance office** owns cross-functional execution once the deal closes. Instead, payroll/pension harmonization, HR maturity alignment, data retention/recovery, ICT governance, and operational SOP handover splinter into five disconnected workstreams with conflicting incentives.
 
-# Ideation Spark — `OP-STR-005`: Post-Merger Integration (PMI) Governance Office
+- **Target Buyer:** Private Equity Operating Partners and Corporate Development / M&A Integration Leads (Medium & Large enterprises), directly following `OP-STR-004` pre-deal engagements.
+- **The Wedge (Pain):** Post-close integration stalls when Finance, HR, IT, and Ops run uncoordinated checklists without unified escalation, shared milestone gates, or cross-entity sign-off accountability.
+- **2027 Trigger:** Elevated cost of capital and 2027 regulatory enforcement (IFRS 18 reporting harmonization, DORA/NIS2 ICT consolidation, GDPR retention) leave PE sponsors with zero tolerance for post-close integration drift.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** A — Flagship (Q3–Q4 2027 scale-out)
-**Strategic Asset:** 4. Evidence & Governance
-**Functional Area:** Strategy · **Signature Toolkit:** Post Merger Integration
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §8 Strategy](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+Delivered as an 8–12 week standing Governance Office setup and cadence (`10–15 hrs/wk`, `High` effort) backed by the **Post Merger Integration** Signature Toolkit, unifying five existing CBa Consult capabilities:
 
-> For **Private Equity firms and Corporate Development teams** who struggle with **no standing governance office to actually harmonize payroll, HR, retention, ICT, and SOPs after a deal closes**, **Post-Merger Integration (PMI) Governance Office** is an **Advisory / Governance Office** offer that turns **five existing CBa Consult capabilities into one unified framework** to deliver **a standing post-close integration governance function** with $0 working capital.
+1. **Weeks 1–2 — Integration Charter & Governance Cadence:**
+   - Establish cross-entity steering RACI, escalation thresholds, Day-1/Day-30/Day-90 milestone gates, and unified KPI tracking.
+2. **Weeks 3–6 — Converging Workstream Harmonization:**
+   - Orchestrate five CBa core pillars: (a) **Payroll, Pension & Escrow** (`OP-FIN-010`), (b) **HR Maturity & Org Alignment** (`OP-HR-002`), (c) **Retention & Recovery Controls** (`OP-ITG-010`), (d) **ICT Governance Maturity** (`OP-ITG-002`), and (e) **Project-to-Ops SOP Handover** (`OP-OPS-007`).
+3. **Weeks 7–10 — Exception Resolution & Synergy Tracking:**
+   - Run weekly Integration Management Office (IMO) reviews, resolve multi-entity policy conflicts, and lock audit-ready sign-off registers.
+4. **Weeks 11–12 — Steady-State Operations Handover:**
+   - Transition governance cadence to internal business-as-usual owners via `OP-OPS-007` handover protocols.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Stand up the post-close integration governance office harmonizing payroll/pension/escrow (`OP-FIN-010`), HR maturity (`OP-HR-002`), retention/recovery (`OP-ITG-010`), ICT governance (`OP-ITG-002`), and SOP handover (`OP-OPS-007`).
+| Comparable / Alternative | Typical Model | Strengths | Differentiation of CBa `OP-STR-005` |
+| :--- | :--- | :--- | :--- |
+| **Big Four / MBB Transaction Advisory** | €150k–€500k+ multi-partner IMO teams | Deep bench for mega-cap carve-outs | Prohibitive fee drag for mid-market PE; junior-heavy execution |
+| **Ad-Hoc Internal Functional Leads** | Part-time CFO/CHRO/CIO coordination | Zero external cash cost | Synergy fatigue; siloed priorities and no neutral escalation owner |
+| **Interim Single-Function Contractors** | Separate HR, Finance, IT interims | Domain depth in one silo | Lacks unified cross-workstream governance and handover IP |
+| **CBa `OP-STR-005` PMI Office** | 8–12 wk unified 5-pillar governance office | Pre-built CBa IP across Finance/HR/ICT/Ops | **Senior solo-director integration spine** bridging pre-deal (`OP-STR-004`) to BAU |
 
-## 7 Pivotal Questions
+## 4. Internal IP & Source Provenance Crosswalk
 
-1. **Buyer & 2027 Trigger** — Private Equity, Corporate Development — the same buyer as `OP-STR-004`, now post-close. The trigger is simply: a deal has just closed and someone needs to own integration before synergy targets slip.
-2. **The Wedge (Pain)** — Post-merger integration routinely fails not from lack of a plan but from lack of a standing office that actually owns payroll/pension/escrow harmonization, HR maturity gaps, retention/recovery, ICT governance, and SOP handover together instead of five disconnected workstreams.
-3. **Deliverable & Existing IP** — Turns five already-scoped CBa Consult capabilities — `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010`, `OP-ITG-002`, `OP-OPS-007` — into one unified governance-office framework; maps directly to the Post Merger Integration Signature Toolkit.
-4. **Sweat-Equity Feasibility** — 8–12 weeks at 10–15 hrs/wk, High effort — the single highest capital ceiling in the whole 11-flagship set (€6,000–€18,000+), reflecting that this is a standing office function, not a point-in-time diagnostic.
-5. **Outcome & Proof** — A functioning integration governance office with clear ownership across the five converging workstreams, ideally the direct follow-on engagement from a completed `OP-STR-004` pre-deal assessment at the same client.
-6. **Boundaries & Risk** — Multi-entity stakeholder politics and post-close synergy fatigue are the real execution risks — the governance structure has to survive organizational friction between the merging entities, not just be well-designed on paper.
-7. **Compounding / Scale Path** — This is the top of the M&A/PMI revenue ladder — the natural compounding endpoint of `OP-FIN-010` + `OP-HR-002` + `OP-ITG-010` + `OP-ITG-002` + `OP-OPS-007`, best sold as the pre-sold continuation of a successful `OP-STR-004` engagement rather than a cold-start offer.
+| Source Asset | Role in `OP-STR-005` | Provenance / Location |
+| :--- | :--- | :--- |
+| [Ideation-Spark.md](Ideation-Spark.md) | Tier A scale-out framing, 5-capability architecture & 7 Pivotal Questions | Sibling workspace file |
+| [BD-Quick-Reference.md](BD-Quick-Reference.md) | Local CBa BD archive mapping for PE/M&A outreach | Sibling workspace file |
+| [Source-Documents.md](Source-Documents.md) | Confirms inventory-synthesized flagship (no single ADPA `.docx`) | Sibling workspace file |
+| Converging CBa Capabilities | `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010`, `OP-ITG-002`, `OP-OPS-007` + `OP-STR-004` | [inventory-of-ideas.md](../../inventory-of-ideas.md) (§8) |
 
-## Effort, Capital & Timeline
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 8–12 wks (10–15 hrs/wk) | High | €6,000–€18,000+ | Q2–Q3 2027 |
+- **Do Not Sell Cold:** Primary sales channel is the natural post-close continuation of a completed `OP-STR-004` pre-deal engagement; do not burn cold BD cycles pitching standalone PMI offices to strangers.
+- **No Legal Deal Structuring or Statutory Tax/M&A Advice:** SPA drafting, regulatory antitrust filings, and tax structuring remain with the client's M&A legal/tax counsel.
+- **No Unbounded Operational Staffing:** CBa runs the governance office (`10–15 hrs/wk`), not full-time ERP migration or payroll administration headcount.
 
-## Market Validation
+### Stage 1b Readiness & Pre-Pilot Handoff
 
-🟢🟢 Maps the Post Merger Integration Signature Toolkit.
-
-## Existing Assets to Draw On
-
-- `OP-FIN-010` (rate engine/payroll), `OP-HR-002` (HR Transformation Toolkit), `OP-ITG-010` (retention/recovery), `OP-ITG-002` (ICT Governance Maturity Assessment, backed by `ICT-Governance-Framework-Application`), `OP-OPS-007` (`Project-to-Operations SOP Handover Framework.docx`).
-
-## Related Opportunities
-
-`OP-STR-004` (pre-deal precursor — primary sales channel into this offer) · `OP-FIN-010`, `OP-HR-002`, `OP-ITG-010`, `OP-ITG-002`, `OP-OPS-007` (converging capabilities)
-
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Do not sell this cold — plan it as the natural u
+| Criterion | Current State | Next Action Toward Pilot |
+| :--- | :--- | :--- |
+| **Stage 1b Framing** | Complete (Tier A Scale-Out) | Target Q3–Q4 2027 follow-on from `OP-STR-004` |
+| **Operating Model Template** | Pending | Draft standalone IMO roles, cadence & escalation blueprint |
+| **5-Pillar Maturity Check** | Pending | Verify readiness of `FIN-010`, `HR-002`, `ITG-010`, `ITG-002`, `OPS-007` |
+| **Primary Sales Channel** | Enforced | Pre-sell exclusively as `OP-STR-004` post-close continuation |

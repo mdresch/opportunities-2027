@@ -1,63 +1,71 @@
-# Ideation Document — `OP-STR-001`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-STR-001"
+execution_track: "Track B (Core & Specialty Backlog — Advisory / Starter Kit)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Inventory-Derived (0 ADPA .docx assigned — see inventory-of-ideas.md)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-STR-001`: Annual Strategic Planning & OKR Alignment Sprint
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and cataloged in [inventory-of-ideas.md](../../inventory-of-ideas.md). Portfolio tiering context is tracked in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Local workspace baseline: [Ideation-Spark.md](Ideation-Spark.md), [Source-Documents.md](Source-Documents.md), and [BD-Quick-Reference.md](BD-Quick-Reference.md).
 
-**Inventory description:** 2-week facilitated strategy reset translating founder vision into quarterly priorities, KPIs, and resource allocation.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Small and mid-market leadership teams frequently enter new fiscal years with ambitious founder visions or board mandates that fail to translate into concrete quarterly priorities, measurable KPIs, and disciplined resource allocation. Offsites produce inspirational slide decks that sit untouched by February while departments chase conflicting initiatives and burn scarce cash.
 
-# Ideation Spark — `OP-STR-001`: Annual strategic planning & OKR alignment sprint
+- **Target Buyers:** CEOs, Boards, PE Operating Partners, and Strategy Leads in the Small & Mid segment.
+- **2027 Market Trigger:** Tight 2027 capital discipline, margin pressure, AI investment prioritization demands, and PE/board expectations for crisp quarterly execution accountability without hiring an expensive strategy consultancy.
+- **Core Pain (The Wedge):** Leadership teams need a fast, structured, KPI-anchored reset that turns strategy debates into locked quarterly OKRs, owners, and budget trade-offs within weeks.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 8. Strategy · **Signature Toolkit:** Corporate/Business Strategy & Strategic Planning
-**Category:** Advisory / Starter Kit · **Size:** Small & Mid
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+Built on CBa Consult's **Corporate/Business Strategy & Strategic Planning** Signature Toolkit, `OP-STR-001` packages a focused **2-week facilitated strategy reset** inside a **4-week** end-to-end delivery wrapper:
 
-> For **CEOs, Boards, PE Operating Partners & Strategy Leads** (Small & Mid tier) who need a focused, fixed-scope solution for **annual strategic planning & okr alignment sprint**, **Annual strategic planning & OKR alignment sprint** is a **Advisory / Starter Kit** backed by the **Corporate/Business Strategy & Strategic Planning** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+1. **Phase 1 — Pre-Sprint Financial & Initiative Diagnostic (Week 1):** Review prior-year P&L performance, active project backlog, and leadership alignment gaps via structured pre-read interviews.
+2. **Phase 2 — Facilitated Strategy & Trade-Off Workshops (Week 2):** Lead 2–3 structured executive sessions to sharpen strategic choices, kill low-ROI initiatives, and lock 3–5 annual pillars.
+3. **Phase 3 — OKR Cascade, KPIs & Resource Allocation (Week 3):** Translate strategic pillars into department-level quarterly Objectives & Key Results, named owners, baseline/target KPIs, and capacity/budget allocations.
+4. **Phase 4 — Board Pack & Operating Cadence Handover (Week 4):** Deliver the locked 1-page Strategy Map, OKR Scorecard, and 90-day QBR governance rhythm.
 
-## What it is
+### Core Deliverables & Alignment Artifacts
 
-2-week facilitated strategy reset translating founder vision into quarterly priorities, KPIs, and resource allocation.
+- **1-Page Strategy Map & Stop-List:** Clarifies winning bets alongside explicitly paused low-ROI initiatives.
+- **Quarterly OKR & KPI Scorecard:** Department-level Objectives, quantified Key Results, and named accountable owners.
+- **90-Day QBR Cadence Kit:** Ready-to-run quarterly review agenda linking execution KPIs to resource reallocation.
 
-## 7 Pivotal Questions
+## 3. Market Comparables & CBa Consult Differentiation
 
-1. **Buyer & 2027 Trigger** — CEOs, Boards, PE Operating Partners & Strategy Leads (Small & Mid segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — 2-week facilitated strategy reset translating founder vision into quarterly priorities, KPIs, and resource allocation.
-3. **Deliverable & Existing IP** — Built on the **Corporate/Business Strategy & Strategic Planning** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *Strategic planning, OKR design, executive facilitation*.
-4. **Sweat-Equity Feasibility** — 4 wks, Medium effort, \$0 initial working capital. Expected capital range: €1,000–€4,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Competes with generalist coaches; anchor in concrete KPIs.
-7. **Compounding / Scale Path** — Productize into a repeatable quarterly strategy-review retainer.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable Category | Typical Market Offering | Limitations / Friction | CBa Consult (`OP-STR-001`) Differentiation |
 | --- | --- | --- | --- |
-| 4 wks | Medium | €1,000–€4,000 | Q2 2027 |
+| **Generalist Executive Coaches** | Qualitative leadership offsites and motivation workshops | Weak financial rigor, vague goals, and zero resource-allocation discipline | Anchored in concrete KPIs, initiative stop-lists, and P&L/capacity trade-offs |
+| **Top-Tier Strategy Boutiques** | Multi-month market studies and 150-slide strategy decks | Prohibitive €50k–€200k+ fees and disconnected from quarterly execution | Fixed-scope 4-week sprint (€1,000–€4,000) producing immediately executable OKRs |
+| **OKR SaaS Tools** | Goal-tracking software subscriptions | Software cannot resolve executive misalignment or prioritize competing bets | Facilitated executive decision-making first; runs in existing spreadsheets/Notion/M365 |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Expands inventory to cover the `Strategy` functional area + Signature Toolkit.
+| Asset / Source | Provenance Location | Role in `OP-STR-001` | Reuse Readiness |
+| --- | --- | --- | --- |
+| **Portfolio Inventory Specification** | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Establishes Strategy pillar scope, 2-week reset format, and KPI differentiation | Verified SSOT |
+| **Corporate/Business Strategy Toolkit** | CBa Consult Signature Toolkit | Supplies strategy-mapping, OKR cascade, and resource-allocation workshop templates | Ready for immediate reuse |
+| **Workspace Reference Artifacts** | [Source-Documents.md](Source-Documents.md), [BD-Quick-Reference.md](BD-Quick-Reference.md) | Confirms 0 ADPA `.docx` files assigned and points to local BD strategy materials | Verified in workspace |
+| **Case Study & Retainer Path (`OP-X-004`)** | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Captures before/after execution KPI clarity to support quarterly review conversion | Post-pilot dependency |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [x] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [x] Assigned ADPA sources extracted to `Ideation-Document.md` / `Business-Case.md` (Tier 2 draft — Director review still required).
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-## Business Development sources (local)
+To avoid unpriced multi-month consulting drift under a `$0` working-capital model, `OP-STR-001` enforces strict boundaries:
 
-See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
+- **Out of Scope:** Deep primary market/customer due diligence, M&A transaction execution, ERP/OKR software implementation, and ongoing operational PMO staffing.
+- **Client Prerequisites:** Full executive leadership team attendance during Week 2 reset workshops and timely sharing of baseline financial/KPI metrics in Week 1.
+- **Accountable Ownership:** CBa Consult facilitates trade-off alignment and OKR/KPI design; the CEO and leadership team own quarterly execution and QBR follow-through.
+- **Stage 1b Review Outcome:** Framed from inventory specifications; parked until CEO/PE Operating Partner pull triggers Stage 2 discovery.
 
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+| Stage 1b Gate Check | Status | Next Gate Action |
+| --- | --- | --- |
+| **2-Week Reset & OKR Design Locked** | Complete | Anchor pitch in quantified KPIs vs. generalist coaching |
+| **Source Provenance Confirmed (`0` ADPA docs)** | Complete | Rely on Signature Toolkit & client KPI baselines |
+| **Commercial Case & G4 Sign-Off** | Linked | Tracked in [Business-Case.md](Business-Case.md) (`PARKED_IN_INVENTORY`) |

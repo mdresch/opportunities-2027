@@ -6,6 +6,7 @@ Generates per-opportunity Source-Documents.md, Ideation-Document.md, and Busines
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import zipfile
@@ -296,7 +297,25 @@ def update_ideation_spark(opp_dir: Path, op_id: str, has_sources: bool) -> None:
     spark.write_text(content, encoding="utf-8")
 
 
+def is_curated_markdown(path: Path) -> bool:
+    """Return True when a workspace doc has curated SIDPA single-line YAML frontmatter."""
+    if not path.exists():
+        return False
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    return raw.startswith("---\npmbok_edition:") or raw.startswith("---\r\npmbok_edition:")
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Assign ADPA .docx source documents without clobbering curated workspace docs."
+    )
+    parser.add_argument(
+        "--force-overwrite",
+        action="store_true",
+        help="Overwrite even curated Ideation-Document.md and Business-Case.md files.",
+    )
+    args = parser.parse_args()
+
     if not ADPA_ROOT.is_dir():
         raise SystemExit(f"ADPA root not found: {ADPA_ROOT}")
 
@@ -397,7 +416,13 @@ def main() -> None:
                     have.add(id(p))
             suite_prefer[op_id].update(cluster_files)
 
-    stats = {"ops_with_docs": 0, "ideation_written": 0, "business_written": 0, "total_docx": len(all_docx)}
+    stats = {
+        "ops_with_docs": 0,
+        "ideation_written": 0,
+        "business_written": 0,
+        "preserved_curated": 0,
+        "total_docx": len(all_docx),
+    }
 
     for op_id, opp_dir in sorted(opp_dirs.items()):
         docs = sorted(by_op_docs.get(op_id, []), key=lambda x: normalize_rel(x).lower())
@@ -453,7 +478,11 @@ def main() -> None:
                 + spark_excerpt
                 + "\n"
             )
-        (opp_dir / "Ideation-Document.md").write_text(doc_md, encoding="utf-8")
+        id_target = opp_dir / "Ideation-Document.md"
+        if args.force_overwrite or not is_curated_markdown(id_target):
+            id_target.write_text(doc_md, encoding="utf-8")
+        else:
+            stats["preserved_curated"] += 1
 
         # Business case
         if bc_pick and (bc_pick != ideation_pick or len(docs) == 1):
@@ -482,7 +511,11 @@ def main() -> None:
                 bc_md += f"\n### Supporting context (from primary ideation source)\n\n"
                 bc_md += extract_docx_text(ideation_pick)[:12_000] + "\n"
 
-        (opp_dir / "Business-Case.md").write_text(bc_md, encoding="utf-8")
+        bc_target = opp_dir / "Business-Case.md"
+        if args.force_overwrite or not is_curated_markdown(bc_target):
+            bc_target.write_text(bc_md, encoding="utf-8")
+        else:
+            stats["preserved_curated"] += 1
         update_ideation_spark(opp_dir, op_id, bool(docs))
 
     # Portfolio register

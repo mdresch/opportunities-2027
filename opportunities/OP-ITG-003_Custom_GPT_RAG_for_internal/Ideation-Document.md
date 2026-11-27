@@ -1,60 +1,70 @@
-# Ideation Document — `OP-ITG-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-003"
+execution_track: "Track A — Lightweight AI Micro-Service / Advisory Wedge (stays in oppurtunities-2027)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Portfolio Spark & 2026 OP-IE-004 adaptation (Ideation-Spark.md)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-ITG-003`: Custom GPT / RAG for Internal Governance & Policy Docs
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Notice:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (Stage 1b Ideation / Gate `G1b`). Authoritative inventory fields (`Core & Specialty Backlog` · `Medium & Large` · `8 wks` · `High` effort · `€1,500–€5,000` · `Q2–Q3 2027` · `Status = Idea`) live in [inventory-of-ideas.md](../../inventory-of-ideas.md); portfolio sequencing lives in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). See [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Build domain-specific Q&A assistant on top of a client's existing IT/security/HR documentation to answer internal policy questions.
+---
 
-### From Ideation-Spark.md
+## 1. Problem Context & 2027 Market Trigger
 
-# Ideation Spark — `OP-ITG-003`: Custom GPT / RAG for internal governance & policy docs
+Medium and large organizations maintain hundreds of IT, information-security, HR, and compliance policies spread across SharePoint, Confluence, and PDF repositories. Employees bypass official policies or overload support desks because finding authoritative answers takes too long:
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 6. IT and Technology · **Signature Toolkit:** Data Analytics Strategy
-**Category:** AI Micro-Service · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+1. **Regulatory & Audit Velocity (2027):** Deadlines across DORA/NIS2, EU AI Act, IFRS 18, and CSRD require staff to follow current procedures consistently rather than relying on outdated PDF copies.
+2. **Oversharing & Hallucination Risk in Generic Copilots:** Dropping uncurated policy folders into generic chatbots surfaces stale drafts, leaks restricted security documents across permission boundaries, and produces unverified answers.
+3. **Demand for Fixed-Scope Micro-Services:** CIOs and CTOs want a bounded **8-week**, conflict-free blueprint and scoped Q&A assistant on top of *existing* enterprise tools before funding custom platform builds.
 
-## Positioning
+---
 
-> For **CIOs, CTOs & Enterprise Architecture / Cloud Leads** (Medium & Large tier) who need a focused, fixed-scope solution for **custom gpt / rag for internal governance & policy docs**, **Custom GPT / RAG for internal governance & policy docs** is a **AI Micro-Service** backed by the **Data Analytics Strategy** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+Positioned as a lightweight **Track A** micro-service inside the client's existing tenant (`$0` CBa capital; no bespoke SaaS hosting), `OP-ITG-003` executes in four 2-week increments:
 
-Build domain-specific Q&A assistant on top of a client's existing IT/security/HR documentation to answer internal policy questions.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CIOs, CTOs & Enterprise Architecture / Cloud Leads (Medium & Large segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — Build domain-specific Q&A assistant on top of a client's existing IT/security/HR documentation to answer internal policy questions.
-3. **Deliverable & Existing IP** — Built on the **Data Analytics Strategy** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *LLM configuration, data structuring, access control*.
-4. **Sweat-Equity Feasibility** — 8 wks, High effort, \$0 initial working capital. Expected capital range: €1,500–€5,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Data quality; access control and security constraints.
-7. **Compounding / Scale Path** — Standardize vertical templates (IT, HR, compliance) and offer subscription maintenance.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Phase / Weeks | Focus | Core Activities | Deliverable |
 | --- | --- | --- | --- |
-| 8 wks | High | €1,500–€5,000 | Q2–Q3 2027 |
+| **Weeks 1–2** | **Corpus Curation & ACL Audit** | Inventory IT/security/HR policy docs, strip superseded versions, and map RBAC / SharePoint / Confluence access boundaries | **Curated Policy Corpus & Access-Control Matrix** |
+| **Weeks 3–4** | **Chunking & Citation Design** | Structure taxonomy, metadata tags (effective date, owner, domain), and mandatory source-citation rules inside client's approved LLM/RAG stack | **Metadata Schema & Retrieval Grounding Spec** |
+| **Weeks 5–6** | **Assistant Configuration & Eval** | Configure domain-specific Q&A assistant (e.g., Copilot Studio / Azure AI / approved internal RAG) and test against 30–50 golden policy questions | **Configured Policy Q&A Pilot + Accuracy Scorecard** |
+| **Weeks 7–8** | **Governance Handover & Ops Cadence** | Train policy owners on document-refresh triggers and refusal fallbacks; hand over runbook and identify `OP-ITG-014` expansion | **Owner Maintenance Runbook & Readout Memo** |
 
-## Market Validation & Source Notes
+---
 
-Directly adapted from 2026 `OP-IE-004`.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## Next Steps (Tier 2 → Pilot Gate)
+| Market Comparable | Typical Commercial Anchor | Primary Strength | Gap / Where `OP-ITG-003` Differentiates |
+| --- | --- | --- | --- |
+| **Enterprise Search / AI SaaS (Glean, Moveworks)** | `€40,000–€150,000+/yr` | Polished enterprise-wide connectors and UI | Prohibitively expensive and heavy for a single IT/HR policy domain; `OP-ITG-003` runs on existing client tools for `€1,500–€5,000`. |
+| **Out-of-the-Box M365 Copilot / ChatGPT Team** | `€20–€30/user/mo` | Instant deployment across M365 files | Indexing dirty folders causes stale-policy answers and oversharing; `OP-ITG-003` enforces curation, metadata, and citation rules first. |
+| **Custom Dev Agencies / SIs** | `€25,000–€80,000` | Bespoke vector DBs and custom web portals | Over-engineered for policy Q&A and creates maintenance lock-in; CBa prioritizes **governance and corpus hygiene** over custom code. |
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+---
 
-## Assigned Source Documents (ADPA)
+## 4. Internal IP & Source Provenance Crosswalk
 
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
+No ADPA `.docx` is assigned in [Source-Documents.md](Source-Documents.md); `OP-ITG-003` adapts 2026 `OP-IE-004` and connects directly into CBa Consult's Tier A `OP-ITG-014` (*Knowledge Intelligence & Context Governance*) capability:
 
+| Delivery Asset Required | Internal IP / Crosswalk Source | Readiness | Reuse & Portfolio Synergy |
+| --- | --- | --- | --- |
+| **Corpus Hygiene & Taxonomy Rules** | **Data Analytics Strategy** Signature Toolkit + `OP-ITG-014` context-governance patterns | **Ready (85%)** | Supplies document-freshness, canonical-owner, and deduplication gates |
+| **Access-Control & Refusal Checklist** | `OP-ITG-013` / `OP-RSK-004` permission & logging guardrails | **Ready (80%)** | Prevents cross-department policy leakage and ungrounded fabrication |
+| **Golden Q&A Evaluation Harness** | Adapted from 2026 `OP-IE-004` micro-service pattern | **Partial (65%)** | Needs standardized 30-question IT/HR eval template before Pilot #1 |
+
+---
+
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
+
+1. **Not a custom multi-tenant SaaS or vector-database engineering project:** Runs inside the client's existing approved cloud/M365 environment; CBa Consult assumes `$0` hosting or LLM API liabilities.
+2. **Not a substitute for enterprise-wide Knowledge Governance:** `OP-ITG-003` targets a bounded policy corpus; full cross-enterprise ontologies and Context Governance belong in Tier A flagship **`OP-ITG-014`**.
+3. **Not an active Wave 1 priority:** Held in Core & Specialty Backlog (`Q2–Q3 2027`) to avoid diluting `OP-ITG-014` and `OP-ITG-013` outreach.
+4. **Stage 1b (`G1b`) Status:** Ideation framing, comparables, and `OP-ITG-014` relationship clarified; remains `Idea` (Pre-Stage 2) pending Stage 2 hypothesis design or bundling as an `OP-ITG-014` implementation wedge.

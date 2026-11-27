@@ -35,7 +35,7 @@ linked_hypotheses:
 | **Capacity Allocation** | **6–10 hrs/week** for **6–8 weeks** (Pilot #1) |
 | **Pricing Anchor** | **€1,500–€5,000** fixed-scope pilot |
 | **Primary Client Outcome KPI** | **≤2–3 business days** post-3rd monthly close on **one dry-run cycle**; **€0.00** payroll/clearing variance on locked 23rd payroll bridge (`HYP-2027-008`) |
-| **Compounding Path** | Executive readout → **`OP-FIN-010`** (7-Layer Rate Engine) and/or **`OP-ITG-018` MIP** (`HYP-2027-009`) |
+| **Compounding Path** | Executive readout → sanitized **Case Study #1 (`OP-X-004`)**, **`OP-FIN-010`** (7-Layer Rate Engine), and/or **`OP-ITG-018` MIP** (`HYP-2027-009`) |
 
 ---
 
@@ -55,7 +55,7 @@ linked_hypotheses:
 3. **No custom ERP/payroll API engineering** beyond configuration and spreadsheet/BI bridges the client already uses.
 4. **No investment or tax advice.**
 
-**Pilot client prerequisites:** Documented payroll-to-GL cutoff rules; willingness to share one month of close artifacts under NDA.
+**Pilot client prerequisites:** Documented payroll-to-GL cutoff rules; willingness to share one month of close artifacts under NDA; Week-1 close baseline capture & pre-agreed `OP-X-004` Consent Tier (`Tier 1 / 2 / 3` with 5-business-day redaction review — [Capture Kit](../OP-X-004_Case_study_series_on_2027/Pilot-Case-Study-Capture-and-Anonymization-Kit.md)).
 
 ---
 
@@ -64,6 +64,7 @@ linked_hypotheses:
 - [x] **7 Pivotal Questions** in [Ideation-Spark.md](Ideation-Spark.md).
 - [x] **Pricing, KPI, $0 cap** locked in §1.
 - [x] **Track A** selected.
+- [ ] **Day-1 Baseline & Case-Study Consent Tier selected** (`Tier 1 / 2 / 3` paired with `OP-X-006` per [Pilot-Case-Study-Capture-and-Anonymization-Kit.md](../OP-X-004_Case_study_series_on_2027/Pilot-Case-Study-Capture-and-Anonymization-Kit.md)).
 - [ ] **`HYP-2027-007` complete:** internal playbook covers ≥3 of 4 one-pager deliverables in ≤15 hrs (log hours in playbook).
 - [ ] **`HYP-2027-002` signal:** ≥2 CFO/Controller proposal requests **or** **named Pilot #1** signed.
 - [ ] **Director Sign-Off** before `Idea` → `Pilot`.

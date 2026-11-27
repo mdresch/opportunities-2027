@@ -1,408 +1,75 @@
-# Ideation Document — `OP-ITG-020`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-020"
+execution_track: "Hybrid — Track A Advisory Assessment + Track B Graduated Repo Integration (sidpa-template / agent-learning)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx & mdresch/agent-learning"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx`
+# Ideation Document — `OP-ITG-020`: Agent Learning TaskPolicy Integration & Governance
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-NEW TEMPLATE LIFECYCLE SPEC
+> **Governance SSOT:** Authoritative status, effort, capital, and target quarter live in [inventory-of-ideas.md](../../inventory-of-ideas.md); portfolio sequencing lives in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md); lifecycle gates (`G1b`–`G4`) follow [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Companion workspace artifacts: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-Data Integration & Interoperability Plan
+---
 
-DMBOK knowledge area 6 of 11 — designed end-to-end through the Template Lifecycle framework
+## 1. Problem Context & 2027 Market Trigger
 
-Prepared for: Menno Drescher — ADPA Project
+Enterprise AI agents repeatedly execute structural operational decisions—selecting retrieval strategies, routing tool calls, choosing model tiers, escalating exceptions, or branching workflows. Today, most organizations govern these choices through brittle prompt tweaks or opaque heuristics with no explicit action catalog, no episode outcome scoring, and no auditable evidence justifying when an agent earned autonomy.
 
-1 July 2026 · Template Phase: Draft · Version 0.2.0 · DMBOK template 6 of 11
+**2027 Strategic Drivers & Buyer Urgency:**
+- **Buyer Persona:** Chief AI Officers, CIOs, and Platform Engineering Leads at medium and large enterprises.
+- **Post-Inventory Control Gap:** Often triggered immediately after `OP-ITG-013` reveals a client's active agent inventory, before scaling to full multi-agent fleets (`OP-ITG-016`).
+- **EU AI Act & FinOps Accountability:** Without a governed `TaskPolicy` decision layer, recurring agent choices lack deterministic audit replay, correctness-rate tracking, and measurable model-routing FinOps control.
 
-Source repository: github.com/mdresch/adpa
+---
 
-1. Executive Summary
+## 2. Solution Architecture & Delivery Workflow
 
-Where the Architecture Charter states general integration patterns (batch, event, API) per domain, this template produces specific, bilateral integration contracts between named systems of record: what moves, how often, in what format, and under what interoperability standard. Every contract must name two real systems of record — dangling, one-sided flows are a blocking quality gate.
+`OP-ITG-020` packages the **TaskPolicy Governance Lifecycle** built on [`mdresch/agent-learning`](https://github.com/mdresch/agent-learning), `sidpa-template` `DecisionFrame` semantics, and ADPA DMBOK bilateral integration contracts across four phases (6–10 weeks, 8–12 hrs/week):
 
-Why this template, why now:  Integration is where architectural intent meets operational reality, and where silent schema drift usually starts. Making every contract explicit and machine-checkable here is what lets Metadata Management later trace lineage without guessing.
+1. **Recurring Decision & Interoperability Assessment (Weeks 1–2):** Inventory high-frequency `(agent_id, task_id)` decisions and map bilateral system-of-record contracts using the ADPA Data Integration & Interoperability Plan lifecycle spec (no dangling one-sided flows).
+2. **TaskPolicy Catalog & Authority Classification (Weeks 3–4):** Classify each decision as **`low` authority** (bounded REINFORCE-learned softmax over explicit actions) or **`full` authority** (Bayesian `DecisionFrame` adjudication with `requires_human_approval` and tie-break halting).
+3. **Reference Integration & Episode Scoring (Weeks 5–7):** Wire `task-policy-init`, `task-policy-decide`, episode registration, and bounded CPU updates into a client Track B repo using local JSON stores (`AGENT_LEARNING_STORE_BACKEND=local`) at $0 cloud cost.
+4. **Autonomy Gate & Continuous Policy Audit (Weeks 8–10):** Enforce complexity-proportional autonomy gates (`user_acceptance` vs. `statistical_evidence`), replay logs, and transition continuous monitoring into an `OP-ITG-018` MIP retainer.
 
-2. Template Identity & Metadata
+**Core Pilot Deliverables:**
+- Prioritized TaskPolicy Catalog & Bilateral Integration Contracts
+- `full` vs. `low` DecisionAuthority Mapping & `sidpa-template` Reference Integration
+- Episode Scoring Dashboard & Autonomy Evidence Audit Trail (>=3 production policies)
 
-Field
+---
 
-Value
+## 3. Market Comparables & CBa Consult Differentiation
 
-template_id
+| Comparable / Alternative | Typical Packaging & Price | Core Strength | Gap / Limitation | CBa Consult (`OP-ITG-020`) Differentiation |
+| --- | --- | --- | --- | --- |
+| **LLM Observability Tools** *(LangSmith, Arize, Helicone)* | €10k–€60k+/yr SaaS | Prompt tracing, latency/token telemetry | Observes past traces; does not enforce explicit action alternatives, Bayesian authority gates, or earned autonomy | Combines observability with formal `TaskPolicy` action catalogs & `DecisionFrame` governance |
+| **Foundation Model Fine-Tuning / RLHF** | €50k–€300k+ GPU & ML eng | Adapts underlying model weights | High capital burn, opaque weight shifts, slow governance re-certification | Zero model-weight fine-tuning; bounded CPU policy updates over explicit auditable actions |
+| **Static Prompt / Rule Hardcoding** | Internal engineering hours | Simple initial deployment | Does not learn from scored episodes; brittle when tool/model landscape shifts | Closed-loop episode scoring + human tie-break safeguards aligned to `sidpa-template` |
 
-dmbok-data-integration-interoperability-plan
+---
 
-display_name
+## 4. Internal IP & Source Provenance Crosswalk
 
-Data Integration & Interoperability Plan
+Source provenance combines [Source-Documents.md](Source-Documents.md) with CBa Consult's engineering repositories noted in [Ideation-Spark.md](Ideation-Spark.md).
 
-knowledge_domain
+| Source Artifact / Repo | Provenance | Reuse Role in `OP-ITG-020` |
+| --- | --- | --- |
+| `mdresch/agent-learning` | GitHub repository (`agent-learning` SDK lineage) | Provides `TaskPolicy` CLI/SDK (`task-policy-init`, `task-policy-decide`), episode scoring, autonomy profiles, and replay docs |
+| `mdresch/sidpa-template` | GitHub repository (`sidpa-template`) | Supplies pytest-verified `DecisionFrame` gates, `DecisionAuthority`, tie-break halting, and `requires_human_approval` patterns |
+| `Data_Integration_Interoperability_Plan_Template_Lifecycle_Spec.docx` | `ADPA - Projects Lists/` (`DMBOK 2.0 Ch. 8`, v0.2.0) | Enforces bilateral `IntegrationContract`, `DataFlowMapping`, and schema-versioning gates for agent-to-system interfaces |
+| `OP-ITG-013` / `OP-ITG-011` Assets | CBa Consult portfolio | Supplies enterprise agent inventory and Entra Agent ID / Agent 365 attachment points |
 
-Data Integration and Interoperability (DMBOK 2.0, Ch. 8)
+---
 
-category
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-dmbok
-
-phase
-
-Draft
-
-version
-
-0.2.0
-
-output_formats
-
-Markdown, DOCX, PDF, HTML, JSON
-
-related_templates
-
-Enterprise Data Architecture Charter (dmbok), Data Storage & Operations Plan (dmbok)
-
-owner
-
-ADPA template maintainers (mdresch/adpa)
-
-3. Positioning in the Template Library
-
-Turns the Architecture Charter's integration patterns into concrete, bilateral contracts between named systems of record.
-
-Standard
-
-Existing docs + specs before
-
-After this template
-
-PMBOK 7th Ed.
-
-15 docs
-
-15 docs
-
-BABOK v3
-
-9 docs
-
-9 docs
-
-DMBOK 2.0
-
-19 docs + 5 lifecycle specs
-
-19 docs + 6 lifecycle specs
-
-4. Entity Profile
-
-4.1 Inputs
-
-Entity
-
-Source
-
-Required?
-
-SystemOfRecord + IntegrationPattern
-
-Architecture Charter output
-
-Required
-
-DataDomain
-
-Data Governance Charter output
-
-Required
-
-Existing API / interface inventory
-
-User-supplied or GKG
-
-Optional
-
-Existing integration content
-
-docs/generated-documents/dmbok/data-integration-interoperability-strategy.md
-
-Required — see §6.3
-
-4.2 Outputs (entities produced)
-
-Entity
-
-Description
-
-IntegrationContract
-
-Named bilateral agreement between two systems of record
-
-DataFlowMapping
-
-Source → target field-level mapping reference
-
-InteroperabilityStandard
-
-Format/schema-versioning standard the contract follows
-
-APIInventoryEntry
-
-Catalog entry for any API-based contract
-
-5. System Prompt
-
-The literal system_prompt field for the template record.
-
-ROLE: You are drafting a Data Integration & Interoperability Plan,
-
-conceptually aligned to DMBOK 2.0 Ch.8 — do not reproduce proprietary text.
-
- 
-
-TONE: Technical, contract-like. Every integration contract must name exactly
-
-two systems of record already designated in the Architecture Charter. Never
-
-invent a system, format, or standard not supplied or already in the GKG.
-
- 
-
-GROUNDING (see §6.3 — mandatory, checked before drafting):
-
-  - Reuse the integration patterns already defined in data-integration-
-
-    interoperability-strategy.md §5 (batch ETL/ELT, real-time webhooks/API,
-
-    hub-and-spoke architecture) and the format standards in §6 (JSON default,
-
-    XML for Adobe) rather than proposing new patterns.
-
-  - Reuse the KPI targets already set in §10 (>99.9% uptime, >99.5% accuracy,
-
-    <300ms response, <1% error rate) as the default targets per contract.
-
- 
-
-REQUIRED SECTIONS (in order):
-
-  1. Purpose & Scope        4. Data Flow Mappings          7. Error Handling & Retries
-
-  2. Integration Inventory  5. Interoperability Standards  8. Change Management
-
-  3. Contract Register      6. API Inventory                9. Review Cadence
-
- 
-
-EXTRACTION RULES:
-
-  - Tag each contract as [ENTITY:IntegrationContract].
-
-  - Tag each mapping as [ENTITY:DataFlowMapping].
-
-  - Tag each standard as [ENTITY:InteroperabilityStandard].
-
-  - Tag each API entry as [ENTITY:APIInventoryEntry].
-
-  - A contract referencing a system not designated as a System of Record is
-
-    the primary HITL trigger for this template (see §8).
-
-6. GKG (Governance Knowledge Graph) Integration
-
-6.1 Pre-flight context
-
-Query
-
-Purpose
-
-SystemOfRecord + IntegrationPattern nodes
-
-Ensures every contract references real, designated systems and patterns
-
-Existing IntegrationContract nodes
-
-Prevents duplicate or conflicting contracts for the same system pair
-
-Existing InteroperabilityStandard nodes
-
-Reuses established formats rather than proposing a new one per contract
-
-6.2 Post-flight sync
-
-New node → relationship
-
-Target
-
-IntegrationContract — connects →
-
-SystemOfRecord (source), SystemOfRecord (target)
-
-DataFlowMapping — implements →
-
-IntegrationContract
-
-APIInventoryEntry — exposes →
-
-IntegrationContract
-
-6.3 Grounding in Existing DMBOK Content
-
-Added on revisit: this template's system prompt (§5) must treat ADPA's existing, hand-written DMBOK content as required context, not just historical reference, so the template engine's output stays consistent with what's already been approved.
-
-Existing file (docs/generated-documents/dmbok/)
-
-What this template must reuse
-
-data-integration-interoperability-strategy.md
-
-Integration patterns (§5), format/protocol standards (§6), and the KPI targets (§10) this template's contracts must reuse rather than reinvent
-
-7. Quality Gates (Phase 10 Evaluation)
-
-Check
-
-Pass criteria
-
-Severity
-
-System traceability
-
-Every contract names two systems already designated as SystemOfRecord
-
-Blocking
-
-No dangling flow
-
-Every DataFlowMapping has both a source and target contract
-
-Blocking
-
-Pattern consistency
-
-Contract's pattern matches the domain's pattern from the Architecture Charter
-
-Warning
-
-No duplicate contract
-
-No two contracts describe the same system pair with conflicting terms
-
-Blocking
-
-8. HITL Triggers
-
-This template routes to human review whenever:
-
-Undesignated system — a contract references a system not found among existing SystemOfRecord nodes.
-
-Conflicting pattern — the contract's pattern contradicts the domain's pattern in the Architecture Charter.
-
-Duplicate contract — two contracts describe the same system pair with different terms.
-
-9. Versioning & Lifecycle Plan
-
-Phase
-
-Promotion criteria
-
-Owner
-
-Draft (current)
-
-Spec reviewed; system prompt and quality gates approved
-
-Template maintainer
-
-Testing
-
-≥ 15 generations across ≥ 3 pilot orgs; HITL rate < 40%
-
-QA / pilot leads
-
-Active
-
-HITL rate < 15%; success rate ≥ 85% over trailing 30 generations
-
-Template maintainer
-
-Deprecated
-
-Superseded by a newer version or DMBOK domain restructure
-
-Template maintainer
-
-v0.1.0 changelog: initial draft — entity profile, system prompt, GKG hooks, quality gates, and HITL triggers defined. No generations yet.
-
-v0.2.0 changelog: added §6.3 grounding the system prompt in existing docs/generated-documents/dmbok/ content; corrected §3 Positioning now that 19 existing DMBOK documents are known. Still no generations — remains in Draft.
-
-10. Metrics & Health Dashboard
-
-Metric
-
-Formula
-
-Target (Active phase)
-
-Usage count
-
-count(documents generated)
-
-n/a — volume metric
-
-Success rate
-
-passed_quality_gates / total_generations
-
-≥ 85%
-
-HITL rate
-
-flagged_for_review / total_generations
-
-< 15%
-
-Avg. generation latency
-
-mean(generation_end − generation_start)
-
-< 45s
-
-Health status
-
-weighted(success_rate, 1−HITL_rate, latency_score, user_feedback)
-
-Green
-
-11. Recommendation & Optimization Loop
-
-Example of the continuous-learning cycle this template feeds, per §6 of the framework:
-
-Failure pattern observed — in Testing, 4 of 15 generations proposed a new interoperability standard instead of reusing an existing GKG one.
-
-Recommendation generated — the loop proposes moving the GKG standards query earlier and instructing the model to prefer reuse over invention explicitly.
-
-Evolution — v0.2.0 enforces reuse-first; standard proliferation drops across the org's contract register.
-
-12. Appendix A — Sample Generated Excerpt
-
-Illustrative output from a test generation, showing the template's expected voice and entity tagging in practice:
-
-3. Contract Register
-
-  - CRM Platform → Core Ledger [ENTITY:IntegrationContract]: nightly batch,
-
-    CSV over SFTP, per Batch-Transfer-v1 [ENTITY:InteroperabilityStandard].
-
- 
-
-4. Data Flow Mappings
-
-  - cust_id → ledger.customer_ref [ENTITY:DataFlowMapping]
-
-13. Appendix B — Rollout Plan & Next Steps
-
-Pilot — run after the Architecture Charter is Active, so contracts reference real, approved systems of record.
-
-Drift watch — flag this template's output to ADPA's existing drift-detection baselines — integration contracts are a natural drift-monitoring target.
-
-Next templates — unblocks Master Data Management (needs system-to-system flow context) and Data Warehousing & BI (needs source lineage).
+- **SIDPA Rule #18 (Strict Repo Separation):** Client or internal `TaskPolicy` JSON/Cosmos stores MUST reside in graduated Track B repositories (`sidpa-template` derivatives)—**never** committed into `oppurtunities-2027`.
+- **Eligibility Discipline:** Not every conversational chat turn is a TaskPolicy; restrict policy framing to discrete, repeatable structural decisions with verifiable episode outcomes.
+- **No Premature Cloud Spend or Fine-Tuning:** Pilot #1 runs on local JSON stores (`$0` cloud infrastructure) with bounded CPU updates—no GPU training clusters.
+- **Stage 1b (`G1b`) Gate:** Upstream `agent-learning` SDK version pinning, internal CBa decision dogfooding (5–10 decisions), and `OP-ITG-013` precursor validation are required before `G4` promotion.

@@ -1,84 +1,70 @@
-# Ideation Document — `OP-MKT-009`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-MKT-009"
+execution_track: "Track B (AI Micro-Service — Small-Tier Automated B2B Content Funnel)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Automated Content Funnels.docx"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
-**Primary source:** `SocalEngage/Ideation-Document.docx`
+# Ideation Document — `OP-MKT-009`: Automated Content Funnels
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-Ideation Document
+> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md), [inventory-of-ideas.md](../../inventory-of-ideas.md), and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Local source context is tracked in [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-Social Listening & Engagement Platform
+## 1. Problem Context & 2027 Market Trigger
 
-Author: Menno
+Founders, CMOs, and lean B2B marketing leads in 2027 face tighter demand-generation budgets and declining organic reach from ad-hoc social posting. Hiring a full-time lifecycle marketer or retaining a traditional creative agency exceeds Small-tier budgets, while generic AI copywriting tools flood channels with undifferentiated content that fails to capture or convert qualified leads.
 
-Date: 28 July 2026
+`OP-MKT-009` refines CBa Consult's ADPA funnel and engagement IP into a 4–6 week, fixed-scope AI Micro-Service backed by the **Sales, Marketing & Communication Strategy** Signature Toolkit. Rather than pitching speculative B2C passive-income courses, the 2027 offer builds an evergreen B2B lead-magnet, automated email-nurture sequence, and content-repurposing pipeline atop low-cost, client-owned automation tooling.
 
-Status: Draft — v0.1
+Key demand triggers for Small-tier B2B buyers in Q1–Q2 2027 include:
 
-1. Origin of the Idea
+- **Headcount Freeze Workaround:** Capturing and warming inbound prospects systematically without adding a full-time marketing ops hire.
+- **Content Repurposing Leverage:** Turning existing executive briefings or case notes into structured multi-channel sequences instead of starting from blank prompts.
+- **GDPR-Clean Attribution:** Replacing leaky spreadsheets with consent-tracked opt-ins and clear funnel drop-off analytics.
 
-Microsoft Social Engagement (MSE) was a social listening and engagement product built alongside Dynamics 365, covering social insights, brand reputation monitoring, social care (case routing), and social selling. Microsoft discontinued MSE for new customers on 16 January 2019 and fully retired it on 16 January 2020, replacing it with Dynamics 365 Market Insights — a tool Microsoft itself described as not a direct replacement.
+## 2. Solution Architecture & Delivery Workflow
 
-This leaves a recognisable gap: a social listening tool with strong CRM-adjacent workflows (turning a social post into a lead or a case), without being locked into an expensive all-in-one CRM suite or an opaque third-party aggregator. MSE itself was criticised for being something of a black box — no API, no access to the underlying data — which limited what customers could do with their own data.
+Delivered in 4–6 weeks with Low–Med effort as a turnkey "done-for-you" funnel plus reusable template pack:
 
-2. Problem / Opportunity Statement
+1. **Weeks 1–2 — Lead-Magnet Positioning & Funnel Architecture:** Define the buyer ICP, extract one high-signal diagnostic/checklist lead magnet from existing client expertise, and map opt-in, segmentation, and GDPR double-opt-in consent flows.
+2. **Weeks 3–4 — Low-Cost Automation & Repurposing Build:** Configure the landing page, CRM/ESP webhook triggers, 7-day onboarding/nurture email sequence, and an AI-assisted content-repurposing workflow (turning one pillar brief into multi-format posts) inside the client's existing stack.
+3. **Weeks 5–6 — Conversion QA, Analytics & Template Handover:** Wire conversion-rate and drop-off dashboards, run end-to-end deliverability and link tests, and hand over the editable prompt/sequence template pack for ongoing internal reuse.
 
-Organisations that want to monitor social and web conversations about their brand, products, or topics of interest currently face a narrow set of options: expensive enterprise aggregators (Brandwatch, Meltwater) with opaque pricing and vendor lock-in, or piecing together official platform APIs themselves — a nontrivial engineering effort given each platform's distinct auth model, rate limits, and data shape.
+Core tangible deliverables produced across the sprint:
 
-There is an opportunity to build a modern, modular alternative that:
+- **High-Signal Lead Magnet & Opt-In Page:** Positioned diagnostic or checklist asset wired into the client's CRM/ESP.
+- **Automated 7-Day Nurture & Repurposing Pipeline:** Live email sequence plus documented AI-assisted content-repurposing SOP.
+- **Funnel Analytics & Template Pack:** Conversion/drop-off tracking sheet and editable prompt/copy templates for client reuse.
 
-Treats each social/AI platform as a swappable connector rather than a hard-coded integration
+## 3. Market Comparables & CBa Consult Differentiation
 
-Gives the operator (not a vendor) ownership of the data and the analysis pipeline
+| Market Comparable | Typical Positioning & Pricing | Structural Gap in 2027 | CBa Consult Differentiation (`OP-MKT-009`) |
+| :--- | :--- | :--- | :--- |
+| Full-Service Demand Gen Agencies | €5k–€15k/mo ongoing retainers | Heavy overhead and slow creative cycles unsuitable for €600–€2,500 budgets | Fixed 4–6 week sprint delivering an owned, evergreen funnel with zero lock-in |
+| Freelance Copywriters | €1k–€3k isolated email or landing copy | Deliver static text without CRM triggers, repurposing automation, or analytics | Combines copy, automation wiring, repurposing SOPs, and conversion telemetry |
+| All-in-One Funnel SaaS Platforms | €100–€400/mo empty software subscriptions | Buyers struggle with blank-page strategy and weak lead-magnet quality | Built on **Sales, Marketing & Communication Strategy** IP + ready-to-launch pack |
 
-Is multi-tenant from day one, so it can serve more than one organisation's needs without redesign
+## 4. Internal IP & Source Provenance Crosswalk
 
-Avoids the 'black box' criticism levelled at MSE by retaining full raw payloads and full audit traceability of every ingested record
+| Source Artifact | Provenance Status | Core Contribution to `OP-MKT-009` | Disposition for 2027 Offer |
+| :--- | :--- | :--- | :--- |
+| `Automated Content Funnels.docx` (+ `v1.docx`) | Assigned ADPA source ([Source-Documents.md](Source-Documents.md)) | 7-day email nurture structure, gated delivery, conversion/drop-off analytics, automation efficiency framing | Adapted from B2C digital-product income model to B2B Small-tier client service |
+| `SocalEngage/*` (`Ideation-Document.docx`, `Business-Case.docx`, `Project-Charter.docx`, `Stakeholder-Register.docx`) | Supporting ADPA sources ([Source-Documents.md](Source-Documents.md)) | Modular multi-tenant social listening, lead-signal routing, and stakeholder governance artifacts | Preserved as optional upstream social-signal inspiration; not required for MVP funnel |
+| Sales, Marketing & Communication Strategy Toolkit | Internal CBa Signature Toolkit | ICP messaging frameworks, lead-magnet templates, B2B nurture cadences | Primary consulting methodology for Weeks 1–4 |
 
-3. Initial Concept
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-A standalone, Azure-native, multi-tenant platform structured around four capability areas mirroring MSE's original scope, built as independent subsystems rather than one monolith:
+- **No paid-media buying or ad-spend management:** CBa Consult builds the organic/inbound capture and email-nurture engine; paid Meta/LinkedIn ad budgets remain outside scope.
+- **No custom SaaS platform development:** Unlike the supporting `SocalEngage` multi-tenant platform concept, `OP-MKT-009` configures existing low-cost ESP/CRM/automation tools rather than building bespoke Azure software.
+- **No guaranteed traffic volume without a credible lead magnet:** Conversion depends on authentic subject-matter substance supplied during Weeks 1–2 discovery.
 
-Social Listening / Insights — ingest posts across platforms, normalize, enrich with sentiment/entities, and expose data via API and events. (First subsystem — spec already completed.)
-
-Brand Reputation & Alerts — crisis detection, influencer tracking, sentiment trend alerts, consuming Listening's event stream.
-
-Social Care — case/ticket routing from social posts into a service workflow, consuming Listening's data.
-
-Social Selling — recommendations and lead-generation signals for sales use, consuming Listening's data.
-
-Each subsystem is designed, specced, and built independently, consuming the Listening subsystem's outputs rather than duplicating ingestion logic.
-
-4. Key Differentiators from MSE and Existing Tools
-
-Pluggable connector framework — new social platforms or AI enrichment providers added without touching core pipeline code
-
-Swappable AI provider for enrichment (Azure AI Language today; OpenAI, Claude, or others later) rather than a single hard-coded vendor
-
-Full raw-payload retention (JSONB) and per-post acquisition tracking (IngestionRun) — nothing is a black box, everything is traceable to the exact process and moment it entered the system
-
-Multi-tenant with database-level isolation (Postgres Row-Level Security), not just application-level filtering
-
-User-controlled platform activation — each tenant brings their own credentials and toggles platforms on/off independently
-
-5. Target Users (Initial Thinking)
-
-Given this starts as a solo, personal project, the initial 'user' is the builder — proving the architecture and connector pattern with real data. A plausible longer-term audience, once validated, includes small-to-mid-size organisations or agencies that want social listening capability without enterprise aggregator pricing or lock-in. This is not a committed target market at this stage — it is a direction worth validating once the core subsystem is working.
-
-6. Open Questions Carried Into the Business Case
-
-Is the ongoing goal a personal/portfolio project, an eventual product, or purely an architectural exercise?
-
-What is an acceptable ongoing cost ceiling (API tiers, Azure spend) given this is self-funded?
-
-How much of the four-subsystem vision is realistic to pursue solo, versus scoping permanently down to Listening + one downstream subsystem?
-
-7. Next Steps
-
-Complete business case (cost/benefit, build-vs-buy comparison)
-
-Complete stakeholder register
-
-Draft project charter for the first subsystem (Social Listening / Insights)
-
-Hand off approved design spec to implementation (Claude Code / VS Code)
+| Stage 1b Criterion | Status | Readiness Note |
+| :--- | :--- | :--- |
+| Problem & 2027 Buyer Trigger Defined | Complete | Founders, CMOs & B2B Marketing Leads seeking low-risk automated lead nurture |
+| Source Scope Reconciled | Complete | Separates turnkey funnel micro-service from heavy `SocalEngage` custom platform build |
+| Stage 2 Hypothesis Formulation | Pending | Package 1–2 concrete B2B funnel templates and validate Q1–Q2 2027 demand |
