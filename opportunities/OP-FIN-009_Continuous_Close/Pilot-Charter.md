@@ -21,7 +21,7 @@ linked_hypotheses:
 > **Governance Notice:** Inventory `Status` remains **`Idea`** until internal IP sprint `HYP-2027-007` is complete enough to tailor for Pilot #1, **a named pilot client** is secured (`HYP-2027-002`), and **Director sign-off** is recorded in §5.
 
 **Client-facing asset:** [One_Pager_OP-FIN-009_Continuous_Close.md](One_Pager_OP-FIN-009_Continuous_Close.md)  
-**Internal playbook (HYP-007):** [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md)  
+**Internal playbook (HYP-007):** [RGP-23rd-to-3rd-Playbook-Internal.md](RGP-23rd-to-3rd-Playbook-Internal.md) · **Blueprints:** [Close-Calendar-Dependency-Gate-Blueprint-Internal.md](Close-Calendar-Dependency-Gate-Blueprint-Internal.md), [SoD-Official-KPI-Control-Matrix-Internal.md](SoD-Official-KPI-Control-Matrix-Internal.md)  
 **IFRS 18 notes:** [IFRS-18-Close-Relevance-Notes.md](IFRS-18-Close-Relevance-Notes.md)  
 **Discovery log:** [Wave-1-Discovery-Evidence-Log.md](Wave-1-Discovery-Evidence-Log.md)
 

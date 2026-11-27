@@ -1,71 +1,113 @@
 ---
 pmbok_edition: "PMBOK 8"
 pmbok_process_group: "Initiating"
-pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
-lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+pmbok_process: "Opportunity Framing & Facilitation Architecture"
+lifecycle_stage: "Stage 1b — Ideation (Tier 2 Draft — Director Review Required)"
+governance_policy: "Human Adjudication Gate (requires_human_approval: true)"
 opportunity_id: "OP-CHG-002"
-execution_track: "Track B (Core & Specialty Backlog — Advisory / Facilitation)"
-linked_hypotheses: "None yet (Pre-Stage 2)"
-primary_source: "Opportunities to Publish/Town Hall Meetings Orchestration.docx"
-date: "2026-11-27"
-owner: "Menno Drescher (Director, CBa Consult)"
+status: "Idea"
+inputs:
+  - "Ideation-Spark.md"
+  - "Source-Documents.md"
+  - "Opportunities to Publish/Town Hall Meetings Orchestration.docx (OneDrive canonical source)"
+  - "../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md"
+outputs:
+  - "Ideation-Document.md"
+date: 2026-11-27
 ---
 
 # Ideation Document — `OP-CHG-002`: Town Hall Meetings Orchestration
 
-> **Governance SSOT:** Governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and cataloged in [inventory-of-ideas.md](../../inventory-of-ideas.md). Portfolio tiering context is tracked in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Local workspace baseline: [Ideation-Spark.md](Ideation-Spark.md), [Source-Documents.md](Source-Documents.md), and [BD-Quick-Reference.md](BD-Quick-Reference.md).
+**Stage:** Stage 1b — Ideation (`Tier 2 Deeper Research & Source Reconciliation`)  
+**Governing Process:** [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) · [ideation-template.md](../../ideation-template.md)  
+**Primary Verified Internal IP:** `Opportunities to Publish/Town Hall Meetings Orchestration.docx` *(authoritative facilitation, KPI, stakeholder, and operational charter material structured below — see §3.3 Source Reconciliation Note)*
 
-## 1. Problem Context & 2027 Market Trigger
+---
 
-Mid-market and large distributed organizations increasingly rely on hybrid workforces while pushing through high-stakes 2027 initiatives (cost restructuring, AI operating-model shifts, and regulatory readiness programs). Traditional C-suite town halls either incur high in-person travel and venue costs or devolve into poorly produced, one-way video calls with passive attendance, unanswered Q&A queues, and zero post-meeting action accountability.
+## 1. Problem Framing: Why Hybrid Town Halls Fail
 
-- **Target Buyers:** CHROs, Transformation PMOs, Internal Communications Leads, and Program Directors in the Medium & Large segment.
-- **2027 Market Trigger:** Heightened cost discipline (eliminating ad-hoc travel and venue budgets), leadership communication demands around restructuring and AI adoption, and buyer preference for fixed-scope, conflict-free facilitation over expensive multi-month change retainers.
-- **Core Pain (The Wedge):** Organizations lack an integrated production and facilitation operating system that connects C-suite messaging, structured live Q&A moderation, and verifiable follow-up execution.
+Across Medium and Large organizations (`200–5,000+` distributed employees), quarterly or transformation town halls routinely fail to change alignment or trust due to four recurring orchestration breakdowns:
 
-## 2. Solution Architecture & Delivery Workflow
+1. **Broadcast Monologues Over Dialogue:** Senior executives read dense 40-slide updates past time, leaving `<5` minutes for rushed Q&A rather than structured two-way engagement.
+2. **Unmoderated or Ignored Tough Questions:** Anonymous/chat questions are cherry-picked or left unanswered, eroding employee confidence and psychological safety—especially during cost discipline, ERP changes, or AI restructuring.
+3. **Hybrid Disparity:** In-room executives interact naturally while remote employees suffer muffled audio, ignored chat feeds, and zero timezone/replay consideration (`20–40%` effective remote participation drop).
+4. **Zero Post-Event Accountability:** Commitments made live by C-Suite leaders disappear after the call ends; unanswered Q&A is rarely synthesized, owned, or published back to staff within a defined SLA.
 
-Built on CBa Consult's **Program, Project & Change Management** Signature Toolkit and PMBOK Integration Management discipline, `OP-CHG-002` delivers a repeatable, 4-phase orchestration workflow over a **2–4 week** engagement window:
+**Core Design Thesis:** Bring disciplined **Program Management (`PMBOK 8`) + Impartial External Facilitation** onto the client's *existing* COTS meeting platform (`Teams Town Hall`, `Zoom Events`, `Slido`, `Menti`) so CBa Consult orchestrates high-trust, data-backed town halls in **2–4 weeks** at **`€0` capex**.
 
-1. **Phase 1 — Capability & Audience Diagnostic (Days 1–4):** Assess current virtual/hybrid broadcast tooling (Microsoft Teams Town Hall, Zoom Events, or existing webinar stack), executive readiness, and workforce distribution; lock run-of-show objectives and KPI targets.
-2. **Phase 2 — Agenda, Narrative & Digital Production Design (Days 5–10):** Structure C-suite talking points, pre-submitted and live Q&A moderation rules, interactive polling cadence, and broadcast technical runbooks.
-3. **Phase 3 — Rehearsal & Live Orchestration (Days 11–16):** Conduct executive dry run and audio/video tech check; facilitate the live town hall with real-time moderation, escalation triage, and engagement capture.
-4. **Phase 4 — Action Closure & Telemetry Review (Days 17–20):** Publish structured summary, owner-assigned Q&A follow-up log, and post-event scorecard tracking participation rates, sentiment/feedback scores, and action-item closure.
+---
 
-### Core Deliverables & Success Metrics
+## 2. Target Offering Architecture (4-Phase Event Runbook, `2–4` Weeks)
 
-- **Run-of-Show & Production Playbook:** Reusable minute-by-minute broadcast script, moderator cues, and fallback tech protocol.
-- **Moderated Q&A & Action Register:** Categorized unanswered questions mapped to named executive owners with 14-day closure tracking.
-- **Post-Event Telemetry Scorecard:** Participation rate, active Q&A/poll engagement ratio, and employee pulse feedback score delta.
+| Phase | Timeline Window | Concrete Activities & Client Deliverables | Lead / Partner |
+| :--- | :--- | :--- | :--- |
+| **P1. Narrative Framing & Structured Run-of-Show** | `T-14d` to `T-10d` | Align with Executive Sponsor & Internal Comms on 2–3 core business messages; replace slide-heavy decks with crisp **15–20 min narrative + 25–30 min moderated Q&A** run-of-show; configure anonymous pre-event Q&A & live pulse poll prompts. | CBa Facilitator + Chief of Staff / Comms |
+| **P2. Presenter Coaching, Q&A Triage & Technical Dry-Run** | `T-7d` to `T-2d` | Triage top pre-submitted employee questions into visible themes (including "tough/elephant-in-the-room" topics); coach 2–4 presenters on camera presence, pacing & concise Q&A; execute mandatory **45-min Technical Rehearsal** with Client IT/AV Lead. | CBa Facilitator + Speakers + Client IT/AV |
+| **P3. Live Facilitated Broadcast & Moderated Q&A** | **Event Day (`T-0`)** | Run live backstage pacing cue sheet; host transitions cleanly between executives; run real-time audience polls; impartially moderate live & upvoted Q&A ensuring candid dialogue while enforcing respect boundaries. | CBa Facilitator (Host/Moderator) + Client IT Ops |
+| **P4. Action Closure Digest & Engagement Scorecard** | `T+1d` to `T+5d` | Publish **48-hr Replay + Top-Takeaway Summary**; compile every unanswered/deferred question with named executive owner and response inside a **5-Day Q&A Digest**; deliver **1-Page Event KPI Scorecard** (`attendance`, `poll participation`, `Q&A closure`, `sentiment`). | CBa Facilitator + Internal Comms / PMO |
 
-## 3. Market Comparables & CBa Consult Differentiation
+---
 
-| Comparable Category | Typical Market Offering | Limitations / Friction | CBa Consult (`OP-CHG-002`) Differentiation |
-| --- | --- | --- | --- |
-| **AV / Event Production Agencies** | High-cost broadcast staging and camera/studio logistics | Zero change-management governance, executive alignment, or post-event PMO follow-through | Zero-CapEx virtual/hybrid production using existing client M365/Zoom stack plus structured action tracking |
-| **Big Four Change Practices** | Multi-month comms workstreams embedded in large transformation programs | High day rates, junior staffing, and slow procurement cycles | Fixed-scope 2–4 week sprint led directly by senior advisory with €500–€2,000/event entry economics |
-| **Internal Comms / Ad-Hoc IT** | Slide deck assembly and basic webinar link setup | Poor pacing, unmoderated Q&A bottlenecks, and no closed-loop accountability | PMBOK-aligned Integration & Stakeholder runbook with measurable participation and sentiment KPIs |
+## 3. Verified Internal IP (`≥70%` Coverage) & Source Reconciliation
 
-## 4. Internal IP & Source Provenance Crosswalk
+### 3.1 Preserved KPI & Engagement Architecture *(Adapted from ADPA Charter §2.2 & §5.1)*
 
-| Asset / Source | Provenance Location | Role in `OP-CHG-002` | Reuse Readiness |
-| --- | --- | --- | --- |
-| **ADPA Ideation & Business Case Source** | `Opportunities to Publish/Town Hall Meetings Orchestration.docx` | Defines digital-first town hall production objectives, stakeholder alignment, and KPI baseline | Extracted & normalized |
-| **Program, Project & Change Management Toolkit** | CBa Consult Signature Toolkit | Supplies stakeholder communication matrices, run-of-show templates, and action-log governance | Ready for immediate client tailoring |
-| **Workspace Reference Artifacts** | [Source-Documents.md](Source-Documents.md), [BD-Quick-Reference.md](BD-Quick-Reference.md) | Traces ADPA source manifest and local Business Development collateral paths | Linked in workspace |
-| **Portfolio Proof Engine (`OP-X-004`)** | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Captures anonymized participation/feedback deltas for repeatable BD case studies | Post-pilot dependency |
+| Objective Dimension | Operational Control Rule (`Client-Native Stack`) | Measurable Target KPI | Measurement Source |
+| :--- | :--- | :--- | :--- |
+| **1. Broadcast Reliability** | Standardized rehearsal, audio/video check & backstage producer cue sheet (`T-2d`) | **`≥95%` issue-free sessions** · **`≥85%`** positive AV/format rating | Post-event 3-question pulse survey |
+| **2. Workforce Reach** | Multi-channel calendar holds, timezone replay links & localized distribution | **`≥90%` live + 48-hr replay reach** (`+20%` remote attendance lift) | Teams / Zoom attendance & stream logs |
+| **3. Active Participation** | Structured pre-work Q&A intake, live upvoting, and 2–3 pulse polls embedded in run-of-show | **`≥70%` of attendees** participate in Q&A, upvoting, or polls | Slido / Teams Q&A & polling telemetry |
+| **4. Strategic Clarity & Trust** | Candid C-Suite response to top upvoted questions + zero spin moderation | **`≥80%` of employees** report clearer direction & leadership trust post-event | Pulse feedback score vs. prior baseline |
+| **5. Logistical Cost Efficiency** | Replace high-cost physical all-hands travel/venues with hybrid digital-first orchestration | **`≥30%` reduction** in direct travel/venue spend per all-hands cycle | Client Finance / Comms event budget comparison |
+| **6. Follow-Through SLA** *(CBa Enhancement)* | Publish answered/deferred Q&A backlog with accountable owner post-event | **`100%` of deferred Q&A addressed within `5` business days (`T+5d`)** | Published SharePoint/Intranet Q&A Digest |
 
-## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
+### 3.2 Stakeholder Roles & Operational Checklists *(Normalized from ADPA §2.3 & §3.1)*
 
-To preserve margin and prevent delivery sprawl under a `$0` working-capital model, `OP-CHG-002` enforces strict boundaries:
+- **Stakeholder Governance Matrix:**
+  - **Executive Sponsor / CEO / C-Suite Speakers:** Own strategic message clarity, candid answers to tough themes, and visible endorsement of post-event actions.
+  - **Internal Comms / HR Lead (Client Sponsor):** Own employee comms distribution, intranet digest publishing, brand tone, and pulse distribution.
+  - **Client IT / AV Support Lead:** Own Microsoft Teams Town Hall / Zoom Events / Slido tenant licensing, bandwidth/SSO access, recording permissions, and live stream fallback.
+  - **Employee Champions / Dept Moderators:** Seed early Q&A themes from frontline sites and amplify follow-up digests locally.
+  - **CBa Consult Orchestrator (External Facilitator):** Own run-of-show pacing, presenter dry-run discipline, impartial live Q&A moderation, KPI scorecard compilation, and conflict-free coaching feedback.
+- **Technical & Operational Readiness Checklist:**
+  - **500+ attendee capacity** tested on client-native licensed tenant (`SSO` / recording enabled).
+  - **Pre-submitted Q&A window** opened `T-7d` with clear moderation charter (*no censorship of legitimate business concerns; only harassment/PII redacted*).
+  - **Mandatory `T-2d` Technical Dry-Run** verifying screen sharing, backup host role, presenter audio levels, and live poll transitions.
 
-- **Out of Scope:** Physical venue rental, on-site AV hardware procurement, bespoke video studio construction, custom SaaS streaming development, and ongoing internal HR communications staffing.
-- **Client Prerequisites:** Named C-suite sponsor, internal communications point of contact, and access to the client's existing webinar/broadcast platform.
-- **Accountable Ownership:** CBa Consult leads agenda engineering, run-of-show, and Q&A moderation; the client retains message approval and internal follow-up execution.
-- **Stage 1b Review Outcome:** Ready for selective activation from the Core & Specialty Backlog once CHRO/PMO demand or Tier A cross-sell triggers Stage 2 discovery.
+### 3.3 ADPA Source Reconciliation Note *(Custom Platform Retirement)*
 
-| Stage 1b Gate Check | Status | Next Gate Action |
-| --- | --- | --- |
-| **Buyer, Pain & Workflow Locked** | Complete | Advance to Stage 2 only upon CHRO/PMO pull |
-| **Negative Scope & `$0` CapEx Verified** | Complete | Maintain fixed-scope boundary in Pilot SOW |
-| **Commercial Case & G4 Sign-Off** | Linked | Tracked in [Business-Case.md](Business-Case.md) (`PARKED_IN_INVENTORY`) |
+> **Important Scope Reconciliation (`2026-11-27`):**  
+> The raw ADPA file `Town Hall Meetings Orchestration.docx` included an earlier 2026 draft business case modeling a hypothetical **`USD 750k` upfront custom virtual production platform** (`Option 3` with `USD 1.72M` modeled 5-yr NPV) alongside `500k–2.5M` enterprise cost-of-inaction figures.  
+> Per `inventory-of-ideas.md` and CBa Consult's **€0 Working Capital / Advisory Focus (`OP-CHG-002`: `€500–€2,000 / event`, `2–4 wks`, `Low` effort)**, the custom software-platform build is **explicitly retired**. All client delivery runs strictly on **Client-Native COTS Platforms** (`Teams`, `Zoom`, `Slido`), preserving 100% of the ADPA document's facilitation methodology, stakeholder alignment rules, and KPI framework without software capex.
+
+---
+
+## 4. Competitive Comparables & Differentiation (`G1b` Benchmark)
+
+| Comparable / Alternative | Typical Buyer & Pricing | Strength | Structural Gap Exploited by `OP-CHG-002` |
+| :--- | :--- | :--- | :--- |
+| **1. Corporate Event & AV Production Agencies** | Corporate Comms / Marketing · `€8,000–€35,000 / event` | Broadcast-grade studio cameras, lighting & motion graphics | Over-engineered and expensive for recurring quarterly updates; focuses on *stage polish* rather than candid Q&A moderation or 5-day operational action closure. |
+| **2. PR & Executive Speechwriting Consultancies** | CEO Office / Comms · `€5,000–€15,000` per cycle | Polished executive keynotes and script crafting | Stops once the speech ends; produces overly scripted, low-trust broadcasts with weak frontline Q&A dialogue and no PMO action tracker. |
+| **3. DIY Internal HR / IT Admin Teams** | Internal Comms + IT Helpdesk · Internal overhead only | Zero external fee; direct tenant access | Staff lack impartiality to press C-Suite speakers on tough employee questions or push back on bloated 45-slide agendas; post-event Q&A follow-ups stall internally. |
+| **CBa Consult (`OP-CHG-002`)** | **CHRO / Internal Comms / PMO · `€500–€2,000 / event` Fixed Scope** | **PMBOK/SIDPA pacing discipline + impartial external moderation + `T+5d` Q&A closure SLA** | **Achieves executive broadcast rigor and genuine two-way employee dialogue on the client's own Teams/Zoom stack at 10–15% of AV-agency pricing.** |
+
+---
+
+## 5. Draft Stage 2 Falsifiable Hypotheses *(Candidates Only — Not Yet Registered)*
+
+> **Governance Note:** Draft candidates below await Director review prior to formal entry in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) (`Stage 2`).
+
+1. **Candidate `HYP-CHG-002-A` *(Desirability / Retainer Conversion)*:**  
+   *We believe* **Medium & Large HR / Internal Comms Directors running transformation programs** *will* **purchase a paid Town Hall Orchestration pilot (`€1,000–€1,500`) and convert to a recurring quarterly retainer** *because* **internal teams lack an impartial moderator who can hold executives to a 15-min narrative + structured tough-Q&A discipline**. *We will know this is true when* **≥2 of 5 pitched transformation sponsors book Pilot Event #1 and ≥50% request quarterly continuation pricing post-event**, *and false if* **<20% (`0–1 of 5`) see budget value beyond internal HR/IT facilitation**.
+
+2. **Candidate `HYP-CHG-002-B` *(Feasibility / Low-Effort Margin)*:**  
+   *We believe* **one CBa Consult Director** *can* **deliver complete `P1–P4` orchestration for an all-hands (`≤1,000` staff) in ≤14 total hours across 3 weeks with €0 external tool spend** *because* **the standardized run-of-show, dry-run checklist, and Q&A digest templates eliminate custom production prep**. *We will know this is true when* **Pilot #1 logs ≤14.0 hours total effort with ≥85% post-event pulse satisfaction**, *and false if* **speaker deck/AV troubleshooting exceeds 22 hours per event**.
+
+---
+
+## 6. Stage 1b (`G1b`) Completion Checklist
+
+- [x] **Internal IP (`≥70%`) verified & reconciled:** ADPA KPIs, 5 stakeholder groups, technical readiness checklists extracted cleanly; `$750k` custom platform retired in §3.3.
+- [x] **Market comparables benchmarked:** 3 comparables analyzed vs. CBa's `€500–€2,000` impartial COTS facilitation model (§4).
+- [x] **Scope & platform boundaries explicit:** Zero custom software or AV rental scope; strictly advisory facilitation & action governance.
+- [ ] **Director Sign-Off:** Authorize Stage 2 hypothesis registration in [Hypothesis-Register.md](../../docs/registers/Hypothesis-Register.md) (`G2`) and approve outreach with [Business-Case.md](Business-Case.md).
