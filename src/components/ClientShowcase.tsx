@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
   BookOpen,
@@ -7,7 +7,7 @@ import {
   Download,
   FileDown,
   FileText,
-  Lock,
+  Menu,
   Plus,
   Search,
   X,
@@ -24,17 +24,26 @@ import {
 } from './ClientServiceDrawer';
 import { ClientReportDrawer } from './ClientReportDrawer';
 import { exportHtmlStringToPdf } from '../utils/pdfExport';
-import { saveScopingInquiryToFirestore } from '../firebase';
 import heroBoardroomImg from '../assets/images/hero_cba_boardroom_1795700418173.jpg';
 import governanceArchImg from '../assets/images/showcase_governance_architecture_1795700420378.jpg';
 
 interface ClientShowcaseProps {
+  shortlist: string[];
+  onToggleShortlist: (serviceLabel: string) => void;
+  onAddToShortlist: (serviceLabel: string) => void;
+  onClearShortlist: () => void;
   onSwitchToInternal: () => void;
   onOpenAgentAssessment: () => void;
   onOpenReportsLibrary: () => void;
   initialSection?: string | null;
-  initialShortlistItem?: string | null;
   onClearInitialNavigation?: () => void;
+}
+
+function slugifyBriefKey(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 const HERO_IMAGE = heroBoardroomImg;
@@ -73,11 +82,14 @@ const MIP_TIERS = [
 ];
 
 export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
+  shortlist,
+  onToggleShortlist,
+  onAddToShortlist,
+  onClearShortlist,
   onSwitchToInternal,
   onOpenAgentAssessment,
   onOpenReportsLibrary,
   initialSection,
-  initialShortlistItem,
   onClearInitialNavigation,
 }) => {
   const [data, setData] = useState<ClientPortfolioData | null>(null);
@@ -86,6 +98,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
   const [heroImgFailed, setHeroImgFailed] = useState(false);
   const [archImgFailed, setArchImgFailed] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const [audienceFilter, setAudienceFilter] = useState<'All Executives' | ExecutiveAudience>(
     'All Executives'
@@ -99,7 +112,6 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
   const [activeReport, setActiveReport] = useState<ClientReportEntry | null>(null);
   const [exportingReportSlug, setExportingReportSlug] = useState<string | null>(null);
   const [reportExportError, setReportExportError] = useState<string | null>(null);
-  const [shortlist, setShortlist] = useState<string[]>([]);
 
   // Scoping form state
   const [fullName, setFullName] = useState('');
@@ -112,6 +124,45 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
   const [formError, setFormError] = useState<string | null>(null);
   const [confirmation, setConfirmation] = useState<ScopingInquiryResponse | null>(null);
   const [copiedSummary, setCopiedSummary] = useState(false);
+
+  const syncDrawerParams = useCallback((briefKey: string | null, reportSlug: string | null) => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('brief');
+    url.searchParams.delete('report');
+    if (briefKey) url.searchParams.set('brief', briefKey);
+    if (reportSlug) url.searchParams.set('report', reportSlug);
+    if (url.toString() !== window.location.href) {
+      window.history.replaceState({}, '', url.toString());
+    }
+  }, []);
+
+  const openBrief = useCallback(
+    (brief: ClientBriefSelection, keyOverride?: string) => {
+      setActiveReport(null);
+      setActiveBrief(brief);
+      syncDrawerParams(keyOverride || slugifyBriefKey(brief.title), null);
+    },
+    [syncDrawerParams]
+  );
+
+  const openReport = useCallback(
+    (rep: ClientReportEntry) => {
+      setActiveBrief(null);
+      setActiveReport(rep);
+      syncDrawerParams(null, rep.slug);
+    },
+    [syncDrawerParams]
+  );
+
+  const closeBrief = useCallback(() => {
+    setActiveBrief(null);
+    syncDrawerParams(null, null);
+  }, [syncDrawerParams]);
+
+  const closeReport = useCallback(() => {
+    setActiveReport(null);
+    syncDrawerParams(null, null);
+  }, [syncDrawerParams]);
 
   useEffect(() => {
     let cancelled = false;
@@ -135,27 +186,86 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
     };
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = useCallback((id: string) => {
+    setMobileNavOpen(false);
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+    if (!el) return;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+  }, []);
 
   useEffect(() => {
     if (loading || !data) return;
-    if (!initialSection && !initialShortlistItem) return;
-    if (initialShortlistItem) {
-      setShortlist((prev) =>
-        prev.includes(initialShortlistItem) ? prev : [...prev, initialShortlistItem]
-      );
+    const params = new URLSearchParams(window.location.search);
+    const reportParam = params.get('report');
+    const briefParam = params.get('brief');
+    if (reportParam) {
+      const matchedReport = data.clientReports.find((r) => r.slug === reportParam);
+      if (matchedReport) setActiveReport(matchedReport);
+    } else if (briefParam) {
+      const targetKey = slugifyBriefKey(briefParam);
+      if (targetKey === 'mip') {
+        setActiveBrief({
+          title: 'Managed Intelligence Provider (MIP)',
+          subtitle: 'Ongoing Governance Stewardship · CEO, CIO, CFO, CISO & PE',
+          serviceLabel: 'Managed Intelligence Provider (MIP) Retainer',
+          duration: 'Monthly retainer',
+          investmentRange: '€2,500 – €12,000+ / mo',
+          onePagerPath: data.mipOnePagerPath,
+        });
+      } else if (targetKey === 'flagship-overview') {
+        setActiveBrief({
+          title: 'Flagship Opportunities Overview (2027–2030)',
+          subtitle: 'CBa Consult · Executive Client Brief',
+          serviceLabel: 'Executive Portfolio Scoping Call',
+          duration: '3–10 weeks fixed scope',
+          investmentRange: '€1,500 – €18,000+',
+          onePagerPath: data.flagshipOverviewPath,
+        });
+      } else {
+        const flagship = data.flagships.find(
+          (f) => f.id.toLowerCase() === briefParam.toLowerCase() || slugifyBriefKey(f.title) === targetKey
+        );
+        if (flagship) {
+          setActiveBrief({
+            title: flagship.title,
+            subtitle: `${flagship.strategicAsset} · ${flagship.buyerLine}`,
+            serviceLabel: flagship.title,
+            duration: flagship.duration,
+            investmentRange: flagship.investmentRange,
+            onePagerPath: flagship.onePagerPath,
+          });
+        } else {
+          const catalogItem = data.catalog.find(
+            (c) => c.id.toLowerCase() === briefParam.toLowerCase() || slugifyBriefKey(c.title) === targetKey
+          );
+          if (catalogItem) {
+            setActiveBrief({
+              title: catalogItem.title,
+              subtitle: `${catalogItem.practice} · ${catalogItem.category}`,
+              serviceLabel: catalogItem.title,
+              duration: catalogItem.duration,
+              investmentRange: catalogItem.investmentRange,
+              onePagerPath: catalogItem.onePagerPath,
+              description: catalogItem.description,
+              toolkit: catalogItem.toolkit,
+            });
+          }
+        }
+      }
     }
-    if (initialSection) {
-      setTimeout(() => {
-        const el = document.getElementById(initialSection);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 60);
-    }
-    onClearInitialNavigation?.();
-  }, [loading, data, initialSection, initialShortlistItem, onClearInitialNavigation]);
+  }, [loading, data]);
+
+  useEffect(() => {
+    if (loading || !data || !initialSection) return;
+    const timer = window.setTimeout(() => {
+      scrollToSection(initialSection);
+      onClearInitialNavigation?.();
+    }, 60);
+    return () => window.clearTimeout(timer);
+  }, [loading, data, initialSection, onClearInitialNavigation, scrollToSection]);
 
   const featuredReports = useMemo(() => {
     if (!data) return [];
@@ -164,17 +274,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
       .slice(0, 4);
   }, [data]);
 
-  const toggleShortlist = (label: string) => {
-    setShortlist((prev) =>
-      prev.includes(label) ? prev.filter((x) => x !== label) : [...prev, label]
-    );
-  };
-
   const handleRequestScoping = (label: string) => {
-    setShortlist((prev) => (prev.includes(label) ? prev : [...prev, label]));
-    setActiveBrief(null);
-    setActiveReport(null);
-    setTimeout(() => scrollToSection('inquire'), 60);
+    onAddToShortlist(label);
+    closeBrief();
+    closeReport();
+    window.setTimeout(() => scrollToSection('inquire'), 60);
   };
 
   const handleDownloadClientReportHtml = async (report: ClientReportEntry) => {
@@ -284,23 +388,27 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
       }
 
       const confirmed = json as ScopingInquiryResponse;
-      await saveScopingInquiryToFirestore(
-        confirmed.referenceId,
-        confirmed.inquiry,
-        confirmed.emailDeliveryStatus
-      );
+      try {
+        const { saveScopingInquiryToFirestore } = await import('../firebase');
+        await saveScopingInquiryToFirestore(
+          confirmed.referenceId,
+          confirmed.inquiry,
+          confirmed.emailDeliveryStatus
+        );
+      } catch (firestoreErr) {
+        console.warn('Client Firestore mirror skipped:', firestoreErr);
+      }
       setConfirmation(confirmed);
     } catch {
-      setFormError('Unable to save your scoping request right now. Please try again.');
+      setFormError('Unable to submit your scoping request right now. Please try again.');
     } finally {
       setSubmitting(false);
     }
   };
 
-  const handleCopySummary = () => {
-    if (!confirmation) return;
-    const { referenceId, inquiry } = confirmation;
-    const text = [
+  const buildSummaryText = (resp: ScopingInquiryResponse) => {
+    const { referenceId, inquiry } = resp;
+    return [
       `CBa Consult — Assignment Scoping Brief (${referenceId})`,
       `Client: ${inquiry.fullName} (${inquiry.role}), ${inquiry.organization}`,
       `Email: ${inquiry.email}`,
@@ -308,37 +416,87 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
       `Shortlisted Engagements: ${
         inquiry.selectedServices.length > 0
           ? inquiry.selectedServices.join('; ')
-          : 'Executive Discovery & Wedge Selection'
+          : 'Executive Discovery & Initial Scope Selection'
       }`,
       inquiry.notes ? `Objectives: ${inquiry.notes}` : '',
     ]
       .filter(Boolean)
       .join('\n');
-    navigator.clipboard?.writeText(text);
+  };
+
+  const handleCopySummary = () => {
+    if (!confirmation) return;
+    navigator.clipboard?.writeText(buildSummaryText(confirmation));
     setCopiedSummary(true);
-    setTimeout(() => setCopiedSummary(false), 2500);
+    window.setTimeout(() => setCopiedSummary(false), 2500);
+  };
+
+  const handleDownloadSummaryMarkdown = () => {
+    if (!confirmation) return;
+    const { referenceId, inquiry } = confirmation;
+    const md = [
+      `# CBa Consult — Assignment Scoping Brief (${referenceId})`,
+      '',
+      `- **Client:** ${inquiry.fullName} (${inquiry.role})`,
+      `- **Organization:** ${inquiry.organization}`,
+      `- **Work Email:** ${inquiry.email}`,
+      `- **Target Window:** ${inquiry.targetWindow}`,
+      `- **Shortlisted Scope:** ${
+        inquiry.selectedServices.length > 0
+          ? inquiry.selectedServices.join('; ')
+          : 'Executive Discovery & Initial Scope Selection'
+      }`,
+      inquiry.notes ? `\n## Context & Objectives\n${inquiry.notes}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+    const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `CBa-Consult-Scoping-Brief-${referenceId}.md`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div className="min-h-screen bg-[#f5f8fa] text-[#17243a] flex flex-col">
       {/* Top Bar — Strict 3-Zone Contract */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-xs border-b border-[#dae3e9]">
-        <div className="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3 sm:gap-8">
           {/* Zone 1: Single clean text wordmark */}
-          <a
-            href="#top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="font-display text-lg font-bold tracking-tight text-[#10253f] whitespace-nowrap shrink-0"
-          >
-            CBa Consult
-          </a>
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => setMobileNavOpen((prev) => !prev)}
+              className="md:hidden min-h-[44px] min-w-[44px] -ml-2 flex items-center justify-center text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+              aria-label={mobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileNavOpen}
+              aria-controls="client-showcase-mobile-nav"
+            >
+              {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+            <a
+              href="#top"
+              onClick={(e) => {
+                e.preventDefault();
+                setMobileNavOpen(false);
+                const prefersReducedMotion = window.matchMedia(
+                  '(prefers-reduced-motion: reduce)'
+                ).matches;
+                window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+              }}
+              className="font-display text-lg font-bold tracking-tight text-[#10253f] whitespace-nowrap shrink-0"
+            >
+              CBa Consult
+            </a>
+          </div>
 
-          {/* Zone 2: 5 concise single-line text nav links */}
+          {/* Zone 2: Concise single-line text nav links */}
           <nav
-            className="hidden md:flex items-center gap-7 text-sm font-medium text-[#40536b]"
+            className="hidden md:flex items-center gap-6 text-sm font-medium text-[#40536b]"
             aria-label="Client showcase navigation"
           >
             <button
@@ -357,6 +515,20 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             </button>
             <button
               type="button"
+              onClick={onOpenReportsLibrary}
+              className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              Reports
+            </button>
+            <button
+              type="button"
+              onClick={onOpenAgentAssessment}
+              className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              AI Benchmark
+            </button>
+            <button
+              type="button"
               onClick={() => scrollToSection('catalog')}
               className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
@@ -369,13 +541,6 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             >
               Managed Intelligence
             </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection('inquire')}
-              className="hover:text-[#10253f] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-            >
-              Scope Assignment
-            </button>
           </nav>
 
           {/* Zone 3: 1 primary CTA */}
@@ -383,13 +548,80 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             <button
               type="button"
               onClick={() => scrollToSection('inquire')}
-              className="px-4 py-2 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              className="px-3.5 sm:px-4 py-2 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
-              Request Scoping Call
-              {shortlist.length > 0 ? ` (${shortlist.length})` : ''}
+              <span className="sm:hidden">Scope Call{shortlist.length > 0 ? ` (${shortlist.length})` : ''}</span>
+              <span className="hidden sm:inline">
+                Request Scoping Call{shortlist.length > 0 ? ` (${shortlist.length})` : ''}
+              </span>
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {mobileNavOpen && (
+          <nav
+            id="client-showcase-mobile-nav"
+            aria-label="Mobile client navigation"
+            className="md:hidden bg-white border-t border-[#dae3e9] px-4 py-3 space-y-1"
+          >
+            <button
+              type="button"
+              onClick={() => scrollToSection('flagships')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Flagship Engagements
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('engagement')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              How We Engage
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileNavOpen(false);
+                onOpenReportsLibrary();
+              }}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#075d68] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Executive Reports &amp; Briefs
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileNavOpen(false);
+                onOpenAgentAssessment();
+              }}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#075d68] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              AI Agent Governance Benchmark
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('catalog')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Service Catalog
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('mip')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Managed Intelligence (MIP)
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('inquire')}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Scope Assignment
+            </button>
+          </nav>
+        )}
       </header>
 
       {/* Main Presentation Content */}
@@ -399,8 +631,8 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
           <div className="max-w-[1280px] mx-auto px-6 py-12 lg:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
               <div className="lg:col-span-6 flex flex-col justify-center py-2">
-                <div className="text-xs font-semibold text-[#0c8b82] mb-3">
-                  Independent Management & Governance Advisory · Conflict-Free Pre-Assurance
+                <div className="text-xs font-semibold text-[#075d68] mb-3">
+                  Independent Management &amp; Governance Advisory · Conflict-Free Pre-Assurance
                 </div>
                 <h1 className="font-display text-[clamp(2.25rem,3.6vw,3.25rem)] font-bold text-[#10253f] leading-[1.1] tracking-tight">
                   Verifiable operational truth across finance, AI agents, and enterprise governance
@@ -424,8 +656,8 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                   {data && data.clientReports.length > 0 && (
                     <button
                       type="button"
-                      onClick={() => setActiveReport(data.clientReports[0])}
-                      className="text-sm font-medium text-[#0c8b82] hover:text-[#075d68] underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
+                      onClick={() => openReport(data.clientReports[0])}
+                      className="text-sm font-semibold text-[#075d68] hover:text-[#10253f] underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
                     >
                       Executive Summary
                     </button>
@@ -433,10 +665,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                   {data && data.clientReports.length > 1 && (
                     <button
                       type="button"
-                      onClick={() => setActiveReport(data.clientReports[1])}
+                      onClick={() => openReport(data.clientReports[1])}
                       className="text-sm font-medium text-[#40536b] hover:text-[#10253f] underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
                     >
-                      Priority Report
+                      {data.clientReports[1].title}
                     </button>
                   )}
                 </div>
@@ -455,7 +687,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                     <img
                       src={HERO_IMAGE}
                       alt="Modern European executive advisory boardroom with minimalist oak conference table and city skyline"
-                      referrerPolicy="no-referrer"
+                      width={1376}
+                      height={768}
+                      fetchPriority="high"
+                      decoding="sync"
                       onError={() => setHeroImgFailed(true)}
                       className="w-full h-full object-cover"
                     />
@@ -525,10 +760,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
         ) : data ? (
           <>
             {/* Section 01: Flagship Engagements */}
-            <section id="flagships" className="max-w-[1280px] mx-auto px-6 py-16 space-y-8">
+            <section id="flagships" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 space-y-8">
               <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
                 <div className="max-w-2xl">
-                  <div className="text-xs font-semibold text-[#0c8b82] mb-1.5">
+                  <div className="text-xs font-semibold text-[#075d68] mb-1.5">
                     01. Flagship Advisory Engagements
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
@@ -541,11 +776,16 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 </div>
 
                 {/* Role Filter Segmented Control */}
-                <div className="flex items-center gap-1 p-1 bg-white border border-[#dae3e9] rounded-md overflow-x-auto shrink-0">
+                <div
+                  className="flex items-center gap-1 p-1 bg-white border border-[#dae3e9] rounded-md overflow-x-auto shrink-0"
+                  role="group"
+                  aria-label="Filter flagships by executive mandate"
+                >
                   {AUDIENCE_FILTERS.map((aud) => (
                     <button
                       key={aud}
                       type="button"
+                      aria-pressed={audienceFilter === aud}
                       onClick={() => setAudienceFilter(aud)}
                       className={`px-3 py-1.5 text-xs font-medium rounded transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                         audienceFilter === aud
@@ -575,7 +815,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                     >
                       <div className="space-y-4">
                         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#52647a]">
-                          <span className="font-semibold text-[#0c8b82]">
+                          <span className="font-semibold text-[#075d68]">
                             {service.strategicAsset}
                           </span>
                           <span aria-hidden="true">·</span>
@@ -591,7 +831,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           </p>
                         </div>
 
-                        <p className="text-[14.5px] leading-relaxed text-[#40536b]">
+                        <p className="text-[14.5px] leading-relaxed text-[#40536b] max-w-[70ch]">
                           {service.summary}
                         </p>
 
@@ -603,7 +843,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                             {service.outcomes.map((out) => (
                               <li key={out} className="flex items-start gap-2">
                                 <span
-                                  className="text-[#0c8b82] font-bold select-none mt-0.5"
+                                  className="text-[#075d68] font-bold select-none mt-0.5"
                                   aria-hidden="true"
                                 >
                                   —
@@ -643,16 +883,19 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                             <button
                               type="button"
                               onClick={() =>
-                                setActiveBrief({
-                                  title: service.title,
-                                  subtitle: `${service.strategicAsset} · ${service.buyerLine}`,
-                                  serviceLabel: service.title,
-                                  duration: service.duration,
-                                  investmentRange: service.investmentRange,
-                                  onePagerPath: service.onePagerPath,
-                                })
+                                openBrief(
+                                  {
+                                    title: service.title,
+                                    subtitle: `${service.strategicAsset} · ${service.buyerLine}`,
+                                    serviceLabel: service.title,
+                                    duration: service.duration,
+                                    investmentRange: service.investmentRange,
+                                    onePagerPath: service.onePagerPath,
+                                  },
+                                  service.id
+                                )
                               }
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] whitespace-nowrap shrink-0 cursor-pointer"
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#075d68] hover:text-[#10253f] whitespace-nowrap shrink-0 cursor-pointer"
                             >
                               <FileText className="w-3.5 h-3.5" />
                               Read Client One-Pager
@@ -661,7 +904,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                               <button
                                 type="button"
                                 onClick={onOpenAgentAssessment}
-                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#10253f] hover:text-[#0c8b82] underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
+                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#10253f] hover:text-[#075d68] underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
                               >
                                 Launch Self-Assessment
                                 <ArrowRight className="w-3.5 h-3.5" />
@@ -671,10 +914,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
                           <button
                             type="button"
-                            onClick={() => toggleShortlist(service.title)}
+                            aria-pressed={isAdded}
+                            onClick={() => onToggleShortlist(service.title)}
                             className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium rounded-md border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                               isAdded
-                                ? 'bg-[#eef5f7] border-[#0c8b82] text-[#075d68]'
+                                ? 'bg-[#eef5f7] border-[#075d68] text-[#075d68]'
                                 : 'bg-white border-[#dae3e9] text-[#10253f] hover:bg-[#f5f8fa]'
                             }`}
                           >
@@ -692,11 +936,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 })}
               </div>
 
-              {/* OP-ITG-013 Interactive Self-Assessment Spotlight Band */}
+              {/* Interactive Self-Assessment Spotlight Band */}
               <div className="bg-[#10253f] text-white rounded-md p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div className="space-y-2 max-w-2xl">
                   <div className="text-xs font-semibold text-[#48c5b2]">
-                    Interactive Diagnostic · OP-ITG-013 · 5-Minute Triage or Full 40-Control Audit
+                    Interactive Diagnostic · 5-Minute Triage or Full 40-Control Audit
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                     Benchmark your Enterprise AI Agent Governance before December 2027
@@ -704,7 +948,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                   <p className="text-sm text-[#d8e4f0] leading-relaxed">
                     Evaluate shadow Copilot sprawl, Entra Agent ID boundaries, FinOps spend limits,
                     and EU AI Act Annex III readiness to generate an instant executive PDF scorecard
-                    and tailored Tier 1 / Tier 2 scoping path.
+                    and tailored Phase 0 or full 8-pillar scoping path.
                   </p>
                 </div>
                 <div className="shrink-0">
@@ -726,7 +970,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 >
                   <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                     <div className="max-w-2xl">
-                      <div className="text-xs font-semibold text-[#0c8b82] mb-1">
+                      <div className="text-xs font-semibold text-[#075d68] mb-1">
                         Executive Reports &amp; Priority Briefs
                       </div>
                       <h3 className="text-xl font-bold text-[#10253f] tracking-tight">
@@ -737,14 +981,17 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       <button
                         type="button"
                         onClick={() =>
-                          setActiveBrief({
-                            title: 'Flagship Opportunities Overview (2027–2030)',
-                            subtitle: 'CBa Consult · Executive Client Brief',
-                            serviceLabel: 'Executive Portfolio Scoping Call',
-                            duration: '3–10 weeks fixed scope',
-                            investmentRange: '€1,500 – €18,000+',
-                            onePagerPath: data.flagshipOverviewPath,
-                          })
+                          openBrief(
+                            {
+                              title: 'Flagship Opportunities Overview (2027–2030)',
+                              subtitle: 'CBa Consult · Executive Client Brief',
+                              serviceLabel: 'Executive Portfolio Scoping Call',
+                              duration: '3–10 weeks fixed scope',
+                              investmentRange: '€1,500 – €18,000+',
+                              onePagerPath: data.flagshipOverviewPath,
+                            },
+                            'flagship-overview'
+                          )
                         }
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#40536b] hover:text-[#10253f] whitespace-nowrap shrink-0 cursor-pointer"
                       >
@@ -754,7 +1001,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       <button
                         type="button"
                         onClick={onOpenReportsLibrary}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] bg-white hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-[#075d68] hover:text-[#10253f] bg-white hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                       >
                         All Reports &amp; Briefs ({data.clientReports.length})
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -763,7 +1010,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                   </div>
 
                   {reportExportError && (
-                    <div className="px-4 py-2.5 bg-[#fef2f2] border border-[#fecaca] rounded-md text-xs font-medium text-[#b91c1c]">
+                    <div
+                      role="alert"
+                      className="px-4 py-2.5 bg-[#fef2f2] border border-[#fecaca] rounded-md text-xs font-medium text-[#b91c1c]"
+                    >
                       {reportExportError}
                     </div>
                   )}
@@ -778,7 +1028,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         >
                           <div className="space-y-2.5">
                             <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#52647a]">
-                              <span className="font-semibold text-[#0c8b82]">
+                              <span className="font-semibold text-[#075d68]">
                                 {rep.editionLabel}
                               </span>
                               <span aria-hidden="true">·</span>
@@ -795,13 +1045,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[#dae3e9]">
                             <button
                               type="button"
-                              onClick={() => setActiveReport(rep)}
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] whitespace-nowrap shrink-0 cursor-pointer"
+                              onClick={() => openReport(rep)}
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#075d68] hover:text-[#10253f] whitespace-nowrap shrink-0 cursor-pointer"
                             >
                               <BookOpen className="w-3.5 h-3.5" />
                               Read Formatted Report
                             </button>
-                            <div className="flex items-center gap-2 shrink-0">
+                            <div className="flex flex-wrap items-center gap-2 shrink-0">
                               <button
                                 type="button"
                                 onClick={() => handleDownloadClientReportHtml(rep)}
@@ -831,12 +1081,12 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
             {/* Section 02: How Clients Engage */}
             <section id="engagement" className="bg-white border-y border-[#dae3e9]">
-              <div className="max-w-[1280px] mx-auto px-6 py-16">
+              <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
                   <div className="lg:col-span-5">
                     <div className="w-full h-[280px] lg:h-full min-h-[320px] rounded-md overflow-hidden border border-[#dae3e9] bg-[#10253f]">
                       {archImgFailed ? (
-                        <div className="w-full h-full flex items-end p-8 bg-gradient-to-br from-[#10253f] to-[#0c8b82] text-white">
+                        <div className="w-full h-full flex items-end p-8 bg-gradient-to-br from-[#10253f] to-[#075d68] text-white">
                           <div className="text-lg font-semibold">
                             Observe · Measure · Govern · Trace · Certify · Improve
                           </div>
@@ -845,7 +1095,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         <img
                           src={ARCH_IMAGE}
                           alt="Minimalist limestone and glass architectural pavilion representing clarity and structural governance"
-                          referrerPolicy="no-referrer"
+                          width={1200}
+                          height={896}
+                          loading="lazy"
+                          decoding="async"
                           onError={() => setArchImgFailed(true)}
                           className="w-full h-full object-cover"
                         />
@@ -855,11 +1108,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
                   <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                     <div>
-                      <div className="text-xs font-semibold text-[#0c8b82] mb-1.5">
+                      <div className="text-xs font-semibold text-[#075d68] mb-1.5">
                         02. Engagement Architecture
                       </div>
                       <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
-                        Start with a bounded entry wedge, scale only on verified proof
+                        Start with a bounded Phase 0 diagnostic, scale only on verified proof
                       </h2>
                       <p className="text-[15px] text-[#40536b] mt-2 leading-relaxed">
                         Every assignment follows our 6-stage Truth Production Governance operating
@@ -873,9 +1126,9 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       <div className="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2">
                         <div className="sm:col-span-4">
                           <div className="text-sm font-bold text-[#10253f]">
-                            01. Phase 0 Entry Wedge
+                            01. Phase 0 Diagnostic
                           </div>
-                          <div className="text-xs font-mono text-[#0c8b82] tabular-nums mt-0.5">
+                          <div className="text-xs font-mono text-[#075d68] tabular-nums mt-0.5">
                             2–4 weeks · €500 – €5,000
                           </div>
                         </div>
@@ -892,7 +1145,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           <div className="text-sm font-bold text-[#10253f]">
                             02. Fixed-Scope Flagship
                           </div>
-                          <div className="text-xs font-mono text-[#0c8b82] tabular-nums mt-0.5">
+                          <div className="text-xs font-mono text-[#075d68] tabular-nums mt-0.5">
                             6–10 weeks · €3,000 – €18,000+
                           </div>
                         </div>
@@ -908,7 +1161,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           <div className="text-sm font-bold text-[#10253f]">
                             03. Managed Intelligence
                           </div>
-                          <div className="text-xs font-mono text-[#0c8b82] tabular-nums mt-0.5">
+                          <div className="text-xs font-mono text-[#075d68] tabular-nums mt-0.5">
                             Ongoing · €2,500 – €12,000+/mo
                           </div>
                         </div>
@@ -925,10 +1178,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             </section>
 
             {/* Section 03: Managed Intelligence Provider (MIP) */}
-            <section id="mip" className="max-w-[1280px] mx-auto px-6 py-16 space-y-8">
+            <section id="mip" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div className="max-w-2xl">
-                  <div className="text-xs font-semibold text-[#0c8b82] mb-1.5">
+                  <div className="text-xs font-semibold text-[#075d68] mb-1.5">
                     03. Ongoing Retainer Model
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
@@ -943,18 +1196,21 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 <button
                   type="button"
                   onClick={() =>
-                    setActiveBrief({
-                      title: 'Managed Intelligence Provider / Professional (MIP)',
-                      subtitle: 'Ongoing Governance Stewardship · CEO, CIO, CFO, CISO & PE',
-                      serviceLabel: 'Managed Intelligence Provider (MIP) Retainer',
-                      duration: 'Monthly retainer',
-                      investmentRange: '€2,500 – €12,000+ / mo',
-                      onePagerPath: data.mipOnePagerPath,
-                    })
+                    openBrief(
+                      {
+                        title: 'Managed Intelligence Provider (MIP)',
+                        subtitle: 'Ongoing Governance Stewardship · CEO, CIO, CFO, CISO & PE',
+                        serviceLabel: 'Managed Intelligence Provider (MIP) Retainer',
+                        duration: 'Monthly retainer',
+                        investmentRange: '€2,500 – €12,000+ / mo',
+                        onePagerPath: data.mipOnePagerPath,
+                      },
+                      'mip'
+                    )
                   }
                   className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#10253f] bg-white border border-[#dae3e9] hover:bg-[#eef5f7] rounded-md whitespace-nowrap shrink-0 cursor-pointer"
                 >
-                  <FileText className="w-3.5 h-3.5 text-[#0c8b82]" />
+                  <FileText className="w-3.5 h-3.5 text-[#075d68]" />
                   Read Full MIP Brief
                 </button>
               </div>
@@ -972,7 +1228,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         <th className="px-5 py-3 font-semibold whitespace-nowrap">
                           MSSP (Cybersecurity)
                         </th>
-                        <th className="px-5 py-3 font-semibold whitespace-nowrap bg-[#0c8b82]">
+                        <th className="px-5 py-3 font-semibold whitespace-nowrap bg-[#075d68]">
                           MIP (CBa Consult)
                         </th>
                       </tr>
@@ -1019,7 +1275,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       className="bg-white border border-[#dae3e9] rounded-md p-6 flex flex-col justify-between gap-5"
                     >
                       <div className="space-y-3">
-                        <div className="text-xs font-medium text-[#0c8b82]">{tier.audience}</div>
+                        <div className="text-xs font-semibold text-[#075d68]">{tier.audience}</div>
                         <h3 className="text-lg font-bold text-[#10253f]">{tier.name}</h3>
                         <div className="text-xl font-bold font-mono tabular-nums text-[#10253f]">
                           {tier.price}
@@ -1028,10 +1284,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       </div>
                       <button
                         type="button"
+                        aria-pressed={selected}
                         onClick={() => handleRequestScoping(tier.serviceLabel)}
                         className={`w-full py-2 px-4 text-xs font-medium rounded-md border transition-colors whitespace-nowrap cursor-pointer ${
                           selected
-                            ? 'bg-[#eef5f7] border-[#0c8b82] text-[#075d68]'
+                            ? 'bg-[#eef5f7] border-[#075d68] text-[#075d68]'
                             : 'bg-white border-[#dae3e9] text-[#10253f] hover:bg-[#10253f] hover:text-white hover:border-[#10253f]'
                         }`}
                       >
@@ -1045,10 +1302,10 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
 
             {/* Section 04: Full Advisory Service Catalog */}
             <section id="catalog" className="bg-white border-y border-[#dae3e9]">
-              <div className="max-w-[1280px] mx-auto px-6 py-16 space-y-6">
+              <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16 space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                   <div className="max-w-2xl">
-                    <div className="text-xs font-semibold text-[#0c8b82] mb-1.5">
+                    <div className="text-xs font-semibold text-[#075d68] mb-1.5">
                       04. Full Advisory Service Catalog
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
@@ -1067,8 +1324,12 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 {/* Search & Practice Filter */}
                 <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between p-4 bg-[#f5f8fa] border border-[#dae3e9] rounded-md">
                   <div className="relative flex-1 max-w-md">
+                    <label htmlFor="catalog-search" className="sr-only">
+                      Search advisory offerings
+                    </label>
                     <Search className="w-4 h-4 text-[#52647a] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                     <input
+                      id="catalog-search"
                       type="text"
                       value={catalogSearch}
                       onChange={(e) => {
@@ -1076,13 +1337,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         setShowAllCatalog(false);
                       }}
                       placeholder="Search capabilities, outcomes, or methodologies..."
-                      className="w-full pl-9 pr-8 py-2 text-sm bg-white border border-[#dae3e9] rounded-md text-[#10253f] placeholder:text-[#52647a] focus:outline-none focus:border-[#0c8b82]"
+                      className="w-full pl-9 pr-9 py-2 text-sm bg-white border border-[#dae3e9] rounded-md text-[#10253f] placeholder:text-[#52647a] focus:border-[#075d68]"
                     />
                     {catalogSearch && (
                       <button
                         type="button"
                         onClick={() => setCatalogSearch('')}
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#52647a] hover:text-[#10253f] cursor-pointer"
+                        className="absolute right-1.5 top-1/2 -translate-y-1/2 min-h-[36px] min-w-[36px] flex items-center justify-center text-[#52647a] hover:text-[#10253f] cursor-pointer"
                         aria-label="Clear search"
                       >
                         <X className="w-3.5 h-3.5" />
@@ -1098,7 +1359,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         setShowAllCatalog(false);
                       }}
                       aria-label="Filter by practice area"
-                      className="py-2 px-3 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] focus:outline-none focus:border-[#0c8b82]"
+                      className="py-2 px-3 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] focus:border-[#075d68]"
                     >
                       <option value="ALL">All Practices ({data.practices.length})</option>
                       {data.practices.map((p) => (
@@ -1115,11 +1376,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                         setShowAllCatalog(false);
                       }}
                       aria-label="Filter by organization size"
-                      className="py-2 px-3 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] focus:outline-none focus:border-[#0c8b82]"
+                      className="py-2 px-3 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] focus:border-[#075d68]"
                     >
                       <option value="ALL">All Organization Sizes</option>
-                      <option value="small">Small & Growth</option>
-                      <option value="medium">Mid-Market & Enterprise</option>
+                      <option value="small">Small &amp; Growth</option>
+                      <option value="medium">Mid-Market &amp; Enterprise</option>
                     </select>
                   </div>
                 </div>
@@ -1164,7 +1425,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                             const added = shortlist.includes(item.title);
                             return (
                               <tr key={item.id} className="hover:bg-[#f8fbfc] transition-colors">
-                                <td className="px-4 py-3.5 text-xs font-medium text-[#0c8b82] whitespace-nowrap align-top">
+                                <td className="px-4 py-3.5 text-xs font-semibold text-[#075d68] whitespace-nowrap align-top">
                                   {item.practice}
                                 </td>
                                 <td className="px-4 py-3.5 align-top max-w-xl">
@@ -1187,27 +1448,31 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                                     <button
                                       type="button"
                                       onClick={() =>
-                                        setActiveBrief({
-                                          title: item.title,
-                                          subtitle: `${item.practice} · ${item.category}`,
-                                          serviceLabel: item.title,
-                                          duration: item.duration,
-                                          investmentRange: item.investmentRange,
-                                          onePagerPath: item.onePagerPath,
-                                          description: item.description,
-                                          toolkit: item.toolkit,
-                                        })
+                                        openBrief(
+                                          {
+                                            title: item.title,
+                                            subtitle: `${item.practice} · ${item.category}`,
+                                            serviceLabel: item.title,
+                                            duration: item.duration,
+                                            investmentRange: item.investmentRange,
+                                            onePagerPath: item.onePagerPath,
+                                            description: item.description,
+                                            toolkit: item.toolkit,
+                                          },
+                                          item.id
+                                        )
                                       }
-                                      className="text-xs font-medium text-[#0c8b82] hover:text-[#075d68] cursor-pointer"
+                                      className="text-xs font-semibold text-[#075d68] hover:text-[#10253f] cursor-pointer"
                                     >
                                       {item.onePagerPath ? 'One-Pager' : 'Details'}
                                     </button>
                                     <button
                                       type="button"
-                                      onClick={() => toggleShortlist(item.title)}
+                                      aria-pressed={added}
+                                      onClick={() => onToggleShortlist(item.title)}
                                       className={`px-2.5 py-1 text-xs font-medium rounded border transition-colors cursor-pointer ${
                                         added
-                                          ? 'bg-[#eef5f7] border-[#0c8b82] text-[#075d68]'
+                                          ? 'bg-[#eef5f7] border-[#075d68] text-[#075d68]'
                                           : 'bg-white border-[#dae3e9] text-[#10253f] hover:bg-[#f5f8fa]'
                                       }`}
                                     >
@@ -1228,6 +1493,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                   <div className="text-center pt-2">
                     <button
                       type="button"
+                      aria-expanded={showAllCatalog}
                       onClick={() => setShowAllCatalog((v) => !v)}
                       className="px-4 py-2 text-xs font-medium text-[#10253f] bg-white border border-[#dae3e9] hover:bg-[#eef5f7] rounded-md transition-colors cursor-pointer"
                     >
@@ -1241,11 +1507,11 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             </section>
 
             {/* Section 05: Scope an Assignment / Inquiry Form */}
-            <section id="inquire" className="max-w-[1280px] mx-auto px-6 py-16">
+            <section id="inquire" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-16">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 <div className="lg:col-span-5 space-y-5">
                   <div>
-                    <div className="text-xs font-semibold text-[#0c8b82] mb-1.5">
+                    <div className="text-xs font-semibold text-[#075d68] mb-1.5">
                       05. Assignment Scoping
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold text-[#10253f] tracking-tight">
@@ -1267,7 +1533,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       {shortlist.length > 0 && (
                         <button
                           type="button"
-                          onClick={() => setShortlist([])}
+                          onClick={onClearShortlist}
                           className="text-xs text-[#52647a] hover:text-[#10253f] cursor-pointer"
                         >
                           Clear all
@@ -1278,8 +1544,8 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                     {shortlist.length === 0 ? (
                       <p className="text-xs text-[#52647a] leading-relaxed">
                         No offerings shortlisted yet. Select any flagship, MIP tier, or catalog item
-                        above — or submit a general scoping request to select the right entry wedge
-                        together.
+                        above — or submit a general scoping request to select the right Phase 0
+                        diagnostic together.
                       </p>
                     ) : (
                       <ul className="divide-y divide-[#dae3e9] text-sm">
@@ -1291,8 +1557,8 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                             <span className="text-[13px] font-medium">{item}</span>
                             <button
                               type="button"
-                              onClick={() => toggleShortlist(item)}
-                              className="text-[#52647a] hover:text-[#dc2626] p-1 cursor-pointer"
+                              onClick={() => onToggleShortlist(item)}
+                              className="min-h-[36px] min-w-[36px] flex items-center justify-center text-[#52647a] hover:text-[#dc2626] cursor-pointer"
                               aria-label={`Remove ${item}`}
                             >
                               <X className="w-3.5 h-3.5" />
@@ -1314,27 +1580,37 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                 <div className="lg:col-span-7 bg-white border border-[#dae3e9] rounded-md p-6 sm:p-8">
                   {confirmation ? (
                     <div className="space-y-5">
-                      <div className="flex items-center justify-between gap-2 pb-4 border-b border-[#dae3e9]">
+                      <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#dae3e9]">
                         <div>
-                          <div className="text-xs font-semibold text-[#0c8b82]">
+                          <div className="text-xs font-semibold text-[#075d68]">
                             Scoping Request Recorded
                           </div>
                           <h3 className="text-xl font-bold text-[#10253f] mt-0.5">
                             Reference {confirmation.referenceId}
                           </h3>
                         </div>
-                        <button
-                          type="button"
-                          onClick={handleCopySummary}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#10253f] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md cursor-pointer"
-                        >
-                          {copiedSummary ? (
-                            <Check className="w-3.5 h-3.5 text-[#0c8b82]" />
-                          ) : (
-                            <Copy className="w-3.5 h-3.5" />
-                          )}
-                          {copiedSummary ? 'Copied Summary' : 'Copy Brief Summary'}
-                        </button>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={handleCopySummary}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#10253f] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md cursor-pointer"
+                          >
+                            {copiedSummary ? (
+                              <Check className="w-3.5 h-3.5 text-[#075d68]" />
+                            ) : (
+                              <Copy className="w-3.5 h-3.5" />
+                            )}
+                            {copiedSummary ? 'Copied Summary' : 'Copy Brief Summary'}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleDownloadSummaryMarkdown}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md cursor-pointer"
+                          >
+                            <Download className="w-3.5 h-3.5" />
+                            Download Brief (.md)
+                          </button>
+                        </div>
                       </div>
 
                       <p className="text-sm text-[#40536b] leading-relaxed">
@@ -1360,7 +1636,13 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           <strong className="text-[#10253f]">Shortlisted Scope:</strong>{' '}
                           {confirmation.inquiry.selectedServices.length > 0
                             ? confirmation.inquiry.selectedServices.join(' · ')
-                            : 'Executive Discovery & Entry Wedge Selection'}
+                            : 'Executive Discovery & Initial Scope Selection'}
+                        </div>
+                        <div>
+                          <strong className="text-[#10253f]">Advisory Notification:</strong>{' '}
+                          {confirmation.emailDeliveryStatus === 'sent'
+                            ? 'Dispatched to Menno Drescher · fixed-scope proposal within 5 business days.'
+                            : 'Logged under your Reference ID · copy or download your brief above for direct sharing.'}
                         </div>
                       </div>
 
@@ -1374,7 +1656,7 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                           setRole('');
                           setNotes('');
                         }}
-                        className="text-xs font-medium text-[#0c8b82] hover:text-[#075d68] cursor-pointer"
+                        className="text-xs font-semibold text-[#075d68] hover:text-[#10253f] cursor-pointer"
                       >
                         Prepare another scoping inquiry
                       </button>
@@ -1497,7 +1779,9 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
                       </div>
 
                       {formError && (
-                        <div className="text-xs font-medium text-[#dc2626]">{formError}</div>
+                        <div role="alert" className="text-xs font-medium text-[#dc2626]">
+                          {formError}
+                        </div>
                       )}
 
                       <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
@@ -1564,10 +1848,9 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
             <button
               type="button"
               onClick={onSwitchToInternal}
-              className="inline-flex items-center gap-1.5 text-[#48c5b2] hover:text-white transition-colors font-medium cursor-pointer"
+              className="text-[#9cb4cc] hover:text-white transition-colors cursor-pointer"
             >
-              <Lock className="w-3.5 h-3.5" />
-              Internal Portfolio Explorer
+              Advisor Login
             </button>
           </div>
         </div>
@@ -1577,16 +1860,16 @@ export const ClientShowcase: React.FC<ClientShowcaseProps> = ({
       <ClientServiceDrawer
         selection={activeBrief}
         isShortlisted={activeBrief ? shortlist.includes(activeBrief.serviceLabel) : false}
-        onToggleShortlist={toggleShortlist}
+        onToggleShortlist={onToggleShortlist}
         onRequestScoping={handleRequestScoping}
-        onClose={() => setActiveBrief(null)}
+        onClose={closeBrief}
       />
 
       {/* Client Executive Report Drawer */}
       <ClientReportDrawer
         report={activeReport}
         onRequestScoping={handleRequestScoping}
-        onClose={() => setActiveReport(null)}
+        onClose={closeReport}
       />
     </div>
   );

@@ -538,6 +538,8 @@ export interface PillarScoreSummary {
 
 export interface AgentGovernanceResult {
   mode: AssessmentMode;
+  hasDiagnosticInput: boolean;
+  triageAnsweredCount: number;
   answeredQuestions: number;
   totalQuestions: number;
   weightedIndex: number;
@@ -598,25 +600,47 @@ export function calculateAgentGovernanceScore(
 
   const answeredQuestions = pillarScores.reduce((acc, p) => acc + p.answeredCount, 0);
   const totalQuestions = ASSESSMENT_PILLARS.reduce((acc, p) => acc + p.questions.length, 0);
+  const triageAnsweredCount =
+    confirmedRedFlags.length + unsureRedFlags.length + controlledRedFlagsCount;
+  const hasDiagnosticInput = triageAnsweredCount > 0 || answeredQuestions > 0;
 
   let weightedIndex: number;
   let estimatedFromTriageOnly = false;
 
   const scoredPillars = pillarScores.filter((p) => p.average !== null);
-  if (scoredPillars.length > 0) {
+  if (!hasDiagnosticInput) {
+    weightedIndex = 0;
+    estimatedFromTriageOnly = mode === 'triage';
+  } else if (scoredPillars.length > 0) {
     const weightedSum = scoredPillars.reduce((acc, p) => acc + (p.average ?? 0) * p.weight, 0);
     const totalWeight = scoredPillars.reduce((acc, p) => acc + p.weight, 0);
-    weightedIndex = Number((weightedSum / totalWeight).toFixed(2));
+    const pillarAvg = weightedSum / totalWeight;
+    const redFlagPenalty = confirmedRedFlags.length * 0.22 + unsureRedFlags.length * 0.06;
+    const redFlagCap =
+      confirmedRedFlags.length >= 3 ? 2.45 : confirmedRedFlags.length >= 1 ? 3.4 : 5.0;
+    weightedIndex = Number(
+      Math.max(1.0, Math.min(redFlagCap, pillarAvg - redFlagPenalty)).toFixed(2)
+    );
   } else {
     estimatedFromTriageOnly = true;
-    const penalty = confirmedRedFlags.length * 0.38 + unsureRedFlags.length * 0.16;
-    weightedIndex = Number(Math.max(1.0, Math.min(4.6, 4.4 - penalty)).toFixed(2));
+    const rawTriage =
+      (controlledRedFlagsCount * 4.2 +
+        unsureRedFlags.length * 2.6 +
+        confirmedRedFlags.length * 1.2) /
+      triageAnsweredCount;
+    const triageCap =
+      confirmedRedFlags.length >= 3 ? 2.15 : confirmedRedFlags.length >= 1 ? 2.95 : 4.35;
+    weightedIndex = Number(
+      Math.max(1.0, Math.min(triageCap, rawTriage - confirmedRedFlags.length * 0.15)).toFixed(2)
+    );
   }
 
-  const maturity = getMaturityForScore(weightedIndex);
+  const maturity = getMaturityForScore(hasDiagnosticInput ? weightedIndex : 1.0);
 
   let exposureLabel: AgentGovernanceResult['exposureLabel'];
-  if (confirmedRedFlags.length >= 3 || weightedIndex < 2.2) {
+  if (!hasDiagnosticInput) {
+    exposureLabel = 'Developing Baseline';
+  } else if (confirmedRedFlags.length >= 3 || weightedIndex < 2.2) {
     exposureLabel = 'Critical Exposure';
   } else if (confirmedRedFlags.length >= 1 || unsureRedFlags.length >= 4 || weightedIndex < 3.0) {
     exposureLabel = 'Elevated Exposure';
@@ -631,7 +655,7 @@ export function calculateAgentGovernanceScore(
     .slice(0, 3);
 
   let recommendedTier: AgentGovernanceResult['recommendedTier'];
-  if (confirmedRedFlags.length >= 2 || weightedIndex < 2.65) {
+  if (!hasDiagnosticInput || confirmedRedFlags.length >= 2 || weightedIndex < 2.65) {
     recommendedTier = {
       code: 'Tier 1 Triage',
       title: 'Tier 1 — Agent Sprawl & Identity Triage (Phase 0)',
@@ -639,7 +663,7 @@ export function calculateAgentGovernanceScore(
       investmentRange: '€2,500 – €5,000',
       rationale:
         'Fast containment sprint to inventory active agents, assign Human Sponsors, close P0 shared-credential / SoD / FinOps red flags, and establish an executive 90-day remediation roadmap without buying new software.',
-      serviceLabel: 'OP-ITG-013 — Tier 1 Agent Sprawl & Identity Triage (€2,500–€5,000)',
+      serviceLabel: 'Enterprise AI Agent Governance — Tier 1 Triage (€2,500–€5,000)',
     };
   } else if (weightedIndex < 3.85 || confirmedRedFlags.length === 1 || unsureRedFlags.length >= 2) {
     recommendedTier = {
@@ -649,7 +673,7 @@ export function calculateAgentGovernanceScore(
       investmentRange: '€6,000 – €18,000+',
       rationale:
         'Comprehensive 40-control evidence audit, 12-field Enterprise Agent Inventory Register, Entra Agent ID & Agent 365 target blueprint, and pre-assurance mapping for EU AI Act Annex III (Dec 2, 2027) and SOX/DORA ITGC.',
-      serviceLabel: 'OP-ITG-013 — Tier 2 Full 8-Pillar Agent Governance Assessment (€6,000–€18,000+)',
+      serviceLabel: 'Enterprise AI Agent Governance — Tier 2 Full 8-Pillar Audit (€6,000–€18,000+)',
     };
   } else {
     recommendedTier = {
@@ -665,6 +689,8 @@ export function calculateAgentGovernanceScore(
 
   return {
     mode,
+    hasDiagnosticInput,
+    triageAnsweredCount,
     answeredQuestions,
     totalQuestions,
     weightedIndex,
@@ -773,7 +799,8 @@ function escapeHtml(text: string): string {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 export function buildAgentGovernanceScorecardHtml(params: {
@@ -822,11 +849,24 @@ export function buildAgentGovernanceScorecardHtml(params: {
           .join('')
       : `<tr><td colspan="3">No P0 critical red flags confirmed in self-assessment (${result.unsureRedFlags.length} flagged as unverified/unsure; ${result.controlledRedFlagsCount} reported controlled).</td></tr>`;
 
+  const indexDisplay = result.hasDiagnosticInput
+    ? `${result.weightedIndex.toFixed(2)} / 5.00`
+    : 'Not scored';
+  const indexStat = result.hasDiagnosticInput
+    ? `${result.weightedIndex.toFixed(2)} / 5`
+    : '— / 5';
+  const maturitySummary = result.hasDiagnosticInput
+    ? `Maturity Classification: <strong>Level ${result.maturity.level} — ${escapeHtml(result.maturity.label)}</strong>. ${escapeHtml(result.maturity.description)}`
+    : 'Diagnostic Scorecard Template: complete the Top-10 Red-Flag Triage or 8-Pillar Controls to populate live maturity scores.';
+  const coverBadge = result.hasDiagnosticInput
+    ? `EXECUTIVE DIAGNOSTIC · ${escapeHtml(result.exposureLabel.toUpperCase())}`
+    : 'EXECUTIVE DIAGNOSTIC · UNSCORED TEMPLATE';
+
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>OP-ITG-013 | Enterprise AI Agent Governance Scorecard</title>
+<title>Enterprise AI Agent Governance Scorecard | CBa Consult</title>
 <style>
 @page{size:A4;margin:14mm 15mm 15mm}
 *{box-sizing:border-box}
@@ -844,13 +884,13 @@ p{margin:0 0 7px}
 .covermeta strong{color:white}
 .tag{display:inline-block;color:#133450;background:#cff4ee;padding:5px 10px;border-radius:12px;font-size:7.6pt;font-weight:bold;margin-top:10mm}
 .page{page-break-before:always;position:relative;min-height:260mm;padding-bottom:11mm}
-.kicker{font-size:7.8pt;text-transform:uppercase;color:#088477;font-weight:bold;letter-spacing:1.4px;margin-bottom:4px}
+.kicker{font-size:7.8pt;text-transform:uppercase;color:#075d68;font-weight:bold;letter-spacing:1.4px;margin-bottom:4px}
 .lead{font-size:9.8pt;line-height:1.45;color:#40536b;margin-bottom:9px}
 .stats{display:flex;gap:8px;margin:10px 0}
-.stat{background:#eef5f7;padding:8px 10px;flex:1;border-top:3px solid #0c8b82}
+.stat{background:#eef5f7;padding:8px 10px;flex:1;border-top:3px solid #075d68}
 .stat b{display:block;font-size:15pt;color:#142a48;line-height:1.18}
 .stat span{font-size:7.4pt;color:#53667b}
-.callout{background:#f0f7f7;border-left:3px solid #0c8b82;padding:8px 10px;margin:8px 0;font-size:8.4pt}
+.callout{background:#f0f7f7;border-left:3px solid #075d68;padding:8px 10px;margin:8px 0;font-size:8.4pt}
 .small{font-size:7.5pt;color:#52647a;line-height:1.34}
 table{width:100%;border-collapse:collapse;font-size:7.6pt;margin:6px 0 9px}
 th{background:#163451;color:white;text-align:left;padding:5px 6.5px;font-size:7.1pt}
@@ -859,19 +899,19 @@ tr:nth-child(even) td{background:#f5f8fa}
 .pill{font-size:6.4pt;white-space:nowrap;color:#075d68;font-weight:bold;background:#dff3f0;padding:1.5px 5px;border-radius:8px;display:inline-block}
 .pill-red{color:#991b1b;background:#fee2e2}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}
-.step{background:#f3f6f8;padding:8px;border-radius:4px;border-top:2px solid #0c8b82}
-.step b{color:#087d76;font-size:8.2pt;display:block;margin-bottom:3px}
+.step{background:#f3f6f8;padding:8px;border-radius:4px;border-top:2px solid #075d68}
+.step b{color:#075d68;font-size:8.2pt;display:block;margin-bottom:3px}
 .footer{position:absolute;bottom:0;border-top:1px solid #d8e1e7;padding-top:4px;width:100%;font-size:6.9pt;color:#62758a;display:flex;justify-content:space-between}
 </style>
 </head>
 <body>
 <section class="cover">
-  <div class="eyebrow">CBa Consult &nbsp;&nbsp; / &nbsp;&nbsp; OP-ITG-013 Diagnostic Scorecard</div>
+  <div class="eyebrow">CBa Consult &nbsp;&nbsp; / &nbsp;&nbsp; Diagnostic Scorecard</div>
   <h1>Enterprise AI Agent<br>Governance Scorecard</h1>
   <p class="sub">${orgLabel}<br>8-Pillar Maturity Index · Top-10 P0 Red-Flag Triage · Recommended 2027 Remediation Path</p>
   <div class="rule"></div>
   <p style="font-size:11.2pt;max-width:148mm;color:#e5edf5;line-height:1.45">Independent, vendor-neutral diagnostic benchmarked against Microsoft Entra Agent ID &amp; Agent 365, COBIT 2019, NIST AI RMF, ISO/IEC 42001, EU AI Act Annex III (Dec 2, 2027), and SOX 404 / ISA 265 ITGC controls.</p>
-  <span class="tag">EXECUTIVE DIAGNOSTIC · ${escapeHtml(result.exposureLabel.toUpperCase())}</span>
+  <span class="tag">${coverBadge}</span>
   <div class="covermeta">
     <strong>Prepared for:</strong> ${contactLabel} · ${orgLabel}<br>
     <strong>Profile:</strong> ${escapeHtml(seatBand)} &nbsp; | &nbsp; ${escapeHtml(platforms.length > 0 ? platforms.join(', ') : 'Enterprise AI Estate')}<br>
@@ -882,10 +922,10 @@ tr:nth-child(even) td{background:#f5f8fa}
 
 <section class="page">
   <div class="kicker">01 / Diagnostic Readout &amp; Pillar Breakdown</div>
-  <h2>Weighted Agent Governance Index: ${result.weightedIndex.toFixed(2)} / 5.00</h2>
-  <p class="lead">Maturity Classification: <strong>Level ${result.maturity.level} — ${escapeHtml(result.maturity.label)}</strong>. ${escapeHtml(result.maturity.description)}</p>
+  <h2>Weighted Agent Governance Index: ${indexDisplay}</h2>
+  <p class="lead">${maturitySummary}</p>
   <div class="stats">
-    <div class="stat"><b>${result.weightedIndex.toFixed(2)} / 5</b><span>Weighted Governance Index${result.estimatedFromTriageOnly ? ' (Triage Est.)' : ''}</span></div>
+    <div class="stat"><b>${indexStat}</b><span>Weighted Governance Index${result.hasDiagnosticInput && result.estimatedFromTriageOnly ? ' (Triage Est.)' : ''}</span></div>
     <div class="stat"><b>${result.confirmedRedFlags.length} / 10</b><span>P0 Critical Red Flags confirmed</span></div>
     <div class="stat"><b>${result.unsureRedFlags.length} / 10</b><span>Unverified controls requiring evidence</span></div>
     <div class="stat"><b>${escapeHtml(result.recommendedTier.code)}</b><span>${escapeHtml(result.recommendedTier.investmentRange)}</span></div>
@@ -896,7 +936,7 @@ tr:nth-child(even) td{background:#f5f8fa}
     <thead><tr><th>Governance Pillar</th><th>Readiness Bar</th><th style="text-align:right">Score</th></tr></thead>
     <tbody>${pillarRows}</tbody>
   </table>
-  <div class="footer"><span>OP-ITG-013 · ENTERPRISE AI AGENT GOVERNANCE SCORECARD</span><span>CBa Consult &nbsp; | &nbsp; 1</span></div>
+  <div class="footer"><span>ENTERPRISE AI AGENT GOVERNANCE SCORECARD</span><span>CBa Consult &nbsp; | &nbsp; 1</span></div>
 </section>
 
 <section class="page">

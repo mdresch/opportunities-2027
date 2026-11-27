@@ -1302,6 +1302,9 @@ function resolveSafeMarkdownPath(relPath: string): string | null {
 const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
 const LOGIN_WINDOW_MS = 15 * 60 * 1000;
 const MAX_LOGIN_ATTEMPTS = 10;
+const INQUIRY_WINDOW_MS = 15 * 60 * 1000;
+const MAX_INQUIRIES_PER_WINDOW = 8;
+const MAX_RECENT_INQUIRIES = 200;
 
 interface ClaimedAdmin {
   username: string;
@@ -1317,6 +1320,7 @@ interface ActiveSession {
 let claimedAdmin: ClaimedAdmin | null = null;
 const activeSessions = new Map<string, ActiveSession>();
 const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+const inquiryAttempts = new Map<string, { count: number; resetAt: number }>();
 
 function hasEnvAdminCredentials(): boolean {
   return Boolean(process.env.ADMIN_USERNAME?.trim() && process.env.ADMIN_PASSWORD);
@@ -1395,11 +1399,27 @@ function requireAdminAuth(req: Request, res: Response, next: NextFunction): void
 }
 
 function getClientIp(req: Request): string {
-  const forwarded = req.headers['x-forwarded-for'];
-  if (typeof forwarded === 'string' && forwarded.trim()) {
-    return forwarded.split(',')[0].trim();
+  return req.ip || req.socket.remoteAddress || 'unknown';
+}
+
+function isInquiryRateLimited(ip: string): boolean {
+  const entry = inquiryAttempts.get(ip);
+  if (!entry) return false;
+  if (Date.now() > entry.resetAt) {
+    inquiryAttempts.delete(ip);
+    return false;
   }
-  return req.socket.remoteAddress || 'unknown';
+  return entry.count >= MAX_INQUIRIES_PER_WINDOW;
+}
+
+function recordInquiryAttempt(ip: string): void {
+  const now = Date.now();
+  const entry = inquiryAttempts.get(ip);
+  if (!entry || now > entry.resetAt) {
+    inquiryAttempts.set(ip, { count: 1, resetAt: now + INQUIRY_WINDOW_MS });
+  } else {
+    entry.count += 1;
+  }
 }
 
 function isRateLimited(ip: string): boolean {
@@ -1428,6 +1448,15 @@ function clearLoginAttempts(ip: string): void {
 
 async function startServer() {
   const app = express();
+  if (process.env.TRUST_PROXY === '1' || process.env.TRUST_PROXY === 'true') {
+    app.set('trust proxy', 1);
+  }
+  app.use((_req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    next();
+  });
   app.use(express.json({ limit: '100kb' }));
 
   app.get('/api/auth/status', (req, res) => {
@@ -1645,7 +1674,7 @@ async function dispatchInquiryNotifications(
           from: cfg.fromEmail,
           to: [cfg.notifyEmail],
           reply_to: inquiry.email,
-          subject: `New Scoping Call Request (${referenceId}) — ${inquiry.organization}`,
+          subject: `New Scoping Call Request (${referenceId}) — ${inquiry.organization.replace(/[\r\n]+/g, ' ').trim()}`,
           text: textBody,
         }),
         signal: AbortSignal.timeout(8000),
@@ -1709,6 +1738,14 @@ async function dispatchInquiryNotifications(
   });
 
   app.post('/api/inquiries', async (req, res) => {
+    const ip = getClientIp(req);
+    if (isInquiryRateLimited(ip)) {
+      res.status(429).json({
+        error: 'Too many scoping requests submitted recently. Please wait a few minutes and try again.',
+      });
+      return;
+    }
+
     const body = req.body as Partial<ScopingInquiryPayload>;
     const fullName = typeof body.fullName === 'string' ? body.fullName.trim().slice(0, 120) : '';
     const email = typeof body.email === 'string' ? body.email.trim().slice(0, 160) : '';
@@ -1739,6 +1776,8 @@ async function dispatchInquiryNotifications(
       return;
     }
 
+    recordInquiryAttempt(ip);
+
     const referenceId = generateInquiryReferenceId();
     const submittedAt = new Date().toISOString();
     const inquiry: ScopingInquiryPayload = {
@@ -1763,6 +1802,9 @@ async function dispatchInquiryNotifications(
       emailDeliveryStatus,
       inquiry,
     };
+    if (recentInquiries.length >= MAX_RECENT_INQUIRIES) {
+      recentInquiries.shift();
+    }
     recentInquiries.push(record);
     res.status(201).json(record);
   });
@@ -1822,6 +1864,10 @@ async function dispatchInquiryNotifications(
       res.status(404).send('Client report file missing');
       return;
     }
+    res.setHeader(
+      'Content-Security-Policy',
+      "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-ancestors 'self'"
+    );
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.sendFile(fullPath);
   });
@@ -1837,16 +1883,25 @@ async function dispatchInquiryNotifications(
       res.status(404).send('Report file missing');
       return;
     }
+    res.setHeader(
+      'Content-Security-Policy',
+      "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-ancestors 'self'"
+    );
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.sendFile(fullPath);
   });
 
   const serveStaticDist = () => {
+    app.use('/assets', express.static(path.join(DIST_DIR, 'assets'), { immutable: true, maxAge: '365d' }));
     app.use(express.static(DIST_DIR));
     app.get('*', (_req, res) => {
       res.sendFile(path.join(DIST_DIR, 'index.html'));
     });
   };
+
+  app.use('/api', (_req, res) => {
+    res.status(404).json({ error: 'API route not found' });
+  });
 
   if (!IS_PROD) {
     try {

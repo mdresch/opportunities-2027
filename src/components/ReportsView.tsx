@@ -173,13 +173,13 @@ export const ReportsView: React.FC<ReportsViewProps> = ({
     }
   };
 
-  const handleDownloadBriefPdf = () => {
+  const handleDownloadBriefPdf = async () => {
     if (!docContent || exportingPdf) return;
     setExportingPdf(true);
     setExportError(null);
     try {
       const baseName = selectedDocPath.split('/').pop()?.replace(/\.md$/i, '') || 'portfolio-brief';
-      exportMarkdownToPdf(
+      await exportMarkdownToPdf(
         activeDocMeta?.title || baseName,
         selectedDocPath,
         docContent,

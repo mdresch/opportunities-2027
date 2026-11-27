@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, useState } from 'react';
 import {
   FileText,
   FlaskConical,
@@ -12,20 +12,41 @@ import {
   X,
 } from 'lucide-react';
 import type { Opportunity, PortfolioData } from './types';
-import { OverviewView } from './components/OverviewView';
-import { InventoryView } from './components/InventoryView';
-import { HypothesesView } from './components/HypothesesView';
-import { ReportsView } from './components/ReportsView';
-import { OpportunityDrawer } from './components/OpportunityDrawer';
 import { ClientShowcase } from './components/ClientShowcase';
-import { ClientReportsPage } from './components/ClientReportsPage';
-import { AgentGovernancePortal } from './components/AgentGovernancePortal';
-import { InternalAuthGate } from './components/InternalAuthGate';
-import { ScopingRequestsView } from './components/ScopingRequestsView';
 import { ErrorBoundary } from './components/ErrorBoundary';
+
+const ClientReportsPage = lazy(() =>
+  import('./components/ClientReportsPage').then((m) => ({ default: m.ClientReportsPage }))
+);
+const AgentGovernancePortal = lazy(() =>
+  import('./components/AgentGovernancePortal').then((m) => ({ default: m.AgentGovernancePortal }))
+);
+const InternalAuthGate = lazy(() =>
+  import('./components/InternalAuthGate').then((m) => ({ default: m.InternalAuthGate }))
+);
+const OverviewView = lazy(() =>
+  import('./components/OverviewView').then((m) => ({ default: m.OverviewView }))
+);
+const InventoryView = lazy(() =>
+  import('./components/InventoryView').then((m) => ({ default: m.InventoryView }))
+);
+const HypothesesView = lazy(() =>
+  import('./components/HypothesesView').then((m) => ({ default: m.HypothesesView }))
+);
+const ReportsView = lazy(() =>
+  import('./components/ReportsView').then((m) => ({ default: m.ReportsView }))
+);
+const ScopingRequestsView = lazy(() =>
+  import('./components/ScopingRequestsView').then((m) => ({ default: m.ScopingRequestsView }))
+);
+const OpportunityDrawer = lazy(() =>
+  import('./components/OpportunityDrawer').then((m) => ({ default: m.OpportunityDrawer }))
+);
 
 type NavTab = 'overview' | 'inventory' | 'hypotheses' | 'reports' | 'inquiries';
 type AppMode = 'internal' | 'client' | 'client-reports' | 'assessment';
+
+const SHORTLIST_STORAGE_KEY = 'cba_client_shortlist_v1';
 
 const NAV_ITEMS: Array<{
   id: NavTab;
@@ -39,8 +60,19 @@ const NAV_ITEMS: Array<{
   { id: 'inquiries', label: 'Scoping Requests', icon: Inbox },
 ];
 
+const MODE_TITLES: Record<AppMode, string> = {
+  client: 'CBa Consult — Executive AI, Finance & Governance Advisory',
+  'client-reports': 'Executive Reports & Priority Briefs — CBa Consult',
+  assessment: 'Enterprise AI Agent Governance Self-Assessment — CBa Consult',
+  internal: 'Opportunities 2027 — Internal Portfolio Explorer',
+};
+
 function getInitialMode(): AppMode {
   if (typeof window === 'undefined') return 'client';
+  const pathname = window.location.pathname;
+  if (pathname === '/reports' || pathname.startsWith('/reports/')) {
+    return 'client-reports';
+  }
   const params = new URLSearchParams(window.location.search);
   const view = params.get('view');
   if (view === 'internal') return 'internal';
@@ -54,6 +86,31 @@ function getInitialMode(): AppMode {
   return 'client';
 }
 
+function loadStoredShortlist(): string[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem(SHORTLIST_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
+      .slice(0, 12);
+  } catch {
+    return [];
+  }
+}
+
+const PageLoadingFallback: React.FC = () => (
+  <div className="min-h-screen bg-[#f5f8fa] flex items-center justify-center p-6">
+    <div className="w-full max-w-md bg-white border border-[#dae3e9] rounded-md p-6 space-y-3">
+      <div className="h-5 w-40 bg-[#eef5f7] rounded animate-pulse" />
+      <div className="h-4 w-full bg-[#f5f8fa] rounded animate-pulse" />
+      <div className="h-4 w-4/5 bg-[#f5f8fa] rounded animate-pulse" />
+    </div>
+  </div>
+);
+
 export default function App() {
   const [mode, setMode] = useState<AppMode>(getInitialMode);
   const [authToken, setAuthToken] = useState<string | null>(null);
@@ -66,15 +123,65 @@ export default function App() {
   const [pendingReportSlug, setPendingReportSlug] = useState<string | null>(null);
   const [pendingDocPath, setPendingDocPath] = useState<string | null>(null);
   const [pendingClientSection, setPendingClientSection] = useState<string | null>(null);
-  const [pendingShortlistItem, setPendingShortlistItem] = useState<string | null>(null);
+  const [shortlist, setShortlist] = useState<string[]>(loadStoredShortlist);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(SHORTLIST_STORAGE_KEY, JSON.stringify(shortlist));
+    } catch {
+      // Ignore storage errors (e.g. private browsing quota)
+    }
+  }, [shortlist]);
+
+  useEffect(() => {
+    document.title = MODE_TITLES[mode];
+  }, [mode]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setMode(getInitialMode());
+      setMobileMenuOpen(false);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const toggleShortlist = useCallback((label: string) => {
+    const clean = label.trim();
+    if (!clean) return;
+    setShortlist((prev) =>
+      prev.includes(clean)
+        ? prev.filter((x) => x !== clean)
+        : prev.length < 12
+        ? [...prev, clean]
+        : prev
+    );
+  }, []);
+
+  const addToShortlist = useCallback((label: string) => {
+    const clean = label.trim();
+    if (!clean) return;
+    setShortlist((prev) =>
+      prev.includes(clean) ? prev : prev.length < 12 ? [...prev, clean] : prev
+    );
+  }, []);
+
+  const clearShortlist = useCallback(() => {
+    setShortlist([]);
+  }, []);
 
   const switchMode = useCallback((nextMode: AppMode) => {
     setMode(nextMode);
     setMobileMenuOpen(false);
     const url = new URL(window.location.href);
+    if (url.pathname === '/reports' || url.pathname.startsWith('/reports/')) {
+      url.pathname = '/';
+    }
     url.searchParams.delete('view');
     url.searchParams.delete('assessment');
+    url.searchParams.delete('report');
+    url.searchParams.delete('brief');
     if (nextMode === 'internal') {
       url.searchParams.set('view', 'internal');
     } else if (nextMode === 'client-reports') {
@@ -82,7 +189,9 @@ export default function App() {
     } else if (nextMode === 'assessment') {
       url.searchParams.set('assessment', 'agent-governance');
     }
-    window.history.replaceState({}, '', url.toString());
+    if (url.toString() !== window.location.href) {
+      window.history.pushState({ mode: nextMode }, '', url.toString());
+    }
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
@@ -142,52 +251,80 @@ export default function App() {
 
   if (mode === 'assessment') {
     return (
-      <AgentGovernancePortal
-        onBackToShowcase={() => switchMode('client')}
-        onSwitchToInternal={() => switchMode('internal')}
-      />
+      <ErrorBoundary
+        resetKey={mode}
+        title="Unable to Display Diagnostic"
+        onBackToClient={() => switchMode('client')}
+      >
+        <Suspense fallback={<PageLoadingFallback />}>
+          <AgentGovernancePortal
+            onBackToShowcase={() => switchMode('client')}
+            onSwitchToInternal={() => switchMode('internal')}
+          />
+        </Suspense>
+      </ErrorBoundary>
     );
   }
 
   if (mode === 'client-reports') {
     return (
-      <ClientReportsPage
-        onBackToShowcase={(targetSection, shortlistItem) => {
-          setPendingClientSection(targetSection ?? null);
-          setPendingShortlistItem(shortlistItem ?? null);
-          switchMode('client');
-        }}
-        onOpenAgentAssessment={() => switchMode('assessment')}
-        onSwitchToInternal={() => switchMode('internal')}
-      />
+      <ErrorBoundary
+        resetKey={mode}
+        title="Unable to Display Publications"
+        onBackToClient={() => switchMode('client')}
+      >
+        <Suspense fallback={<PageLoadingFallback />}>
+          <ClientReportsPage
+            shortlist={shortlist}
+            onToggleShortlist={toggleShortlist}
+            onBackToShowcase={(targetSection, shortlistItem) => {
+              setPendingClientSection(targetSection ?? null);
+              if (shortlistItem) addToShortlist(shortlistItem);
+              switchMode('client');
+            }}
+            onOpenAgentAssessment={() => switchMode('assessment')}
+            onSwitchToInternal={() => switchMode('internal')}
+          />
+        </Suspense>
+      </ErrorBoundary>
     );
   }
 
   if (mode === 'client') {
     return (
-      <ClientShowcase
-        onSwitchToInternal={() => switchMode('internal')}
-        onOpenAgentAssessment={() => switchMode('assessment')}
-        onOpenReportsLibrary={() => switchMode('client-reports')}
-        initialSection={pendingClientSection}
-        initialShortlistItem={pendingShortlistItem}
-        onClearInitialNavigation={() => {
-          setPendingClientSection(null);
-          setPendingShortlistItem(null);
-        }}
-      />
+      <ErrorBoundary resetKey={mode} title="Unable to Display Advisory Showcase">
+        <ClientShowcase
+          shortlist={shortlist}
+          onToggleShortlist={toggleShortlist}
+          onAddToShortlist={addToShortlist}
+          onClearShortlist={clearShortlist}
+          onSwitchToInternal={() => switchMode('internal')}
+          onOpenAgentAssessment={() => switchMode('assessment')}
+          onOpenReportsLibrary={() => switchMode('client-reports')}
+          initialSection={pendingClientSection}
+          onClearInitialNavigation={() => setPendingClientSection(null)}
+        />
+      </ErrorBoundary>
     );
   }
 
   if (!authToken) {
     return (
-      <InternalAuthGate
-        onAuthenticated={(token, username) => {
-          setAuthToken(token);
-          setAuthUser(username);
-        }}
+      <ErrorBoundary
+        resetKey="auth-gate"
+        title="Unable to Display Sign-In"
         onBackToClient={() => switchMode('client')}
-      />
+      >
+        <Suspense fallback={<PageLoadingFallback />}>
+          <InternalAuthGate
+            onAuthenticated={(token, username) => {
+              setAuthToken(token);
+              setAuthUser(username);
+            }}
+            onBackToClient={() => switchMode('client')}
+          />
+        </Suspense>
+      </ErrorBoundary>
     );
   }
 
@@ -416,64 +553,71 @@ export default function App() {
               </button>
             </div>
           ) : data ? (
-            <>
-              {activeTab === 'overview' && (
-                <OverviewView
-                  data={data}
-                  onSelectOpportunity={setSelectedOpportunity}
-                  onNavigateTab={setActiveTab}
-                  onOpenDocument={handleOpenDocument}
-                />
-              )}
-              {activeTab === 'inventory' && (
-                <InventoryView
-                  opportunities={data.opportunities}
-                  pillars={data.pillars}
-                  onSelectOpportunity={setSelectedOpportunity}
-                />
-              )}
-              {activeTab === 'hypotheses' && (
-                <HypothesesView
-                  hypotheses={data.hypotheses}
-                  onOpenDocument={handleOpenDocument}
-                />
-              )}
-              {activeTab === 'reports' && (
-                <ReportsView
-                  htmlReports={data.htmlReports}
-                  coreDocuments={data.coreDocuments}
-                  authToken={authToken}
-                  onUnauthorized={handleUnauthorized}
-                  initialReportSlug={pendingReportSlug}
-                  initialDocPath={pendingDocPath}
-                  onClearInitial={() => {
-                    setPendingReportSlug(null);
-                    setPendingDocPath(null);
-                  }}
-                />
-              )}
-              {activeTab === 'inquiries' && (
-                <ErrorBoundary>
+            <ErrorBoundary resetKey={activeTab} title="Unable to Display View">
+              <Suspense
+                fallback={
+                  <div className="h-64 bg-white border border-[#dae3e9] rounded-md animate-pulse" />
+                }
+              >
+                {activeTab === 'overview' && (
+                  <OverviewView
+                    data={data}
+                    onSelectOpportunity={setSelectedOpportunity}
+                    onNavigateTab={setActiveTab}
+                    onOpenDocument={handleOpenDocument}
+                  />
+                )}
+                {activeTab === 'inventory' && (
+                  <InventoryView
+                    opportunities={data.opportunities}
+                    pillars={data.pillars}
+                    onSelectOpportunity={setSelectedOpportunity}
+                  />
+                )}
+                {activeTab === 'hypotheses' && (
+                  <HypothesesView
+                    hypotheses={data.hypotheses}
+                    onOpenDocument={handleOpenDocument}
+                  />
+                )}
+                {activeTab === 'reports' && (
+                  <ReportsView
+                    htmlReports={data.htmlReports}
+                    coreDocuments={data.coreDocuments}
+                    authToken={authToken}
+                    onUnauthorized={handleUnauthorized}
+                    initialReportSlug={pendingReportSlug}
+                    initialDocPath={pendingDocPath}
+                    onClearInitial={() => {
+                      setPendingReportSlug(null);
+                      setPendingDocPath(null);
+                    }}
+                  />
+                )}
+                {activeTab === 'inquiries' && (
                   <ScopingRequestsView
                     authToken={authToken}
                     onUnauthorized={handleUnauthorized}
                   />
-                </ErrorBoundary>
-              )}
-            </>
+                )}
+              </Suspense>
+            </ErrorBoundary>
           ) : null}
         </main>
       </div>
 
       {/* Opportunity Detail Slide-Over */}
-      <OpportunityDrawer
-        opportunity={selectedOpportunity}
-        authToken={authToken}
-        onUnauthorized={handleUnauthorized}
-        onClose={() => setSelectedOpportunity(null)}
-        onOpenReportSlug={handleOpenReportSlug}
-      />
+      {selectedOpportunity && (
+        <Suspense fallback={null}>
+          <OpportunityDrawer
+            opportunity={selectedOpportunity}
+            authToken={authToken}
+            onUnauthorized={handleUnauthorized}
+            onClose={() => setSelectedOpportunity(null)}
+            onOpenReportSlug={handleOpenReportSlug}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }
-

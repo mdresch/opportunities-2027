@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
@@ -8,7 +8,7 @@ import {
   FileDown,
   FileText,
   Link2,
-  Lock,
+  Menu,
   Search,
   X,
 } from 'lucide-react';
@@ -25,6 +25,8 @@ import {
 import { exportHtmlStringToPdf } from '../utils/pdfExport';
 
 interface ClientReportsPageProps {
+  shortlist: string[];
+  onToggleShortlist: (serviceLabel: string) => void;
   onBackToShowcase: (targetSection?: string, shortlistItem?: string) => void;
   onOpenAgentAssessment: () => void;
   onSwitchToInternal: () => void;
@@ -39,6 +41,8 @@ const CATEGORY_FILTERS: Array<'All Briefs' | ClientReportCategory> = [
 ];
 
 export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
+  shortlist,
+  onToggleShortlist,
   onBackToShowcase,
   onOpenAgentAssessment,
   onSwitchToInternal,
@@ -46,6 +50,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
   const [data, setData] = useState<ClientPortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const [categoryFilter, setCategoryFilter] = useState<
     'All Briefs' | ClientReportCategory
@@ -57,6 +62,37 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
   const [exportingReportSlug, setExportingReportSlug] = useState<string | null>(null);
   const [reportExportError, setReportExportError] = useState<string | null>(null);
   const [copiedLink, setCopiedLink] = useState(false);
+
+  const syncReportParam = useCallback((slug: string | null) => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('assessment');
+    if (url.pathname === '/reports' || url.pathname.startsWith('/reports/')) {
+      url.pathname = '/';
+    }
+    url.searchParams.set('view', 'reports');
+    if (slug) {
+      url.searchParams.set('report', slug);
+    } else {
+      url.searchParams.delete('report');
+    }
+    if (url.toString() !== window.location.href) {
+      window.history.replaceState({}, '', url.toString());
+    }
+  }, []);
+
+  const openReport = useCallback(
+    (rep: ClientReportEntry) => {
+      setActiveBrief(null);
+      setActiveReport(rep);
+      syncReportParam(rep.slug);
+    },
+    [syncReportParam]
+  );
+
+  const closeReport = useCallback(() => {
+    setActiveReport(null);
+    syncReportParam(null);
+  }, [syncReportParam]);
 
   useEffect(() => {
     let cancelled = false;
@@ -83,6 +119,16 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
   }, []);
 
   const allReports = useMemo(() => data?.clientReports ?? [], [data]);
+
+  useEffect(() => {
+    if (loading || allReports.length === 0) return;
+    const params = new URLSearchParams(window.location.search);
+    const reportSlug = params.get('report');
+    if (reportSlug) {
+      const matched = allReports.find((r) => r.slug === reportSlug);
+      if (matched) setActiveReport(matched);
+    }
+  }, [loading, allReports]);
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {
@@ -173,7 +219,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
   };
 
   const handleRequestScopingFromReport = (serviceLabel: string) => {
-    setActiveReport(null);
+    closeReport();
     setActiveBrief(null);
     onBackToShowcase('inquire', serviceLabel);
   };
@@ -182,15 +228,27 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
     <div className="min-h-screen bg-[#f5f8fa] text-[#17243a] flex flex-col">
       {/* Top Bar — Strict 3-Zone Contract */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-xs border-b border-[#dae3e9]">
-        <div className="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3 sm:gap-8">
           {/* Zone 1: Clean wordmark */}
-          <button
-            type="button"
-            onClick={() => onBackToShowcase()}
-            className="font-display text-lg font-bold tracking-tight text-[#10253f] hover:text-[#0c8b82] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            CBa Consult
-          </button>
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => setMobileNavOpen((prev) => !prev)}
+              className="md:hidden min-h-[44px] min-w-[44px] -ml-2 flex items-center justify-center text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+              aria-label={mobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileNavOpen}
+              aria-controls="client-reports-mobile-nav"
+            >
+              {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+            <button
+              type="button"
+              onClick={() => onBackToShowcase()}
+              className="font-display text-lg font-bold tracking-tight text-[#10253f] hover:text-[#075d68] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              CBa Consult
+            </button>
+          </div>
 
           {/* Zone 2: Concise single-line navigation links */}
           <nav
@@ -206,7 +264,12 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
             </button>
             <button
               type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => {
+                const prefersReducedMotion = window.matchMedia(
+                  '(prefers-reduced-motion: reduce)'
+                ).matches;
+                window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+              }}
               className="text-[#10253f] font-semibold whitespace-nowrap shrink-0 cursor-pointer"
               aria-current="page"
             >
@@ -233,23 +296,70 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
             <button
               type="button"
               onClick={() => onBackToShowcase('inquire')}
-              className="px-4 py-2 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              className="px-3.5 sm:px-4 py-2 text-xs font-medium text-white bg-[#10253f] hover:bg-[#1e3b5c] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
-              Request Scoping Call
+              <span className="sm:hidden">Scope Call</span>
+              <span className="hidden sm:inline">Request Scoping Call</span>
             </button>
           </div>
         </div>
+
+        {mobileNavOpen && (
+          <nav
+            id="client-reports-mobile-nav"
+            aria-label="Mobile publications navigation"
+            className="md:hidden bg-white border-t border-[#dae3e9] px-4 py-3 space-y-1"
+          >
+            <button
+              type="button"
+              onClick={() => {
+                setMobileNavOpen(false);
+                onBackToShowcase();
+              }}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Client Showcase
+            </button>
+            <button
+              type="button"
+              onClick={() => setMobileNavOpen(false)}
+              className="w-full text-left px-3 py-2.5 text-sm font-semibold text-[#075d68] bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Reports &amp; Briefs
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileNavOpen(false);
+                onOpenAgentAssessment();
+              }}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              AI Agent Governance Benchmark
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileNavOpen(false);
+                onBackToShowcase('inquire');
+              }}
+              className="w-full text-left px-3 py-2.5 text-sm font-medium text-[#10253f] hover:bg-[#eef5f7] rounded-md cursor-pointer"
+            >
+              Scope Assignment
+            </button>
+          </nav>
+        )}
       </header>
 
       <main className="flex-1">
         {/* Editorial Page Header */}
         <section className="bg-white border-b border-[#dae3e9]">
-          <div className="max-w-[1280px] mx-auto px-6 py-10 lg:py-12">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-10 lg:py-12">
             <div className="mb-5">
               <button
                 type="button"
                 onClick={() => onBackToShowcase()}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] whitespace-nowrap cursor-pointer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#075d68] hover:text-[#10253f] whitespace-nowrap cursor-pointer"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 Back to Client Showcase
@@ -258,7 +368,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
               <div className="max-w-3xl space-y-3">
-                <div className="text-xs font-semibold text-[#0c8b82]">
+                <div className="text-xs font-semibold text-[#075d68]">
                   CBa Consult · Client Publications &amp; Board Briefs
                 </div>
                 <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#10253f] tracking-tight leading-tight">
@@ -280,12 +390,12 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                 >
                   {copiedLink ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-[#0c8b82]" />
+                      <Check className="w-3.5 h-3.5 text-[#075d68]" />
                       Library Link Copied
                     </>
                   ) : (
                     <>
-                      <Link2 className="w-3.5 h-3.5 text-[#0c8b82]" />
+                      <Link2 className="w-3.5 h-3.5 text-[#075d68]" />
                       Copy Shareable Link
                     </>
                   )}
@@ -303,7 +413,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                         onePagerPath: data.flagshipOverviewPath,
                       })
                     }
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-[#075d68] hover:text-[#10253f] bg-[#f5f8fa] hover:bg-[#eef5f7] border border-[#dae3e9] rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                   >
                     <FileText className="w-3.5 h-3.5" />
                     Unified Flagship One-Pager
@@ -315,7 +425,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
         </section>
 
         {/* Library Filter Bar & Report Grid */}
-        <section className="max-w-[1280px] mx-auto px-6 py-10 space-y-8">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-6 py-10 space-y-8">
           {loading ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {[0, 1, 2, 3].map((idx) => (
@@ -371,21 +481,24 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                 </div>
 
                 <div className="relative w-full lg:w-72">
+                  <label htmlFor="reports-search" className="sr-only">
+                    Search client reports
+                  </label>
                   <Search className="w-4 h-4 text-[#52647a] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
+                    id="reports-search"
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search reports, topics, IDs..."
-                    aria-label="Search client reports"
-                    className="w-full pl-9 pr-8 py-2 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] placeholder:text-[#6b7d93] focus:outline-none focus:border-[#0c8b82]"
+                    placeholder="Search reports, topics, or audiences..."
+                    className="w-full pl-9 pr-9 py-2 text-xs bg-white border border-[#dae3e9] rounded-md text-[#10253f] placeholder:text-[#52647a] focus:border-[#075d68]"
                   />
                   {searchQuery && (
                     <button
                       type="button"
                       onClick={() => setSearchQuery('')}
                       aria-label="Clear search"
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#52647a] hover:text-[#10253f] cursor-pointer"
+                      className="absolute right-1.5 top-1/2 -translate-y-1/2 min-h-[36px] min-w-[36px] flex items-center justify-center text-[#52647a] hover:text-[#10253f] cursor-pointer"
                     >
                       <X className="w-3.5 h-3.5" />
                     </button>
@@ -394,7 +507,10 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
               </div>
 
               {reportExportError && (
-                <div className="px-4 py-2.5 bg-[#fef2f2] border border-[#fecaca] rounded-md text-xs font-medium text-[#b91c1c]">
+                <div
+                  role="alert"
+                  className="px-4 py-2.5 bg-[#fef2f2] border border-[#fecaca] rounded-md text-xs font-medium text-[#b91c1c]"
+                >
                   {reportExportError}
                 </div>
               )}
@@ -410,7 +526,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                       setCategoryFilter('All Briefs');
                       setSearchQuery('');
                     }}
-                    className="text-[#0c8b82] hover:text-[#075d68] font-semibold cursor-pointer"
+                    className="text-[#075d68] hover:text-[#10253f] font-semibold cursor-pointer"
                   >
                     Reset filters
                   </button>
@@ -439,21 +555,13 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                       >
                         <div className="space-y-3">
                           <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#52647a]">
-                            <span className="font-semibold text-[#0c8b82]">
+                            <span className="font-semibold text-[#075d68]">
                               {categoryLabel}
                             </span>
                             <span aria-hidden="true">·</span>
                             <span>{rep.editionLabel}</span>
                             <span aria-hidden="true">·</span>
                             <span className="font-mono tabular-nums">{rep.pagesLabel}</span>
-                            {rep.opportunityId && (
-                              <>
-                                <span aria-hidden="true">·</span>
-                                <span className="font-mono text-[#10253f] font-medium">
-                                  {rep.opportunityId}
-                                </span>
-                              </>
-                            )}
                           </div>
 
                           <h2 className="text-lg font-bold text-[#10253f] leading-snug">
@@ -476,7 +584,7 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                               {rep.keyHighlights.map((point) => (
                                 <li key={point} className="flex items-start gap-2 leading-relaxed">
                                   <span
-                                    className="w-1.5 h-1.5 rounded-full bg-[#0c8b82] mt-1.5 shrink-0"
+                                    className="w-1.5 h-1.5 rounded-full bg-[#075d68] mt-1.5 shrink-0"
                                     aria-hidden="true"
                                   />
                                   <span>{point}</span>
@@ -512,8 +620,8 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                             <div className="flex flex-wrap items-center gap-4">
                               <button
                                 type="button"
-                                onClick={() => setActiveReport(rep)}
-                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0c8b82] hover:text-[#075d68] whitespace-nowrap shrink-0 cursor-pointer"
+                                onClick={() => openReport(rep)}
+                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#075d68] hover:text-[#10253f] whitespace-nowrap shrink-0 cursor-pointer"
                               >
                                 <BookOpen className="w-3.5 h-3.5" />
                                 Read Formatted Report
@@ -549,12 +657,12 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                           </div>
 
                           {rep.referencePdfUrl && (
-                            <div className="pt-2.5 border-t border-[#eef5f7] flex items-center justify-between gap-3 text-xs">
+                            <div className="pt-2.5 border-t border-[#eef5f7] flex flex-wrap items-center justify-between gap-3 text-xs">
                               <span className="text-[#52647a]">Companion reference document</span>
                               <a
                                 href={rep.referencePdfUrl}
                                 download
-                                className="inline-flex items-center gap-1.5 font-semibold text-[#0c8b82] hover:text-[#075d68] whitespace-nowrap"
+                                className="inline-flex items-center gap-1.5 font-semibold text-[#075d68] hover:text-[#10253f] whitespace-nowrap"
                               >
                                 <FileDown className="w-3.5 h-3.5" />
                                 {rep.referencePdfLabel || 'Download Reference PDF'}
@@ -578,9 +686,9 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
                     Need a tailored scoping brief or interactive AI Agent Governance diagnostic?
                   </h2>
                   <p className="text-sm text-[#d8e4f0] leading-relaxed">
-                    Every published brief maps directly to a fixed-scope entry wedge delivered
-                    inside your existing ERP, cloud, and Microsoft 365 estate with zero statutory
-                    auditor conflicts.
+                    Every published brief maps directly to a fixed-scope Phase 0 diagnostic
+                    delivered inside your existing ERP, cloud, and Microsoft 365 estate with zero
+                    statutory auditor conflicts.
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
@@ -643,10 +751,9 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
             <button
               type="button"
               onClick={onSwitchToInternal}
-              className="inline-flex items-center gap-1.5 text-[#48c5b2] hover:text-white transition-colors font-medium cursor-pointer"
+              className="text-[#9cb4cc] hover:text-white transition-colors cursor-pointer"
             >
-              <Lock className="w-3.5 h-3.5" />
-              Internal Portfolio Explorer
+              Advisor Login
             </button>
           </div>
         </div>
@@ -656,14 +763,14 @@ export const ClientReportsPage: React.FC<ClientReportsPageProps> = ({
       <ClientReportDrawer
         report={activeReport}
         onRequestScoping={handleRequestScopingFromReport}
-        onClose={() => setActiveReport(null)}
+        onClose={closeReport}
       />
 
       {/* Unified Flagship One-Pager Drawer */}
       <ClientServiceDrawer
         selection={activeBrief}
-        isShortlisted={false}
-        onToggleShortlist={(label) => handleRequestScopingFromReport(label)}
+        isShortlisted={activeBrief ? shortlist.includes(activeBrief.serviceLabel) : false}
+        onToggleShortlist={onToggleShortlist}
         onRequestScoping={handleRequestScopingFromReport}
         onClose={() => setActiveBrief(null)}
       />
