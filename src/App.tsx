@@ -11,7 +11,7 @@ import {
   Table2,
   X,
 } from 'lucide-react';
-import type { Opportunity, PortfolioData } from './types';
+import type { ClientPortfolioData, Opportunity, PortfolioData } from './types';
 import { ClientShowcase } from './components/ClientShowcase';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -116,6 +116,7 @@ export default function App() {
   const [authToken, setAuthToken] = useState<string | null>(null);
   const [authUser, setAuthUser] = useState<string | null>(null);
   const [data, setData] = useState<PortfolioData | null>(null);
+  const [clientPortfolio, setClientPortfolio] = useState<ClientPortfolioData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<NavTab>('overview');
@@ -224,9 +225,12 @@ export default function App() {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch('/api/portfolio', {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const [res, cpRes] = await Promise.all([
+          fetch('/api/portfolio', {
+            headers: { Authorization: `Bearer ${token}` },
+          }),
+          fetch('/api/client-portfolio').catch(() => null),
+        ]);
         if (res.status === 401) {
           handleUnauthorized();
           return;
@@ -234,6 +238,10 @@ export default function App() {
         if (!res.ok) throw new Error('Failed to fetch portfolio data');
         const json: PortfolioData = await res.json();
         setData(json);
+        if (cpRes && cpRes.ok) {
+          const cpJson: ClientPortfolioData = await cpRes.json();
+          setClientPortfolio(cpJson);
+        }
       } catch {
         setError('Could not load portfolio data from the repository server.');
       } finally {
@@ -611,10 +619,19 @@ export default function App() {
         <Suspense fallback={null}>
           <OpportunityDrawer
             opportunity={selectedOpportunity}
+            clientPortfolio={clientPortfolio}
             authToken={authToken}
             onUnauthorized={handleUnauthorized}
             onClose={() => setSelectedOpportunity(null)}
             onOpenReportSlug={handleOpenReportSlug}
+            onOpenClientShowcase={() => {
+              setSelectedOpportunity(null);
+              switchMode('client');
+            }}
+            onOpenClientReports={() => {
+              setSelectedOpportunity(null);
+              switchMode('client-reports');
+            }}
           />
         </Suspense>
       )}
