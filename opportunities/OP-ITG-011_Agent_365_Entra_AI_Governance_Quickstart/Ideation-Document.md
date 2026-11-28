@@ -1,59 +1,60 @@
-# Ideation Document — `OP-ITG-011`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-011"
+execution_track: "Tier B Growth — IT & Technology (Microsoft Ecosystem)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md §6 IT & Technology (MS Ignite 2026 Spark)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-ITG-011`: Agent 365 & Entra AI-Agent Governance Quick-Start
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b Ideation Document is governed by the [Tailored Hybrid SIDPA Governance](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) framework and anchored to the [Inventory of Ideas](../../inventory-of-ideas.md) and [Tier A Executive Summary](../../Tier_A_Executive_Summary_2027.md). Supporting artifacts: [Ideation-Spark.md](Ideation-Spark.md), [BD-Quick-Reference.md](BD-Quick-Reference.md), and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Configure **Agent 365** observability/FinOps limits, **Entra for AI Agents** just-in-time identity controls, **Project Perception** guardrails, and **Baseline Security Mode (BSM) 2026** hardening before scaling Copilot Autopilot or Windows 365 for Agents.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Following Microsoft Ignite 2026 (November 2026), enterprises accelerated adoption of Copilot Studio, Copilot Autopilot, and Windows 365 for Agents. Most mid-to-large Microsoft tenants are deploying autonomous and semi-autonomous agents using legacy human service accounts, broad SharePoint permissions, and uncapped consumption meters. This creates immediate oversharing, shadow-agent sprawl, and FinOps cost-spike exposure.
 
-# Ideation Spark — `OP-ITG-011`: Agent 365 & Entra AI-Agent Governance Quick-Start
+Microsoft introduced *Agent 365* observability/FinOps controls, *Entra for AI Agents* just-in-time identity governance, *Project Perception* guardrails, and *Baseline Security Mode (BSM) 2026* hardening—yet CIOs, CISOs, and M365 Security Leads lack practical, vendor-neutral implementation blueprints to operationalize these controls before agent proliferation outpaces governance.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete (grounded in Microsoft Ignite 2026), Tier 2 deeper research pending
-**Tier:** B — Growth
-**Strategic Asset:** 3. Digital Labor
-**Functional Area:** IT and Technology *(Microsoft Ecosystem)* · **Signature Toolkit:** Digital Transformation
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §6 IT & Technology](../../inventory-of-ideas.md) · [market-analysis-2027.md §6 & §17](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-ITG-011` delivers a hardened, cost-capped Microsoft AI-agent baseline in 4–6 weeks (6–8 hrs/wk) without upfront capital:
 
-> For **CIOs, CISOs, and M365 Security Leads** in medium and large Microsoft-centric enterprises who struggle with **uncontrolled Copilot Autopilot, Copilot Studio, and citizen-developer agent sprawl**, **Agent 365 & Entra AI-Agent Governance Quick-Start** is an **Advisory / Starter Kit** backed by **Microsoft Ignite 2026 controls (*Agent 365*, *Entra for AI Agents*, *BSM 2026*) and `ICT-Governance-Framework-Application`** that delivers **a hardened, cost-capped Microsoft AI-agent baseline in 4–6 weeks** with \$0 working capital.
+1. **Agent Estate Discovery & Risk Triage:** Inventory active Copilot Studio bots, Autopilot workflows, and citizen-built agents across M365 environments; classify data sensitivity and permission blast radius.
+2. **Entra AI-Agent Identity & JIT Hardening:** Transition agents off shared human credentials onto dedicated Entra Agent Identities with least-privilege, just-in-time access policies and conditional boundaries.
+3. **Agent 365 FinOps & Project Perception Guardrails:** Configure observability telemetry, consumption quotas/alerts, and prompt/action guardrails aligned with BSM 2026 security baselines.
+4. **Governance Charter & Scale Handover:** Establish approval gates for disposable apps and agent promotion, creating a natural bridge into full ICT Governance (`OP-ITG-002`) and Power Platform/Copilot CoE (`OP-ITG-007`).
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Configure **Agent 365** observability/FinOps limits, **Entra for AI Agents** just-in-time identity controls, **Project Perception** guardrails, and **Baseline Security Mode (BSM) 2026** hardening before scaling Copilot Autopilot or Windows 365 for Agents.
+| Comparable / Alternative | Typical Buyer Fit | Strengths | Gaps / Limitations | CBa Consult Differentiation |
+| --- | --- | --- | --- | --- |
+| Global Microsoft GSIs (Accenture, Avanade) | Fortune 500 enterprises | Deep multi-cloud engineering benches | €75k+ minimums, slow mobilization, incentivized to sell broad license expansions | Fixed-scope 4–6 week Quick-Start focused strictly on hardening and FinOps caps |
+| Microsoft Unified Support / FastTrack | Large EA Microsoft accounts | Direct product-group visibility | Advisory guidance only; limited hands-on governance policy tailoring | Hands-on policy configuration, governance charter, and conflict-free FinOps advocacy |
+| Point Security Vendors (CASB / DSPM) | Security-heavy enterprises | Automated SaaS/data posture scanning | Adds new licensing overhead; does not configure native Entra Agent ID or Agent 365 | Maximizes native Microsoft Ignite 2026 controls already included or accessible in-tenant |
+| Internal M365 Admins (DIY) | Lean IT teams | Knows tenant history | Overloaded with BAU tickets; limited time to track fast-moving Ignite 2026 previews | Curated, repeatable Digital Transformation & ICT Governance playbook |
 
-## 7 Pivotal Questions
+## 4. Internal IP & Source Provenance Crosswalk
 
-1. **Buyer & 2027 Trigger** — CIO, CISO, and M365/Entra Security Leads. **Microsoft Ignite 2026** (Nov 2026) made *Agent 365*, *Entra Agent Identity*, and *BSM 2026* the new Microsoft baseline, while Gartner warns **25% of enterprise breaches by 2028** will trace to AI agent abuse and **80% of new apps** will be "disposable."
-2. **The Wedge (Pain)** — Teams are spinning up Copilot Studio and Autopilot agents using shared human credentials and uncapped consumption budgets—creating immediate security, oversharing, and FinOps blowup risk.
-3. **Deliverable & Existing IP** — Combines CBa Consult's **`ICT-Governance-Framework-Application`** Zero Trust/COBIT controls with a focused **Microsoft Ignite 2026 Configuration Baseline** (*Agent 365* + *Entra Agent Identity* + *BSM 2026* + *Intune*).
-4. **Sweat-Equity Feasibility** — 4–6 weeks at 6–8 hrs/week (Medium effort), \$0 cash outlay; crisp, time-boxed Microsoft entry wedge before a larger `OP-ITG-013` enterprise assessment.
-5. **Outcome & Proof** — 100% of active Copilot/Power Platform agents inventoried, assigned Entra Agent Identities, protected by BSM 2026 hardening, and bounded by Agent 365 FinOps spending caps.
-6. **Boundaries & Risk** — Fast-moving Microsoft preview features (*Windows 365 for Agents*, *Project Perception*, Azure/Windows BSM previews) require clear versioning and tenant admin permissions; never bypass client change-control gates.
-7. **Compounding / Scale Path** — Direct entry wedge into Tier A **`OP-ITG-013`** (Enterprise AI Agent Governance), **`OP-ITG-002`** (Multi-Cloud ICT Governance), and **`OP-ITG-007`** (Power Apps/Copilot Studio CoE).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Source / Asset | Role in `OP-ITG-011` | Provenance Status | Reuse & Adaptation Notes |
 | --- | --- | --- | --- |
-| 4–6 wks (6–8 hrs/wk) | Medium | €2,500–€7,500 | Q1–Q2 2027 |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) (§6 IT & Technology) | Canonical Tier B Growth backlog entry | Verified SSOT | Anchors scope, 4–6 wk horizon, Medium & Large buyer fit, and compounding path |
+| [Ideation-Spark.md](Ideation-Spark.md) | Ignite 2026 positioning and Gartner trigger framing | Verified sibling file | Captures Agent 365, Entra for AI Agents, Project Perception, and BSM 2026 |
+| [BD-Quick-Reference.md](BD-Quick-Reference.md) | Commercial discovery and objection-handling script | Verified sibling file | Supports rapid CIO/CISO qualification conversations |
+| `ICT-Governance-Framework-Application` & DT Toolkit | Core governance architecture IP | Internal CBa Consult IP | Maps technical Entra/BSM controls to formal enterprise ICT governance gates |
 
-## Market Validation
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-🟢 Directly addresses Microsoft Ignite 2026 (Nov 2026) rollouts and Gartner's 2027 AI-agent identity & disposable-app security mandate (see [market-analysis-2027.md §6, §17](../../market-analysis-2027.md)).
+To avoid preview-feature instability and unbounded SI engineering, `OP-ITG-011` maintains clear boundaries:
 
-## Existing Assets to Draw On
+- **No Custom Multi-Agent Application Engineering:** Building bespoke business agents or external LLM orchestrations (LangGraph/Foundry custom apps) is out of scope.
+- **No Non-Microsoft Cloud Identity Re-Architecture:** Okta, AWS IAM, or GCP Agent governance migrations require separate scoped engagements.
+- **No Unapproved Preview-Feature Production Dependencies:** Preview capabilities are clearly tagged with fallback native Entra/Purview controls if client policy restricts preview toggles.
+- **No 24/7 SOC Monitoring:** Ongoing SIEM/SOAR alert triage remains with the client's existing security operations provider.
 
-- `github.com/CBA-Consult/ICT-Governance-Framework-Application` (Zero Trust & policy templates).
-- [One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md](../OP-ITG-013_Enterprise_AI_Agent_Governance/One_Pager_OP-ITG-013_Enterprise_AI_Agent_Governance.md) (parent Tier A offer).
-
-## Related Opportunities
-
-`OP-ITG-013` (Enterprise AI Agent Governance — Tier A), `OP-ITG-007` (Power Apps CoE), `OP-DTX-005` (Microsoft IQ & Copilot Studio FinOps), `OP-ITG-002` (Multi-Cloud ICT Governance)
-
-## Next St
+**Stage 1b Gate Readiness:** Strongly validated by November 2026 Microsoft Ignite releases and Tier B Growth priority. Ready for Director adjudication to proceed toward commercial pilot packaging.

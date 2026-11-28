@@ -1,62 +1,60 @@
-# Ideation Document — `OP-HR-002`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-HR-002"
+execution_track: "Tier A — Flagship (Pillar 2: Human Resources)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "HR Transformation Toolkit version 2027.docx (§10.8–10.10) via inventory-of-ideas.md"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-HR-002`: HR Operating Model Maturity Assessment
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b ideation document is governed by [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and anchored in [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Canonical positioning sits in [Ideation-Spark.md](Ideation-Spark.md), commercial quick-reference notes in [BD-Quick-Reference.md](BD-Quick-Reference.md), and source mapping in [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Human Resources
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Medium and large enterprises routinely operate HR inconsistently across business units and geographies, relying on anecdotal assessments rather than an empirical baseline. Without a shared scoring framework, CHROs and COOs struggle to justify HR technology investments, operating-model redesigns, or AI-enabled service delivery shifts.
 
-# Ideation Spark — `OP-HR-002`: HR Operating Model Maturity Assessment
+- **2027 Market Trigger:** ADP's 2027 compliance cycle alongside Gartner's CHRO 2027 priorities around skills-based organizations and AI/digital labor readiness elevate HR operating-model maturity from a departmental concern to an executive boardroom mandate.
+- **Core Buyer Pain:** Executives lack an objective, evidence-backed baseline across HR service delivery, data/analytics, talent/skills, technology, governance/risk, and AI/digital labor.
+- **Target Buyer Profile:** CHROs and COOs at Medium & Large enterprises seeking conflict-free diagnostic clarity before committing to major HRIS or transformation programs.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** A — Flagship
-**Strategic Asset:** 4. Evidence & Governance
-**Functional Area:** Human Resources · **Signature Toolkit:** Human Resources & Talent Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §2 Human Resources](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-HR-002` delivers an evidence-based Audit / Maturity Assessment over an 8–12 week engagement (10–15 hours/week, High effort, $0 working capital) by directly applying CBa Consult's pre-built 6-dimension, 5-level maturity methodology and 28-KPI scorecard.
 
-> For **CHROs and COOs** at medium-and-large companies who struggle with **no consistent, evidence-based way to see how mature their HR operating model actually is**, **HR Operating Model Maturity Assessment** is an **Audit / Maturity Assessment** backed by **the HR Transformation Toolkit version 2027.docx (§10.8–10.10)** that delivers **a scored 6-dimension, 5-level maturity profile with a 28-KPI scorecard** with $0 working capital.
+1. **Scope & Stakeholder Alignment (Weeks 1–2):** Confirm participating business units, executive sponsors (CHRO/COO), and baseline documentation across HR functions.
+2. **Evidence Collection & KPI Benchmarking (Weeks 3–6):** Gather quantitative and qualitative evidence across all 6 dimensions (service delivery, data/analytics, skills/talent, HR tech, governance/risk, AI/digital labor) and populate the 28-KPI scorecard.
+3. **5-Level Maturity Scoring & Gap Analysis (Weeks 7–9):** Score current-state vs. target-state maturity per dimension, identifying cross-BU variance and root-cause bottlenecks.
+4. **Executive Readout & Remediation Roadmap (Weeks 10–12):** Present scored maturity profile, prioritized quick wins, and phased transformation sequence to CHRO/COO leadership.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Score HR across 6 dimensions (service delivery, data/analytics, skills/talent, tech, governance/risk, AI/digital labor) against a 5-level maturity model and 28-KPI scorecard.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CHRO / COO. ADP's 2027 compliance cycle and the broader push toward skills-based, AI-ready HR operating models (Gartner CHRO 2027 Priorities) put HR maturity on the executive agenda, not just HR's own.
-2. **The Wedge (Pain)** — Most medium/large organizations run HR inconsistently across business units with no shared scoring language for where the gaps actually are — decisions get made on anecdote, not evidence.
-3. **Deliverable & Existing IP** — This is the inventory's **strongest-evidenced HR idea**: the full methodology — 6 assessed dimensions, 5-level maturity model, 28-KPI scorecard — is already built in `HR Transformation Toolkit version 2027.docx` §10.8–10.10, not something to construct from scratch.
-4. **Sweat-Equity Feasibility** — 8–12 weeks at 10–15 hrs/wk, High effort — the heaviest time commitment of the HR-area flagships, but the methodology itself doesn't need inventing, only applying.
-5. **Outcome & Proof** — A completed maturity scorecard per client, each level-and-dimension score backed by evidence (interviews + data), forming the first licensable assessment instrument.
-6. **Boundaries & Risk** — Needs genuine stakeholder alignment to get honest input, and data availability across business units is the main execution risk, not the methodology itself.
-7. **Compounding / Scale Path** — License the assessment toolkit/scorecard directly, or pair it with transition-roadmap retainers; it's also a direct input into `OP-HR-009` (Human + Agent Workforce Operating Model) and `OP-STR-004`/`OP-STR-005` (M&A/PMI HR harmonization).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable Category | Typical Market Offering | Common Buyer Gap | CBa Consult Differentiation (`OP-HR-002`) |
 | --- | --- | --- | --- |
-| 8–12 wks (10–15 hrs/wk) | High | €3,000–€10,000 | Q2–Q3 2027 |
+| Big Four HR Transformation | Multi-consultant global assessments | High day-rates and conflict of interest toward downstream ERP/HRIS deals | Conflict-free Tier A flagship diagnostic with transparent fixed scope |
+| HRIS Vendor Readiness Checks | Platform-specific health checks | Biased toward selling additional vendor modules; misses governance/operating model | Vendor-neutral scoring across 6 operating-model dimensions and 28 KPIs |
+| Generic Maturity Surveys | Self-reported online questionnaires | Subjective scores without documentary evidence or BU-level granularity | Evidence-backed 5-level maturity assessment grounded in `HR Transformation Toolkit` |
+| Boutique HR Consultants | Bespoke qualitative interviews | Lacks standardized quantitative KPI baseline for board-level comparison | Ready-to-deploy 28-KPI scorecard requiring zero methodology invention |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 Full methodology already built in `HR Transformation Toolkit version 2027.docx` §10.8–10.10 (`F:\OneDrive - CBA\`) — strongest-evidenced HR idea in the inventory.
+| Artifact / IP Asset | Location / Reference | Role in `OP-HR-002` Delivery | Verification Status |
+| --- | --- | --- | --- |
+| HR Transformation Toolkit | `HR Transformation Toolkit version 2027.docx` (§10.8–10.10) | Core assessment engine: 6 dimensions, 5-level maturity model, 28-KPI scorecard | Referenced in [Ideation-Spark.md](Ideation-Spark.md) & [inventory-of-ideas.md](../../inventory-of-ideas.md) |
+| Tier A Flagship Summary | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) | Validates Tier A Strategic Asset 4 (Evidence & Governance) positioning | Canonical Tier A SSOT |
+| Stage 1a Spark & BD Brief | [Ideation-Spark.md](Ideation-Spark.md) & [BD-Quick-Reference.md](BD-Quick-Reference.md) | Captures buyer pain, 8–12 wk cadence, and commercial framing | Existing sibling artifacts |
+| ADPA Assignment Manifest | [Source-Documents.md](Source-Documents.md) | Confirms 0 standalone `.docx` project files; Spark-derived from Toolkit IP | Verified (`Idea` status) |
 
-## Existing Assets to Draw On
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- `HR Transformation Toolkit version 2027.docx` §8.2 (Responsible AI) and §10.8–10.10 (5-level maturity model + 28-KPI scorecard) — the core IP this opportunity packages and sells.
+To maintain diagnostic objectivity and preserve the 8–12 week sweat-equity envelope, `OP-HR-002` excludes downstream implementation labor:
 
-## Related Opportunities
-
-`OP-HR-001` (anchor for the scaled-down starter package), `OP-HR-003` (HR AI governance module), `OP-HR-009` (Human + Agent Workforce Operating Model) · `OP-STR-004`/`OP-STR-005` (M&A/PMI HR harmonization)
-
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Open `HR Transformation Toolkit version 2027.docx` §10.8–10.10 and extract the scoring instrument into a standalone, client-deliverable assessment template.
-- [ ] Identify which of the 6 dimensions need the most interview time vs. which can run on existing HRIS data.
-- [ ] Confirm the ADP 2027 compliance claim with a current source before citin
+- **No HRIS Implementation or System Migration:** Assessment findings do not include Workday, SAP SuccessFactors, or ADP configuration/migration engineering.
+- **No Formal Legal or Labor-Law Counsel:** Governance and compliance gaps are flagged operationally; formal statutory legal sign-off remains with client counsel.
+- **No Interim HR Operations Staffing:** CBa Consult acts strictly as independent assessor and roadmap advisor, not as outsourced HR shared-services staff.
+- **Stage 1b Gate Readiness:** Methodology provenance is unusually strong because the 6-dimension/28-KPI toolkit already exists. Next step is Director adjudication on the companion Business Case and Stage 2 hypothesis formulation.

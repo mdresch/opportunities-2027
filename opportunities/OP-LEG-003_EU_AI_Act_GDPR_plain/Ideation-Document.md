@@ -1,63 +1,56 @@
-# Ideation Document — `OP-LEG-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-LEG-003"
+execution_track: "Tier C Supporting (Pillar 3: Legal and Regulatory)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (adapted from 2026 OP-IE-009)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-LEG-003`: EU AI Act & GDPR Plain-Language Cheat-Sheet PDFs
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b document builds on [Ideation-Spark.md](Ideation-Spark.md), [BD-Quick-Reference.md](BD-Quick-Reference.md), and [Source-Documents.md](Source-Documents.md) under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Tier C placement and portfolio linkages are governed by [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
 
-**Inventory description:** Non-legal, high-level cheat-sheet PDFs explaining EU AI Act & GDPR obligations in plain language for founders.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+- **Target Buyer:** Founders, General Counsel, and Compliance Leads in Small organizations (startups, scale-ups, and lean SMEs) adopting AI tools or handling EU personal data.
+- **2027 Market Trigger:** Phased EU AI Act enforcement milestones alongside ongoing GDPR supervisory scrutiny leave small founders overwhelmed by dense statutory recitals and contradictory blog commentary.
+- **Core Wedge:** Small buyers do not want a €10,000 law-firm memorandum just to understand baseline obligations; they need an immediate, plain-language operational cheat-sheet PDF that translates EU AI Act risk tiers and GDPR duties into founder-ready checklists.
 
-# Ideation Spark — `OP-LEG-003`: EU AI Act & GDPR plain-language cheat-sheet PDFs
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** 3. Legal and Regulatory · **Signature Toolkit:** Risk Management
-**Category:** Digital Product (PDF / Toolkit) · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+Built on CBa Consult's **Risk Management** Signature Toolkit and adapted from 2026 `OP-IE-009`, the digital product is authored and packaged in a 6-week (Medium effort) sweat-equity sprint:
 
-## Positioning
+1. **Weeks 1–2 — Statutory Synthesis & Scope Mapping:** Distill EU AI Act obligations (prohibited practices, transparency duties, high-risk triggers, GPAI touchpoints) and core GDPR principles into founder-readable decision trees.
+2. **Weeks 3–4 — Plain-Language Asset Design & Disclaimer Engineering:** Produce modular PDF cheat sheets, one-page quick-reference matrices, and prominent non-legal advisory disclaimers.
+3. **Week 5 — Niche Community Validation & Bundling:** Test clarity with target founders and package as a standalone digital product or entry wedge for "compliance starter packs" (`OP-LEG-001`).
+4. **Week 6 — Distribution & Revision Cadence:** Publish digital storefront/community distribution flow and establish a lightweight quarterly regulatory update log.
 
-> For **Founders, General Counsel & Compliance Leads** (Small tier) who need a lightweight, low-risk way to address **eu ai act & gdpr plain-language cheat-sheet pdfs**, **EU AI Act & GDPR plain-language cheat-sheet PDFs** is a **Digital Product (PDF / Toolkit)** backed by the **Risk Management** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Non-legal, high-level cheat-sheet PDFs explaining EU AI Act & GDPR obligations in plain language for founders.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — Founders, General Counsel & Compliance Leads (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Non-legal, high-level cheat-sheet PDFs explaining EU AI Act & GDPR obligations in plain language for founders.
-3. **Deliverable & Existing IP** — Built on the **Risk Management** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Synthesis, regulatory awareness, technical writing*.
-4. **Sweat-Equity Feasibility** — 6 wks, Medium effort, \$0 initial working capital. Expected capital range: €500–€2,000.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Clear non-legal disclaimers required; regulatory updates require revisions.
-7. **Compounding / Scale Path** — Bundle into "compliance starter packs" (`OP-LEG-001`) and sell via niche communities.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Buyer Experience | Limitation for Small Founders | CBa Consult Differentiation (`OP-LEG-003`) |
 | --- | --- | --- | --- |
-| 6 wks | Medium | €500–€2,000 | Q1–Q2 2027 |
+| Boutique Privacy / AI Law Firms | Bespoke legal memos billed hourly (€2,500–€10,000+) | Slow turnaround, dense legalese, cost-prohibitive for early founders | Accessible plain-language PDF toolkit (€500–€2,000 revenue band/packs) |
+| Free Official EU / DPA Texts | Authoritative statutory PDFs and guidelines | Hundreds of pages; zero operational prioritization for lean teams | Distills rules into actionable, scannable founder workflows |
+| Generic AI Blog Summaries | Scattered articles and social posts | Outdated, unverified, lacks structured GDPR + EU AI Act bridge | Cohesive Risk Management toolkit backing with explicit version control |
+| Enterprise Compliance SaaS | Annual seat licenses + onboarding fees | Overkill before a founder even knows which obligations apply | Zero-friction PDF entry artifact feeding `OP-LEG-001` starter packs |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Directly adapted from 2026 `OP-IE-009`.
+| Asset / Source | Provenance Role | Reusable IP & Methodology Contribution |
+| --- | --- | --- |
+| [Ideation-Spark.md](Ideation-Spark.md) | Stage 1a Spark baseline | Defines Small buyer segment, 6-week horizon, €500–€2,000 range, `OP-LEG-001` bundling |
+| [BD-Quick-Reference.md](BD-Quick-Reference.md) | Commercial quick-reference | Existing sibling business-development positioning and outreach framing |
+| [Source-Documents.md](Source-Documents.md) | Provenance manifest | Confirms portfolio origin (`OP-IE-009` adaptation, no external ADPA `.docx`) |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Portfolio SSOT | Pillar 3 classification, Tier C Supporting status, `OP-X-004` proof linkage |
+| Risk Management Signature Toolkit | CBa Consult core IP | Regulatory awareness matrices, plain-language risk classification templates |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-## Business Development sources (local)
-
-See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **In Scope:** Non-legal, high-level plain-language PDF cheat sheets summarizing EU AI Act and GDPR concepts, operational orientation checklists, and starter-pack bundling (`OP-LEG-001`).
+- **Explicit Negative Scope (Out of Scope):** CBa Consult does **not** provide formal legal advice, act as an external Data Protection Officer (DPO) or EU AI Act Authorized Representative, draft binding legal contracts, or assume liability for client regulatory non-compliance. Every PDF must carry an explicit non-legal disclaimer.
+- **Stage 1b Gate Criteria:** Finalize legal-disclaimer wording, lock Q1–Q2 2027 regulatory revision schedule, and validate bundle pricing with `OP-LEG-001` before public release.

@@ -1,60 +1,57 @@
-# Ideation Document — `OP-FIN-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-FIN-003"
+execution_track: "Tier C — Supporting (Pillar 1: Finance)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (2026 OP-IE-006 / finance template cluster; no ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-FIN-003`: Cash-Flow & Monthly Close Notion/Sheets Pack
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Canonical portfolio tracking sits in [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Sibling context: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Self-serve spreadsheet/Notion operations dashboard for solo founders and micro-agencies to track cash runway and monthly close.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Solo founders, boutique consultancies, and micro-agencies frequently operate without dedicated controller capacity, relying on fragmented bank exports, ad-hoc invoices, and unlinked spreadsheets to estimate liquidity. In 2027, tighter credit conditions, slower enterprise payment cycles, and heightened cost discipline mean founders cannot wait for quarterly accountant reconciliations to discover a cash-runway shortfall.
 
-# Ideation Spark — `OP-FIN-003`: Cash-flow & monthly close Notion/Sheets pack
+At the same time, Small-tier buyers resist heavyweight ERP or SaaS finance subscriptions that require multi-week onboarding or ongoing per-seat fees. They want a fixed-scope, low-friction operating pack built on tools they already own (Notion and Google Sheets / Excel) that standardizes monthly close routines and 13-week cash-runway visibility within hours rather than weeks.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** 1. Finance · **Signature Toolkit:** Financial Modeling, Planning & Analysis
-**Category:** Template / Tool Service · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-FIN-003` packages CBa Consult's **Financial Modeling, Planning & Analysis** Signature Toolkit into a self-serve digital product with an optional done-with-you calibration pathway (`OP-FIN-001`).
 
-> For **Founders, CFOs & Finance Leads** (Small tier) who need a lightweight, low-risk way to address **cash-flow & monthly close notion/sheets pack**, **Cash-flow & monthly close Notion/Sheets pack** is a **Template / Tool Service** backed by the **Financial Modeling, Planning & Analysis** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+1. **Cash-Runway Ledger (Sheets/Excel):** Structured 13-week direct cash-flow forecast and 12-month rolling P&L bridge with receivables aging, tax-reserve buckets, and sensitivity toggles (best, base, conservative).
+2. **Monthly Close Control Board (Notion):** Repeatable 10-step month-end close checklist covering bank reconciliation, invoice verification, VAT/tax accrual, subscription audit, and variance sign-off.
+3. **Executive Snapshot & SOP Kit:** Loom-style walkthrough guide, metric definitions dictionary, and red/amber/green runway threshold alerts so non-finance founders can run a 60-minute monthly close independently.
+4. **Delivery Cadence:** Built over 4–6 weeks using existing internal financial templates at $0 initial working capital, distributed via Gumroad/Lemon Squeezy or direct CBa Consult checkout, and bundled as a low-friction wedge into fractional FP&A advisory.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Self-serve spreadsheet/Notion operations dashboard for solo founders and micro-agencies to track cash runway and monthly close.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — Founders, CFOs & Finance Leads (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Self-serve spreadsheet/Notion operations dashboard for solo founders and micro-agencies to track cash runway and monthly close.
-3. **Deliverable & Existing IP** — Built on the **Financial Modeling, Planning & Analysis** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Financial modeling, Notion/Sheets design*.
-4. **Sweat-Equity Feasibility** — 4–6 wks, Low effort, \$0 initial working capital. Expected capital range: €300–€1,500.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Tool preference differences; discoverability.
-7. **Compounding / Scale Path** — Sell as evergreen digital product; upsell "done-with-you" setup (`OP-FIN-001`).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Positioning & Cost | Limitation for 2027 Small-Tier Buyers | CBa Consult Differentiation (`OP-FIN-003`) |
 | --- | --- | --- | --- |
-| 4–6 wks | Low | €300–€1,500 | Q1–Q2 2027 |
+| Generic Etsy / Notion finance templates | Low-cost ($15–$49) personal or habit trackers | Lack real accounting close discipline, tax-reserve logic, and B2B receivables aging | Built on institutional FP&A methodology with structured monthly close controls |
+| SMB SaaS cash-flow tools (Float, Pulse, Jirav) | Recurring $50–$300/mo SaaS subscription | Subscription fatigue; requires API maintenance and rigid chart-of-accounts mapping | Zero recurring software lock-in; runs natively in Notion + Sheets/Excel |
+| Fractional CFO / external bookkeeper | €1,000–€3,500/mo ongoing retainer | Overkill for solo founders/micro-agencies needing foundational hygiene first | Accessible €300–€1,500 value tier; acts as structured pre-qualifier for `OP-FIN-001` |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Adapted from 2026 `OP-IE-006` / finance template cluster.
+| Source / IP Asset | Location / Reference | Contribution to `OP-FIN-003` |
+| --- | --- | --- |
+| Portfolio SSOT Entry | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Defines Pillar 1 Finance positioning, 4–6 wk horizon, €300–€1,500 target capital, and `OP-IE-006` lineage |
+| Spark Positioning & 7 Pivotal Questions | [Ideation-Spark.md](Ideation-Spark.md) | Establishes Small-tier buyer wedge, $0 working-capital constraint, and `OP-FIN-001` / `OP-X-004` compounding |
+| ADPA Source Registry | [Source-Documents.md](Source-Documents.md) | Confirms 0 ADPA `.docx` files assigned; capability rests on internal CBa FP&A templates |
+| Signature Toolkit: Financial Modeling, Planning & Analysis | CBa Consult Internal IP | Provides 13-week cash model formulas, variance bridges, and close checklist structures |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+To preserve fixed-scope economics and regulatory clarity, `OP-FIN-003` explicitly excludes:
+- **No statutory bookkeeping, tax filing, or audit assurance:** Templates support management decision-making only and carry clear disclaimers against replacing licensed accountants.
+- **No custom ERP/API engineering:** No bespoke bank-feed middleware or multi-entity consolidation code is included in the base pack.
+- **No paid media acquisition before organic validation:** Initial distribution relies on existing founder network, LinkedIn teardowns, and `OP-X-004` proof assets.
 
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+**Stage 1b Gate Status:** Capability framing and negative scope boundaries are complete. Ready for Stage 2 hypothesis testing (landing-page/waitlist validation and 3 beta founder walkthroughs) upon Director review.

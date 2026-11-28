@@ -6,16 +6,10 @@ lifecycle_stage: "Stage 3 Draft — Benefit & Economics Framing (Pre-Pilot)"
 governance_policy: "Human Adjudication Gate (requires_human_approval: true)"
 opportunity_id: "OP-CHG-001"
 status: "Idea"
-inputs:
-  - "Ideation-Spark.md"
-  - "Ideation-Document.md"
-  - "../../docs/governance/Rules-of-Engagement.md"
-  - "../../docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md"
-  - "../../docs/research/Enterprise-IT-Budget-Governance-Multinational.md"
-  - "../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md"
-outputs:
-  - "Business-Case.md"
+inputs: "Ideation-Spark.md; Ideation-Document.md; ../../docs/governance/Rules-of-Engagement.md; ../../docs/research/Commercial-Engagement-Invoicing-and-Procurement-Policy.md; ../../docs/research/Enterprise-IT-Budget-Governance-Multinational.md; ../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md"
+outputs: "Business-Case.md"
 date: 2026-11-27
+approval_status: "PENDING_DIRECTOR_SIGNOFF"
 ---
 
 # Business Case — `OP-CHG-001`: Framework & Tool Adoption Playbook

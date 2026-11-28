@@ -7,7 +7,7 @@ governance_policy: "none (orientation snapshot, not a governed approval artifact
 artifact_id: "portfolio-status-register"
 version: "1.0 (live — overwritten in place whenever orientation changes)"
 owner: "Menno Drescher (Director, CBa Consult)"
-last_updated: "2026-11-27"
+last_updated: "2026-11-28"
 ---
 
 # Portfolio Status Register — Opportunities 2027
@@ -25,7 +25,7 @@ last_updated: "2026-11-27"
 | **Portfolio Coverage** | **131 / 131** opportunities have `Ideation-Spark.md` workspaces (Stage 1a complete): **5 Core Active Tier A**, 15 Tier B *(7 Growth + 8 Deferred/Pull-Only former Tier A)*, 41 Tier C, 3 Tier D, 62 Active Backlog *(incl. built-asset Sparks: SocialEngage, RPAS, n8n, iq-series, Obsidian vaults, ai-bot, portfolio site, liquidity simulator, enterprise-work-hierarchy)*, 5 Parked |
 | **Active Pilots (`Status = Pilot`)** | **0** (all 131 items remain `Idea` or `Parked`; no commercial delivery work started yet) |
 | **Authoritative Execution Sequence** | [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) §3: Core 5 Tier A (`OP-FIN-009`, `OP-ITG-014`, `OP-RSK-004`, `OP-ITG-013`, `OP-ITG-018` MIP) + Q1 wedge `OP-OPS-001 → OP-CX-001` |
-| **Last Milestone Completed** | Upgraded **`OP-X-004`** (*Case study series on 2027 operating-model pilots*) to Stage 2–3 Readiness with Day-1 Capture & 3-Tier Anonymization Kit (`OP-X-006` co-design clause), Wave 1 Charter wiring, A4/GEO Proof Architecture brief, and `HYP-2027-023`–`025` (2026-11-27) |
+| **Last Milestone Completed** | Curated **136 / 136** opportunity workspaces (**272 / 272** `Ideation-Document.md` & `Business-Case.md` files) into clean Stage 1b / Stage 3 SIDPA Markdown, guarded `scripts/assign_adpa_source_documents.py` (`--force-overwrite` opt-in), and verified `0` link/format defects; preceded by `OP-X-004` Proof Architecture & `OP-CX-001` rewrite (2026-11-28) |
 | **Next Priority Unit of Work** | **Execute Wave 1 tests:** 15 founder outreach (`HYP-2027-001`) + 10 CFO discovery (`HYP-2027-002`) + ≤15 hr RGP playbook sprint (`HYP-2027-007`); record **first `G4` Director sign-off** when sponsor or hypothesis threshold met — [Wave-1-Execution-Playbook.md](Wave-1-Execution-Playbook.md) |
 | **Graduated Standalone SIDPA Repos** | **`OP-ITG-017`** → [`mdresch/mxc`](https://github.com/mdresch/mxc) (Stage 10, `Phase 1 Complete (6/6 Epics · 17/17 stories) + Phase 2 Epics 007-009 Complete (271/271 tests + Win11 Lean Agent VM verified)` — see §2b below) *(other existing proprietary assets: `ICT-Governance-Framework-Application` for `OP-ITG-002`/`013`, `sidpa-template` for governance reference)* |
 

@@ -1,48 +1,53 @@
-# Ideation Document — `OP-ITG-015`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-015"
+execution_track: "Tier A - Flagship (Pillar 17 Priority #5)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Tier_A_Executive_Summary_2027.md & inventory-of-ideas.md (0 ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-ITG-015: Cryptographic Sovereignty & Trust Architecture Assessment
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (PMBOK 8 Initiating, Stage 1b). Tier A Priority #5 positioning is anchored in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) and [inventory-of-ideas.md](../../inventory-of-ideas.md); sibling files are [Ideation-Spark.md](./Ideation-Spark.md) and [Source-Documents.md](./Source-Documents.md).
 
-**Inventory description:** Assess whether sensitive artifacts can be reconstructed through any single provider, jurisdiction, operator, identity domain, HSM, or legal authority; apply **threshold cryptography (Shamir/MPC)**, **multi-jurisdiction partitioning**, **in-memory attested client assembly**, and **Bayesian active evidence-seeking** (8-domain Trust Topology Scoring: Jurisdiction, Ownership, Infra, Identity, Crypto, Ops, Network, Financial) so no single cloud, insider, or court order can obtain a complete artifact.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Regulated European enterprises, healthcare institutions, defense suppliers, and public-sector boards face an acute architectural blind spot in 2027: cloud compliance programs still ask "Where is my data stored?" rather than **"Can anyone, anywhere, reconstruct my data?"** Under DORA, NIS2, EU tech-sovereignty mandates, and ongoing CLOUD Act extraterritorial subpoena exposure, storing encrypted data in an EU region with a US-headquartered hyperscaler or single KMS/HSM operator fails true reconstruction resistance. CIOs, CISOs, and Risk Committees need an independent, mathematically grounded assessment that tests whether any single cloud provider, jurisdiction, legal authority, identity domain, or privileged insider can unilaterally reconstruct crown-jewel artifacts.
 
-# Ideation Spark — `OP-ITG-015`: Cryptographic Sovereignty & Trust Architecture Assessment
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** A — Flagship (Pillar 17 Priority #5, Q3–Q4 2027 scale-out)
-**Strategic Asset:** 5. Sovereign Information
-**Functional Area:** IT and Technology (Pillar 17 — Intelligence & Autonomous Systems Governance) · **Signature Toolkit:** Risk Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §6 IT and Technology](../../inventory-of-ideas.md) · [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md)
+Backed by CBa Consult's **Risk Management** signature toolkit, `OP-ITG-015` delivers a 6–10 week Platform-Backed Assessment (8–12 hrs/wk, $0 initial working capital):
 
-## Positioning
+1. **Crown-Jewel Asset & Adversary Scope (Weeks 1–2):** Classify high-sensitivity artifacts (IP, defense/health records, arbitration/WORM archives) and bind explicit threat-model boundaries.
+2. **8-Domain Bayesian Trust Topology Scoring (Weeks 3–5):** Execute active evidence-seeking across all eight sovereignty domains — *Jurisdiction, Ownership, Infrastructure, Identity, Cryptography, Operations, Network, and Financial* — to locate single points of reconstruction control.
+3. **Threshold & Partitioning Architecture Design (Weeks 6–8):** Specify Shamir/MPC threshold cryptography, multi-jurisdiction share partitioning, and in-memory attested client assembly so no single cloud, HSM, or court order can assemble a complete artifact.
+4. **Board Readout & Reference Blueprint (Weeks 9–10):** Deliver scored Trust Topology dossier, remediation roadmap, and integration hooks for `OP-ITG-010` (12-year WORM/arbitration archives) and `OP-ITG-014`.
 
-> For **CIOs, CISOs, and Government/Defense/Health Boards** who struggle with **not knowing whether any single provider, jurisdiction, or insider could reconstruct their most sensitive artifacts alone**, **Cryptographic Sovereignty & Trust Architecture Assessment** is a **Platform-Backed Assessment** backed by **threshold cryptography (Shamir/MPC) and an 8-domain Bayesian Trust Topology model** that delivers **a scored answer to "can anyone, anywhere, reconstruct my data?"** with $0 working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Assess whether sensitive artifacts can be reconstructed through any single provider, jurisdiction, operator, identity domain, HSM, or legal authority; apply threshold cryptography (Shamir/MPC), multi-jurisdiction partitioning, in-memory attested client assembly, and Bayesian active evidence-seeking (8-domain Trust Topology Scoring: Jurisdiction, Ownership, Infra, Identity, Crypto, Ops, Network, Financial) so no single cloud, insider, or court order can obtain a complete artifact.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CIO / CISO / Government, Defense, or Health boards. DORA, NIS2, and the broader EU tech-sovereignty push, plus CLOUD Act exposure concerns, are forcing exactly this question onto regulated-sector risk committees.
-2. **The Wedge (Pain)** — The market's current framing — "where is my data stored?" — is the wrong question for sovereignty-sensitive data; the right one is "can anyone, anywhere, reconstruct it?" Almost nobody is assessed against that question today.
-3. **Deliverable & Existing IP** — An Assessment → Architecture Blueprint → Reference Implementation → Continuous Trust Monitoring Service pipeline, using an explicit 8-domain Trust Topology Score (Jurisdiction, Ownership, Infra, Identity, Crypto, Ops, Network, Financial) built on threshold cryptography and Bayesian active evidence-seeking.
-4. **Sweat-Equity Feasibility** — 6–10 weeks at 8–12 hrs/wk, High effort. This is conceptually the most specialized of the 11 flagships — feasibility depends on whether the Bayesian Trust Topology scoring instrument already exists in usable form or still needs to be built from the SIDPA source material.
-5. **Outcome & Proof** — A scored Trust Topology report per client artifact class, with an explicit, written threat model the client can act on.
-6. **Boundaries & Risk** — **Must state the threat model explicitly to every client**: protects against cloud-admin, insider, HSM/KMS/root-IAM compromise, CLOUD Act/national-security subpoenas, single-jurisdiction seizure, and DC/supply-chain breach. It does **NOT** protect against endpoint/client-device compromise, credential theft, a malicious authorized user, or threshold collusion. Overstating this boundary is the #1 failure mode for this offer.
-7. **Compounding / Scale Path** — Anchors `OP-ITG-010` (12-yr WORM/arbitration retention archives) and `OP-ITG-014` (Knowledge/Context Governance) — sovereignty and knowledge governance are two faces of the same evidence-integrity problem.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Positioning | Structural Limitation | CBa Consult Differentiation |
 | --- | --- | --- | --- |
-| 6–10 wks (8–12 hrs/wk) | High | €4,000–€15,000+ | Q3–Q4 2027 |
+| Hyperscaler "Sovereign Cloud" Controls | Regional hosting + customer-managed keys (BYOK/HYOK) | Still vulnerable to single-vendor control-plane, legal-entity ownership, or root-IAM correlation | Evaluates full 8-domain reconstruction paths across ownership, jurisdiction, and MPC thresholds |
+| Big Four Cyber / DORA Advisory | Policy gap checklists & compliance workshops | Focuses on paper compliance ("where data sits"), lacks cryptographic threshold topology scoring | Conflict-free mathematical reconstruction scoring + actionable Shamir/MPC blueprint |
+| HSM / KMS Hardware Vendors | Key vault appliances or cloud HSMs | Single-vendor hardware/firmware trust anchor; does not partition across legal jurisdictions | Vendor-neutral multi-jurisdiction partitioning with attested client-side assembly |
+| Open-Source MPC Toolkits | Raw cryptographic libraries | Unusable by CIO/CISO boards without governance, threat-model clarity, and evidence scoring | Executive-ready Trust Topology model bridging board risk governance and crypto engineering |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 Emerging & strategic — shifts the market from "Where is my data stored?" to "Can anyone, anywhere, reconstruct my data?" (D
+| Source / Asset | Status in Workspace | Relevance to OP-ITG-015 | Required Adaptation for 2027 Pilot |
+| --- | --- | --- | --- |
+| [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) | Active Executive SSOT | Designates OP-ITG-015 as Tier A Priority #5 (Pillar 17, Strategic Asset #5: Sovereign Information) | Align Q3–Q4 2027 pilot rollout with Pillar 17 flagship sequence |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Active SSOT | Documents 8-domain model, Shamir/MPC stack, and €4,000–€15,000+ capital band | Codify 8-domain scoring rubric and evidence checklist |
+| [Ideation-Spark.md](./Ideation-Spark.md) | Active Sibling | Defines explicit threat model and cross-links to `OP-ITG-010` and `OP-ITG-014` | Translate threat boundaries into formal client engagement letter language |
+| [Source-Documents.md](./Source-Documents.md) | Active (0 ADPA `.docx`) | Confirms greenfield Sovereign Information IP with no legacy `.docx` dependency | Author standalone Trust Topology Assessment template pack |
+
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
+
+- **Explicit Threat-Model Boundaries (Does NOT Protect Against):** Endpoint or client-device compromise, credential theft of an authorized user, malicious actions by a legitimate authorized user, or collusion exceeding the configured cryptographic threshold.
+- **Service Scope Exclusion:** Assessment and architecture blueprint only in Stage 1; does not include writing production cryptography libraries, operating managed HSM hardware, or providing formal legal opinions on foreign statutes.
+- **Stage 1b Gate Decision:** Priority Tier A flagship ready for Stage 2 CISO/CIO hypothesis validation and Stage 3 commercial sign-off for Q3–Q4 2027 scale-out.

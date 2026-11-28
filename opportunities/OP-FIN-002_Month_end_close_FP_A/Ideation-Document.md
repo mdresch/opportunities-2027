@@ -1,63 +1,53 @@
-# Ideation Document — `OP-FIN-002`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-FIN-002"
+execution_track: "Core & Specialty Backlog (Medium & Large)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Spark-derived (inventory-of-ideas.md; 0 ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-FIN-002: Month-End Close & FP&A Standardization Audit
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (PMBOK 8 Initiating, Stage 1b). Single source of truth for portfolio classification is [inventory-of-ideas.md](../../inventory-of-ideas.md); see [Ideation-Spark.md](./Ideation-Spark.md), [Source-Documents.md](./Source-Documents.md), and [BD-Quick-Reference.md](./BD-Quick-Reference.md) for sibling context.
 
-**Inventory description:** Pillar 17 / Thought Leadership
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Multi-entity mid-market and large organizations frequently operate fragmented month-end close calendars, inconsistent chart-of-accounts mappings, and divergent business-unit forecasting spreadsheets. In 2027, CFOs, Finance Directors, and Controllers face compounding pressure from IFRS 18 presentation changes, CSRD/ESG audit-readiness linkages, and strict SG&A cost discipline. Rather than commissioning a multi-quarter ERP overhaul, finance leaders need a fast, conflict-free diagnostic that benchmarks how each business unit closes the books and builds rolling forecasts, isolates the highest-performing practices, and establishes one standardized close and FP&A baseline.
 
-# Ideation Spark — `OP-FIN-002`: Month-end close & FP&A standardization audit
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 1. Finance · **Signature Toolkit:** Financial Modeling, Planning & Analysis
-**Category:** Audit / Diagnostic · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+This Audit / Diagnostic applies CBa Consult's **Financial Modeling, Planning & Analysis** signature toolkit across an 8–12 week, fixed-scope engagement (8–12 hrs/wk sweat-equity capacity, $0 initial working capital):
 
-## Positioning
+1. **Close & Forecast Baseline Discovery (Weeks 1–2):** Collect close checklists, reconciliation logs, journal-entry cutoff rules, and FP&A budget/forecast templates across 2–6 business units; conduct structured controller and FP&A lead interviews.
+2. **Cross-BU Variance & Bottleneck Mapping (Weeks 3–5):** Score cycle time (BD+days), manual adjustment volume, intercompany reconciliation friction, and forecast variance drivers by unit to identify the internal "best-in-class" operating pattern.
+3. **Golden-Standard Close & FP&A Blueprint (Weeks 6–8):** Harvest and codify the winning close calendar, RACI matrix, standard reconciliation pack, and unified driver-based FP&A model into a single organization-wide playbook.
+4. **Rollout Roadmap & Governance Handover (Weeks 9–12):** Deliver executive readout to CFO/Audit Committee with sequenced remediation sprints, KPI definitions, and optional handoff to implementation support.
 
-> For **CFOs, Finance Directors & Controllers** (Medium & Large tier) who need a focused, fixed-scope solution for **month-end close & fp&a standardization audit**, **Month-end close & FP&A standardization audit** is a **Audit / Diagnostic** backed by the **Financial Modeling, Planning & Analysis** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Compare how different business units close the books and forecast; harvest the best version and roll it out consistently.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CFOs, Finance Directors & Controllers (Medium & Large segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — Compare how different business units close the books and forecast; harvest the best version and roll it out consistently.
-3. **Deliverable & Existing IP** — Built on the **Financial Modeling, Planning & Analysis** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *Financial close process, FP&A, stakeholder interviews*.
-4. **Sweat-Equity Feasibility** — 8–12 wks (8–12 hrs/wk), High effort, \$0 initial working capital. Expected capital range: €2,000–€8,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Long enterprise sales cycle; requires prior case study (`OP-FIN-001`).
-7. **Compounding / Scale Path** — Productize the close-audit scorecard into a repeatable multi-unit playbook.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Cost & Duration | Structural Limitation | CBa Consult Differentiation |
 | --- | --- | --- | --- |
-| 8–12 wks (8–12 hrs/wk) | High | €2,000–€8,000 | Q2–Q3 2027 |
+| Big Four Finance Transformation | €75,000–€250,000+; 4–9 months | High partner leverage, junior staffing, pressure to sell multi-year ERP/EPM buildouts | Director-led, conflict-free fixed-scope diagnostic (€2,000–€8,000 range) with zero software vendor lock-in |
+| EPM Software Vendor Pre-Sales Audit | "Free" or bundled with €50k+ license | Biased toward tool licensing rather than fixing underlying close discipline and RACI | Tool-agnostic harvesting of existing internal best practices before any new SaaS spend |
+| Interim Financial Controller | €900–€1,400/day open-ended | Absorbed into daily firefighting; rarely codifies cross-BU standardization artifacts | Dedicated external benchmark lens delivering repeatable SOPs, close calendar, and FP&A template |
+| Internal Finance Self-Audit | Internal headcount opportunity cost | Local BU bias and silo politics block consensus on a single standard | Neutral third-party scoring rubric backed by structured executive governance |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 Market data: 1/3 of mid-market firms spend <10% of finance-ops budget on modernization — pitch as audit/standardize (no new spend), not a tech buy.
+| Source / Asset | Status in Workspace | Relevance to OP-FIN-002 | Required Adaptation for 2027 Pilot |
+| --- | --- | --- | --- |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Active SSOT | Defines Pillar 1 (Finance), Medium & Large target tier, and €2,000–€8,000 capital band | Confirm pilot pricing tiers per entity count (2–3 BUs vs. 4+ BUs) |
+| [Ideation-Spark.md](./Ideation-Spark.md) | Active Sibling | Establishes positioning statement, 7 pivotal questions, and 8–12 wk horizon | Convert into Stage 2 hypothesis cards and diagnostic interview guide |
+| [BD-Quick-Reference.md](./BD-Quick-Reference.md) | Active Sibling | Provides commercial talking points for CFO/Controller outreach | Align outreach script with IFRS 18 and 2027 close-cycle KPIs |
+| [Source-Documents.md](./Source-Documents.md) | Active (0 ADPA `.docx`) | Confirms no legacy ADPA project `.docx` is bound to this opportunity | Build native CBa close-maturity scorecard and FP&A standardization pack |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-## Business Development sources (local)
-
-See [BD-Quick-Reference.md](BD-Quick-Reference.md) — CBa Business Development folders on the Director machine (**not in git**). Master index: [BD-Business-Development-Sources.md](../../docs/crosswalk/BD-Business-Development-Sources.md).
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **Explicitly Out of Scope:** Statutory financial statement preparation, external audit sign-off, ERP/EPM software implementation or coding, tax structuring, and ongoing outsourced bookkeeping.
+- **Pre-Pilot Dependency:** No Stage 2 market-validation hypotheses have been logged yet; quantitative cycle-time reductions will only be claimed after a live pilot baseline is measured.
+- **Stage 1b Gate Decision:** Ready for Director review to advance to Stage 2 validation and Stage 3 commercial packaging; refer to [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) for cross-portfolio prioritization against Tier A flagships.

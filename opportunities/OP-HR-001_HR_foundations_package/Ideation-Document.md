@@ -1,60 +1,60 @@
-# Ideation Document — `OP-HR-001`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 3 (Stage 1b Ideation — Spark-Derived Tier C)"
+opportunity_id: "OP-HR-001"
+execution_track: "Tier C Supporting — Human Resources (Small Segment)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (Spark-derived — No ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-HR-001`: HR Foundations Package
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b Ideation Document is governed by the [Tailored Hybrid SIDPA Governance](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) framework and anchored to the [Inventory of Ideas](../../inventory-of-ideas.md) and [Tier A Executive Summary](../../Tier_A_Executive_Summary_2027.md). Supporting artifacts: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Employee handbook, onboarding checklist, and a basic performance-review cadence, anchored by a scaled-down self-assessment.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Growing small businesses and early-stage teams frequently postpone formalizing HR operations until friction appears—inconsistent onboarding, undocumented workplace policies, ad-hoc performance conversations, and growing exposure to labor-compliance mistakes. Hiring a dedicated HR Manager or commissioning bespoke employment-law counsel is cost-prohibitive for sub-50-person organizations.
 
-# Ideation Spark — `OP-HR-001`: HR foundations package
+In 2027, Founders, CHROs, and People Ops Leads in the Small segment face heightened cost discipline alongside stricter pay-transparency, leave, and workplace documentation expectations. Buyers want a fixed-scope, low-risk starter package that consolidates essential people practices rapidly without adding permanent headcount.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** 2. Human Resources · **Signature Toolkit:** Human Resources & Talent Management
-**Category:** Advisory / Starter Kit · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-HR-001` packages CBa Consult's Human Resources & Talent Management toolkit into a streamlined 4–6 week advisory starter kit anchored by a scaled-down HR maturity self-assessment:
 
-> For **Founders, CHROs & People Ops Leads** (Small tier) who need a lightweight, low-risk way to address **hr foundations package**, **HR foundations package** is a **Advisory / Starter Kit** backed by the **Human Resources & Talent Management** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+1. **Rapid HR Maturity Self-Assessment:** Administer a scaled-down 5-level HR maturity baseline (adapted from `OP-HR-002`) to pinpoint immediate policy, onboarding, and performance-cadence gaps.
+2. **Core Artifact Consolidation:** Tailor an employee handbook structure, role-ready onboarding checklist, and lightweight quarterly/annual performance-review cadence to client size and operating model.
+3. **Compliance & Operational Walkthrough:** Facilitate a leadership working session to align manager responsibilities, documentation storage, and exception escalation paths.
+4. **Handover & Automation Roadmap:** Deliver ready-to-use templates plus a prioritized next-step roadmap linking into workflow automation or deeper talent-management initiatives.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Employee handbook, onboarding checklist, and a basic performance-review cadence, anchored by a scaled-down self-assessment.
+| Comparable / Alternative | Typical Buyer Fit | Strengths | Gaps / Limitations | CBa Consult Differentiation |
+| --- | --- | --- | --- | --- |
+| Free Online HR Template Downloads | Cash-constrained micro-firms | Zero direct purchase price | Fragmented, outdated, lacks coherence or implementation guidance | Consolidated, tailored operational suite backed by structured facilitation |
+| HRIS / Payroll SaaS Bundles (Gusto, Deel, Personio) | Software-first startups | Automates payroll and basic document signing | Provides generic software shells without customized policy or review cadence design | Operating-model-first artifacts that plug cleanly into any HRIS |
+| Fractional HR Directors | Seed-to-Series B startups | Hands-on executive coaching | Ongoing monthly retainer (€2,500–€5,000+/mo) and variable scope | Fixed-scope 4–6 week starter engagement with clear deliverables and $0 capital lock-in |
+| Employment Law Firms | High-risk legal disputes | Authoritative statutory drafting | High hourly billing; weak on operational onboarding and review workflows | Operational and compliance-hygiene focus at accessible advisory pricing |
 
-## 7 Pivotal Questions
+## 4. Internal IP & Source Provenance Crosswalk
 
-1. **Buyer & 2027 Trigger** — Founders, CHROs & People Ops Leads (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Employee handbook, onboarding checklist, and a basic performance-review cadence, anchored by a scaled-down self-assessment.
-3. **Deliverable & Existing IP** — Built on the **Human Resources & Talent Management** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *HR ops, compliance basics, facilitation*.
-4. **Sweat-Equity Feasibility** — 4–6 wks (5–8 hrs/wk), Medium effort, \$0 initial working capital. Expected capital range: €500–€2,500.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Generic templates compete with free downloads — lead with consolidation + compliance.
-7. **Compounding / Scale Path** — Anchor with scaled-down 5-level maturity model from `OP-HR-002`; upsell compliance automation.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Source / Asset | Role in `OP-HR-001` | Provenance Status | Reuse & Adaptation Notes |
 | --- | --- | --- | --- |
-| 4–6 wks (5–8 hrs/wk) | Medium | €500–€2,500 | Q1 2027 |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Canonical backlog entry and Tier C placement | Verified SSOT | Defines Small segment positioning, horizon (4–6 wks), and effort/capital band |
+| [Ideation-Spark.md](Ideation-Spark.md) | Positioning statement and 7 Pivotal Questions | Verified sibling file | Establishes wedge, buyer persona, and compounding link to `OP-HR-002` |
+| [Source-Documents.md](Source-Documents.md) | ADPA provenance record | Verified sibling file (0 `.docx` assigned) | Confirms Spark-derived lineage; no ADPA `.docx` digest exists for this ID |
+| Human Resources & Talent Management Toolkit | Core delivery templates and maturity model | Internal CBa Consult IP | Supplies handbook blueprint, onboarding checklist, and scaled-down 5-level diagnostic |
 
-## Market Validation & Source Notes
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-🟢 Market data (ADP, FirstHR): 5–50 employee firms want consolidation + compliance automation, not just handbook templates.
+To avoid commoditized template competition and legal liability creep, `OP-HR-001` sets strict boundaries:
 
-## Next Steps (Tier 2 → Pilot Gate)
+- **Not Formal Legal Counsel:** CBa Consult provides operational HR frameworks and policy structures; jurisdiction-specific statutory sign-off remains with the client's qualified employment counsel.
+- **No Full HRIS Implementation:** Software procurement, payroll migration, and complex API integrations are excluded from the baseline starter kit.
+- **No Ongoing Recruiting / RPO Execution:** Candidate sourcing, screening, and agency placement are out of scope.
+- **No Enterprise Transformation Scope:** Multi-country collective-bargaining or global job-architecture redesigns belong to larger HR advisory engagements (`OP-HR-002`).
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+**Stage 1b Gate Readiness:** As a Spark-derived Tier C opportunity without an ADPA `.docx` source, `OP-HR-001` is framed for rapid validation as a cash-flow wedge and proof generator (`OP-X-004`). Proceeding requires Director approval to package the self-assessment and core 3-artifact kit for initial outreach.

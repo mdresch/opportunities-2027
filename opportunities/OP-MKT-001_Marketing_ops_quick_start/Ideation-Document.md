@@ -1,60 +1,63 @@
-# Ideation Document — `OP-MKT-001`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-MKT-001"
+execution_track: "Tier C — Supporting (Pillar 4: Marketing)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Ideation-Spark.md; Sales, Marketing & Communication Strategy Toolkit"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-MKT-001: Marketing-ops quick-start
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b artifact is governed under the [Tailored Hybrid SIDPA Governance](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) framework. Positioning, target segment, and working-capital constraints trace to [inventory-of-ideas.md](../../inventory-of-ideas.md), [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md), [Ideation-Spark.md](Ideation-Spark.md), and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Positioning workshop + lean CRM/email setup so marketing activity is trackable from day one without tool bloat.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Small B2B teams, founders, and lean marketing leads frequently run outreach, events, and content campaigns across disconnected spreadsheets, personal inboxes, and overlapping SaaS trials. Without clear positioning or baseline CRM/email attribution, leadership cannot tell which channels generate qualified pipeline—leading to wasted marketing spend and friction with sales.
 
-# Ideation Spark — `OP-MKT-001`: Marketing-ops quick-start
+The 2027 trigger is acute SME budget discipline:
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** 4. Marketing · **Signature Toolkit:** Sales, Marketing & Communication Strategy
-**Category:** Advisory / Starter Kit · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+- **Anti-Tool-Bloat Mandate:** Cost-conscious founders cannot justify €1,500+/month enterprise marketing automation suites or a full-time Marketing Ops hire, yet still require clean funnel tracking from day one.
+- **Fast-Payback Fixed-Scope Demand:** Buyers favor short, predictable advisory sprints that establish positioning clarity and working operational plumbing in weeks rather than open-ended agency retainers.
 
-## Positioning
+CBa Consult addresses this wedge with a lightweight **Advisory / Starter Kit** combining positioning alignment with a lean CRM and email tracking setup.
 
-> For **Founders, CMOs & B2B Marketing Leads** (Small tier) who need a lightweight, low-risk way to address **marketing-ops quick-start**, **Marketing-ops quick-start** is a **Advisory / Starter Kit** backed by the **Sales, Marketing & Communication Strategy** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+Delivered over 4–6 weeks (4–6 hrs/week) using CBa Consult's *Sales, Marketing & Communication Strategy* toolkit, the sprint follows four structured steps:
 
-Positioning workshop + lean CRM/email setup so marketing activity is trackable from day one without tool bloat.
+1. **Week 1 — ICP & Positioning Workshop:** Align founder/marketing lead on target ICP, core value proposition, primary wedge messaging, and 2–3 measurable funnel KPIs.
+2. **Week 2 — Lean Stack Selection & Data Hygiene:** Audit existing tools, eliminate redundant subscriptions, and select a right-sized CRM/email configuration (e.g., HubSpot Starter, Pipedrive, or lightweight native email tracking).
+3. **Week 3–4 — Pipeline, UTM & Email Setup:** Configure lead capture forms, UTM naming conventions, lifecycle stages, and basic automated follow-up/nurture sequences so every campaign is traceable.
+4. **Week 5–6 — Attribution Dashboard & Handover Playbook:** Deliver a single-view marketing-to-pipeline report, operating checklist, and Day-1 SOPs for the client team.
 
-## 7 Pivotal Questions
+## 3. Market Comparables & CBa Consult Differentiation
 
-1. **Buyer & 2027 Trigger** — Founders, CMOs & B2B Marketing Leads (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Positioning workshop + lean CRM/email setup so marketing activity is trackable from day one without tool bloat.
-3. **Deliverable & Existing IP** — Built on the **Sales, Marketing & Communication Strategy** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Positioning, lean CRM/email setup, attribution basics*.
-4. **Sweat-Equity Feasibility** — 4–6 wks (4–6 hrs/wk), Low effort, \$0 initial working capital. Expected capital range: €500–€2,000.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Client expects lead-gen volume rather than ops foundation.
-7. **Compounding / Scale Path** — Turn workshop + lean setup into a fixed-scope "Day-1 Marketing Ops" sprint.
+| Comparable / Alternative | Typical Positioning & Limitations | CBa Consult Differentiation (`OP-MKT-001`) |
+| --- | --- | --- |
+| **Full-Service Digital Agencies** | Push recurring creative/ad retainers (€3k–€10k/mo) before fixing positioning or CRM tracking. | Fixes positioning and attribution infrastructure first in a bounded 4–6 week sprint with zero agency lock-in. |
+| **Freelance Tool Implementers** | Configure HubSpot/Mailchimp technically without strategic ICP positioning or sales-handoff alignment. | Integrates *Sales, Marketing & Communication Strategy* positioning directly into CRM stages and UTM structure. |
+| **Enterprise RevOps Consultancies** | Over-engineered architectures priced for mid-market/enterprise teams with dedicated admins. | Intentionally lean setup sized for small teams with no dedicated RevOps headcount. |
+| **DIY Founder Spreadsheets** | Breaks down after initial leads, losing follow-up visibility and campaign ROI proof. | Establishes repeatable, low-maintenance tracking from day one at $0 initial working capital. |
 
-## Effort, Capital & Timeline
+## 4. Internal IP & Source Provenance Crosswalk
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 4–6 wks (4–6 hrs/wk) | Low | €500–€2,000 | Q1 2027 |
+| Source / Sibling Artifact | Provenance Status | Reusable IP & Governance Mapping |
+| --- | --- | --- |
+| [Ideation-Spark.md](Ideation-Spark.md) | Active workspace spark (Tier C) | Defines Small-tier buyer persona, 7 Pivotal Questions, 4–6 wk effort profile, and "Day-1 Marketing Ops" sprint path. |
+| [Source-Documents.md](Source-Documents.md) | 0 assigned `.docx` files | Confirms pure Spark/Signature Toolkit provenance without legacy ADPA `.docx` files. |
+| *Sales, Marketing & Communication Strategy* Toolkit | CBa Consult Signature Toolkit | Supplies positioning workshop templates, funnel stage definitions, and attribution SOPs. |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | SSOT Master Inventory (§4) | Tracks `OP-MKT-001` as a Tier C Supporting starter kit with €500–€2,000 expected capital range. |
 
-## Market Validation & Source Notes
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-🟢 Avg. martech utilization ~49%, teams use ~1/3 of stack capability — starting lean avoids a documented failure mode.
+To prevent scope creep into ongoing agency execution, strict negative boundaries apply:
 
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **No Paid Media Buying or Ongoing Content Production:** `OP-MKT-001` builds the positioning and tracking foundation; it does not promise lead-gen ad volume, SEO copywriting retainers, or social-media management.
+- **No Complex Multi-Touch Enterprise BI:** Attribution covers clean source/UTM and stage conversion tracking, not custom data-warehouse modeling or algorithmic multi-touch attribution.
+- **Client Owns SaaS Licenses:** Any CRM or email tool subscription is procured directly on the client's account.
+- **Stage 1b Gate Status:** Capability framing and comparables are complete. Progression requires Stage 3 Business Case review and bundling evaluation alongside `OP-SLS-001` for small-business RevOps buyers.

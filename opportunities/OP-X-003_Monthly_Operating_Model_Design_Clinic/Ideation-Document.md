@@ -1,60 +1,52 @@
-# Ideation Document — `OP-X-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-X-003"
+execution_track: "Tier C - Supporting (Small)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (adapted from 2026 OP-ME-002; 0 ADPA .docx)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-X-003: Monthly Operating-Model Design Clinic
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (PMBOK 8 Initiating, Stage 1b). Portfolio classification is anchored in [inventory-of-ideas.md](../../inventory-of-ideas.md); sibling records are [Ideation-Spark.md](./Ideation-Spark.md) and [Source-Documents.md](./Source-Documents.md).
 
-**Inventory description:** Monthly group session where founders bring operational bottlenecks and get structured scope, pricing, and risk feedback.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Founders, managing partners, and mid-market team leads frequently stall on recurring operational bottlenecks — mispriced service offers, unclear delivery scope boundaries, or unquantified execution risks — yet hesitate to commit €10,000+ to a traditional management consulting discovery engagement. In 2027's budget-disciplined environment, small buyers seek low-friction, senior-level structured feedback before making hiring, tooling, or commercial commitments. Simultaneously, CBa Consult needs a high-leverage, $0 working-capital top-of-funnel mechanism that monetizes monthly diagnostic facilitation while converting validated attendee bottlenecks into pillar starter kits and Tier A/B advisory engagements.
 
-# Ideation Spark — `OP-X-003`: Monthly Operating-Model Design Clinic
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** Cross-Pillar 2026 Ecosystem Categories (Validation, Mentorship, Partners, Customers) · **Signature Toolkit:** Management Consulting
-**Category:** Group Clinic *(Mentor / Advisor)* · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+Built on CBa Consult's **Management Consulting** signature toolkit, `OP-X-003` runs on a repeatable 4-week monthly cycle (Low effort, $0 initial working capital):
 
-## Positioning
+1. **Pre-Clinic Case Intake (Weeks 1–2):** Participating founders/leads (capped at 4–6 seats per cohort) submit a standardized 1-page Operating-Model Bottleneck Brief covering current scope, pricing/margin pressure, and key risks.
+2. **Structured 90–120 Minute Live Design Clinic (Week 3):** Facilitate peer-benchmarked "hot-seat" diagnostics using CBa's Scope, Pricing, and Risk Matrix so every participant leaves with concrete structural decisions rather than abstract advice.
+3. **Post-Clinic Decision Memo & Pillar Routing (Week 4):** Issue a concise 1-page action summary per participant, capturing before/after scope clarity and recommending relevant CBa pillar starter kits or deeper audits where warranted.
 
-> For **Founders, Partners & Mid-Market Leaders** (Small tier) who need a lightweight, low-risk way to address **monthly operating-model design clinic**, **Monthly Operating-Model Design Clinic** is a **Group Clinic *(Mentor / Advisor)*** backed by the **Management Consulting** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Monthly group session where founders bring operational bottlenecks and get structured scope, pricing, and risk feedback.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — Founders, Partners & Mid-Market Leaders (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Monthly group session where founders bring operational bottlenecks and get structured scope, pricing, and risk feedback.
-3. **Deliverable & Existing IP** — Built on the **Management Consulting** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Facilitation, pricing strategy, risk assessment*.
-4. **Sweat-Equity Feasibility** — 4 wks / cycle, Low effort, \$0 initial working capital. Expected capital range: €300–€1,500 / session.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Scheduling; balancing diverse pillar topics in one session.
-7. **Compounding / Scale Path** — Create standardized clinic format; funnel attendees into pillar starter kits.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Cost & Format | Structural Limitation | CBa Consult Differentiation |
 | --- | --- | --- | --- |
-| 4 wks / cycle | Low | €300–€1,500 / session | Q2 2027 |
+| Executive Peer Masterminds (EO / Vistage) | €500–€1,500+/mo; annual commitment | Generalist peer discussion lacking structured pricing, scope, and risk frameworks | Methodical consulting clinic delivering actionable scope, pricing, and risk artifacts every cycle |
+| Free Discovery / Sales Webinars | Free; 45–60 min broadcast | One-way generic slides; low trust and zero participant-specific problem solving | Paid or vetted small-group working session (€300–€1,500/session) with live hot-seat diagnosis |
+| 1:1 Management Consulting Retainers | €5,000–€25,000/mo | High entry barrier for small founders testing an operating-model shift | Low-risk €300–€1,500 entry wedge that naturally qualifies buyers for larger engagements |
+| Startup Incubator Office Hours | Equity or cohort tuition | Often led by generalist mentors unfamiliar with B2B governance, Finance, or ICT risk | Director-led cross-pillar expertise backed by CBa's full 2027 toolkit library |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Directly adapted from 2026 `OP-ME-002`.
+| Source / Asset | Status in Workspace | Relevance to OP-X-003 | Required Adaptation for 2027 Pilot |
+| --- | --- | --- | --- |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Active SSOT | Adapts 2026 `OP-ME-002` into Q2 2027 Group Clinic (€300–€1,500/session, 4-wk cycle) | Standardize monthly theme calendar so diverse pillar topics stay coherent |
+| [Ideation-Spark.md](./Ideation-Spark.md) | Active Sibling | Defines Group Clinic format, funnel to pillar starter kits, and `OP-X-004` proof capture | Create 1-page pre-clinic intake form and post-clinic decision memo template |
+| [Source-Documents.md](./Source-Documents.md) | Active (0 ADPA `.docx`) | Confirms no legacy ADPA `.docx` assigned; leverages CBa Management Consulting IP | Draft facilitator run-of-show and pricing/risk diagnostic canvas |
+| [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) | Active Executive SSOT | Aligns Tier C clinic as a warm feeder toward Tier A/B diagnostic pilots | Track clinic-to-pillar conversion rate as core commercial metric |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **Explicitly Out of Scope:** Ongoing 1:1 interim management, legal/tax opinions, hands-on implementation inside attendee companies during the clinic fee, and open-ended unfocused networking sessions.
+- **Operational Guardrail:** Cap cohort size and enforce pre-submitted intake briefs 72 hours prior so diverse pillar topics remain structured and actionable within one session.
+- **Stage 1b Gate Decision:** Ready for Stage 2 demand validation (seat pre-commitment test) and Stage 3 commercial sign-off for Q2 2027 launch.

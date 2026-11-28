@@ -1,48 +1,56 @@
-# Ideation Document — `OP-ITG-010`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-010"
+execution_track: "Tier B Growth (Pillar 6: IT and Technology)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (§6 IT & Technology + Finance Companion §3-4)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-ITG-010`: Information Retention and Recovery Specialist
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b document consolidates the retention and forensic recovery blueprint from [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md) under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). It anchors Strategic Asset 4 (Evidence & Governance) in [inventory-of-ideas.md](../../inventory-of-ideas.md) alongside [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
 
-**Inventory description:** Design Split-Clock retention architectures (tax 7/10-yr + *actualiteitswaarde* 15-yr 30%-ruling, 12-yr WORM license decoupling, recruitment CV cleansing, Art. 18 payroll DB quarantine) AND recover/reconstruct legacy ERP, payroll, Concur, pension, and M&A escrow records under DPO/SoD chain-of-custody for tax audits, GDPR disputes, and international arbitrations.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+- **Target Buyer:** CIOs, DPOs, General Counsel, and CFOs in Medium & Large organizations navigating ERP/payroll migrations, M&A carve-outs, or active regulatory disputes.
+- **2027 Market Trigger:** Microsoft Ignite 2026 Purview Compliance and Fabric/OneLake catalog shifts, aggressive SaaS vendor renewal lock-ins, and intensifying clashes between GDPR erasure mandates (Art. 5(1)(e), Art. 17) and mandatory statutory retention laws.
+- **The Multi-Jurisdiction Trap:** Organizations face 12-year SaaS licensing traps just to read historical records, non-deletable legacy payroll databases, uncleaned recruitment CV inboxes, and conflicting retention clocks (NL *Belastingdienst* 7/10-year + 15-year *actualiteitswaarde* 30%-ruling, UK 6-year, US 4–7 year).
+- **Forensic Recovery Urgency:** During tax audits, GDPR disputes, or international arbitrations, fragmented legacy ERP, SAP Concur, pension, and M&A escrow archives fail chain-of-custody scrutiny.
 
-# Ideation Spark — `OP-ITG-010`: Information Retention and Recovery Specialist
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, **deep retention/GDPR/Belastingdienst blueprint already documented in `inventory-of-ideas.md` §3–4**
-**Tier:** B — Growth
-**Strategic Asset:** 4. Evidence & Governance
-**Functional Area:** IT and Technology *(Governance & Finance bridge)* · **Signature Toolkit:** Risk Management
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §6 IT & Technology + Finance Companion §3–4](../../inventory-of-ideas.md) · [market-analysis-2027.md §6 & §12](../../market-analysis-2027.md)
+Built on CBa Consult's **Risk Management** Toolkit, **2-Bucket Indefinite-Core Standard**, and **Split-Clock WORM Architecture**, the 4–8 week (6–10 hrs/wk) engagement executes in four stages:
 
-## Positioning
+1. **Stage 1 — Legal Hold & Retention Clock Mapping (Weeks 1–2):** Classify records across statutory tax, 30%-ruling, pension, and GDPR Art. 18 restriction rules; establish DPO/SoD break-glass authorization.
+2. **Stage 2 — Split-Clock & 2-Bucket WORM Architecture (Weeks 3–4):** Decouple long-term immutable WORM archives (12–15 year retention) from expensive active SaaS licenses, enabling clean legacy system decommissioning without data loss.
+3. **Stage 3 — Quarantine & Hygiene Remediation (Weeks 5–6):** Execute GDPR Art. 18 legacy payroll DB quarantine design, recruitment CV inbox cleansing protocols, and GitHub/repository PII remediation workflows.
+4. **Stage 4 — Forensic Reconstruction & Chain-of-Custody Dossier (Weeks 7–8):** Reconstruct legacy ERP, payroll, Concur, pension, and M&A escrow records under auditable chain-of-custody for tax authorities or arbitration counsel.
 
-> For **CIOs, DPOs, General Counsel, and CFOs** in medium and large organizations who struggle with **the 12-year SaaS licensing trap, non-deletable legacy payroll databases, blind GDPR "cleansing" conflicts with tax law, and fragmented arbitration/audit archives**, **Information Retention and Recovery Specialist** is an **Audit / Diagnostic** backed by **CBa Consult's 2-Bucket Indefinite-Core Standard & Split-Clock WORM Architecture** that delivers **a "Retain Right & Decommission Without Data Loss" governance and forensic recovery blueprint** with \$0 working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Design Split-Clock retention architectures (NL *Belastingdienst* 7/10-yr + *actualiteitswaarde* 15-yr 30%-ruling, UK 6-yr, US 4–7 yr, 12-yr WORM license decoupling, recruitment CV inbox cleansing, GDPR Art. 18 payroll DB quarantine, GitHub PII remediation) AND recover/reconstruct legacy ERP, payroll, SAP Concur, pension, and M&A escrow records under DPO/SoD chain-of-custody for tax audits, GDPR disputes, and international arbitrations.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — DPO, General Counsel, CIO, and CFO. Triggered by **ERP/M365/payroll migrations**, **M&A carve-outs** (`OP-STR-004`/`005`), **MS Ignite 2026 Purview → Fabric/OneLake governance split**, and rising clashes between GDPR Art. 5(1)(e)/17 erasure demands and mandatory tax/30%-ruling/pension retention.
-2. **The Wedge (Pain)** — Companies either pay 12 years of unnecessary SaaS/Concur/ERP licenses for departed staff, hoard monolithic "Employee Files" forever (violating GDPR), or run blind cleansing sweeps that destroy statutory tax/30%-ruling/pension defense proof.
-3. **Deliverable & Existing IP** — **Already architected in full detail** in [inventory-of-ideas.md §3–4](../../inventory-of-ideas.md): 2-Bucket Retention Standard (Indefinite anonymized core + Single statutory clock), 4-Container Split-Clock Employee File model, 12-Year WORM License-Decoupling Rule, Tax-Office/30%-ruling *actualiteitswaarde* resolution, and GitHub PII remediation.
-4. **Sweat-Equity Feasibility** — 4–8 weeks at 6–10 hrs/week (Medium effort), \$0 initial capital; immediately sellable as a fixed-scope **Retention & Decommission Audit** ahead of an M365/payroll/Concur change or M&A deal.
-5. **Outcome & Proof** — Quantifiable SaaS/Concur/legacy-DB license savings (reclaiming seats on the 23rd), verified GDPR Art. 17(3)/18 defensibility, and audit/arbitration-ready WORM archive hashes.
-6. **Boundaries & Risk** — Requires break-glass DPO/Legal authorization, strict GDPR Chapter V redaction for cross-border discovery, and clear non-legal-counsel boundaries (partners with client Tax/Legal counsel for binding rulings).
-7. **Compounding / Scale Path** — High-leverage bridge across `OP-FIN-009`/`010`, `OP-ITG-004` (M365), `OP-ITG-012` (Purview→OneLake), `OP-ITG-015` (Cryptographic Sovereignty), and `OP-STR-004`/`005` (M&A Readiness & PMI).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Buyer Experience | Limitation in 2027 Governance | CBa Consult Differentiation (`OP-ITG-010`) |
 | --- | --- | --- | --- |
-| 4–8 wks (6–10 hrs/wk) | Medium | €2,500–€8,000 | Q2 2027 |
+| Big Four Forensic / eDiscovery | High-cost litigation discovery teams (€50k–€250k+) | Reactive dispute focus; rarely fixes underlying SaaS license trap | Combines forensic recovery with proactive Split-Clock WORM decoupling |
+| Pure Privacy / GDPR Consultancies | Policy binders and RoPA spreadsheets | Lack hands-on ERP, payroll DB, and M365/Purview architectural depth | Bridges DPO legal rules with technical Art. 18 quarantine and WORM design |
+| Legacy ERP / SaaS Vendors | Push expensive "read-only" renewal licenses | Financial incentive to prolong 12-year legacy seat maintenance | Enables "Retain Right & Decommission Without Data Loss" license exit |
+| Archival Storage Vendors | Sell WORM cloud buckets or backup appliances | No cross-border tax/30%-ruling clock logic or SoD chain-of-custody | Vendor-neutral 2-Bucket Indefinite-Core governance blueprint |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 Strong cross-pillar demand anchored in GDPR Art. 5/17/18 enforcement, NL *Belastingdienst* / HMRC / IRS retention rules, and MS Ignite 2026 Purview + Fabric/OneLake transition (see [market-analysis-2027.md §6, §12](../../mark
+| Asset / Source | Provenance Role | Reusable IP & Methodology Contribution |
+| --- | --- | --- |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) (§6 & Finance §3–4) | Deep architectural blueprint | 2-Bucket Indefinite-Core Standard, Split-Clock WORM, NL/UK/US clocks, Art. 18 quarantine |
+| [Ideation-Spark.md](Ideation-Spark.md) | Stage 1a Spark & Tier B framing | Positioning, €2,500–€8,000 fee band, 4–8 week horizon, M&A/Ignite 2026 triggers |
+| [Source-Documents.md](Source-Documents.md) | Provenance manifest | Confirms zero `.docx` required; architecture originates in portfolio research |
+| Risk Management Signature Toolkit | CBa Consult core IP | Break-glass DPO authorization templates, SoD chain-of-custody logs, PII remediation checklists |
+
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
+
+- **In Scope:** Split-Clock retention architecture, SaaS archival decoupling design, GDPR Art. 18 quarantine specification, recruitment/GitHub PII hygiene plans, and chain-of-custody record reconstruction.
+- **Explicit Negative Scope (Out of Scope):** CBa Consult does **not** provide formal legal representation in court/arbitration, execute unapproved production database deletions without DPO/SoD break-glass sign-off, or store raw client PII on CBa Consult infrastructure.
+- **Stage 1b Gate Criteria:** Finalize standardized DPO break-glass authorization and zero-raw-PII handling protocols; confirm joint cross-sell packaging with `OP-FIN-009`/`010`, `OP-ITG-004`, and `OP-LEG-002`.

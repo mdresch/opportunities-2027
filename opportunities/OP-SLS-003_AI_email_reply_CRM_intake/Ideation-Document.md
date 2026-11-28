@@ -1,60 +1,53 @@
-# Ideation Document — `OP-SLS-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-SLS-003"
+execution_track: "Tier C - Supporting (Small)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (adapted from 2026 OP-IE-003; 0 ADPA .docx)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-SLS-003: AI Email Reply & CRM Intake Assistant Setup
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) (PMBOK 8 Initiating, Stage 1b). Portfolio classification is anchored in [inventory-of-ideas.md](../../inventory-of-ideas.md); sibling records are [Ideation-Spark.md](./Ideation-Spark.md) and [Source-Documents.md](./Source-Documents.md).
 
-**Inventory description:** Configure AI-assisted reply templates and intake workflows in existing email/helpdesk/CRM tools for small sales/ops teams.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Small sales and customer-operations teams spend disproportionate daily hours triaging inbound prospect emails, copying lead details manually into CRM fields, and rewriting repetitive qualification or scheduling replies. In 2027, founders, CROs, and RevOps leads at small firms want measurable responsiveness gains without adding sales-ops headcount or ripping out their existing email, helpdesk, or CRM stack (HubSpot, Pipedrive, Microsoft 365, or Gmail). At the same time, buyers are wary of autonomous "AI SDR" bots sending unverified hallucinations to prospects; they strongly prefer human-in-the-loop reply drafting and structured intake routing inside tools they already pay for.
 
-# Ideation Spark — `OP-SLS-003`: AI email reply & CRM intake assistant setup
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** 5. Sales · **Signature Toolkit:** Digital Transformation
-**Category:** AI Micro-Service · **Size:** Small
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+Built on CBa Consult's **Digital Transformation** signature toolkit, `OP-SLS-003` is delivered as a 6-week fixed-scope AI Micro-Service (Medium effort, $0 initial working capital):
 
-## Positioning
+1. **Inbox-to-CRM Process Mapping (Week 1):** Audit top 10 inbound email/inquiry categories, current CRM field hygiene, and manual triage bottlenecks.
+2. **Guardrailed Prompt & Reply Template Library (Weeks 2–3):** Design brand-safe, human-approved AI reply templates covering qualification, pricing routing, discovery booking, and FAQ handling.
+3. **No-Code Intake & Triage Workflow Setup (Weeks 4–5):** Configure native CRM/helpdesk automation or lightweight no-code connectors (Zapier/Make/Power Automate) to parse inbound inquiries, tag intent, and draft responses for 1-click rep approval.
+4. **Privacy Check, Team Enablement & Playbook Handover (Week 6):** Verify GDPR/data-retention settings, run team training, and hand over a documented workflow playbook.
 
-> For **Founders, CROs & Sales/RevOps Leads** (Small tier) who need a lightweight, low-risk way to address **ai email reply & crm intake assistant setup**, **AI email reply & CRM intake assistant setup** is a **AI Micro-Service** backed by the **Digital Transformation** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Configure AI-assisted reply templates and intake workflows in existing email/helpdesk/CRM tools for small sales/ops teams.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — Founders, CROs & Sales/RevOps Leads (Small segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Configure AI-assisted reply templates and intake workflows in existing email/helpdesk/CRM tools for small sales/ops teams.
-3. **Deliverable & Existing IP** — Built on the **Digital Transformation** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Prompt design, no-code scripting, process mapping*.
-4. **Sweat-Equity Feasibility** — 6 wks, Medium effort, \$0 initial working capital. Expected capital range: €800–€3,000.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Tool limitations; privacy and compliance constraints.
-7. **Compounding / Scale Path** — Turn patterns into a "playbook + template pack" for agencies or IT providers.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Cost & Model | Structural Limitation | CBa Consult Differentiation |
 | --- | --- | --- | --- |
-| 6 wks | Medium | €800–€3,000 | Q2 2027 |
+| Autonomous AI SDR SaaS Platforms | €500–€2,000/mo subscription + setup | High hallucination/brand risk; forces migration to yet another standalone tool | Works inside client's existing CRM/email stack with mandatory human-in-the-loop review |
+| Custom AI Automation Agencies | €5,000–€20,000 bespoke builds | Over-engineered custom code, ongoing maintenance lock-in, unclear ROI | Fixed-scope 6-week micro-service (€800–€3,000) using transparent no-code workflows |
+| DIY Native CRM AI Toggles | Software add-on fee only | Left unconfigured or poorly prompted; reps ignore generic suggestions | Tailored prompt engineering, field mapping, and sales-process SOPs included |
+| Outsourced Virtual Sales Admin | €1,500–€3,000/mo recurring | Linear labor cost, turnover risk, inconsistent CRM tagging | One-time setup creating durable internal leverage and standardized intake |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Directly adapted from 2026 `OP-IE-003`.
+| Source / Asset | Status in Workspace | Relevance to OP-SLS-003 | Required Adaptation for 2027 Pilot |
+| --- | --- | --- | --- |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Active SSOT | Adapts 2026 `OP-IE-003` into Q2 2027 Tier C AI Micro-Service (€800–€3,000) | Define supported CRM/email baseline packages (e.g., M365 + HubSpot/Pipedrive) |
+| [Ideation-Spark.md](./Ideation-Spark.md) | Active Sibling | Establishes buyer triggers, no-code/prompt skills, and `OP-X-004` proof loop | Build GDPR/privacy checklist for third-party LLM API data handling |
+| [Source-Documents.md](./Source-Documents.md) | Active (0 ADPA `.docx`) | Confirms no legacy ADPA `.docx` assigned; built from CBa Digital Transformation templates | Package reusable prompt library + no-code blueprint for agency/IT partner licensing |
+| [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) | Active Executive SSOT | Guides how Tier C quick-win engagements feed warmer mid-market relationships | Maintain strict 6-week scope cap without custom software development |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **Explicitly Out of Scope:** Fully autonomous unsupervised outbound emailing, custom backend API/software development, full CRM platform migrations, cold-email list scraping, and ongoing managed inbox administration.
+- **Compliance & Platform Guardrail:** All workflows must respect client tool API limits and GDPR data-processing terms (no training public models on client PII); human review remains mandatory before external send.
+- **Stage 1b Gate Decision:** Ready for Stage 2 small-team validation and Stage 3 commercial sign-off targeting Q2 2027 cash-flow and template-pack proof.

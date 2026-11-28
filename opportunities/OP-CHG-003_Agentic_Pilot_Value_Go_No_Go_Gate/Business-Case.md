@@ -1,4 +1,4 @@
-﻿---
+---
 pmbok_edition: "PMBOK 8"
 pmbok_process_group: "Initiating"
 pmbok_process: "Benefits & Commercial Viability (Stage 3 Business Case)"
@@ -6,7 +6,7 @@ lifecycle_stage: "Stage 3 (Commercial Viability & Options Analysis)"
 opportunity_id: "OP-CHG-003"
 execution_track: "Track A — Lightweight Advisory Diagnostic (stays in oppurtunities-2027)"
 requires_human_approval: "true"
-approval_status: "PARKED_IN_INVENTORY"
+approval_status: "PENDING_DIRECTOR_SIGNOFF"
 linked_hypotheses: "None yet (Pre-Stage 2)"
 primary_source: "Competitive portfolio roll-up (Ideation-Spark.md & Consulting/Portfolio 2027 research)"
 date: "2026-11-27"

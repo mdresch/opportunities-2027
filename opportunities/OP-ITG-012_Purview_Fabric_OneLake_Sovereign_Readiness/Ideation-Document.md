@@ -1,53 +1,61 @@
-# Ideation Document — `OP-ITG-012`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-ITG-012"
+execution_track: "Tier B — Growth (Pillar 6: IT and Technology)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "Microsoft Ignite 2026 Portfolio Analysis via inventory-of-ideas.md"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-ITG-012`: Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b ideation document adheres to [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and aligns with [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Canonical positioning sits in [Ideation-Spark.md](Ideation-Spark.md); source status is recorded in [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Align M365 **Purview Data Security & Compliance** labeling/retention with Microsoft's shift of Data Governance/Catalog into **Microsoft Fabric & OneLake**, plus **Sovereign Control Panel** data-residency assessments.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+At Microsoft Ignite 2026, Microsoft clarified a major architectural split in its governance ecosystem: standalone Purview Data Map/Catalog capabilities are transitioning into Microsoft Fabric and the OneLake catalog, while Purview Data Security & Compliance remains the core engine for M365 and AI sensitivity labeling and retention. Simultaneously, Microsoft introduced the Sovereign Control Panel (Public Preview) amid surging European demand for SovereignTech data residency.
 
-# Ideation Spark — `OP-ITG-012`: Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness
+- **2027 Market Trigger:** Medium and large European Microsoft enterprises face overlapping Purview vs. Fabric licensing and roadmap confusion right as they activate Microsoft 365 Copilot and OneLake workloads under strict EU data-residency expectations.
+- **Core Buyer Pain:** Organizations risk breaking sensitivity labels, corrupting retention clocks, or violating regional data-residency commitments during uncoordinated Purview-to-OneLake transitions.
+- **Target Buyer Profile:** CIOs, CDOs, and DPOs in Medium & Large European Microsoft enterprises seeking an independent governance, labeling, and sovereign-residency roadmap.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete (grounded in Microsoft Ignite 2026), Tier 2 deeper research pending
-**Tier:** B — Growth
-**Strategic Asset:** 4. Evidence & Governance *(bridges 5. Sovereign Information)*
-**Functional Area:** IT and Technology *(Microsoft Data Governance)* · **Signature Toolkit:** Digital Transformation
-**Size:** Medium & Large
-**Source:** [inventory-of-ideas.md §6 IT & Technology](../../inventory-of-ideas.md) · [market-analysis-2027.md §6 & §17](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-ITG-012` is a fixed-scope 6–8 week Audit / Diagnostic engagement (6–10 hours/week, Medium effort, $0 working capital) grounded in CBa Consult's Digital Transformation toolkit, DMBOK lifecycle specs, and Split-Clock retention architecture.
 
-> For **CIOs, CDOs, and DPOs** in European medium and large Microsoft enterprises who struggle with **Microsoft's architectural split between Purview Compliance and Fabric/OneLake Data Governance plus regional data-residency pressure**, **Purview-to-Fabric/OneLake & Sovereign Control Panel Readiness** is an **Audit / Diagnostic** backed by **CBa Consult's DMBOK lifecycle specs and Split-Clock retention architecture** that delivers **a clean migration, labeling, and sovereign-residency roadmap** with \$0 working capital.
+1. **Tenant & Catalog Discovery (Weeks 1–2):** Inventory existing Purview Data Map, M365 sensitivity labels, retention policies, and current Fabric/OneLake workspace footprint.
+2. **Purview-vs-Fabric Boundary Mapping (Weeks 3–4):** Reconcile which governance controls stay in Purview Data Security & Compliance versus which catalog/lineage controls migrate to Fabric OneLake, aligning DMBOK lifecycle specs and Split-Clock retention rules.
+3. **Sovereign Control Panel & Residency Assessment (Weeks 5–6):** Evaluate EU data-residency requirements, Copilot grounding boundaries, and Sovereign Control Panel readiness (noting Public Preview status constraints).
+4. **Target Architecture & Migration Roadmap (Weeks 7–8):** Deliver executive-ready labeling, retention, licensing-clarity, and residency remediation plan, with optional handoff to `OP-ITG-010` or `OP-ITG-004`.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Align M365 **Purview Data Security & Compliance** labeling/retention with Microsoft's shift of Data Governance/Catalog into **Microsoft Fabric & OneLake**, plus **Sovereign Control Panel** data-residency assessments.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CIO, CDO, and DPO. At **Microsoft Ignite 2026**, Microsoft clarified that legacy standalone *Purview Data Map/Catalog* capabilities are transitioning into **Microsoft Fabric & the OneLake catalog** while *Purview Data Security & Compliance* stays central for M365/AI labeling—alongside the new **Sovereign Control Panel** (Public Preview) and Gartner's 2027 **SovereignTech** push.
-2. **The Wedge (Pain)** — Microsoft enterprise customers are confused by overlapping Purview vs. Fabric governance licensing/roadmaps and risk breaking sensitivity labels, retention clocks, or EU data-residency commitments when turning on Copilot and OneLake.
-3. **Deliverable & Existing IP** — Leverages CBa Consult's **DMBOK Lifecycle Specs** (`Data_Governance_Charter_Template_Lifecycle_Spec.docx`, `Data_Quality_...`, `Metadata_Management_...` in `ADPA - Projects Lists\`) and **Split-Clock Retention rules** (`OP-ITG-010`) into a **Purview ↔ OneLake & Sovereign Residency Blueprint**.
-4. **Sweat-Equity Feasibility** — 6–8 weeks at 6–10 hrs/week (Medium effort), \$0 cash outlay; cleanly scoped as a pre-migration diagnostic before clients buy Fabric capacity or enable org-wide Copilot.
-5. **Outcome & Proof** — Clear boundary map (what stays in Purview Compliance vs. what moves to OneLake Catalog), verified EU data-residency posture via Sovereign Control Panel, and zero broken retention/labeling policies.
-6. **Boundaries & Risk** — *Sovereign Control Panel* is in public preview and Fabric capacity licensing varies by tenant; avoid becoming a Microsoft license reseller (stay conflict-free advisory/architecture).
-7. **Compounding / Scale Path** — Feeds directly into **`OP-ITG-014`** (Knowledge Intelligence & Context Governance — Tier A), **`OP-ITG-015`** (Cryptographic Sovereignty — Tier A), and **`OP-ITG-010`** (Information Retention & Recovery).
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable Category | Typical Market Offering | Common Buyer Gap | CBa Consult Differentiation (`OP-ITG-012`) |
 | --- | --- | --- | --- |
-| 6–8 wks (6–10 hrs/wk) | Medium | €2,500–€8,000 | Q2 2027 |
+| Microsoft Licensing Resellers | SKU uplift & Copilot seat sales | Incentivized to sell E5/Fabric capacity rather than resolve control overlap | Vendor-neutral architectural clarity before new license spend |
+| Global System Integrators | Large Fabric lakehouse migrations | Focus on data engineering pipelines while neglecting Purview retention & DPO risk | Jointly bridges DMBOK governance, Split-Clock retention, and OneLake |
+| Niche Legal/Privacy Boutiques | GDPR policy memos | Lack hands-on M365 Purview, OneLake, and Sovereign Control Panel mechanics | Translates EU sovereignty and DPO controls into concrete Microsoft tenant architecture |
+| Internal IT Admin Teams | Ad-hoc Purview portal tweaks | Overwhelmed by Ignite 2026 product shifts and preview feature caveats | Structured 6–8 week diagnostic with clear Preview-vs-GA risk separation |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 Captures Ignite 2026 Purview → OneLake architectural transition and European Sovereign Tech residency demand (see [market-analysis-2027.md §6, §17](../../market-analysis-2027.md)).
+| Artifact / IP Asset | Location / Reference | Role in `OP-ITG-012` Delivery | Verification Status |
+| --- | --- | --- | --- |
+| Stage 1a Spark & Positioning | [Ideation-Spark.md](Ideation-Spark.md) | Anchors Ignite 2026 Purview-to-OneLake shift, SovereignTech trigger, and buyer roles | Complete (`Idea` status) |
+| Portfolio Master Registry | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Defines Tier B Growth, €2,500–€8,000 capital/fee context, and Q2 2027 target | Canonical SSOT |
+| CBa Retention & Lifecycle IP | DMBOK lifecycle specs & Split-Clock retention architecture | Provides proven retention-clock and evidence-governance framework | Referenced in Spark positioning |
+| ADPA Assignment Manifest | [Source-Documents.md](Source-Documents.md) | Confirms 0 ADPA `.docx` files; portfolio-originated from Ignite 2026 analysis | Verified |
+| Adjacent Delivery Pairings | `OP-ITG-010` & `OP-ITG-004` | Creates natural expansion path into Retention/Recovery and M365 Migration | Portfolio cross-reference |
 
-## Existing Assets to Draw On
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- `F:\OneDrive - CBA\Documenten\ADPA - Projects Lists\Data_Governance_Charter_Template_Lifecycle_Spec.docx` (and `Metadata_Management_...`, `Data_Security_Privacy_...` specs).
-- `OP-ITG-010` Split-Clock & 2-Bucket Retention rules in [inventory-of-ideas.md §4](../../inve
+Given that Sovereign Control Panel is in Public Preview and Fabric licensing evolves rapidly, `OP-ITG-012` sets clear boundaries:
+
+- **No Production Preview Deployment Guarantees:** Assessments evaluate Sovereign Control Panel readiness and architectural fit, but CBa Consult does not warrant Microsoft Public Preview SLAs or GA timelines.
+- **No Full Lakehouse Data Engineering Build:** Scope covers governance, catalog transition, labeling, and residency roadmapping—not building ETL/ELT pipelines in Fabric.
+- **No Legal Sovereignty Certification:** Residency findings support DPO/CIO governance decisions and do not constitute formal legal certification.
+- **Stage 1b Gate Readiness:** Strategic alignment with Strategic Asset 4 (bridging Asset 5) is validated. Ready for Director adjudication of the companion Business Case and Stage 2 hypothesis design.

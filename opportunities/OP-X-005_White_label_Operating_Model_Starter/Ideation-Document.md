@@ -1,60 +1,57 @@
-# Ideation Document — `OP-X-005`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-X-005"
+execution_track: "Tier C — Supporting (Cross-Pillar Ecosystem & Partners)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md (Adapted from 2026 OP-PA-001; no ADPA .docx assigned)"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-X-005`: White-Label Operating-Model Starter Pack
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT:** Governed under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). Canonical portfolio tracking sits in [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md). Sibling context: [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Package validated pillar templates, checklists, and a short curriculum for incubators, industry associations, or universities to offer members.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Startup accelerators, incubators, university entrepreneurship centers, and B2B industry associations face increasing pressure in 2027 to demonstrate tangible operational readiness among their cohort members—not merely pitch-deck coaching. Building a coherent operating-model curriculum spanning finance hygiene, sales-to-ops execution, governance, and AI readiness from scratch takes months of senior curriculum effort and fragments across external guest mentors.
 
-# Ideation Spark — `OP-X-005`: White-label "Operating-Model Starter Pack" for accelerators & associations
+Partner organizations need a turnkey, brandable **"Operating-Model Starter Pack"** they can distribute to dozens or hundreds of members each cohort. Licensing validated CBa Consult templates, checklists, and short workshops solves their content bottleneck while turning every cohort into a leveraged distribution channel for CBa Consult's broader advisory portfolio.
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** C — Supporting
-**Functional Area:** Cross-Pillar 2026 Ecosystem Categories (Validation, Mentorship, Partners, Customers) · **Signature Toolkit:** Management Consulting
-**Category:** White-Label Program *(Partner)* · **Size:** All
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+Built on CBa Consult's **Management Consulting** Signature Toolkit and adapted from the 2026 `OP-PA-001` partner blueprint, `OP-X-005` packages cross-pillar IP into a co-branded partner license:
 
-> For **Founders, Partners & Mid-Market Leaders** (All tier) who need a lightweight, low-risk way to address **white-label "operating-model starter pack" for accelerators & associations**, **White-label "Operating-Model Starter Pack" for accelerators & associations** is a **White-Label Program *(Partner)*** backed by the **Management Consulting** toolkit that delivers **measurable operational/commercial value** with \$0 initial working capital.
+1. **White-Label Template & Checklist Vault:** Curated bundle of foundational operating-model artifacts (1-page operating blueprint, monthly cash/close checklist, GTM/sales-to-ops handoff map, and AI governance starter policy) formatted for Notion, Google Docs, and PDF.
+2. **Modular Facilitator Curriculum:** 4–6 workshop slide decks, facilitator guides, and 15-minute self-study briefs so partner program managers can run cohorts independently.
+3. **Co-Branded Partner Portal & Onboarding Kit:** Clean Notion/folder deployment package customized with the partner institution's logo, terminology, and cohort calendar.
+4. **Delivery Cadence:** 12-week packaging and partner-pilot build (High effort, $0 working capital), sequenced for Q3–Q4 2027 once individual pillar templates (`OP-FIN-003`, `OP-OPS-008`, etc.) have initial field validation.
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-Package validated pillar templates, checklists, and a short curriculum for incubators, industry associations, or universities to offer members.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — Founders, Partners & Mid-Market Leaders (All segment). In 2027's cost-conscious climate, buyers favor fixed-scope, low-risk engagements that cut cost, reduce compliance/operational friction, or avoid a full-time hire.
-2. **The Wedge (Pain)** — Package validated pillar templates, checklists, and a short curriculum for incubators, industry associations, or universities to offer members.
-3. **Deliverable & Existing IP** — Built on the **Management Consulting** Signature Toolkit and existing CBa Consult templates/workflows. Primary skills required: *Curriculum design, partner management, documentation*.
-4. **Sweat-Equity Feasibility** — 12 wks, High effort, \$0 initial working capital. Expected capital range: €2,000–€8,000 / partner.
-5. **Outcome & Proof** — Fast, tangible client artifact + measurable before/after improvement that generates initial cash flow and Case Study proof (`OP-X-004`).
-6. **Boundaries & Risk** — Institutional buy-in; localization needs.
-7. **Compounding / Scale Path** — Adapt pack across NGOs, incubators, and B2B SaaS ecosystems.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Positioning & Cost | Limitation for 2027 Partner Buyers | CBa Consult Differentiation (`OP-X-005`) |
 | --- | --- | --- | --- |
-| 12 wks | High | €2,000–€8,000 / partner | Q3–Q4 2027 |
+| Generic startup playbooks (Y Combinator library, Techstars toolkits) | Free, unbranded public resources | Heavy tech-VC bias; not customizable or white-labeled for regional/industry associations | Co-branded, structured operating-model pack tailored to pragmatic SMB and B2B cohorts |
+| Ad-hoc external mentor workshops | €1,000–€3,000 per single guest session | Ephemeral slides with inconsistent quality and no lasting operational templates | Permanent, reusable digital vault + standardized facilitator curriculum |
+| Large consulting firm ecosystem sponsorships | €25,000+ or exclusive enterprise lock-in | Slow legal procurement and misaligned enterprise focus | Accessible €2,000–€8,000/partner license with fast cohort deployment |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-Directly adapted from 2026 `OP-PA-001`.
+| Source / IP Asset | Location / Reference | Contribution to `OP-X-005` |
+| --- | --- | --- |
+| Portfolio SSOT Entry | [inventory-of-ideas.md](../../inventory-of-ideas.md) | Defines Cross-Pillar White-Label Program (Partner), 12-wk horizon, €2,000–€8,000/partner target, Q3–Q4 2027 target, and `OP-PA-001` lineage |
+| Spark Positioning & 7 Pivotal Questions | [Ideation-Spark.md](Ideation-Spark.md) | Sets Partner/Accelerator buyer wedge, $0 working-capital boundary, and NGO/incubator/B2B SaaS scaling path |
+| ADPA Source Registry | [Source-Documents.md](Source-Documents.md) | Confirms 0 ADPA `.docx` files assigned; draws directly on validated CBa pillar templates |
+| Signature Toolkit: Management Consulting | CBa Consult Internal IP | Supplies operating-model design frameworks, workshop facilitation guides, and governance checklists |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Draft the full `Ideation-Document.md` and lock exact pilot scope, pricing anchor, and success KPI.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
+To avoid premature packaging before underlying templates are battle-tested, `OP-X-005` enforces strict boundaries:
+- **No bespoke LMS software engineering:** Delivered via existing partner portals (Notion, Google Drive, or client LMS ZIP/SCORM exports)—zero custom platform build.
+- **No unvalidated pillar content:** Only templates already tested in Q1–Q2 2027 client sprints may be bundled into the partner pack.
+- **No unlimited live 1-on-1 mentoring inside the base license:** Direct member coaching is priced separately as add-on Design Clinics (`OP-X-003`).
 
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+**Stage 1b Gate Status:** Ideation framing complete; intentionally sequenced for Q3–Q4 2027 after Q1–Q2 pillar validation and institutional partner discovery.

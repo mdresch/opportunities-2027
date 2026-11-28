@@ -1,60 +1,55 @@
-# Ideation Document — `OP-OPS-002`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-OPS-002"
+execution_track: "Core & Specialty Backlog (Pillar 7: Operations)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "inventory-of-ideas.md & Ideation-Spark.md"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-OPS-002`: Quote-to-Cash Integration Audit
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b document expands [Ideation-Spark.md](Ideation-Spark.md) and [Source-Documents.md](Source-Documents.md) under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md). It aligns Pillar 7 (Operations) with [inventory-of-ideas.md](../../inventory-of-ideas.md) and portfolio priorities in [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md).
 
-**Inventory description:** Map where sales commitments create downstream friction in fulfillment, finance, or legal across a complex org; fix the handoff.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+- **Target Buyer:** Chief Revenue Officers (CROs), VP Sales, and RevOps Leads in Medium & Large organizations experiencing friction between closed deals and downstream execution.
+- **2027 Market Trigger:** Heightened 2027 margin discipline, revenue-recognition scrutiny (including IFRS 18 presentation pressures), and demand for conflict-free operational advisory push leadership to eliminate revenue leakage and billing disputes caused by broken Quote-to-Cash (Q2C) handoffs.
+- **Core Wedge:** Sales teams routinely agree to non-standard terms, custom delivery milestones, or bespoke pricing structures in CRM/CPQ that create downstream bottlenecks in fulfillment, legal review, invoicing, and revenue recognition. `OP-OPS-002` maps and fixes those exact cross-functional handoffs.
 
-# Ideation Spark — `OP-OPS-002`: Quote-to-cash integration audit
+## 2. Solution Architecture & Delivery Workflow
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 7. Operations · **Signature Toolkit:** Lean 6 Sigma
-**Category:** Audit / Diagnostic · **Size:** Medium & Large
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+Built on CBa Consult's **Lean 6 Sigma** Signature Toolkit, the 8–12 week (10–15 hrs/wk) diagnostic executes across four structured stages:
 
-## Positioning
+1. **Weeks 1–3 — End-to-End Q2C Value-Stream Mapping:** Trace a representative sample of deals from CRM quote/proposal through legal redlines, order fulfillment, ERP billing, and cash collection.
+2. **Weeks 4–6 — Handoff Friction & Exception Root-Cause Analysis:** Quantify rework loops, unbilled scope creep, contract-to-invoice mismatches, and DSO delays using Lean 6 Sigma waste/defect taxonomy.
+3. **Weeks 7–9 — Target Handoff Controls & SLA Redesign:** Define standardized deal-desk guardrails, mandatory CRM-to-ERP data fields, and escalation SLAs across Sales, Legal, Fulfillment, and Finance.
+4. **Weeks 10–12 — Remediation Roadmap & Executive Alignment:** Present an agreed cross-departmental RACI, quick-win handoff fixes, and KPI dashboard spec, feeding enterprise proof into `OP-OPS-003`.
 
-> For **CROs & Sales/RevOps Leads** (Medium & Large tier) who need a focused, fixed-scope solution for **quote-to-cash integration audit**, **Quote-to-cash integration audit** is a **Audit / Diagnostic** backed by the **Lean 6 Sigma** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+## 3. Market Comparables & CBa Consult Differentiation
 
-## What it is
-
-Map where sales commitments create downstream friction in fulfillment, finance, or legal across a complex org; fix the handoff.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CROs & Sales/RevOps Leads (Medium & Large segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — Map where sales commitments create downstream friction in fulfillment, finance, or legal across a complex org; fix the handoff.
-3. **Deliverable & Existing IP** — Built on the **Lean 6 Sigma** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *Cross-functional mapping, RevOps, finance/legal handoffs*.
-4. **Sweat-Equity Feasibility** — 8–12 wks (10–15 hrs/wk), High effort, \$0 initial working capital. Expected capital range: €3,000–€10,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Cross-departmental politics (Sales vs. Finance/Legal).
-7. **Compounding / Scale Path** — Feeds enterprise case studies into `OP-OPS-003`.
-
-## Effort, Capital & Timeline
-
-| Time Horizon | Effort | Expected Capital | Target Qtr |
+| Comparable / Alternative | Typical Buyer Experience | Limitation in Medium/Large Orgs | CBa Consult Differentiation (`OP-OPS-002`) |
 | --- | --- | --- | --- |
-| 8–12 wks (10–15 hrs/wk) | High | €3,000–€10,000 | Q3 2027 |
+| CRM / CPQ / ERP Integrators | Pitch software re-implementation or new CPQ modules | Automate broken handoffs without fixing cross-team politics or RACI | Process-first Lean 6 Sigma audit; zero software license sales agenda |
+| Big Four Operations Advisory | Large discovery teams and multi-month transformation decks | High fee floor (€75k+) and slow time-to-value | Fixed-scope 8–12 week audit (€3,000–€10,000 fee band) |
+| Sales-Only RevOps Consultants | Optimize CRM stages and pipeline dashboards | Stop at "Closed-Won"; blind to Finance billing and Legal contract friction | Bridges Sales, Fulfillment, Finance, and Legal end-to-end |
+| Internal Finance or Ops Alone | Push unilateral policy memos onto Sales | Triggers departmental resistance and shadow workarounds | Neutral external diagnostic aligning CRO, CFO, and Legal incentives |
 
-## Market Validation & Source Notes
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟢 ISG: RevOps embedded in strategic planning at 50%+ of firms by 2027 — one of the two best-evidenced bets in the whole inventory.
+| Asset / Source | Provenance Role | Reusable IP & Methodology Contribution |
+| --- | --- | --- |
+| [Ideation-Spark.md](Ideation-Spark.md) | Canonical Stage 1a Spark | Defines CRO/RevOps buyer, 8–12 wk horizon, €3,000–€10,000 band, `OP-OPS-003` feed |
+| [Source-Documents.md](Source-Documents.md) | Provenance manifest | Confirms Spark-derived status (`Status = Idea`, no external ADPA `.docx`) |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | Portfolio SSOT | Pillar 7 Operations classification and `OP-X-004` referenceable proof linkage |
+| Lean 6 Sigma Signature Toolkit | CBa Consult core IP | SIPOC diagrams, value-stream defect logs, cross-functional RACI & SLA templates |
 
-## Next Steps (Tier 2 → Pilot Gate)
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **In Scope:** Cross-functional Q2C process mapping, handoff defect quantification, deal-desk/billing control design, RACI alignment, and prioritized remediation backlog.
+- **Explicit Negative Scope (Out of Scope):** CBa Consult does **not** perform custom CRM/CPQ/ERP software coding or enterprise data migration, provide statutory tax or legal contract drafting, or take over operational collections/invoicing execution.
+- **Stage 1b Gate Criteria:** Finalize standardized Q2C SIPOC and handoff-defect templates inside the Lean 6 Sigma toolkit; establish executive co-sponsorship (CRO + CFO) as a mandatory kickoff precondition to mitigate Sales vs. Finance/Legal politics.

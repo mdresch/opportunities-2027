@@ -9,11 +9,7 @@ requires_human_approval: true
 approval_status: "PENDING_DIRECTOR_SIGNOFF"
 date: "2026-11-27"
 owner: "Menno Drescher (Director, CBa Consult)"
-linked_hypotheses:
-  - "HYP-2027-023"
-  - "HYP-2027-024"
-  - "HYP-2027-025"
-  - "HYP-2027-006"
+linked_hypotheses: "HYP-2027-023; HYP-2027-024; HYP-2027-025; HYP-2027-006"
 ---
 
 # Business Case — `OP-X-004`: Case study series on 2027 operating-model pilots

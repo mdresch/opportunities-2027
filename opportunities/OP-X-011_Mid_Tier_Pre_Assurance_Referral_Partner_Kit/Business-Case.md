@@ -1,4 +1,4 @@
-﻿---
+---
 pmbok_edition: "PMBOK 8"
 pmbok_process_group: "Initiating"
 pmbok_process: "Benefits & Commercial Viability (Stage 3 Business Case)"

@@ -1,60 +1,63 @@
-# Ideation Document — `OP-HR-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-HR-003"
+execution_track: "Core & Specialty Backlog (Pillar 2: Human Resources)"
+linked_hypotheses: "None yet (Pre-Stage 2)"
+primary_source: "HR Transformation Toolkit version 2027.docx §8.2; inventory-of-ideas.md §2"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — OP-HR-003: HR-specific AI governance module
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b artifact is governed under the [Tailored Hybrid SIDPA Governance](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) framework. Opportunity metadata, toolkit provenance, and backlog classification trace directly to [inventory-of-ideas.md](../../inventory-of-ideas.md), [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md), [Ideation-Spark.md](Ideation-Spark.md), and [Source-Documents.md](Source-Documents.md).
 
-**Inventory description:** Focused governance pack for AI in hiring, promotion, scheduling, and performance: human-reviewer override, bias monitoring, transparency.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Human Resources functions across small, medium, and large enterprises are rapidly adopting AI-enabled tools for CV screening, candidate ranking, shift scheduling, promotion scoring, and performance review synthesis. Most HR teams deploy these embedded vendor features without formal human-override protocols, bias audit trails, or worker transparency notices—creating acute legal, ethical, and employee-relations exposure.
 
-# Ideation Spark — `OP-HR-003`: HR-specific AI governance module
+The decisive 2027 trigger is regulatory enforcement combined with budget scrutiny:
 
-**Status:** 🔥 Spark — workspace opened, Tier 1 macro signal check complete, Tier 2 deeper research pending
-**Tier:** Core & Specialty Backlog (Evaluated alongside Tiers A–C)
-**Functional Area:** 2. Human Resources · **Signature Toolkit:** Human Resources & Talent Management
-**Category:** Digital Product (PDF / Toolkit) · **Size:** All
-**Source:** [inventory-of-ideas.md](../../inventory-of-ideas.md) · [market-analysis-2027.md](../../market-analysis-2027.md)
+- **EU AI Act High-Risk HR Classification:** AI systems used in recruitment, selection, task allocation, and performance evaluation fall under high-risk obligations requiring documented human oversight, risk management, data governance, and transparency toward affected workers.
+- **Cross-Functional Audit Pressure:** CHROs and People Ops Leads face growing scrutiny from works councils, legal counsel, and enterprise risk committees while lacking the budget or appetite for Big Four multi-month legal-advisory retainers.
 
-## Positioning
+CBa Consult addresses this gap with a concise, fixed-scope **Digital Product (PDF / Toolkit)** that translates high-risk HR AI obligations into ready-to-use operational controls.
 
-> For **CHROs, People Ops & HR Transformation Leads** (All tier) who need a focused, fixed-scope solution for **hr-specific ai governance module**, **HR-specific AI governance module** is a **Digital Product (PDF / Toolkit)** backed by the **Human Resources & Talent Management** toolkit that delivers **measurable operational, governance, or commercial value** with \$0 initial working capital.
+## 2. Solution Architecture & Delivery Workflow
 
-## What it is
+Built directly on `HR Transformation Toolkit version 2027.docx` (§8.2 "Responsible AI in Human Resources"), the module packages practical governance artifacts for rapid deployment over a 4–6 week build-and-validation horizon:
 
-Focused governance pack for AI in hiring, promotion, scheduling, and performance: human-reviewer override, bias monitoring, transparency.
+1. **HR AI Use-Case & Vendor Inventory Matrix:** Categorizes active and planned HR automation (hiring, promotion, scheduling, performance) by decision impact and EU AI Act risk tier.
+2. **Human-Reviewer Override & Escalation SOPs:** Defines mandatory human-in-the-loop checkpoints, contestability workflows, and sign-off thresholds so automated scores never trigger unreviewed employment actions.
+3. **Bias Monitoring & Fairness Cadence Pack:** Provides structured review checklists, demographic parity inspection prompts, and vendor questionnaire templates for algorithmic accountability.
+4. **Employee & Candidate Transparency Kit:** Supplies plain-language notification templates, works-council briefing sheets, and audit-ready policy clauses designed to pair cleanly with `OP-LEG-001` and `OP-HR-002`.
 
-## 7 Pivotal Questions
+## 3. Market Comparables & CBa Consult Differentiation
 
-1. **Buyer & 2027 Trigger** — CHROs, People Ops & HR Transformation Leads (All segment). Driven by 2027 cost discipline, regulatory/compliance deadlines (IFRS 18, EU AI Act, CSRD/ESG, DORA/NIS2), and demand for conflict-free advisory alternatives to Big Four rates.
-2. **The Wedge (Pain)** — Focused governance pack for AI in hiring, promotion, scheduling, and performance: human-reviewer override, bias monitoring, transparency.
-3. **Deliverable & Existing IP** — Built on the **Human Resources & Talent Management** Signature Toolkit and existing CBa Consult methodologies/templates. Primary skills required: *AI governance, HR compliance, policy drafting*.
-4. **Sweat-Equity Feasibility** — 4–6 wks, Low effort, \$0 initial working capital. Expected capital range: €500–€2,000.
-5. **Outcome & Proof** — Tangible client deliverable + measurable before/after improvement that builds referenceable proof (`OP-X-004`) or expands into a Tier A/B flagship retainer.
-6. **Boundaries & Risk** — Regulatory updates (EU AI Act high-risk HR rules) require periodic revisions.
-7. **Compounding / Scale Path** — Bundle with `OP-LEG-001` (general AI-use policy) and `OP-HR-002` maturity assessment.
+| Comparable / Alternative | Typical Positioning & Limitations | CBa Consult Differentiation (`OP-HR-003`) |
+| --- | --- | --- |
+| **Big Four / Employment Law Firms** | Bespoke legal memos billed hourly; expensive, abstract, and disconnected from daily HRIS/ATS workflows. | Fixed-scope operational toolkit built specifically for CHROs and People Ops at accessible SME/mid-market economics. |
+| **Generic Enterprise AI Policies** | High-level corporate acceptable-use statements that ignore hiring, scheduling, and performance-review specifics. | Purpose-built for HR decision points with concrete human-override rules and candidate/employee notices. |
+| **HRIS / ATS Vendor Compliance Pages** | Vendor-centric assurances that shift deployment and human-oversight liability back onto the employer. | Employer-side governance pack covering vendor due diligence, internal overrides, and bias review cadences. |
+| **Do-It-Yourself Policy Drafting** | Slow, inconsistent across regions, and prone to missing EU AI Act high-risk documentation requirements. | Pre-structured from CBa Consult's 2027 HR Transformation Toolkit with $0 initial working capital. |
 
-## Effort, Capital & Timeline
+## 4. Internal IP & Source Provenance Crosswalk
 
-| Time Horizon | Effort | Expected Capital | Target Qtr |
-| --- | --- | --- | --- |
-| 4–6 wks | Low | €500–€2,000 | Q1–Q2 2027 |
+| Source / Sibling Artifact | Provenance Status | Reusable IP & Governance Mapping |
+| --- | --- | --- |
+| [Ideation-Spark.md](Ideation-Spark.md) | Active workspace spark | Buyer persona (CHROs, People Ops, HR Transformation Leads), 7 Pivotal Questions, and EU AI Act trigger framing. |
+| [Source-Documents.md](Source-Documents.md) | 0 assigned ADPA `.docx` files | Notes zero ADPA project-list `.docx` files; points to [inventory-of-ideas.md](../../inventory-of-ideas.md) for primary provenance. |
+| `HR Transformation Toolkit version 2027.docx` (§8.2) | External OneDrive IP (`F:\OneDrive - CBA\`) | Pre-scoped "Responsible AI in Human Resources" chapter providing core policy, bias, and human-override structure. |
+| [inventory-of-ideas.md](../../inventory-of-ideas.md) | SSOT Master Inventory (§2) | Defines Digital Product (PDF/Toolkit) category, 4–6 week horizon, Low effort, €500–€2,000 capital range, Q1–Q2 2027 target, and bundling with `OP-LEG-001` / `OP-HR-002`. |
 
-## Market Validation & Source Notes
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-Already scoped in `HR Transformation Toolkit version 2027.docx` §8.2 ("Responsible AI in Human Resources", `F:\OneDrive - CBA\`).
+To maintain productized simplicity and avoid regulated-practice liability, the following exclusions are mandatory:
 
-## Next Steps (Tier 2 → Pilot Gate)
-
-- [ ] Review any referenced source document in `ADPA - Projects Lists` or existing CBa Consult templates.
-- [ ] Decide whether to pair this offer as a wedge/add-on to a Tier A/B flagship or advance to a standalone `Ideation-Document.md`.
-- [ ] Complete the Tier 3 pre-pilot gate (7 Pivotal Questions) before promoting status from `Idea` → `Pilot`.
-
-## Assigned Source Documents (ADPA)
-
-- [Source-Documents.md](Source-Documents.md) — full manifest
-- [Ideation-Document.md](Ideation-Document.md) — extracted ideation content
-- [Business-Case.md](Business-Case.md) — extracted business case content
-
+- **Not Formal Legal Counsel:** `OP-HR-003` delivers operational HR governance templates and checklists; clients retain qualified employment or privacy counsel for binding legal opinions and works-council negotiations.
+- **No Custom Software Engineering or Model Auditing:** CBa Consult does not build custom ML fairness pipelines, retrain vendor ATS algorithms, or certify third-party SaaS source code.
+- **No Ongoing Legal Monitoring Retainer Included:** Regulatory updates (such as evolving EU AI Act delegated acts) require periodic versioned updates rather than open-ended unbilled support.
+- **Stage 1b Gate Status:** Problem framing and IP crosswalk are complete. Next steps require Director review of the Stage 3 Business Case and modular alignment with `OP-LEG-001` and `OP-HR-002`.

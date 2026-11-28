@@ -1,53 +1,60 @@
-# Ideation Document — `OP-SCM-003`
+---
+pmbok_edition: "PMBOK 8"
+pmbok_process_group: "Initiating"
+pmbok_process: "Opportunity Framing & Competitive/IP Research (Stage 1b Ideation)"
+lifecycle_stage: "Stage 1b (Tier 2 Ideation & Capability Framing)"
+opportunity_id: "OP-SCM-003"
+execution_track: "Tier B — Growth (Pillar 11: Supply Chain Commercial Platform)"
+linked_hypotheses: "HYP-2027-016 (Formulated)"
+primary_source: "Portal-Product-Requirements.md & Procurement-Portal-Build-Requirements.md"
+date: "2026-11-27"
+owner: "Menno Drescher (Director, CBa Consult)"
+---
 
-**Generated:** 2026-11-26 (from ADPA Projects Lists source assignment script)
-**Stage:** Tier 2 — Ideation / Benefit framing (see [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md))
+# Ideation Document — `OP-SCM-003`: Procurement Readiness & Pre-Sales Assessment Portal (PRMAP)
 
-> Canonical paths remain on OneDrive; this markdown is an extracted working copy.
-## Portfolio-derived ideation (no dedicated .docx assigned)
+> **Governance & SSOT Callout:** This Stage 1b ideation document operates under [Tailored-Hybrid-SIDPA-Governance.md](../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md) and connects [inventory-of-ideas.md](../../inventory-of-ideas.md) and [Tier_A_Executive_Summary_2027.md](../../Tier_A_Executive_Summary_2027.md) with the workspace product specifications in [Portal-Product-Requirements.md](Portal-Product-Requirements.md) and [Procurement-Portal-Build-Requirements.md](Procurement-Portal-Build-Requirements.md).
 
-**Inventory description:** Procurement-facing web portal: select CBa catalog SKU → auto-load maturity questionnaire → **Client Sponsor** + **Executive Sponsor** delegate to staff → **CBa Account Manager** tracks progress and redistributes questions → export for PO / RFP pack.
+## 1. Problem Context & 2027 Market Trigger
 
-### From Ideation-Spark.md
+Enterprise procurement teams and business sponsors face longer approval cycles when purchasing external advisory, diagnostic, or governance engagements. Before releasing a purchase order (PO) or issuing an RFP, procurement category managers and executive sponsors increasingly require documented proof of internal organizational readiness and current-state maturity across EU AI Act, DORA, and vendor diligence dimensions.
 
-# Ideation Spark — `OP-SCM-003`: Procurement Readiness & Pre-Sales Assessment Portal (PRMAP)
+- **2027 Market Trigger:** Tightened multinational IT and advisory budget governance requires structured pre-PO readiness evidence without forcing clients to purchase heavy new GRC platforms.
+- **Core Buyer Pain:** Pre-sales maturity gathering currently relies on static spreadsheets and fragmented email threads, stalling PO approval when specialists fail to complete sections on time.
+- **Target Buyer Profile:** CPOs, Heads of Procurement, category managers, and business unit sponsors at Medium & Large enterprises buying CBa Consult catalog offerings.
 
-**Status:** 🔥 Spark — workspace opened · Tier 2 product spec in progress  
-**Tier:** B — Growth *(commercial platform; multi-offering funnel)*  
-**Strategic Asset:** 4. Evidence & Governance · 2. Organizational Intelligence *(assessment reuse)*  
-**Functional Area:** 11. Supply Chain · **Signature Toolkit:** Supply Chain Strategy *(procurement / vendor governance)*  
-**Category:** Platform-Backed Assessment · **Size:** Medium & Large  
-**Source:** [inventory-of-ideas.md §11 Supply Chain](../../inventory-of-ideas.md) · pattern from [`OP-ITG-013`](../OP-ITG-013_Enterprise_AI_Agent_Governance/Ideation-Spark.md) delegation portal
+## 2. Solution Architecture & Delivery Workflow
 
-## Positioning
+`OP-SCM-003` (PRMAP) is a multi-tenant, procurement-facing web portal built over a 12–16 week MVP horizon (High effort, Platform IP) that serves as a horizontal commercial funnel for CBa Consult's catalog SKUs (`€2,000–€15,000+` attached services per SKU).
 
-> For **CPOs, procurement category managers, and business sponsors** who must **prove organizational readiness** before buying CBa Consult advisory, diagnostics, or governance offerings, **PRMAP** is a **procurement-facing web portal** that **selects the right maturity questionnaire per catalog SKU**, lets **executives delegate evidence gathering** to specialists, and gives the assigned **CBa Account Manager** a live view to **redistribute work and unblock assessments** — with **$0 new GRC software** on the client side.
+1. **Catalog SKU Selection & Questionnaire Load:** Procurement or the Client Sponsor selects a target CBa catalog offering (e.g., `OP-ITG-013`, `OP-FIN-009`, `OP-RSK-004`), automatically loading the mapped maturity questionnaire per [Service-Catalog-Questionnaire-Map.md](Service-Catalog-Questionnaire-Map.md).
+2. **Dual-Sponsor Delegation:** Client Sponsor and Executive Sponsor delegate specific sections to internal specialists, following the proven delegation pattern from [Procurement-Pilot-Example-OP-ITG-013.md](Procurement-Pilot-Example-OP-ITG-013.md) and [Approval-Path-and-Cycle-Fields.md](Approval-Path-and-Cycle-Fields.md).
+3. **CBa Account Manager Orchestration:** The assigned CBa Account Manager monitors live completion progress, unblocks stalled contributors, and redistributes questions to preserve cycle velocity.
+4. **Export & Graduation Gate:** Generates an exportable readiness pack for internal PO/RFP justification and a pre-scoped CBa proposal governed by [OP-to-PR-Graduation-Gate.md](OP-to-PR-Graduation-Gate.md).
 
-## What it is
+## 3. Market Comparables & CBa Consult Differentiation
 
-A multi-tenant **buyer readiness portal**: procurement initiates an assessment for a specific service/product; the platform loads the matching question set from the 2027 opportunity catalog; **Client Sponsor** + **Executive Sponsor** orchestrate completion; **CBa Account Manager** monitors and reassigns. Output: exportable readiness pack for internal approval + scoped CBa proposal.
-
-## 7 Pivotal Questions
-
-1. **Buyer & 2027 Trigger** — CPO / Head of Procurement, category managers, and BU sponsors buying advisory (not only IT). Trigger: longer procurement cycles, EU AI Act / DORA vendor diligence, and need to **document current-state maturity** before PO release.
-2. **The Wedge (Pain)** — Procurement receives generic vendor PDFs; internal SMEs answer the same questions by email; no single dashboard; CBa cannot see progress until kickoff.
-3. **Deliverable & Existing IP** — Portal platform + **catalog-driven questionnaires** mapped to `OP-*` offerings; reuse delegation model from [`OP-ITG-013`](../OP-ITG-013_Enterprise_AI_Agent_Governance/Assessment-Delegation-and-Ownership-Matrix.md) and [`data/agent-governance-question-ownership.json`](../OP-ITG-013_Enterprise_AI_Agent_Governance/data/agent-governance-question-ownership.json) as reference pattern (not duplicate content).
-4. **Sweat-Equity Feasibility** — MVP: 1 catalog, 3 SKUs (e.g. `OP-ITG-013`, `OP-FIN-009`, `OP-RSK-004`), RBAC for 5 roles, hosted static/web app + lightweight API; **12–16 wks** build at **$0** infra tier (Azure Static Web Apps / Cloudflare) before enterprise SSO.
-5. **Outcome & Proof** — Time from RFP / intake to **≥80% assessment complete** drops; ≥1 paid engagement per portal workspace with export attached to PO pack.
-6. **Boundaries & Risk** — Not a full CLM or e-procurement system; no legal advice; client data stays in tenant-isolated store; CBa AM actions are **reassignment and nudges**, not answering on behalf of client.
-7. **Compounding / Scale Path** — Every new `OP-*` with a scored diagnostic adds a **SKU row** + JSON template; feeds `OP-OPS-003`, `OP-CX-002`, Tier A assessments.
-
-## Effort, Capital & Timeline
-
-| Phase | Effort | Expected Capital | Target Qtr |
+| Comparable Category | Typical Market Offering | Common Buyer Gap | CBa Consult Differentiation (`OP-SCM-003`) |
 | --- | --- | --- | --- |
-| MVP portal (3 SKUs) | High | Platform IP; services €2,000–€15,000+ via catalog | Q2–Q3 2027 |
-| Catalog expansion | Medium | Incremental per `OP-*` | Q3–Q4 2027 |
+| Enterprise CLM / e-Procurement Suites | Ariba/Coupa intake & PO routing | Manage commercial contracting, not pre-PO domain maturity or advisory readiness | Purpose-built pre-sales maturity portal tailored to CBa catalog SKUs |
+| GRC & Vendor Risk Platforms | Heavy multi-module compliance suites | Require six-figure licenses and lengthy IT onboarding before one assessment | Zero new GRC software on the client side; instant SKU-linked onboarding |
+| Static PDF / Excel Questionnaires | Emailed Word/Excel intake forms | Zero delegation tracking, version chaos, high abandonment before PO release | Live dual-sponsor delegation and Account Manager redistribution controls |
+| Generic Survey Tools | Typeform / Microsoft Forms | No SKU-to-maturity mapping, no enterprise sponsor hierarchy, no PO pack export | Structured approval path, cycle fields, and RFP/PO export pack |
 
-## Market Validation
+## 4. Internal IP & Source Provenance Crosswalk
 
-🟡 Procurement wants **evidence packs**, not slide decks — validate with 5 CPO/category-manager interviews in Q1 2027. Pairs with `OP-SCM-001` / `OP-LEG-002` vendor diligence narrative.
+| Artifact / IP Asset | Location / Reference | Role in `OP-SCM-003` Delivery | Verification Status |
+| --- | --- | --- | --- |
+| Product & Build Specs | [Portal-Product-Requirements.md](Portal-Product-Requirements.md) & [Procurement-Portal-Build-Requirements.md](Procurement-Portal-Build-Requirements.md) | Defines multi-tenant portal architecture, RBAC, and MVP build scope | Active sibling specs |
+| Workflow & Catalog Maps | [Service-Catalog-Questionnaire-Map.md](Service-Catalog-Questionnaire-Map.md) & [Approval-Path-and-Cycle-Fields.md](Approval-Path-and-Cycle-Fields.md) | Maps catalog SKUs to questionnaires and tracks sponsor approval cycle fields | Active sibling specs |
+| Pilot & Graduation Gates | [Procurement-Pilot-Example-OP-ITG-013.md](Procurement-Pilot-Example-OP-ITG-013.md) & [OP-to-PR-Graduation-Gate.md](OP-to-PR-Graduation-Gate.md) | Reuses `OP-ITG-013` delegation pattern and defines OP-to-PR graduation criteria | Active sibling specs |
+| Spark & Source Registry | [Ideation-Spark.md](Ideation-Spark.md) & [Source-Documents.md](Source-Documents.md) | Establishes Tier B Growth status and linked hypothesis `HYP-2027-016` | Formulated (`HYP-2027-016`) |
 
-## Related Opportunities
+## 5. Explicit Negative Scope Boundaries & Stage 1b Gate
 
-`OP-SCM-001`, `OP-CX-002` (COAS pattern), `OP-OPS-003`, `OP-ITG-013`, `OP-ITG-018` (MIP), `OP-X-004` (case stud
+To keep MVP scope achievable within 12–16 weeks without duplicating enterprise ERP systems, `OP-SCM-003` enforces strict boundaries:
+
+- **Not a CLM or e-Procurement System:** PRMAP does not handle contract redlining, invoice matching, supplier payment processing, or ERP PO issuance.
+- **Phase 2 Enterprise SSO & Custom Data Residency:** MVP ships with secure tenant isolation; custom SAML/OIDC enterprise SSO federation and regional pinning sit in Phase 2.
+- **No Uncoupled SaaS Standalone Sales Initially:** Portal operates primarily as a commercial readiness funnel attached to CBa Consult advisory SKUs rather than an unassisted self-serve SaaS product.
+- **Stage 1b Gate Readiness:** Extensive sibling specs and `HYP-2027-016` are already formulated. Pending Director adjudication on the Business Case to authorize build prioritization.

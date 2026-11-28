@@ -6,14 +6,8 @@ lifecycle_stage: "Stage 1b — Ideation (Tier 2 Draft — Director Review Requir
 governance_policy: "Human Adjudication Gate (requires_human_approval: true)"
 opportunity_id: "OP-CHG-001"
 status: "Idea"
-inputs:
-  - "Ideation-Spark.md"
-  - "Source-Documents.md"
-  - "ADPA - Communication Management Plan.docx (OneDrive canonical source)"
-  - "Communication Management Plan in Age of AI.docx (OneDrive supporting source)"
-  - "../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md"
-outputs:
-  - "Ideation-Document.md"
+inputs: "Ideation-Spark.md; Source-Documents.md; ADPA - Communication Management Plan.docx (OneDrive canonical source); Communication Management Plan in Age of AI.docx (OneDrive supporting source); ../../docs/governance/Tailored-Hybrid-SIDPA-Governance.md"
+outputs: "Ideation-Document.md"
 date: 2026-11-27
 ---
 
